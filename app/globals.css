@@ -1,0 +1,445 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+/* =========================================
+   CARE N CURE — Brand Design System
+   Primary: Deep Navy #0D2B45
+   Accent: Soft Teal/Mint #C5EEE4
+   Surface: Light Grey #F4F6F8
+   Text: #1A1A2E
+   ========================================= */
+
+:root {
+  /* Brand colours */
+  --navy: #0D2B45;
+  --navy-dark: #091E30;
+  --navy-light: #1A3D5C;
+  --teal: #C5EEE4;
+  --teal-dark: #8DDACE;
+  --teal-accent: #4DBBA5;
+  --white: #FFFFFF;
+  --surface: #F4F6F8;
+  --surface-2: #E8ECF0;
+  --text-dark: #1A1A2E;
+  --text-body: #2E3A4A;
+  --text-muted: #5A6B7D;
+  --border-light: #D8E2EC;
+
+  /* shadcn tokens mapped to brand */
+  --background: var(--surface);
+  --foreground: var(--text-dark);
+  --card: var(--white);
+  --card-foreground: var(--text-dark);
+  --popover: var(--white);
+  --popover-foreground: var(--text-dark);
+  --primary: var(--navy);
+  --primary-foreground: var(--white);
+  --secondary: var(--navy-dark);
+  --secondary-foreground: var(--white);
+  --muted: var(--surface-2);
+  --muted-foreground: var(--text-muted);
+  --accent: var(--teal);
+  --accent-foreground: var(--navy);
+  --destructive: #C0392B;
+  --destructive-foreground: var(--white);
+  --border: var(--border-light);
+  --input: var(--white);
+  --ring: var(--teal-accent);
+  --radius: 0.5rem;
+
+  /* chart colours */
+  --chart-1: var(--navy);
+  --chart-2: var(--teal-accent);
+  --chart-3: #F0A500;
+  --chart-4: #2ECC71;
+  --chart-5: #9B59B6;
+
+  /* sidebar (kept for compatibility) */
+  --sidebar: var(--navy);
+  --sidebar-foreground: var(--white);
+  --sidebar-primary: var(--teal-accent);
+  --sidebar-primary-foreground: var(--white);
+  --sidebar-accent: var(--navy-light);
+  --sidebar-accent-foreground: var(--white);
+  --sidebar-border: var(--navy-light);
+  --sidebar-ring: var(--teal-accent);
+}
+
+/* No dark mode — this is a healthcare site for 60+ users, light mode only */
+
+@theme inline {
+  --font-sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'Geist Mono', monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 4px);
+  --radius-xl: calc(var(--radius) + 8px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Brand Colors for Tailwind v4 */
+  --color-navy: var(--navy);
+  --color-navy-dark: var(--navy-dark);
+  --color-navy-light: var(--navy-light);
+  --color-teal: var(--teal);
+  --color-teal-dark: var(--teal-dark);
+  --color-teal-accent: var(--teal-accent);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-text-dark: var(--text-dark);
+  --color-text-body: var(--text-body);
+  --color-text-muted: var(--text-muted);
+  --color-border-light: var(--border-light);
+
+  /* Friendly aliases */
+  --color-body: var(--text-body);
+  --color-muted-brand: var(--text-muted);
+}
+
+/* =========================================
+   BASE STYLES
+   ========================================= */
+@layer base {
+  * {
+    @apply border-border;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-size: 18px; /* Minimum 18px for 60+ audience */
+  }
+
+  body {
+    background-color: var(--surface);
+    color: var(--text-dark);
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 800;
+    color: var(--text-dark);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+
+  h2 {
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    font-weight: 700;
+    color: var(--text-dark);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+
+  h3 {
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    font-weight: 700;
+    color: var(--text-dark);
+    line-height: 1.3;
+  }
+
+  h4 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    line-height: 1.4;
+  }
+
+  h5, h6 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--text-body);
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* Accessibility: Skip link */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .focus\:not-sr-only:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: inherit;
+    margin: inherit;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+
+  /* Focus visible for keyboard users */
+  :focus-visible {
+    outline: 3px solid var(--teal-accent);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* Minimum tap targets for interactive controls */
+  button, input, select, textarea {
+    min-height: 44px;
+  }
+
+  /* Standalone CTA anchors (not inline text links) */
+  a.btn-phone, a.btn-outline-white {
+    min-height: 52px;
+  }
+
+  /* Images */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* =========================================
+   BRAND UTILITY CLASSES
+   ========================================= */
+@layer utilities {
+  /* Navy hero gradient */
+  .bg-navy-gradient {
+    background: linear-gradient(135deg, #091E30 0%, #0D2B45 50%, #1A3D5C 100%);
+  }
+
+  /* Teal accent gradient */
+  .bg-teal-gradient {
+    background: linear-gradient(135deg, #C5EEE4 0%, #8DDACE 100%);
+  }
+
+  /* Surface gradient */
+  .bg-surface-gradient {
+    background: linear-gradient(180deg, var(--white) 0%, var(--surface) 100%);
+  }
+
+  /* Trust badge */
+  .trust-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(197, 238, 228, 0.15);
+    border: 1px solid rgba(197, 238, 228, 0.3);
+    border-radius: 9999px;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--teal);
+  }
+
+  /* Service card hover */
+  .service-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(13, 43, 69, 0.12);
+  }
+
+  /* Phone CTA button */
+  .btn-phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    background: var(--teal-accent);
+    color: var(--navy-dark);
+    font-weight: 700;
+    font-size: 1.05rem;
+    padding: 0.875rem 1.75rem;
+    border-radius: var(--radius-lg);
+    transition: background 0.2s ease, transform 0.15s ease;
+    min-height: 52px;
+  }
+  .btn-phone:hover {
+    background: var(--teal-dark);
+    transform: translateY(-1px);
+  }
+
+  /* Outline button */
+  .btn-outline-white {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    background: transparent;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.875rem 1.75rem;
+    border: 2px solid rgba(255,255,255,0.4);
+    border-radius: var(--radius-lg);
+    transition: background 0.2s ease, border-color 0.2s ease;
+    min-height: 52px;
+  }
+  .btn-outline-white:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(255,255,255,0.7);
+  }
+
+  /* Section container */
+  .section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  /* Section padding */
+  .section-py {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  /* Section label above h2 */
+  .section-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--teal-accent);
+  }
+
+  /* Divider */
+  .section-divider {
+    width: 3rem;
+    height: 4px;
+    background: var(--teal-accent);
+    border-radius: 9999px;
+    margin: 1rem 0 1.5rem;
+  }
+
+  /* Card base */
+  .card-base {
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--border-light);
+    box-shadow: 0 2px 16px rgba(13, 43, 69, 0.06);
+  }
+
+  /* Placeholder banner — REMOVE before launch */
+  .placeholder-banner {
+    background: #FFF3CD;
+    border: 2px dashed #F0A500;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #856404;
+    text-align: center;
+  }
+
+  /* Fade-in animation */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Step number circles */
+  .step-number {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: var(--navy);
+    color: var(--white);
+    font-weight: 800;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  /* FAQ accordion */
+  .faq-item {
+    border-bottom: 1px solid var(--border-light);
+  }
+  .faq-item:last-child {
+    border-bottom: none;
+  }
+
+  /* Suburb pill */
+  .suburb-pill {
+    display: inline-block;
+    background: var(--white);
+    border: 1px solid var(--border-light);
+    border-radius: 9999px;
+    padding: 0.4rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--navy);
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+  }
+  .suburb-pill:hover {
+    background: var(--navy);
+    border-color: var(--navy);
+    color: var(--white);
+  }
+
+  /* Text colour utilities */
+  .text-navy { color: var(--navy); }
+  .text-teal { color: var(--teal-accent); }
+  .text-body { color: var(--text-body); }
+  .text-muted-brand { color: var(--text-muted); }
+
+  /* BG utilities */
+  .bg-navy { background-color: var(--navy); }
+  .bg-teal { background-color: var(--teal); }
+  .bg-surface { background-color: var(--surface); }
+  .bg-surface-2 { background-color: var(--surface-2); }
+}
