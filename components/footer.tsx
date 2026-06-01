@@ -19,7 +19,7 @@ export function Footer() {
             <div className="flex items-center gap-3 mb-5">
               <div className="bg-white/10 rounded-lg p-1.5 flex items-center justify-center" style={{ width: 48, height: 48 }}>
                 <Image
-                  src="/logo.png"
+                  src="./logo.png"
                   alt="Care N Cure logo"
                   width={36}
                   height={36}

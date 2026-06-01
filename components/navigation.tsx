@@ -71,7 +71,7 @@ export function Navigation() {
             <Link href="/" className="flex items-center gap-3 flex-shrink-0" aria-label="Care N Cure — Home">
               <div className="bg-navy rounded-lg p-1.5 flex items-center justify-center" style={{ width: 44, height: 44 }}>
                 <Image
-                  src="/logo.png"
+                  src="./logo.png"
                   alt="Care N Cure logo"
                   width={32}
                   height={32}

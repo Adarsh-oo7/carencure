@@ -32,7 +32,7 @@ export function HeroSection({
         aria-hidden="true"
       >
         <Image
-          src="/hero-bg.jpg"
+          src="./hero-bg.jpg"
           alt="Registered nurse caring for a patient at home in Perth"
           fill
           priority
