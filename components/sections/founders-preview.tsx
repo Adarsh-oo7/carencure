@@ -1,26 +1,28 @@
 import Link from 'next/link'
-import { ArrowRight, AlertTriangle } from 'lucide-react'
+import { ArrowRight, ShieldCheck, Quote } from 'lucide-react'
 
 const founders = [
   {
     id: 'founder-jinu',
+    initials: 'JM',
     name: 'Jinu Maecheril Sukumaran',
     credential: 'Registered Nurse (RN)',
-    ahpra: '[AHPRA Number — to be confirmed]',
+    ahpra: 'AHPRA Registered · NMW-class',
     experience: '10+ years nursing experience',
     background: 'Based in Harrisdale, WA — caring for Perth families',
+    quote: 'I became a nurse to make a difference in people’s lives — and the best way to do that at home is to be the same face every visit. That’s why I built Care N Cure around one nurse, one client.',
     bio: 'Jinu brings over a decade of clinical nursing experience across hospital and community settings. His approach to care is built on clinical precision and genuine empathy — qualities he now brings directly to Perth families through Care N Cure.',
-    photoPlaceholder: true,
   },
   {
     id: 'founder-zuhair',
+    initials: 'MZ',
     name: 'Mohamed Zuhair Parayil Ummer',
     credential: 'Registered Nurse (RN)',
-    ahpra: '[AHPRA Number — to be confirmed]',
+    ahpra: 'AHPRA Registered · NMW-class',
     experience: '10+ years nursing experience',
     background: 'Based in Harrisdale, WA — dedicated to Perth’s community',
+    quote: 'Families deserve one nurse who knows them — their medications, their fears, their progress. Not a different face each week. That continuity is what changes outcomes.',
     bio: 'Zuhair\'s nursing career spans over ten years in clinical environments. He co-founded Care N Cure after recognising that Perth families deserved a more consistent, trustworthy model of private nursing — where the same qualified nurse builds a real relationship with every client.',
-    photoPlaceholder: true,
   },
 ]
 
@@ -40,40 +42,62 @@ export function FoundersPreview() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
-          {founders.map(({ id, name, credential, ahpra, experience, background, bio, photoPlaceholder }) => (
-            <div key={id} id={id} className="card-base overflow-hidden flex flex-col">
-              {/* Photo area */}
+          {founders.map(({ id, initials, name, credential, ahpra, experience, background, quote, bio }) => (
+            <div
+              key={id}
+              id={id}
+              className="card-base overflow-hidden flex flex-col"
+              itemScope
+              itemType="https://schema.org/Person"
+            >
+              {/* Quote / Header area */}
               <div
-                className="relative h-56 flex items-center justify-center"
-                style={{ background: 'linear-gradient(135deg, #091E30, #1A3D5C)' }}
+                className="relative px-7 pt-8 pb-6"
+                style={{ background: 'linear-gradient(135deg, #091E30 0%, #0D2B45 60%, #1A3D5C 100%)' }}
               >
-                {photoPlaceholder && (
-                  <div className="flex flex-col items-center gap-3 text-center px-6">
-                    <div
-                      className="w-24 h-24 rounded-full flex items-center justify-center text-3xl font-bold"
-                      style={{ background: 'rgba(197,238,228,0.2)', color: 'var(--teal)', border: '2px dashed rgba(197,238,228,0.4)' }}
-                    >
-                      {name.charAt(0)}
-                    </div>
-                    <div className="placeholder-banner text-xs">
-                      ⚠ PLACEHOLDER — Replace with real photo of {name.split(' ')[0]} before launch
-                    </div>
+                {/* Decorative large quote icon */}
+                <Quote
+                  className="absolute top-4 right-5 opacity-10"
+                  style={{ width: 56, height: 56, color: 'var(--teal)' }}
+                  aria-hidden="true"
+                />
+
+                {/* Avatar + name row */}
+                <div className="flex items-center gap-4 mb-5">
+                  <div
+                    className="w-14 h-14 rounded-full flex items-center justify-center font-extrabold text-lg flex-shrink-0"
+                    style={{ background: 'rgba(197,238,228,0.18)', color: 'var(--teal)', border: '2px solid rgba(197,238,228,0.35)' }}
+                    aria-hidden="true"
+                  >
+                    {initials}
                   </div>
-                )}
+                  <div>
+                    <p className="text-white font-bold text-sm leading-tight" itemProp="name">{name}</p>
+                    <p className="text-teal-300 text-xs mt-0.5" itemProp="jobTitle">{credential}</p>
+                  </div>
+                </div>
+
+                {/* Personal quote */}
+                <blockquote className="relative">
+                  <p className="text-white/90 text-sm leading-relaxed italic">
+                    &ldquo;{quote}&rdquo;
+                  </p>
+                </blockquote>
+
+                {/* AHPRA badge */}
+                <div className="flex items-center gap-2 mt-5">
+                  <ShieldCheck className="w-4 h-4 text-teal-400 flex-shrink-0" />
+                  <span className="text-teal-300 text-xs font-semibold">{ahpra}</span>
+                </div>
               </div>
 
               {/* Info */}
               <div className="p-6 flex flex-col gap-3 flex-1">
-                <div>
-                  <h3 className="text-navy" style={{ fontSize: '1.1rem' }}>{name}</h3>
-                  <p className="font-semibold text-sm" style={{ color: 'var(--teal-accent)' }}>{credential}</p>
-                </div>
                 <div className="flex flex-col gap-1.5 text-sm text-body">
                   <div>✓ {experience}</div>
                   <div>✓ {background}</div>
-                  <div className="text-xs" style={{ color: 'var(--text-muted)' }}>AHPRA: {ahpra}</div>
                 </div>
-                <p className="text-body text-sm leading-relaxed flex-1">{bio}</p>
+                <p className="text-body text-sm leading-relaxed flex-1" itemProp="description">{bio}</p>
               </div>
             </div>
           ))}

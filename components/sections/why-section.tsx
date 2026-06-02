@@ -1,41 +1,59 @@
-import { RefreshCw, ShieldCheck, Heart, MessageSquareHeart } from 'lucide-react'
+import { UserCheck, ShieldCheck, MessageSquareHeart, Banknote, Clock, Phone } from 'lucide-react'
 
 const differentiators = [
   {
-    id: 'why-same-nurse',
-    icon: RefreshCw,
-    title: 'Same nurse, every visit',
+    id: 'why-one-nurse',
+    icon: UserCheck,
+    title: 'One Nurse. Not a Roster.',
     description:
-      'You won\'t be explaining your story to a stranger each time. We believe in continuity — your nurse gets to know you, your routine, and what matters most to you. That\'s how real care works.',
+      'Your dedicated nurse conducts your assessment, writes your care plan, and remains your consistent point of contact — not whoever happens to be available that week.',
     colour: '#EAF6F0',
-    iconColour: '#27AE60',
+    iconColour: '#0d9488',
   },
   {
-    id: 'why-registered',
+    id: 'why-clinical',
     icon: ShieldCheck,
-    title: 'AHPRA Registered Nurses only',
+    title: 'Clinical Oversight at Every Visit',
     description:
-      'Every nurse at Care N Cure is AHPRA registered with years of real hospital experience. There\'s a meaningful clinical difference between a registered nurse and a support worker — and it matters for your loved one\'s safety and recovery.',
+      'Every visit is led by an AHPRA-registered nurse. We catch changes in your condition early — before they become hospital readmissions.',
     colour: '#E8F4FD',
     iconColour: '#2980B9',
   },
   {
-    id: 'why-dignity',
-    icon: Heart,
-    title: 'Care with dignity',
+    id: 'why-family',
+    icon: MessageSquareHeart,
+    title: 'Your Family Is Kept Informed',
     description:
-      'Every Australian deserves to be treated with respect in their own home — not managed, not processed. We take the time to listen, to understand, and to deliver care that honours your independence and your family.',
+      'Your dedicated nurse communicates directly with your nominated family members. One number. One nurse. Clear updates every visit.',
+    colour: '#F5EEF8',
+    iconColour: '#8E44AD',
+  },
+  {
+    id: 'why-funded',
+    icon: Banknote,
+    title: 'Funded Care Navigation',
+    description:
+      'We help you access Home Care Packages, NDIS, CHSP, and transition care funding — so professional nursing care doesn\'t have to mean a large out-of-pocket cost.',
+    colour: '#FEF9E7',
+    iconColour: '#D4AC0D',
+  },
+  {
+    id: 'why-fast',
+    icon: Clock,
+    title: 'Fast Response After Discharge',
+    description:
+      'We aim to have your first nursing visit within 24–48 hours of hospital discharge. No waiting weeks for support to begin.',
     colour: '#FEF3F3',
     iconColour: '#E74C3C',
   },
   {
-    id: 'why-family',
-    icon: MessageSquareHeart,
-    title: 'We look after the whole family',
+    id: 'why-founders',
+    icon: Phone,
+    title: 'Founders You Can Call Directly',
     description:
-      'When a loved one comes home from hospital, the whole family is affected. We keep everyone in the loop — in plain language, without medical jargon. Because looking after each other is what Australians do.',
-    colour: '#F5EEF8',
-    iconColour: '#8E44AD',
+      'Jinu and Zuhair are the founders — and registered nurses. When you call Care N Cure, you may speak with them personally. That\'s how different we are.',
+    colour: '#EAF6F0',
+    iconColour: '#27AE60',
   },
 ]
 

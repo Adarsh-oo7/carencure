@@ -9,17 +9,25 @@ import { ServiceAreas } from '@/components/sections/service-areas'
 import { FAQSection } from '@/components/sections/faq-section'
 import { CTASection } from '@/components/sections/cta'
 import { MedicalBusinessSchema, OrganizationSchema, LocalBusinessSchema } from '@/components/schema'
+import { DedicatedNurseSection } from '@/components/sections/dedicated-nurse-section'
+import { PatientStorySection } from '@/components/sections/patient-story-section'
+import { FundedCareSection } from '@/components/sections/funded-care-section'
 
 export const metadata: Metadata = {
-  title: 'Private Nursing at Home in Perth | Care N Cure Nursing Care Services',
+  title: 'Your Dedicated Nurse at Home | Care N Cure Perth WA',
   description:
-    'Registered nurses providing in-home nursing care across Perth, WA. Post-hospital recovery, wound care, medication management. Call our founders directly.',
+    "Perth's first dedicated nurse model — one registered nurse for each client. Post-hospital recovery, NDIS, Home Care Packages. AHPRA registered nurses. Harrisdale, Perth WA.",
   keywords: [
     'private nursing Perth',
     'home nursing Perth WA',
     'registered nurse home visit Perth',
     'post hospital care Perth',
     'AHPRA registered nurse Perth',
+    'dedicated nurse Perth',
+    'one nurse one client Perth',
+    'home care packages Perth',
+    'NDIS nursing Perth',
+    'post hospital care Perth WA',
   ],
   alternates: { canonical: 'https://carencure.com.au' },
   openGraph: {
@@ -76,11 +84,11 @@ export default function HomePage() {
       <LocalBusinessSchema />
 
       <HeroSection
-        badge="AHPRA Registered Nurses · Perth, WA"
-        headline="Trusted Nursing Care, At Home. For the Australians Who Deserve It Most."
-        subheadline="When someone you love comes home from hospital, they need more than good intentions. They need a qualified nurse who shows up, knows their name, and genuinely cares. That’s exactly what we provide."
-        ctaPrimary={{ text: 'Call Us Now', href: '#', isPhone: true }}
-        ctaSecondary={{ text: 'See Our Services', href: '#services' }}
+        badge="Perth's First Dedicated Nurse Model · AHPRA Registered"
+        headline="Your Dedicated Nurse™ — One Client. One Nurse."
+        subheadline="When someone you love comes home from hospital, they deserve one nurse who knows them by name — their history, their family, their goals. Not a roster. Not a call centre. One dedicated registered nurse, every time."
+        ctaPrimary={{ text: 'Meet Your Dedicated Nurse', href: '/your-dedicated-nurse' }}
+        ctaSecondary={{ text: 'How It Works', href: '#how-it-works' }}
       />
 
       <TrustBar />
@@ -89,11 +97,19 @@ export default function HomePage() {
         <ServicesGrid />
       </div>
 
+      <FundedCareSection />
+
       <WhySection />
 
-      <HowItWorks />
+      <DedicatedNurseSection />
+
+      <div id="how-it-works">
+        <HowItWorks />
+      </div>
 
       <FoundersPreview />
+
+      <PatientStorySection />
 
       <ServiceAreas />
 
@@ -104,8 +120,8 @@ export default function HomePage() {
       />
 
       <CTASection
-        title="Ready to talk? We’re here when it matters most."
-        description="Call us directly — you’ll speak with a registered nurse, not a receptionist or call centre. If your loved one has just come home from hospital, don’t wait. We’re here to help, and we answer every call."
+        title="Ready to meet your nurse?"
+        description="Call us directly — you'll speak with a registered nurse, not a receptionist. If your loved one has just come home from hospital, don't wait. We answer every call."
         secondaryLink={{ text: 'Send an enquiry', href: '/contact' }}
       />
     </>

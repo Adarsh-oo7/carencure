@@ -1,0 +1,96 @@
+import Link from 'next/link'
+import { Home, Users, Heart, Activity } from 'lucide-react'
+
+const fundingCards = [
+  {
+    id: 'funded-hcp',
+    icon: Home,
+    title: 'Home Care Packages',
+    subtitle: 'Levels 1–4 · Aged Care Act',
+    body: 'For older Australians needing ongoing support at home. Your HCP funds nursing visits, personal care, and clinical services. We help you get the most from your package.',
+    badge: 'My Aged Care · myagedcare.gov.au',
+  },
+  {
+    id: 'funded-ndis',
+    icon: Users,
+    title: 'NDIS Support',
+    subtitle: 'Assistance with Daily Life · Nursing',
+    body: 'Registered NDIS provider supporting participants with in-home nursing care, complex support, and daily living assistance. We work within your NDIS plan.',
+    badge: 'NDIS Registered Provider',
+  },
+  {
+    id: 'funded-chsp',
+    icon: Heart,
+    title: 'Commonwealth Home Support Programme',
+    subtitle: 'Entry-level aged care support',
+    body: 'Entry-level support for older Australians wanting to stay independent at home. CHSP can fund assistance with daily tasks, nursing, and allied health visits.',
+    badge: 'Entry-level support',
+  },
+  {
+    id: 'funded-transition',
+    icon: Activity,
+    title: 'Post-Hospital Transition Care',
+    subtitle: 'Short-term recovery support',
+    body: 'Short-term funded support after hospital discharge to help you regain independence. We bridge the gap between hospital and home while your long-term care is arranged.',
+    badge: 'Hospital discharge support',
+  },
+]
+
+export function FundedCareSection() {
+  return (
+    <section className="py-20 bg-slate-50" aria-labelledby="funded-care-heading">
+      <div className="section-container">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <p className="section-label mb-3">Funding &amp; Access</p>
+          <h2 id="funded-care-heading" className="text-navy mb-4">
+            Care N Cure Works With Your Funding
+          </h2>
+          <p className="text-body text-lg max-w-2xl mx-auto">
+            Many clients are eligible for government-funded care. We help you understand and access
+            what you&apos;re entitled to.
+          </p>
+        </div>
+
+        {/* Card grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+          {fundingCards.map(({ id, icon: Icon, title, subtitle, body, badge }) => (
+            <div
+              key={id}
+              id={id}
+              className="bg-white rounded-2xl p-7 shadow-sm border border-border transition-all duration-200 hover:border-l-4 hover:border-l-teal-600 group"
+            >
+              <div
+                className="w-12 h-12 rounded-xl flex items-center justify-center mb-4"
+                style={{ background: 'var(--teal)', color: 'var(--navy)' }}
+              >
+                <Icon className="w-6 h-6" />
+              </div>
+              <h3 className="text-navy font-bold text-lg mb-1">{title}</h3>
+              <p className="text-teal-700 text-sm font-medium mb-3">{subtitle}</p>
+              <p className="text-body text-sm leading-relaxed mb-4">{body}</p>
+              <span className="inline-block bg-teal-50 text-teal-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-teal-200">
+                {badge}
+              </span>
+            </div>
+          ))}
+        </div>
+
+        {/* Reassurance strip */}
+        <div className="bg-teal-700 rounded-2xl px-8 py-8 text-center">
+          <p className="text-white text-lg font-medium mb-5">
+            Not sure what funding you&apos;re eligible for? Our nurses will help you find out — at
+            no cost.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2 bg-white text-teal-700 font-semibold px-6 py-3 rounded-xl hover:bg-teal-50 transition-colors"
+            id="funded-care-chat-cta"
+          >
+            Book a Free Funding Chat
+          </Link>
+        </div>
+      </div>
+    </section>
+  )
+}

@@ -25,6 +25,8 @@ export function HeroSection({
       className="relative overflow-hidden"
       style={{ minHeight: '85vh', background: '#091E30' }}
       aria-labelledby="hero-heading"
+      itemScope
+      itemType="https://schema.org/MedicalBusiness"
     >
       {/* ── Background image — full bleed ── */}
       <div
@@ -32,54 +34,52 @@ export function HeroSection({
         aria-hidden="true"
       >
         <Image
-          src="./hero-bg.jpg"
-          alt="Registered nurse caring for a patient at home in Perth"
+          src="/hero-bg.jpg"
+          alt="AHPRA registered nurse providing compassionate in-home care to an elderly patient in Perth, WA — Care N Cure Nursing Care Services"
           fill
           priority
           quality={90}
-          style={{ objectFit: 'cover', objectPosition: 'center center' }}
+          sizes="100vw"
+          style={{ objectFit: 'cover', objectPosition: 'center 30%' }}
         />
 
-        {/* Mobile overlay: smooth, light vertical gradient for clear photo visibility */}
+        {/* Mobile overlay */}
         <div
           className="absolute inset-0 block sm:hidden"
           style={{
             background:
-              'linear-gradient(180deg, rgba(9,30,48,0.65) 0%, rgba(9,30,48,0.35) 60%, rgba(9,30,48,0.1) 100%)',
+              'linear-gradient(180deg, rgba(9,30,48,0.70) 0%, rgba(9,30,48,0.45) 55%, rgba(9,30,48,0.15) 100%)',
           }}
         />
 
-        {/* Desktop overlay: smooth, light horizontal gradient for clear photo visibility */}
+        {/* Desktop overlay: strong left-to-right fade so text is crisp, photo shows on right */}
         <div
           className="absolute inset-0 hidden sm:block"
           style={{
             background:
-              'linear-gradient(90deg, rgba(9,30,48,0.72) 0%, rgba(9,30,48,0.4) 45%, rgba(9,30,48,0.08) 75%, transparent 100%)',
+              'linear-gradient(90deg, rgba(9,30,48,0.82) 0%, rgba(9,30,48,0.55) 40%, rgba(9,30,48,0.15) 70%, transparent 100%)',
           }}
         />
       </div>
 
-      {/* Grid lines — very subtle, only visible over dark zone */}
+      {/* Subtle grid texture over dark zone only */}
       <div
-        className="absolute inset-0 opacity-5 pointer-events-none"
+        className="absolute inset-0 opacity-[0.04] pointer-events-none"
         style={{
           backgroundImage:
-            'linear-gradient(rgba(197,238,228,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(197,238,228,0.4) 1px, transparent 1px)',
+            'linear-gradient(rgba(197,238,228,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(197,238,228,0.5) 1px, transparent 1px)',
           backgroundSize: '60px 60px',
         }}
         aria-hidden="true"
       />
 
       {/* ── Content ── */}
-      <div
-        className="relative section-container pt-28 pb-36 sm:pt-36 sm:pb-48"
-      >
+      <div className="relative section-container pt-28 pb-36 sm:pt-36 sm:pb-48">
         <div style={{ maxWidth: '640px' }} className="animate-fade-in">
-          {/* Dynamic spacer to guarantee excellent vertical breathing room below the sticky header */}
           <div className="h-8 sm:h-14" />
 
           {badge && (
-            <div className="trust-badge mb-6 inline-flex">
+            <div className="trust-badge mb-6 inline-flex" role="note" aria-label="Credential badge">
               <span
                 className="w-2 h-2 rounded-full flex-shrink-0"
                 style={{ background: 'var(--teal-accent)' }}
@@ -91,6 +91,7 @@ export function HeroSection({
           <h1
             id="hero-heading"
             className="text-white mb-6"
+            itemProp="name"
             style={{
               fontSize: 'clamp(2.1rem, 5vw, 3.5rem)',
               fontWeight: 800,
@@ -104,6 +105,7 @@ export function HeroSection({
 
           <p
             className="mb-10"
+            itemProp="description"
             style={{
               fontSize: 'clamp(1.05rem, 1.8vw, 1.2rem)',
               lineHeight: 1.75,
@@ -114,47 +116,81 @@ export function HeroSection({
             {subheadline}
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-">
+          <div className="flex flex-col sm:flex-row gap-4">
             {ctaPrimary && (
               ctaPrimary.isPhone ? (
                 <a
                   href={PHONE_HREF}
                   className="btn-phone"
                   id="hero-call-cta"
+                  aria-label={`Call Care N Cure now — ${PHONE_NUMBER}`}
                 >
                   <Phone className="w-5 h-5 flex-shrink-0" />
                   Call Us Now — {PHONE_NUMBER}
                 </a>
               ) : (
-                <Link href={ctaPrimary.href} className="btn-phone" id="hero-primary-cta">
+                <Link
+                  href={ctaPrimary.href}
+                  className="btn-phone"
+                  id="hero-primary-cta"
+                  aria-label={ctaPrimary.text}
+                >
                   {ctaPrimary.text}
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               )
             )}
             {ctaSecondary && (
-              <Link href={ctaSecondary.href} className="btn-outline-white" id="hero-secondary-cta">
+              <Link
+                href={ctaSecondary.href}
+                className="btn-outline-white"
+                id="hero-secondary-cta"
+                aria-label={ctaSecondary.text}
+              >
                 {ctaSecondary.text}
                 <ArrowRight className="w-5 h-5" />
               </Link>
             )}
           </div>
 
-          {/* Value props strip */}
-          <div className="mt-8 flex flex-col sm:flex-row flex-wrap gap-y-2 gap-x-6">
+          {/* Trust / value props strip */}
+          <div className="mt-8 flex flex-col sm:flex-row flex-wrap gap-y-2 gap-x-6" role="list" aria-label="Key credentials">
             {[
               '✓ AHPRA Registered Nurses — not support workers',
-              '✓ Same nurse, every visit — a face you know and trust',
-              '✓ Care that respects your dignity and independence',
+              '✓ Your Dedicated Nurse™ — same nurse, every visit',
+              '✓ First visit within 24–48 hrs of hospital discharge',
             ].map((item) => (
               <span
                 key={item}
+                role="listitem"
                 className="text-sm font-medium"
                 style={{ color: 'rgba(255,255,255,0.9)', textShadow: '0 1px 8px rgba(0,0,0,0.6)' }}
               >
                 {item}
               </span>
             ))}
+          </div>
+
+          {/* AHPRA / trust ribbon */}
+          <div className="mt-10 flex items-center gap-3 flex-wrap">
+            <div
+              className="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold"
+              style={{ background: 'rgba(197,238,228,0.15)', border: '1px solid rgba(197,238,228,0.3)', color: 'rgba(197,238,228,0.95)' }}
+            >
+              🛡 AHPRA Registered
+            </div>
+            <div
+              className="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold"
+              style={{ background: 'rgba(197,238,228,0.15)', border: '1px solid rgba(197,238,228,0.3)', color: 'rgba(197,238,228,0.95)' }}
+            >
+              ✓ NDIS Registered Provider
+            </div>
+            <div
+              className="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold"
+              style={{ background: 'rgba(197,238,228,0.15)', border: '1px solid rgba(197,238,228,0.3)', color: 'rgba(197,238,228,0.95)' }}
+            >
+              🏠 Home Care Package Provider
+            </div>
           </div>
         </div>
       </div>

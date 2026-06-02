@@ -62,16 +62,24 @@ export function MedicalBusinessSchema() {
       {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-        opens: '08:00',
+        opens: '09:00',
         closes: '18:00',
       },
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Saturday'],
-        opens: '09:00',
-        closes: '13:00',
-      },
     ],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Home Nursing Services',
+      itemListElement: [
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Post-Hospital Home Care Perth' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Your Dedicated Nurse\u2122 Model Perth' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'NDIS Nursing Support Perth' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Home Care Packages Perth' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Wound Care at Home Perth' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Medication Management Perth' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Companion Care Perth' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Mobility Support Perth' } },
+      ],
+    },
     founder: [
       {
         '@type': 'Person',
@@ -160,7 +168,7 @@ export function LocalBusinessSchema() {
     priceRange: '$$',
     servesCuisine: undefined,
     areaServed: AREA_SERVED,
-    openingHours: ['Mo-Fr 08:00-18:00', 'Sa 09:00-13:00'],
+    openingHours: ['Mo-Fr 09:00-18:00'],
   }
 
   return (

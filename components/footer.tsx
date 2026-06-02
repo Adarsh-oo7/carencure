@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { MapPin, Phone, Mail, Clock, Shield, ExternalLink } from 'lucide-react'
+import { MapPin, Phone, Mail, Clock, Shield, ExternalLink, Linkedin } from 'lucide-react'
 
 const PHONE_NUMBER = '0481 748 516'
 const PHONE_HREF = 'tel:+61481748516'
@@ -46,7 +46,7 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Services */}
+          {/* Services + Key Pages */}
           <div>
             <h4 className="font-semibold text-white text-base mb-4">Our Services</h4>
             <ul className="space-y-2.5">
@@ -57,6 +57,9 @@ export function Footer() {
                 { label: 'Medication Management', href: '/medication-management' },
                 { label: 'Mobility Support', href: '/mobility-support' },
                 { label: 'Companion Care', href: '/companion-care' },
+                { label: 'Your Dedicated Nurse™', href: '/your-dedicated-nurse' },
+                { label: 'Funded Care (HCP/NDIS)', href: '/funded-care' },
+                { label: 'Hospital to Home', href: '/post-hospital-care' },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -131,10 +134,20 @@ export function Footer() {
               <div className="flex items-start gap-2.5">
                 <Clock className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: 'var(--teal-accent)' }} />
                 <div className="text-white/70">
-                  <div>Mon–Fri: 8:00am–6:00pm</div>
-                  <div>Sat: 9:00am–1:00pm</div>
-                  <div>Sun: Closed (leave a message)</div>
+                  <div>Monday – Friday: 9:00am – 6:00pm</div>
                 </div>
+              </div>
+              <div className="flex items-center gap-3 mt-2">
+                <a
+                  href="https://www.linkedin.com/company/carencure-au/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Care N Cure on LinkedIn"
+                  className="flex items-center gap-2 text-white/60 hover:text-white transition-colors text-sm"
+                >
+                  <Linkedin className="w-4 h-4" style={{ color: 'var(--teal-accent)' }} />
+                  <span>LinkedIn</span>
+                </a>
               </div>
             </div>
           </div>

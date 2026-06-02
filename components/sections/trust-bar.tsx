@@ -1,35 +1,35 @@
-import { ShieldCheck, MapPin, Users, BadgeCheck, Heart } from 'lucide-react'
+import { CheckCircle2 } from 'lucide-react'
 
 const trustItems = [
   {
-    icon: ShieldCheck,
+    icon: CheckCircle2,
     label: 'AHPRA Registered Nurses',
     sub: 'All nurses AHPRA verified',
     id: 'trust-ahpra',
   },
   {
-    icon: BadgeCheck,
-    label: 'ASIC Registered Business',
-    sub: 'ABN: 87 152 479 362',
-    id: 'trust-asic',
+    icon: CheckCircle2,
+    label: 'NDIS Registered Provider',
+    sub: 'Supporting NDIS participants',
+    id: 'trust-ndis',
   },
   {
-    icon: Heart,
-    label: 'Care with Dignity',
-    sub: 'Your home, your way, always',
-    id: 'trust-dignity',
+    icon: CheckCircle2,
+    label: 'Home Care Package Provider',
+    sub: 'Approved HCP provider',
+    id: 'trust-hcp',
   },
   {
-    icon: MapPin,
-    label: 'Perth-Based Team',
-    sub: 'Harrisdale, WA 6112',
+    icon: CheckCircle2,
+    label: 'Your Dedicated Nurse™ Model',
+    sub: 'One nurse, assigned to you',
+    id: 'trust-dedicated',
+  },
+  {
+    icon: CheckCircle2,
+    label: 'Perth-Based · Harrisdale WA',
+    sub: 'Serving all Perth suburbs',
     id: 'trust-perth',
-  },
-  {
-    icon: Users,
-    label: 'Founder-Led Practice',
-    sub: 'Same nurse, every visit',
-    id: 'trust-founders',
   },
 ]
 
