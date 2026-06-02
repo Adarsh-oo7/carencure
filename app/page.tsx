@@ -84,7 +84,7 @@ export default function HomePage() {
       <LocalBusinessSchema />
 
       <HeroSection
-        badge="Perth's First Dedicated Nurse Model · AHPRA Registered"
+        badge="Perth's First Dedicated Nurse Model"
         headline="Your Dedicated Nurse™ — One Client. One Nurse."
         subheadline="When someone you love comes home from hospital, they deserve one nurse who knows them by name — their history, their family, their goals. Not a roster. Not a call centre. One dedicated registered nurse, every time."
         ctaPrimary={{ text: 'Meet Your Dedicated Nurse', href: '/your-dedicated-nurse' }}

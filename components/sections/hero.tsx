@@ -177,7 +177,6 @@ export function HeroSection({
               className="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold"
               style={{ background: 'rgba(197,238,228,0.15)', border: '1px solid rgba(197,238,228,0.3)', color: 'rgba(197,238,228,0.95)' }}
             >
-              🛡 AHPRA Registered
             </div>
             <div
               className="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold"
