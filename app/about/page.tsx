@@ -144,6 +144,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      
 
       {/* ASIC Registration */}
       {/* <section className="py-12 bg-white">
