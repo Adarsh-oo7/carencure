@@ -11,21 +11,21 @@ const PHONE_HREF = 'tel:+61481748516'
 const serviceLinks = [
   { label: 'Post-Hospital Recovery Care', href: '/post-hospital-care' },
   { label: 'Private Nursing at Home', href: '/private-nursing' },
-  { label: 'Wound Care at Home', href: '/wound-care' },
-  { label: 'Medication Management', href: '/medication-management' },
-  { label: 'Mobility Support', href: '/mobility-support' },
-  { label: 'Companion Care', href: '/companion-care' },
+  // { label: 'Wound Care at Home', href: '/wound-care' },
+  // { label: 'Medication Management', href: '/medication-management' },
+  // { label: 'Mobility Support', href: '/mobility-support' },
+  // { label: 'Companion Care', href: '/companion-care' },
 ]
 
 const locationLinks = [
   { label: 'All Perth Suburbs', href: '/locations' },
   { label: 'Nedlands', href: '/locations/nedlands' },
-  { label: 'Subiaco', href: '/locations/subiaco' },
-  { label: 'Joondalup', href: '/locations/joondalup' },
-  { label: 'Applecross', href: '/locations/applecross' },
-  { label: 'Mount Lawley', href: '/locations/mount-lawley' },
-  { label: 'Fremantle', href: '/locations/fremantle' },
-  { label: 'South Perth', href: '/locations/south-perth' },
+  // { label: 'Subiaco', href: '/locations/subiaco' },
+  // { label: 'Joondalup', href: '/locations/joondalup' },
+  // { label: 'Applecross', href: '/locations/applecross' },
+  // { label: 'Mount Lawley', href: '/locations/mount-lawley' },
+  // { label: 'Fremantle', href: '/locations/fremantle' },
+  // { label: 'South Perth', href: '/locations/south-perth' },
 ]
 
 export function Navigation() {

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/next'
-// import { Navigation } from '@/components/navigation'
+import { Navigation } from '@/components/navigation'
 import { Footer } from '@/components/footer'
 import { PersistentUI } from '@/components/persistent-ui'
 import './globals.css'
@@ -107,7 +107,7 @@ export default function RootLayout({
         >
           Skip to main content
         </a>
-        {/* <Navigation /> */}
+        <Navigation />
         <main className="flex-1" id="main-content">
           {children}
         </main>
