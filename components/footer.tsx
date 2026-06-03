@@ -35,10 +35,10 @@ export function Footer() {
               Founded by registered nurses. Serving Perth families with qualified, compassionate in-home nursing care.
             </p>
             <div className="space-y-2 text-sm">
-              <div className="flex items-start gap-2">
+              {/* <div className="flex items-start gap-2">
                 <Shield className="w-4 h-4 text-teal-accent mt-0.5 flex-shrink-0" style={{ color: 'var(--teal-accent)' }} />
                 <span className="text-white/70">ABN: 87 152 479 362</span>
-              </div>
+              </div> */}
               <div className="flex items-start gap-2">
                 <Shield className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: 'var(--teal-accent)' }} />
                 <span className="text-white/70">ASIC Registered — 13 March 2026</span>
