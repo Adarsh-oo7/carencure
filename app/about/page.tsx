@@ -146,7 +146,7 @@ export default function AboutPage() {
       </section>
 
       {/* ASIC Registration */}
-      <section className="py-12 bg-white">
+      {/* <section className="py-12 bg-white">
         <div className="section-container">
           <div className="max-w-xl mx-auto card-base p-8 text-center" id="asic-registration">
             <Shield className="w-10 h-10 mx-auto mb-4" style={{ color: 'var(--teal-accent)' }} />
@@ -160,7 +160,7 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <CTASection
         title="Want to speak with Jinu or Zuhair directly?"
