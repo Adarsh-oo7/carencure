@@ -7,7 +7,7 @@ import { Building2, Stethoscope, Landmark, HeartHandshake } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Home Nursing Service Areas Perth | Care N Cure',
-  description: 'Care N Cure Registered Nurses provide in-home clinical care across Perth suburbs, including Nedlands, Subiaco, Cottesloe, Harrisdale, and Joondalup.',
+  description: 'Care N Cure Registered Nurses provide in-home clinical care across Perth suburbs, including Nedlands, Subiaco, Cottesloe, and Joondalup.',
   alternates: { canonical: 'https://carencure.com.au/locations' },
 }
 
@@ -18,7 +18,6 @@ const suburbsList = [
   { name: 'Joondalup', href: '/locations/joondalup', description: 'Supporting hospital transitions and complex care plans near Joondalup Health Campus.', distance: 'Perth North' },
   { name: 'Applecross', href: '/locations/applecross', description: 'In-home private nursing visits and post-surgical recovery around Melville and Applecross.', distance: 'Perth South' },
   { name: 'Mount Lawley', href: '/locations/mount-lawley', description: 'Registered nurse visits, blood pressure monitoring, and injection administration.', distance: 'Inner North' },
-  { name: 'Harrisdale', href: '/locations/harrisdale', description: 'Our local office base — offering rapid-response community nursing to local families.', distance: 'Perth South' },
   { name: 'Fremantle', href: '/locations/fremantle', description: 'Post-hospital transitions and chronic condition management for the Fremantle region.', distance: 'Fremantle Area' },
   { name: 'Midland', href: '/locations/midland', description: 'Clinical nursing visits, skin tear repair, and complex Webster-pack setups in Midland.', distance: 'Perth East' },
   { name: 'South Perth', href: '/locations/south-perth', description: 'Companion care, respite nursing, and active medication reconciliation in South Perth.', distance: 'Inner South' },
@@ -51,7 +50,7 @@ export default function LocationsPage() {
             <h2 className="text-navy font-bold">Nursing where you need it</h2>
             <div className="section-divider mx-auto" />
             <p className="text-body text-base leading-relaxed">
-              Based in Harrisdale, our registered nursing founders travel across Perth to provide high-quality, professional clinical care directly in your home. Below are our key focus suburbs, but we cover all adjacent metro areas.
+              Based in Perth, our registered nursing founders travel across Perth to provide high-quality, professional clinical care directly in your home. Below are our key focus suburbs, but we cover all adjacent metro areas.
             </p>
           </div>
 

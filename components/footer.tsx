@@ -58,7 +58,7 @@ export function Footer() {
                 { label: 'Mobility Support', href: '/mobility-support' },
                 { label: 'Companion Care', href: '/companion-care' },
                 { label: 'Your Dedicated Nurse™', href: '/your-dedicated-nurse' },
-                { label: 'Funded Care (HCP/NDIS)', href: '/funded-care' },
+                { label: 'Funded Care (HCP)', href: '/funded-care' },
                 { label: 'Hospital to Home', href: '/post-hospital-care' },
               ].map((link) => (
                 <li key={link.href}>
@@ -82,7 +82,7 @@ export function Footer() {
                 { label: 'Subiaco', href: '/locations/subiaco' },
                 { label: 'Joondalup', href: '/locations/joondalup' },
                 { label: 'Applecross', href: '/locations/applecross' },
-                { label: 'Harrisdale', href: '/locations/harrisdale' },
+
                 { label: 'Fremantle', href: '/locations/fremantle' },
                 { label: 'South Perth', href: '/locations/south-perth' },
                 { label: 'All Suburbs →', href: '/locations' },
@@ -127,8 +127,7 @@ export function Footer() {
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: 'var(--teal-accent)' }} />
                 <span className="text-white/70">
-                  15 Rockefellerway<br />
-                  Harrisdale WA 6112
+                  Perth, WA
                 </span>
               </div>
               <div className="flex items-start gap-2.5">

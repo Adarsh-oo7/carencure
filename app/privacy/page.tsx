@@ -80,7 +80,7 @@ export default function PrivacyPage() {
             </p>
             <div className="bg-surface p-5 rounded-xl border border-border mt-3 text-xs space-y-1">
               <p><strong>Privacy Officer:</strong> Care N Cure Nursing Care Services</p>
-              <p><strong>Address:</strong> 15 Rockefeller Way, Harrisdale WA 6112</p>
+              <p><strong>Address:</strong> Perth WA</p>
               <p><strong>Email:</strong> hello@carencure.com.au</p>
               <p><strong>Phone:</strong> (08) XXXX XXXX</p>
             </div>

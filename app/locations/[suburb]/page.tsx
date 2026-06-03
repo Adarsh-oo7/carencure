@@ -58,13 +58,6 @@ const suburbsMap: Record<string, SuburbData> = {
     nearestHospital: 'Royal Perth Hospital',
     description: 'Registered nurse visits, blood pressure monitoring, subcutaneous injections, and complex medication safety in Mount Lawley, Highgate, and Inglewood.',
   },
-  harrisdale: {
-    id: 'harrisdale',
-    name: 'Harrisdale',
-    region: 'Perth South-East',
-    nearestHospital: 'Fiona Stanley Hospital & Armadale Health Service',
-    description: 'Our home office base — offering rapid-response community nursing, wound dressings, and chronic condition management to Harrisdale, Piara Waters, and Canning Vale.',
-  },
   fremantle: {
     id: 'fremantle',
     name: 'Fremantle',

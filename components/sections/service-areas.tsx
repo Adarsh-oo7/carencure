@@ -12,7 +12,6 @@ const suburbs = [
   { name: 'Edgewater', href: '/locations/edgewater' },
   { name: 'Applecross', href: '/locations/applecross' },
   { name: 'Booragoon', href: '/locations/booragoon' },
-  { name: 'Harrisdale', href: '/locations/harrisdale' },
   { name: 'Canning Vale', href: '/locations/canning-vale' },
   { name: 'Midland', href: '/locations/midland' },
   { name: 'Fremantle', href: '/locations/fremantle' },
@@ -35,7 +34,7 @@ export function ServiceAreas() {
           <h2 id="areas-heading" className="text-white mb-4">Perth suburbs we cover</h2>
           <div className="w-12 h-1 rounded-full mx-auto mb-5" style={{ background: 'var(--teal-accent)' }} />
           <p style={{ color: 'rgba(255,255,255,0.75)' }} className="max-w-xl mx-auto text-lg">
-            We provide in-home nursing across Perth metro and surrounding areas, based in Harrisdale.
+            We provide in-home nursing across Perth metro and surrounding areas.
           </p>
         </div>
 

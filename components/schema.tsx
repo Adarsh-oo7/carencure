@@ -8,16 +8,16 @@ const PHONE = '0481 748 516'
 const PHONE_SCHEMA = '+61481748516'
 const EMAIL = 'hello@carencure.com.au'
 const ADDRESS = {
-  streetAddress: '15 Rockefellerway',
-  addressLocality: 'Harrisdale',
+  streetAddress: '',
+  addressLocality: 'Perth',
   addressRegion: 'WA',
-  postalCode: '6112',
+  postalCode: '6000',
   addressCountry: 'AU',
 }
 const AREA_SERVED = [
   'Perth', 'Nedlands', 'Subiaco', 'Cottesloe', 'Claremont',
   'Mount Lawley', 'Inglewood', 'Joondalup', 'Edgewater',
-  'Applecross', 'Booragoon', 'Harrisdale', 'Canning Vale',
+  'Applecross', 'Booragoon', 'Canning Vale',
   'Midland', 'Fremantle', 'South Perth', 'Mount Pleasant',
   'Wembley', 'Floreat', 'Leederville',
 ]
@@ -72,7 +72,7 @@ export function MedicalBusinessSchema() {
       itemListElement: [
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Post-Hospital Home Care Perth' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Your Dedicated Nurse\u2122 Model Perth' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'NDIS Nursing Support Perth' } },
+
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Home Care Packages Perth' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Wound Care at Home Perth' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Medication Management Perth' } },

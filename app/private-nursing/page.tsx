@@ -54,7 +54,7 @@ export default function PrivateNursing() {
             <div className="lg:col-span-7 space-y-8">
               <div>
                 <p className="section-label mb-2">Dedicated Nursing</p>
-                <h2 className="text-navy text-3xl font-bold">University-trained Registered Nurses, not support workers</h2>
+                <h2 className="text-navy text-3xl font-bold">University-trained Registered Nurses</h2>
                 <div className="section-divider" />
                 <p className="text-body text-lg leading-relaxed mt-4">
                   For complex medical conditions, aging family members, or long-term illness, standard care agencies are often insufficient. Care N Cure provides dedicated Registered Nurses who bring clinical knowledge, assessment skills, and medical authority directly to your doorstep.

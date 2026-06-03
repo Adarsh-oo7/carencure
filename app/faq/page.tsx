@@ -29,7 +29,7 @@ const allFaqs = [
   {
     id: 'faq-4',
     question: 'What Perth suburbs do you service?',
-    answer: 'We service the entire Perth metropolitan area, including Nedlands, Subiaco, Cottesloe, Applecross, South Perth, Joondalup, Mount Lawley, Midland, Fremantle, Harrisdale, and all surrounding areas. If you are unsure whether we cover your location, please call us directly.',
+    answer: 'We service the entire Perth metropolitan area, including Nedlands, Subiaco, Cottesloe, Applecross, South Perth, Joondalup, Mount Lawley, Midland, Fremantle, and all surrounding areas. If you are unsure whether we cover your location, please call us directly.',
   },
   {
     id: 'faq-5',
@@ -38,8 +38,8 @@ const allFaqs = [
   },
   {
     id: 'faq-6',
-    question: 'Do you support NDIS or DVA participants?',
-    answer: 'Yes. We provide clinical nursing services for self-managed or plan-managed NDIS participants requiring specialized home nursing care, as well as Department of Veterans&apos; Affairs (DVA) cardholders. Please let our founders know your package type during your consult.',
+    question: 'Do you support DVA participants?',
+    answer: 'Yes. We provide clinical nursing services for Department of Veterans&apos; Affairs (DVA) cardholders. Please let our founders know your package type during your consult.',
   },
   {
     id: 'faq-7',

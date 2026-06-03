@@ -10,22 +10,7 @@ const fundingCards = [
     body: 'For older Australians needing ongoing support at home. Your HCP funds nursing visits, personal care, and clinical services. We help you get the most from your package.',
     badge: 'My Aged Care · myagedcare.gov.au',
   },
-  {
-    id: 'funded-ndis',
-    icon: Users,
-    title: 'NDIS Support',
-    subtitle: 'Assistance with Daily Life · Nursing',
-    body: 'Registered NDIS provider supporting participants with in-home nursing care, complex support, and daily living assistance. We work within your NDIS plan.',
-    badge: 'NDIS Registered Provider',
-  },
-  {
-    id: 'funded-chsp',
-    icon: Heart,
-    title: 'Commonwealth Home Support Programme',
-    subtitle: 'Entry-level aged care support',
-    body: 'Entry-level support for older Australians wanting to stay independent at home. CHSP can fund assistance with daily tasks, nursing, and allied health visits.',
-    badge: 'Entry-level support',
-  },
+
   {
     id: 'funded-transition',
     icon: Activity,

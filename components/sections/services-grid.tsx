@@ -67,7 +67,7 @@ export function ServicesGrid() {
           <h2 id="services-heading" className="text-navy mb-4">In-Home Nursing Services</h2>
           <div className="section-divider mx-auto" />
           <p className="text-body max-w-2xl mx-auto text-lg">
-            Every service is delivered by AHPRA registered nurses — not support workers, not agency staff.
+            Every service is delivered by AHPRA registered nurses.
             Qualified clinical care at home, with the consistency and dignity every Australian deserves.
           </p>
         </div>

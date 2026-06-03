@@ -33,7 +33,7 @@ const differentiators = [
     icon: Banknote,
     title: 'Funded Care Navigation',
     description:
-      'We help you access Home Care Packages, NDIS, CHSP, and transition care funding — so professional nursing care doesn\'t have to mean a large out-of-pocket cost.',
+      'We help you access Home Care Packages and transition care funding — so professional nursing care doesn\'t have to mean a large out-of-pocket cost.',
     colour: '#FEF9E7',
     iconColour: '#D4AC0D',
   },

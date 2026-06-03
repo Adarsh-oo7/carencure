@@ -16,7 +16,7 @@ import { FundedCareSection } from '@/components/sections/funded-care-section'
 export const metadata: Metadata = {
   title: 'Your Dedicated Nurse at Home | Care N Cure Perth WA',
   description:
-    "Perth's first dedicated nurse model — one registered nurse for each client. Post-hospital recovery, NDIS, Home Care Packages. AHPRA registered nurses. Harrisdale, Perth WA.",
+    "Perth's first dedicated nurse model — one registered nurse for each client. Post-hospital recovery, Home Care Packages. AHPRA registered nurses. Perth WA.",
   keywords: [
     'private nursing Perth',
     'home nursing Perth WA',
@@ -26,7 +26,6 @@ export const metadata: Metadata = {
     'dedicated nurse Perth',
     'one nurse one client Perth',
     'home care packages Perth',
-    'NDIS nursing Perth',
     'post hospital care Perth WA',
   ],
   alternates: { canonical: 'https://carencure.com.au' },
@@ -60,7 +59,7 @@ const homeFaqs = [
     id: 'faq-suburb',
     question: 'Do you service my Perth suburb?',
     answer:
-      'We cover Perth metro and surrounding areas including Nedlands, Subiaco, Joondalup, Applecross, Mount Lawley, Harrisdale, Fremantle, South Perth, Cottesloe, Midland, and many more. If you are unsure whether we cover your area, please call us and we will let you know.',
+      'We cover Perth metro and surrounding areas including Nedlands, Subiaco, Joondalup, Applecross, Mount Lawley, Fremantle, South Perth, Cottesloe, Midland, and many more. If you are unsure whether we cover your area, please call us and we will let you know.',
   },
   {
     id: 'faq-cost',
@@ -86,7 +85,7 @@ export default function HomePage() {
       <HeroSection
         badge="Perth's First Dedicated Nurse Model"
         headline="Your Dedicated Nurse™ — One Client. One Nurse."
-        subheadline="When someone you love comes home from hospital, they deserve one nurse who knows them by name — their history, their family, their goals. Not a roster. Not a call centre. One dedicated registered nurse, every time."
+        subheadline="When someone you love comes home from hospital, they deserve one nurse who knows them by name — their history, their family, their goals. Not a roster. One dedicated registered nurse, every time."
         ctaPrimary={{ text: 'Meet Your Dedicated Nurse', href: '/your-dedicated-nurse' }}
         ctaSecondary={{ text: 'How It Works', href: '#how-it-works' }}
       />

@@ -7,7 +7,7 @@ const steps = [
     icon: Phone,
     title: 'Call or enquire',
     description:
-      'Call us directly or fill in our short enquiry form. You\'ll speak with a registered nurse — not a receptionist, not a call centre. We listen, we ask the right questions, and we understand your situation.',
+      'Call us directly or fill in our short enquiry form. You\'ll speak with a registered nurse — not a receptionist. We listen, we ask the right questions, and we understand your situation.',
   },
   {
     id: 'step-2',

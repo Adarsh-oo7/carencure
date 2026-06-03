@@ -62,11 +62,11 @@ export default function TestimonialsPage() {
                 ))}
               </div>
               <p className="text-body italic text-sm leading-relaxed">
-                &quot;Zuhair is an absolute professional. He coordinates all of my father&apos;s complex medications and blister packing, and administers his subcutaneous injections with incredible gentleness. He is reliable, patient, and always sends our family a detailed update after his visit. Highly recommended in Harrisdale.&quot;
+                &quot;Zuhair is an absolute professional. He coordinates all of my father&apos;s complex medications and blister packing, and administers his subcutaneous injections with incredible gentleness. He is reliable, patient, and always sends our family a detailed update after his visit. Highly recommended.&quot;
               </p>
               <div className="border-t border-border pt-3 flex justify-between items-center text-xs">
                 <span className="font-semibold text-navy">David K. (Son of Client)</span>
-                <span className="text-muted-brand">Harrisdale WA · Verified Client</span>
+                <span className="text-muted-brand">Perth WA · Verified Client</span>
               </div>
             </div>
 

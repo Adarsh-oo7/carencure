@@ -6,14 +6,14 @@ import { MedicalBusinessSchema } from '@/components/schema'
 
 export const metadata: Metadata = {
   title: 'Contact Care N Cure Nursing | Perth WA',
-  description: 'Contact Jinu and Zuhair at Care N Cure. Call (08) XXXX XXXX, email, or fill out our enquiry form. Based in Harrisdale, serving all Perth suburbs.',
+  description: 'Contact Jinu and Zuhair at Care N Cure. Call (08) XXXX XXXX, email, or fill out our enquiry form. Based in Perth.',
   alternates: { canonical: 'https://carencure.com.au/contact' },
 }
 
 const PHONE_NUMBER = '(08) XXXX XXXX'
 const PHONE_HREF = 'tel:+618XXXXXXXX'
 const EMAIL = 'hello@carencure.com.au'
-const ADDRESS = '15 Rockefeller Way, Harrisdale WA 6112'
+const ADDRESS = 'Perth, WA'
 
 export default function ContactPage() {
   return (

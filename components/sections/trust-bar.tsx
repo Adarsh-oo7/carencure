@@ -7,12 +7,7 @@ const trustItems = [
     sub: 'All nurses AHPRA verified',
     id: 'trust-ahpra',
   },
-  {
-    icon: CheckCircle2,
-    label: 'NDIS Registered Provider',
-    sub: 'Supporting NDIS participants',
-    id: 'trust-ndis',
-  },
+
   {
     icon: CheckCircle2,
     label: 'Home Care Package Provider',
@@ -27,8 +22,8 @@ const trustItems = [
   },
   {
     icon: CheckCircle2,
-    label: 'Perth-Based · Harrisdale WA',
-    sub: 'Serving all Perth suburbs',
+    label: 'Perth-Based',
+    sub: 'Local community nursing',
     id: 'trust-perth',
   },
 ]

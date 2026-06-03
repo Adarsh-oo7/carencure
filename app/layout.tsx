@@ -21,8 +21,6 @@ export const metadata: Metadata = {
     'medication management Perth',
     'in-home nursing Perth WA',
     'AHPRA registered nurse Perth',
-    'Care N Cure nursing',
-    'Harrisdale nursing care',
   ],
   authors: [
     { name: 'Jinu Maecheril Sukumaran, RN' },

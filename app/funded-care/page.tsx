@@ -8,9 +8,9 @@ import {
 } from '@/components/ui/accordion'
 
 export const metadata: Metadata = {
-  title: 'Home Care Funding | HCP, NDIS & CHSP | Care N Cure Perth',
+  title: 'Home Care Funding | HCP | Care N Cure Perth',
   description:
-    'Care N Cure supports clients through NDIS, Home Care Packages, CHSP, and post-hospital transition care. Perth home care funding explained simply.',
+    'Care N Cure supports clients through Home Care Packages and post-hospital transition care. Perth home care funding explained simply.',
   alternates: { canonical: 'https://carencure.com.au/funded-care' },
 }
 
@@ -34,43 +34,7 @@ const fundingCards = [
     howWeHelp:
       'We are an approved Home Care Package provider. Once your package is assigned, we can begin services immediately and help you get maximum value from your funding.',
   },
-  {
-    id: 'ndis',
-    title: 'NDIS Support',
-    whatItIs:
-      'The National Disability Insurance Scheme funds support for Australians under 65 with a permanent and significant disability. Nursing and clinical care can be funded under specific support categories within your NDIS plan.',
-    whoIsEligible:
-      'Australians under 65 with a permanent and significant disability that affects their daily life. Eligibility is assessed by the NDIS.',
-    whatItCovers: [
-      'In-home registered nursing care',
-      'Complex wound care and catheter management',
-      'Medication administration and health monitoring',
-      'Assistance with daily living (health-related tasks)',
-      'Improved health and wellbeing supports',
-    ],
-    howToAccess:
-      'Contact the NDIS on 1800 800 110 or visit ndis.gov.au to start your access request.',
-    howWeHelp:
-      'We are a registered NDIS provider. We work within your NDIS plan and coordinate directly with your support coordinator to ensure seamless, nurse-led care.',
-  },
-  {
-    id: 'chsp',
-    title: 'Commonwealth Home Support Programme (CHSP)',
-    whatItIs:
-      'The CHSP is the entry point into the aged care system for older Australians who need a little help to stay independent at home. It provides subsidised, basic support services funded by the Australian Government.',
-    whoIsEligible:
-      'Australians aged 65 and over (50+ for Aboriginal and Torres Strait Islander people) who need entry-level support. Also available to some younger people with specific needs.',
-    whatItCovers: [
-      'Basic nursing and personal care',
-      'Domestic assistance',
-      'Allied health and transport',
-      'Social support and respite',
-    ],
-    howToAccess:
-      'Contact My Aged Care on 1800 200 422 to request a Regional Assessment Service (RAS) assessment.',
-    howWeHelp:
-      'CHSP is an excellent bridge if you\'re waiting for a Home Care Package. We can provide private nursing in the interim and help guide you through the assessment process.',
-  },
+
   {
     id: 'transition',
     title: 'Post-Hospital Transition Care',
@@ -106,7 +70,7 @@ const navigationSteps = [
   {
     id: 'nav-step-3',
     step: '3',
-    title: 'My Aged Care / NDIS Assessment',
+    title: 'My Aged Care Assessment',
     body: 'We guide you through the government assessment process and support your application.',
   },
   {
@@ -136,23 +100,12 @@ const faqs = [
     answer:
       "We can provide private nursing while you wait for your package to be approved — packages can take time to be assigned. We'll also guide you through the My Aged Care registration and assessment process step by step.",
   },
-  {
-    id: 'fq-ndis-nursing',
-    question: 'Does NDIS cover nursing care at home?',
-    answer:
-      'Yes. NDIS can fund registered nursing services under Assistance with Daily Life and Improved Health and Wellbeing. We are a registered NDIS provider and work within your existing NDIS plan.',
-  },
-  {
-    id: 'fq-chsp',
-    question: 'What is CHSP and am I eligible?',
-    answer:
-      "The Commonwealth Home Support Programme provides entry-level support for Australians aged 65+. It's a great starting point if your needs are lower, or as a bridge while you wait for a Home Care Package to be assigned.",
-  },
+
   {
     id: 'fq-timeline',
     question: 'How long does funding approval take?',
     answer:
-      'It varies. NDIS assessments can take several weeks to months. Home Care Package waitlists can be significant. CHSP is generally faster to access. We recommend starting the process early — and we can provide private nursing in the interim.',
+      'It varies. Home Care Package waitlists can be significant. We recommend starting the process early — and we can provide private nursing in the interim.',
   },
 ]
 

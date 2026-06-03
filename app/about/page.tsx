@@ -7,7 +7,7 @@ import { Shield, Heart, Users, ClipboardCheck, BadgeCheck } from 'lucide-react'
 export const metadata: Metadata = {
   title: "About Care N Cure — Perth's Founder-Led Private Nursing Practice",
   description:
-    'Care N Cure was founded by two registered nurses with 10+ years of clinical experience. Based in Harrisdale, serving all Perth suburbs.',
+    'Care N Cure was founded by two registered nurses with 10+ years of clinical experience. Based in Perth.',
   alternates: { canonical: 'https://carencure.com.au/about' },
 }
 
@@ -25,7 +25,7 @@ const founders = [
     credential: 'Registered Nurse (RN)',
     ahpra: '[AHPRA Number — to be confirmed]',
     bio: [
-      'Jinu is a registered nurse with over 10 years of clinical experience across hospital and community settings. He is based in Harrisdale, Western Australia, and has built his career caring for Australians across some of Perth’s busiest health environments.',
+      'Jinu is a registered nurse with over 10 years of clinical experience across hospital and community settings. He is based in Perth, Western Australia, and has built his career caring for Australians across some of Perth’s busiest health environments.',
       'His clinical background spans acute nursing, post-surgical recovery, wound management, and patient education. He co-founded Care N Cure because every Australian deserves a nurse who truly knows them — not a different stranger at every visit.',
     ],
   },
@@ -35,7 +35,7 @@ const founders = [
     credential: 'Registered Nurse (RN)',
     ahpra: '[AHPRA Number — to be confirmed]',
     bio: [
-      'Zuhair is a registered nurse with more than 10 years of clinical experience. Based in Harrisdale, Western Australia, he has dedicated his career to supporting Australians through some of their most vulnerable moments.',
+      'Zuhair is a registered nurse with more than 10 years of clinical experience. Based in Perth, Western Australia, he has dedicated his career to supporting Australians through some of their most vulnerable moments.',
       'Over his career, Zuhair has developed deep expertise in medication management, chronic condition monitoring, and post-hospital recovery. He co-founded Care N Cure because he believes every person — regardless of their situation — deserves consistent, dignified care at home.',
     ],
   },
@@ -156,7 +156,7 @@ export default function AboutPage() {
               <p><strong>ABN:</strong> 87 152 479 362</p>
               <p><strong>Holder Type:</strong> Partnership</p>
               <p><strong>Registered:</strong> 13 March 2026</p>
-              <p><strong>Address:</strong> 15 Rockefeller Way, Harrisdale WA 6112</p>
+              <p><strong>Address:</strong> Perth WA</p>
             </div>
           </div>
         </div>

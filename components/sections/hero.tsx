@@ -156,7 +156,7 @@ export function HeroSection({
           {/* Trust / value props strip */}
           <div className="mt-8 flex flex-col sm:flex-row flex-wrap gap-y-2 gap-x-6" role="list" aria-label="Key credentials">
             {[
-              '✓ AHPRA Registered Nurses — not support workers',
+              '✓ AHPRA Registered Nurses',
               '✓ Your Dedicated Nurse™ — same nurse, every visit',
               '✓ First visit within 24–48 hrs of hospital discharge',
             ].map((item) => (
@@ -173,17 +173,6 @@ export function HeroSection({
 
           {/* AHPRA / trust ribbon */}
           <div className="mt-10 flex items-center gap-3 flex-wrap">
-            <div
-              className="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold"
-              style={{ background: 'rgba(197,238,228,0.15)', border: '1px solid rgba(197,238,228,0.3)', color: 'rgba(197,238,228,0.95)' }}
-            >
-            </div>
-            <div
-              className="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold"
-              style={{ background: 'rgba(197,238,228,0.15)', border: '1px solid rgba(197,238,228,0.3)', color: 'rgba(197,238,228,0.95)' }}
-            >
-              ✓ NDIS Registered Provider
-            </div>
             <div
               className="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold"
               style={{ background: 'rgba(197,238,228,0.15)', border: '1px solid rgba(197,238,228,0.3)', color: 'rgba(197,238,228,0.95)' }}

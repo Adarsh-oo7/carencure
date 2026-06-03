@@ -24,7 +24,6 @@ const locationLinks = [
   { label: 'Joondalup', href: '/locations/joondalup' },
   { label: 'Applecross', href: '/locations/applecross' },
   { label: 'Mount Lawley', href: '/locations/mount-lawley' },
-  { label: 'Harrisdale', href: '/locations/harrisdale' },
   { label: 'Fremantle', href: '/locations/fremantle' },
   { label: 'South Perth', href: '/locations/south-perth' },
 ]
