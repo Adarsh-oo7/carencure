@@ -1,8 +1,8 @@
 import { Phone, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 
-const PHONE_NUMBER = '(08) XXXX XXXX'
-const PHONE_HREF = 'tel:+618XXXXXXXX'
+const PHONE_NUMBER = '0481 748 516'
+const PHONE_HREF = 'tel:+61481748516'
 
 interface CTAProps {
   title?: string
