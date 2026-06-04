@@ -91,7 +91,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {founders.map(({ id, name, credential, ahpra, bio }) => (
               <div key={id} id={id} className="card-base overflow-hidden">
-                <div className="relative h-52 flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #091E30, #1A3D5C)' }}>
+                {/* <div className="relative h-52 flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #091E30, #1A3D5C)' }}>
                   <div className="flex flex-col items-center gap-3 text-center px-8">
                     <div className="w-20 h-20 rounded-full flex items-center justify-center text-2xl font-bold" style={{ background: 'rgba(197,238,228,0.15)', color: 'var(--teal)', border: '2px dashed rgba(197,238,228,0.4)' }}>
                       {name.charAt(0)}
@@ -100,7 +100,7 @@ export default function AboutPage() {
                       ⚠ PLACEHOLDER — Replace with real photo before launch
                     </div>
                   </div>
-                </div>
+                </div> */}
                 <div className="p-6 flex flex-col gap-4">
                   <div>
                     <h3 className="text-navy" style={{ fontSize: '1.1rem' }}>{name}</h3>
