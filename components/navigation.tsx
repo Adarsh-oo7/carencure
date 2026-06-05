@@ -35,35 +35,56 @@ export function Navigation() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
   const [mobileLocationsOpen, setMobileLocationsOpen] = useState(false)
+  const [phoneModalOpen, setPhoneModalOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10)
     window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    
+    const handleOpen = () => setPhoneModalOpen(true)
+    window.addEventListener('open-phone-modal', handleOpen)
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('open-phone-modal', handleOpen)
+    }
   }, [])
 
   return (
     <>
-      {/* Top phone bar */}
-      <div className="bg-navy text-white py-1.5 text-center text-sm font-medium">
-        <a
-          href={PHONE_HREF}
-          className="inline-flex items-center gap-2 hover:text-teal-300 transition-colors"
-          id="nav-phone-top"
-        >
-          <Phone className="w-3.5 h-3.5" />
-          <span>Perth&apos;s Registered Nursing Team — Call Us: <strong>{PHONE_NUMBER}</strong></span>
-        </a>
-      </div>
-
-      <nav
+      <header
         className={`sticky top-0 z-50 transition-shadow duration-300 ${
           scrolled ? 'shadow-lg' : 'shadow-sm'
         }`}
-        style={{ background: '#FFFFFF', overflow: 'visible' }}
-        role="navigation"
-        aria-label="Main navigation"
+        style={{ overflow: 'visible' }}
       >
+        {/* Top phone bar */}
+        <div className="bg-navy text-white py-1.5 text-center px-4">
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              setPhoneModalOpen(true);
+            }}
+            className="inline-flex items-center justify-center gap-2 hover:text-teal-300 transition-colors max-w-full cursor-pointer bg-transparent border-none p-0 font-inherit text-white font-medium"
+            id="nav-phone-top"
+            style={{ minHeight: 'auto' }}
+          >
+            <Phone className="w-3.5 h-3.5 flex-shrink-0 text-teal-accent" />
+            <span className="sm:hidden text-xs leading-normal font-medium">
+              Call: <strong>0481 748 516</strong> or <strong>0412 593 102</strong>
+            </span>
+            <span className="hidden sm:inline text-sm leading-normal font-medium">
+              Perth&apos;s Registered Nursing Team — Call: <strong>0481 748 516</strong> or <strong>0412 593 102</strong>
+            </span>
+          </button>
+        </div>
+
+        <nav
+          className="w-full border-b border-border"
+          style={{ background: '#FFFFFF', overflow: 'visible' }}
+          role="navigation"
+          aria-label="Main navigation"
+        >
         <div className="section-container overflow-visible">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
@@ -80,7 +101,7 @@ export function Navigation() {
               </div>
               <div className="hidden sm:block">
                 <div className="font-bold text-base leading-tight text-navy">Care N Cure</div>
-                <div className="text-xs text-muted-brand leading-tight">Nursing Care Services</div>
+                <div className="text-xs text-teal-600 font-semibold leading-tight">The Nurse Who Knows You</div>
               </div>
             </Link>
 
@@ -175,28 +196,34 @@ export function Navigation() {
 
             {/* Desktop CTA */}
             <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
-              <a
-                href={PHONE_HREF}
-                className="btn-phone text-sm"
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  setPhoneModalOpen(true);
+                }}
+                className="btn-phone text-sm cursor-pointer"
                 id="nav-call-cta"
                 style={{ whiteSpace: 'nowrap' }}
               >
                 <Phone className="w-4 h-4 flex-shrink-0" />
-                Call {PHONE_NUMBER}
-              </a>
+                Call Us Today
+              </button>
             </div>
 
             {/* Mobile: phone + hamburger */}
             <div className="flex lg:hidden items-center gap-3">
-              <a
-                href={PHONE_HREF}
-                className="flex items-center gap-1.5 bg-navy text-white text-sm font-semibold px-3 py-2 rounded-lg"
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  setPhoneModalOpen(true);
+                }}
+                className="flex items-center gap-1.5 bg-navy text-white text-sm font-semibold px-3 py-2 rounded-lg cursor-pointer"
                 id="nav-mobile-call"
-                aria-label={`Call ${PHONE_NUMBER}`}
+                aria-label="Call Us Today"
               >
                 <Phone className="w-4 h-4" />
                 <span className="hidden sm:inline">Call Us</span>
-              </a>
+              </button>
               <button
                 className="p-2 rounded-lg hover:bg-surface transition-colors"
                 onClick={() => setIsOpen(!isOpen)}
@@ -274,24 +301,105 @@ export function Navigation() {
               </div>
 
               <Link href="/about" className="px-3 py-3 text-body font-medium hover:bg-surface hover:text-navy rounded-lg transition-colors" onClick={() => setIsOpen(false)}>About</Link>
-              <Link href="/testimonials" className="px-3 py-3 text-body font-medium hover:bg-surface hover:text-navy rounded-lg transition-colors" onClick={() => setIsOpen(false)}>Testimonials</Link>
+              <Link href="/testimonials" className="px-3 py-3 text-body font-medium hover:bg-surface hover:text-navy rounded-lg transition-colors" onClick={() => setIsOpen(false)}>Quality & Feedback</Link>
               <Link href="/faq" className="px-3 py-3 text-body font-medium hover:bg-surface hover:text-navy rounded-lg transition-colors" onClick={() => setIsOpen(false)}>FAQ</Link>
               <Link href="/contact" className="px-3 py-3 text-body font-medium hover:bg-surface hover:text-navy rounded-lg transition-colors" onClick={() => setIsOpen(false)}>Contact</Link>
 
               <div className="pt-3 border-t border-border mt-2">
-                <a
-                  href={PHONE_HREF}
-                  className="btn-phone w-full justify-center"
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setPhoneModalOpen(true);
+                  }}
+                  className="btn-phone w-full justify-center cursor-pointer"
                   id="nav-mobile-call-full"
                 >
                   <Phone className="w-5 h-5" />
-                  Call Us: {PHONE_NUMBER}
-                </a>
+                  Call Us Today
+                </button>
               </div>
             </div>
           </div>
         )}
       </nav>
+      </header>
+
+      {/* Select Call Number Modal popup */}
+      {phoneModalOpen && (
+        <div 
+          className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/65 backdrop-blur-xs animate-fade-in"
+          onClick={() => setPhoneModalOpen(false)}
+        >
+          <div 
+            className="bg-white rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl border border-slate-100 flex flex-col gap-6 text-center animate-scale-up"
+            onClick={(e) => e.stopPropagation()}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-title"
+          >
+            <div className="flex flex-col items-center gap-2">
+              <div className="w-12 h-12 rounded-full bg-teal-accent/10 text-teal-accent flex items-center justify-center mb-1">
+                <Phone className="w-6 h-6 text-[#4DBBA5]" />
+              </div>
+              <h3 id="modal-title" className="font-bold text-2xl leading-tight" style={{ color: '#0D2B45' }}>
+                Call Us Today
+              </h3>
+              <p className="text-slate-600 text-sm mt-1 font-medium">
+                Please select a phone number to dial:
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-3">
+              <a
+                href="tel:+61481748516"
+                className="flex items-center justify-between p-4 rounded-xl border border-slate-200 hover:border-[#4DBBA5] hover:bg-slate-50 transition-all text-left cursor-pointer"
+                onClick={() => setPhoneModalOpen(false)}
+                style={{ textDecoration: 'none' }}
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-teal-accent/10 text-teal-accent flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-5 h-5 text-[#4DBBA5]" />
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="font-bold text-lg leading-tight text-slate-900" style={{ color: '#0D2B45' }}>0481 748 516</span>
+                    <span className="text-slate-500 text-xs mt-0.5 font-medium">Primary nursing line</span>
+                  </div>
+                </div>
+                <span className="w-8 h-8 rounded-full bg-[#4DBBA5]/10 text-[#4DBBA5] flex items-center justify-center font-bold text-sm hover:bg-[#4DBBA5] hover:text-white transition-colors">
+                  ➔
+                </span>
+              </a>
+
+              <a
+                href="tel:+61412593102"
+                className="flex items-center justify-between p-4 rounded-xl border border-slate-200 hover:border-[#4DBBA5] hover:bg-slate-50 transition-all text-left cursor-pointer"
+                onClick={() => setPhoneModalOpen(false)}
+                style={{ textDecoration: 'none' }}
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-teal-accent/10 text-teal-accent flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-5 h-5 text-[#4DBBA5]" />
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="font-bold text-lg leading-tight text-slate-900" style={{ color: '#0D2B45' }}>0412 593 102</span>
+                    <span className="text-slate-500 text-xs mt-0.5 font-medium">Alternate nursing line</span>
+                  </div>
+                </div>
+                <span className="w-8 h-8 rounded-full bg-[#4DBBA5]/10 text-[#4DBBA5] flex items-center justify-center font-bold text-sm hover:bg-[#4DBBA5] hover:text-white transition-colors">
+                  ➔
+                </span>
+              </a>
+            </div>
+
+            <button
+              onClick={() => setPhoneModalOpen(false)}
+              className="w-full py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-semibold transition-colors cursor-pointer border-none"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      )}
     </>
   )
 }

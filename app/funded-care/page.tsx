@@ -8,9 +8,9 @@ import {
 } from '@/components/ui/accordion'
 
 export const metadata: Metadata = {
-  title: 'Home Care Funding | HCP | Care N Cure Perth',
+  title: 'Home Care Funding | HCP | The Nurse Who Knows You',
   description:
-    'Care N Cure supports clients through Home Care Packages and post-hospital transition care. Perth home care funding explained simply.',
+    'We support clients through Home Care Packages and post-hospital transition care. Perth home care funding explained simply.',
   alternates: { canonical: 'https://carencure.com.au/funded-care' },
 }
 
@@ -19,7 +19,7 @@ const fundingCards = [
     id: 'hcp',
     title: 'Home Care Packages (HCP)',
     whatItIs:
-      'A government-funded program for older Australians (65+) who need coordinated support at home. Packages are available at four levels — from basic support (Level 1) to high-level care needs (Level 4). Funding is managed by an approved provider like Care N Cure.',
+      'A government-funded program for older Australians (65+) who need coordinated support at home. Packages are available at four levels — from basic support (Level 1) to high-level care needs (Level 4). Funding is managed by an approved provider.',
     whoIsEligible:
       'Australians aged 65 and over (50+ for Aboriginal and Torres Strait Islander people) assessed as needing coordinated care at home.',
     whatItCovers: [
@@ -77,7 +77,7 @@ const navigationSteps = [
     id: 'nav-step-4',
     step: '4',
     title: 'Provider Agreement',
-    body: 'Once approved, you sign a provider agreement with Care N Cure and we begin care planning.',
+    body: 'Once approved, you sign an agreement with our practice and we begin care planning.',
   },
   {
     id: 'nav-step-5',
@@ -90,9 +90,9 @@ const navigationSteps = [
 const faqs = [
   {
     id: 'fq-hcp',
-    question: 'Can I use my Home Care Package with Care N Cure?',
+    question: 'Can I use my Home Care Package with you?',
     answer:
-      'Yes. We are an approved Home Care Package provider. Once your package is assigned through My Aged Care, we can begin delivering services under your funding immediately.',
+      'Yes. Once your package is assigned through My Aged Care, we can begin delivering services under your funding immediately.',
   },
   {
     id: 'fq-no-package',
@@ -191,10 +191,10 @@ export default function FundedCarePage() {
                       </div>
                     </div>
                   </div>
-                  {/* How Care N Cure helps — teal callout */}
+                  {/* How we help — teal callout */}
                   <div className="bg-teal-50 border-t border-teal-200 px-8 py-5">
                     <p className="text-teal-700 text-sm font-semibold uppercase tracking-wide mb-2">
-                      How Care N Cure helps
+                      How we help
                     </p>
                     <p className="text-teal-900 text-sm leading-relaxed">{howWeHelp}</p>
                   </div>

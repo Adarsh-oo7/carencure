@@ -137,7 +137,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <div className="mt-12 p-8 bg-primary/5 rounded-lg border border-border">
                 <h3 className="text-xl font-semibold text-secondary mb-3">Need Professional Healthcare?</h3>
                 <p className="text-foreground/80 mb-6">
-                  If you found this article helpful, our team of professionals is ready to assist you with personalized healthcare services.
+                  If you found this article helpful, our team of professionals is ready to assist you with personalised healthcare services.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Button asChild>

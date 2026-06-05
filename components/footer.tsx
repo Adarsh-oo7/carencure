@@ -28,17 +28,17 @@ export function Footer() {
               </div>
               <div>
                 <div className="font-bold text-white text-base leading-tight">Care N Cure</div>
-                <div className="text-white/60 text-xs leading-tight">Nursing Care Services</div>
+                <div className="text-white/60 text-xs leading-tight">The Nurse Who Knows You</div>
               </div>
             </div>
             <p className="text-white/70 text-sm leading-relaxed mb-5">
-              Founded by registered nurses. Serving Perth families with qualified, compassionate in-home nursing care.
+              One Client. One Dedicated Nurse Coordinator. Helping Australians stay safe, supported, and independent at home.
             </p>
             <div className="space-y-2 text-sm">
-              {/* <div className="flex items-start gap-2">
-                <Shield className="w-4 h-4 text-teal-accent mt-0.5 flex-shrink-0" style={{ color: 'var(--teal-accent)' }} />
+              <div className="flex items-start gap-2">
+                <Shield className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: 'var(--teal-accent)' }} />
                 <span className="text-white/70">ABN: 87 152 479 362</span>
-              </div> */}
+              </div>
               <div className="flex items-start gap-2">
                 <Shield className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: 'var(--teal-accent)' }} />
                 <span className="text-white/70">ASIC Registered — 13 March 2026</span>
@@ -155,9 +155,14 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="border-t pt-8" style={{ borderColor: 'rgba(255,255,255,0.12)' }}>
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-white/50 text-sm">
-              © {year} Care N Cure Nursing Care Services. ABN 87 152 479 362. All rights reserved.
-            </p>
+            <div>
+              <p className="text-white/50 text-sm">
+                © {year} Care N Cure. ABN 87 152 479 362. All rights reserved.
+              </p>
+              <p className="text-teal-200/60 text-xs mt-1">
+                The Nurse Who Knows You™ · One Client. One Nurse Coordinator. One Trusted Relationship.
+              </p>
+            </div>
             <div className="flex flex-wrap gap-6 justify-center">
               <Link href="/about" className="text-white/50 hover:text-white text-sm transition-colors">About</Link>
               <Link href="/contact" className="text-white/50 hover:text-white text-sm transition-colors">Contact</Link>
@@ -166,7 +171,7 @@ export function Footer() {
             </div>
           </div>
           <p className="text-white/30 text-xs text-center mt-4">
-            Care N Cure Nursing Care Services is a registered nursing practice in Perth, WA. Our nurses are AHPRA registered. 
+            Care N Cure is a registered nursing practice. Our nurses are AHPRA registered. 
             This website does not provide medical advice — please consult your doctor for medical concerns.
           </p>
         </div>

@@ -28,7 +28,7 @@ export function MedicalBusinessSchema() {
     '@type': 'MedicalBusiness',
     '@id': `${SITE_URL}/#medical-business`,
     name: 'Care N Cure Nursing Care Services',
-    alternateName: 'Care N Cure',
+    alternateName: 'The Nurse Who Knows You',
     description: 'Registered nurses providing in-home nursing care across Perth, WA. Post-hospital recovery, wound care, medication management.',
     url: SITE_URL,
     logo: `${SITE_URL}/logo.png`,

@@ -10,8 +10,8 @@ const founders = [
     ahpra: 'AHPRA Registered · NMW-class',
     experience: '10+ years nursing experience',
     background: 'Based in Perth — caring for Perth families',
-    quote: 'I became a nurse to make a difference in people’s lives — and the best way to do that at home is to be the same face every visit. That’s why I built Care N Cure around one nurse, one client.',
-    bio: 'Jinu brings over a decade of clinical nursing experience across hospital and community settings. His approach to care is built on clinical precision and genuine empathy — qualities he now brings directly to Perth families through Care N Cure.',
+    quote: 'I became a nurse to make a difference in people’s lives — and the best way to do that at home is to be the same face every visit. That’s why we built our practice around one nurse, one client.',
+    bio: 'Jinu brings over a decade of clinical nursing experience across hospital and community settings. His approach to care is built on clinical precision and genuine empathy — qualities he now brings directly to Perth families through The Nurse Who Knows You.',
   },
   {
     id: 'founder-zuhair',
@@ -22,7 +22,7 @@ const founders = [
     experience: '10+ years nursing experience',
     background: 'Based in Perth — dedicated to Perth’s community',
     quote: 'Families deserve one nurse who knows them — their medications, their fears, their progress. Not a different face each week. That continuity is what changes outcomes.',
-    bio: 'Zuhair\'s nursing career spans over ten years in clinical environments. He co-founded Care N Cure after recognising that Perth families deserved a more consistent, trustworthy model of private nursing — where the same qualified nurse builds a real relationship with every client.',
+    bio: 'Zuhair\'s nursing career spans over ten years in clinical environments. He co-founded our practice after recognising that Perth families deserved a more consistent, trustworthy model of private nursing — where the same qualified nurse builds a real relationship with every client.',
   },
 ]
 
@@ -37,7 +37,7 @@ export function FoundersPreview() {
           </h2>
           <div className="section-divider mx-auto" />
           <p className="text-body max-w-2xl mx-auto text-lg">
-            Care N Cure was founded by two registered nurses with over 10 years of clinical experience each. We started this practice because we saw first-hand how hard it is to get reliable, qualified nursing care at home in Perth.
+            Our practice was founded by two registered nurses with over 10 years of clinical experience each. We started this because we saw first-hand how hard it is to get reliable, qualified nursing care at home in Perth.
           </p>
         </div>
 

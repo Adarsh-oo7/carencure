@@ -18,7 +18,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'benefits-of-home-nursing-care',
     title: 'Benefits of Home Nursing Care for Seniors',
     excerpt: 'Discover how professional home nursing care can improve quality of life for seniors and provide peace of mind for families.',
-    content: `Home nursing care has become an increasingly popular option for seniors and their families. It provides personalized medical attention in the comfort of your own home, which can significantly improve overall well-being.
+    content: `Home nursing care has become an increasingly popular option for seniors and their families. It provides personalised medical attention in the comfort of your own home, which can significantly improve overall well-being.
 
 ## Why Choose Home Nursing Care?
 
@@ -26,7 +26,7 @@ Home nursing care offers numerous advantages over traditional facility-based car
 
 ### Key Benefits:
 
-1. **Personalized Care**: Each patient receives a customized care plan tailored to their specific needs and medical conditions.
+1. **Personalised Care**: Each patient receives a customised care plan tailored to their specific needs and medical conditions.
 
 2. **Comfort and Familiarity**: Remaining at home reduces stress and anxiety, contributing to faster recovery and better health outcomes.
 
@@ -42,7 +42,7 @@ Our professional nurses provide a comprehensive range of services including woun
 
 ## Get Started Today
 
-If you're considering home nursing care for yourself or a loved one, contact us for a free consultation. Our expert team is ready to discuss your care needs and develop a personalized care plan.`,
+If you're considering home nursing care for yourself or a loved one, contact us for a free consultation. Our expert team is ready to discuss your care needs and develop a personalised care plan.`,
     author: 'Dr. Sarah Mitchell',
     date: '2024-05-15',
     category: 'Senior Care',
@@ -116,7 +116,7 @@ We specialize in managing various chronic conditions including diabetes, hyperte
 
 ## Support and Resources
 
-Our team provides education, support, and professional care to help you manage your chronic condition effectively. We work with you and your physicians to optimize your health outcomes.`,
+Our team provides education, support, and professional care to help you manage your chronic condition effectively. We work with you and your physicians to optimise your health outcomes.`,
     author: 'Dr. Emily Richardson',
     date: '2024-05-05',
     category: 'Chronic Care',

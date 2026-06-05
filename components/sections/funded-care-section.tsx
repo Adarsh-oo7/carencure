@@ -5,19 +5,34 @@ const fundingCards = [
   {
     id: 'funded-hcp',
     icon: Home,
-    title: 'Home Care Packages',
-    subtitle: 'Levels 1–4 · Aged Care Act',
-    body: 'For older Australians needing ongoing support at home. Your HCP funds nursing visits, personal care, and clinical services. We help you get the most from your package.',
+    title: 'Home Care Packages (HCP)',
+    subtitle: 'Levels 1–4 · Government Funded',
+    body: 'For older Australians needing ongoing support at home. Your HCP funds nursing visits, wound care, and clinical oversight. We work with self-managed and provider-managed packages.',
     badge: 'My Aged Care · myagedcare.gov.au',
   },
-
+  {
+    id: 'funded-ndis-dva',
+    icon: Users,
+    title: 'NDIS & DVA Nursing',
+    subtitle: 'Disability & Veterans Support',
+    body: 'Qualified clinical care for NDIS participants (self-managed or plan-managed) and veterans under the Department of Veterans\' Affairs (DVA) Community Nursing program.',
+    badge: 'NDIS & DVA Registered Support',
+  },
   {
     id: 'funded-transition',
     icon: Activity,
     title: 'Post-Hospital Transition Care',
     subtitle: 'Short-term recovery support',
-    body: 'Short-term funded support after hospital discharge to help you regain independence. We bridge the gap between hospital and home while your long-term care is arranged.',
-    badge: 'Hospital discharge support',
+    body: 'Government-funded or private transition support immediately after hospital discharge. We bridge the gap, managing dressings and meds while you regain independence.',
+    badge: 'Hospital Discharge Transition',
+  },
+  {
+    id: 'funded-private',
+    icon: Heart,
+    title: 'Private Funding & Insurance',
+    subtitle: 'Immediate access · No assessment required',
+    body: 'Access immediate private nursing care without waitlists or government assessments. Many of our clinical care services can be claimed through private health insurance extras.',
+    badge: 'Direct & Private Health extras',
   },
 ]
 
@@ -29,11 +44,10 @@ export function FundedCareSection() {
         <div className="text-center mb-12">
           <p className="section-label mb-3">Funding &amp; Access</p>
           <h2 id="funded-care-heading" className="text-navy mb-4">
-            Care N Cure Works With Your Funding
+            We Work With Your Funding
           </h2>
           <p className="text-body text-lg max-w-2xl mx-auto">
-            Many clients are eligible for government-funded care. We help you understand and access
-            what you&apos;re entitled to.
+            Many clients are eligible for government-funded or subsidized care. We help you understand and access what you&apos;re entitled to.
           </p>
         </div>
 
@@ -64,8 +78,7 @@ export function FundedCareSection() {
         {/* Reassurance strip */}
         <div className="bg-teal-700 rounded-2xl px-8 py-8 text-center">
           <p className="text-white text-lg font-medium mb-5">
-            Not sure what funding you&apos;re eligible for? Our nurses will help you find out — at
-            no cost.
+            Not sure what funding you&apos;re eligible for? Our nurses will help you find out — at no cost.
           </p>
           <Link
             href="/contact"

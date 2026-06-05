@@ -5,7 +5,7 @@ import { FAQPageSchema } from '@/components/schema'
 import { FAQSection } from '@/components/sections/faq-section'
 
 export const metadata: Metadata = {
-  title: 'Frequently Asked Questions | Care N Cure Nursing Perth',
+  title: 'Frequently Asked Questions | The Nurse Who Knows You',
   description: 'Find honest, clear answers to common questions about private home nursing in Perth. AHPRA, costs, areas served, and hospital discharges.',
   alternates: { canonical: 'https://carencure.com.au/faq' },
 }
@@ -19,7 +19,7 @@ const allFaqs = [
   {
     id: 'faq-2',
     question: 'Are your nurses AHPRA registered?',
-    answer: 'Yes. Every nurse at Care N Cure is AHPRA registered. Our founders, Jinu and Zuhair, are registered nurses with over a decade of clinical experience in Perth hospital and community settings. AHPRA registration ensures the practitioner is subject to strict professional and national standards.',
+    answer: 'Yes. Every nurse at our practice is AHPRA registered. Our founders, Jinu and Zuhair, are registered nurses with over a decade of clinical experience in Perth hospital and community settings. AHPRA registration ensures the practitioner is subject to strict professional and national standards.',
   },
   {
     id: 'faq-3',
@@ -85,7 +85,7 @@ export default function FAQPage() {
 
       <CTASection
         title="Still have a question? Ask our founders."
-        description="Jinu and Zuhair are available to answer any clinical or pricing questions. No call centers, just direct professional advice."
+        description="Jinu and Zuhair are available to answer any clinical or pricing questions. No call centres, just direct professional advice."
         secondaryLink={{ text: 'Send an Enquiry', href: '/contact' }}
       />
     </>

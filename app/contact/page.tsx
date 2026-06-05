@@ -5,13 +5,11 @@ import { Phone, Mail, MapPin, Clock, ShieldCheck } from 'lucide-react'
 import { MedicalBusinessSchema } from '@/components/schema'
 
 export const metadata: Metadata = {
-  title: 'Contact Care N Cure Nursing | Perth WA',
-  description: 'Contact Jinu and Zuhair at Care N Cure. Call (08) XXXX XXXX, email, or fill out our enquiry form. Based in Perth.',
+  title: 'Contact | The Nurse Who Knows You Perth WA',
+  description: 'Speak directly with our registered nurse coordinators in Perth. Call 0481 748 516 or 0412 593 102, or send an enquiry today.',
   alternates: { canonical: 'https://carencure.com.au/contact' },
 }
 
-const PHONE_NUMBER = '(08) XXXX XXXX'
-const PHONE_HREF = 'tel:+618XXXXXXXX'
 const EMAIL = 'hello@carencure.com.au'
 const ADDRESS = 'Perth, WA'
 
@@ -38,7 +36,7 @@ export default function ContactPage() {
                 <h2 className="text-navy text-3xl font-bold">We are ready to support your family</h2>
                 <div className="section-divider" />
                 <p className="text-body text-base leading-relaxed mt-4">
-                  Whether your family member is recovering from surgery, managing a chronic illness, or preparing for hospital discharge, Jinu and Zuhair are available to answer your questions and perform an initial clinical consult.
+                  Whether your family member is recovering from surgery, managing a chronic illness, or preparing for hospital discharge, we are available to answer your questions and perform a clinical consult.
                 </p>
               </div>
 
@@ -51,10 +49,15 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-navy text-lg font-bold">Call Us Directly</h3>
-                    <p className="text-body text-sm mt-1">Speak directly to an AHPRA registered nurse co-founder.</p>
-                    <a href={PHONE_HREF} className="text-navy font-bold text-lg hover:text-teal-accent transition-colors">
-                      {PHONE_NUMBER}
-                    </a>
+                    <p className="text-body text-sm mt-1">Speak directly to an AHPRA registered nurse.</p>
+                    <div className="flex flex-col gap-2 mt-2">
+                      <a href="tel:+61481748516" className="text-navy font-bold text-lg hover:text-teal-accent transition-colors block">
+                        0481 748 516 <span className="text-xs text-slate-500 font-normal ml-2">(Primary line)</span>
+                      </a>
+                      <a href="tel:+61412593102" className="text-navy font-bold text-lg hover:text-teal-accent transition-colors block">
+                        0412 593 102 <span className="text-xs text-slate-500 font-normal ml-2">(Alternate line)</span>
+                      </a>
+                    </div>
                   </div>
                 </div>
 
@@ -64,7 +67,7 @@ export default function ContactPage() {
                     <Mail className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="text-navy text-lg font-bold">Email Our Founders</h3>
+                    <h3 className="text-navy text-lg font-bold">Email Our Practice</h3>
                     <p className="text-body text-sm mt-1">We respond to every digital enquiry within 24 hours.</p>
                     <a href={`mailto:${EMAIL}`} className="text-navy font-bold hover:text-teal-accent transition-colors">
                       {EMAIL}
@@ -106,7 +109,7 @@ export default function ContactPage() {
                 <div>
                   <h4 className="text-navy font-bold text-sm">Clinical Duty of Care</h4>
                   <p className="text-body text-xs mt-1 leading-relaxed">
-                    Care N Cure is a registered healthcare business in Western Australia (ABN 87 152 479 362). All professional patient consultations and medical data are secured in strict compliance with the Australian Privacy Act 1988.
+                    The Nurse Who Knows You (registered as Care N Cure Nursing Care Services, ABN 87 152 479 362) is a registered healthcare business in Western Australia. All professional patient consultations and medical data are secured in strict compliance with the Australian Privacy Act 1988.
                   </p>
                 </div>
               </div>

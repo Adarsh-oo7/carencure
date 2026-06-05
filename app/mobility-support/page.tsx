@@ -6,7 +6,7 @@ import { ContactForm } from '@/components/contact-form'
 import { PersonStanding, ShieldCheck, HeartPulse, Sparkles, CheckCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'In-Home Mobility & Rehabilitation Support Perth | Care N Cure',
+  title: 'In-Home Mobility & Rehabilitation Support Perth | The Nurse Who Knows You',
   description: 'Registered nurse-led in-home mobility care and post-surgical rehab support in Perth. Fall prevention, transfer safety, and exercise monitoring.',
   alternates: { canonical: 'https://carencure.com.au/mobility-support' },
 }
@@ -159,7 +159,7 @@ export default function MobilitySupport() {
 
       <CTASection
         title="Ready to rebuild your strength safely?"
-        description="Our Perth-based co-founders will design a customized mobility and exercise monitoring framework with you."
+        description="Our Perth-based co-founders will design a customised mobility and exercise monitoring framework with you."
         secondaryLink={{ text: 'Contact Us Now', href: '/contact' }}
       />
     </>

@@ -5,9 +5,9 @@ import { MedicalBusinessSchema, PersonSchema } from '@/components/schema'
 import { Shield, Heart, Users, ClipboardCheck, BadgeCheck } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: "About Care N Cure — Perth's Founder-Led Private Nursing Practice",
+  title: "About The Nurse Who Knows You — Perth's Founder-Led Private Nursing Practice",
   description:
-    'Care N Cure was founded by two registered nurses with 10+ years of clinical experience. Based in Perth.',
+    'The Nurse Who Knows You was founded by two registered nurses with 10+ years of clinical experience. Based in Perth.',
   alternates: { canonical: 'https://carencure.com.au/about' },
 }
 
@@ -26,7 +26,7 @@ const founders = [
     ahpra: '[AHPRA Number — to be confirmed]',
     bio: [
       'Jinu is a registered nurse with over 10 years of clinical experience across hospital and community settings. He is based in Perth, Western Australia, and has built his career caring for Australians across some of Perth’s busiest health environments.',
-      'His clinical background spans acute nursing, post-surgical recovery, wound management, and patient education. He co-founded Care N Cure because every Australian deserves a nurse who truly knows them — not a different stranger at every visit.',
+      'His clinical background spans acute nursing, post-surgical recovery, wound management, and patient education. He co-founded The Nurse Who Knows You because every Australian deserves a nurse who truly knows them — not a different stranger at every visit.',
     ],
   },
   {
@@ -36,7 +36,7 @@ const founders = [
     ahpra: '[AHPRA Number — to be confirmed]',
     bio: [
       'Zuhair is a registered nurse with more than 10 years of clinical experience. Based in Perth, Western Australia, he has dedicated his career to supporting Australians through some of their most vulnerable moments.',
-      'Over his career, Zuhair has developed deep expertise in medication management, chronic condition monitoring, and post-hospital recovery. He co-founded Care N Cure because he believes every person — regardless of their situation — deserves consistent, dignified care at home.',
+      'Over his career, Zuhair has developed deep expertise in medication management, chronic condition monitoring, and post-hospital recovery. He co-founded The Nurse Who Knows You because he believes every person — regardless of their situation — deserves consistent, dignified care at home.',
     ],
   },
 ]
@@ -45,11 +45,11 @@ export default function AboutPage() {
   return (
     <>
       <MedicalBusinessSchema />
-      <PersonSchema name="Jinu Maecheril Sukumaran" jobTitle="Registered Nurse, Co-Founder" description="Co-founder of Care N Cure. 10+ years nursing experience. AHPRA registered." />
-      <PersonSchema name="Mohamed Zuhair Parayil Ummer" jobTitle="Registered Nurse, Co-Founder" description="Co-founder of Care N Cure. 10+ years nursing experience. AHPRA registered." />
+      <PersonSchema name="Jinu Maecheril Sukumaran" jobTitle="Registered Nurse, Co-Founder" description="Co-founder of The Nurse Who Knows You. 10+ years nursing experience. AHPRA registered." />
+      <PersonSchema name="Mohamed Zuhair Parayil Ummer" jobTitle="Registered Nurse, Co-Founder" description="Co-founder of The Nurse Who Knows You. 10+ years nursing experience. AHPRA registered." />
 
       <PageHeader
-        title="About Care N Cure"
+        title="About The Nurse Who Knows You"
         subtitle="Founder-led private nursing care, built in Perth for Perth families."
         breadcrumbItems={[{ name: 'About', href: '/about' }]}
         label="Our Story"
@@ -60,7 +60,7 @@ export default function AboutPage() {
         <div className="section-container">
           <div className="max-w-3xl mx-auto">
             <p className="section-label mb-3">Our Story</p>
-            <h2 className="text-navy mb-4">Why we built Care N Cure</h2>
+            <h2 className="text-navy mb-4">Why we built The Nurse Who Knows You</h2>
             <div className="section-divider" />
             <div className="space-y-5">
               <p className="text-body text-lg leading-relaxed">
@@ -70,7 +70,7 @@ export default function AboutPage() {
                 Families did everything right — they searched online, called agencies, asked their GPs — and still ended up with support workers who were caring and well-meaning, but not clinically qualified to manage what their loved one actually needed. The gap between hospital and home was real. And it was leaving too many Australians without proper care during their most vulnerable moments.
               </p>
               <p className="text-body leading-relaxed">
-                In March 2026, Jinu and Zuhair registered Care N Cure with ASIC to close that gap. Not an agency. Not a directory. A proper nursing practice — where registered nurses take personal responsibility for the clinical care of every client they are assigned.
+                In March 2026, Jinu and Zuhair registered Care N Cure with ASIC to close that gap. Not an agency. Not a directory. A proper nursing practice operating as The Nurse Who Knows You — where registered nurses take personal responsibility for the clinical care of every client they are assigned.
               </p>
               <p className="text-body leading-relaxed font-medium text-navy">
                 We believe every Australian deserves to recover at home with dignity, surrounded by people who genuinely know and care for them.

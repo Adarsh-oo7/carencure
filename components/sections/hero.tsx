@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
 import { Phone, ArrowRight } from 'lucide-react'
@@ -6,11 +8,11 @@ const PHONE_NUMBER = '0481 748 516'
 const PHONE_HREF = 'tel:+61481748516'
 
 interface HeroProps {
-  headline: string
-  subheadline: string
-  ctaPrimary?: { text: string; href: string; isPhone?: boolean }
-  ctaSecondary?: { text: string; href: string }
-  badge?: string
+  headline: string;
+  subheadline: React.ReactNode;
+  ctaPrimary?: { text: string; href: string; isPhone?: boolean };
+  ctaSecondary?: { text: string; href: string; isPhone?: boolean };
+  badge?: string;
 }
 
 export function HeroSection({
@@ -35,7 +37,7 @@ export function HeroSection({
       >
         <Image
           src="/hero-bg.jpg"
-          alt="AHPRA registered nurse providing compassionate in-home care to an elderly patient in Perth, WA — Care N Cure Nursing Care Services"
+          alt="AHPRA registered nurse providing compassionate in-home care to an elderly patient in Perth, WA — The Nurse Who Knows You"
           fill
           priority
           quality={90}
@@ -74,9 +76,9 @@ export function HeroSection({
       />
 
       {/* ── Content ── */}
-      <div className="relative section-container pt-28 pb-36 sm:pt-36 sm:pb-48">
+      <div className="relative section-container pt-20 pb-24 sm:pt-36 sm:pb-48">
         <div style={{ maxWidth: '640px' }} className="animate-fade-in">
-          <div className="h-8 sm:h-14" />
+          <div className="h-2 sm:h-14" />
 
           {badge && (
             <div className="trust-badge mb-6 inline-flex" role="note" aria-label="Credential badge">
@@ -90,12 +92,12 @@ export function HeroSection({
 
           <h1
             id="hero-heading"
-            className="text-white mb-6"
+            className="text-white mb-4 sm:mb-6"
             itemProp="name"
             style={{
-              fontSize: 'clamp(2.1rem, 5vw, 3.5rem)',
+              fontSize: 'clamp(1.6rem, 5vw, 3.5rem)',
               fontWeight: 800,
-              lineHeight: 1.1,
+              lineHeight: 1.15,
               letterSpacing: '-0.02em',
               textShadow: '0 2px 25px rgba(0,0,0,0.65)',
             }}
@@ -103,8 +105,19 @@ export function HeroSection({
             {headline}
           </h1>
 
+          {/* Mobile: single punchy line; Desktop: full subheadline */}
           <p
-            className="mb-10"
+            className="block sm:hidden mb-6 text-white/90 leading-relaxed"
+            style={{
+              fontSize: '1rem',
+              textShadow: '0 1px 12px rgba(0,0,0,0.6)',
+            }}
+            itemProp="description"
+          >
+            Because the people you love deserve to stay home — safe, properly cared for, and with a nurse who actually knows them.
+          </p>
+          <div
+            className="hidden sm:block mb-10"
             itemProp="description"
             style={{
               fontSize: 'clamp(1.05rem, 1.8vw, 1.2rem)',
@@ -114,20 +127,23 @@ export function HeroSection({
             }}
           >
             {subheadline}
-          </p>
+          </div>
 
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-4">
             {ctaPrimary && (
               ctaPrimary.isPhone ? (
-                <a
-                  href={PHONE_HREF}
-                  className="btn-phone"
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.dispatchEvent(new CustomEvent('open-phone-modal'));
+                  }}
+                  className="btn-phone cursor-pointer"
                   id="hero-call-cta"
-                  aria-label={`Call Care N Cure now — ${PHONE_NUMBER}`}
+                  aria-label={ctaPrimary.text}
                 >
-                  <Phone className="w-5 h-5 flex-shrink-0" />
-                  Call Us Now — {PHONE_NUMBER}
-                </a>
+                  <Phone className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
+                  {ctaPrimary.text}
+                </button>
               ) : (
                 <Link
                   href={ctaPrimary.href}
@@ -136,34 +152,48 @@ export function HeroSection({
                   aria-label={ctaPrimary.text}
                 >
                   {ctaPrimary.text}
-                  <ArrowRight className="w-5 h-5" />
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
                 </Link>
               )
             )}
             {ctaSecondary && (
-              <Link
-                href={ctaSecondary.href}
-                className="btn-outline-white"
-                id="hero-secondary-cta"
-                aria-label={ctaSecondary.text}
-              >
-                {ctaSecondary.text}
-                <ArrowRight className="w-5 h-5" />
-              </Link>
+              ctaSecondary.isPhone ? (
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.dispatchEvent(new CustomEvent('open-phone-modal'));
+                  }}
+                  className="btn-outline-white cursor-pointer animate-fade-in"
+                  id="hero-secondary-cta"
+                  aria-label={ctaSecondary.text}
+                >
+                  <Phone className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
+                  {ctaSecondary.text}
+                </button>
+              ) : (
+                <Link
+                  href={ctaSecondary.href}
+                  className="btn-outline-white"
+                  id="hero-secondary-cta"
+                  aria-label={ctaSecondary.text}
+                >
+                  {ctaSecondary.text}
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+              )
             )}
           </div>
 
           {/* Trust / value props strip */}
-          <div className="mt-8 flex flex-col sm:flex-row flex-wrap gap-y-2 gap-x-6" role="list" aria-label="Key credentials">
+          <div className="mt-5 sm:mt-8 flex flex-row flex-wrap gap-y-2 gap-x-4 sm:gap-x-6" role="list" aria-label="Key credentials">
             {[
               '✓ AHPRA Registered Nurses',
-              '✓ Your Dedicated Nurse™ — same nurse, every visit',
-              '✓ First visit within 24–48 hrs of hospital discharge',
+              '✓ Visits within 24–48 hrs',
             ].map((item) => (
               <span
                 key={item}
                 role="listitem"
-                className="text-sm font-medium"
+                className="text-xs sm:text-sm font-medium"
                 style={{ color: 'rgba(255,255,255,0.9)', textShadow: '0 1px 8px rgba(0,0,0,0.6)' }}
               >
                 {item}
@@ -171,8 +201,8 @@ export function HeroSection({
             ))}
           </div>
 
-          {/* AHPRA / trust ribbon */}
-          <div className="mt-10 flex items-center gap-3 flex-wrap">
+          {/* AHPRA / trust ribbon — hidden on very small screens to avoid clutter */}
+          <div className="hidden sm:flex mt-8 items-center gap-3 flex-wrap">
             <div
               className="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold"
               style={{ background: 'rgba(197,238,228,0.15)', border: '1px solid rgba(197,238,228,0.3)', color: 'rgba(197,238,228,0.95)' }}

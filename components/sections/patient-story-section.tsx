@@ -1,104 +1,87 @@
-import Link from 'next/link'
-import Image from 'next/image'
-
 export function PatientStorySection() {
+  const frustrations = [
+    'We never seem to speak to the same person twice.',
+    "Mum's wound is being dressed, but nobody explains if it's improving.",
+    'Dad keeps repeating his story to different carers.',
+    "We don't know who is actually in charge of the care.",
+    "We're worried something important is being missed.",
+    'The system feels confusing and overwhelming.',
+  ]
+
   return (
-    <section className="py-20 bg-white" aria-labelledby="patient-story-heading">
+    <section className="py-20 bg-white" aria-labelledby="familiar-heading">
       <div className="section-container">
         {/* Header */}
-        <div className="text-center mb-10">
-          <p className="section-label mb-3">Stories From Home</p>
-          <h2 id="patient-story-heading" className="text-navy">
-            Real recoveries. Real families. Real nurses.
+        <div className="text-center mb-12">
+          <p className="section-label mb-3">Does This Sound Familiar?</p>
+          <h2 id="familiar-heading" className="text-navy mb-4">
+            Common Home Care Frustrations
           </h2>
+          <div className="section-divider mx-auto" />
         </div>
 
-        {/* Visual trust image strip */}
-        <div className="relative w-full h-64 rounded-2xl overflow-hidden mb-10 shadow-lg">
-          <Image
-            src="/family-care-consult.jpg"
-            alt="Care N Cure registered nurse Jinu sitting with an elderly patient and her daughter at a kitchen table in their Perth home, explaining the care plan — Your Dedicated Nurse model in practice"
-            fill
-            sizes="(max-width: 768px) 100vw, 80vw"
-            style={{ objectFit: 'cover', objectPosition: 'center 40%' }}
-          />
-          <div
-            className="absolute inset-0"
-            style={{
-              background: 'linear-gradient(90deg, rgba(9,30,48,0.60) 0%, rgba(9,30,48,0.20) 50%, transparent 100%)',
-            }}
-            aria-hidden="true"
-          />
-          <div className="absolute bottom-4 left-6">
-            <p className="text-white font-semibold text-sm">
-              &ldquo;One nurse. From day one.&rdquo;
-            </p>
-            <p className="text-teal-200 text-xs mt-1">Care N Cure · Harrisdale, Perth WA</p>
-          </div>
-        </div>
-
-        {/* 3-column grid: primary story (2 cols) + secondary story (1 col) */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Primary Story — 2 of 3 columns */}
-          <div className="lg:col-span-2 bg-white border border-border rounded-2xl p-8 shadow-sm border-l-4 border-l-teal-600 relative">
-            {/* Decorative quote mark */}
+        {/* Quotes Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {frustrations.map((quote, i) => (
             <div
-              className="absolute top-6 left-8 text-8xl leading-none font-serif select-none pointer-events-none"
-              style={{ color: 'rgba(13,148,136,0.08)' }}
-              aria-hidden="true"
+              key={i}
+              className="card-base p-6 bg-slate-50 border border-slate-100 rounded-2xl flex flex-col justify-between relative animate-fade-in"
             >
-              &ldquo;
-            </div>
-
-            <h3 className="text-navy font-bold text-xl mb-5 relative">
-              Margaret came home from hospital on a Thursday.
-            </h3>
-
-            <div className="space-y-4 text-body leading-relaxed relative">
-              <p>
-                Her daughter Sarah had taken the week off work. The discharge papers listed six
-                medications, two wound dressings, and a follow-up appointment three weeks away.
-                Nobody explained what to watch for in between.
-              </p>
-              <p>
-                That evening, they called Care N Cure. The next morning, Registered Nurse Jinu
-                arrived — not a stranger, but the same nurse who would visit Margaret every week.
-                Jinu assessed the wound, set up a medication schedule on the fridge, and sat with
-                Sarah at the kitchen table to explain the warning signs: what was normal, what
-                wasn&apos;t, and exactly when to call.
-              </p>
-              <p>
-                Three weeks later, Margaret attended her follow-up. No readmission. No panic. Just
-                a steady recovery — with one nurse who knew her name from day one.
-              </p>
-            </div>
-
-            <div className="mt-6 pt-5 border-t border-border">
-              <p className="text-teal-700 text-sm font-bold mb-3">
-                This is what Your Dedicated Nurse™ looks like in practice.
-              </p>
-              <Link
-                href="/testimonials"
-                className="text-teal-700 hover:text-teal-900 text-sm font-medium transition-colors"
+              {/* Decorative quotation mark */}
+              <div
+                className="absolute top-2 left-4 text-6xl leading-none font-serif select-none pointer-events-none text-red-500/10"
+                aria-hidden="true"
               >
-                Read more recovery stories →
-              </Link>
+                &ldquo;
+              </div>
+              <p className="text-body text-base italic leading-relaxed relative z-10 pl-4">
+                {quote}
+              </p>
             </div>
+          ))}
+        </div>
+
+        {/* Transition statement & Better way card */}
+        <div className="max-w-4xl mx-auto mt-16 grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
+          <div className="lg:col-span-2 space-y-4">
+            <h3 className="text-navy font-bold text-2xl">
+              If this sounds familiar, you are not alone.
+            </h3>
+            <p className="text-body text-base leading-relaxed">
+              Many Australian families feel they are coordinating care themselves instead of receiving care.
+            </p>
+            <p className="font-semibold text-red-500">
+              That&apos;s not how it should be.
+            </p>
           </div>
 
-          {/* Secondary Story — 1 of 3 columns */}
-          <div className="bg-teal-50 rounded-2xl p-8 flex flex-col">
-            <h3 className="text-navy font-bold text-lg mb-4">
-              David&apos;s return home after cardiac surgery
-            </h3>
-            <p className="text-body leading-relaxed text-sm flex-1">
-              David&apos;s wife had one number to call. One nurse who picked up. One person who knew
-              his medications, his fears, and his progress. That&apos;s the Care N Cure promise.
+          <div className="lg:col-span-3 bg-teal-700 text-white rounded-3xl p-8 sm:p-10 shadow-lg relative overflow-hidden">
+            {/* Visual glow indicator */}
+            <div className="absolute top-0 right-0 w-32 h-32 bg-teal-accent/20 rounded-full blur-3xl pointer-events-none" />
+            
+            <p className="text-teal-300 text-sm font-semibold uppercase tracking-widest mb-3">
+              There Is A Better Way
             </p>
-            <div className="mt-6 pt-4 border-t border-teal-200">
-              <span className="text-teal-700 text-xs font-bold uppercase tracking-widest">
-                Your Dedicated Nurse™ Model
-              </span>
+            <h3 className="text-white font-bold text-2xl mb-4">
+              At The Nurse Who Knows You, we do home care differently.
+            </h3>
+            <p className="text-white/90 mb-6 leading-relaxed">
+              Every client is assigned a dedicated Nurse Coordinator who becomes your consistent, trusted point of contact.
+            </p>
+            
+            <div className="flex flex-col gap-2 font-medium text-teal-100 border-t border-teal-600 pt-4">
+              <div className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-teal-300" />
+                Not a rotating roster
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-teal-300" />
+                Not a call centre
+              </div>
+              <div className="flex items-center gap-2 font-bold text-white text-lg">
+                <span className="w-2 h-2 rounded-full bg-teal-accent" />
+                A nurse who knows you.
+              </div>
             </div>
           </div>
         </div>

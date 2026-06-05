@@ -6,7 +6,7 @@ import { ContactForm } from '@/components/contact-form'
 import { Bandage, ShieldAlert, Award, Stethoscope, CheckCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'In-Home Wound Care & Dressing Perth | Care N Cure',
+  title: 'In-Home Wound Care & Dressing Perth | The Nurse Who Knows You',
   description: 'Professional wound care at home by AHPRA registered nurses in Perth. Surgical dressings, skin tears, ulcers, drain management, and infection prevention.',
   alternates: { canonical: 'https://carencure.com.au/wound-care' },
 }
@@ -160,7 +160,7 @@ export default function WoundCare() {
       <CTASection
         title="Need a wound dressing change? Avoid long hospital queues."
         description="Our registered nurses carry out home visits across all Perth suburbs, saving you painful trips and hours of waiting in medical clinics."
-        secondaryLink={{ text: 'Call Jinu or Zuhair Now', href: '/contact' }}
+        secondaryLink={{ text: 'Call Us Now', href: '/contact' }}
       />
     </>
   )

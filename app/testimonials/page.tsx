@@ -1,90 +1,154 @@
 import type { Metadata } from 'next'
 import { PageHeader } from '@/components/page-header'
 import { CTASection } from '@/components/sections/cta'
-import { Star, ShieldCheck, Heart } from 'lucide-react'
+import { ShieldCheck, HeartPulse, FileText, ClipboardList, HelpCircle, MessageSquare } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Testimonials — Verified Client Reviews | Care N Cure Nursing Perth',
-  description: 'Care N Cure Nursing Care Services has a strict policy against fabricated testimonials. Read our commitment to honest feedback and direct verified reviews.',
+  title: 'Clinical Quality & Feedback Policy | Care N Cure',
+  description: 'Our commitment to clinical governance, AHPRA advertising compliance, and continuous quality improvement for in-home nursing care in Perth.',
   alternates: { canonical: 'https://carencure.com.au/testimonials' },
 }
 
-export default function TestimonialsPage() {
+export default function QualityFeedbackPage() {
   return (
     <>
       <PageHeader
-        title="Testimonials & Reviews"
-        subtitle="Genuine feedback from Perth families — zero fabricated reviews."
-        breadcrumbItems={[{ name: 'Testimonials', href: '/testimonials' }]}
-        label="Honesty & Integrity"
+        title="Quality & Feedback"
+        subtitle="Our commitment to clinical excellence, transparency, and AHPRA compliance."
+        breadcrumbItems={[{ name: 'Quality & Feedback', href: '/testimonials' }]}
+        label="Clinical Governance"
       />
 
       <section className="section-py bg-white">
-        <div className="section-container max-w-3xl">
+        <div className="section-container max-w-4xl">
           
-          {/* Strict Honesty Editorial Note */}
-          <div className="card-base p-8 mb-12 border-2 border-dashed border-teal-accent bg-surface/50" id="honesty-note">
-            <div className="flex items-center gap-3 mb-4">
-              <ShieldCheck className="w-8 h-8 text-teal-accent flex-shrink-0" />
-              <h2 className="text-navy text-xl font-bold" style={{ fontSize: '1.25rem' }}>Our Commitment to Complete Honesty</h2>
+          {/* AHPRA Compliance Statement Alert */}
+          <div className="card-base p-8 mb-12 border-2 border-dashed border-teal-accent bg-surface/50" id="ahpra-compliance">
+            <div className="flex items-start gap-4">
+              <ShieldCheck className="w-10 h-10 text-teal-accent flex-shrink-0 mt-1" />
+              <div>
+                <h2 className="text-navy text-xl font-bold mb-3" style={{ fontSize: '1.25rem' }}>
+                  AHPRA Testimonials & Advertising Compliance
+                </h2>
+                <p className="text-body text-sm leading-relaxed mb-4">
+                  In Australia, Registered Nurses are regulated health practitioners under the <strong>Australian Health Practitioner Regulation Agency (AHPRA)</strong>. Under Section 133 of the <em>Health Practitioner Regulation National Law</em>, it is an offence to advertise a regulated health service using testimonials or clinical reviews on platforms controlled by the practice.
+                </p>
+                <p className="text-body text-sm leading-relaxed">
+                  To maintain complete compliance and professional integrity, <strong>Care N Cure</strong> does not publish client testimonials or clinical reviews on this website. We believe health services should be chosen based on objective clinical qualifications, credentials, registration status, and quality framework standards.
+                </p>
+              </div>
             </div>
-            <p className="text-body text-sm leading-relaxed mb-4">
-              In the home care and private nursing sector, many agencies post fake, anonymous, or heavily fabricated testimonials to build artificial trust. We believe this is fundamentally unethical. As AHPRA-regulated Registered Nurses, professional integrity is at the core of everything we do.
-            </p>
-            <p className="text-body text-sm leading-relaxed">
-              <strong>Care N Cure maintains a strict policy:</strong> We will never write, purchase, or publish anonymous or fabricated client reviews. Every piece of feedback shown here or on our public profiles is a genuine comment from real clients or their immediate family members.
-            </p>
           </div>
 
-          {/* Genuine Review Scaffolding */}
-          <div className="space-y-6">
-            <h3 className="text-navy text-2xl font-bold text-center mb-8">What families say about Jinu & Zuhair</h3>
+          <div className="space-y-12">
             
-            <div className="card-base p-6 flex flex-col gap-4">
-              <div className="flex gap-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-teal-accent text-teal-accent" />
-                ))}
-              </div>
-              <p className="text-body italic text-sm leading-relaxed">
-                &quot;When my mother was discharged from Sir Charles Gairdner after a hip replacement, we were overwhelmed with her wound care and medicine changes. Jinu was fantastic. He visited Nedlands every other day, spoke directly to our GP, and made sure mom was comfortable and healing safely. Having the same nurse every single visit was incredibly reassuring.&quot;
+            {/* Our Quality Framework */}
+            <div>
+              <h3 className="text-navy text-2xl font-bold mb-6 text-center lg:text-left">Our Clinical Quality Framework</h3>
+              <p className="text-body text-sm leading-relaxed mb-6">
+                We maintain a rigorous framework to ensure the safety, effectiveness, and clinical appropriateness of all nursing services delivered across Perth.
               </p>
-              <div className="border-t border-border pt-3 flex justify-between items-center text-xs">
-                <span className="font-semibold text-navy">Sarah M. (Daughter of Client)</span>
-                <span className="text-muted-brand">Nedlands WA · Verified Client</span>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <div className="card-base p-6 border border-border flex gap-4">
+                  <HeartPulse className="w-8 h-8 text-teal-accent flex-shrink-0" />
+                  <div>
+                    <h4 className="text-navy font-bold mb-2 text-base">AHPRA Registered Nurses Only</h4>
+                    <p className="text-body text-xs leading-relaxed">
+                      All clinical assessments, wound care, and medication administrations are performed strictly by university-trained Registered Nurses, never delegated to support workers.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="card-base p-6 border border-border flex gap-4">
+                  <ClipboardList className="w-8 h-8 text-teal-accent flex-shrink-0" />
+                  <div>
+                    <h4 className="text-navy font-bold mb-2 text-base">Active Clinical Oversight</h4>
+                    <p className="text-body text-xs leading-relaxed">
+                      Our co-founders, Jinu and Zuhair, review care plans, coordinate handovers with discharging hospitals, and maintain direct contact with your local General Practitioners.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="card-base p-6 border border-border flex gap-4">
+                  <FileText className="w-8 h-8 text-teal-accent flex-shrink-0" />
+                  <div>
+                    <h4 className="text-navy font-bold mb-2 text-base">Roster Continuity Guarantee</h4>
+                    <p className="text-body text-xs leading-relaxed">
+                      We pair every client with a dedicated Nurse Coordinator, guaranteeing you see the same nurse who understands your health journey inside-out.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="card-base p-6 border border-border flex gap-4">
+                  <ShieldCheck className="w-8 h-8 text-teal-accent flex-shrink-0" />
+                  <div>
+                    <h4 className="text-navy font-bold mb-2 text-base">Australian Privacy Compliance</h4>
+                    <p className="text-body text-xs leading-relaxed">
+                      All clinical records, medication charts, and communication logs are stored in encrypted, secure systems compliant with the <em>Privacy Act 1988 (Cth)</em>.
+                    </p>
+                  </div>
+                </div>
+
               </div>
             </div>
 
-            <div className="card-base p-6 flex flex-col gap-4">
-              <div className="flex gap-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-teal-accent text-teal-accent" />
-                ))}
-              </div>
-              <p className="text-body italic text-sm leading-relaxed">
-                &quot;Zuhair is an absolute professional. He coordinates all of my father&apos;s complex medications and blister packing, and administers his subcutaneous injections with incredible gentleness. He is reliable, patient, and always sends our family a detailed update after his visit. Highly recommended.&quot;
+            {/* How We Collect & Use Feedback */}
+            <div className="bg-surface p-8 rounded-3xl border border-border">
+              <h3 className="text-navy text-2xl font-bold mb-6 flex items-center gap-3">
+                <MessageSquare className="w-6 h-6 text-teal-accent" />
+                How to Provide Feedback
+              </h3>
+              <p className="text-body text-sm leading-relaxed mb-6">
+                Your feedback is essential to our continuous clinical improvement. Whether you wish to share a suggestion, compliment our team, or raise a concern, we provide multiple direct channels:
               </p>
-              <div className="border-t border-border pt-3 flex justify-between items-center text-xs">
-                <span className="font-semibold text-navy">David K. (Son of Client)</span>
-                <span className="text-muted-brand">Perth WA · Verified Client</span>
+
+              <div className="space-y-4">
+                <div className="flex gap-4 items-start border-b border-border pb-4">
+                  <span className="w-6 h-6 rounded-full bg-teal-accent/10 text-teal-accent flex items-center justify-center font-bold text-xs mt-0.5">1</span>
+                  <div>
+                    <h4 className="text-navy font-bold text-sm">Direct Phone Discussion</h4>
+                    <p className="text-body text-xs mt-1">
+                      Call our nursing directors directly on <strong>0481 748 516</strong> or <strong>0412 593 102</strong>. We discuss all feedback personally and resolve matters promptly.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4 items-start border-b border-border pb-4">
+                  <span className="w-6 h-6 rounded-full bg-teal-accent/10 text-teal-accent flex items-center justify-center font-bold text-xs mt-0.5">2</span>
+                  <div>
+                    <h4 className="text-navy font-bold text-sm">Written Feedback or Enquiry</h4>
+                    <p className="text-body text-xs mt-1">
+                      Email our management team at <a href="mailto:hello@carencure.com.au" className="text-teal-600 font-semibold hover:underline">hello@carencure.com.au</a> with details of your experience.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4 items-start pb-2">
+                  <span className="w-6 h-6 rounded-full bg-teal-accent/10 text-teal-accent flex items-center justify-center font-bold text-xs mt-0.5">3</span>
+                  <div>
+                    <h4 className="text-navy font-bold text-sm">Independent Business Reviews</h4>
+                    <p className="text-body text-xs mt-1 text-balance">
+                      While AHPRA guidelines prohibit us from publishing clinical reviews on our own website, patients are welcome to share their general feedback on independent public platforms (such as Google Reviews) where reviews are managed independently without our influence or moderation.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* How to Leave Feedback Card */}
-            <div className="card-base p-6 text-center bg-surface flex flex-col items-center gap-4">
-              <Heart className="w-10 h-10 text-teal-accent" />
-              <h4 className="text-navy font-bold">Have you worked with Care N Cure?</h4>
-              <p className="text-body text-sm max-w-md">
-                Your feedback helps us continuously improve our services and helps other Perth families find trustworthy clinical support. Please consider leaving a verified Google review.
+            {/* Formal Complaints Resolution */}
+            <div className="space-y-4">
+              <h3 className="text-navy text-xl font-bold flex items-center gap-2">
+                <HelpCircle className="w-5 h-5 text-teal-accent" />
+                Formal Complaints & Advocacy
+              </h3>
+              <p className="text-body text-xs leading-relaxed">
+                If you have a concern regarding our nursing care that has not been satisfactorily resolved by our directors, you have the right to seek independent advocacy or file a formal complaint with the <strong>Health and Disability Services Complaints Office (HaDSCO)</strong> in Western Australia. HaDSCO is an independent statutory authority providing a free complaint resolution service.
               </p>
-              <a
-                href="https://g.page/r/YOUR_GOOGLE_BUSINESS_ID/review"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-phone text-sm font-bold"
-              >
-                Review Us On Google
-              </a>
+              <p className="text-body text-xs leading-relaxed">
+                Learn more at the <a href="https://www.hadsco.wa.gov.au" target="_blank" rel="noopener noreferrer" className="text-teal-600 font-semibold hover:underline">HaDSCO Website</a> or call <strong>(08) 6551 7600</strong>.
+              </p>
             </div>
 
           </div>
@@ -94,7 +158,7 @@ export default function TestimonialsPage() {
 
       <CTASection
         title="Speak directly with our nursing founders today."
-        description="Whether you need post-hospital recovery in Joondalup or wound management in Cottesloe, call us directly."
+        description="Whether you need post-hospital recovery in Joondalup or wound management in Cottesloe, call us directly to discuss your clinical needs."
         secondaryLink={{ text: 'Contact Us Now', href: '/contact' }}
       />
     </>

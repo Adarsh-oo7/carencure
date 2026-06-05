@@ -23,7 +23,7 @@ const steps = [
     icon: HeartPulse,
     title: 'Nursing care begins',
     description:
-      'Your assigned nurse visits at the agreed time. Same nurse, every visit. After each visit, we update the family. We coordinate with your GP or specialist where needed. You stay informed throughout.',
+      'Your dedicated Nurse Coordinator takes full ownership of your care — scheduling, clinical oversight, GP communication, and family updates. One person. One point of contact. You never repeat yourself, and nothing falls through the cracks.',
   },
 ]
 

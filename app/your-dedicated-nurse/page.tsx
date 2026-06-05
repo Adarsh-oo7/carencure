@@ -3,9 +3,9 @@ import Link from 'next/link'
 import { CheckCircle2, XCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Your Dedicated Nurse™ | One Client. One Nurse. | Care N Cure Perth',
+  title: 'Your Dedicated Nurse™ | One Client. One Nurse. | The Nurse Who Knows You',
   description:
-    'Every Care N Cure client has one dedicated Registered Nurse from initial assessment to ongoing care. Perth\'s unique nurse-led home care model. AHPRA registered.',
+    'Every client has one dedicated Registered Nurse coordinator from initial assessment to ongoing care. Perth\'s unique nurse-led home care model. AHPRA registered.',
   alternates: { canonical: 'https://carencure.com.au/your-dedicated-nurse' },
 }
 
@@ -75,7 +75,7 @@ export default function YourDedicatedNursePage() {
       >
         <div className="section-container text-center">
           <p className="text-teal-200 text-sm font-semibold uppercase tracking-widest mb-4">
-            The Care N Cure Model
+            Our Care Model
           </p>
           <h1
             id="dedicated-nurse-h1"
@@ -92,7 +92,7 @@ export default function YourDedicatedNursePage() {
             style={{ color: 'rgba(255,255,255,0.88)' }}
           >
             Unlike traditional home care where a roster of different workers arrives each week,
-            every Care N Cure client is assigned one dedicated Registered Nurse. This nurse knows
+            every client is assigned one dedicated Registered Nurse. This nurse knows
             you — your medical history, your preferences, your family, your goals. They stay with
             you throughout your entire care journey.
           </p>
@@ -178,10 +178,10 @@ export default function YourDedicatedNursePage() {
               Built by Nurses. For Families.
             </h2>
             <p className="text-body text-lg leading-relaxed mb-8">
-              Care N Cure was founded by Jinu and Zuhair — two AHPRA-registered nurses with over 10
+              Our practice was founded by Jinu and Zuhair — two AHPRA-registered nurses with over 10
               years of clinical experience in Australian hospitals and home care settings. They built
               the Dedicated Nurse model because they saw firsthand what happens when continuity of
-              care breaks down after hospital discharge. Every nurse at Care N Cure follows the same
+              care breaks down after hospital discharge. Every nurse at our practice follows the same
               model they designed.
             </p>
             <Link

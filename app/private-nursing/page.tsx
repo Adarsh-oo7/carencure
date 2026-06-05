@@ -6,8 +6,8 @@ import { ContactForm } from '@/components/contact-form'
 import { Activity, ShieldCheck, HeartPulse, UserCheck, CheckCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Private Nursing at Home Perth | Care N Cure Nursing Care Services',
-  description: 'In-home private nursing by AHPRA registered nurses in Perth. Customized nursing assessments, chronic illness support, respite, and long-term care.',
+  title: 'Private Nursing at Home Perth | The Nurse Who Knows You',
+  description: 'In-home private nursing by AHPRA registered nurses in Perth. Customised nursing assessments, chronic illness support, respite, and long-term care.',
   alternates: { canonical: 'https://carencure.com.au/private-nursing' },
 }
 
@@ -57,7 +57,7 @@ export default function PrivateNursing() {
                 <h2 className="text-navy text-3xl font-bold">University-trained Registered Nurses</h2>
                 <div className="section-divider" />
                 <p className="text-body text-lg leading-relaxed mt-4">
-                  For complex medical conditions, aging family members, or long-term illness, standard care agencies are often insufficient. Care N Cure provides dedicated Registered Nurses who bring clinical knowledge, assessment skills, and medical authority directly to your doorstep.
+                  For complex medical conditions, ageing family members, or long-term illness, standard care agencies are often insufficient. We provide dedicated Registered Nurses who bring clinical knowledge, assessment skills, and medical authority directly to your doorstep.
                 </p>
               </div>
 
@@ -160,7 +160,7 @@ export default function PrivateNursing() {
       <CTASection
         title="Arrange your free initial telephone consult."
         description="Speak directly with our co-founders to review your in-home nursing needs and design a regular schedule."
-        secondaryLink={{ text: 'Contact Care N Cure', href: '/contact' }}
+        secondaryLink={{ text: 'Contact Us Now', href: '/contact' }}
       />
     </>
   )

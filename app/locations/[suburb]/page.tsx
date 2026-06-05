@@ -95,7 +95,7 @@ export async function generateMetadata({ params }: { params: Promise<{ suburb: s
   if (!data) return {}
 
   return {
-    title: `In-Home Registered Nurse ${data.name} WA | Care N Cure`,
+    title: `In-Home Registered Nurse ${data.name} WA | The Nurse Who Knows You`,
     description: `Private home nursing services in ${data.name}, Perth WA. Registered nurses providing post-hospital care, wound dressings, and medication reconciliation.`,
     alternates: { canonical: `https://carencure.com.au/locations/${suburb}` },
   }
@@ -154,7 +154,7 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
               </div>
 
               <div className="space-y-4">
-                <h3 className="text-navy text-2xl font-bold">Why choose Care N Cure in {data.name}?</h3>
+                <h3 className="text-navy text-2xl font-bold">Why choose us in {data.name}?</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   
                   <div className="flex gap-3 items-start">

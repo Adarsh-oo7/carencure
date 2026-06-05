@@ -6,7 +6,7 @@ import { ContactForm } from '@/components/contact-form'
 import { ClipboardCheck, Heart, Shield, RefreshCw, CheckCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'In-Home Post-Hospital Recovery Care Perth | Care N Cure',
+  title: 'In-Home Post-Hospital Recovery Care Perth | The Nurse Who Knows You',
   description: 'AHPRA registered nurses helping patients transition safely from hospital to home in Perth. Post-surgical wound care, vitals, medication checks.',
   alternates: { canonical: 'https://carencure.com.au/post-hospital-care' },
 }
@@ -64,7 +64,7 @@ export default function PostHospitalCare() {
               <div className="space-y-6">
                 <h3 className="text-navy text-2xl font-bold">Our Post-Hospital Clinical Support</h3>
                 <p className="text-body">
-                  Whether recovering from major orthopaedic surgery, cardiac procedures, or general medical admissions, Care N Cure provides a dedicated, consistent Registered Nurse to support your recovery.
+                  Whether recovering from major orthopaedic surgery, cardiac procedures, or general medical admissions, we provide a dedicated, consistent Registered Nurse to support your recovery.
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
@@ -164,7 +164,7 @@ export default function PostHospitalCare() {
       <CTASection
         title="Discharged soon? Plan ahead today."
         description="Secure your nurse before discharge. We speak directly with hospital discharge teams to ensure everything is ready when you arrive home."
-        secondaryLink={{ text: 'Contact Our Founders', href: '/contact' }}
+        secondaryLink={{ text: 'Contact Us Now', href: '/contact' }}
       />
     </>
   )

@@ -56,10 +56,17 @@ export function ContactForm({
         </div>
         <h3 className="text-navy font-bold text-xl">Thank you — we&apos;ll be in touch soon</h3>
         <p className="text-body text-sm">
-          We aim to respond within 2 hours during business hours. For urgent care needs, please call us directly on{' '}
-          <a href={PHONE_HREF} className="font-semibold text-navy underline">
-            {PHONE_NUMBER}
-          </a>.
+          We aim to respond within 2 hours during business hours. For urgent care needs, please{' '}
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              window.dispatchEvent(new CustomEvent('open-phone-modal'));
+            }}
+            className="font-semibold text-navy underline cursor-pointer bg-transparent border-none p-0 inline font-inherit"
+            style={{ minHeight: 'auto' }}
+          >
+            call us directly
+          </button>.
         </p>
       </div>
     )
@@ -183,9 +190,16 @@ export function ContactForm({
 
       <p className="text-sm text-center" style={{ color: 'var(--text-muted)' }}>
         Prefer to call?{' '}
-        <a href={PHONE_HREF} className="font-semibold text-navy underline">
-          {PHONE_NUMBER}
-        </a>{' '}
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            window.dispatchEvent(new CustomEvent('open-phone-modal'));
+          }}
+          className="font-semibold text-navy underline cursor-pointer bg-transparent border-none p-0 inline font-inherit"
+          style={{ minHeight: 'auto' }}
+        >
+          Call Us directly
+        </button>{' '}
         — we answer every call.
       </p>
     </form>

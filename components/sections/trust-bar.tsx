@@ -17,7 +17,7 @@ const trustItems = [
   {
     icon: CheckCircle2,
     label: 'Your Dedicated Nurse™ Model',
-    sub: 'One nurse, assigned to you',
+    sub: 'One nurse Coordinator, assigned to you',
     id: 'trust-dedicated',
   },
   {

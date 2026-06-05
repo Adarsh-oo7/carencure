@@ -6,7 +6,7 @@ import { ContactForm } from '@/components/contact-form'
 import { Pill, ShieldCheck, Heart, FileSpreadsheet, CheckCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'In-Home Medication Management Perth | Care N Cure',
+  title: 'In-Home Medication Management Perth | The Nurse Who Knows You',
   description: 'Registered nurses managing complex medications, Webster packs, and administering injections at home in Perth. Safe medication reconciliation.',
   alternates: { canonical: 'https://carencure.com.au/medication-management' },
 }
@@ -64,7 +64,7 @@ export default function MedicationManagement() {
               <div className="space-y-6">
                 <h3 className="text-navy text-2xl font-bold">Our Medication Safety Services</h3>
                 <p className="text-body">
-                  Care N Cure Registered Nurses ensure that all medications are managed, recorded, and administered in strict accordance with your doctor&apos;s prescribing instructions.
+                  Our Registered Nurses ensure that all medications are managed, recorded, and administered in strict accordance with your doctor&apos;s prescribing instructions.
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">

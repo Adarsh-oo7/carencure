@@ -3,8 +3,8 @@ import { PageHeader } from '@/components/page-header'
 import { Shield } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Care N Cure Nursing Care Services',
-  description: 'Care N Cure Privacy Policy. How we collect, store, protect, and handle your personal and clinical medical information under the Australian Privacy Act 1988.',
+  title: 'Privacy Policy | The Nurse Who Knows You Perth WA',
+  description: 'Confidentiality and Privacy Policy. How we collect, store, protect, and handle your personal and clinical medical information under the Australian Privacy Act 1988.',
   alternates: { canonical: 'https://carencure.com.au/privacy' },
 }
 
@@ -28,7 +28,7 @@ export default function PrivacyPage() {
 
           <div className="space-y-6 text-body text-sm leading-relaxed">
             <p>
-              This Privacy Policy explains how <strong>Care N Cure Nursing Care Services</strong> (ABN 87 152 479 362) collects, stores, uses, and discloses your personal and clinical health information. We are bound by the Australian Privacy Principles (APPs) contained in the <em>Privacy Act 1988 (Cth)</em> and the strict professional confidentiality requirements enforced by the <em>Australian Health Practitioner Regulation Agency (AHPRA)</em>.
+              This Privacy Policy explains how <strong>The Nurse Who Knows You</strong> (registered as Care N Cure Nursing Care Services, ABN 87 152 479 362) collects, stores, uses, and discloses your personal and clinical health information. We are bound by the Australian Privacy Principles (APPs) contained in the <em>Privacy Act 1988 (Cth)</em> and the strict professional confidentiality requirements enforced by the <em>Australian Health Practitioner Regulation Agency (AHPRA)</em>.
             </p>
 
             <hr className="border-border my-6" />
@@ -79,10 +79,10 @@ export default function PrivacyPage() {
               If you have any questions, concerns, or complaints regarding how your clinical data is handled, please contact us at:
             </p>
             <div className="bg-surface p-5 rounded-xl border border-border mt-3 text-xs space-y-1">
-              <p><strong>Privacy Officer:</strong> Care N Cure Nursing Care Services</p>
+              <p><strong>Privacy Officer:</strong> The Nurse Who Knows You (Care N Cure Nursing Care Services)</p>
               <p><strong>Address:</strong> Perth WA</p>
               <p><strong>Email:</strong> hello@carencure.com.au</p>
-              <p><strong>Phone:</strong> (08) XXXX XXXX</p>
+              <p><strong>Phone:</strong> 0481 748 516</p>
             </div>
           </div>
 

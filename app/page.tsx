@@ -14,24 +14,23 @@ import { PatientStorySection } from '@/components/sections/patient-story-section
 import { FundedCareSection } from '@/components/sections/funded-care-section'
 
 export const metadata: Metadata = {
-  title: 'Your Dedicated Nurse at Home | Care N Cure Perth WA',
+  title: 'The Nurse Who Knows You | Home Care That Feels Personal Again',
   description:
-    "Perth's first dedicated nurse model — one registered nurse for each client. Post-hospital recovery, Home Care Packages. AHPRA registered nurses. Perth WA.",
+    'One Client. One Dedicated Nurse Coordinator. Helping Australians stay safe, supported, and independent at home. Book a free consultation today.',
   keywords: [
     'private nursing Perth',
     'home nursing Perth WA',
+    'dedicated nurse coordinator',
+    'The Nurse Who Knows You',
+    'one client one nurse',
     'registered nurse home visit Perth',
-    'post hospital care Perth',
-    'AHPRA registered nurse Perth',
-    'dedicated nurse Perth',
-    'one nurse one client Perth',
     'home care packages Perth',
-    'post hospital care Perth WA',
+    'aged care Perth',
   ],
   alternates: { canonical: 'https://carencure.com.au' },
   openGraph: {
-    title: 'Private Nursing at Home in Perth | Care N Cure',
-    description: 'Registered nurses for in-home care across Perth, WA.',
+    title: 'The Nurse Who Knows You | Home Care That Feels Personal Again',
+    description: 'One Client. One Dedicated Nurse Coordinator. Helping Australians stay safe, supported, and independent at home.',
     url: 'https://carencure.com.au',
   },
 }
@@ -83,12 +82,33 @@ export default function HomePage() {
       <LocalBusinessSchema />
 
       <HeroSection
-        badge="Perth's First Dedicated Nurse Model"
-        headline="Your Dedicated Nurse™ — One Client. One Nurse."
-        subheadline="When someone you love comes home from hospital, they deserve one nurse who knows them by name — their history, their family, their goals. Not a roster. One dedicated registered nurse, every time."
-        ctaPrimary={{ text: 'Meet Your Dedicated Nurse', href: '/your-dedicated-nurse' }}
-        ctaSecondary={{ text: 'How It Works', href: '#how-it-works' }}
+        badge="Your Dedicated Nurse"
+        headline="One Client. One Nurse Coordinator. One Trusted Relationship."
+        subheadline={
+          <div className="space-y-4">
+            <p className="text-white/90 text-lg leading-relaxed">
+              When someone you love needs care at home, the last thing you want is a stranger from a call centre who&apos;s juggling 300 other families — reading your mum&apos;s notes for the first time at the front door.
+            </p>
+            <p className="font-semibold text-teal-accent text-lg leading-relaxed">
+              At Care N Cure, your family gets one dedicated Registered Nurse who shows up, learns your situation properly, and stays with you — not just for the first visit, but every single time.
+            </p>
+            <p className="font-medium text-white/85 leading-relaxed">
+              No handoffs. No repeating yourself. Just a nurse who genuinely knows you.
+            </p>
+          </div>
+        }
+        ctaPrimary={{ text: 'Book a Free Consultation', href: '/contact' }}
+        ctaSecondary={{ text: 'Call Us Today', href: 'tel:+61481748516', isPhone: true }}
       />
+
+      {/* Strong Positioning Statement Callout */}
+      <section className="bg-teal-50 py-12 border-b border-teal-100" aria-label="Positioning statement">
+        <div className="section-container text-center max-w-4xl">
+          <p className="text-navy font-semibold text-lg sm:text-xl leading-relaxed">
+            &ldquo;Unlike traditional home care providers, every client receives a dedicated nurse coordinator who provides regular home visits, clinical oversight, and a single trusted point of contact for both clients and families.&rdquo;
+          </p>
+        </div>
+      </section>
 
       <TrustBar />
 

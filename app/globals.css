@@ -238,7 +238,12 @@
 
   /* Standalone CTA anchors (not inline text links) */
   a.btn-phone, a.btn-outline-white {
-    min-height: 52px;
+    min-height: 48px;
+  }
+  @media (min-width: 640px) {
+    a.btn-phone, a.btn-outline-white {
+      min-height: 52px;
+    }
   }
 
   /* Images */
@@ -294,15 +299,17 @@
   .btn-phone {
     display: inline-flex;
     align-items: center;
-    gap: 0.625rem;
+    justify-content: center;
+    gap: 0.5rem;
     background: var(--teal-accent);
     color: var(--navy-dark);
     font-weight: 700;
-    font-size: 1.05rem;
-    padding: 0.875rem 1.75rem;
+    font-size: 0.9rem;
+    padding: 0.75rem 1.25rem;
     border-radius: var(--radius-lg);
     transition: background 0.2s ease, transform 0.15s ease;
-    min-height: 52px;
+    min-height: 48px;
+    width: 100%;
   }
   .btn-phone:hover {
     background: var(--teal-dark);
@@ -313,20 +320,40 @@
   .btn-outline-white {
     display: inline-flex;
     align-items: center;
-    gap: 0.625rem;
+    justify-content: center;
+    gap: 0.5rem;
     background: transparent;
     color: var(--white);
     font-weight: 600;
-    font-size: 1rem;
-    padding: 0.875rem 1.75rem;
-    border: 2px solid rgba(255,255,255,0.4);
+    font-size: 0.875rem;
+    padding: 0.75rem 1.25rem;
+    border: 2px solid rgba(255,255,255,0.5);
     border-radius: var(--radius-lg);
     transition: background 0.2s ease, border-color 0.2s ease;
-    min-height: 52px;
+    min-height: 48px;
+    width: 100%;
   }
   .btn-outline-white:hover {
     background: rgba(255,255,255,0.1);
     border-color: rgba(255,255,255,0.7);
+  }
+
+  /* On tablet and above — restore larger sizing and auto width */
+  @media (min-width: 640px) {
+    .btn-phone {
+      font-size: 1.05rem;
+      padding: 0.875rem 1.75rem;
+      min-height: 52px;
+      width: auto;
+      justify-content: flex-start;
+    }
+    .btn-outline-white {
+      font-size: 1rem;
+      padding: 0.875rem 1.75rem;
+      min-height: 52px;
+      width: auto;
+      justify-content: flex-start;
+    }
   }
 
   /* Section container */

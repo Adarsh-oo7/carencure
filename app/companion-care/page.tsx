@@ -6,7 +6,7 @@ import { ContactForm } from '@/components/contact-form'
 import { Smile, ShieldCheck, Heart, Sparkles, CheckCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Nursing-Led Companion Care Perth | Care N Cure',
+  title: 'Nursing-Led Companion Care Perth | The Nurse Who Knows You',
   description: 'Premium, nurse-led companionship and social support for seniors in Perth. Cognitive engagement, safety checkups, and detailed updates for families.',
   alternates: { canonical: 'https://carencure.com.au/companion-care' },
 }
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: 'How is nurse-led companion care different from regular companion care?',
-    answer: 'Regular companion care is delivered by support workers without medical training. Care N Cure companion care is managed and delivered under the active supervision of Registered Nurses. During each social visit, we perform subtle clinical observations of cognitive function, hydration, gait stability, and mood, catching potential medical risks before they escalate.',
+    answer: 'Regular companion care is delivered by support workers without medical training. Our companion care is managed and delivered under the active supervision of Registered Nurses. During each social visit, we perform subtle clinical observations of cognitive function, hydration, gait stability, and mood, catching potential medical risks before they escalate.',
   },
   {
     question: 'What activities do you do during companion visits?',
@@ -160,7 +160,7 @@ export default function CompanionCare() {
       <CTASection
         title="Looking for reliable, nurse-led companionship for a parent?"
         description="Speak with co-founders Jinu and Zuhair to coordinate a regular and caring companion plan today."
-        secondaryLink={{ text: 'Call Us Directly Now', href: '/contact' }}
+        secondaryLink={{ text: 'Call Us Now', href: '/contact' }}
       />
     </>
   )

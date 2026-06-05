@@ -1,118 +1,107 @@
 import Image from 'next/image'
-import { CheckCircle2 } from 'lucide-react'
+import { Check } from 'lucide-react'
 
 const checklistItems = [
-  'Conducts your initial assessment at home',
-  'Writes and owns your personal care plan',
-  'Coordinates with your GP and hospital team',
-  'Knows your medication history, preferences, and goals',
-  'Calls your family — by name — with updates',
-  'Spots changes in health before they become emergencies',
-  'Is there at every visit, not a different face each week',
-]
-
-const stats = [
-  { value: '10+ Years', label: 'Clinical Experience (Founders)' },
-  { value: '24–48hrs', label: 'First Visit After Enquiry' },
-  { value: '1 Nurse', label: 'Assigned to You, Always' },
+  'Visits you regularly at home',
+  'Gets to know your health, routine, and preferences',
+  'Oversees wound care and clinical concerns',
+  'Monitors changes in your wellbeing',
+  'Coordinates support workers and allied health',
+  'Communicates with your GP and family',
+  'Helps prevent avoidable hospital visits',
+  'Stays with you throughout your care journey',
 ]
 
 export function DedicatedNurseSection() {
   return (
     <section
-      className="py-20 bg-slate-50 border-t-4 border-teal-600"
+      className="py-20 bg-slate-50 border-t border-slate-100"
       aria-labelledby="dedicated-nurse-heading"
     >
       <div className="section-container">
         {/* Section header */}
-        <div className="text-center mb-10">
-          <p className="section-label mb-3">What Makes Us Different</p>
+        <div className="text-center mb-12">
+          <p className="section-label mb-3">Our Dedicated Model</p>
           <h2 id="dedicated-nurse-heading" className="text-navy mb-4">
-            The Dedicated Nurse Difference
+            One Client. One Nurse Coordinator.
           </h2>
-          <p className="text-body text-lg max-w-xl mx-auto">
-            Unlike any other home care provider in Perth.
+          <div className="section-divider mx-auto" />
+          <p className="text-body text-lg max-w-xl mx-auto font-medium text-teal-accent">
+            Because continuity changes everything.
           </p>
         </div>
 
         {/* Visual trust image */}
-        <div className="relative w-full h-56 rounded-2xl overflow-hidden mb-10 shadow-md">
+        <div className="relative w-full h-72 rounded-3xl overflow-hidden mb-12 shadow-lg">
           <Image
             src="/nurse-home-visit.jpg"
-            alt="AHPRA registered nurse conducting a home health assessment in Perth — Care N Cure Your Dedicated Nurse model"
+            alt="AHPRA registered nurse conducting a home health assessment and coordinating services for an elderly client — The Nurse Who Knows You model"
             fill
             sizes="100vw"
             style={{ objectFit: 'cover', objectPosition: 'center 35%' }}
+            priority
           />
           <div
             className="absolute inset-0"
-            style={{ background: 'linear-gradient(90deg, rgba(13,148,136,0.65) 0%, rgba(13,148,136,0.10) 60%, transparent 100%)' }}
+            style={{ background: 'linear-gradient(90deg, rgba(9,30,48,0.7) 0%, rgba(9,30,48,0.2) 60%, transparent 100%)' }}
             aria-hidden="true"
           />
-          <div className="absolute inset-0 flex items-center px-8">
-            <blockquote className="text-white max-w-sm">
-              <p className="text-xl font-bold leading-snug mb-1">&ldquo;You call us. You get your nurse.&rdquo;</p>
-              <cite className="text-teal-200 text-sm not-italic">The Care N Cure Promise · Perth, WA</cite>
+          <div className="absolute inset-0 flex items-center px-8 sm:px-12">
+            <blockquote className="text-white max-w-md">
+              <p className="text-xl sm:text-2xl font-bold leading-snug mb-2 text-white">&ldquo;We Don&apos;t Just Coordinate Care. We Know You.&rdquo;</p>
+              <cite className="text-teal-200 text-sm not-italic font-medium">The Nurse Who Knows You Promise</cite>
             </blockquote>
           </div>
         </div>
 
-        {/* Two-column layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
-          {/* Left: what families usually face */}
-          <div className="bg-white rounded-2xl p-8 shadow-sm border border-border">
-            <h3 className="text-navy font-semibold text-lg mb-6">
-              What families usually face
-            </h3>
-            <div className="space-y-4">
-              {[
-                'Every time I call, I speak to a different person.',
-                "I have to explain Mum's history again and again.",
-                "I don't know who's coming tomorrow.",
-              ].map((quote, i) => (
-                <blockquote
-                  key={i}
-                  className="pl-4 border-l-4 border-teal-600 italic text-slate-500 leading-relaxed"
-                >
-                  &ldquo;{quote}&rdquo;
-                </blockquote>
-              ))}
+        {/* Two-column layout: Left Promise, Right Duties checklist */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+          {/* Left: Our Promise */}
+          <div className="bg-navy rounded-3xl p-8 sm:p-10 text-white flex flex-col justify-between shadow-md relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-teal-accent/5 rounded-full blur-3xl pointer-events-none" />
+            <div>
+              <p className="text-teal-accent text-sm font-semibold uppercase tracking-widest mb-3">
+                Our Promise
+              </p>
+              <h3 className="text-white font-bold text-2xl sm:text-3xl mb-6 leading-tight">
+                We Don&apos;t Just Coordinate Care.<br />We Know You.
+              </h3>
+              <div className="space-y-4 text-white/95 leading-relaxed text-base sm:text-lg">
+                <p className="text-white/90">
+                  Your dedicated nurse learns your goals, preferences, routines, and health needs.
+                </p>
+                <p className="font-semibold text-teal-accent">
+                  That means better communication, better continuity, and better outcomes.
+                </p>
+              </div>
             </div>
-          </div>
-
-          {/* Right: with Your Dedicated Nurse */}
-          <div className="bg-teal-700 rounded-2xl p-8 text-white">
-            <p className="text-teal-300 text-sm font-semibold uppercase tracking-wide mb-2">
-              With Your Dedicated Nurse™
-            </p>
-            <h3 className="text-white font-bold text-2xl mb-6">
-              One nurse. Assigned to you. From day one.
-            </h3>
-            <ul className="space-y-3 mb-6">
-              {checklistItems.map((item, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-teal-300 flex-shrink-0 mt-0.5" />
-                  <span className="text-white/90 text-sm leading-relaxed">{item}</span>
-                </li>
-              ))}
-            </ul>
-            <div className="border-t border-teal-600 pt-5">
-              <p className="italic text-teal-100 text-sm">
-                &ldquo;You call us. You get your nurse.&rdquo;
+            <div className="border-t border-navy-light pt-6 mt-8">
+              <p className="italic text-teal-100/70 text-sm">
+                Care should never feel like you&apos;re just another file in the system.
               </p>
             </div>
           </div>
-        </div>
 
-        {/* Stat bar */}
-        <div className="bg-teal-700 rounded-2xl px-8 py-8">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
-            {stats.map((stat, i) => (
-              <div key={i}>
-                <div className="text-3xl font-extrabold text-white mb-1">{stat.value}</div>
-                <div className="text-teal-200 text-sm">{stat.label}</div>
-              </div>
-            ))}
+          {/* Right: Duties checklist */}
+          <div className="bg-white rounded-3xl p-8 sm:p-10 shadow-sm border border-slate-100 flex flex-col justify-between">
+            <div>
+              <h3 className="text-navy font-bold text-xl sm:text-2xl mb-6">
+                Your dedicated Nurse Coordinator:
+              </h3>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4">
+                {checklistItems.map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <span className="flex-shrink-0 w-5 h-5 rounded-full bg-teal-50 text-teal-accent flex items-center justify-center font-bold text-xs mt-0.5 border border-teal-100">
+                      ✓
+                    </span>
+                    <span className="text-body text-sm leading-relaxed font-medium">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="mt-8 pt-6 border-t border-slate-100 text-xs text-slate-400 font-medium">
+              AHPRA-registered coordination & clinical oversight.
+            </div>
           </div>
         </div>
       </div>
