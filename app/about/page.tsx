@@ -23,7 +23,6 @@ const founders = [
     id: 'about-founder-jinu',
     name: 'Jinu Maecheril Sukumaran',
     credential: 'Registered Nurse (RN)',
-    ahpra: '[AHPRA Number — to be confirmed]',
     bio: [
       'Jinu is a registered nurse with over 10 years of clinical experience across hospital and community settings. He is based in Perth, Western Australia, and has built his career caring for Australians across some of Perth’s busiest health environments.',
       'His clinical background spans acute nursing, post-surgical recovery, wound management, and patient education. He co-founded The Nurse Who Knows You because every Australian deserves a nurse who truly knows them — not a different stranger at every visit.',
@@ -33,7 +32,6 @@ const founders = [
     id: 'about-founder-zuhair',
     name: 'Mohamed Zuhair Parayil Ummer',
     credential: 'Registered Nurse (RN)',
-    ahpra: '[AHPRA Number — to be confirmed]',
     bio: [
       'Zuhair is a registered nurse with more than 10 years of clinical experience. Based in Perth, Western Australia, he has dedicated his career to supporting Australians through some of their most vulnerable moments.',
       'Over his career, Zuhair has developed deep expertise in medication management, chronic condition monitoring, and post-hospital recovery. He co-founded The Nurse Who Knows You because he believes every person — regardless of their situation — deserves consistent, dignified care at home.',
@@ -45,8 +43,8 @@ export default function AboutPage() {
   return (
     <>
       <MedicalBusinessSchema />
-      <PersonSchema name="Jinu Maecheril Sukumaran" jobTitle="Registered Nurse, Co-Founder" description="Co-founder of The Nurse Who Knows You. 10+ years nursing experience. AHPRA registered." />
-      <PersonSchema name="Mohamed Zuhair Parayil Ummer" jobTitle="Registered Nurse, Co-Founder" description="Co-founder of The Nurse Who Knows You. 10+ years nursing experience. AHPRA registered." />
+      <PersonSchema name="Jinu Maecheril Sukumaran" jobTitle="Registered Nurse, Co-Founder" description="Co-founder of The Nurse Who Knows You. 10+ years nursing experience." />
+      <PersonSchema name="Mohamed Zuhair Parayil Ummer" jobTitle="Registered Nurse, Co-Founder" description="Co-founder of The Nurse Who Knows You. 10+ years nursing experience." />
 
       <PageHeader
         title="About The Nurse Who Knows You"
@@ -89,7 +87,7 @@ export default function AboutPage() {
             <div className="section-divider mx-auto" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {founders.map(({ id, name, credential, ahpra, bio }) => (
+            {founders.map(({ id, name, credential, bio }) => (
               <div key={id} id={id} className="card-base overflow-hidden">
                 {/* <div className="relative h-52 flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #091E30, #1A3D5C)' }}>
                   <div className="flex flex-col items-center gap-3 text-center px-8">
@@ -105,14 +103,14 @@ export default function AboutPage() {
                   <div>
                     <h3 className="text-navy" style={{ fontSize: '1.1rem' }}>{name}</h3>
                     <p className="font-semibold text-sm" style={{ color: 'var(--teal-accent)' }}>{credential}</p>
-                    <p className="text-xs mt-1" style={{ color: 'var(--text-muted)' }}>AHPRA: {ahpra}</p>
+
                   </div>
                   <div className="space-y-3">
                     {bio.map((para, i) => <p key={i} className="text-body text-sm leading-relaxed">{para}</p>)}
                   </div>
                   <div className="flex items-center gap-2 text-sm">
                     <BadgeCheck className="w-4 h-4 flex-shrink-0" style={{ color: 'var(--teal-accent)' }} />
-                    <span className="text-body">AHPRA Registered Nurse · 10+ years experience</span>
+                    <span className="text-body">Registered Nurse · 10+ years experience</span>
                   </div>
                 </div>
               </div>

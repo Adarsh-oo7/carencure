@@ -5,7 +5,7 @@ import { CheckCircle2, XCircle } from 'lucide-react'
 export const metadata: Metadata = {
   title: 'Your Dedicated Nurse™ | One Client. One Nurse. | The Nurse Who Knows You',
   description:
-    'Every client has one dedicated Registered Nurse coordinator from initial assessment to ongoing care. Perth\'s unique nurse-led home care model. AHPRA registered.',
+    'Every client has one dedicated Registered Nurse coordinator from initial assessment to ongoing care. Perth\'s unique nurse-led home care model.',
   alternates: { canonical: 'https://carencure.com.au/your-dedicated-nurse' },
 }
 
@@ -178,7 +178,7 @@ export default function YourDedicatedNursePage() {
               Built by Nurses. For Families.
             </h2>
             <p className="text-body text-lg leading-relaxed mb-8">
-              Our practice was founded by Jinu and Zuhair — two AHPRA-registered nurses with over 10
+              Our practice was founded by Jinu and Zuhair — two registered nurses with over 10
               years of clinical experience in Australian hospitals and home care settings. They built
               the Dedicated Nurse model because they saw firsthand what happens when continuity of
               care breaks down after hospital discharge. Every nurse at our practice follows the same

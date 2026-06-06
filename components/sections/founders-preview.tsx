@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowRight, ShieldCheck, Quote } from 'lucide-react'
+import { ArrowRight, Quote } from 'lucide-react'
 
 const founders = [
   {
@@ -7,7 +7,6 @@ const founders = [
     initials: 'JM',
     name: 'Jinu Maecheril Sukumaran',
     credential: 'Registered Nurse (RN)',
-    ahpra: 'AHPRA Registered · NMW-class',
     experience: '10+ years nursing experience',
     background: 'Based in Perth — caring for Perth families',
     quote: 'I became a nurse to make a difference in people’s lives — and the best way to do that at home is to be the same face every visit. That’s why we built our practice around one nurse, one client.',
@@ -18,7 +17,6 @@ const founders = [
     initials: 'MZ',
     name: 'Mohamed Zuhair Parayil Ummer',
     credential: 'Registered Nurse (RN)',
-    ahpra: 'AHPRA Registered · NMW-class',
     experience: '10+ years nursing experience',
     background: 'Based in Perth — dedicated to Perth’s community',
     quote: 'Families deserve one nurse who knows them — their medications, their fears, their progress. Not a different face each week. That continuity is what changes outcomes.',
@@ -42,7 +40,7 @@ export function FoundersPreview() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
-          {founders.map(({ id, initials, name, credential, ahpra, experience, background, quote, bio }) => (
+          {founders.map(({ id, initials, name, credential, experience, background, quote, bio }) => (
             <div
               key={id}
               id={id}
@@ -84,11 +82,7 @@ export function FoundersPreview() {
                   </p>
                 </blockquote>
 
-                {/* AHPRA badge */}
-                <div className="flex items-center gap-2 mt-5">
-                  <ShieldCheck className="w-4 h-4 text-teal-400 flex-shrink-0" />
-                  <span className="text-teal-300 text-xs font-semibold">{ahpra}</span>
-                </div>
+
               </div>
 
               {/* Info */}

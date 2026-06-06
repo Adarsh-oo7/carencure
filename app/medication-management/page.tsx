@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: 'Can your registered nurses administer injections?',
-    answer: 'Yes. As AHPRA Registered Nurses, we are fully licensed to administer all subcutaneous and intramuscular injections including insulin, anticoagulants (blood thinners like Clexane), vitamin B12, osteoporosis injections, and palliative medications.',
+    answer: 'Yes. As Registered Nurses, we are fully licensed to administer all subcutaneous and intramuscular injections including insulin, anticoagulants (blood thinners like Clexane), vitamin B12, osteoporosis injections, and palliative medications.',
   },
   {
     question: 'What is medication reconciliation?',
@@ -129,7 +129,7 @@ export default function MedicationManagement() {
               <div className="sticky top-24">
                 <ContactForm
                   title="Enquire About Medication Care"
-                  subtitle="Fill out the form below. An AHPRA registered nurse will call you back to discuss your medication support needs."
+                  subtitle="Fill out the form below. A registered nurse will call you back to discuss your medication support needs."
                   defaultService="Medication Management"
                 />
               </div>

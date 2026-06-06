@@ -28,7 +28,7 @@ export default function PrivacyPage() {
 
           <div className="space-y-6 text-body text-sm leading-relaxed">
             <p>
-              This Privacy Policy explains how <strong>The Nurse Who Knows You</strong> (registered as Care N Cure Nursing Care Services, ABN 87 152 479 362) collects, stores, uses, and discloses your personal and clinical health information. We are bound by the Australian Privacy Principles (APPs) contained in the <em>Privacy Act 1988 (Cth)</em> and the strict professional confidentiality requirements enforced by the <em>Australian Health Practitioner Regulation Agency (AHPRA)</em>.
+              This Privacy Policy explains how <strong>The Nurse Who Knows You</strong> (registered as Care N Cure Nursing Care Services, ABN 87 152 479 362) collects, stores, uses, and discloses your personal and clinical health information. We are bound by the Australian Privacy Principles (APPs) contained in the <em>Privacy Act 1988 (Cth)</em> and strict professional confidentiality obligations applicable to registered nursing practitioners.
             </p>
 
             <hr className="border-border my-6" />

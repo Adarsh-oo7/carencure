@@ -16,9 +16,8 @@ const ADDRESS = {
 }
 const AREA_SERVED = [
   'Perth', 'Nedlands', 'Subiaco', 'Cottesloe', 'Claremont',
-  'Mount Lawley', 'Inglewood', 'Joondalup', 'Edgewater',
-  'Applecross', 'Booragoon', 'Canning Vale',
-  'Midland', 'Fremantle', 'South Perth', 'Mount Pleasant',
+  'Mount Lawley', 'Inglewood', 'Gosnells', 'Armadale',
+  'Rockingham', 'Fremantle', 'South Perth', 'Mount Pleasant',
   'Wembley', 'Floreat', 'Leederville',
 ]
 
@@ -85,21 +84,11 @@ export function MedicalBusinessSchema() {
         '@type': 'Person',
         name: 'Jinu Maecheril Sukumaran',
         jobTitle: 'Registered Nurse',
-        hasCredential: {
-          '@type': 'EducationalOccupationalCredential',
-          credentialCategory: 'AHPRA Registration',
-          recognizedBy: { '@type': 'Organization', name: 'Australian Health Practitioner Regulation Agency' },
-        },
       },
       {
         '@type': 'Person',
         name: 'Mohamed Zuhair Parayil Ummer',
         jobTitle: 'Registered Nurse',
-        hasCredential: {
-          '@type': 'EducationalOccupationalCredential',
-          credentialCategory: 'AHPRA Registration',
-          recognizedBy: { '@type': 'Organization', name: 'Australian Health Practitioner Regulation Agency' },
-        },
       },
     ],
   }
@@ -125,7 +114,7 @@ export function OrganizationSchema() {
       width: 200,
       height: 200,
     },
-    description: 'Founder-led private nursing practice in Perth, WA. AHPRA registered nurses providing in-home care.',
+    description: 'Founder-led private nursing practice in Perth, WA. Registered nurses providing in-home care.',
     telephone: PHONE_SCHEMA,
     email: EMAIL,
     address: {
@@ -157,7 +146,7 @@ export function LocalBusinessSchema() {
     '@type': ['LocalBusiness', 'HealthAndBeautyBusiness'],
     '@id': `${SITE_URL}/#local-business`,
     name: 'Care N Cure Nursing Care Services',
-    description: 'In-home nursing care by AHPRA registered nurses. Perth, WA.',
+    description: 'In-home nursing care by registered nurses. Perth, WA.',
     url: SITE_URL,
     telephone: PHONE_SCHEMA,
     email: EMAIL,
@@ -206,12 +195,10 @@ export function FAQPageSchema({ faqs }: { faqs: { question: string; answer: stri
 export function PersonSchema({
   name,
   jobTitle,
-  ahpraNumber,
   description,
 }: {
   name: string
   jobTitle: string
-  ahpraNumber?: string
   description?: string
 }) {
   const schema = {
@@ -228,11 +215,10 @@ export function PersonSchema({
     hasCredential: {
       '@type': 'EducationalOccupationalCredential',
       credentialCategory: 'Professional Registration',
-      name: ahpraNumber ? `AHPRA Registration ${ahpraNumber}` : 'AHPRA Registered Nurse',
+      name: 'Registered Nurse',
       recognizedBy: {
         '@type': 'Organization',
-        name: 'Australian Health Practitioner Regulation Agency',
-        url: 'https://www.ahpra.gov.au',
+        name: 'Nursing and Midwifery Board of Australia',
       },
     },
   }
@@ -310,7 +296,7 @@ export function SuburbPageSchema({ suburb, url }: { suburb: string; url: string 
     '@context': 'https://schema.org',
     '@type': 'Service',
     name: `Home Nursing in ${suburb}, Perth`,
-    description: `Care N Cure provides in-home nursing care in ${suburb}, Perth WA. AHPRA registered nurses for post-hospital recovery, wound care, and medication management.`,
+    description: `Care N Cure provides in-home nursing care in ${suburb}, Perth WA. Registered nurses for post-hospital recovery, wound care, and medication management.`,
     url: `${SITE_URL}${url}`,
     provider: {
       '@type': 'MedicalBusiness',

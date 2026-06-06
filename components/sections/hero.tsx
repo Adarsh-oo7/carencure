@@ -37,7 +37,7 @@ export function HeroSection({
       >
         <Image
           src="/hero-bg.jpg"
-          alt="AHPRA registered nurse providing compassionate in-home care to an elderly patient in Perth, WA — The Nurse Who Knows You"
+          alt="Registered nurse providing compassionate in-home care to an elderly patient in Perth, WA — The Nurse Who Knows You"
           fill
           priority
           quality={90}
@@ -187,7 +187,7 @@ export function HeroSection({
           {/* Trust / value props strip */}
           <div className="mt-5 sm:mt-8 flex flex-row flex-wrap gap-y-2 gap-x-4 sm:gap-x-6" role="list" aria-label="Key credentials">
             {[
-              '✓ AHPRA Registered Nurses',
+              '✓ Registered Nurses',
               '✓ Visits within 24–48 hrs',
             ].map((item) => (
               <span
@@ -201,7 +201,7 @@ export function HeroSection({
             ))}
           </div>
 
-          {/* AHPRA / trust ribbon — hidden on very small screens to avoid clutter */}
+          {/* Trust ribbon — hidden on very small screens to avoid clutter */}
           <div className="hidden sm:flex mt-8 items-center gap-3 flex-wrap">
             <div
               className="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold"

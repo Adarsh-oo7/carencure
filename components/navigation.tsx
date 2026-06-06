@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Menu, X, Phone, ChevronDown } from 'lucide-react'
@@ -21,7 +21,9 @@ const locationLinks = [
   { label: 'All Perth Suburbs', href: '/locations' },
   { label: 'Nedlands', href: '/locations/nedlands' },
   { label: 'Subiaco', href: '/locations/subiaco' },
-  { label: 'Joondalup', href: '/locations/joondalup' },
+  { label: 'City of Gosnells', href: '/locations/gosnells' },
+  { label: 'City of Armadale', href: '/locations/armadale' },
+  { label: 'Rockingham', href: '/locations/rockingham' },
   { label: 'Applecross', href: '/locations/applecross' },
   { label: 'Mount Lawley', href: '/locations/mount-lawley' },
   { label: 'Fremantle', href: '/locations/fremantle' },
@@ -37,6 +39,9 @@ export function Navigation() {
   const [mobileLocationsOpen, setMobileLocationsOpen] = useState(false)
   const [phoneModalOpen, setPhoneModalOpen] = useState(false)
 
+  const servicesTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const locationsTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10)
     window.addEventListener('scroll', handleScroll)
@@ -47,8 +52,32 @@ export function Navigation() {
     return () => {
       window.removeEventListener('scroll', handleScroll)
       window.removeEventListener('open-phone-modal', handleOpen)
+      if (servicesTimeoutRef.current) clearTimeout(servicesTimeoutRef.current)
+      if (locationsTimeoutRef.current) clearTimeout(locationsTimeoutRef.current)
     }
   }, [])
+
+  const handleServicesMouseEnter = () => {
+    if (servicesTimeoutRef.current) clearTimeout(servicesTimeoutRef.current)
+    setServicesOpen(true)
+  }
+
+  const handleServicesMouseLeave = () => {
+    servicesTimeoutRef.current = setTimeout(() => {
+      setServicesOpen(false)
+    }, 150)
+  }
+
+  const handleLocationsMouseEnter = () => {
+    if (locationsTimeoutRef.current) clearTimeout(locationsTimeoutRef.current)
+    setLocationsOpen(true)
+  }
+
+  const handleLocationsMouseLeave = () => {
+    locationsTimeoutRef.current = setTimeout(() => {
+      setLocationsOpen(false)
+    }, 150)
+  }
 
   return (
     <>
@@ -86,12 +115,12 @@ export function Navigation() {
           aria-label="Main navigation"
         >
         <div className="section-container overflow-visible">
-          <div className="flex items-center justify-between h-16">
+          <div className="flex items-center justify-between h-16 overflow-visible">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 flex-shrink-0" aria-label="Care N Cure — Home">
               <div className="bg-navy rounded-lg p-1.5 flex items-center justify-center" style={{ width: 44, height: 44 }}>
                 <Image
-                  src="./logo.png"
+                  src="/logo.png"
                   alt="Care N Cure logo"
                   width={32}
                   height={32}
@@ -114,8 +143,8 @@ export function Navigation() {
               {/* Services dropdown */}
               <div
                 className="relative"
-                onMouseEnter={() => setServicesOpen(true)}
-                onMouseLeave={() => setServicesOpen(false)}
+                onMouseEnter={handleServicesMouseEnter}
+                onMouseLeave={handleServicesMouseLeave}
               >
                 <button
                   className="flex items-center gap-1 text-sm font-medium text-body hover:text-navy transition-colors"
@@ -129,7 +158,7 @@ export function Navigation() {
                 </button>
                 {servicesOpen && (
                   <div
-                    className="absolute top-full left-0 w-72 card-base py-2 mt-1"
+                    className="absolute top-full left-0 w-72 card-base py-2 mt-1 shadow-xl z-50"
                     role="menu"
                     aria-labelledby="services-menu-btn"
                   >
@@ -150,8 +179,8 @@ export function Navigation() {
               {/* Locations dropdown */}
               <div
                 className="relative"
-                onMouseEnter={() => setLocationsOpen(true)}
-                onMouseLeave={() => setLocationsOpen(false)}
+                onMouseEnter={handleLocationsMouseEnter}
+                onMouseLeave={handleLocationsMouseLeave}
               >
                 <button
                   className="flex items-center gap-1 text-sm font-medium text-body hover:text-navy transition-colors"
@@ -165,7 +194,7 @@ export function Navigation() {
                 </button>
                 {locationsOpen && (
                   <div
-                    className="absolute top-full left-0 w-56 card-base py-2 mt-1"
+                    className="absolute top-full left-0 w-56 card-base py-2 mt-1 shadow-xl z-50"
                     role="menu"
                     aria-labelledby="locations-menu-btn"
                   >
@@ -238,7 +267,7 @@ export function Navigation() {
 
         {/* Mobile menu */}
         {isOpen && (
-          <div className="lg:hidden border-t border-border bg-white">
+          <div className="lg:hidden border-t border-border bg-white max-h-[75vh] overflow-y-auto">
             <div className="section-container py-4 flex flex-col gap-1">
               <Link
                 href="/"

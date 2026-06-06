@@ -49,7 +49,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-navy text-lg font-bold">Call Us Directly</h3>
-                    <p className="text-body text-sm mt-1">Speak directly to an AHPRA registered nurse.</p>
+                    <p className="text-body text-sm mt-1">Speak directly to a registered nurse.</p>
                     <div className="flex flex-col gap-2 mt-2">
                       <a href="tel:+61481748516" className="text-navy font-bold text-lg hover:text-teal-accent transition-colors block">
                         0481 748 516 <span className="text-xs text-slate-500 font-normal ml-2">(Primary line)</span>
@@ -82,7 +82,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-navy text-lg font-bold">Office Address</h3>
-                    <p className="text-body text-sm mt-1">Serving Nedlands, Subiaco, Joondalup, and all Perth metro.</p>
+                    <p className="text-body text-sm mt-1">Serving Nedlands, Subiaco, Gosnells, Armadale, Rockingham, and all Perth metro.</p>
                     <p className="text-navy font-semibold">{ADDRESS}</p>
                   </div>
                 </div>

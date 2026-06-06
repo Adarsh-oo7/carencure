@@ -19,7 +19,7 @@ export function Footer() {
             <div className="flex items-center gap-3 mb-5">
               <div className="bg-white/10 rounded-lg p-1.5 flex items-center justify-center" style={{ width: 48, height: 48 }}>
                 <Image
-                  src="./logo.png"
+                  src="/logo.png"
                   alt="Care N Cure logo"
                   width={36}
                   height={36}
@@ -80,8 +80,9 @@ export function Footer() {
               {[
                 { label: 'Nedlands', href: '/locations/nedlands' },
                 { label: 'Subiaco', href: '/locations/subiaco' },
-                { label: 'Joondalup', href: '/locations/joondalup' },
-                { label: 'Applecross', href: '/locations/applecross' },
+                { label: 'City of Gosnells', href: '/locations/gosnells' },
+                { label: 'City of Armadale', href: '/locations/armadale' },
+                { label: 'Rockingham', href: '/locations/rockingham' },
 
                 { label: 'Fremantle', href: '/locations/fremantle' },
                 { label: 'South Perth', href: '/locations/south-perth' },
@@ -171,7 +172,7 @@ export function Footer() {
             </div>
           </div>
           <p className="text-white/30 text-xs text-center mt-4">
-            Care N Cure is a registered nursing practice. Our nurses are AHPRA registered. 
+            Care N Cure is a registered nursing practice. Our nurses are fully registered. 
             This website does not provide medical advice — please consult your doctor for medical concerns.
           </p>
         </div>

@@ -7,7 +7,7 @@ import { Building2, Stethoscope, Landmark, HeartHandshake } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Home Nursing Service Areas Perth | The Nurse Who Knows You',
-  description: 'Our Registered Nurses provide in-home clinical care across Perth suburbs, including Nedlands, Subiaco, Cottesloe, and Joondalup.',
+  description: 'Our Registered Nurses provide in-home clinical care across Perth suburbs, including Nedlands, Subiaco, Cottesloe, Gosnells, Armadale, and Rockingham.',
   alternates: { canonical: 'https://carencure.com.au/locations' },
 }
 
@@ -15,11 +15,12 @@ const suburbsList = [
   { name: 'Nedlands', href: '/locations/nedlands', description: 'Clinical nursing recovery care near Sir Charles Gairdner Hospital and Hollywood Private.', distance: 'Western Suburbs' },
   { name: 'Subiaco', href: '/locations/subiaco', description: 'Sterile wound dressings and medication management for Subiaco and West Perth residents.', distance: 'Western Suburbs' },
   { name: 'Cottesloe', href: '/locations/cottesloe', description: 'Nursing-led companion care and mobility support for seniors in beachside Cottesloe.', distance: 'Western Suburbs' },
-  { name: 'Joondalup', href: '/locations/joondalup', description: 'Supporting hospital transitions and complex care plans near Joondalup Health Campus.', distance: 'Perth North' },
+  { name: 'City of Gosnells', href: '/locations/gosnells', description: 'In-home nursing care, wound management, and medication support across the City of Gosnells.', distance: 'Perth South-East' },
+  { name: 'City of Armadale', href: '/locations/armadale', description: 'Registered nurse visits for post-hospital recovery and chronic condition management in Armadale.', distance: 'Perth South-East' },
+  { name: 'Rockingham', href: '/locations/rockingham', description: 'Professional home nursing, wound care, and medication management across the Rockingham area.', distance: 'Perth South' },
   { name: 'Applecross', href: '/locations/applecross', description: 'In-home private nursing visits and post-surgical recovery around Melville and Applecross.', distance: 'Perth South' },
   { name: 'Mount Lawley', href: '/locations/mount-lawley', description: 'Registered nurse visits, blood pressure monitoring, and injection administration.', distance: 'Inner North' },
   { name: 'Fremantle', href: '/locations/fremantle', description: 'Post-hospital transitions and chronic condition management for the Fremantle region.', distance: 'Fremantle Area' },
-  { name: 'Midland', href: '/locations/midland', description: 'Clinical nursing visits, skin tear repair, and complex Webster-pack setups in Midland.', distance: 'Perth East' },
   { name: 'South Perth', href: '/locations/south-perth', description: 'Companion care, respite nursing, and active medication reconciliation in South Perth.', distance: 'Inner South' },
 ]
 
@@ -27,7 +28,7 @@ const hospitalPartners = [
   { name: 'Fiona Stanley Hospital', location: 'Murdoch', icon: Building2, desc: 'Coordinating safe discharges for south metro surgical and medical patients.' },
   { name: 'Sir Charles Gairdner Hospital', location: 'Nedlands', icon: Stethoscope, desc: 'Liaising with western suburbs discharge teams for orthopaedic and cardiac care.' },
   { name: 'Royal Perth Hospital', location: 'Perth CBD', icon: Landmark, desc: 'Transition support for central and eastern Perth post-surgical recovery.' },
-  { name: 'Joondalup Health Campus', location: 'Joondalup', icon: HeartHandshake, desc: 'Home visits and wound care for discharged northern corridor patients.' },
+  { name: 'Rockingham General Hospital', location: 'Rockingham', icon: HeartHandshake, desc: 'Home visits and wound care for discharged southern corridor patients.' },
 ]
 
 export default function LocationsPage() {

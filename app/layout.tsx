@@ -20,7 +20,6 @@ export const metadata: Metadata = {
     'Care N Cure Perth',
     'The Nurse Who Knows You',
     'in-home nursing Perth WA',
-    'AHPRA registered nurse Perth',
   ],
   authors: [
     { name: 'Jinu Maecheril Sukumaran, RN' },
@@ -62,11 +61,11 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: './logo.png', sizes: '32x32', type: 'image/png' },
-      { url: './logo.png', sizes: '192x192', type: 'image/png' },
+      { url: '/logo.png', sizes: '32x32', type: 'image/png' },
+      { url: '/logo.png', sizes: '192x192', type: 'image/png' },
     ],
-    shortcut: './logo.png',
-    apple: './logo.png',
+    shortcut: '/logo.png',
+    apple: '/logo.png',
   },
   alternates: {
     canonical: 'https://carencure.com.au',

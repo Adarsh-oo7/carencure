@@ -40,13 +40,13 @@ const homeFaqs = [
     id: 'faq-what-private-nurse',
     question: 'What is a private nurse at home?',
     answer:
-      'A private nurse at home is an AHPRA-registered nurse who visits you in your own home to provide clinical nursing care. This includes post-surgical wound care, medication administration, health monitoring, and supporting recovery after a hospital stay. It is different from a support worker or carer — a registered nurse has university-level clinical training and is licensed by AHPRA.',
+      'A private nurse at home is a registered nurse who visits you in your own home to provide clinical nursing care. This includes post-surgical wound care, medication administration, health monitoring, and supporting recovery after a hospital stay. It is different from a support worker or carer — a registered nurse has university-level clinical training and is fully licensed to perform clinical duties.',
   },
   {
-    id: 'faq-ahpra',
-    question: 'Are your nurses AHPRA registered?',
+    id: 'faq-registration',
+    question: 'Are your nurses fully registered?',
     answer:
-      'Yes. Every nurse at Care N Cure is AHPRA registered. Our founders, Jinu and Zuhair, are both registered nurses with 10+ years of clinical experience. AHPRA registration means a nurse has completed an accredited nursing degree, passed national standards, and is subject to ongoing professional regulation.',
+      'Yes. Every nurse at Care N Cure is a fully registered nurse. Our founders, Jinu and Zuhair, are both registered nurses with 10+ years of clinical experience. Registration means a nurse has completed an accredited nursing degree, passed national standards, and is subject to ongoing professional regulation.',
   },
   {
     id: 'faq-how-quickly',
@@ -58,7 +58,7 @@ const homeFaqs = [
     id: 'faq-suburb',
     question: 'Do you service my Perth suburb?',
     answer:
-      'We cover Perth metro and surrounding areas including Nedlands, Subiaco, Joondalup, Applecross, Mount Lawley, Fremantle, South Perth, Cottesloe, Midland, and many more. If you are unsure whether we cover your area, please call us and we will let you know.',
+      'We cover Perth metro and surrounding areas including Nedlands, Subiaco, Applecross, Mount Lawley, Fremantle, South Perth, Cottesloe, City of Gosnells, City of Armadale, Rockingham, and many more. If you are unsure whether we cover your area, please call us and we will let you know.',
   },
   {
     id: 'faq-cost',

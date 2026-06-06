@@ -35,7 +35,7 @@ export function DedicatedNurseSection() {
         <div className="relative w-full h-72 rounded-3xl overflow-hidden mb-12 shadow-lg">
           <Image
             src="/nurse-home-visit.jpg"
-            alt="AHPRA registered nurse conducting a home health assessment and coordinating services for an elderly client — The Nurse Who Knows You model"
+            alt="Registered nurse conducting a home health assessment and coordinating services for an elderly client — The Nurse Who Knows You model"
             fill
             sizes="100vw"
             style={{ objectFit: 'cover', objectPosition: 'center 35%' }}
@@ -100,7 +100,7 @@ export function DedicatedNurseSection() {
               </ul>
             </div>
             <div className="mt-8 pt-6 border-t border-slate-100 text-xs text-slate-400 font-medium">
-              AHPRA-registered coordination & clinical oversight.
+              Registered nurse coordination & clinical oversight.
             </div>
           </div>
         </div>

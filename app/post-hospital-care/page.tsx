@@ -7,7 +7,7 @@ import { ClipboardCheck, Heart, Shield, RefreshCw, CheckCircle } from 'lucide-re
 
 export const metadata: Metadata = {
   title: 'In-Home Post-Hospital Recovery Care Perth | The Nurse Who Knows You',
-  description: 'AHPRA registered nurses helping patients transition safely from hospital to home in Perth. Post-surgical wound care, vitals, medication checks.',
+  description: 'Registered nurses helping patients transition safely from hospital to home in Perth. Post-surgical wound care, vitals, medication checks.',
   alternates: { canonical: 'https://carencure.com.au/post-hospital-care' },
 }
 

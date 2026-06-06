@@ -10,14 +10,7 @@ const fundingCards = [
     body: 'For older Australians needing ongoing support at home. Your HCP funds nursing visits, wound care, and clinical oversight. We work with self-managed and provider-managed packages.',
     badge: 'My Aged Care · myagedcare.gov.au',
   },
-  {
-    id: 'funded-ndis-dva',
-    icon: Users,
-    title: 'NDIS & DVA Nursing',
-    subtitle: 'Disability & Veterans Support',
-    body: 'Qualified clinical care for NDIS participants (self-managed or plan-managed) and veterans under the Department of Veterans\' Affairs (DVA) Community Nursing program.',
-    badge: 'NDIS & DVA Registered Support',
-  },
+
   {
     id: 'funded-transition',
     icon: Activity,

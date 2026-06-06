@@ -7,7 +7,7 @@ import { Bandage, ShieldAlert, Award, Stethoscope, CheckCircle } from 'lucide-re
 
 export const metadata: Metadata = {
   title: 'In-Home Wound Care & Dressing Perth | The Nurse Who Knows You',
-  description: 'Professional wound care at home by AHPRA registered nurses in Perth. Surgical dressings, skin tears, ulcers, drain management, and infection prevention.',
+  description: 'Professional wound care at home by registered nurses in Perth. Surgical dressings, skin tears, ulcers, drain management, and infection prevention.',
   alternates: { canonical: 'https://carencure.com.au/wound-care' },
 }
 
@@ -31,7 +31,7 @@ export default function WoundCare() {
     <>
       <ServicePageSchema
         serviceName="Wound Care and Dressing"
-        description="Professional wound assessment and sterile dressing by AHPRA registered nurses in Perth, WA. Surgical wounds, ulcers, skin tears, and active infection prevention."
+        description="Professional wound assessment and sterile dressing by registered nurses in Perth, WA. Surgical wounds, ulcers, skin tears, and active infection prevention."
         url="/wound-care"
       />
       <FAQPageSchema faqs={faqs} />
@@ -129,7 +129,7 @@ export default function WoundCare() {
               <div className="sticky top-24">
                 <ContactForm
                   title="Enquire About Wound Care"
-                  subtitle="Please fill out the form below. An AHPRA registered nurse will contact you to discuss your wound care needs."
+                  subtitle="Please fill out the form below. A registered nurse will contact you to discuss your wound care needs."
                   defaultService="Wound Care at Home"
                 />
               </div>

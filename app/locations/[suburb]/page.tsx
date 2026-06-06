@@ -37,12 +37,26 @@ const suburbsMap: Record<string, SuburbData> = {
     nearestHospital: 'Sir Charles Gairdner Hospital & Hollywood Private',
     description: 'Delivering companion care, medication management, and mobility support for seniors in Cottesloe, Swanbourne, and Peppermint Grove.',
   },
-  joondalup: {
-    id: 'joondalup',
-    name: 'Joondalup',
-    region: 'Perth North',
-    nearestHospital: 'Joondalup Health Campus',
-    description: 'Supporting northern corridor families in Joondalup, Connolly, and Edgewater with qualified post-hospital care and custom nursing assessments.',
+  gosnells: {
+    id: 'gosnells',
+    name: 'City of Gosnells',
+    region: 'Perth South-East',
+    nearestHospital: 'Armadale Kelmscott Memorial Hospital',
+    description: 'Providing in-home nursing care, wound management, medication support, and post-hospital recovery across the City of Gosnells, including Gosnells, Maddington, Kenwick, and Thornlie.',
+  },
+  armadale: {
+    id: 'armadale',
+    name: 'City of Armadale',
+    region: 'Perth South-East',
+    nearestHospital: 'Armadale Kelmscott Memorial Hospital',
+    description: 'Registered nurse home visits for post-surgical recovery, wound care, and chronic condition management across the City of Armadale, including Armadale, Kelmscott, and Byford.',
+  },
+  rockingham: {
+    id: 'rockingham',
+    name: 'Rockingham',
+    region: 'Perth South',
+    nearestHospital: 'Rockingham General Hospital',
+    description: 'Professional in-home nursing care, sterile wound dressings, and medication management across Rockingham, Baldivis, and the surrounding southern corridor.',
   },
   applecross: {
     id: 'applecross',
@@ -64,13 +78,6 @@ const suburbsMap: Record<string, SuburbData> = {
     region: 'Fremantle Area',
     nearestHospital: 'Fiona Stanley Hospital & Fremantle Hospital',
     description: 'Post-hospital recovery care, wound management, and nursing-led respite care in Fremantle, East Fremantle, and South Fremantle.',
-  },
-  midland: {
-    id: 'midland',
-    name: 'Midland',
-    region: 'Perth East',
-    nearestHospital: 'St John of God Midland Public Hospital',
-    description: 'Clinical nursing visits, skin tear repair, medication reconciliation, and companion care in Midland, Guilderton, and Bellevue.',
   },
   'south-perth': {
     id: 'south-perth',
@@ -160,7 +167,7 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
                   <div className="flex gap-3 items-start">
                     <CheckCircle2 className="w-5 h-5 text-teal-accent flex-shrink-0 mt-1" />
                     <div>
-                      <h4 className="text-navy font-bold text-sm">AHPRA Registered Nurses Only</h4>
+                      <h4 className="text-navy font-bold text-sm">Registered Nurses Only</h4>
                       <p className="text-body text-xs mt-1">We do not use support workers or assistants for clinical tasks.</p>
                     </div>
                   </div>

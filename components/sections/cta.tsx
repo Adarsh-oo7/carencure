@@ -136,7 +136,7 @@ export function CTASection() {
           </div>
 
           <p className="mt-8 text-xs text-white/40">
-            AHPRA Registered Nurse Coordinators · Customised Care Plans · Compassionate In-Home Care
+            Registered Nurse Coordinators · Customised Care Plans · Compassionate In-Home Care
           </p>
         </div>
 

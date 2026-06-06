@@ -75,7 +75,7 @@ export function WhySection() {
               </ul>
             </div>
             <div className="mt-8 pt-4 border-t border-navy-light text-xs text-teal-accent/80 font-semibold tracking-wider uppercase">
-              The Nurse Who Knows You Promise
+              The Nurse Who Knows You .
             </div>
           </div>
         </div>

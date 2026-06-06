@@ -7,14 +7,14 @@ import { Activity, ShieldCheck, HeartPulse, UserCheck, CheckCircle } from 'lucid
 
 export const metadata: Metadata = {
   title: 'Private Nursing at Home Perth | The Nurse Who Knows You',
-  description: 'In-home private nursing by AHPRA registered nurses in Perth. Customised nursing assessments, chronic illness support, respite, and long-term care.',
+  description: 'In-home private nursing by registered nurses in Perth. Customised nursing assessments, chronic illness support, respite, and long-term care.',
   alternates: { canonical: 'https://carencure.com.au/private-nursing' },
 }
 
 const faqs = [
   {
     question: 'How is private nursing different from general care support?',
-    answer: 'General care support is provided by support workers or assistants in nursing (AINs) who help with non-clinical tasks (showering, cleaning). Private nursing is provided strictly by AHPRA-licensed Registered Nurses (RNs) who can perform clinical duties like administering injections, wound management, catheter care, and vital signs monitoring.',
+    answer: 'General care support is provided by support workers or assistants in nursing (AINs) who help with non-clinical tasks (showering, cleaning). Private nursing is provided strictly by licensed Registered Nurses (RNs) who can perform clinical duties like administering injections, wound management, catheter care, and vital signs monitoring.',
   },
   {
     question: 'Can I choose the time of the nurse visits?',

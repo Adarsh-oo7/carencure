@@ -6,7 +6,7 @@ import { FAQSection } from '@/components/sections/faq-section'
 
 export const metadata: Metadata = {
   title: 'Frequently Asked Questions | The Nurse Who Knows You',
-  description: 'Find honest, clear answers to common questions about private home nursing in Perth. AHPRA, costs, areas served, and hospital discharges.',
+  description: 'Find honest, clear answers to common questions about private home nursing in Perth. Costs, areas served, and hospital discharges.',
   alternates: { canonical: 'https://carencure.com.au/faq' },
 }
 
@@ -14,12 +14,12 @@ const allFaqs = [
   {
     id: 'faq-1',
     question: 'What is a private nurse at home?',
-    answer: 'A private nurse at home is an AHPRA-registered nurse who visits you in your own residence to deliver clinical nursing care. This includes wound dressings, injections, medication management, and health tracking. It is different from support work or personal caring — registered nurses have university-level medical training, clinical reasoning skills, and are fully licensed to perform medical duties.',
+    answer: 'A private nurse at home is a registered nurse who visits you in your own residence to deliver clinical nursing care. This includes wound dressings, injections, medication management, and health tracking. It is different from support work or personal caring — registered nurses have university-level medical training, clinical reasoning skills, and are fully licensed to perform medical duties.',
   },
   {
     id: 'faq-2',
-    question: 'Are your nurses AHPRA registered?',
-    answer: 'Yes. Every nurse at our practice is AHPRA registered. Our founders, Jinu and Zuhair, are registered nurses with over a decade of clinical experience in Perth hospital and community settings. AHPRA registration ensures the practitioner is subject to strict professional and national standards.',
+    question: 'Are your nurses fully registered?',
+    answer: 'Yes. Every nurse at our practice is a fully registered nurse. Our founders, Jinu and Zuhair, are registered nurses with over a decade of clinical experience in Perth hospital and community settings. Registration ensures the practitioner is subject to strict professional and national standards.',
   },
   {
     id: 'faq-3',
@@ -29,7 +29,7 @@ const allFaqs = [
   {
     id: 'faq-4',
     question: 'What Perth suburbs do you service?',
-    answer: 'We service the entire Perth metropolitan area, including Nedlands, Subiaco, Cottesloe, Applecross, South Perth, Joondalup, Mount Lawley, Midland, Fremantle, and all surrounding areas. If you are unsure whether we cover your location, please call us directly.',
+    answer: 'We service the entire Perth metropolitan area, including Nedlands, Subiaco, Cottesloe, Applecross, South Perth, City of Gosnells, City of Armadale, Rockingham, Mount Lawley, Fremantle, and all surrounding areas. If you are unsure whether we cover your location, please call us directly.',
   },
   {
     id: 'faq-5',

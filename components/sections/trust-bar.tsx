@@ -3,13 +3,6 @@ import { CheckCircle2 } from 'lucide-react'
 const trustItems = [
   {
     icon: CheckCircle2,
-    label: 'AHPRA Registered Nurses',
-    sub: 'All nurses AHPRA verified',
-    id: 'trust-ahpra',
-  },
-
-  {
-    icon: CheckCircle2,
     label: 'Home Care Package Provider',
     sub: 'Approved HCP provider',
     id: 'trust-hcp',
@@ -17,7 +10,7 @@ const trustItems = [
   {
     icon: CheckCircle2,
     label: 'Your Dedicated Nurse™ Model',
-    sub: 'One nurse Coordinator, assigned to you',
+    sub: 'One nurse coordinator, assigned to you',
     id: 'trust-dedicated',
   },
   {
