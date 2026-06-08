@@ -19,6 +19,19 @@ const trustItems = [
     sub: 'Local community nursing',
     id: 'trust-perth',
   },
+  {
+    icon: CheckCircle2,
+    label: 'Registered Nursing from $100',
+    sub: 'Pricing tailored case by case',
+    id: 'trust-pricing',
+  },
+  {
+    icon: CheckCircle2,
+    label: 'Lower-Cost Home Care Provider',
+    sub: 'One of Australia’s more affordable home care options',
+    id: 'trust-cost',
+  },
+
 ]
 
 export function TrustBar() {

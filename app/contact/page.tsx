@@ -88,7 +88,7 @@ export default function ContactPage() {
                 </div>
 
                 {/* Opening Hours */}
-                <div className="flex gap-4">
+                {/* <div className="flex gap-4">
                   <div className="w-12 h-12 bg-surface rounded-xl flex items-center justify-center text-teal-accent flex-shrink-0">
                     <Clock className="w-6 h-6" />
                   </div>
@@ -99,7 +99,7 @@ export default function ContactPage() {
                     <p className="text-navy font-semibold text-sm">Saturday: 9:00 AM – 1:00 PM</p>
                     <p className="text-muted-brand text-xs italic">Closed Sundays & Public Holidays</p>
                   </div>
-                </div>
+                </div> */}
 
               </div>
 

@@ -65,8 +65,11 @@ export default function AboutPage() {
                 Jinu and Zuhair are registered nurses who spent over a decade working across Perth’s hospital network. Time and again, they watched the same thing unfold — Australians discharged from Sir Charles Gairdner, Royal Perth, Fiona Stanley, and Joondalup Health Campus, sent home with complex needs and no reliable nursing support waiting for them.
               </p>
               <p className="text-body leading-relaxed">
-                Families did everything right — they searched online, called agencies, asked their GPs — and still ended up with support workers who were caring and well-meaning, but not clinically qualified to manage what their loved one actually needed. The gap between hospital and home was real. And it was leaving too many Australians without proper care during their most vulnerable moments.
-              </p>
+                Zuhair
+                Registered Nurse (RN)
+                Zuhair is a Registered Nurse based in Perth, Western Australia, with more than 15 years of clinical experience in critical care nursing and the management of complex client needs. Throughout his career, he has been committed to supporting Australians during some of their most challenging and vulnerable times.
+                His expertise includes medication management, chronic disease monitoring, and post-hospital recovery care. As co-founder of The Nurse Who Knows You, Zuhair is passionate about delivering consistent, compassionate, and dignified nursing care in the comfort of clients' homes. He believes everyone deserves access to high-quality healthcare that is tailored to their individual needs and circumstances.
+                Registered Nurse · 15+ Years of Clinical Experience              </p>
               <p className="text-body leading-relaxed">
                 In March 2026, Jinu and Zuhair registered Care N Cure with ASIC to close that gap. Not an agency. Not a directory. A proper nursing practice operating as The Nurse Who Knows You — where registered nurses take personal responsibility for the clinical care of every client they are assigned.
               </p>
@@ -142,7 +145,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-      
+
 
       {/* ASIC Registration */}
       {/* <section className="py-12 bg-white">
