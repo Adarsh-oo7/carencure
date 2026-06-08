@@ -68,6 +68,12 @@ const allFaqs = [
     question: 'What clinical tasks can your registered nurses perform?',
     answer: 'Our Registered Nurses can perform a wide range of clinical duties, including post-surgical wound care, complex dressing changes, staple and suture removal, drain management, subcutaneous/intramuscular injections, insulin administration, catheter care, vital signs tracking, and complete medication reconciliation.',
   },
+  {
+    id: 'faq-11',
+    question: 'Did you know you can change aged care providers?',
+    answer:
+      "Many people don't realise that if their current provider isn't the right fit, they have the right to choose a different one. We often speak with families who feel stuck, believing that changing providers will be difficult, stressful, or mean losing their funding. In reality, the process is often much simpler than people expect.",
+  }
 
 ]
 
