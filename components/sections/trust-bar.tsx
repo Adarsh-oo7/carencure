@@ -3,8 +3,8 @@ import { CheckCircle2 } from 'lucide-react'
 const trustItems = [
   {
     icon: CheckCircle2,
-    label: 'Home Care Package Provider',
-    sub: 'Approved HCP provider',
+    label: 'Support At Home Packages (SAH)',
+    sub: 'Guidance from assessment to activation',
     id: 'trust-hcp',
   },
   {
