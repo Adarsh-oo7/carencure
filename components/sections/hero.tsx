@@ -36,7 +36,7 @@ export function HeroSection({
         aria-hidden="true"
       >
         <Image
-          src="/hero-bg.jpg"
+          src="/herobg.jpeg"
           alt="Registered nurse providing compassionate in-home care to an elderly patient in Perth, WA — The Nurse Who Knows You"
           fill
           priority
@@ -54,7 +54,7 @@ export function HeroSection({
           }}
         />
 
-        {/* Desktop overlay: strong left-to-right fade so text is crisp, photo shows on right */}
+        {/* Desktop overlay */}
         <div
           className="absolute inset-0 hidden sm:block"
           style={{
@@ -64,7 +64,7 @@ export function HeroSection({
         />
       </div>
 
-      {/* Subtle grid texture over dark zone only */}
+      {/* Subtle grid texture */}
       <div
         className="absolute inset-0 opacity-[0.04] pointer-events-none"
         style={{
@@ -77,6 +77,8 @@ export function HeroSection({
 
       {/* ── Content ── */}
       <div className="relative section-container pt-20 pb-24 sm:pt-36 sm:pb-48">
+
+        {/* Text content — constrained to 640px */}
         <div style={{ maxWidth: '640px' }} className="animate-fade-in">
           <div className="h-2 sm:h-14" />
 
@@ -105,13 +107,9 @@ export function HeroSection({
             {headline}
           </h1>
 
-          {/* Mobile: single punchy line; Desktop: full subheadline */}
           <p
             className="block sm:hidden mb-6 text-white/90 leading-relaxed"
-            style={{
-              fontSize: '1rem',
-              textShadow: '0 1px 12px rgba(0,0,0,0.6)',
-            }}
+            style={{ fontSize: '1rem', textShadow: '0 1px 12px rgba(0,0,0,0.6)' }}
             itemProp="description"
           >
             Because the people you love deserve to stay home — safe, properly cared for, and with a nurse who actually knows them.
@@ -128,89 +126,147 @@ export function HeroSection({
           >
             {subheadline}
           </div>
+        </div>
+        {/* End constrained text block */}
 
-          <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-4">
-            {ctaPrimary && (
-              ctaPrimary.isPhone ? (
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    window.dispatchEvent(new CustomEvent('open-phone-modal'));
-                  }}
-                  className="btn-phone cursor-pointer"
-                  id="hero-call-cta"
-                  aria-label={ctaPrimary.text}
-                >
-                  <Phone className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
-                  {ctaPrimary.text}
-                </button>
-              ) : (
-                <Link
-                  href={ctaPrimary.href}
-                  className="btn-phone"
-                  id="hero-primary-cta"
-                  aria-label={ctaPrimary.text}
-                >
-                  {ctaPrimary.text}
-                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
-                </Link>
-              )
-            )}
-            {ctaSecondary && (
-              ctaSecondary.isPhone ? (
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    window.dispatchEvent(new CustomEvent('open-phone-modal'));
-                  }}
-                  className="btn-outline-white cursor-pointer animate-fade-in"
-                  id="hero-secondary-cta"
-                  aria-label={ctaSecondary.text}
-                >
-                  <Phone className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
-                  {ctaSecondary.text}
-                </button>
-              ) : (
-                <Link
-                  href={ctaSecondary.href}
-                  className="btn-outline-white"
-                  id="hero-secondary-cta"
-                  aria-label={ctaSecondary.text}
-                >
-                  {ctaSecondary.text}
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-              )
-            )}
-          </div>
+        {/* CTA row — full width, stacks vertically below 900px, horizontal above */}
+        <div
+          className="flex flex-col w-full mt-0 gap-6"
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+          }}
+        >
+          <style>{`
+            @media (min-width: 900px) {
+              .cta-row {
+                flex-direction: row !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+              }
+              .logo-block {
+                align-items: flex-end !important;
+              }
+            }
+          `}</style>
 
-          {/* Trust / value props strip */}
-          <div className="mt-5 sm:mt-8 flex flex-row flex-wrap gap-y-2 gap-x-4 sm:gap-x-6" role="list" aria-label="Key credentials">
-            {[
-              '✓ Registered Nurses',
-              '✓ Visits within 24–48 hrs',
-            ].map((item) => (
-              <span
-                key={item}
-                role="listitem"
-                className="text-xs sm:text-sm font-medium"
-                style={{ color: 'rgba(255,255,255,0.9)', textShadow: '0 1px 8px rgba(0,0,0,0.6)' }}
-              >
-                {item}
-              </span>
-            ))}
-          </div>
-
-          {/* Trust ribbon — hidden on very small screens to avoid clutter */}
-          <div className="hidden sm:flex mt-8 items-center gap-3 flex-wrap">
-            <div
-              className="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold"
-              style={{ background: 'rgba(197,238,228,0.15)', border: '1px solid rgba(197,238,228,0.3)', color: 'rgba(197,238,228,0.95)' }}
-            >
-              🏠 Home Care Package Provider
+          <div
+            className="cta-row flex w-full gap-6"
+            style={{ flexDirection: 'column' }}
+          >
+            {/* Left: buttons */}
+            <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-4">
+              {ctaPrimary && (
+                ctaPrimary.isPhone ? (
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      window.dispatchEvent(new CustomEvent('open-phone-modal'));
+                    }}
+                    className="btn-phone cursor-pointer"
+                    id="hero-call-cta"
+                    aria-label={ctaPrimary.text}
+                  >
+                    <Phone className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
+                    {ctaPrimary.text}
+                  </button>
+                ) : (
+                  <Link
+                    href={ctaPrimary.href}
+                    className="btn-phone"
+                    id="hero-primary-cta"
+                    aria-label={ctaPrimary.text}
+                  >
+                    {ctaPrimary.text}
+                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+                  </Link>
+                )
+              )}
+              {ctaSecondary && (
+                ctaSecondary.isPhone ? (
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      window.dispatchEvent(new CustomEvent('open-phone-modal'));
+                    }}
+                    className="btn-outline-white cursor-pointer animate-fade-in"
+                    id="hero-secondary-cta"
+                    aria-label={ctaSecondary.text}
+                  >
+                    <Phone className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
+                    {ctaSecondary.text}
+                  </button>
+                ) : (
+                  <Link
+                    href={ctaSecondary.href}
+                    className="btn-outline-white"
+                    id="hero-secondary-cta"
+                    aria-label={ctaSecondary.text}
+                  >
+                    {ctaSecondary.text}
+                    <ArrowRight className="w-5 h-5" />
+                  </Link>
+                )
+              )}
             </div>
+
+            {/* Right: logo + text — below buttons under 900px, far right above 900px */}
+            <div
+              className="logo-block flex flex-col gap-1.5"
+              style={{ alignItems: 'flex-start' }}
+            >
+              <span
+                className="text-xs font-semibold tracking-wide"
+                style={{
+                  color: 'rgba(255,255,255,255)',
+                  lineHeight: 1.35,
+                }}
+              >
+                PARTNERING WITH
+              </span>
+              <Image
+                src="/trilogylogo.png"
+                alt="Trilogy logo"
+                width={120}
+                height={120}
+                style={{
+                  objectFit: 'contain',
+                  filter: 'brightness(0) invert(1)',
+                }}
+              />
+            </div>
+
           </div>
         </div>
+        {/* End CTA row */}
+
+        {/* Trust / value props strip */}
+        <div className="mt-5 sm:mt-8 flex flex-row flex-wrap gap-y-2 gap-x-4 sm:gap-x-6" role="list" aria-label="Key credentials">
+          {[
+            '✓ Registered Nurses',
+            '✓ Visits within 24–48 hrs',
+          ].map((item) => (
+            <span
+              key={item}
+              role="listitem"
+              className="text-xs sm:text-sm font-medium"
+              style={{ color: 'rgba(255,255,255,0.9)', textShadow: '0 1px 8px rgba(0,0,0,0.6)' }}
+            >
+              {item}
+            </span>
+          ))}
+        </div>
+
+        {/* Trust ribbon */}
+        <div className="hidden sm:flex mt-8 items-center gap-3 flex-wrap">
+          <div
+            className="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold"
+            style={{ background: 'rgba(197,238,228,0.15)', border: '1px solid rgba(197,238,228,0.3)', color: 'rgba(197,238,228,0.95)' }}
+          >
+            🏠 Home Care Package Provider
+          </div>
+        </div>
+
       </div>
 
       {/* Bottom wave */}
