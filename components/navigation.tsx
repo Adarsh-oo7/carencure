@@ -5,8 +5,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Menu, X, Phone, ChevronDown } from 'lucide-react'
 
-const PHONE_NUMBER = '0481 748 516'
-const PHONE_HREF = 'tel:+61481748516'
+const PHONE_NUMBER = '0403 760 159'
+const PHONE_HREF = 'tel:+61403760159'
 
 const serviceLinks = [
   { label: 'Post-Hospital Recovery Care', href: '/post-hospital-care' },
@@ -100,10 +100,10 @@ export function Navigation() {
           >
             <Phone className="w-3.5 h-3.5 flex-shrink-0 text-teal-accent" />
             <span className="sm:hidden text-xs leading-normal font-medium">
-              Call: <strong>0481 748 516</strong>, <strong>0412 593 102</strong> or <strong>0403 760 159</strong>
+              Call: <strong>0403 760 159</strong>, <strong>0481 748 516</strong> or <strong>0412 593 102</strong>
             </span>
             <span className="hidden sm:inline text-sm leading-normal font-medium">
-              Perth&apos;s Registered Nursing Team — Call: <strong>0481 748 516</strong>, <strong>0412 593 102</strong> or <strong>0403 760 159</strong>
+              Perth&apos;s Registered Nursing Team — Call: <strong>0403 760 159</strong>, <strong>0481 748 516</strong> or <strong>0412 593 102</strong>
             </span>
           </button>
         </div>
@@ -380,6 +380,26 @@ export function Navigation() {
 
             <div className="flex flex-col gap-3">
               <a
+                href="tel:+61403760159"
+                className="flex items-center justify-between p-4 rounded-xl border border-slate-200 hover:border-[#4DBBA5] hover:bg-slate-50 transition-all text-left cursor-pointer"
+                onClick={() => setPhoneModalOpen(false)}
+                style={{ textDecoration: 'none' }}
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-teal-accent/10 text-teal-accent flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-5 h-5 text-[#4DBBA5]" />
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="font-bold text-lg leading-tight text-slate-900" style={{ color: '#0D2B45' }}>0403 760 159</span>
+                    <span className="text-slate-500 text-xs mt-0.5 font-medium">Primary nursing line</span>
+                  </div>
+                </div>
+                <span className="w-8 h-8 rounded-full bg-[#4DBBA5]/10 text-[#4DBBA5] flex items-center justify-center font-bold text-sm hover:bg-[#4DBBA5] hover:text-white transition-colors">
+                  ➔
+                </span>
+              </a>
+
+              <a
                 href="tel:+61481748516"
                 className="flex items-center justify-between p-4 rounded-xl border border-slate-200 hover:border-[#4DBBA5] hover:bg-slate-50 transition-all text-left cursor-pointer"
                 onClick={() => setPhoneModalOpen(false)}
@@ -391,7 +411,7 @@ export function Navigation() {
                   </div>
                   <div className="flex flex-col">
                     <span className="font-bold text-lg leading-tight text-slate-900" style={{ color: '#0D2B45' }}>0481 748 516</span>
-                    <span className="text-slate-500 text-xs mt-0.5 font-medium">Primary nursing line</span>
+                    <span className="text-slate-500 text-xs mt-0.5 font-medium">Alternate nursing line</span>
                   </div>
                 </div>
                 <span className="w-8 h-8 rounded-full bg-[#4DBBA5]/10 text-[#4DBBA5] flex items-center justify-center font-bold text-sm hover:bg-[#4DBBA5] hover:text-white transition-colors">
@@ -411,26 +431,6 @@ export function Navigation() {
                   </div>
                   <div className="flex flex-col">
                     <span className="font-bold text-lg leading-tight text-slate-900" style={{ color: '#0D2B45' }}>0412 593 102</span>
-                    <span className="text-slate-500 text-xs mt-0.5 font-medium">Alternate nursing line</span>
-                  </div>
-                </div>
-                <span className="w-8 h-8 rounded-full bg-[#4DBBA5]/10 text-[#4DBBA5] flex items-center justify-center font-bold text-sm hover:bg-[#4DBBA5] hover:text-white transition-colors">
-                  ➔
-                </span>
-              </a>
-
-              <a
-                href="tel:+61403760159"
-                className="flex items-center justify-between p-4 rounded-xl border border-slate-200 hover:border-[#4DBBA5] hover:bg-slate-50 transition-all text-left cursor-pointer"
-                onClick={() => setPhoneModalOpen(false)}
-                style={{ textDecoration: 'none' }}
-              >
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-teal-accent/10 text-teal-accent flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-5 h-5 text-[#4DBBA5]" />
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="font-bold text-lg leading-tight text-slate-900" style={{ color: '#0D2B45' }}>0403 760 159</span>
                     <span className="text-slate-500 text-xs mt-0.5 font-medium">Alternate nursing line</span>
                   </div>
                 </div>

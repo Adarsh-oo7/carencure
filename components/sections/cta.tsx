@@ -3,8 +3,8 @@
 import { Phone, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 
-const PHONE_NUMBER = '0481 748 516'
-const PHONE_HREF = 'tel:+61481748516'
+const PHONE_NUMBER = '0403 760 159'
+const PHONE_HREF = 'tel:+61403760159'
 
 export function CTASection() {
   const chooseUsReasons = [

@@ -3,8 +3,8 @@
 import { useState } from 'react'
 import { Phone, Send } from 'lucide-react'
 
-const PHONE_HREF = 'tel:+61481748516'
-const PHONE_NUMBER = '0481 748 516'
+const PHONE_HREF = 'tel:+61403760159'
+const PHONE_NUMBER = '0403 760 159'
 
 const serviceOptions = [
   'Post-Hospital Recovery Care',

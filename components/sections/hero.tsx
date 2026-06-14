@@ -4,8 +4,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Phone, ArrowRight } from 'lucide-react'
 
-const PHONE_NUMBER = '0481 748 516'
-const PHONE_HREF = 'tel:+61481748516'
+const PHONE_NUMBER = '0403 760 159'
+const PHONE_HREF = 'tel:+61403760159'
 
 interface HeroProps {
   headline: string;

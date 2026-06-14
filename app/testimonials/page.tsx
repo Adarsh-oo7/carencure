@@ -110,7 +110,7 @@ export default function QualityFeedbackPage() {
                   <div>
                     <h4 className="text-navy font-bold text-sm">Direct Phone Discussion</h4>
                     <p className="text-body text-xs mt-1">
-                      Call our nursing directors directly on <strong>0481 748 516</strong>, <strong>0412 593 102</strong> or <strong>0403 760 159</strong>. We discuss all feedback personally and resolve matters promptly.
+                      Call our nursing directors directly on <strong>0403 760 159</strong>, <strong>0481 748 516</strong> or <strong>0412 593 102</strong>. We discuss all feedback personally and resolve matters promptly.
                     </p>
                   </div>
                 </div>
