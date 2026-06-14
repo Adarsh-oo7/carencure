@@ -106,14 +106,32 @@ export function Footer() {
             <div className="space-y-4 text-sm">
               <div className="flex items-start gap-2.5">
                 <Phone className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: 'var(--teal-accent)' }} />
-                <div>
-                  <a
-                    href={PHONE_HREF}
-                    className="text-white font-semibold hover:text-teal-200 transition-colors block"
-                  >
-                    {PHONE_NUMBER}
-                  </a>
-                  <span className="text-white/50 text-xs">We answer every call</span>
+                <div className="flex flex-col gap-2">
+                  <div>
+                    <a
+                      href="tel:+61481748516"
+                      className="text-white font-semibold hover:text-teal-200 transition-colors block"
+                    >
+                      0481 748 516 <span className="text-white/50 text-xs font-normal ml-1">(Primary)</span>
+                    </a>
+                  </div>
+                  <div>
+                    <a
+                      href="tel:+61412593102"
+                      className="text-white font-semibold hover:text-teal-200 transition-colors block"
+                    >
+                      0412 593 102 <span className="text-white/50 text-xs font-normal ml-1">(Alternate)</span>
+                    </a>
+                  </div>
+                  <div>
+                    <a
+                      href="tel:+61403760159"
+                      className="text-white font-semibold hover:text-teal-200 transition-colors block"
+                    >
+                      0403 760 159 <span className="text-white/50 text-xs font-normal ml-1">(Alternate)</span>
+                    </a>
+                  </div>
+                  <span className="text-white/50 text-xs mt-1">We answer every call</span>
                 </div>
               </div>
               <div className="flex items-start gap-2.5">
