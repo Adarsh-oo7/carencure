@@ -30,6 +30,30 @@ export function HeroSection({
       itemScope
       itemType="https://schema.org/MedicalBusiness"
     >
+      {/* Absolute-positioned Trilogy partnering logo on mobile only */}
+      <div className="absolute top-4 right-4 sm:hidden flex flex-col items-end gap-1 z-20">
+        <span
+          className="font-semibold tracking-wide text-white/80"
+          style={{
+            fontSize: '9px',
+            lineHeight: 1,
+            textShadow: '0 1px 4px rgba(0,0,0,0.6)',
+          }}
+        >
+          PARTNERING WITH
+        </span>
+        <Image
+          src="/trilogylogo.png"
+          alt="Trilogy logo"
+          width={90}
+          height={30}
+          style={{
+            objectFit: 'contain',
+            filter: 'brightness(0) invert(1)',
+          }}
+        />
+      </div>
+
       {/* ── Background image — full bleed ── */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -158,18 +182,15 @@ export function HeroSection({
             <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-4">
               {ctaPrimary && (
                 ctaPrimary.isPhone ? (
-                  <button
-                    onClick={(e) => {
-                      e.preventDefault();
-                      window.dispatchEvent(new CustomEvent('open-phone-modal'));
-                    }}
-                    className="btn-phone cursor-pointer"
+                  <a
+                    href={PHONE_HREF}
+                    className="btn-phone cursor-pointer inline-flex items-center gap-2"
                     id="hero-call-cta"
                     aria-label={ctaPrimary.text}
                   >
                     <Phone className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
                     {ctaPrimary.text}
-                  </button>
+                  </a>
                 ) : (
                   <Link
                     href={ctaPrimary.href}
@@ -184,18 +205,15 @@ export function HeroSection({
               )}
               {ctaSecondary && (
                 ctaSecondary.isPhone ? (
-                  <button
-                    onClick={(e) => {
-                      e.preventDefault();
-                      window.dispatchEvent(new CustomEvent('open-phone-modal'));
-                    }}
-                    className="btn-outline-white cursor-pointer animate-fade-in"
+                  <a
+                    href={PHONE_HREF}
+                    className="btn-outline-white cursor-pointer animate-fade-in inline-flex items-center gap-2"
                     id="hero-secondary-cta"
                     aria-label={ctaSecondary.text}
                   >
                     <Phone className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
                     {ctaSecondary.text}
-                  </button>
+                  </a>
                 ) : (
                   <Link
                     href={ctaSecondary.href}
@@ -212,7 +230,7 @@ export function HeroSection({
 
             {/* Right: logo + text — below buttons under 900px, far right above 900px */}
             <div
-              className="logo-block flex flex-col gap-1.5"
+              className="logo-block hidden sm:flex flex-col gap-1.5"
               style={{ alignItems: 'flex-start' }}
             >
               <span

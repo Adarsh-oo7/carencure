@@ -98,7 +98,7 @@ export default function HomePage() {
           </div>
         }
         ctaPrimary={{ text: 'Book a Free Consultation', href: '/contact' }}
-        ctaSecondary={{ text: 'Call Us Today', href: 'tel:+61403760159', isPhone: true }}
+        ctaSecondary={{ text: 'Call Us Today', href: 'tel:1300919663', isPhone: true }}
       />
 
       {/* Strong Positioning Statement Callout */}

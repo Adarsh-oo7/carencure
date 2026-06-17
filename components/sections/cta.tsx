@@ -122,17 +122,14 @@ export function CTASection() {
               Book a Free Consultation
               <ArrowRight className="w-5 h-5" />
             </Link>
-            <button
-              onClick={(e) => {
-                e.preventDefault();
-                window.dispatchEvent(new CustomEvent('open-phone-modal'));
-              }}
-              className="btn-outline-white text-lg w-full sm:w-auto justify-center cursor-pointer"
+            <a
+              href={PHONE_HREF}
+              className="btn-outline-white text-lg w-full sm:w-auto justify-center cursor-pointer inline-flex items-center gap-2"
               id="cta-call-btn"
             >
               <Phone className="w-5 h-5 flex-shrink-0" />
               Call Us Today
-            </button>
+            </a>
           </div>
 
           <p className="mt-8 text-xs text-white/40">

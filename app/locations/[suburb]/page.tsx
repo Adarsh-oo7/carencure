@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
+import Link from 'next/link'
 import { PageHeader } from '@/components/page-header'
 import { ContactForm } from '@/components/contact-form'
 import { CTASection } from '@/components/sections/cta'
@@ -219,31 +220,51 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-body">
                   <div className="flex items-center gap-2">
                     <HeartPulse className="w-4 h-4 text-teal-accent flex-shrink-0" />
-                    <span>Post-Hospital Recovery Care</span>
+                    <Link href="/post-hospital-care" className="hover:text-teal-accent transition-colors font-medium">
+                      Post-Hospital Recovery Care
+                    </Link>
                   </div>
                   <div className="flex items-center gap-2">
                     <HeartPulse className="w-4 h-4 text-teal-accent flex-shrink-0" />
-                    <span>Registered Nurses Clinical care Services</span>
+                    <Link href="/private-nursing" className="hover:text-teal-accent transition-colors font-medium">
+                      Private Nursing at Home
+                    </Link>
                   </div>
                   <div className="flex items-center gap-2">
                     <HeartPulse className="w-4 h-4 text-teal-accent flex-shrink-0" />
-                    <span>Sterile Wound Dressings</span>
+                    <Link href="/registered-nurses-clinical-care-services" className="hover:text-teal-accent transition-colors font-medium">
+                      Registered Nurses Clinical care Services
+                    </Link>
                   </div>
                   <div className="flex items-center gap-2">
                     <HeartPulse className="w-4 h-4 text-teal-accent flex-shrink-0" />
-                    <span>Injections & Vitals Monitoring</span>
+                    <Link href="/wound-care" className="hover:text-teal-accent transition-colors font-medium">
+                      Sterile Wound Dressings
+                    </Link>
                   </div>
                   <div className="flex items-center gap-2">
                     <HeartPulse className="w-4 h-4 text-teal-accent flex-shrink-0" />
-                    <span>Medication Management</span>
+                    <Link href="/medication-management" className="hover:text-teal-accent transition-colors font-medium">
+                      Injections & Vitals Monitoring
+                    </Link>
                   </div>
                   <div className="flex items-center gap-2">
                     <HeartPulse className="w-4 h-4 text-teal-accent flex-shrink-0" />
-                    <span>Mobility & Rehab Exercises</span>
+                    <Link href="/medication-management" className="hover:text-teal-accent transition-colors font-medium">
+                      Medication Management
+                    </Link>
                   </div>
                   <div className="flex items-center gap-2">
                     <HeartPulse className="w-4 h-4 text-teal-accent flex-shrink-0" />
-                    <span>Companion & Respite Care</span>
+                    <Link href="/mobility-support" className="hover:text-teal-accent transition-colors font-medium">
+                      Mobility & Rehab Exercises
+                    </Link>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <HeartPulse className="w-4 h-4 text-teal-accent flex-shrink-0" />
+                    <Link href="/companion-care" className="hover:text-teal-accent transition-colors font-medium">
+                      Companion & Respite Care
+                    </Link>
                   </div>
                 </div>
               </div>

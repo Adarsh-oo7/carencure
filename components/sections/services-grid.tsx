@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Bandage, Pill, Heart, Activity, ArrowRight, HeartHandshake, Award } from 'lucide-react'
+import { Bandage, Pill, Heart, Activity, ArrowRight, HeartHandshake, Award, Home } from 'lucide-react'
 
 const services = [
   {
@@ -10,6 +10,15 @@ const services = [
     href: '/registered-nurses-clinical-care-services',
     colour: '#FDE8EF',
     iconColour: '#C0392B',
+  },
+  {
+    id: 'service-private-nursing',
+    icon: Home,
+    title: 'Private Nursing at Home',
+    description: 'A registered nurse, at your home, on your schedule. For adults recovering from illness, surgery, or living with a chronic condition.',
+    href: '/private-nursing',
+    colour: '#EAF6F0',
+    iconColour: '#27AE60',
   },
   {
     id: 'service-support-at-home',

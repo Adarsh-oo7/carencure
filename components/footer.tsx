@@ -52,6 +52,7 @@ export function Footer() {
             <ul className="space-y-2.5">
               {[
                 { label: 'Post-Hospital Recovery Care', href: '/post-hospital-care' },
+                { label: 'Private Nursing at Home', href: '/private-nursing' },
                 { label: 'Registered Nurses Clinical care Services', href: '/registered-nurses-clinical-care-services' },
                 { label: 'Support at home', href: '/support-at-home' },
                 { label: 'Homecare packages', href: '/homecare-packages' },
@@ -114,23 +115,7 @@ export function Footer() {
                       href="tel:1300919663"
                       className="text-white font-semibold hover:text-teal-200 transition-colors block"
                     >
-                      1300 919 663 <span className="text-white/50 text-xs font-normal ml-1">(Primary)</span>
-                    </a>
-                  </div>
-                  <div>
-                    <a
-                      href="tel:+61403760159"
-                      className="text-white font-semibold hover:text-teal-200 transition-colors block"
-                    >
-                      0403 760 159 <span className="text-white/50 text-xs font-normal ml-1">(Alternate)</span>
-                    </a>
-                  </div>
-                  <div>
-                    <a
-                      href="tel:+61481748516"
-                      className="text-white font-semibold hover:text-teal-200 transition-colors block"
-                    >
-                      0481 748 516 <span className="text-white/50 text-xs font-normal ml-1">(Alternate)</span>
+                      1300 919 663
                     </a>
                   </div>
                   <span className="text-white/50 text-xs mt-1">We answer every call</span>
@@ -144,6 +129,12 @@ export function Footer() {
                 >
                   {EMAIL}
                 </a>
+              </div>
+              <div className="flex items-start gap-2.5">
+                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: 'var(--teal-accent)' }} />
+                <span className="text-white/70">
+                  Perth, WA
+                </span>
               </div>
 
               <div className="flex items-start gap-2.5">

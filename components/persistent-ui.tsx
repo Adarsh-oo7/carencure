@@ -9,11 +9,8 @@ export function PersistentUI() {
   return (
     <>
       {/* Floating phone button — mobile only, visible when scrolled */}
-      <button
-        onClick={(e) => {
-          e.preventDefault();
-          window.dispatchEvent(new CustomEvent('open-phone-modal'));
-        }}
+      <a
+        href={PHONE_HREF}
         id="persistent-call-fab"
         className="fixed bottom-6 right-6 z-50 flex items-center gap-2 shadow-2xl font-semibold text-sm md:hidden cursor-pointer"
         style={{
@@ -24,12 +21,16 @@ export function PersistentUI() {
           minHeight: '52px',
           boxShadow: '0 4px 24px rgba(13,43,69,0.35)',
           border: 'none',
+          display: 'inline-flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          textDecoration: 'none',
         }}
         aria-label="Call Us Today"
       >
         <Phone className="w-5 h-5 flex-shrink-0" />
         <span>Call Us Now</span>
-      </button>
+      </a>
     </>
   )
 }

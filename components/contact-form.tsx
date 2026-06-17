@@ -8,6 +8,7 @@ const PHONE_NUMBER = '1300 919 663'
 
 const serviceOptions = [
   'Post-Hospital Recovery Care',
+  'Private Nursing at Home',
   'Registered Nurses Clinical care Services',
   'Support at home',
   'Homecare packages',
@@ -59,16 +60,13 @@ export function ContactForm({
         <h3 className="text-navy font-bold text-xl">Thank you — we&apos;ll be in touch soon</h3>
         <p className="text-body text-sm">
           We aim to respond within 2 hours during business hours. For urgent care needs, please{' '}
-          <button
-            onClick={(e) => {
-              e.preventDefault();
-              window.dispatchEvent(new CustomEvent('open-phone-modal'));
-            }}
-            className="font-semibold text-navy underline cursor-pointer bg-transparent border-none p-0 inline font-inherit"
+          <a
+            href={PHONE_HREF}
+            className="font-semibold text-navy underline cursor-pointer inline font-inherit"
             style={{ minHeight: 'auto' }}
           >
             call us directly
-          </button>.
+          </a>.
         </p>
       </div>
     )
@@ -192,16 +190,13 @@ export function ContactForm({
 
       <p className="text-sm text-center" style={{ color: 'var(--text-muted)' }}>
         Prefer to call?{' '}
-        <button
-          onClick={(e) => {
-            e.preventDefault();
-            window.dispatchEvent(new CustomEvent('open-phone-modal'));
-          }}
-          className="font-semibold text-navy underline cursor-pointer bg-transparent border-none p-0 inline font-inherit"
+        <a
+          href={PHONE_HREF}
+          className="font-semibold text-navy underline cursor-pointer inline font-inherit"
           style={{ minHeight: 'auto' }}
         >
           Call Us directly
-        </button>{' '}
+        </a>{' '}
         — we answer every call.
       </p>
     </form>

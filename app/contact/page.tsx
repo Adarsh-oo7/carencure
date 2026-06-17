@@ -6,7 +6,7 @@ import { MedicalBusinessSchema } from '@/components/schema'
 
 export const metadata: Metadata = {
   title: 'Contact | The Nurse Who Knows You Perth WA',
-  description: 'Speak directly with our registered nurse coordinators in Perth. Call 1300 919 663, 0403 760 159, or 0481 748 516, or send an enquiry today.',
+  description: 'Speak directly with our registered nurse coordinators in Perth. Call 1300 919 663, or send an enquiry today.',
   alternates: { canonical: 'https://carencure.com.au/contact' },
 }
 
@@ -51,13 +51,7 @@ export default function ContactPage() {
                     <p className="text-body text-sm mt-1">Speak directly to a registered nurse.</p>
                     <div className="flex flex-col gap-2 mt-2">
                       <a href="tel:1300919663" className="text-navy font-bold text-lg hover:text-teal-accent transition-colors block">
-                        1300 919 663 <span className="text-xs text-slate-500 font-normal ml-2">(Primary line)</span>
-                      </a>
-                      <a href="tel:+61403760159" className="text-navy font-bold text-lg hover:text-teal-accent transition-colors block">
-                        0403 760 159 <span className="text-xs text-slate-500 font-normal ml-2">(Alternate line)</span>
-                      </a>
-                      <a href="tel:+61481748516" className="text-navy font-bold text-lg hover:text-teal-accent transition-colors block">
-                        0481 748 516 <span className="text-xs text-slate-500 font-normal ml-2">(Alternate line)</span>
+                        1300 919 663
                       </a>
                     </div>
                   </div>
