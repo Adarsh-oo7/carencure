@@ -46,7 +46,7 @@ const homeFaqs = [
     id: 'faq-registration',
     question: 'Are your nurses fully registered?',
     answer:
-      'Yes. Every nurse at Care N Cure is a fully registered nurse. Our founders, Jinu and Zuhair, are both registered nurses with 10+ years of clinical experience. Registration means a nurse has completed an accredited nursing degree, passed national standards, and is subject to ongoing professional regulation.',
+      'Yes. Every nurse at Care N Cure is a fully registered nurse. Our founders, Jinu and Zuhair, are both registered nurses with 10+ and 15+ years of clinical experience respectively. Registration means a nurse has completed an accredited nursing degree, passed national standards, and is subject to ongoing professional regulation.',
   },
   {
     id: 'faq-how-quickly',

@@ -7,7 +7,7 @@ import { Shield, Heart, Users, ClipboardCheck, BadgeCheck } from 'lucide-react'
 export const metadata: Metadata = {
   title: "About The Nurse Who Knows You — Perth's Founder-Led Private Nursing Practice",
   description:
-    'The Nurse Who Knows You was founded by two registered nurses with 10+ years of clinical experience. Based in Perth.',
+    'The Nurse Who Knows You was founded by registered nurses Jinu and Zuhair, bringing over a decade of clinical experience each to Perth home care.',
   alternates: { canonical: 'https://carencure.com.au/about' },
 }
 
@@ -23,6 +23,7 @@ const founders = [
     id: 'about-founder-jinu',
     name: 'Jinu Maecheril Sukumaran',
     credential: 'Registered Nurse (RN)',
+    experience: '10+ years experience',
     bio: [
       'Jinu is a registered nurse with over 10 years of clinical experience across hospital and community settings. He is based in Perth, Western Australia, and has built his career caring for Australians across some of Perth’s busiest health environments.',
       'His clinical background spans acute nursing, post-surgical recovery, wound management, and patient education. He co-founded The Nurse Who Knows You because every Australian deserves a nurse who truly knows them — not a different stranger at every visit.',
@@ -32,9 +33,10 @@ const founders = [
     id: 'about-founder-zuhair',
     name: 'Mohamed Zuhair Parayil Ummer',
     credential: 'Registered Nurse (RN)',
+    experience: '15+ years experience',
     bio: [
-      'Zuhair is a registered nurse with more than 10 years of clinical experience. Based in Perth, Western Australia, he has dedicated his career to supporting Australians through some of their most vulnerable moments.',
-      'Over his career, Zuhair has developed deep expertise in medication management, chronic condition monitoring, and post-hospital recovery. He co-founded The Nurse Who Knows You because he believes every person — regardless of their situation — deserves consistent, dignified care at home.',
+      'Zuhair is a registered nurse with more than 15 years of clinical experience in critical care nursing and the management of complex client needs. Based in Perth, Western Australia, he has dedicated his career to supporting Australians through some of their most challenging and vulnerable times.',
+      'His clinical background and expertise include medication management, chronic disease monitoring, and post-hospital recovery care. As co-founder of The Nurse Who Knows You, Zuhair is passionate about delivering consistent, compassionate, and dignified nursing care in the comfort of clients\' homes. He believes everyone deserves access to high-quality healthcare that is tailored to their individual needs and circumstances.',
     ],
   },
 ]
@@ -44,7 +46,7 @@ export default function AboutPage() {
     <>
       <MedicalBusinessSchema />
       <PersonSchema name="Jinu Maecheril Sukumaran" jobTitle="Registered Nurse, Co-Founder" description="Co-founder of The Nurse Who Knows You. 10+ years nursing experience." />
-      <PersonSchema name="Mohamed Zuhair Parayil Ummer" jobTitle="Registered Nurse, Co-Founder" description="Co-founder of The Nurse Who Knows You. 10+ years nursing experience." />
+      <PersonSchema name="Mohamed Zuhair Parayil Ummer" jobTitle="Registered Nurse, Co-Founder" description="Co-founder of The Nurse Who Knows You. 15+ years nursing experience." />
 
       <PageHeader
         title="About The Nurse Who Knows You"
@@ -65,11 +67,8 @@ export default function AboutPage() {
                 Jinu and Zuhair are registered nurses who spent over a decade working across Perth’s hospital network. Time and again, they watched the same thing unfold — Australians discharged from Sir Charles Gairdner, Royal Perth, Fiona Stanley, and Joondalup Health Campus, sent home with complex needs and no reliable nursing support waiting for them.
               </p>
               <p className="text-body leading-relaxed">
-                Zuhair
-                Registered Nurse (RN)
                 Zuhair is a Registered Nurse based in Perth, Western Australia, with more than 15 years of clinical experience in critical care nursing and the management of complex client needs. Throughout his career, he has been committed to supporting Australians during some of their most challenging and vulnerable times.
-                His expertise includes medication management, chronic disease monitoring, and post-hospital recovery care. As co-founder of The Nurse Who Knows You, Zuhair is passionate about delivering consistent, compassionate, and dignified nursing care in the comfort of clients' homes. He believes everyone deserves access to high-quality healthcare that is tailored to their individual needs and circumstances.
-                Registered Nurse · 15+ Years of Clinical Experience              </p>
+              </p>
               <p className="text-body leading-relaxed">
                 In March 2026, Jinu and Zuhair registered Care N Cure with ASIC to close that gap. Not an agency. Not a directory. A proper nursing practice operating as The Nurse Who Knows You — where registered nurses take personal responsibility for the clinical care of every client they are assigned.
               </p>
@@ -90,10 +89,10 @@ export default function AboutPage() {
             <div className="section-divider mx-auto" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {founders.map(({ id, name, credential, bio }) => (
+            {founders.map(({ id, name, credential, bio, experience }) => (
               <div key={id} id={id} className="card-base overflow-hidden">
                 {/* <div className="relative h-52 flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #091E30, #1A3D5C)' }}>
-                  <div className="flex flex-col items-center gap-3 text-center px-8">
+                   <div className="flex flex-col items-center gap-3 text-center px-8">
                     <div className="w-20 h-20 rounded-full flex items-center justify-center text-2xl font-bold" style={{ background: 'rgba(197,238,228,0.15)', color: 'var(--teal)', border: '2px dashed rgba(197,238,228,0.4)' }}>
                       {name.charAt(0)}
                     </div>
@@ -113,7 +112,7 @@ export default function AboutPage() {
                   </div>
                   <div className="flex items-center gap-2 text-sm">
                     <BadgeCheck className="w-4 h-4 flex-shrink-0" style={{ color: 'var(--teal-accent)' }} />
-                    <span className="text-body">Registered Nurse · 10+ years experience</span>
+                    <span className="text-body">Registered Nurse · {experience}</span>
                   </div>
                 </div>
               </div>

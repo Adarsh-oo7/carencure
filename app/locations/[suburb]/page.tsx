@@ -156,7 +156,7 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
                 <h2 className="text-navy text-3xl font-bold">Your trusted local home nursing team in {data.name}</h2>
                 <div className="section-divider" />
                 <p className="text-body text-lg leading-relaxed mt-4">
-                  {data.description} Our co-founders, Jinu and Zuhair, are registered nurses with 10+ years of Perth hospital experience. We bring strict clinical standards, sterile techniques, and compassionate support straight to your home.
+                  {data.description} Our co-founders, Jinu and Zuhair, are registered nurses with over a decade of clinical experience each. We bring strict clinical standards, sterile techniques, and compassionate support straight to your home.
                 </p>
               </div>
 

@@ -2,8 +2,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { MapPin, Phone, Mail, Clock, Shield, ExternalLink, Linkedin } from 'lucide-react'
 
-const PHONE_NUMBER = '0403 760 159'
-const PHONE_HREF = 'tel:+61403760159'
+const PHONE_NUMBER = '1300 919 663'
+const PHONE_HREF = 'tel:1300919663'
 const EMAIL = 'hello@carencure.com.au'
 
 export function Footer() {
@@ -111,10 +111,18 @@ export function Footer() {
                 <div className="flex flex-col gap-2">
                   <div>
                     <a
+                      href="tel:1300919663"
+                      className="text-white font-semibold hover:text-teal-200 transition-colors block"
+                    >
+                      1300 919 663 <span className="text-white/50 text-xs font-normal ml-1">(Primary)</span>
+                    </a>
+                  </div>
+                  <div>
+                    <a
                       href="tel:+61403760159"
                       className="text-white font-semibold hover:text-teal-200 transition-colors block"
                     >
-                      0403 760 159 <span className="text-white/50 text-xs font-normal ml-1">(Primary)</span>
+                      0403 760 159 <span className="text-white/50 text-xs font-normal ml-1">(Alternate)</span>
                     </a>
                   </div>
                   <div>
@@ -123,14 +131,6 @@ export function Footer() {
                       className="text-white font-semibold hover:text-teal-200 transition-colors block"
                     >
                       0481 748 516 <span className="text-white/50 text-xs font-normal ml-1">(Alternate)</span>
-                    </a>
-                  </div>
-                  <div>
-                    <a
-                      href="tel:+61412593102"
-                      className="text-white font-semibold hover:text-teal-200 transition-colors block"
-                    >
-                      0412 593 102 <span className="text-white/50 text-xs font-normal ml-1">(Alternate)</span>
                     </a>
                   </div>
                   <span className="text-white/50 text-xs mt-1">We answer every call</span>

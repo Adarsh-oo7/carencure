@@ -178,8 +178,8 @@ export default function YourDedicatedNursePage() {
               Built by Nurses. For Families.
             </h2>
             <p className="text-body text-lg leading-relaxed mb-8">
-              Our practice was founded by Jinu and Zuhair — two registered nurses with over 10
-              years of clinical experience in Australian hospitals and home care settings. They built
+              Our practice was founded by Jinu and Zuhair — two registered nurses with over a decade
+              of clinical experience each in Australian hospitals and home care settings. They built
               the Dedicated Nurse model because they saw firsthand what happens when continuity of
               care breaks down after hospital discharge. Every nurse at our practice follows the same
               model they designed.

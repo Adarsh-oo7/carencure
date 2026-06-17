@@ -82,7 +82,7 @@ export default function PrivacyPage() {
               <p><strong>Privacy Officer:</strong> The Nurse Who Knows You (Care N Cure Nursing Care Services)</p>
               <p><strong>Address:</strong> Perth WA</p>
               <p><strong>Email:</strong> hello@carencure.com.au</p>
-              <p><strong>Phone:</strong> 0403 760 159, 0481 748 516 or 0412 593 102</p>
+              <p><strong>Phone:</strong> 1300 919 663, 0403 760 159 or 0481 748 516</p>
             </div>
           </div>
 

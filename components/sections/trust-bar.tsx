@@ -1,28 +1,40 @@
-import { CheckCircle2 } from 'lucide-react'
+import { MapPin, HeartHandshake, Stethoscope, Handshake, Heart, CheckCircle2 } from 'lucide-react'
 
 const trustItems = [
   {
-    icon: CheckCircle2,
-    label: 'Support At Home Packages (SAH)',
-    sub: 'Guidance from assessment to activation',
-    id: 'trust-hcp',
+    icon: MapPin,
+    label: 'Locally Owned & Operated',
+    sub: 'Proudly Perth-based home care',
+    id: 'trust-local',
   },
   {
-    icon: CheckCircle2,
+    icon: HeartHandshake,
+    label: 'Support at Home Provider',
+    sub: 'Nurse-led companion and domestic care',
+    id: 'trust-sah',
+  },
+  {
+    icon: Stethoscope,
+    label: 'Home & Community Nursing',
+    sub: 'Specialist clinical and palliative care',
+    id: 'trust-nursing',
+  },
+  {
+    icon: Handshake,
+    label: 'Partnering with Trilogy Care',
+    sub: 'Approved Home Care Package management',
+    id: 'trust-trilogy',
+  },
+  {
+    icon: Heart,
     label: 'Your Dedicated Nurse™ Model',
-    sub: 'One nurse coordinator, assigned to you',
+    sub: 'One nurse coordinator assigned to you',
     id: 'trust-dedicated',
   },
   {
     icon: CheckCircle2,
-    label: 'Perth-Based',
-    sub: 'Local community nursing',
-    id: 'trust-perth',
-  },
-  {
-    icon: CheckCircle2,
     label: 'Registered Nursing from $100 *',
-    sub: 'Pricing tailored case by case ',
+    sub: 'Pricing tailored case by case',
     id: 'trust-pricing',
   },
   {
@@ -31,7 +43,6 @@ const trustItems = [
     sub: 'One of Australia’s more affordable home care options',
     id: 'trust-cost',
   },
-
 ]
 
 export function TrustBar() {

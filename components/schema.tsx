@@ -4,8 +4,8 @@
 // ============================================================
 
 const SITE_URL = 'https://carencure.com.au'
-const PHONE = '0403 760 159'
-const PHONE_SCHEMA = '+61403760159'
+const PHONE = '1300 919 663'
+const PHONE_SCHEMA = '+611300919663'
 const EMAIL = 'hello@carencure.com.au'
 const ADDRESS = {
   streetAddress: '',

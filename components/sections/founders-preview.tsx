@@ -17,10 +17,10 @@ const founders = [
     initials: 'MZ',
     name: 'Mohamed Zuhair Parayil Ummer',
     credential: 'Registered Nurse (RN)',
-    experience: '10+ years nursing experience',
+    experience: '15+ years nursing experience',
     background: 'Based in Perth — dedicated to Perth’s community',
     quote: 'Families deserve one nurse who knows them — their medications, their fears, their progress. Not a different face each week. That continuity is what changes outcomes.',
-    bio: 'Zuhair\'s nursing career spans over ten years in clinical environments. He co-founded our practice after recognising that Perth families deserved a more consistent, trustworthy model of private nursing — where the same qualified nurse builds a real relationship with every client.',
+    bio: 'Zuhair has more than 15 years of clinical experience in critical care nursing and the management of complex client needs. He co-founded our practice to provide Perth families with consistent, compassionate, and dignified nursing care at home.',
   },
 ]
 
