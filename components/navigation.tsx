@@ -10,7 +10,9 @@ const PHONE_HREF = 'tel:+61403760159'
 
 const serviceLinks = [
   { label: 'Post-Hospital Recovery Care', href: '/post-hospital-care' },
-  { label: 'Private Nursing at Home', href: '/private-nursing' },
+  { label: 'Registered Nurses Clinical care Services', href: '/registered-nurses-clinical-care-services' },
+  { label: 'Support at home', href: '/support-at-home' },
+  { label: 'Homecare packages', href: '/homecare-packages' },
   { label: 'Wound Care at Home', href: '/wound-care' },
   { label: 'Medication Management', href: '/medication-management' },
   { label: 'Mobility Support', href: '/mobility-support' },

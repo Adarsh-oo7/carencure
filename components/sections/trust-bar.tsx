@@ -21,8 +21,8 @@ const trustItems = [
   },
   {
     icon: CheckCircle2,
-    label: 'Registered Nursing from $100 T&C applies',
-    sub: 'Pricing tailored case by case , T&C applies',
+    label: 'Registered Nursing from $100 *',
+    sub: 'Pricing tailored case by case ',
     id: 'trust-pricing',
   },
   {

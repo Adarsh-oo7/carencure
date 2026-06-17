@@ -223,7 +223,7 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
                   </div>
                   <div className="flex items-center gap-2">
                     <HeartPulse className="w-4 h-4 text-teal-accent flex-shrink-0" />
-                    <span>Private Nursing visits</span>
+                    <span>Registered Nurses Clinical care Services</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <HeartPulse className="w-4 h-4 text-teal-accent flex-shrink-0" />

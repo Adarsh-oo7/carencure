@@ -8,7 +8,9 @@ const PHONE_NUMBER = '0403 760 159'
 
 const serviceOptions = [
   'Post-Hospital Recovery Care',
-  'Private Nursing at Home',
+  'Registered Nurses Clinical care Services',
+  'Support at home',
+  'Homecare packages',
   'Wound Care at Home',
   'Medication Management',
   'Mobility & Rehabilitation Support',

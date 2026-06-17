@@ -11,7 +11,6 @@ export const metadata: Metadata = {
 }
 
 const EMAIL = 'hello@carencure.com.au'
-const ADDRESS = 'Perth, WA'
 
 export default function ContactPage() {
   return (
@@ -78,15 +77,14 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                {/* Office Location */}
+                {/* Service Area */}
                 <div className="flex gap-4">
                   <div className="w-12 h-12 bg-surface rounded-xl flex items-center justify-center text-teal-accent flex-shrink-0">
                     <MapPin className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="text-navy text-lg font-bold">Office Address</h3>
+                    <h3 className="text-navy text-lg font-bold">Service Area</h3>
                     <p className="text-body text-sm mt-1">Serving Nedlands, Subiaco, Gosnells, Armadale, Rockingham, and all Perth metro.</p>
-                    <p className="text-navy font-semibold">{ADDRESS}</p>
                   </div>
                 </div>
 

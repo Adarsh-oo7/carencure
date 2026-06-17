@@ -51,7 +51,9 @@ export function MedicalBusinessSchema() {
     medicalSpecialty: 'Nursing',
     availableService: [
       { '@type': 'MedicalTherapy', name: 'Post-Hospital Recovery Care' },
-      { '@type': 'MedicalTherapy', name: 'Private Nursing at Home' },
+      { '@type': 'MedicalTherapy', name: 'Registered Nurses Clinical care Services' },
+      { '@type': 'MedicalTherapy', name: 'Support at home' },
+      { '@type': 'MedicalTherapy', name: 'Homecare packages' },
       { '@type': 'MedicalTherapy', name: 'Wound Care and Dressing' },
       { '@type': 'MedicalTherapy', name: 'Medication Management' },
       { '@type': 'MedicalTherapy', name: 'Mobility and Rehabilitation Support' },
@@ -71,8 +73,9 @@ export function MedicalBusinessSchema() {
       itemListElement: [
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Post-Hospital Home Care Perth' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Your Dedicated Nurse\u2122 Model Perth' } },
-
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Home Care Packages Perth' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Registered Nurses Clinical care Services Perth' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Support at Home Perth' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Homecare Packages Perth' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Wound Care at Home Perth' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Medication Management Perth' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Companion Care Perth' } },

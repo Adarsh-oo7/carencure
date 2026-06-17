@@ -1,7 +1,34 @@
 import Link from 'next/link'
-import { Bandage, Pill, Heart, Activity, ArrowRight } from 'lucide-react'
+import { Bandage, Pill, Heart, Activity, ArrowRight, HeartHandshake, Award } from 'lucide-react'
 
 const services = [
+  {
+    id: 'service-clinical-care',
+    icon: Heart,
+    title: 'Registered Nurses Clinical care Services',
+    description: 'Professional, registered nursing care: assessments, clinical tasks, chronic disease care, and advocacy.',
+    href: '/registered-nurses-clinical-care-services',
+    colour: '#FDE8EF',
+    iconColour: '#C0392B',
+  },
+  {
+    id: 'service-support-at-home',
+    icon: HeartHandshake,
+    title: 'Support at home',
+    description: 'Help with daily living, personal care, domestic assistance, and social companionship under clinical oversight.',
+    href: '/support-at-home',
+    colour: '#E0F2F1',
+    iconColour: '#0D9488',
+  },
+  {
+    id: 'service-homecare-packages',
+    icon: Award,
+    title: 'Homecare packages',
+    description: 'Coordinated government-funded care (HCP Levels 1–4) managed by experienced registered nurse case managers.',
+    href: '/homecare-packages',
+    colour: '#FEF9E7',
+    iconColour: '#D4AC0D',
+  },
   {
     id: 'service-wound-care',
     icon: Bandage,
@@ -28,15 +55,6 @@ const services = [
     href: '/post-hospital-care',
     colour: '#E8F4FD',
     iconColour: '#2980B9',
-  },
-  {
-    id: 'service-chronic-condition',
-    icon: Heart,
-    title: 'Chronic Condition Support',
-    description: 'Diabetes, heart disease, mobility issues, and ongoing health needs managed proactively.',
-    href: '/private-nursing',
-    colour: '#FDE8EF',
-    iconColour: '#C0392B',
   },
 ]
 

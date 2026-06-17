@@ -52,7 +52,9 @@ export function Footer() {
             <ul className="space-y-2.5">
               {[
                 { label: 'Post-Hospital Recovery Care', href: '/post-hospital-care' },
-                { label: 'Private Nursing at Home', href: '/private-nursing' },
+                { label: 'Registered Nurses Clinical care Services', href: '/registered-nurses-clinical-care-services' },
+                { label: 'Support at home', href: '/support-at-home' },
+                { label: 'Homecare packages', href: '/homecare-packages' },
                 { label: 'Wound Care at Home', href: '/wound-care' },
                 { label: 'Medication Management', href: '/medication-management' },
                 { label: 'Mobility Support', href: '/mobility-support' },
@@ -143,12 +145,7 @@ export function Footer() {
                   {EMAIL}
                 </a>
               </div>
-              <div className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: 'var(--teal-accent)' }} />
-                <span className="text-white/70">
-                  Perth, WA
-                </span>
-              </div>
+
               <div className="flex items-start gap-2.5">
                 <Clock className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: 'var(--teal-accent)' }} />
                 <div className="text-white/70">
