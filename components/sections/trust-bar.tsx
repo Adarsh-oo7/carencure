@@ -33,7 +33,7 @@ const trustItems = [
   },
   {
     icon: CheckCircle2,
-    label: 'Registered nurses clinical care from $100 *',
+    label: "Perth's Registered Nurses Clinical Care from $100*",  
     sub: 'Pricing tailored case by case',
     id: 'trust-pricing',
   },
