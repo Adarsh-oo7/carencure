@@ -30,30 +30,6 @@ export function HeroSection({
       itemScope
       itemType="https://schema.org/MedicalBusiness"
     >
-      {/* Absolute-positioned Trilogy partnering logo on mobile only */}
-      <div className="absolute top-4 right-4 sm:hidden flex flex-col items-end gap-1 z-20">
-        <span
-          className="font-semibold tracking-wide text-white/80"
-          style={{
-            fontSize: '9px',
-            lineHeight: 1,
-            textShadow: '0 1px 4px rgba(0,0,0,0.6)',
-          }}
-        >
-          PARTNERING WITH
-        </span>
-        <Image
-          src="/trilogylogo.png"
-          alt="Trilogy logo"
-          width={90}
-          height={30}
-          style={{
-            objectFit: 'contain',
-            filter: 'brightness(0) invert(1)',
-          }}
-        />
-      </div>
-
       {/* ── Background image — full bleed ── */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -230,28 +206,31 @@ export function HeroSection({
 
             {/* Right: logo + text — below buttons under 900px, far right above 900px */}
             <div
-              className="logo-block hidden sm:flex flex-col gap-1.5"
+              className="logo-block flex flex-col gap-2"
               style={{ alignItems: 'flex-start' }}
             >
               <span
-                className="text-xs font-semibold tracking-wide"
+                className="text-xs font-semibold tracking-wide text-white/90"
                 style={{
-                  color: 'rgba(255,255,255,255)',
                   lineHeight: 1.35,
+                  textShadow: '0 1px 4px rgba(0,0,0,0.5)',
                 }}
               >
                 PARTNERING WITH
               </span>
-              <Image
-                src="/trilogylogo.png"
-                alt="Trilogy logo"
-                width={120}
-                height={120}
-                style={{
-                  objectFit: 'contain',
-                  filter: 'brightness(0) invert(1)',
-                }}
-              />
+              <div className="bg-white/5 backdrop-blur-sm px-3.5 py-2.5 rounded-xl border border-white/10 flex items-center justify-center">
+                <Image
+                  src="/trilogylogo.png"
+                  alt="Trilogy logo"
+                  width={110}
+                  height={32}
+                  style={{
+                    objectFit: 'contain',
+                    filter: 'brightness(0) invert(1)',
+                  }}
+                  className="h-7 w-auto"
+                />
+              </div>
             </div>
 
           </div>

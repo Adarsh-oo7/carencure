@@ -469,4 +469,22 @@
   .bg-teal { background-color: var(--teal); }
   .bg-surface { background-color: var(--surface); }
   .bg-surface-2 { background-color: var(--surface-2); }
+
+  /* Marquee/Sliding Text Animation */
+  .animate-marquee {
+    animation: marquee-scroll 35s linear infinite;
+  }
+  
+  .group-marquee:hover .animate-marquee {
+    animation-play-state: paused;
+  }
+
+  @keyframes marquee-scroll {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
 }

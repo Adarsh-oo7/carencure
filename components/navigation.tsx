@@ -33,6 +33,14 @@ const locationLinks = [
   { label: 'South Perth', href: '/locations/south-perth' },
 ]
 
+const topBarItems = [
+  { text: 'Locally Owned & Operated' },
+  { text: 'Support at Home Provider' },
+  { text: 'Home & Community Nursing' },
+  { text: 'Partnering with Trilogy Care' },
+  { text: 'Call Us Today: 1300 919 663', isPhone: true },
+]
+
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
@@ -91,21 +99,46 @@ export function Navigation() {
         }`}
         style={{ overflow: 'visible' }}
       >
-        {/* Top phone bar */}
-        <div className="bg-navy text-white py-1.5 text-center px-4">
+        {/* Top phone bar / Sliding Marquee */}
+        <div className="bg-navy text-white py-2.5 overflow-hidden select-none relative z-50 border-b border-navy-light group-marquee">
           <a
             href={PHONE_HREF}
-            className="inline-flex items-center justify-center gap-2 hover:text-teal-300 transition-colors max-w-full cursor-pointer font-inherit text-white font-medium"
+            className="block hover:text-teal-300 transition-colors cursor-pointer text-white font-medium text-xs tracking-wider"
             id="nav-phone-top"
             style={{ minHeight: 'auto' }}
           >
-            <Phone className="w-3.5 h-3.5 flex-shrink-0 text-teal-accent" />
-            <span className="sm:hidden text-xs leading-normal font-medium">
-              Call: <strong>1300 919 663</strong>
-            </span>
-            <span className="hidden sm:inline text-sm leading-normal font-medium">
-              Perth&apos;s Registered Nursing Team — Call: <strong>1300 919 663</strong>
-            </span>
+            <div className="flex whitespace-nowrap">
+              <div className="flex shrink-0 animate-marquee items-center gap-8 min-w-full justify-around pr-8">
+                {[...topBarItems, ...topBarItems, ...topBarItems].map((item, index) => (
+                  <div key={`marquee-1-${index}`} className="flex items-center gap-8 flex-shrink-0">
+                    {item.isPhone ? (
+                      <span className="flex items-center gap-1.5 font-bold text-teal-accent flex-shrink-0">
+                        <Phone className="w-3.5 h-3.5 text-teal-accent flex-shrink-0" />
+                        CALL: 1300 919 663
+                      </span>
+                    ) : (
+                      <span className="uppercase flex-shrink-0 text-white/90">{item.text}</span>
+                    )}
+                    <span className="w-1.5 h-1.5 rounded-full bg-teal-accent flex-shrink-0" />
+                  </div>
+                ))}
+              </div>
+              <div className="flex shrink-0 animate-marquee items-center gap-8 min-w-full justify-around pr-8" aria-hidden="true">
+                {[...topBarItems, ...topBarItems, ...topBarItems].map((item, index) => (
+                  <div key={`marquee-2-${index}`} className="flex items-center gap-8 flex-shrink-0">
+                    {item.isPhone ? (
+                      <span className="flex items-center gap-1.5 font-bold text-teal-accent flex-shrink-0">
+                        <Phone className="w-3.5 h-3.5 text-teal-accent flex-shrink-0" />
+                        CALL: 1300 919 663
+                      </span>
+                    ) : (
+                      <span className="uppercase flex-shrink-0 text-white/90">{item.text}</span>
+                    )}
+                    <span className="w-1.5 h-1.5 rounded-full bg-teal-accent flex-shrink-0" />
+                  </div>
+                ))}
+              </div>
+            </div>
           </a>
         </div>
 
