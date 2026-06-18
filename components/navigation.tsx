@@ -164,7 +164,7 @@ export function Navigation() {
               </div>
               <div className="flex flex-col">
                 <div className="font-extrabold text-base sm:text-xl leading-tight text-navy tracking-tight">Care N Cure</div>
-                <div className="text-[9px] sm:text-xs text-teal-600 font-bold leading-tight">The Nurse Who Knows You</div>
+                <div className="text-[9px] sm:text-xs text-teal-600 font-bold leading-tight uppercase tracking-wider">Nursing Care Services</div>
               </div>
             </Link>
 

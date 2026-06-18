@@ -76,7 +76,7 @@ export function HeroSection({
       />
 
       {/* ── Content ── */}
-      <div className="relative section-container pt-20 pb-36 sm:pt-36 sm:pb-48 z-10">
+      <div className="relative section-container pt-20 pb-48 sm:pt-36 sm:pb-48 z-10">
 
         {/* Text content — constrained to 640px */}
         <div style={{ maxWidth: '640px' }} className="animate-fade-in">
