@@ -35,8 +35,8 @@ const locationLinks = [
 
 const topBarItems = [
   { text: 'Locally Owned & Operated' },
+  { text: 'Led by Perth Registered Nurses' },
   { text: 'Support at Home Provider' },
-  { text: 'Home & Community Nursing' },
   { text: 'Partnering with Trilogy Care' },
   { text: 'Call Us Today: 1300 919 663', isPhone: true },
 ]
@@ -149,22 +149,22 @@ export function Navigation() {
           aria-label="Main navigation"
         >
         <div className="section-container overflow-visible">
-          <div className="flex items-center justify-between h-16 overflow-visible">
+          <div className="flex items-center justify-between h-16 sm:h-20 overflow-visible">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 flex-shrink-0" aria-label="Care N Cure — Home">
-              <div className="bg-navy rounded-lg p-1.5 flex items-center justify-center" style={{ width: 44, height: 44 }}>
+            <Link href="/" className="flex items-center gap-3.5 flex-shrink-0" aria-label="Care N Cure — Home">
+              <div className="bg-navy rounded-xl p-1 flex items-center justify-center transition-transform duration-200 hover:scale-105 w-11 h-11 sm:w-14 sm:h-14">
                 <Image
                   src="/logo.png"
                   alt="Care N Cure logo"
-                  width={32}
-                  height={32}
-                  className="h-8 w-auto"
+                  width={48}
+                  height={48}
+                  className="w-9 h-9 sm:w-12 sm:h-12 object-contain"
                   priority
                 />
               </div>
-              <div className="hidden sm:block">
-                <div className="font-bold text-base leading-tight text-navy">Care N Cure</div>
-                <div className="text-xs text-teal-600 font-semibold leading-tight">The Nurse Who Knows You</div>
+              <div className="flex flex-col">
+                <div className="font-extrabold text-base sm:text-xl leading-tight text-navy tracking-tight">Care N Cure</div>
+                <div className="text-[9px] sm:text-xs text-teal-600 font-bold leading-tight">The Nurse Who Knows You</div>
               </div>
             </Link>
 

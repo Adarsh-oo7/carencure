@@ -76,7 +76,7 @@ export function HeroSection({
       />
 
       {/* ── Content ── */}
-      <div className="relative section-container pt-20 pb-24 sm:pt-36 sm:pb-48">
+      <div className="relative section-container pt-20 pb-36 sm:pt-36 sm:pb-48 z-10">
 
         {/* Text content — constrained to 640px */}
         <div style={{ maxWidth: '640px' }} className="animate-fade-in">
@@ -238,7 +238,7 @@ export function HeroSection({
         {/* End CTA row */}
 
         {/* Trust / value props strip */}
-        <div className="mt-5 sm:mt-8 flex flex-row flex-wrap gap-y-2 gap-x-4 sm:gap-x-6" role="list" aria-label="Key credentials">
+        <div className="mt-6 sm:mt-8 mb-12 sm:mb-0 flex flex-row flex-wrap gap-y-2.5 gap-x-4 sm:gap-x-6 relative z-10" role="list" aria-label="Key credentials">
           {[
             '✓ Registered Nurses',
             '✓ Visits within 24–48 hrs',
@@ -246,8 +246,8 @@ export function HeroSection({
             <span
               key={item}
               role="listitem"
-              className="text-xs sm:text-sm font-medium"
-              style={{ color: 'rgba(255,255,255,0.9)', textShadow: '0 1px 8px rgba(0,0,0,0.6)' }}
+              className="text-xs sm:text-sm font-semibold text-teal-accent"
+              style={{ textShadow: '0 2px 10px rgba(0,0,0,0.9)' }}
             >
               {item}
             </span>
