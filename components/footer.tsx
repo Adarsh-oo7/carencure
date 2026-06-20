@@ -165,6 +165,18 @@ export function Footer() {
             <div>
               <p className="text-white/50 text-sm">
                 © {year} Care N Cure. ABN 87 152 479 362. All rights reserved.
+                <span className="mx-2 text-white/20">|</span>
+                <span className="text-white/40">
+                  Developed by{' '}
+                  <a
+                    href="https://www.digitalproductsolutions.in/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white underline transition-colors"
+                  >
+                    Digital Product Solutions
+                  </a>
+                </span>
               </p>
               <p className="text-teal-200/60 text-xs mt-1">
                 The Nurse Who Knows You™ · One Client. One Nurse Coordinator. One Trusted Relationship.
