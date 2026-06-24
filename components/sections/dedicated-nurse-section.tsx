@@ -26,7 +26,7 @@ export function DedicatedNurseSection() {
             One Client. One Nurse Coordinator.
           </h2>
           <div className="section-divider mx-auto" />
-          <p className="text-body text-lg max-w-xl mx-auto font-medium text-teal-accent">
+          <p className="text-body text-lg max-w-xl mx-auto font-medium text-teal-text">
             Because continuity changes everything.
           </p>
         </div>
@@ -34,12 +34,11 @@ export function DedicatedNurseSection() {
         {/* Visual trust image */}
         <div className="relative w-full h-72 rounded-3xl overflow-hidden mb-12 shadow-lg">
           <Image
-            src="/nurse-home-visit.jpg"
+            src="/nurse-home-visit.webp"
             alt="Registered nurse conducting a home health assessment and coordinating services for an elderly client — The Nurse Who Knows You model"
             fill
             sizes="100vw"
             style={{ objectFit: 'cover', objectPosition: 'center 35%' }}
-            priority
           />
           <div
             className="absolute inset-0"
@@ -91,7 +90,7 @@ export function DedicatedNurseSection() {
               <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4">
                 {checklistItems.map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <span className="flex-shrink-0 w-5 h-5 rounded-full bg-teal-50 text-teal-accent flex items-center justify-center font-bold text-xs mt-0.5 border border-teal-100">
+                    <span className="flex-shrink-0 w-5 h-5 rounded-full bg-teal-50 text-teal-text flex items-center justify-center font-bold text-xs mt-0.5 border border-teal-100">
                       ✓
                     </span>
                     <span className="text-body text-sm leading-relaxed font-medium">{item}</span>

@@ -104,7 +104,7 @@ export function ServicesGrid() {
               </div>
               <div
                 className="flex items-center gap-1 text-sm font-semibold group-hover:gap-2 transition-all mt-6"
-                style={{ color: 'var(--teal-accent)' }}
+                style={{ color: 'var(--teal-text)' }}
               >
                 Learn more <ArrowRight className="w-4 h-4" />
               </div>

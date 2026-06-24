@@ -166,7 +166,7 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   
                   <div className="flex gap-3 items-start">
-                    <CheckCircle2 className="w-5 h-5 text-teal-accent flex-shrink-0 mt-1" />
+                    <CheckCircle2 className="w-5 h-5 text-teal-text flex-shrink-0 mt-1" />
                     <div>
                       <h4 className="text-navy font-bold text-sm">Registered Nurses Only</h4>
                       <p className="text-body text-xs mt-1">We do not use support workers or assistants for clinical tasks.</p>
@@ -174,7 +174,7 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
                   </div>
 
                   <div className="flex gap-3 items-start">
-                    <CheckCircle2 className="w-5 h-5 text-teal-accent flex-shrink-0 mt-1" />
+                    <CheckCircle2 className="w-5 h-5 text-teal-text flex-shrink-0 mt-1" />
                     <div>
                       <h4 className="text-navy font-bold text-sm">Same Nurse, Every Visit</h4>
                       <p className="text-body text-xs mt-1">Building deep, consistent clinical relationships with zero roster surprises.</p>
@@ -182,7 +182,7 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
                   </div>
 
                   <div className="flex gap-3 items-start">
-                    <CheckCircle2 className="w-5 h-5 text-teal-accent flex-shrink-0 mt-1" />
+                    <CheckCircle2 className="w-5 h-5 text-teal-text flex-shrink-0 mt-1" />
                     <div>
                       <h4 className="text-navy font-bold text-sm">Direct GP Updates</h4>
                       <p className="text-body text-xs mt-1">Handovers sent to doctors and surgeons after critical recoveries.</p>
@@ -190,7 +190,7 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
                   </div>
 
                   <div className="flex gap-3 items-start">
-                    <CheckCircle2 className="w-5 h-5 text-teal-accent flex-shrink-0 mt-1" />
+                    <CheckCircle2 className="w-5 h-5 text-teal-text flex-shrink-0 mt-1" />
                     <div>
                       <h4 className="text-navy font-bold text-sm">Zero Fabricated Data</h4>
                       <p className="text-body text-xs mt-1">Clear, professional communication, transparent pricing, and real records.</p>
@@ -203,13 +203,13 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
               {/* Local Hospital Continuity Box */}
               <div className="bg-surface p-6 rounded-2xl border border-border space-y-4">
                 <h3 className="text-navy text-lg font-bold flex items-center gap-2">
-                  <Stethoscope className="w-5 h-5 text-teal-accent" />
+                  <Stethoscope className="w-5 h-5 text-teal-text" />
                   Seamless hospital discharge
                 </h3>
                 <p className="text-body text-xs leading-relaxed">
                   If your loved one is returning to <strong>{data.name}</strong> from <strong>{data.nearestHospital}</strong>, early professional planning is critical. We coordinate directly with local ward teams and discharge coordinators, performing immediate medication checks and setting up dressing routines to prevent costly readmissions.
                 </p>
-                <div className="flex items-center gap-2 text-xs font-semibold" style={{ color: 'var(--teal-accent)' }}>
+                <div className="flex items-center gap-2 text-xs font-semibold" style={{ color: 'var(--teal-text)' }}>
                   <ShieldCheck className="w-4 h-4" /> Supporting Sir Charles Gairdner, Fiona Stanley, Royal Perth, and SJOG clients.
                 </div>
               </div>
@@ -219,50 +219,50 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
                 <h3 className="text-navy text-xl font-bold">Services We Deliver in {data.name}:</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-body">
                   <div className="flex items-center gap-2">
-                    <HeartPulse className="w-4 h-4 text-teal-accent flex-shrink-0" />
-                    <Link href="/post-hospital-care" className="hover:text-teal-accent transition-colors font-medium">
+                    <HeartPulse className="w-4 h-4 text-teal-text flex-shrink-0" />
+                    <Link href="/post-hospital-care" className="hover:text-teal-text transition-colors font-medium">
                       Post-Hospital Recovery Care
                     </Link>
                   </div>
                   <div className="flex items-center gap-2">
-                    <HeartPulse className="w-4 h-4 text-teal-accent flex-shrink-0" />
-                    <Link href="/private-nursing" className="hover:text-teal-accent transition-colors font-medium">
+                    <HeartPulse className="w-4 h-4 text-teal-text flex-shrink-0" />
+                    <Link href="/private-nursing" className="hover:text-teal-text transition-colors font-medium">
                       Private Nursing at Home
                     </Link>
                   </div>
                   <div className="flex items-center gap-2">
-                    <HeartPulse className="w-4 h-4 text-teal-accent flex-shrink-0" />
-                    <Link href="/registered-nurses-clinical-care-services" className="hover:text-teal-accent transition-colors font-medium">
+                    <HeartPulse className="w-4 h-4 text-teal-text flex-shrink-0" />
+                    <Link href="/registered-nurses-clinical-care-services" className="hover:text-teal-text transition-colors font-medium">
                       Registered Nurses Clinical care Services
                     </Link>
                   </div>
                   <div className="flex items-center gap-2">
-                    <HeartPulse className="w-4 h-4 text-teal-accent flex-shrink-0" />
-                    <Link href="/wound-care" className="hover:text-teal-accent transition-colors font-medium">
+                    <HeartPulse className="w-4 h-4 text-teal-text flex-shrink-0" />
+                    <Link href="/wound-care" className="hover:text-teal-text transition-colors font-medium">
                       Sterile Wound Dressings
                     </Link>
                   </div>
                   <div className="flex items-center gap-2">
-                    <HeartPulse className="w-4 h-4 text-teal-accent flex-shrink-0" />
-                    <Link href="/medication-management" className="hover:text-teal-accent transition-colors font-medium">
+                    <HeartPulse className="w-4 h-4 text-teal-text flex-shrink-0" />
+                    <Link href="/medication-management" className="hover:text-teal-text transition-colors font-medium">
                       Injections & Vitals Monitoring
                     </Link>
                   </div>
                   <div className="flex items-center gap-2">
-                    <HeartPulse className="w-4 h-4 text-teal-accent flex-shrink-0" />
-                    <Link href="/medication-management" className="hover:text-teal-accent transition-colors font-medium">
+                    <HeartPulse className="w-4 h-4 text-teal-text flex-shrink-0" />
+                    <Link href="/medication-management" className="hover:text-teal-text transition-colors font-medium">
                       Medication Management
                     </Link>
                   </div>
                   <div className="flex items-center gap-2">
-                    <HeartPulse className="w-4 h-4 text-teal-accent flex-shrink-0" />
-                    <Link href="/mobility-support" className="hover:text-teal-accent transition-colors font-medium">
+                    <HeartPulse className="w-4 h-4 text-teal-text flex-shrink-0" />
+                    <Link href="/mobility-support" className="hover:text-teal-text transition-colors font-medium">
                       Mobility & Rehab Exercises
                     </Link>
                   </div>
                   <div className="flex items-center gap-2">
-                    <HeartPulse className="w-4 h-4 text-teal-accent flex-shrink-0" />
-                    <Link href="/companion-care" className="hover:text-teal-accent transition-colors font-medium">
+                    <HeartPulse className="w-4 h-4 text-teal-text flex-shrink-0" />
+                    <Link href="/companion-care" className="hover:text-teal-text transition-colors font-medium">
                       Companion & Respite Care
                     </Link>
                   </div>

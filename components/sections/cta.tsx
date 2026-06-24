@@ -32,16 +32,16 @@ export function CTASection() {
           
           {/* Left Column: Why Families Choose Us */}
           <div className="card-base p-8 sm:p-10 bg-white border border-slate-100 shadow-sm rounded-3xl animate-fade-in">
-            <h3 id="choose-us-heading" className="text-navy font-bold text-2xl mb-6">
+            <h2 id="choose-us-heading" className="text-navy font-bold text-2xl mb-6">
               Why Families Choose Us
-            </h3>
+            </h2>
             <p className="text-body text-base mb-6 font-medium text-slate-500">
               Because they want:
             </p>
             <ul className="space-y-4">
               {chooseUsReasons.map((reason, i) => (
                 <li key={i} className="flex items-start gap-3 text-body text-base">
-                  <span className="flex-shrink-0 w-6 h-6 rounded-full bg-teal-50 text-teal-accent flex items-center justify-center font-bold text-xs mt-0.5 border border-teal-100">
+                  <span className="flex-shrink-0 w-6 h-6 rounded-full bg-teal-50 text-teal-text flex items-center justify-center font-bold text-xs mt-0.5 border border-teal-100">
                     ✓
                   </span>
                   <span className="font-medium">{reason}</span>
@@ -52,7 +52,7 @@ export function CTASection() {
 
           {/* Right Column: For Families */}
           <div className="flex flex-col justify-center h-full lg:pt-6">
-            <div className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-4 bg-teal-100 text-teal-accent self-start">
+            <div className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-4 bg-teal-100 text-teal-text self-start">
               For Families
             </div>
             <h3 className="text-navy font-bold text-3xl mb-6 leading-tight">
@@ -61,7 +61,7 @@ export function CTASection() {
             <div className="space-y-4 text-body text-lg leading-relaxed">
               <p>You want reassurance.</p>
               <p>You want clarity.</p>
-              <p className="font-semibold text-teal-accent">
+              <p className="font-semibold text-teal-text">
                 You want someone who notices changes before they become problems.
               </p>
             </div>
@@ -72,9 +72,9 @@ export function CTASection() {
         <div className="bg-white border border-slate-100 rounded-3xl p-8 sm:p-12 mb-20 shadow-sm">
           <div className="text-center max-w-3xl mx-auto mb-10">
             <p className="section-label mb-2">Our Core Promise</p>
-            <h3 className="text-navy font-bold text-3xl">
+            <h2 className="text-navy font-bold text-3xl">
               You Will Never Feel Like Just Another Client
-            </h3>
+            </h2>
             <p className="text-body mt-4 text-base">
               We believe care should feel:
             </p>
@@ -82,7 +82,7 @@ export function CTASection() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {promisePoints.map((pt, i) => (
               <div key={i} className="bg-slate-50 border border-slate-100 p-6 rounded-2xl text-center">
-                <span className="block text-teal-accent font-bold text-xl mb-1">{pt.label}</span>
+                <span className="block text-teal-text font-bold text-xl mb-1">{pt.label}</span>
                 <span className="block text-body text-sm font-medium text-slate-500">{pt.sub}</span>
               </div>
             ))}

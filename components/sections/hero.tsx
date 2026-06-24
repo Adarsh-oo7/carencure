@@ -36,7 +36,7 @@ export function HeroSection({
         aria-hidden="true"
       >
         <Image
-          src="/herobg.jpeg"
+          src="/herobg.webp"
           alt="Registered nurse providing compassionate in-home care to an elderly patient in Perth, WA — The Nurse Who Knows You"
           fill
           priority

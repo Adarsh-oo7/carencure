@@ -3,7 +3,15 @@ import { Analytics } from '@vercel/analytics/next'
 import { Navigation } from '@/components/navigation'
 import { Footer } from '@/components/footer'
 import { PersistentUI } from '@/components/persistent-ui'
+import { Inter } from 'next/font/google'
 import './globals.css'
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-sans',
+  weight: ['300', '400', '500', '600', '700', '800'],
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://carencure.com.au'),
@@ -80,11 +88,9 @@ export default function RootLayout({
   return (
     <html lang="en-AU" className="scroll-smooth">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-          rel="stylesheet"
+        <meta
+          httpEquiv="Content-Security-Policy"
+          content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://va.vercel-scripts.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://vitals.vercel-insights.com https://*.vercel-analytics.com; font-src 'self' data:;"
         />
         {/* GA4 — replace G-XXXXXXXXXX with real Measurement ID */}
         {/* 
@@ -99,7 +105,7 @@ export default function RootLayout({
         `}} />
         */}
       </head>
-      <body className="font-sans antialiased flex flex-col min-h-screen bg-surface">
+      <body className={`${inter.variable} font-sans antialiased flex flex-col min-h-screen bg-surface`}>
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-navy focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:font-semibold"
