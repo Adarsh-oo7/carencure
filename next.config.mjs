@@ -7,19 +7,9 @@ const nextConfig = {
     unoptimized: true,
   },
   async redirects() {
-    return [
-      {
-        source: '/locations/joondalup',
-        destination: '/locations',
-        permanent: true,
-      },
-      {
-        source: '/locations/midland',
-        destination: '/locations',
-        permanent: true,
-      },
-    ]
+    return []
   },
+
   async headers() {
     return [
       {

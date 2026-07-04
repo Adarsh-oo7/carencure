@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { PageHeader } from '@/components/page-header'
@@ -87,9 +87,66 @@ const suburbsMap: Record<string, SuburbData> = {
     nearestHospital: 'Royal Perth Hospital & Fiona Stanley Hospital',
     description: 'Companion care, respite nursing, and active medication reconciliation in South Perth, Como, and Kensington.',
   },
+  // --- Additional suburbs to fix 404s and expand SEO coverage ---
+  booragoon: {
+    id: 'booragoon',
+    name: 'Booragoon',
+    region: 'Perth South',
+    nearestHospital: 'Fiona Stanley Hospital & St John of God Murdoch',
+    description: 'In-home registered nurse visits across Booragoon, Myaree, and Kardinya. Post-surgical recovery, wound care, and medication management close to Garden City.',
+  },
+  joondalup: {
+    id: 'joondalup',
+    name: 'Joondalup',
+    region: 'Northern Suburbs',
+    nearestHospital: 'Joondalup Health Campus',
+    description: 'Professional in-home nursing care across Joondalup, Edgewater, and Currambine. Post-hospital recovery and clinical nursing from the registered nurse team at Care N Cure.',
+  },
+  midland: {
+    id: 'midland',
+    name: 'Midland',
+    region: 'Eastern Suburbs',
+    nearestHospital: 'St John of God Midland Public & Private Hospital',
+    description: 'Registered nurse home visits in Midland, Middle Swan, and Guildford. Wound care, medication management, and post-hospital recovery support in the eastern corridor.',
+  },
+  'victoria-park': {
+    id: 'victoria-park',
+    name: 'Victoria Park',
+    region: 'Inner East',
+    nearestHospital: 'Royal Perth Hospital',
+    description: 'In-home nursing services across Victoria Park, Lathlain, and East Victoria Park. Private nursing, wound care, and medication management by registered nurses.',
+  },
+  'canning-vale': {
+    id: 'canning-vale',
+    name: 'Canning Vale',
+    region: 'Perth South-East',
+    nearestHospital: 'Fiona Stanley Hospital',
+    description: 'Home nursing care in Canning Vale, Willetton, and Riverton. Registered nurses providing post-hospital support, wound dressings, and chronic disease monitoring.',
+  },
+  belmont: {
+    id: 'belmont',
+    name: 'Belmont',
+    region: 'Inner East',
+    nearestHospital: 'Royal Perth Hospital',
+    description: 'In-home registered nurse visits across Belmont, Rivervale, and Cloverdale. Clinical nursing care including post-surgical wound management and medication oversight.',
+  },
+  karrinyup: {
+    id: 'karrinyup',
+    name: 'Karrinyup',
+    region: 'Northern Coastal',
+    nearestHospital: 'Sir Charles Gairdner Hospital',
+    description: 'Private nursing services in Karrinyup, Doubleview, and Scarborough. Registered nurses providing home care, wound dressings, and clinical health monitoring.',
+  },
+  'morley': {
+    id: 'morley',
+    name: 'Morley',
+    region: 'Inner North-East',
+    nearestHospital: 'Royal Perth Hospital',
+    description: 'Home nursing visits in Morley, Noranda, and Dianella. Registered nurse care for post-hospital recovery, medication management, and chronic condition monitoring.',
+  },
 }
 
-// Generate static params for all 10 suburbs
+// Generate static params for all suburbs
 export function generateStaticParams() {
   return Object.keys(suburbsMap).map((suburb) => ({
     suburb,
@@ -118,46 +175,56 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
 
   const faqs = [
     {
-      question: `How quickly can a nurse visit my home in ${data.name}?`,
-      answer: `We arrange a telephone or home consult within 24–48 hours of your enquiry. Depending on roster capacity, clinical care visits can begin in ${data.name} within 1 to 2 business days.`,
+      question: `Do you provide nursing services in ${data.name}?`,
+      answer: `Yes. Care N Cure registered nurses travel to ${data.name} and the surrounding area. Call us on 1300 919 663 to confirm availability and book a free initial assessment.`,
     },
     {
-      question: `Do you coordinate with doctors and hospitals near ${data.name}?`,
-      answer: `Yes. We communicate directly with discharge coordinators at ${data.nearestHospital} and coordinate follow-up care with your local general practitioners in the ${data.name} area.`,
+      question: 'Are your nurses fully registered with AHPRA?',
+      answer: 'Yes. All nurses at Care N Cure are registered with the Australian Health Practitioner Regulation Agency (AHPRA) and hold current registration as Registered Nurses. Our co-founders Jinu and Zuhair have 10+ and 15+ years of clinical experience respectively.',
     },
     {
-      question: 'Will I have the same nurse at every visit?',
-      answer: 'Yes. Continuity of care is our priority. We maintain the same registered nurse for every visit so they know your clinical progress inside-out.',
+      question: `How quickly can a nurse visit me in ${data.name}?`,
+      answer: `We aim to arrange an initial assessment within 24–48 hours of enquiry for clients in ${data.name}. For urgent post-discharge situations, call us directly and we will prioritise your case.`,
+    },
+    {
+      question: 'What does in-home nursing cost?',
+      answer: 'We provide clear, transparent pricing during your free initial assessment. Private nursing is available as a private-pay service. We also support clients with Home Care Packages (HCP), NDIS, and DVA funding. Call us to discuss your situation.',
     },
   ]
 
   return (
     <>
-      <SuburbPageSchema suburb={data.name} url={`/locations/${data.id}`} />
+      <SuburbPageSchema suburb={data.name} url={`/locations/${suburb}`} />
       <FAQPageSchema faqs={faqs} />
 
       <PageHeader
         title={`Home Nursing in ${data.name}`}
-        subtitle={`Professional, registered nursing care delivered in the quiet privacy of your ${data.name} home.`}
+        subtitle={`Registered nurses providing in-home clinical care across ${data.name} and surrounding Perth suburbs.`}
         breadcrumbItems={[
           { name: 'Locations', href: '/locations' },
-          { name: data.name, href: `/locations/${data.id}` },
+          { name: data.name, href: `/locations/${suburb}` },
         ]}
-        label={`Perth ${data.region}`}
+        label={data.region}
       />
 
       <section className="section-py bg-white">
         <div className="section-container">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-            
-            {/* Left Column Content */}
+
+            {/* Main Content */}
             <div className="lg:col-span-7 space-y-8">
+
               <div>
-                <p className="section-label mb-2">Clinical Quality</p>
-                <h2 className="text-navy text-3xl font-bold">Your trusted local home nursing team in {data.name}</h2>
+                <p className="section-label mb-2">Serving {data.region}</p>
+                <h2 className="text-navy text-3xl font-bold">
+                  Clinical home nursing in {data.name}, Perth WA
+                </h2>
                 <div className="section-divider" />
                 <p className="text-body text-lg leading-relaxed mt-4">
-                  {data.description} Our co-founders, Jinu and Zuhair, are registered nurses with over a decade of clinical experience each. We bring strict clinical standards, sterile techniques, and compassionate support straight to your home.
+                  {data.description}
+                </p>
+                <p className="text-body leading-relaxed mt-3">
+                  Care N Cure is a Perth-based nursing practice founded by Jinu and Zuhair — two registered nurses with a combined 25+ years of hospital and community nursing experience. We provide in-home nursing visits across {data.name} and all adjacent Perth suburbs.
                 </p>
               </div>
 
@@ -210,7 +277,8 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
                   If your loved one is returning to <strong>{data.name}</strong> from <strong>{data.nearestHospital}</strong>, early professional planning is critical. We coordinate directly with local ward teams and discharge coordinators, performing immediate medication checks and setting up dressing routines to prevent costly readmissions.
                 </p>
                 <div className="flex items-center gap-2 text-xs font-semibold" style={{ color: 'var(--teal-text)' }}>
-                  <ShieldCheck className="w-4 h-4" /> Supporting Sir Charles Gairdner, Fiona Stanley, Royal Perth, and SJOG clients.
+                  <ShieldCheck className="w-4 h-4" />
+                  Supporting Sir Charles Gairdner, Fiona Stanley, Royal Perth, and SJOG clients.
                 </div>
               </div>
 

@@ -16,6 +16,15 @@ const suburbs = [
   'mount-lawley',
   'fremantle',
   'south-perth',
+  // Expanded coverage — fixes 404s Google found + new SEO suburb pages
+  'booragoon',
+  'joondalup',
+  'midland',
+  'victoria-park',
+  'canning-vale',
+  'belmont',
+  'karrinyup',
+  'morley',
 ]
 
 const blogSlugs = [
