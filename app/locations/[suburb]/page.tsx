@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { PageHeader } from '@/components/page-header'
@@ -86,63 +86,6 @@ const suburbsMap: Record<string, SuburbData> = {
     region: 'Inner South',
     nearestHospital: 'Royal Perth Hospital & Fiona Stanley Hospital',
     description: 'Companion care, respite nursing, and active medication reconciliation in South Perth, Como, and Kensington.',
-  },
-  // --- Additional suburbs to fix 404s and expand SEO coverage ---
-  booragoon: {
-    id: 'booragoon',
-    name: 'Booragoon',
-    region: 'Perth South',
-    nearestHospital: 'Fiona Stanley Hospital & St John of God Murdoch',
-    description: 'In-home registered nurse visits across Booragoon, Myaree, and Kardinya. Post-surgical recovery, wound care, and medication management close to Garden City.',
-  },
-  joondalup: {
-    id: 'joondalup',
-    name: 'Joondalup',
-    region: 'Northern Suburbs',
-    nearestHospital: 'Joondalup Health Campus',
-    description: 'Professional in-home nursing care across Joondalup, Edgewater, and Currambine. Post-hospital recovery and clinical nursing from the registered nurse team at Care N Cure.',
-  },
-  midland: {
-    id: 'midland',
-    name: 'Midland',
-    region: 'Eastern Suburbs',
-    nearestHospital: 'St John of God Midland Public & Private Hospital',
-    description: 'Registered nurse home visits in Midland, Middle Swan, and Guildford. Wound care, medication management, and post-hospital recovery support in the eastern corridor.',
-  },
-  'victoria-park': {
-    id: 'victoria-park',
-    name: 'Victoria Park',
-    region: 'Inner East',
-    nearestHospital: 'Royal Perth Hospital',
-    description: 'In-home nursing services across Victoria Park, Lathlain, and East Victoria Park. Private nursing, wound care, and medication management by registered nurses.',
-  },
-  'canning-vale': {
-    id: 'canning-vale',
-    name: 'Canning Vale',
-    region: 'Perth South-East',
-    nearestHospital: 'Fiona Stanley Hospital',
-    description: 'Home nursing care in Canning Vale, Willetton, and Riverton. Registered nurses providing post-hospital support, wound dressings, and chronic disease monitoring.',
-  },
-  belmont: {
-    id: 'belmont',
-    name: 'Belmont',
-    region: 'Inner East',
-    nearestHospital: 'Royal Perth Hospital',
-    description: 'In-home registered nurse visits across Belmont, Rivervale, and Cloverdale. Clinical nursing care including post-surgical wound management and medication oversight.',
-  },
-  karrinyup: {
-    id: 'karrinyup',
-    name: 'Karrinyup',
-    region: 'Northern Coastal',
-    nearestHospital: 'Sir Charles Gairdner Hospital',
-    description: 'Private nursing services in Karrinyup, Doubleview, and Scarborough. Registered nurses providing home care, wound dressings, and clinical health monitoring.',
-  },
-  'morley': {
-    id: 'morley',
-    name: 'Morley',
-    region: 'Inner North-East',
-    nearestHospital: 'Royal Perth Hospital',
-    description: 'Home nursing visits in Morley, Noranda, and Dianella. Registered nurse care for post-hospital recovery, medication management, and chronic condition monitoring.',
   },
 }
 
