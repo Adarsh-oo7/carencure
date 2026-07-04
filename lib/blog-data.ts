@@ -77,8 +77,7 @@ Call 1300 919 663 or visit carencure.com.au/contact to book a free initial asses
     author: 'Jinu Maecheril Sukumaran, RN',
     date: '2026-06-20',
     category: 'Senior Care',
-    image:
-      'https://images.unsplash.com/photo-1631217314830-4690f6a46b28?w=800&h=400&fit=crop',
+    image: '/blog/home-nursing-seniors.jpg',
     readTime: 8,
     tags: [
       'home care Perth',
@@ -167,8 +166,7 @@ Call us on 1300 919 663 to arrange a pre-discharge consultation or to start post
     author: 'Mohamed Zuhair Parayil Ummer, RN',
     date: '2026-06-15',
     category: 'Post-Surgery Care',
-    image:
-      'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=400&fit=crop',
+    image: '/blog/post-surgery-recovery.jpg',
     readTime: 9,
     tags: [
       'post-surgery recovery',
@@ -254,8 +252,7 @@ If you or a family member is managing a complex chronic condition in Perth and f
     author: 'Jinu Maecheril Sukumaran, RN',
     date: '2026-06-08',
     category: 'Chronic Care',
-    image:
-      'https://images.unsplash.com/photo-1576091160675-112cd5ffb513?w=800&h=400&fit=crop',
+    image: '/blog/chronic-disease-management.jpg',
     readTime: 10,
     tags: [
       'chronic disease management',
@@ -351,8 +348,7 @@ Care N Cure provides professional wound care across all Perth suburbs. Our regis
     author: 'Mohamed Zuhair Parayil Ummer, RN',
     date: '2026-05-30',
     category: 'Wound Care',
-    image:
-      'https://images.unsplash.com/photo-1579154204601-01d5b5013227?w=800&h=400&fit=crop',
+    image: '/blog/wound-care-practices.jpg',
     readTime: 10,
     tags: [
       'wound care Perth',
