@@ -16,6 +16,18 @@ const suburbs = [
   'mount-lawley',
   'fremantle',
   'south-perth',
+  // Extra suburbs to match service areas section list & old redirects
+  'claremont',
+  'inglewood',
+  'booragoon',
+  'canning-vale',
+  'wembley',
+  'floreat',
+  'mount-pleasant',
+  'leederville',
+  'victoria-park',
+  'joondalup',
+  'midland',
 ]
 
 const blogSlugs = [
