@@ -1,7 +1,9 @@
 import { MetadataRoute } from 'next'
 
+export const dynamic = 'force-static'
+
 const BASE_URL = 'https://carencure.com.au'
-const TODAY = new Date().toISOString()
+const TODAY = '2026-07-04T00:00:00.000Z'
 
 const suburbs = [
   'nedlands',
