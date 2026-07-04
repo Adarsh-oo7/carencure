@@ -6,14 +6,27 @@ import { Button } from '@/components/ui/button'
 import { Calendar, User, Clock, Tag } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Care N Cure Blog - Health Tips & Nursing Advice',
-  description: 'Read expert articles on healthcare, nursing care, recovery tips, and wellness from our team of healthcare professionals in Perth.',
-  keywords: ['healthcare blog', 'nursing care', 'health tips', 'recovery advice', 'Perth healthcare'],
+  title: 'Nursing Care Blog | Home Health Tips & Recovery Advice Perth | Care N Cure',
+  description:
+    'Expert articles on home nursing care, post-surgery recovery, chronic disease management, and wound care from registered nurses at Care N Cure Perth.',
+  keywords: [
+    'home nursing blog Perth',
+    'nursing care tips',
+    'post-surgery recovery Perth',
+    'wound care advice',
+    'chronic disease management',
+    'Perth healthcare',
+    'registered nurse advice',
+  ],
+  alternates: {
+    canonical: 'https://carencure.com.au/blog',
+  },
   openGraph: {
-    title: 'Care N Cure Blog - Health Tips & Nursing Advice',
-    description: 'Expert articles on healthcare and nursing care services',
+    title: 'Nursing Care Blog | Home Health Tips & Recovery Advice Perth | Care N Cure',
+    description:
+      'Expert articles on home nursing care, post-surgery recovery, and chronic disease management from the registered nurses at Care N Cure Perth.',
     type: 'website',
-    url: 'https://carencare.com/blog',
+    url: 'https://carencure.com.au/blog',
   },
 }
 
