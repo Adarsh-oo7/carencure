@@ -14,9 +14,11 @@ interface SuburbData {
   region: string
   nearestHospital: string
   description: string
+  surroundingSuburbs: string
+  localHealthcareFocus: string
 }
 
-function getLocalText(suburb: string, name: string, region: string): string {
+function getLocalText(data: SuburbData): string {
   const regionPhrases: Record<string, string> = {
     'Western Suburbs': `We provide regular home visits by Registered Nurses across the Western Suburbs, helping residents manage clinical needs safely in their own homes.`,
     'Perth South-East': `Our nursing team covers the South-East metropolitan area, offering clinical assessments, wound care, and medication support directly in the community.`,
@@ -29,8 +31,8 @@ function getLocalText(suburb: string, name: string, region: string): string {
     'Eastern Suburbs': `Our clinical home nursing support covers the eastern corridor, providing registered nurse visits for wound management, injections, and health checks.`,
   };
 
-  const basePhrase = regionPhrases[region] || `Our clinical home nursing services are available to residents across the Perth metropolitan area.`;
-  return `At Care N Cure, we are committed to delivering honest, professional nursing care. ${basePhrase} We work in cooperation with your treating doctors and local healthcare services to support your ongoing recovery in ${name}.`;
+  const basePhrase = regionPhrases[data.region] || `Our clinical home nursing services are available to residents across the Perth metropolitan area.`;
+  return `At Care N Cure, we are committed to delivering honest, professional nursing care. ${basePhrase} Specifically servicing the ${data.name} area, we support patients in nearby areas like ${data.surroundingSuburbs}. Our care is tailored around ${data.localHealthcareFocus}, working in cooperation with local general practitioners, specialists, and regional healthcare hubs like ${data.nearestHospital} to support your ongoing recovery.`;
 }
 
 const suburbsMap: Record<string, SuburbData> = {
@@ -40,6 +42,8 @@ const suburbsMap: Record<string, SuburbData> = {
     region: 'Western Suburbs',
     nearestHospital: 'Sir Charles Gairdner Hospital & Hollywood Private',
     description: 'Serving Nedlands, Dalkeith, and Crawley with professional in-home clinical nursing. Ideal for post-surgical recovery, wound care, and medication management.',
+    surroundingSuburbs: 'Dalkeith, Crawley, and Shenton Park',
+    localHealthcareFocus: 'post-operative surgical recovery, clinical assessments, and GP communication',
   },
   subiaco: {
     id: 'subiaco',
@@ -47,6 +51,8 @@ const suburbsMap: Record<string, SuburbData> = {
     region: 'Western Suburbs',
     nearestHospital: 'Sir Charles Gairdner Hospital & Hollywood Private',
     description: 'Providing in-home registered nurse visits across Subiaco, Jolimont, and Shenton Park. Sterile wound dressing changes and GP clinical coordination.',
+    surroundingSuburbs: 'Jolimont, West Perth, and Daglish',
+    localHealthcareFocus: 'sterile wound care, catheter changes, and medication reconciliation',
   },
   cottesloe: {
     id: 'cottesloe',
@@ -54,6 +60,8 @@ const suburbsMap: Record<string, SuburbData> = {
     region: 'Western Suburbs',
     nearestHospital: 'Sir Charles Gairdner Hospital & Hollywood Private',
     description: 'Delivering companion care, medication management, and mobility support for seniors in Cottesloe, Swanbourne, and Peppermint Grove.',
+    surroundingSuburbs: 'Swanbourne, Peppermint Grove, and Mosman Park',
+    localHealthcareFocus: 'elderly clinical support, mobility assistance, and dedicated nurse checks',
   },
   gosnells: {
     id: 'gosnells',
@@ -61,6 +69,8 @@ const suburbsMap: Record<string, SuburbData> = {
     region: 'Perth South-East',
     nearestHospital: 'Armadale Kelmscott Memorial Hospital',
     description: 'Providing in-home nursing care, wound management, medication support, and post-hospital recovery across the City of Gosnells, including Gosnells, Maddington, Kenwick, and Thornlie.',
+    surroundingSuburbs: 'Maddington, Kenwick, Thornlie, and Huntingdale',
+    localHealthcareFocus: 'chronic illness monitoring, post-hospital transition care, and home nursing',
   },
   armadale: {
     id: 'armadale',
@@ -68,6 +78,8 @@ const suburbsMap: Record<string, SuburbData> = {
     region: 'Perth South-East',
     nearestHospital: 'Armadale Kelmscott Memorial Hospital',
     description: 'Registered nurse home visits for post-surgical recovery, wound care, and chronic condition management across the City of Armadale, including Armadale, Kelmscott, and Byford.',
+    surroundingSuburbs: 'Kelmscott, Seville Grove, Mount Nasura, and Byford',
+    localHealthcareFocus: 'clinical nursing visits, medication safety, and wound dressing changes',
   },
   rockingham: {
     id: 'rockingham',
@@ -75,6 +87,8 @@ const suburbsMap: Record<string, SuburbData> = {
     region: 'Perth South',
     nearestHospital: 'Rockingham General Hospital',
     description: 'Professional in-home nursing care, sterile wound dressings, and medication management across Rockingham, Baldivis, and the surrounding southern corridor.',
+    surroundingSuburbs: 'Safety Bay, Shoalwater, Waikiki, and Baldivis',
+    localHealthcareFocus: 'hospital discharge coordination, vital signs tracking, and respite support',
   },
   applecross: {
     id: 'applecross',
@@ -82,6 +96,8 @@ const suburbsMap: Record<string, SuburbData> = {
     region: 'Perth South',
     nearestHospital: 'Fiona Stanley Hospital & St John of God Murdoch',
     description: 'Providing in-home private nursing visits and post-operative recovery around Applecross, Mount Pleasant, and Ardross.',
+    surroundingSuburbs: 'Mount Pleasant, Ardross, and Alfred Cove',
+    localHealthcareFocus: 'private nursing care, post-surgical rehabilitation, and specialist handovers',
   },
   'mount-lawley': {
     id: 'mount-lawley',
@@ -89,6 +105,8 @@ const suburbsMap: Record<string, SuburbData> = {
     region: 'Inner North',
     nearestHospital: 'Royal Perth Hospital',
     description: 'Registered nurse visits, blood pressure monitoring, subcutaneous injections, and complex medication safety in Mount Lawley, Highgate, and Inglewood.',
+    surroundingSuburbs: 'Highgate, Inglewood, Menora, and North Perth',
+    localHealthcareFocus: 'subcutaneous injections, blood pressure monitoring, and complex medication safety',
   },
   fremantle: {
     id: 'fremantle',
@@ -96,6 +114,8 @@ const suburbsMap: Record<string, SuburbData> = {
     region: 'Fremantle Area',
     nearestHospital: 'Fiona Stanley Hospital & Fremantle Hospital',
     description: 'Post-hospital recovery care, wound management, and nursing-led respite care in Fremantle, East Fremantle, and South Fremantle.',
+    surroundingSuburbs: 'East Fremantle, South Fremantle, and Beaconsfield',
+    localHealthcareFocus: 'respite nursing, post-hospital recovery, and medical care planning',
   },
   'south-perth': {
     id: 'south-perth',
@@ -103,6 +123,8 @@ const suburbsMap: Record<string, SuburbData> = {
     region: 'Inner South',
     nearestHospital: 'Royal Perth Hospital & Fiona Stanley Hospital',
     description: 'Companion care, respite nursing, and active medication reconciliation in South Perth, Como, and Kensington.',
+    surroundingSuburbs: 'Como, Kensington, and Manning',
+    localHealthcareFocus: 'medication management, companion care, and GP clinical coordination',
   },
   claremont: {
     id: 'claremont',
@@ -110,6 +132,8 @@ const suburbsMap: Record<string, SuburbData> = {
     region: 'Western Suburbs',
     nearestHospital: 'Sir Charles Gairdner Hospital & Hollywood Private',
     description: 'In-home clinical nursing and aged care support in Claremont, Karrakatta, and Mount Claremont. Post-surgical wound care, medication checks, and nursing assessments.',
+    surroundingSuburbs: 'Karrakatta, Mount Claremont, and Swanbourne',
+    localHealthcareFocus: 'clinical home nursing assessments, sterile dressing changes, and aged care coordination',
   },
   inglewood: {
     id: 'inglewood',
@@ -117,6 +141,8 @@ const suburbsMap: Record<string, SuburbData> = {
     region: 'Inner North',
     nearestHospital: 'Royal Perth Hospital',
     description: 'Registered nurse visits, sterile dressings, injections, and blood pressure monitoring in Inglewood, Maylands, and Bedford.',
+    surroundingSuburbs: 'Maylands, Bedford, and Bayswater',
+    localHealthcareFocus: 'wound care management, vital signs tracking, and medication safety support',
   },
   booragoon: {
     id: 'booragoon',
@@ -124,6 +150,8 @@ const suburbsMap: Record<string, SuburbData> = {
     region: 'Perth South',
     nearestHospital: 'Fiona Stanley Hospital & St John of God Murdoch',
     description: 'In-home registered nurse visits across Booragoon, Myaree, and Kardinya. Post-surgical recovery, wound care, and medication management close to Garden City.',
+    surroundingSuburbs: 'Myaree, Kardinya, and Alfred Cove',
+    localHealthcareFocus: 'post-surgical wound dressings, mobility support, and medication checks',
   },
   'canning-vale': {
     id: 'canning-vale',
@@ -131,6 +159,8 @@ const suburbsMap: Record<string, SuburbData> = {
     region: 'Perth South-East',
     nearestHospital: 'Fiona Stanley Hospital',
     description: 'Home nursing care in Canning Vale, Willetton, and Riverton. Registered nurses providing post-hospital support, wound dressings, and chronic disease monitoring.',
+    surroundingSuburbs: 'Willetton, Riverton, and Southern River',
+    localHealthcareFocus: 'chronic disease management, registered nurse assessments, and home care package support',
   },
   wembley: {
     id: 'wembley',
@@ -138,6 +168,8 @@ const suburbsMap: Record<string, SuburbData> = {
     region: 'Western Suburbs',
     nearestHospital: 'Sir Charles Gairdner Hospital',
     description: 'Private home nursing care across Wembley, Jolimont, and Wembley Downs. Wound care, health assessments, and medication coordination.',
+    surroundingSuburbs: 'Jolimont, Wembley Downs, and West Leederville',
+    localHealthcareFocus: 'private home nursing, clinical wound care, and GP communications',
   },
   floreat: {
     id: 'floreat',
@@ -145,6 +177,8 @@ const suburbsMap: Record<string, SuburbData> = {
     region: 'Western Suburbs',
     nearestHospital: 'Sir Charles Gairdner Hospital',
     description: 'Clinical nursing and home care in Floreat and Perry Lakes. Post-hospital support, companion care, and mobility supervision by registered nurses.',
+    surroundingSuburbs: 'Wembley, Jolimont, and Churchlands',
+    localHealthcareFocus: 'post-hospital recovery support, companion care, and mobility supervision',
   },
   'mount-pleasant': {
     id: 'mount-pleasant',
@@ -152,6 +186,8 @@ const suburbsMap: Record<string, SuburbData> = {
     region: 'Perth South',
     nearestHospital: 'Fiona Stanley Hospital & St John of God Murdoch',
     description: 'Professional in-home registered nurse visits in Mount Pleasant and Brentwood. Medication management, wound dressings, and chronic condition monitoring.',
+    surroundingSuburbs: 'Brentwood, Applecross, and Bateman',
+    localHealthcareFocus: 'registered nurse home visits, medication administration, and chronic condition monitoring',
   },
   leederville: {
     id: 'leederville',
@@ -159,6 +195,8 @@ const suburbsMap: Record<string, SuburbData> = {
     region: 'Inner North',
     nearestHospital: 'Sir Charles Gairdner Hospital & Royal Perth Hospital',
     description: 'Clinical nursing services, post-operative support, and medication checks in Leederville, West Leederville, and North Perth.',
+    surroundingSuburbs: 'West Leederville, North Perth, and Wembley',
+    localHealthcareFocus: 'clinical nursing services, post-operative assessments, and injection support',
   },
   'victoria-park': {
     id: 'victoria-park',
@@ -166,6 +204,8 @@ const suburbsMap: Record<string, SuburbData> = {
     region: 'Inner East',
     nearestHospital: 'Royal Perth Hospital',
     description: 'In-home nursing services across Victoria Park, Lathlain, and East Victoria Park. Private nursing, wound care, and medication management by registered nurses.',
+    surroundingSuburbs: 'Lathlain, East Victoria Park, and Carlisle',
+    localHealthcareFocus: 'private nursing, sterile dressings, and medication reconciliation',
   },
   joondalup: {
     id: 'joondalup',
@@ -173,6 +213,8 @@ const suburbsMap: Record<string, SuburbData> = {
     region: 'Northern Suburbs',
     nearestHospital: 'Joondalup Health Campus',
     description: 'Professional in-home nursing care across Joondalup, Edgewater, and Currambine. Post-hospital recovery and clinical nursing from the registered nurse team at Care N Cure.',
+    surroundingSuburbs: 'Edgewater, Currambine, and Connolly',
+    localHealthcareFocus: 'home nursing care, post-surgical transition, and professional clinical oversight',
   },
   midland: {
     id: 'midland',
@@ -180,6 +222,8 @@ const suburbsMap: Record<string, SuburbData> = {
     region: 'Eastern Suburbs',
     nearestHospital: 'St John of God Midland Public & Private Hospital',
     description: 'Registered nurse home visits in Midland, Middle Swan, and Guildford. Wound care, medication management, and post-hospital recovery support in the eastern corridor.',
+    surroundingSuburbs: 'Middle Swan, Guildford, and Bellevue',
+    localHealthcareFocus: 'wound dressings, medication administration, and discharge coordination in the eastern corridor',
   },
 }
 
@@ -268,7 +312,7 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
                   {data.description}
                 </p>
                 <p className="text-body leading-relaxed mt-3">
-                  {getLocalText(suburb, data.name, data.region)}
+                  {getLocalText(data)}
                 </p>
                 <p className="text-body leading-relaxed mt-3">
                   Care N Cure is a Perth-based nursing practice founded by Jinu and Zuhair — two registered nurses with a combined 25+ years of hospital and community nursing experience. We provide in-home nursing visits across {data.name} and all adjacent Perth suburbs.

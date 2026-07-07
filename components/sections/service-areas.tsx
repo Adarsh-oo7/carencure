@@ -21,6 +21,8 @@ const suburbs = [
   { name: 'Mount Pleasant', href: '/locations/mount-pleasant' },
   { name: 'Leederville', href: '/locations/leederville' },
   { name: 'Victoria Park', href: '/locations/victoria-park' },
+  { name: 'Joondalup', href: '/locations/joondalup' },
+  { name: 'Midland', href: '/locations/midland' },
 ]
 
 export function ServiceAreas() {

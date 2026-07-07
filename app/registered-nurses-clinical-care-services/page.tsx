@@ -6,23 +6,23 @@ import { ContactForm } from '@/components/contact-form'
 import { Activity, ShieldCheck, HeartPulse, UserCheck, CheckCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Registered Nurses Clinical care Services Perth | The Nurse Who Knows You',
-  description: 'In-home clinical care by registered nurses in Perth. Customised nursing assessments, chronic illness support, respite, and long-term care.',
+  title: 'Registered Nurse Clinical Care Services Perth | Care N Cure',
+  description: 'In-home clinical care by Registered Nurses in Perth, WA. Comprehensive nursing assessments, chronic disease monitoring, wound care, catheter care, and GP coordination.',
   alternates: { canonical: 'https://carencure.com.au/registered-nurses-clinical-care-services' },
 }
 
 const faqs = [
   {
-    question: 'How is private nursing different from general care support?',
-    answer: 'General care support is provided by support workers or assistants in nursing (AINs) who help with non-clinical tasks (showering, cleaning). Private nursing is provided strictly by licensed Registered Nurses (RNs) who can perform clinical duties like administering injections, wound management, catheter care, and vital signs monitoring.',
+    question: 'What are clinical nursing services at home?',
+    answer: 'Clinical nursing services include tasks that require the formal qualifications and registration of a Registered Nurse (RN). This includes sterile wound dressing, administration of subcutaneous and intramuscular injections, catheter care, medication reconciliation, and vital signs monitoring. It is different from personal care or support work.',
   },
   {
-    question: 'Can I choose the time of the nurse visits?',
-    answer: 'Yes. We work directly with you and your family to establish a visit schedule that fits your preferences and medical requirements. We maintain high consistency so you get the same nurse at the agreed time.',
+    question: 'How do you coordinate care with my GP or surgeon?',
+    answer: 'We maintain professional clinical records of every visit. If we identify any changes in your vitals, wounds, or general status, we write a concise handover report and contact your GP or surgical team directly to ensure immediate medical adjustment.',
   },
   {
-    question: 'Do you offer respite nursing for families?',
-    answer: 'Yes. We provide nursing-led respite care. This gives family caregivers peace of mind knowing that their relative with complex clinical needs is under the direct, expert supervision of a registered nurse.',
+    question: 'Can clinical nursing be funded through a Home Care Package (HCP)?',
+    answer: 'Yes. Clinical nursing care is a primary service funded under Home Care Packages (Level 1–4). Care N Cure coordinates directly with your package provider (such as Trilogy Care) to deliver RN visits funded by your package.',
   },
 ]
 
@@ -30,20 +30,20 @@ export default function ClinicalCareServices() {
   return (
     <>
       <ServicePageSchema
-        serviceName="Registered Nurses Clinical care Services"
-        description="A registered nurse, at your home, on your schedule. Personalised clinical assessments, chronic condition monitoring, respite nursing, and expert clinical advocacy in Perth."
+        serviceName="Registered Nurse Clinical Care Services"
+        description="In-home clinical care, complex nursing tasks, chronic disease management, assessments, and GP handovers by registered nurses in Perth, WA."
         url="/registered-nurses-clinical-care-services"
       />
       <FAQPageSchema faqs={faqs} />
 
       <PageHeader
-        title="Registered Nurses Clinical care Services"
-        subtitle="Professional, registered nursing care in the quiet privacy of your own home."
+        title="Registered Nurse Clinical Care Services"
+        subtitle="AHPRA-registered clinical nursing care delivered in the hygiene and comfort of your home."
         breadcrumbItems={[
-          { name: 'Services', href: '/#services' },
+          { name: 'Services', href: '/services' },
           { name: 'Clinical Care Services', href: '/registered-nurses-clinical-care-services' },
         ]}
-        label="Professional In-Home Care"
+        label="Clinical Home Care"
       />
 
       <section className="section-py bg-white">
@@ -53,50 +53,50 @@ export default function ClinicalCareServices() {
             {/* Main Content */}
             <div className="lg:col-span-7 space-y-8">
               <div>
-                <p className="section-label mb-2">Dedicated Nursing</p>
-                <h2 className="text-navy text-3xl font-bold">University-trained Registered Nurses</h2>
+                <p className="section-label mb-2">Qualified Clinical Care</p>
+                <h2 className="text-navy text-3xl font-bold">University-trained Registered Nurses delivering complex care</h2>
                 <div className="section-divider" />
                 <p className="text-body text-lg leading-relaxed mt-4">
-                  For complex medical conditions, ageing family members, or long-term illness, standard care agencies are often insufficient. We provide dedicated Registered Nurses who bring clinical knowledge, assessment skills, and medical authority directly to your doorstep.
+                  Clinical procedures require formal training and strict medical oversight. Our team consists entirely of university-qualified Registered Nurses (RNs) licensed under AHPRA. We deliver complex clinical procedures, vital signs tracking, and chronic disease support directly at home.
                 </p>
               </div>
 
               <div className="space-y-6">
-                <h3 className="text-navy text-2xl font-bold">Personalised Clinical Care Services</h3>
+                <h3 className="text-navy text-2xl font-bold">In-Home Clinical Nursing Capabilities</h3>
                 <p className="text-body">
-                  We create a comprehensive clinical profile for every client. Our founders oversee every assessment to ensure the highest standards of safety, dignity, and clinical accuracy.
+                  We work closely with your GP, hospital discharge team, and specialist coordinators to ensure all care complies with your medical guidelines.
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
                   <div className="card-base p-5 flex gap-4">
                     <Activity className="w-8 h-8 text-teal-accent flex-shrink-0" />
                     <div>
-                      <h4 className="text-navy font-bold mb-1">Clinical Assessment</h4>
-                      <p className="text-body text-sm">Regular comprehensive health checks, monitoring vital organs, fluid balance, and physical status.</p>
+                      <h4 className="text-navy font-bold mb-1">Clinical Assessments</h4>
+                      <p className="text-body text-sm">Comprehensive health reviews, monitoring vital organs, oxygen levels, fluid balance, and physical status.</p>
                     </div>
                   </div>
 
                   <div className="card-base p-5 flex gap-4">
                     <HeartPulse className="w-8 h-8 text-teal-accent flex-shrink-0" />
                     <div>
-                      <h4 className="text-navy font-bold mb-1">Chronic Disease Care</h4>
-                      <p className="text-body text-sm">Proactive management and symptom monitoring for diabetes, heart failure, COPD, Parkinson&apos;s, and dementia.</p>
+                      <h4 className="text-navy font-bold mb-1">Complex Care Delivery</h4>
+                      <p className="text-body text-sm">Sterile wound dressing changes, catheter management, subcutaneous injections (e.g. Clexane, insulin), and vitals tracking.</p>
                     </div>
                   </div>
 
                   <div className="card-base p-5 flex gap-4">
                     <ShieldCheck className="w-8 h-8 text-teal-accent flex-shrink-0" />
                     <div>
-                      <h4 className="text-navy font-bold mb-1">Respite & Crisis Support</h4>
-                      <p className="text-body text-sm">Giving family caregivers essential respite, knowing a qualified nurse is watching over their loved one.</p>
+                      <h4 className="text-navy font-bold mb-1">Chronic Illness Monitoring</h4>
+                      <p className="text-body text-sm">Ongoing management and symptom tracking for diabetes, congestive heart failure, COPD, and neurological conditions.</p>
                     </div>
                   </div>
 
                   <div className="card-base p-5 flex gap-4">
                     <UserCheck className="w-8 h-8 text-teal-accent flex-shrink-0" />
                     <div>
-                      <h4 className="text-navy font-bold mb-1">Same Nurse Consistency</h4>
-                      <p className="text-body text-sm">Enjoy absolute peace of mind with the same nurse attending every visit, building real clinical trust.</p>
+                      <h4 className="text-navy font-bold mb-1">GP & Specialist Liaison</h4>
+                      <p className="text-body text-sm">Writing concise handover reports, performing medication reconciliations, and reporting changes immediately to your doctors.</p>
                     </div>
                   </div>
                 </div>
@@ -105,20 +105,20 @@ export default function ClinicalCareServices() {
               <div className="bg-surface p-6 rounded-2xl border border-border">
                 <h3 className="text-navy text-xl font-bold mb-3 flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-teal-accent" />
-                  What is included in our clinical care?
+                  Our Clinical Safeguards
                 </h3>
                 <ul className="space-y-3 text-body text-sm">
                   <li className="flex items-start gap-2">
                     <span className="text-teal-accent font-bold">•</span>
-                    <span><strong>Accurate documentation:</strong> Maintain detailed clinical charts at home for medical reviews.</span>
+                    <span><strong>Formal Documentation:</strong> Every procedure is charted on a professional Medication Administration Record (MAR) or clinical progress note.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-teal-accent font-bold">•</span>
-                    <span><strong>Proactive GP contact:</strong> Fast escalation and coordination if symptoms drift.</span>
+                    <span><strong>Infection Control:</strong> Absolute adherence to sterile and clean techniques to prevent wound infections and cellulitis.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-teal-accent font-bold">•</span>
-                    <span><strong>Clinical advocacy:</strong> Assistance in clarifying complex diagnoses and hospital directions for the family.</span>
+                    <span><strong>Professional Advocacy:</strong> Helping you and your family clarify complex clinical diagnoses and follow hospital directions.</span>
                   </li>
                 </ul>
               </div>
@@ -129,7 +129,7 @@ export default function ClinicalCareServices() {
               <div className="sticky top-24">
                 <ContactForm
                   title="Enquire About Clinical Care"
-                  subtitle="Provide your contact details below. A registered nurse will call you back to discuss how we can support you."
+                  subtitle="Provide your contact details below. A registered nurse co-founder will call you back shortly to discuss how we can support you."
                   defaultService="Registered Nurses Clinical care Services"
                 />
               </div>
@@ -158,8 +158,8 @@ export default function ClinicalCareServices() {
       </section>
 
       <CTASection
-        title="Arrange your free initial telephone consult."
-        description="Speak directly with our co-founders to review your in-home nursing needs and design a regular schedule."
+        title="Arrange clinical home care visits with a Registered Nurse."
+        description="Call us today to discuss your medical guidelines and set up a clinical assessment in Perth."
         secondaryLink={{ text: 'Contact Us Now', href: '/contact' }}
       />
     </>

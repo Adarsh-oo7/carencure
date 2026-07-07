@@ -78,32 +78,41 @@ export function Footer() {
           {/* Locations */}
           <div>
             <h4 className="font-semibold text-white text-base mb-4">Perth Locations</h4>
-            <ul className="space-y-2.5">
+            <div className="grid grid-cols-2 gap-x-4 gap-y-2.5">
               {[
                 { label: 'Nedlands', href: '/locations/nedlands' },
                 { label: 'Subiaco', href: '/locations/subiaco' },
                 { label: 'Cottesloe', href: '/locations/cottesloe' },
-                { label: 'City of Gosnells', href: '/locations/gosnells' },
-                { label: 'City of Armadale', href: '/locations/armadale' },
+                { label: 'Claremont', href: '/locations/claremont' },
+                { label: 'Wembley', href: '/locations/wembley' },
+                { label: 'Floreat', href: '/locations/floreat' },
+                { label: 'Gosnells', href: '/locations/gosnells' },
+                { label: 'Armadale', href: '/locations/armadale' },
                 { label: 'Rockingham', href: '/locations/rockingham' },
-                { label: 'Fremantle', href: '/locations/fremantle' },
+                { label: 'Applecross', href: '/locations/applecross' },
                 { label: 'South Perth', href: '/locations/south-perth' },
+                { label: 'Booragoon', href: '/locations/booragoon' },
+                { label: 'Canning Vale', href: '/locations/canning-vale' },
+                { label: 'Mt Pleasant', href: '/locations/mount-pleasant' },
+                { label: 'Fremantle', href: '/locations/fremantle' },
+                { label: 'Mt Lawley', href: '/locations/mount-lawley' },
+                { label: 'Inglewood', href: '/locations/inglewood' },
+                { label: 'Leederville', href: '/locations/leederville' },
+                { label: 'Victoria Park', href: '/locations/victoria-park' },
                 { label: 'Joondalup', href: '/locations/joondalup' },
                 { label: 'Midland', href: '/locations/midland' },
-                { label: 'Claremont', href: '/locations/claremont' },
-                { label: 'Canning Vale', href: '/locations/canning-vale' },
                 { label: 'All Suburbs →', href: '/locations' },
               ].map((link) => (
-                <li key={link.href}>
+                <div key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-white/70 hover:text-white text-sm transition-colors"
+                    className="text-white/70 hover:text-white text-xs transition-colors block"
                   >
                     {link.label}
                   </Link>
-                </li>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
 
           {/* Contact */}

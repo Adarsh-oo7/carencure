@@ -85,9 +85,12 @@ export default function HomePage() {
 
       <HeroSection
         badge="Your Dedicated Nurse"
-        headline="One Client. One Nurse Coordinator. One Trusted Relationship."
+        headline="Registered Nurse Home Care & Private Nursing Perth"
         subheadline={
           <div className="space-y-4">
+            <h2 className="text-teal-accent text-xl sm:text-2xl font-bold">
+              One Client. One Dedicated Nurse Coordinator. One Trusted Relationship.
+            </h2>
             <p className="text-white/90 text-lg leading-relaxed">
               When someone you love needs care at home, the last thing you want is a stranger from a call centre who&apos;s juggling 300 other families — reading your mum&apos;s notes for the first time at the front door.
             </p>

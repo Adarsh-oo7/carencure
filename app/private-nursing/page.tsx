@@ -6,23 +6,23 @@ import { ContactForm } from '@/components/contact-form'
 import { Activity, ShieldCheck, HeartPulse, UserCheck, CheckCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Private Nursing at Home Perth | The Nurse Who Knows You',
-  description: 'In-home private nursing by registered nurses in Perth. Customised nursing assessments, chronic illness support, respite, and long-term care.',
+  title: 'Private Nurse Hire Perth | In-Home Private Nursing Services',
+  description: 'Hire a private nurse at home in Perth, WA. Customised private clinical care, in-home respite, post-op recovery, and dedicated clinical advocacy by Registered Nurses.',
   alternates: { canonical: 'https://carencure.com.au/private-nursing' },
 }
 
 const faqs = [
   {
-    question: 'How is private nursing different from general care support?',
-    answer: 'General care support is provided by support workers or assistants in nursing (AINs) who help with non-clinical tasks (showering, cleaning). Private nursing is provided strictly by licensed Registered Nurses (RNs) who can perform clinical duties like administering injections, wound management, catheter care, and vital signs monitoring.',
+    question: 'How do I hire a private nurse in Perth?',
+    answer: 'Hiring a private nurse with Care N Cure is simple. Call us directly on 1300 919 663 to speak with a Registered Nurse co-founder. We discuss your clinical needs, contact your medical team if required, and schedule a free in-home clinical assessment to begin services.',
   },
   {
-    question: 'Can I choose the time of the nurse visits?',
-    answer: 'Yes. We work directly with you and your family to establish a visit schedule that fits your preferences and medical requirements. We maintain high consistency so you get the same nurse at the agreed time.',
+    question: 'Can I hire a private nurse for post-surgical recovery?',
+    answer: 'Yes. We specialize in post-operative recovery care at home. A private Registered Nurse can visit to manage surgical dressings, remove sutures or staples, manage drains, administer injections, and closely monitor for signs of infection or complications.',
   },
   {
-    question: 'Do you offer respite nursing for families?',
-    answer: 'Yes. We provide nursing-led respite care. This gives family caregivers peace of mind knowing that their relative with complex clinical needs is under the direct, expert supervision of a registered nurse.',
+    question: 'Is private nurse hire covered by Home Care Packages (HCP) or NDIS?',
+    answer: 'Yes. Private nursing can be funded through your Home Care Package (HCP) Level 1–4, NDIS (plan-managed or self-managed), DVA, or through private pay. Speak to your care manager or contact us directly to coordinate funding.',
   },
 ]
 
@@ -30,20 +30,20 @@ export default function PrivateNursing() {
   return (
     <>
       <ServicePageSchema
-        serviceName="Private Nursing at Home"
-        description="A registered nurse, at your home, on your schedule. Personalised clinical assessments, chronic condition monitoring, respite nursing, and expert clinical advocacy in Perth."
+        serviceName="Private Nurse Hire and In-Home Care"
+        description="Hire a private Registered Nurse for custom in-home clinical care, respite, post-operative support, and overnight nursing in Perth, WA."
         url="/private-nursing"
       />
       <FAQPageSchema faqs={faqs} />
 
       <PageHeader
-        title="Private Nursing at Home"
-        subtitle="Professional, registered nursing care in the quiet privacy of your own home."
+        title="Private Nurse Hire & In-Home Care"
+        subtitle="Professional, registered nursing care on your schedule, in the quiet privacy of your own home."
         breadcrumbItems={[
-          { name: 'Services', href: '/#services' },
-          { name: 'Private Nursing', href: '/private-nursing' },
+          { name: 'Services', href: '/services' },
+          { name: 'Private Nurse Hire', href: '/private-nursing' },
         ]}
-        label="Professional In-Home Care"
+        label="Private Registered Nurses"
       />
 
       <section className="section-py bg-white">
@@ -53,50 +53,50 @@ export default function PrivateNursing() {
             {/* Main Content */}
             <div className="lg:col-span-7 space-y-8">
               <div>
-                <p className="section-label mb-2">Dedicated Nursing</p>
-                <h2 className="text-navy text-3xl font-bold">University-trained Registered Nurses</h2>
+                <p className="section-label mb-2">Dedicated Nursing Support</p>
+                <h2 className="text-navy text-3xl font-bold">Hire a qualified private nurse for personalized home care</h2>
                 <div className="section-divider" />
                 <p className="text-body text-lg leading-relaxed mt-4">
-                  For complex medical conditions, ageing family members, or long-term illness, standard care agencies are often insufficient. We provide dedicated Registered Nurses who bring clinical knowledge, assessment skills, and medical authority directly to your doorstep.
+                  For complex medical needs, ageing family members, or post-surgical recovery, generic care agencies often fall short. We make it simple to hire dedicated Registered Nurses who bring clinical expertise, clinical assessment skills, and care coordination directly to your home.
                 </p>
               </div>
 
               <div className="space-y-6">
-                <h3 className="text-navy text-2xl font-bold">Personalised Private Nursing Services</h3>
+                <h3 className="text-navy text-2xl font-bold">Our Private Nursing Services include:</h3>
                 <p className="text-body">
-                  We create a comprehensive clinical profile for every client. Our founders oversee every assessment to ensure the highest standards of safety, dignity, and clinical accuracy.
+                  Every client receives a custom care plan overseen by our clinical founders. We ensure you get professional, consistent care from the same nurse at every visit.
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
                   <div className="card-base p-5 flex gap-4">
                     <Activity className="w-8 h-8 text-teal-accent flex-shrink-0" />
                     <div>
-                      <h4 className="text-navy font-bold mb-1">Clinical Assessment</h4>
-                      <p className="text-body text-sm">Regular comprehensive health checks, monitoring vital organs, fluid balance, and physical status.</p>
+                      <h4 className="text-navy font-bold mb-1">In-Home Clinical Visits</h4>
+                      <p className="text-body text-sm">Flexible home visits by a Registered Nurse for clinical tasks, health monitoring, vital checks, and medication safety.</p>
                     </div>
                   </div>
 
                   <div className="card-base p-5 flex gap-4">
                     <HeartPulse className="w-8 h-8 text-teal-accent flex-shrink-0" />
                     <div>
-                      <h4 className="text-navy font-bold mb-1">Chronic Disease Care</h4>
-                      <p className="text-body text-sm">Proactive management and symptom monitoring for diabetes, heart failure, COPD, Parkinson&apos;s, and dementia.</p>
+                      <h4 className="text-navy font-bold mb-1">In-Home Respite & Support</h4>
+                      <p className="text-body text-sm">Giving family caregivers essential respite, knowing their loved one is in the hands of a qualified AHPRA Registered Nurse.</p>
                     </div>
                   </div>
 
                   <div className="card-base p-5 flex gap-4">
                     <ShieldCheck className="w-8 h-8 text-teal-accent flex-shrink-0" />
                     <div>
-                      <h4 className="text-navy font-bold mb-1">Respite & Crisis Support</h4>
-                      <p className="text-body text-sm">Giving family caregivers essential respite, knowing a qualified nurse is watching over their loved one.</p>
+                      <h4 className="text-navy font-bold mb-1">Post-Operative Recovery</h4>
+                      <p className="text-body text-sm">Active clinical oversight following major hospital discharges — managing dressings, stitches, and physical therapy exercise compliance.</p>
                     </div>
                   </div>
 
                   <div className="card-base p-5 flex gap-4">
                     <UserCheck className="w-8 h-8 text-teal-accent flex-shrink-0" />
                     <div>
-                      <h4 className="text-navy font-bold mb-1">Same Nurse Consistency</h4>
-                      <p className="text-body text-sm">Enjoy absolute peace of mind with the same nurse attending every visit, building real clinical trust.</p>
+                      <h4 className="text-navy font-bold mb-1">One Dedicated Nurse Coordinator</h4>
+                      <p className="text-body text-sm">No roster surprises or strangers. Your dedicated nurse coordinator handles your case from start to finish.</p>
                     </div>
                   </div>
                 </div>
@@ -105,20 +105,20 @@ export default function PrivateNursing() {
               <div className="bg-surface p-6 rounded-2xl border border-border">
                 <h3 className="text-navy text-xl font-bold mb-3 flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-teal-accent" />
-                  What is included in private nursing?
+                  Benefits of hiring a private nurse
                 </h3>
                 <ul className="space-y-3 text-body text-sm">
                   <li className="flex items-start gap-2">
                     <span className="text-teal-accent font-bold">•</span>
-                    <span><strong>Accurate documentation:</strong> Maintain detailed clinical charts at home for medical reviews.</span>
+                    <span><strong>Tailored Scheduling:</strong> Arrange visits when they suit you best, with options for hourly clinical checks or extended care.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-teal-accent font-bold">•</span>
-                    <span><strong>Proactive GP contact:</strong> Fast escalation and coordination if symptoms drift.</span>
+                    <span><strong>GP and Specialist Liaison:</strong> We handle complex updates to doctors and surgeons, ensuring seamless continuity.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-teal-accent font-bold">•</span>
-                    <span><strong>Clinical advocacy:</strong> Assistance in clarifying complex diagnoses and hospital directions for the family.</span>
+                    <span><strong>A Professional Clinical Partner:</strong> Direct access to your registered nurse coordinator without passing through call center receptionists.</span>
                   </li>
                 </ul>
               </div>
@@ -129,7 +129,7 @@ export default function PrivateNursing() {
               <div className="sticky top-24">
                 <ContactForm
                   title="Enquire About Private Nursing"
-                  subtitle="Provide your contact details below. A registered nurse will call you back to discuss how we can support you."
+                  subtitle="Provide your contact details below. A registered nurse co-founder will call you back shortly to discuss how we can support you."
                   defaultService="Private Nursing at Home"
                 />
               </div>
@@ -158,8 +158,8 @@ export default function PrivateNursing() {
       </section>
 
       <CTASection
-        title="Arrange your free initial telephone consult."
-        description="Speak directly with our co-founders to review your in-home nursing needs and design a regular schedule."
+        title="Looking for a trusted private nurse in Perth?"
+        description="Call us directly to speak to our registered nurse founders, or request a callback using our secure enquiry form."
         secondaryLink={{ text: 'Contact Us Now', href: '/contact' }}
       />
     </>
