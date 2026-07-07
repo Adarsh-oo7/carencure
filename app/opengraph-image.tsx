@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og'
 
-export const runtime = 'edge'
+export const dynamic = 'force-static'
 export const alt = 'Care N Cure — The Nurse Who Knows You — Perth Home Nursing'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
