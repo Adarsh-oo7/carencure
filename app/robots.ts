@@ -8,7 +8,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/_next/'],
+        disallow: ['/api/', '/_next/', '/cdn-cgi/'],
       },
     ],
     sitemap: 'https://carencure.com.au/sitemap.xml',
