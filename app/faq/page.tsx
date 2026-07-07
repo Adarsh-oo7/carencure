@@ -5,8 +5,10 @@ import { FAQPageSchema } from '@/components/schema'
 import { FAQSection } from '@/components/sections/faq-section'
 
 export const metadata: Metadata = {
-  title: 'Frequently Asked Questions | The Nurse Who Knows You',
-  description: 'Find honest, clear answers to common questions about private home nursing in Perth. Costs, areas served, and hospital discharges.',
+  title: {
+    absolute: 'Home Nursing FAQs | Perth Private Care Answers | Care N Cure',
+  },
+  description: 'Find honest, clear answers to common questions about private home nursing costs, services, and government funding in Perth, WA.',
   alternates: { canonical: 'https://carencure.com.au/faq' },
 }
 

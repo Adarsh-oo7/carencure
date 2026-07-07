@@ -18,7 +18,8 @@ const AREA_SERVED = [
   'Perth', 'Nedlands', 'Subiaco', 'Cottesloe', 'Claremont',
   'Mount Lawley', 'Inglewood', 'Gosnells', 'Armadale',
   'Rockingham', 'Fremantle', 'South Perth', 'Mount Pleasant',
-  'Wembley', 'Floreat', 'Leederville',
+  'Wembley', 'Floreat', 'Leederville', 'Victoria Park',
+  'Joondalup', 'Midland', 'Booragoon', 'Canning Vale',
 ]
 
 export function MedicalBusinessSchema() {

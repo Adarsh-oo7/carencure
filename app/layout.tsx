@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     description: 'Care N Cure provides clinical home nursing and aged care support in Perth, WA. Under our \'The Nurse Who Knows You\' model, you receive a dedicated nurse coordinator.',
     images: [
       {
-        url: '/og-image.png',
+        url: 'https://carencure.com.au/opengraph-image',
         width: 1200,
         height: 630,
         alt: 'Care N Cure — The Nurse Who Knows You — Perth',

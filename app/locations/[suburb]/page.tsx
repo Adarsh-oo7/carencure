@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { PageHeader } from '@/components/page-header'
 import { ContactForm } from '@/components/contact-form'
 import { CTASection } from '@/components/sections/cta'
-import { SuburbPageSchema, FAQPageSchema } from '@/components/schema'
+import { SuburbPageSchema, FAQPageSchema, BreadcrumbSchema } from '@/components/schema'
 import { CheckCircle2, ShieldCheck, Phone, Stethoscope, HeartPulse } from 'lucide-react'
 
 // Define the suburb data mapping
@@ -14,6 +14,23 @@ interface SuburbData {
   region: string
   nearestHospital: string
   description: string
+}
+
+function getLocalText(suburb: string, name: string, region: string): string {
+  const regionPhrases: Record<string, string> = {
+    'Western Suburbs': `We provide regular home visits by Registered Nurses across the Western Suburbs, helping residents manage clinical needs safely in their own homes.`,
+    'Perth South-East': `Our nursing team covers the South-East metropolitan area, offering clinical assessments, wound care, and medication support directly in the community.`,
+    'Perth South': `For residents in Perth's southern corridor, our Registered Nurses deliver professional in-home clinical care tailored to your recovery and health management goals.`,
+    'Inner North': `We service the inner-north suburbs, providing essential clinical services including vital signs tracking, wound management, and support coordination.`,
+    'Fremantle Area': `Our Registered Nurses travel throughout the Fremantle region, delivering qualified clinical care to support post-hospital recovery and independent living.`,
+    'Inner South': `We offer clinical home nursing visits across the inner-south suburbs, coordinating care to help clients maintain health and comfort at home.`,
+    'Inner East': `Our in-home nursing services are available to families in the inner-east region, providing professional clinical support by qualified Registered Nurses.`,
+    'Northern Suburbs': `We extend our professional clinical nursing visits to the northern suburbs, ensuring access to registered nursing care close to home.`,
+    'Eastern Suburbs': `Our clinical home nursing support covers the eastern corridor, providing registered nurse visits for wound management, injections, and health checks.`,
+  };
+
+  const basePhrase = regionPhrases[region] || `Our clinical home nursing services are available to residents across the Perth metropolitan area.`;
+  return `At Care N Cure, we are committed to delivering honest, professional nursing care. ${basePhrase} We work in cooperation with your treating doctors and local healthcare services to support your ongoing recovery in ${name}.`;
 }
 
 const suburbsMap: Record<string, SuburbData> = {
@@ -180,8 +197,10 @@ export async function generateMetadata({ params }: { params: Promise<{ suburb: s
   if (!data) return {}
 
   return {
-    title: `In-Home Registered Nurse ${data.name} WA | The Nurse Who Knows You`,
-    description: `Private home nursing services in ${data.name}, Perth WA. Registered nurses providing post-hospital care, wound dressings, and medication reconciliation.`,
+    title: {
+      absolute: `Registered Nurse ${data.name} | Home Nursing Perth WA`,
+    },
+    description: `In-home clinical care by Registered Nurses in ${data.name}, Perth WA. Wound dressings, injections, and post-hospital recovery support by qualified RNs.`,
     alternates: { canonical: `https://carencure.com.au/locations/${suburb}` },
   }
 }
@@ -216,6 +235,11 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
     <>
       <SuburbPageSchema suburb={data.name} url={`/locations/${suburb}`} />
       <FAQPageSchema faqs={faqs} />
+      <BreadcrumbSchema items={[
+        { name: 'Home', href: '/' },
+        { name: 'Locations', href: '/locations' },
+        { name: data.name, href: `/locations/${suburb}` },
+      ]} />
 
       <PageHeader
         title={`Home Nursing in ${data.name}`}
@@ -242,6 +266,9 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
                 <div className="section-divider" />
                 <p className="text-body text-lg leading-relaxed mt-4">
                   {data.description}
+                </p>
+                <p className="text-body leading-relaxed mt-3">
+                  {getLocalText(suburb, data.name, data.region)}
                 </p>
                 <p className="text-body leading-relaxed mt-3">
                   Care N Cure is a Perth-based nursing practice founded by Jinu and Zuhair — two registered nurses with a combined 25+ years of hospital and community nursing experience. We provide in-home nursing visits across {data.name} and all adjacent Perth suburbs.

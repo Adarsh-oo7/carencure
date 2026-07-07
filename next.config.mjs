@@ -7,7 +7,30 @@ const nextConfig = {
     unoptimized: true,
   },
   async redirects() {
-    return []
+    return [
+      // Old static HTML redirect files removed — send 301 to proper Next.js routes
+      {
+        source: '/locations/midland/index.html',
+        destination: '/locations/midland',
+        permanent: true,
+      },
+      {
+        source: '/locations/joondalup/index.html',
+        destination: '/locations/joondalup',
+        permanent: true,
+      },
+      // Trailing-slash variants for suburb pages (safety net)
+      {
+        source: '/locations/midland/',
+        destination: '/locations/midland',
+        permanent: true,
+      },
+      {
+        source: '/locations/joondalup/',
+        destination: '/locations/joondalup',
+        permanent: true,
+      },
+    ]
   },
 
   async headers() {

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://carencure.com.au/locations' },
 }
 
-const suburbsList = [
+const primarySuburbs = [
   { name: 'Nedlands', href: '/locations/nedlands', description: 'Clinical nursing recovery care near Sir Charles Gairdner Hospital and Hollywood Private.', distance: 'Western Suburbs' },
   { name: 'Subiaco', href: '/locations/subiaco', description: 'Sterile wound dressings and medication management for Subiaco and West Perth residents.', distance: 'Western Suburbs' },
   { name: 'Cottesloe', href: '/locations/cottesloe', description: 'Nursing-led companion care and mobility support for seniors in beachside Cottesloe.', distance: 'Western Suburbs' },
@@ -23,6 +23,24 @@ const suburbsList = [
   { name: 'Fremantle', href: '/locations/fremantle', description: 'Post-hospital transitions and chronic condition management for the Fremantle region.', distance: 'Fremantle Area' },
   { name: 'South Perth', href: '/locations/south-perth', description: 'Companion care, respite nursing, and active medication reconciliation in South Perth.', distance: 'Inner South' },
 ]
+
+const additionalSuburbs = [
+  { name: 'Claremont', href: '/locations/claremont', description: 'In-home nursing and aged care in Claremont, Karrakatta, and Mount Claremont.', distance: 'Western Suburbs' },
+  { name: 'Inglewood', href: '/locations/inglewood', description: 'Registered nurse visits, sterile dressings, and monitoring in Inglewood and Maylands.', distance: 'Inner North' },
+  { name: 'Booragoon', href: '/locations/booragoon', description: 'Post-surgical recovery and wound care near Garden City, Booragoon and Myaree.', distance: 'Perth South' },
+  { name: 'Canning Vale', href: '/locations/canning-vale', description: 'Home nursing, wound dressings, and chronic disease monitoring in Canning Vale.', distance: 'Perth South-East' },
+  { name: 'Wembley', href: '/locations/wembley', description: 'Private home nursing care across Wembley and Wembley Downs.', distance: 'Western Suburbs' },
+  { name: 'Floreat', href: '/locations/floreat', description: 'Clinical nursing and post-hospital support in Floreat and Perry Lakes.', distance: 'Western Suburbs' },
+  { name: 'Mount Pleasant', href: '/locations/mount-pleasant', description: 'Registered nurse visits in Mount Pleasant and Brentwood — medication and wound care.', distance: 'Perth South' },
+  { name: 'Leederville', href: '/locations/leederville', description: 'Clinical nursing, post-operative support, and medication checks in Leederville.', distance: 'Inner North' },
+  { name: 'Victoria Park', href: '/locations/victoria-park', description: 'Private nursing, wound care, and medication management in Victoria Park.', distance: 'Inner East' },
+  { name: 'Joondalup', href: '/locations/joondalup', description: 'Professional in-home nursing across Joondalup, Edgewater, and Currambine.', distance: 'Northern Suburbs' },
+  { name: 'Midland', href: '/locations/midland', description: 'Registered nurse home visits in Midland, Middle Swan, and Guildford.', distance: 'Eastern Suburbs' },
+]
+
+// Combined for components that need flat list
+const suburbsList = [...primarySuburbs, ...additionalSuburbs]
+
 
 const hospitalPartners = [
   { name: 'Fiona Stanley Hospital', location: 'Murdoch', icon: Building2, desc: 'Coordinating safe discharges for south metro surgical and medical patients.' },

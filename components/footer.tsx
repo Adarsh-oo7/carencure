@@ -82,12 +82,16 @@ export function Footer() {
               {[
                 { label: 'Nedlands', href: '/locations/nedlands' },
                 { label: 'Subiaco', href: '/locations/subiaco' },
+                { label: 'Cottesloe', href: '/locations/cottesloe' },
                 { label: 'City of Gosnells', href: '/locations/gosnells' },
                 { label: 'City of Armadale', href: '/locations/armadale' },
                 { label: 'Rockingham', href: '/locations/rockingham' },
-
                 { label: 'Fremantle', href: '/locations/fremantle' },
                 { label: 'South Perth', href: '/locations/south-perth' },
+                { label: 'Joondalup', href: '/locations/joondalup' },
+                { label: 'Midland', href: '/locations/midland' },
+                { label: 'Claremont', href: '/locations/claremont' },
+                { label: 'Canning Vale', href: '/locations/canning-vale' },
                 { label: 'All Suburbs →', href: '/locations' },
               ].map((link) => (
                 <li key={link.href}>

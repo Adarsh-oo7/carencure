@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { PageHeader } from '@/components/page-header'
 import { CTASection } from '@/components/sections/cta'
-import { ServicePageSchema } from '@/components/schema'
+import { ServicePageSchema, BreadcrumbSchema } from '@/components/schema'
 import {
   HeartPulse,
   Bandage,
@@ -17,14 +17,16 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Home Nursing Services Perth | Care N Cure',
+  title: {
+    absolute: 'Registered Nurse Home Care Services Perth | Care N Cure',
+  },
   description:
-    'Explore all in-home nursing and aged care services provided by Care N Cure in Perth, WA. Led by registered nurses — wound care, medication management, home care packages, and more.',
+    'Explore all in-home clinical care services provided by Registered Nurses at Care N Cure in Perth, WA. Wound dressing, medication reconciliation, assessments and home care packages.',
   alternates: { canonical: 'https://carencure.com.au/services' },
   openGraph: {
-    title: 'Home Nursing Services Perth | Care N Cure',
+    title: 'Registered Nurse Home Care Services Perth | Care N Cure',
     description:
-      'Registered nurses delivering clinical care at home across Perth. View our full range of nursing services.',
+      'Registered Nurses delivering clinical care at home across Perth. View our full range of nursing services.',
     url: 'https://carencure.com.au/services',
   },
 }
@@ -129,6 +131,10 @@ export default function ServicesPage() {
         description="Complete in-home nursing and aged care services by registered nurses across Perth, WA. Post-hospital recovery, wound care, medication management, home care packages, and more."
         url="/services"
       />
+      <BreadcrumbSchema items={[
+        { name: 'Home', href: '/' },
+        { name: 'Services', href: '/services' },
+      ]} />
 
       <PageHeader
         title="Our Nursing Services"

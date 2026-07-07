@@ -3,8 +3,11 @@ import { MetadataRoute } from 'next'
 export const dynamic = 'force-static'
 
 const BASE_URL = 'https://carencure.com.au'
-const TODAY = '2026-07-04T00:00:00.000Z'
 
+// Dynamic so the sitemap always reflects today when regenerated/deployed
+const NOW = new Date().toISOString()
+
+// All suburb slugs — must match suburbsMap keys in app/locations/[suburb]/page.tsx
 const suburbs = [
   'nedlands',
   'subiaco',
@@ -16,7 +19,6 @@ const suburbs = [
   'mount-lawley',
   'fremantle',
   'south-perth',
-  // Extra suburbs to match service areas section list & old redirects
   'claremont',
   'inglewood',
   'booragoon',
@@ -30,6 +32,7 @@ const suburbs = [
   'midland',
 ]
 
+// Must match slug values in lib/blog-data.ts
 const blogSlugs = [
   'benefits-of-home-nursing-care',
   'post-surgery-recovery-tips',
@@ -41,127 +44,129 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: BASE_URL,
-      lastModified: TODAY,
+      lastModified: NOW,
       changeFrequency: 'weekly',
       priority: 1.0,
     },
+    // ── High-priority service pages ──
     {
       url: `${BASE_URL}/your-dedicated-nurse`,
-      lastModified: TODAY,
+      lastModified: NOW,
       changeFrequency: 'monthly',
-      priority: 0.9,
+      priority: 0.95,
     },
     {
       url: `${BASE_URL}/post-hospital-care`,
-      lastModified: TODAY,
+      lastModified: NOW,
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
       url: `${BASE_URL}/private-nursing`,
-      lastModified: TODAY,
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/wound-care`,
-      lastModified: TODAY,
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/medication-management`,
-      lastModified: TODAY,
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/mobility-support`,
-      lastModified: TODAY,
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/companion-care`,
-      lastModified: TODAY,
+      lastModified: NOW,
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
       url: `${BASE_URL}/registered-nurses-clinical-care-services`,
-      lastModified: TODAY,
+      lastModified: NOW,
       changeFrequency: 'monthly',
       priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/wound-care`,
+      lastModified: NOW,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/medication-management`,
+      lastModified: NOW,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/mobility-support`,
+      lastModified: NOW,
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/companion-care`,
+      lastModified: NOW,
+      changeFrequency: 'monthly',
+      priority: 0.85,
     },
     {
       url: `${BASE_URL}/homecare-packages`,
-      lastModified: TODAY,
+      lastModified: NOW,
       changeFrequency: 'monthly',
-      priority: 0.9,
+      priority: 0.85,
     },
     {
       url: `${BASE_URL}/support-at-home`,
-      lastModified: TODAY,
+      lastModified: NOW,
       changeFrequency: 'monthly',
-      priority: 0.9,
+      priority: 0.85,
     },
     {
       url: `${BASE_URL}/funded-care`,
-      lastModified: TODAY,
+      lastModified: NOW,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    // ── Hub & info pages ──
     {
       url: `${BASE_URL}/services`,
-      lastModified: TODAY,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/about`,
-      lastModified: TODAY,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/referrals`,
-      lastModified: TODAY,
+      lastModified: NOW,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${BASE_URL}/locations`,
-      lastModified: TODAY,
+      lastModified: NOW,
       changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/about`,
+      lastModified: NOW,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/referrals`,
+      lastModified: NOW,
+      changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${BASE_URL}/blog`,
-      lastModified: TODAY,
+      lastModified: NOW,
       changeFrequency: 'weekly',
-      priority: 0.7,
+      priority: 0.75,
     },
     {
       url: `${BASE_URL}/faq`,
-      lastModified: TODAY,
+      lastModified: NOW,
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: `${BASE_URL}/testimonials`,
-      lastModified: TODAY,
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    {
       url: `${BASE_URL}/contact`,
-      lastModified: TODAY,
+      lastModified: NOW,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
+      url: `${BASE_URL}/testimonials`,
+      lastModified: NOW,
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
       url: `${BASE_URL}/privacy`,
-      lastModified: TODAY,
+      lastModified: NOW,
       changeFrequency: 'yearly',
       priority: 0.3,
     },
@@ -169,15 +174,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const suburbPages: MetadataRoute.Sitemap = suburbs.map((suburb) => ({
     url: `${BASE_URL}/locations/${suburb}`,
-    lastModified: TODAY,
-    changeFrequency: 'monthly',
+    lastModified: NOW,
+    changeFrequency: 'monthly' as const,
     priority: 0.8,
   }))
 
   const blogPages: MetadataRoute.Sitemap = blogSlugs.map((slug) => ({
     url: `${BASE_URL}/blog/${slug}`,
-    lastModified: TODAY,
-    changeFrequency: 'monthly',
+    lastModified: NOW,
+    changeFrequency: 'monthly' as const,
     priority: 0.7,
   }))
 

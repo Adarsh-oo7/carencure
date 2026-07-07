@@ -2,16 +2,23 @@ import type { Metadata } from 'next'
 import { PageHeader } from '@/components/page-header'
 import { CTASection } from '@/components/sections/cta'
 import { ShieldCheck, HeartPulse, FileText, ClipboardList, HelpCircle, MessageSquare } from 'lucide-react'
+import { BreadcrumbSchema } from '@/components/schema'
 
 export const metadata: Metadata = {
-  title: 'Clinical Quality & Feedback Policy | Care N Cure',
-  description: 'Our commitment to clinical governance, transparency, and continuous quality improvement for in-home nursing care in Perth.',
+  title: {
+    absolute: 'Clinical Quality & Governance | Care N Cure Perth',
+  },
+  description: 'Our commitment to clinical governance, quality standards, and feedback procedures for in-home nursing care in Perth, WA.',
   alternates: { canonical: 'https://carencure.com.au/testimonials' },
 }
 
 export default function QualityFeedbackPage() {
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: 'Home', href: '/' },
+        { name: 'Quality & Feedback', href: '/testimonials' },
+      ]} />
       <PageHeader
         title="Quality & Feedback"
         subtitle="Our commitment to clinical excellence and transparency."

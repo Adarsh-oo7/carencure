@@ -14,9 +14,11 @@ import { PatientStorySection } from '@/components/sections/patient-story-section
 import { FundedCareSection } from '@/components/sections/funded-care-section'
 
 export const metadata: Metadata = {
-  title: 'The Nurse Who Knows You | Home Care That Feels Personal Again',
+  title: {
+    absolute: 'Registered Nurse Home Care & Private Nursing Perth | Care N Cure',
+  },
   description:
-    'One Client. One Dedicated Nurse Coordinator. Helping Australians stay safe, supported, and independent at home. Book a free consultation today.',
+    'Care N Cure provides clinical home nursing and aged care in Perth, WA by Registered Nurses. Get a dedicated registered nurse coordinator under our personalized model.',
   keywords: [
     'private nursing Perth',
     'home nursing Perth WA',
@@ -29,8 +31,8 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: 'https://carencure.com.au' },
   openGraph: {
-    title: 'The Nurse Who Knows You | Home Care That Feels Personal Again',
-    description: 'One Client. One Dedicated Nurse Coordinator. Helping Australians stay safe, supported, and independent at home.',
+    title: 'Registered Nurse Home Care & Private Nursing Perth | Care N Cure',
+    description: 'Care N Cure provides clinical home nursing and aged care in Perth, WA by Registered Nurses.',
     url: 'https://carencure.com.au',
   },
 }

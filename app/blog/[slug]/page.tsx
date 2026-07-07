@@ -1,10 +1,11 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 import { getBlogPost, getAllBlogPosts } from '@/lib/blog-data'
 import { Button } from '@/components/ui/button'
 import { Calendar, User, Clock, Tag, ArrowLeft, ArrowRight } from 'lucide-react'
+import { BreadcrumbSchema } from '@/components/schema'
 
 // Pre-build all blog post pages at build time (SSG)
 export function generateStaticParams() {
@@ -116,6 +117,11 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
+      <BreadcrumbSchema items={[
+        { name: 'Home', href: '/' },
+        { name: 'Blog', href: '/blog' },
+        { name: post.title, href: `/blog/${post.slug}` },
+      ]} />
 
       {/* Hero */}
       <section className="bg-navy py-16 sm:py-20">

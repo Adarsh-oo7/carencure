@@ -1,13 +1,15 @@
 import type { Metadata } from 'next'
 import { PageHeader } from '@/components/page-header'
 import { CTASection } from '@/components/sections/cta'
-import { MedicalBusinessSchema, PersonSchema } from '@/components/schema'
+import { MedicalBusinessSchema, PersonSchema, BreadcrumbSchema } from '@/components/schema'
 import { Shield, Heart, Users, ClipboardCheck, BadgeCheck } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: "About The Nurse Who Knows You — Perth's Founder-Led Private Nursing Practice",
+  title: {
+    absolute: 'About Us | Perth Private Home Nursing Practice | Care N Cure',
+  },
   description:
-    'The Nurse Who Knows You was founded by registered nurses Jinu and Zuhair, bringing over a decade of clinical experience each to Perth home care.',
+    'Care N Cure was founded by registered nurses Jinu and Zuhair, bringing over a decade of clinical experience each to Perth home nursing and private care.',
   alternates: { canonical: 'https://carencure.com.au/about' },
 }
 
@@ -47,6 +49,10 @@ export default function AboutPage() {
       <MedicalBusinessSchema />
       <PersonSchema name="Jinu Maecheril Sukumaran" jobTitle="Registered Nurse, Co-Founder" description="Co-founder of The Nurse Who Knows You. 10+ years nursing experience." />
       <PersonSchema name="Mohamed Zuhair Parayil Ummer" jobTitle="Registered Nurse, Co-Founder" description="Co-founder of The Nurse Who Knows You. 15+ years nursing experience." />
+      <BreadcrumbSchema items={[
+        { name: 'Home', href: '/' },
+        { name: 'About', href: '/about' },
+      ]} />
 
       <PageHeader
         title="About The Nurse Who Knows You"
