@@ -6,10 +6,13 @@ import { ContactForm } from '@/components/contact-form'
 import { Bandage, ShieldAlert, Award, Stethoscope, CheckCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'In-Home Wound Care & Dressing Perth | The Nurse Who Knows You',
-  description: 'Professional wound care at home by registered nurses in Perth. Surgical dressings, skin tears, ulcers, drain management, and infection prevention.',
+  title: {
+    absolute: 'Wound Care Perth | Home Wound Dressing | Care N Cure',
+  },
+  description: 'Professional sterile wound management at home. Post-surgical dressings, chronic ulcer care, infection monitoring by AHPRA-registered nurses. Perth-wide service.',
   alternates: { canonical: 'https://carencure.com.au/wound-care' },
 }
+
 
 const faqs = [
   {
@@ -30,11 +33,18 @@ export default function WoundCare() {
   return (
     <>
       <ServicePageSchema
-        serviceName="Wound Care and Dressing"
-        description="Professional wound assessment and sterile dressing by registered nurses in Perth, WA. Surgical wounds, ulcers, skin tears, and active infection prevention."
+        serviceName="Wound Care Perth | Home Wound Dressing | Care N Cure"
+        description="Professional sterile wound management at home. Post-surgical dressings, chronic ulcer care, infection monitoring by AHPRA-registered nurses. Perth-wide service."
         url="/wound-care"
+        procedureType="Wound Care"
+        faqs={faqs}
+        breadcrumb={[
+          { name: 'Home', item: 'https://carencure.com.au/' },
+          { name: 'Services', item: 'https://carencure.com.au/services' },
+          { name: 'Wound Care', item: 'https://carencure.com.au/wound-care' },
+        ]}
       />
-      <FAQPageSchema faqs={faqs} />
+
 
       <PageHeader
         title="Wound Care & Dressing"
@@ -152,6 +162,29 @@ export default function WoundCare() {
                 <h4 className="text-navy font-bold mb-2">{faq.question}</h4>
                 <p className="text-body text-sm leading-relaxed">{faq.answer}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-py bg-white border-t border-border">
+        <div className="section-container max-w-4xl">
+          <h2 className="text-navy font-bold text-xl mb-6">Related Nursing Services</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { label: 'Private Nursing', href: '/private-nursing' },
+              { label: 'Clinical Oversight', href: '/registered-nurses-clinical-care-services' },
+              { label: 'Post-Surgical Care', href: '/post-hospital-care' },
+              { label: 'Medication Management', href: '/medication-management' },
+            ].map(({ label, href }) => (
+              <a
+                key={href}
+                href={href}
+                className="card-base p-4 text-sm font-semibold text-navy hover:text-teal-accent flex items-center gap-2 transition-colors"
+              >
+                <span className="text-teal-accent">→</span>
+                {label}
+              </a>
             ))}
           </div>
         </div>

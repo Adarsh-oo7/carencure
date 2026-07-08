@@ -6,10 +6,13 @@ import { ContactForm } from '@/components/contact-form'
 import { Smile, ShieldCheck, Heart, Sparkles, CheckCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Nursing-Led Companion Care Perth | The Nurse Who Knows You',
-  description: 'Premium, nurse-led companionship and social support for seniors in Perth. Cognitive engagement, safety checkups, and detailed updates for families.',
+  title: {
+    absolute: 'Companion Care Perth | Home Companion Services | Care N Cure',
+  },
+  description: 'Meaningful companionship with nurse-led oversight. Social engagement, meal support & wellbeing checks by caring professionals. Serving Perth & surrounds.',
   alternates: { canonical: 'https://carencure.com.au/companion-care' },
 }
+
 
 const faqs = [
   {
@@ -30,11 +33,18 @@ export default function CompanionCare() {
   return (
     <>
       <ServicePageSchema
-        serviceName="Companion Care"
-        description="Premium nursing-led companionship, cognitive enrichment, emotional support, and subtle clinical monitoring for elderly Perth residents."
+        serviceName="Companion Care Perth | Home Companion Services | Care N Cure"
+        description="Meaningful companionship with nurse-led oversight. Social engagement, meal support & wellbeing checks by caring professionals. Serving Perth & surrounds."
         url="/companion-care"
+        procedureType="Companion Care"
+        faqs={faqs}
+        breadcrumb={[
+          { name: 'Home', item: 'https://carencure.com.au/' },
+          { name: 'Services', item: 'https://carencure.com.au/services' },
+          { name: 'Companion Care', item: 'https://carencure.com.au/companion-care' },
+        ]}
       />
-      <FAQPageSchema faqs={faqs} />
+
 
       <PageHeader
         title="Companion Care"
@@ -152,6 +162,29 @@ export default function CompanionCare() {
                 <h4 className="text-navy font-bold mb-2">{faq.question}</h4>
                 <p className="text-body text-sm leading-relaxed">{faq.answer}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-py bg-white border-t border-border">
+        <div className="section-container max-w-4xl">
+          <h2 className="text-navy font-bold text-xl mb-6">Related Nursing Services</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { label: 'Support at Home', href: '/support-at-home' },
+              { label: 'Mobility Support', href: '/mobility-support' },
+              { label: 'Private Nursing', href: '/private-nursing' },
+              { label: 'Home Care Packages', href: '/homecare-packages' },
+            ].map(({ label, href }) => (
+              <a
+                key={href}
+                href={href}
+                className="card-base p-4 text-sm font-semibold text-navy hover:text-teal-accent flex items-center gap-2 transition-colors"
+              >
+                <span className="text-teal-accent">→</span>
+                {label}
+              </a>
             ))}
           </div>
         </div>

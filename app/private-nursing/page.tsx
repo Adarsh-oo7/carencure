@@ -6,10 +6,13 @@ import { ContactForm } from '@/components/contact-form'
 import { Activity, ShieldCheck, HeartPulse, UserCheck, CheckCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Private Nurse Hire Perth | In-Home Private Nursing Services',
-  description: 'Hire a private nurse at home in Perth, WA. Customised private clinical care, in-home respite, post-op recovery, and dedicated clinical advocacy by Registered Nurses.',
+  title: {
+    absolute: 'Private Nurse Perth | In-Home Registered Nursing | Care N Cure',
+  },
+  description: 'Hire a qualified private nurse in Perth. AHPRA-registered RNs for in-home clinical care, post-surgery recovery & chronic disease management. Same nurse, every visit.',
   alternates: { canonical: 'https://carencure.com.au/private-nursing' },
 }
+
 
 const faqs = [
   {
@@ -24,17 +27,29 @@ const faqs = [
     question: 'Is private nurse hire covered by Home Care Packages (HCP) or NDIS?',
     answer: 'Yes. Private nursing can be funded through your Home Care Package (HCP) Level 1–4, NDIS (plan-managed or self-managed), DVA, or through private pay. Speak to your care manager or contact us directly to coordinate funding.',
   },
+  {
+    question: 'What does a private nurse at home do compared to standard support workers?',
+    answer: 'A private nurse at home from Care N Cure is a university-qualified Registered Nurse (RN) registered with AHPRA. Unlike standard support workers, an in home nurse can perform sterile wound care, complex medication management, clinical health assessments, and liaise directly with your GP or surgeon to catch changes in your condition early.',
+  },
 ]
+
 
 export default function PrivateNursing() {
   return (
     <>
       <ServicePageSchema
-        serviceName="Private Nurse Hire and In-Home Care"
-        description="Hire a private Registered Nurse for custom in-home clinical care, respite, post-operative support, and overnight nursing in Perth, WA."
+        serviceName="Private Nurse Perth | In-Home Registered Nursing | Care N Cure"
+        description="Hire a qualified private nurse in Perth. AHPRA-registered nurses for in-home clinical care, post-surgical recovery, and chronic disease management. Same nurse, every visit."
         url="/private-nursing"
+        procedureType="In-Home Nursing Care"
+        faqs={faqs}
+        breadcrumb={[
+          { name: 'Home', item: 'https://carencure.com.au/' },
+          { name: 'Services', item: 'https://carencure.com.au/services' },
+          { name: 'Private Nursing', item: 'https://carencure.com.au/private-nursing' },
+        ]}
       />
-      <FAQPageSchema faqs={faqs} />
+
 
       <PageHeader
         title="Private Nurse Hire & In-Home Care"
@@ -57,12 +72,19 @@ export default function PrivateNursing() {
                 <h2 className="text-navy text-3xl font-bold">Hire a qualified private nurse for personalized home care</h2>
                 <div className="section-divider" />
                 <p className="text-body text-lg leading-relaxed mt-4">
-                  For complex medical needs, ageing family members, or post-surgical recovery, generic care agencies often fall short. We make it simple to hire dedicated Registered Nurses who bring clinical expertise, clinical assessment skills, and care coordination directly to your home.
+                  For complex medical needs, ageing family members, or post-surgical recovery, generic care agencies often fall short. We make it simple to find professional <strong>nurse at home care</strong>. We connect you with a dedicated <strong>in home nurse</strong> who brings clinical expertise, health assessment skills, and consistent coordination directly to you.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <h2 className="text-navy text-2xl font-bold">Private Nurses for Home Care in Perth</h2>
+                <p className="text-body leading-relaxed">
+                  Navigating clinical needs without hospital readmissions is a primary goal for many families. Our <strong>private nurses for home care</strong> provide high-level clinical governance. From clinical assessments and medication safety to liaison with GPs and discharge teams, your care is fully managed by university-trained Registered Nurses.
                 </p>
               </div>
 
               <div className="space-y-6">
-                <h3 className="text-navy text-2xl font-bold">Our Private Nursing Services include:</h3>
+                <h3 className="text-navy text-xl font-bold">Our Private Nursing Services include:</h3>
                 <p className="text-body">
                   Every client receives a custom care plan overseen by our clinical founders. We ensure you get professional, consistent care from the same nurse at every visit.
                 </p>
@@ -152,6 +174,30 @@ export default function PrivateNursing() {
                 <h4 className="text-navy font-bold mb-2">{faq.question}</h4>
                 <p className="text-body text-sm leading-relaxed">{faq.answer}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-py bg-white border-t border-border">
+        <div className="section-container max-w-4xl">
+          <h2 className="text-navy font-bold text-xl mb-6">Related Nursing Services</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { label: 'Clinical Nursing Support', href: '/registered-nurses-clinical-care-services' },
+              { label: 'Wound Care Services', href: '/wound-care' },
+              { label: 'Medication Monitoring', href: '/medication-management' },
+              { label: 'Post-Surgery Recovery', href: '/post-hospital-care' },
+              { label: 'Funded Care Options', href: '/homecare-packages' },
+            ].map(({ label, href }) => (
+              <a
+                key={href}
+                href={href}
+                className="card-base p-4 text-sm font-semibold text-navy hover:text-teal-accent flex items-center gap-2 transition-colors"
+              >
+                <span className="text-teal-accent">→</span>
+                {label}
+              </a>
             ))}
           </div>
         </div>

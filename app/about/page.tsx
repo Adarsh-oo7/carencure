@@ -6,10 +6,10 @@ import { Shield, Heart, Users, ClipboardCheck, BadgeCheck } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'About Us | Perth Private Home Nursing Practice | Care N Cure',
+    absolute: 'About Care N Cure | Perth Registered Nurses | Our Story',
   },
   description:
-    'Care N Cure was founded by registered nurses Jinu and Zuhair, bringing over a decade of clinical experience each to Perth home nursing and private care.',
+    'Founded by two Perth RNs with 25+ years combined experience. Learn about our nurse-led model, AHPRA credentials & commitment to personalised home care.',
   alternates: { canonical: 'https://carencure.com.au/about' },
 }
 

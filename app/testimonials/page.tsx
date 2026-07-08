@@ -6,9 +6,9 @@ import { BreadcrumbSchema } from '@/components/schema'
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Clinical Quality & Governance | Care N Cure Perth',
+    absolute: 'Client Testimonials | Home Nursing Reviews | Care N Cure Perth',
   },
-  description: 'Our commitment to clinical governance, quality standards, and feedback procedures for in-home nursing care in Perth, WA.',
+  description: 'Read what Perth families say about our dedicated nurse coordinators. Real reviews from clients receiving private nursing, wound care & home care support.',
   alternates: { canonical: 'https://carencure.com.au/testimonials' },
 }
 

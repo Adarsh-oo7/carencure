@@ -6,10 +6,13 @@ import { ContactForm } from '@/components/contact-form'
 import { Award, ShieldCheck, HeartPulse, UserCheck, CheckCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Home Care Packages (HCP) Perth | The Nurse Who Knows You',
-  description: 'Maximise your Home Care Package (HCP Levels 1-4) with Care N Cure. Dedicated registered nurse case management, no hidden fees, and transparent care services.',
+  title: {
+    absolute: 'Home Care Packages Perth | HCP Nursing | Care N Cure',
+  },
+  description: 'Navigate Home Care Packages Levels 1-4 with RN case managers. We coordinate nursing visits, wound care & clinical oversight. Perth-based, locally owned.',
   alternates: { canonical: 'https://carencure.com.au/homecare-packages' },
 }
+
 
 const faqs = [
   {
@@ -30,11 +33,18 @@ export default function HomecarePackages() {
   return (
     <>
       <ServicePageSchema
-        serviceName="Homecare packages"
-        description="Coordinated government-funded care packages (HCP Levels 1–4) managed by experienced registered nurse case managers in Perth."
+        serviceName="Home Care Packages Perth | HCP Nursing | Care N Cure"
+        description="Navigate Home Care Packages Levels 1-4 with RN case managers. We coordinate nursing visits, wound care & clinical oversight. Perth-based, locally owned."
         url="/homecare-packages"
+        procedureType="Home Care Packages Co-ordination"
+        faqs={faqs}
+        breadcrumb={[
+          { name: 'Home', item: 'https://carencure.com.au/' },
+          { name: 'Services', item: 'https://carencure.com.au/services' },
+          { name: 'Home Care Packages', item: 'https://carencure.com.au/homecare-packages' },
+        ]}
       />
-      <FAQPageSchema faqs={faqs} />
+
 
       <PageHeader
         title="Home Care Packages"
@@ -152,6 +162,30 @@ export default function HomecarePackages() {
                 <h4 className="text-navy font-bold mb-2">{faq.question}</h4>
                 <p className="text-body text-sm leading-relaxed">{faq.answer}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-py bg-white border-t border-border">
+        <div className="section-container max-w-4xl">
+          <h2 className="text-navy font-bold text-xl mb-6">Related Nursing Services</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { label: 'Private Nursing', href: '/private-nursing' },
+              { label: 'Wound Care Services', href: '/wound-care' },
+              { label: 'Post-Hospital Care', href: '/post-hospital-care' },
+              { label: 'Support at Home', href: '/support-at-home' },
+              { label: 'Funded Care Options', href: '/funded-care' },
+            ].map(({ label, href }) => (
+              <a
+                key={href}
+                href={href}
+                className="card-base p-4 text-sm font-semibold text-navy hover:text-teal-accent flex items-center gap-2 transition-colors"
+              >
+                <span className="text-teal-accent">→</span>
+                {label}
+              </a>
             ))}
           </div>
         </div>

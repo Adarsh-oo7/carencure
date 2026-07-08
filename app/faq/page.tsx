@@ -6,9 +6,9 @@ import { FAQSection } from '@/components/sections/faq-section'
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Home Nursing FAQs | Perth Private Care Answers | Care N Cure',
+    absolute: 'Home Nursing FAQ | Private Nurse Questions | Care N Cure Perth',
   },
-  description: 'Find honest, clear answers to common questions about private home nursing costs, services, and government funding in Perth, WA.',
+  description: 'Answers to common questions about private nursing, Home Care Packages, NDIS funding, costs & service areas. Perth\'s registered nurse home care provider.',
   alternates: { canonical: 'https://carencure.com.au/faq' },
 }
 

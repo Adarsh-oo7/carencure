@@ -15,24 +15,25 @@ import { FundedCareSection } from '@/components/sections/funded-care-section'
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Registered Nurse Home Care & Private Nursing Perth | Care N Cure',
+    absolute: 'Private Nurse Perth | Home Nursing Care | Care N Cure',
   },
   description:
-    'Care N Cure provides clinical home nursing and aged care in Perth, WA by Registered Nurses. Get a dedicated registered nurse coordinator under our personalized model.',
+    "Perth's trusted registered nurse home care service. Dedicated nurse coordinators for private nursing, wound care & post-hospital support. Call 1300 919 663.",
   keywords: [
     'private nursing Perth',
-    'home nursing Perth WA',
-    'dedicated nurse coordinator',
-    'The Nurse Who Knows You',
-    'one client one nurse',
+    'home nursing Perth',
     'registered nurse home visit Perth',
+    'dedicated nurse coordinator',
+    'Care N Cure Perth',
+    'The Nurse Who Knows You',
+    'in-home nursing Perth WA',
     'home care packages Perth',
     'aged care Perth',
   ],
   alternates: { canonical: 'https://carencure.com.au' },
   openGraph: {
-    title: 'Registered Nurse Home Care & Private Nursing Perth | Care N Cure',
-    description: 'Care N Cure provides clinical home nursing and aged care in Perth, WA by Registered Nurses.',
+    title: 'Private Nurse Perth | Home Nursing Care | Care N Cure',
+    description: "Perth's trusted registered nurse home care service. Dedicated nurse coordinators for private nursing, wound care & post-hospital support. Call 1300 919 663.",
     url: 'https://carencure.com.au',
   },
 }

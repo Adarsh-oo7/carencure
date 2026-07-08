@@ -68,6 +68,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${BASE_URL}/private-nursing/elderly-care`,
+      lastModified: NOW,
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
       url: `${BASE_URL}/registered-nurses-clinical-care-services`,
       lastModified: NOW,
       changeFrequency: 'monthly',

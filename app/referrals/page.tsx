@@ -6,17 +6,20 @@ import { ServicePageSchema, FAQPageSchema } from '@/components/schema'
 import { Stethoscope, Building2, Heart, ClipboardList, Phone, Mail, ArrowRight } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Refer a Patient to Care N Cure | Perth Home Nursing',
+  title: {
+    absolute: 'Healthcare Referrals | Partner With Care N Cure | Perth Nurses',
+  },
   description:
-    'Healthcare professionals and families can refer patients to Care N Cure for in-home nursing care in Perth, WA. Fast response, registered nurse-led care, seamless hospital-to-home transitions.',
+    'Refer your patients to Perth\'s dedicated nurse coordinators. Seamless care transitions, clinical oversight & GP communication. Partner with Care N Cure.',
   alternates: { canonical: 'https://carencure.com.au/referrals' },
   openGraph: {
-    title: 'Refer a Patient to Care N Cure | Perth Home Nursing',
+    title: 'Healthcare Referrals | Partner With Care N Cure | Perth Nurses',
     description:
       'Streamlined referral process for GPs, hospitals, and discharge coordinators in Perth. Our registered nurses follow up within 24 hours.',
     url: 'https://carencure.com.au/referrals',
   },
 }
+
 
 const faqs = [
   {
@@ -76,11 +79,16 @@ export default function ReferralsPage() {
   return (
     <>
       <ServicePageSchema
-        serviceName="Patient Referrals"
-        description="Streamlined referral process for Perth hospitals, GPs, and families seeking in-home nursing care from Care N Cure's registered nurses."
+        serviceName="Healthcare Referrals | Partner With Care N Cure | Perth Nurses"
+        description="Refer your patients to Perth's dedicated nurse coordinators. Seamless care transitions, clinical oversight & GP communication. Partner with Care N Cure."
         url="/referrals"
+        procedureType="Clinical Referral Coordination"
+        faqs={faqs}
+        breadcrumb={[
+          { name: 'Home', item: 'https://carencure.com.au/' },
+          { name: 'Referrals', item: 'https://carencure.com.au/referrals' },
+        ]}
       />
-      <FAQPageSchema faqs={faqs} />
 
       <PageHeader
         title="Refer a Patient"

@@ -6,10 +6,13 @@ import { ContactForm } from '@/components/contact-form'
 import { HeartHandshake, ShieldCheck, Home, Car, CheckCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Support at Home Services Perth | The Nurse Who Knows You',
-  description: 'Premium in-home support and daily living assistance for Perth seniors. Managed under registered nurse oversight for maximum safety and care consistency.',
+  title: {
+    absolute: 'Support at Home Perth | Home Care Assistance | Care N Cure',
+  },
+  description: 'Nurse-led companion and domestic care under clinical oversight. Personal care, social support & daily living assistance in Perth. AHPRA-registered nurses.',
   alternates: { canonical: 'https://carencure.com.au/support-at-home' },
 }
+
 
 const faqs = [
   {
@@ -30,11 +33,18 @@ export default function SupportAtHome() {
   return (
     <>
       <ServicePageSchema
-        serviceName="Support at home"
-        description="Warm, respectful daily living support, personal care, domestic assistance, and transport managed under registered nurse oversight in Perth."
+        serviceName="Support at Home Perth | Home Care Assistance | Care N Cure"
+        description="Nurse-led companion and domestic care under clinical oversight. Personal care, social support & daily living assistance in Perth. AHPRA-registered nurses."
         url="/support-at-home"
+        procedureType="Home Support"
+        faqs={faqs}
+        breadcrumb={[
+          { name: 'Home', item: 'https://carencure.com.au/' },
+          { name: 'Services', item: 'https://carencure.com.au/services' },
+          { name: 'Support at Home', item: 'https://carencure.com.au/support-at-home' },
+        ]}
       />
-      <FAQPageSchema faqs={faqs} />
+
 
       <PageHeader
         title="Support at Home"
@@ -57,7 +67,7 @@ export default function SupportAtHome() {
                 <h2 className="text-navy text-3xl font-bold">Helping you live comfortably and independently</h2>
                 <div className="section-divider" />
                 <p className="text-body text-lg leading-relaxed mt-4">
-                  Remaining in your own home as you age should not mean struggling with daily tasks or feeling isolated. Our support services are designed to assist you with the practical aspects of daily life while ensuring your health is monitored by qualified nursing professionals.
+                  Remaining in your own home as you age should not mean struggling with daily tasks or feeling isolated. If you need a professional <strong>nurse for home</strong> care or general daily support, our services are designed to assist you with the practical aspects of daily life while ensuring your health is monitored by qualified nursing professionals.
                 </p>
               </div>
 
@@ -152,6 +162,29 @@ export default function SupportAtHome() {
                 <h4 className="text-navy font-bold mb-2">{faq.question}</h4>
                 <p className="text-body text-sm leading-relaxed">{faq.answer}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-py bg-white border-t border-border">
+        <div className="section-container max-w-4xl">
+          <h2 className="text-navy font-bold text-xl mb-6">Related Nursing Services</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { label: 'Companion Care', href: '/companion-care' },
+              { label: 'Mobility Support', href: '/mobility-support' },
+              { label: 'Private Nursing', href: '/private-nursing' },
+              { label: 'Home Care Packages', href: '/homecare-packages' },
+            ].map(({ label, href }) => (
+              <a
+                key={href}
+                href={href}
+                className="card-base p-4 text-sm font-semibold text-navy hover:text-teal-accent flex items-center gap-2 transition-colors"
+              >
+                <span className="text-teal-accent">→</span>
+                {label}
+              </a>
             ))}
           </div>
         </div>

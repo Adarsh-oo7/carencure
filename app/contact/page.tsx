@@ -5,10 +5,13 @@ import { Phone, Mail, MapPin, Clock, ShieldCheck } from 'lucide-react'
 import { MedicalBusinessSchema } from '@/components/schema'
 
 export const metadata: Metadata = {
-  title: 'Contact | The Nurse Who Knows You Perth WA',
-  description: 'Speak directly with our registered nurse coordinators in Perth. Call 1300 919 663, or send an enquiry today.',
+  title: {
+    absolute: 'Contact Care N Cure | Book Free Nursing Assessment | Perth',
+  },
+  description: 'Book a free care assessment with a registered nurse. Call 1300 919 663 or enquire online. Serving all Perth suburbs with nurse-led home care.',
   alternates: { canonical: 'https://carencure.com.au/contact' },
 }
+
 
 const EMAIL = 'hello@carencure.com.au'
 

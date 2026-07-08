@@ -6,8 +6,8 @@ import { LocalBusinessSchema } from '@/components/schema'
 import { Building2, Stethoscope, Landmark, HeartHandshake } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Home Nursing Service Areas Perth | The Nurse Who Knows You',
-  description: 'Our Registered Nurses provide in-home clinical care across Perth suburbs, including Nedlands, Subiaco, Cottesloe, Gosnells, Armadale, and Rockingham.',
+  title: 'Service Areas | Home Nursing Across Perth | Care N Cure',
+  description: 'We provide registered nurse home care across Perth & surrounding suburbs. Find your area & book a free assessment. Nedlands, Fremantle, Subiaco & more.',
   alternates: { canonical: 'https://carencure.com.au/locations' },
 }
 

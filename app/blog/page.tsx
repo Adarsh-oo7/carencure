@@ -6,9 +6,11 @@ import { Button } from '@/components/ui/button'
 import { Calendar, User, Clock, Tag } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Nursing Care Blog | Home Health Tips & Recovery Advice Perth | Care N Cure',
+  title: {
+    absolute: 'Home Care Blog | Nursing Tips & Advice | Care N Cure Perth',
+  },
   description:
-    'Expert articles on home nursing care, post-surgery recovery, chronic disease management, and wound care from registered nurses at Care N Cure Perth.',
+    'Expert advice from Perth registered nurses. Articles on home care, wound management, chronic disease support & navigating aged care funding in Australia.',
   keywords: [
     'home nursing blog Perth',
     'nursing care tips',
@@ -22,13 +24,14 @@ export const metadata: Metadata = {
     canonical: 'https://carencure.com.au/blog',
   },
   openGraph: {
-    title: 'Nursing Care Blog | Home Health Tips & Recovery Advice Perth | Care N Cure',
+    title: 'Home Care Blog | Nursing Tips & Advice | Care N Cure Perth',
     description:
-      'Expert articles on home nursing care, post-surgery recovery, and chronic disease management from the registered nurses at Care N Cure Perth.',
+      'Expert advice from Perth registered nurses. Articles on home care, wound management, chronic disease support & navigating aged care funding in Australia.',
     type: 'website',
     url: 'https://carencure.com.au/blog',
   },
 }
+
 
 export default function BlogPage() {
   const posts = getAllBlogPosts()

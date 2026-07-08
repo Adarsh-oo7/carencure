@@ -240,12 +240,20 @@ export async function generateMetadata({ params }: { params: Promise<{ suburb: s
   const data = suburbsMap[suburb]
   if (!data) return {}
 
+  // Build a concise surrounding-suburbs string (max 2 suburbs)
+  const nearbyShort = data.surroundingSuburbs.split(',').slice(0, 2).join(' &')
+
   return {
     title: {
-      absolute: `Registered Nurse ${data.name} | Home Nursing Perth WA`,
+      absolute: `Private Nursing ${data.name} | Home Care ${data.region} | Care N Cure`,
     },
-    description: `In-home clinical care by Registered Nurses in ${data.name}, Perth WA. Wound dressings, injections, and post-hospital recovery support by qualified RNs.`,
+    description: `Registered nurse home care in ${data.name}, ${nearbyShort}. Post-surgical recovery, wound care & medication management. 24-48hr response. Call 1300 919 663.`,
     alternates: { canonical: `https://carencure.com.au/locations/${suburb}` },
+    openGraph: {
+      title: `Private Nursing ${data.name} | Home Care ${data.region} | Care N Cure`,
+      description: `Registered nurse home care in ${data.name}, ${nearbyShort}. Post-surgical recovery, wound care & medication management. 24-48hr response. Call 1300 919 663.`,
+      url: `https://carencure.com.au/locations/${suburb}`,
+    },
   }
 }
 
@@ -279,11 +287,6 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
     <>
       <SuburbPageSchema suburb={data.name} url={`/locations/${suburb}`} />
       <FAQPageSchema faqs={faqs} />
-      <BreadcrumbSchema items={[
-        { name: 'Home', href: '/' },
-        { name: 'Locations', href: '/locations' },
-        { name: data.name, href: `/locations/${suburb}` },
-      ]} />
 
       <PageHeader
         title={`Home Nursing in ${data.name}`}

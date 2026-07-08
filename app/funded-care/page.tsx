@@ -7,12 +7,17 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion'
 
+import { ServicePageSchema } from '@/components/schema'
+
 export const metadata: Metadata = {
-  title: 'Home Care Funding | HCP | The Nurse Who Knows You',
-  description:
-    'We support clients through Home Care Packages and post-hospital transition care. Perth home care funding explained simply.',
+  title: {
+    absolute: 'Funded Care Perth | Home Care Packages & NDIS | Care N Cure',
+  },
+  description: 'Access government-funded home care in Perth. Home Care Packages, NDIS, DVA & post-hospital transition support. RN-coordinated care across all Perth suburbs.',
   alternates: { canonical: 'https://carencure.com.au/funded-care' },
 }
+
+
 
 const fundingCards = [
   {
@@ -112,6 +117,17 @@ const faqs = [
 export default function FundedCarePage() {
   return (
     <>
+      <ServicePageSchema
+        serviceName="Funded Care Perth | Home Care Packages & NDIS | Care N Cure"
+        description="Access government-funded home care in Perth. Home Care Packages, NDIS, DVA & post-hospital transition support. RN-coordinated care across all Perth suburbs."
+        url="/funded-care"
+        procedureType="Funded Home Care Guidance"
+        faqs={faqs}
+        breadcrumb={[
+          { name: 'Home', item: 'https://carencure.com.au/' },
+          { name: 'Funded Care', item: 'https://carencure.com.au/funded-care' },
+        ]}
+      />
       {/* SECTION 1 — HERO */}
       <section
         className="py-24 text-center"

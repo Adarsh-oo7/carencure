@@ -2,12 +2,14 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle2, XCircle } from 'lucide-react'
 
+import { ServicePageSchema } from '@/components/schema'
+
 export const metadata: Metadata = {
-  title: 'Your Dedicated Nurse™ | One Client. One Nurse. | The Nurse Who Knows You',
-  description:
-    'Every client has one dedicated Registered Nurse coordinator from initial assessment to ongoing care. Perth\'s unique nurse-led home care model.',
+  title: 'Your Dedicated Nurse | Personal Nurse Coordinator Perth | Care N Cure',
+  description: 'One nurse coordinator assigned to you for the entire care journey. Consistent, personalised nursing care across Perth. Call 1300 919 663.',
   alternates: { canonical: 'https://carencure.com.au/your-dedicated-nurse' },
 }
+
 
 const timelineSteps = [
   {
@@ -67,6 +69,16 @@ const dedicatedNurse = [
 export default function YourDedicatedNursePage() {
   return (
     <>
+      <ServicePageSchema
+        serviceName="Your Dedicated Nurse | Personal Nurse Coordinator Perth | Care N Cure"
+        description="One nurse coordinator assigned to you for the entire care journey. Consistent, personalised nursing care across Perth. Call 1300 919 663."
+        url="/your-dedicated-nurse"
+        procedureType="Personal Nurse Coordinator Model"
+        breadcrumb={[
+          { name: 'Home', item: 'https://carencure.com.au/' },
+          { name: 'Your Dedicated Nurse', item: 'https://carencure.com.au/your-dedicated-nurse' },
+        ]}
+      />
       {/* SECTION 1 — HERO */}
       <section
         className="py-24"

@@ -18,15 +18,15 @@ import {
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Registered Nurse Home Care Services Perth | Care N Cure',
+    absolute: 'Our Nursing Services | Home Care Perth | Care N Cure',
   },
   description:
-    'Explore all in-home clinical care services provided by Registered Nurses at Care N Cure in Perth, WA. Wound dressing, medication reconciliation, assessments and home care packages.',
+    'Full range of registered nurse home care services. Private nursing, wound care, medication management, post-hospital care & Home Care Package coordination.',
   alternates: { canonical: 'https://carencure.com.au/services' },
   openGraph: {
-    title: 'Registered Nurse Home Care Services Perth | Care N Cure',
+    title: 'Our Nursing Services | Home Care Perth | Care N Cure',
     description:
-      'Registered Nurses delivering clinical care at home across Perth. View our full range of nursing services.',
+      'Full range of registered nurse home care services. Private nursing, wound care, medication management, post-hospital care & Home Care Package coordination.',
     url: 'https://carencure.com.au/services',
   },
 }
@@ -127,14 +127,15 @@ export default function ServicesPage() {
   return (
     <>
       <ServicePageSchema
-        serviceName="Home Nursing Services Perth"
-        description="Complete in-home nursing and aged care services by registered nurses across Perth, WA. Post-hospital recovery, wound care, medication management, home care packages, and more."
+        serviceName="Our Nursing Services | Home Care Perth | Care N Cure"
+        description="Full range of registered nurse home care services. Private nursing, wound care, medication management, post-hospital care & Home Care Package coordination."
         url="/services"
+        procedureType="Home Nursing Services Overview"
+        breadcrumb={[
+          { name: 'Home', item: 'https://carencure.com.au/' },
+          { name: 'Services', item: 'https://carencure.com.au/services' },
+        ]}
       />
-      <BreadcrumbSchema items={[
-        { name: 'Home', href: '/' },
-        { name: 'Services', href: '/services' },
-      ]} />
 
       <PageHeader
         title="Our Nursing Services"

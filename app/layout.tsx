@@ -16,10 +16,10 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://carencure.com.au'),
   title: {
-    default: 'Care N Cure | The Nurse Who Knows You | Perth Home Care',
-    template: '%s | Care N Cure — The Nurse Who Knows You',
+    default: 'Private Nurse Perth | Home Nursing Care | Care N Cure',
+    template: '%s | Care N Cure',
   },
-  description: 'Care N Cure provides clinical home nursing and aged care support in Perth, WA. Under our \'The Nurse Who Knows You\' model, you receive a dedicated nurse coordinator.',
+  description: "Perth's trusted registered nurse home care service. Dedicated nurse coordinators for private nursing, wound care & post-hospital support. Call 1300 919 663.",
   keywords: [
     'private nursing Perth',
     'home nursing Perth',
@@ -40,8 +40,8 @@ export const metadata: Metadata = {
     locale: 'en_AU',
     url: 'https://carencure.com.au',
     siteName: 'Care N Cure — The Nurse Who Knows You',
-    title: 'Care N Cure | The Nurse Who Knows You | Perth Home Care',
-    description: 'Care N Cure provides clinical home nursing and aged care support in Perth, WA. Under our \'The Nurse Who Knows You\' model, you receive a dedicated nurse coordinator.',
+    title: 'Private Nurse Perth | Home Nursing Care | Care N Cure',
+    description: "Perth's trusted registered nurse home care service. Dedicated nurse coordinators for private nursing, wound care & post-hospital support. Call 1300 919 663.",
     images: [
       {
         url: 'https://carencure.com.au/opengraph-image',
@@ -53,8 +53,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Care N Cure | The Nurse Who Knows You | Perth Home Care',
-    description: 'Care N Cure provides clinical home nursing and aged care support in Perth, WA. Under our \'The Nurse Who Knows You\' model, you receive a dedicated nurse coordinator.',
+    title: 'Private Nurse Perth | Home Nursing Care | Care N Cure',
+    description: "Perth's trusted registered nurse home care service. Dedicated nurse coordinators for private nursing, wound care & post-hospital support. Call 1300 919 663.",
   },
   robots: {
     index: true,

@@ -6,10 +6,13 @@ import { ContactForm } from '@/components/contact-form'
 import { Activity, ShieldCheck, HeartPulse, UserCheck, CheckCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Registered Nurse Clinical Care Services Perth | Care N Cure',
-  description: 'In-home clinical care by Registered Nurses in Perth, WA. Comprehensive nursing assessments, chronic disease monitoring, wound care, catheter care, and GP coordination.',
+  title: {
+    absolute: 'Clinical Nursing Perth | Registered Nurse Home Care | Care N Cure',
+  },
+  description: 'University-trained RNs delivering complex clinical care at home. Sterile procedures, vital monitoring, GP liaison & chronic illness management across Perth.',
   alternates: { canonical: 'https://carencure.com.au/registered-nurses-clinical-care-services' },
 }
+
 
 const faqs = [
   {
@@ -30,11 +33,18 @@ export default function ClinicalCareServices() {
   return (
     <>
       <ServicePageSchema
-        serviceName="Registered Nurse Clinical Care Services"
-        description="In-home clinical care, complex nursing tasks, chronic disease management, assessments, and GP handovers by registered nurses in Perth, WA."
+        serviceName="Clinical Nursing Perth | Registered Nurse Home Care | Care N Cure"
+        description="University-trained RNs delivering complex clinical care at home. Sterile procedures, vital monitoring, GP liaison & chronic illness management across Perth."
         url="/registered-nurses-clinical-care-services"
+        procedureType="Clinical Nursing Care"
+        faqs={faqs}
+        breadcrumb={[
+          { name: 'Home', item: 'https://carencure.com.au/' },
+          { name: 'Services', item: 'https://carencure.com.au/services' },
+          { name: 'Clinical Care Services', item: 'https://carencure.com.au/registered-nurses-clinical-care-services' },
+        ]}
       />
-      <FAQPageSchema faqs={faqs} />
+
 
       <PageHeader
         title="Registered Nurse Clinical Care Services"
@@ -152,6 +162,29 @@ export default function ClinicalCareServices() {
                 <h4 className="text-navy font-bold mb-2">{faq.question}</h4>
                 <p className="text-body text-sm leading-relaxed">{faq.answer}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-py bg-white border-t border-border">
+        <div className="section-container max-w-4xl">
+          <h2 className="text-navy font-bold text-xl mb-6">Related Nursing Services</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { label: 'Private Nursing', href: '/private-nursing' },
+              { label: 'Wound Care Services', href: '/wound-care' },
+              { label: 'Post-Hospital Care', href: '/post-hospital-care' },
+              { label: 'Medication Management', href: '/medication-management' },
+            ].map(({ label, href }) => (
+              <a
+                key={href}
+                href={href}
+                className="card-base p-4 text-sm font-semibold text-navy hover:text-teal-accent flex items-center gap-2 transition-colors"
+              >
+                <span className="text-teal-accent">→</span>
+                {label}
+              </a>
             ))}
           </div>
         </div>

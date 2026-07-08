@@ -6,10 +6,13 @@ import { ContactForm } from '@/components/contact-form'
 import { Pill, ShieldCheck, Heart, FileSpreadsheet, CheckCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'In-Home Medication Management Perth | The Nurse Who Knows You',
-  description: 'Registered nurses managing complex medications, Webster packs, and administering injections at home in Perth. Safe medication reconciliation.',
+  title: {
+    absolute: 'Medication Management Perth | Home Medication Monitoring | Care N Cure',
+  },
+  description: 'Ensure medication safety at home with RN oversight. Medication reconciliation, compliance monitoring & early change detection. Serving all Perth suburbs.',
   alternates: { canonical: 'https://carencure.com.au/medication-management' },
 }
+
 
 const faqs = [
   {
@@ -30,11 +33,18 @@ export default function MedicationManagement() {
   return (
     <>
       <ServicePageSchema
-        serviceName="Medication Management"
-        description="Medication administration, subcutaneous/intramuscular injections, complex schedule tracking, and medication reconciliation by registered nurses in Perth, WA."
+        serviceName="Medication Management Perth | Home Medication Monitoring | Care N Cure"
+        description="Ensure medication safety at home with RN oversight. Medication reconciliation, compliance monitoring & early change detection. Serving all Perth suburbs."
         url="/medication-management"
+        procedureType="Medication Management"
+        faqs={faqs}
+        breadcrumb={[
+          { name: 'Home', item: 'https://carencure.com.au/' },
+          { name: 'Services', item: 'https://carencure.com.au/services' },
+          { name: 'Medication Management', item: 'https://carencure.com.au/medication-management' },
+        ]}
       />
-      <FAQPageSchema faqs={faqs} />
+
 
       <PageHeader
         title="Medication Management"
@@ -152,6 +162,29 @@ export default function MedicationManagement() {
                 <h4 className="text-navy font-bold mb-2">{faq.question}</h4>
                 <p className="text-body text-sm leading-relaxed">{faq.answer}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-py bg-white border-t border-border">
+        <div className="section-container max-w-4xl">
+          <h2 className="text-navy font-bold text-xl mb-6">Related Nursing Services</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { label: 'Private Nursing', href: '/private-nursing' },
+              { label: 'Post-Hospital Care', href: '/post-hospital-care' },
+              { label: 'Wound Care Services', href: '/wound-care' },
+              { label: 'Home Care Packages', href: '/homecare-packages' },
+            ].map(({ label, href }) => (
+              <a
+                key={href}
+                href={href}
+                className="card-base p-4 text-sm font-semibold text-navy hover:text-teal-accent flex items-center gap-2 transition-colors"
+              >
+                <span className="text-teal-accent">→</span>
+                {label}
+              </a>
             ))}
           </div>
         </div>

@@ -6,10 +6,13 @@ import { ContactForm } from '@/components/contact-form'
 import { ClipboardCheck, Heart, Shield, RefreshCw, CheckCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'In-Home Post-Hospital Recovery Care Perth | The Nurse Who Knows You',
-  description: 'Registered nurses helping patients transition safely from hospital to home in Perth. Post-surgical wound care, vitals, medication checks.',
+  title: {
+    absolute: 'Post Hospital Care Perth | Discharge Nursing Support | Care N Cure',
+  },
+  description: 'Smooth hospital-to-home transitions with dedicated nurse coordinators. Discharge planning, medication checks & follow-up care across Perth. Call 1300 919 663.',
   alternates: { canonical: 'https://carencure.com.au/post-hospital-care' },
 }
+
 
 const faqs = [
   {
@@ -30,11 +33,18 @@ export default function PostHospitalCare() {
   return (
     <>
       <ServicePageSchema
-        serviceName="Post-Hospital Recovery Care"
-        description="Transition safely from hospital to home. Wound checks, medication reconciliation, vitals tracking, and specialist/GP handovers by registered nurses in Perth, WA."
+        serviceName="Post Hospital Care Perth | Discharge Nursing Support | Care N Cure"
+        description="Smooth hospital-to-home transitions with dedicated nurse coordinators. Discharge planning, medication checks & follow-up care across Perth. Call 1300 919 663."
         url="/post-hospital-care"
+        procedureType="Post-Hospital Care"
+        faqs={faqs}
+        breadcrumb={[
+          { name: 'Home', item: 'https://carencure.com.au/' },
+          { name: 'Services', item: 'https://carencure.com.au/services' },
+          { name: 'Post-Hospital Care', item: 'https://carencure.com.au/post-hospital-care' },
+        ]}
       />
-      <FAQPageSchema faqs={faqs} />
+
 
       <PageHeader
         title="Post-Hospital Recovery Care"
@@ -156,6 +166,30 @@ export default function PostHospitalCare() {
                 <h4 className="text-navy font-bold mb-2">{faq.question}</h4>
                 <p className="text-body text-sm leading-relaxed">{faq.answer}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-py bg-white border-t border-border">
+        <div className="section-container max-w-4xl">
+          <h2 className="text-navy font-bold text-xl mb-6">Related Nursing Services</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { label: 'Private Nursing', href: '/private-nursing' },
+              { label: 'Wound Care Services', href: '/wound-care' },
+              { label: 'Medication Management', href: '/medication-management' },
+              { label: 'Clinical Nursing Care', href: '/registered-nurses-clinical-care-services' },
+              { label: 'Home Care Packages', href: '/homecare-packages' },
+            ].map(({ label, href }) => (
+              <a
+                key={href}
+                href={href}
+                className="card-base p-4 text-sm font-semibold text-navy hover:text-teal-accent flex items-center gap-2 transition-colors"
+              >
+                <span className="text-teal-accent">→</span>
+                {label}
+              </a>
             ))}
           </div>
         </div>
