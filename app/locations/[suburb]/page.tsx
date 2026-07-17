@@ -135,10 +135,10 @@ const suburbsMap: Record<string, SuburbData> = {
     name: 'Claremont',
     region: 'Western Suburbs',
     nearestHospital: 'Sir Charles Gairdner Hospital & Hollywood Private',
-    description: 'In-home clinical nursing and aged care support in Claremont, Karrakatta, and Mount Claremont. Post-surgical wound care, medication checks, and nursing assessments.',
+    description: 'Sterile wound care, post-surgical dressing changes, and registered nurse home visits in Claremont, Karrakatta, and Mount Claremont. Wound infections caught early. Medication checks on every visit.',
     surroundingSuburbs: 'Karrakatta, Mount Claremont, and Swanbourne',
-    localHealthcareFocus: 'clinical home nursing assessments, sterile dressing changes, and aged care coordination',
-    localSpecificText: 'Care N Cure provides in-home nursing across Claremont and neighbouring Cottesloe, Swanbourne, and Mosman Park. We actively cover Claremont and are ready to visit within 24–48 hours. Many of our clients in the area are recovering from procedures at Hollywood Private Hospital or Bethesda Hospital, both close by — we coordinate directly with these teams for a smooth handover from hospital to home.',
+    localHealthcareFocus: 'sterile wound dressing changes, post-operative care, and clinical home nursing assessments',
+    localSpecificText: 'Many Claremont residents recovering from surgery at Hollywood Private Hospital or Bethesda Hospital need professional wound care at home before they can safely manage independently. Care N Cure provides sterile wound dressing changes in Claremont — our Registered Nurses use clinical-grade technique and document wound healing progress after every visit, sharing updates directly with your surgeon or GP. We cover Claremont, Swanbourne, Cottesloe, and Mosman Park, and can arrange a nursing visit within 24–48 hours of your call.',
   },
   inglewood: {
     id: 'inglewood',
@@ -254,13 +254,25 @@ export async function generateMetadata({ params }: { params: Promise<{ suburb: s
 
   return {
     title: {
-      absolute: `Private Nursing ${data.name} | Home Care ${data.region} | Care N Cure`,
+      absolute:
+        suburb === 'claremont'
+          ? 'Wound Care Claremont | Home Nursing | Care N Cure Perth'
+          : `Private Nursing ${data.name} | Home Care ${data.region} | Care N Cure`,
     },
-    description: `Registered nurse home care in ${data.name}, ${nearbyShort}. Post-surgical recovery, wound care & medication management. 24-48hr response. Call 1300 919 663.`,
+    description:
+      suburb === 'claremont'
+        ? 'Sterile wound dressing changes at home in Claremont by AHPRA-registered nurses. Post-surgical care, wound infection monitoring & medication management. Call 1300 919 663.'
+        : `Registered nurse home care in ${data.name}, ${nearbyShort}. Post-surgical recovery, wound care & medication management. 24-48hr response. Call 1300 919 663.`,
     alternates: { canonical: `https://carencure.com.au/locations/${suburb}` },
     openGraph: {
-      title: `Private Nursing ${data.name} | Home Care ${data.region} | Care N Cure`,
-      description: `Registered nurse home care in ${data.name}, ${nearbyShort}. Post-surgical recovery, wound care & medication management. 24-48hr response. Call 1300 919 663.`,
+      title:
+        suburb === 'claremont'
+          ? 'Wound Care Claremont | Home Nursing | Care N Cure Perth'
+          : `Private Nursing ${data.name} | Home Care ${data.region} | Care N Cure`,
+      description:
+        suburb === 'claremont'
+          ? 'Sterile wound dressing changes at home in Claremont by AHPRA-registered nurses. Post-surgical care, wound infection monitoring & medication management. Call 1300 919 663.'
+          : `Registered nurse home care in ${data.name}, ${nearbyShort}. Post-surgical recovery, wound care & medication management. 24-48hr response. Call 1300 919 663.`,
       url: `https://carencure.com.au/locations/${suburb}`,
     },
   }
