@@ -55,6 +55,7 @@ const suburbsMap: Record<string, SuburbData> = {
     description: 'Providing in-home registered nurse visits across Subiaco, Jolimont, and Shenton Park. Sterile wound dressing changes and GP clinical coordination.',
     surroundingSuburbs: 'Jolimont, West Perth, and Daglish',
     localHealthcareFocus: 'sterile wound care, catheter changes, and medication reconciliation',
+    localSpecificText: 'Subiaco is centrally located near some of Perth\'s leading medical clinics and hospitals. Our Registered Nurses frequently coordinate post-discharge plans with specialists along Subiaco\'s medical strips. Whether you are returning home from an ortho procedure at SJOG Subiaco or SCGH, we provide expert clinical nursing visits within 24–48 hours of your call.',
   },
   cottesloe: {
     id: 'cottesloe',
@@ -64,6 +65,7 @@ const suburbsMap: Record<string, SuburbData> = {
     description: 'Delivering companion care, medication management, and mobility support for seniors in Cottesloe, Swanbourne, and Peppermint Grove.',
     surroundingSuburbs: 'Swanbourne, Peppermint Grove, and Mosman Park',
     localHealthcareFocus: 'elderly clinical support, mobility assistance, and dedicated nurse checks',
+    localSpecificText: 'For our Cottesloe clients, we offer specialized geriatric support and post-hospital nursing visits. Our co-founders Jinu and Zuhair supervise all clinical assessments in the coastal suburbs, working closely with local GP clinics to maintain your safety, independence, and comfort at home. We actively cover Cottesloe and are ready to visit within 24–48 hours.',
   },
   gosnells: {
     id: 'gosnells',
@@ -83,6 +85,7 @@ const suburbsMap: Record<string, SuburbData> = {
     description: 'Registered nurse home visits for post-surgical recovery, wound care, and chronic condition management across the City of Armadale, including Armadale, Kelmscott, and Byford.',
     surroundingSuburbs: 'Kelmscott, Seville Grove, Mount Nasura, and Byford',
     localHealthcareFocus: 'clinical nursing visits, medication safety, and wound dressing changes',
+    localSpecificText: 'We provide local clinical nursing support across Armadale and the hills district. Our nurses frequently coordinate care for clients returning from Armadale Kelmscott Memorial Hospital, helping them manage complex medication schedules and sterile wound dressings. We are ready to organize an in-home assessment in Armadale within 24–48 hours.',
   },
   rockingham: {
     id: 'rockingham',
@@ -92,6 +95,7 @@ const suburbsMap: Record<string, SuburbData> = {
     description: 'Professional in-home nursing care, sterile wound dressings, and medication management across Rockingham, Baldivis, and the surrounding southern corridor.',
     surroundingSuburbs: 'Safety Bay, Shoalwater, Waikiki, and Baldivis',
     localHealthcareFocus: 'hospital discharge coordination, vital signs tracking, and respite support',
+    localSpecificText: 'We actively support families across Rockingham and Baldivis. Our Registered Nurses coordinate closely with Rockingham General Hospital\'s discharge planning teams to ensure wound care supplies and medication safety measures are fully prepared at home. We can schedule clinical nursing visits in the Rockingham area within 24–48 hours of booking.',
   },
   applecross: {
     id: 'applecross',
@@ -101,6 +105,7 @@ const suburbsMap: Record<string, SuburbData> = {
     description: 'Providing in-home private nursing visits and post-operative recovery around Applecross, Mount Pleasant, and Ardross.',
     surroundingSuburbs: 'Mount Pleasant, Ardross, and Alfred Cove',
     localHealthcareFocus: 'private nursing care, post-surgical rehabilitation, and specialist handovers',
+    localSpecificText: 'Our Registered Nurses support Applecross residents returning home from St John of God Murdoch or Fiona Stanley Hospital, providing professional wound care and medication management. We cooperate with local clinics along Canning Highway to ensure a continuous care path. We actively cover Applecross and are ready to visit within 24–48 hours.',
   },
   'mount-lawley': {
     id: 'mount-lawley',
@@ -110,6 +115,7 @@ const suburbsMap: Record<string, SuburbData> = {
     description: 'Registered nurse visits, blood pressure monitoring, subcutaneous injections, and complex medication safety in Mount Lawley, Highgate, and Inglewood.',
     surroundingSuburbs: 'Highgate, Inglewood, Menora, and North Perth',
     localHealthcareFocus: 'subcutaneous injections, blood pressure monitoring, and complex medication safety',
+    localSpecificText: 'Our nursing team serves Mount Lawley and surrounding inner-north areas. We coordinate closely with doctors along the Beaufort Street medical district and Royal Perth Hospital discharge coordinators. We specialize in managing post-operative recovery and complex clinical care at home. We can visit Mount Lawley clients within 24–48 hours.',
   },
   fremantle: {
     id: 'fremantle',
@@ -119,6 +125,7 @@ const suburbsMap: Record<string, SuburbData> = {
     description: 'Post-hospital recovery care, wound management, and nursing-led respite care in Fremantle, East Fremantle, and South Fremantle.',
     surroundingSuburbs: 'East Fremantle, South Fremantle, and Beaconsfield',
     localHealthcareFocus: 'respite nursing, post-hospital recovery, and medical care planning',
+    localSpecificText: 'For residents in Fremantle, South Fremantle, and East Fremantle, we offer comprehensive post-surgical recovery and clinical nursing. We coordinate with Fiona Stanley and Fremantle Hospital teams to organize immediate post-discharge wound care. Our team covers Fremantle actively and is available for visits within 24–48 hours.',
   },
   'south-perth': {
     id: 'south-perth',
@@ -158,6 +165,7 @@ const suburbsMap: Record<string, SuburbData> = {
     description: 'In-home registered nurse visits across Booragoon, Myaree, and Kardinya. Post-surgical recovery, wound care, and medication management close to Garden City.',
     surroundingSuburbs: 'Myaree, Kardinya, and Alfred Cove',
     localHealthcareFocus: 'post-surgical wound dressings, mobility support, and medication checks',
+    localSpecificText: 'We provide clinical home visits in Booragoon and neighboring southern suburbs. Our Registered Nurses coordinate care with Fiona Stanley Hospital and medical centers near Westfield Booragoon, ensuring safe medication administration and wound management at home. We actively cover Booragoon and can arrange a visit within 24–48 hours.',
   },
   'canning-vale': {
     id: 'canning-vale',
@@ -177,6 +185,7 @@ const suburbsMap: Record<string, SuburbData> = {
     description: 'Private home nursing care across Wembley, Jolimont, and Wembley Downs. Wound care, health assessments, and medication coordination.',
     surroundingSuburbs: 'Jolimont, Wembley Downs, and West Leederville',
     localHealthcareFocus: 'private home nursing, clinical wound care, and GP communications',
+    localSpecificText: 'Our Wembley home nursing services are tailored for seniors and post-surgical patients. We maintain regular contact with general practitioners in Wembley and the Western Suburbs, helping coordinate clinical handovers from Sir Charles Gairdner Hospital. Wembley is actively covered, with nursing assessments scheduled within 24–48 hours.',
   },
   floreat: {
     id: 'floreat',
@@ -196,6 +205,7 @@ const suburbsMap: Record<string, SuburbData> = {
     description: 'Professional in-home registered nurse visits in Mount Pleasant and Brentwood. Medication management, wound dressings, and chronic condition monitoring.',
     surroundingSuburbs: 'Brentwood, Applecross, and Bateman',
     localHealthcareFocus: 'registered nurse home visits, medication administration, and chronic condition monitoring',
+    localSpecificText: 'In Mount Pleasant and Brentwood, our Registered Nurses deliver dedicated in-home clinical care. We coordinate closely with St John of God Murdoch and Fiona Stanley Hospital to ensure patients have medication management and wound dressing schedules in place immediately after discharge. We can visit within 24–48 hours.',
   },
   leederville: {
     id: 'leederville',
@@ -215,6 +225,7 @@ const suburbsMap: Record<string, SuburbData> = {
     description: 'In-home nursing services across Victoria Park, Lathlain, and East Victoria Park. Private nursing, wound care, and medication management by registered nurses.',
     surroundingSuburbs: 'Lathlain, East Victoria Park, and Carlisle',
     localHealthcareFocus: 'private nursing, sterile dressings, and medication reconciliation',
+    localSpecificText: 'We service Victoria Park, East Victoria Park, and Carlisle with qualified Registered Nurses. Our team coordinates with Royal Perth Hospital to facilitate smooth transitions home, providing medication reconciliation and wound care reviews. We actively cover Victoria Park and are ready to visit within 24–48 hours.',
   },
   joondalup: {
     id: 'joondalup',
@@ -224,6 +235,7 @@ const suburbsMap: Record<string, SuburbData> = {
     description: 'Professional in-home nursing care across Joondalup, Edgewater, and Currambine. Post-hospital recovery and clinical nursing from the registered nurse team at Care N Cure.',
     surroundingSuburbs: 'Edgewater, Currambine, and Connolly',
     localHealthcareFocus: 'home nursing care, post-surgical transition, and professional clinical oversight',
+    localSpecificText: 'For our Joondalup and northern corridor clients, we coordinate closely with Joondalup Health Campus to manage safe discharges. Our Registered Nurses support you with sterile dressing changes, subcutaneous injections, and post-surgical recovery monitoring. We actively cover Joondalup and can arrange a visit within 24–48 hours.',
   },
   midland: {
     id: 'midland',
@@ -233,6 +245,7 @@ const suburbsMap: Record<string, SuburbData> = {
     description: 'Registered nurse home visits in Midland, Middle Swan, and Guildford. Wound care, medication management, and post-hospital recovery support in the eastern corridor.',
     surroundingSuburbs: 'Middle Swan, Guildford, and Bellevue',
     localHealthcareFocus: 'wound dressings, medication administration, and discharge coordination in the eastern corridor',
+    localSpecificText: 'Our Midland nursing team coordinates directly with St John of God Midland Public & Private Hospital. We provide expert clinical care at home, focusing on wound management and medication safety to prevent readmissions. We cover Midland and the eastern suburbs, and can arrange an assessment within 24–48 hours.',
   },
 }
 

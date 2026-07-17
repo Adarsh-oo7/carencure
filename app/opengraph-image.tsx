@@ -5,6 +5,9 @@ export const alt = 'Care N Cure — The Nurse Who Knows You — Perth Home Nursi
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
+// Prevent search engines from indexing this image-generation route as a page
+export const metadata = { robots: { index: false, follow: false } }
+
 export default async function Image() {
   return new ImageResponse(
     (

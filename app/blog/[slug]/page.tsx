@@ -72,7 +72,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
     '@type': 'Article',
     headline: post.title,
     description: post.excerpt,
-    image: post.image,
+    image: `https://carencure.com.au${post.image}`,
     author: {
       '@type': 'Person',
       name: post.author,
