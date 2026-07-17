@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { PageHeader } from '@/components/page-header'
 import { CTASection } from '@/components/sections/cta'
 import { ServicePageSchema, FAQPageSchema } from '@/components/schema'
@@ -67,7 +68,7 @@ export default function HomecarePackages() {
                 <h2 className="text-navy text-3xl font-bold">Maximise your care with nurse-led package management</h2>
                 <div className="section-divider" />
                 <p className="text-body text-lg leading-relaxed mt-4">
-                  A Home Care Package (HCP) allows you to choose your own provider to coordinate your services. At Care N Cure, we believe that aged care coordination should be run by clinicians, not administrative staff. Our co-founders oversee your care plan, budget, and services to ensure you get the absolute best outcomes.
+                  A Home Care Package (HCP) allows you to choose your own provider to coordinate your services. At Care N Cure, we believe that aged care coordination should be run by clinicians, not administrative staff. Our co-founders oversee your care plan, budget, and services to ensure you get the absolute best outcomes, integrating clinical oversight seamlessly with your everyday <Link href="/support-at-home" className="text-teal-text hover:underline font-semibold">support at home</Link>.
                 </p>
               </div>
 

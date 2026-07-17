@@ -56,7 +56,7 @@ export function MedicalBusinessSchema() {
           {
             '@type': 'OpeningHoursSpecification',
             dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-            opens: '08:00',
+            opens: '09:00',
             closes: '18:00',
           },
           {
@@ -249,6 +249,7 @@ export function LocalBusinessSchema() {
     description:
       'In-home nursing care by registered nurses. Perth, WA. Dedicated nurse coordinators for private nursing, wound care, medication management, and post-hospital support.',
     url: SITE_URL,
+    image: `${SITE_URL}/logo.png`,
     telephone: PHONE_SCHEMA,
     email: EMAIL,
     address: {
@@ -266,7 +267,7 @@ export function LocalBusinessSchema() {
       name: area,
       containedInPlace: { '@type': 'State', name: 'Western Australia' },
     })),
-    openingHours: ['Mo-Fr 08:00-18:00', 'Sa-Su 09:00-17:00'],
+    openingHours: ['Mo-Fr 09:00-18:00', 'Sa-Su 09:00-17:00'],
   }
 
   return (
@@ -535,7 +536,7 @@ export function SuburbPageSchema({ suburb, url }: { suburb: string; url: string 
           description: `${suburb}, ${geo.nearbySuburbs}`,
         },
         priceRange: '$$',
-        openingHours: ['Mo-Fr 08:00-18:00', 'Sa-Su 09:00-17:00'],
+        openingHours: ['Mo-Fr 09:00-18:00', 'Sa-Su 09:00-17:00'],
         hasMap: `https://www.google.com/maps/search/Care+N+Cure+${encodeURIComponent(suburb)}+Perth`,
         parentOrganization: {
           '@id': `${SITE_URL}/#medicalorg`,

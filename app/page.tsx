@@ -8,7 +8,7 @@ import { FoundersPreview } from '@/components/sections/founders-preview'
 import { ServiceAreas } from '@/components/sections/service-areas'
 import { FAQSection } from '@/components/sections/faq-section'
 import { CTASection } from '@/components/sections/cta'
-import { MedicalBusinessSchema, OrganizationSchema, LocalBusinessSchema } from '@/components/schema'
+import { MedicalBusinessSchema, OrganizationSchema, LocalBusinessSchema, FAQPageSchema } from '@/components/schema'
 import { DedicatedNurseSection } from '@/components/sections/dedicated-nurse-section'
 import { PatientStorySection } from '@/components/sections/patient-story-section'
 import { FundedCareSection } from '@/components/sections/funded-care-section'
@@ -83,6 +83,7 @@ export default function HomePage() {
       <MedicalBusinessSchema />
       <OrganizationSchema />
       <LocalBusinessSchema />
+      <FAQPageSchema faqs={homeFaqs.map(faq => ({ question: faq.question, answer: faq.answer }))} />
 
       <HeroSection
         badge="Your Dedicated Nurse"

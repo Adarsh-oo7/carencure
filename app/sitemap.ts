@@ -38,6 +38,10 @@ const blogSlugs = [
   'post-surgery-recovery-tips',
   'managing-chronic-diseases',
   'wound-care-best-practices',
+  'how-to-find-a-private-nurse-in-perth',
+  'home-care-packages-perth-nursing',
+  'signs-your-parent-needs-in-home-nursing',
+  'hospital-discharge-what-happens-next',
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {

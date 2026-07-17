@@ -16,6 +16,7 @@ interface SuburbData {
   description: string
   surroundingSuburbs: string
   localHealthcareFocus: string
+  localSpecificText?: string
 }
 
 function getLocalText(data: SuburbData): string {
@@ -44,6 +45,7 @@ const suburbsMap: Record<string, SuburbData> = {
     description: 'Serving Nedlands, Dalkeith, and Crawley with professional in-home clinical nursing. Ideal for post-surgical recovery, wound care, and medication management.',
     surroundingSuburbs: 'Dalkeith, Crawley, and Shenton Park',
     localHealthcareFocus: 'post-operative surgical recovery, clinical assessments, and GP communication',
+    localSpecificText: 'Nedlands sits right beside the Queen Elizabeth II Medical Centre, home to Sir Charles Gairdner Hospital and Hollywood Private Hospital — two of the hospitals our Nedlands clients are most often discharged from. That proximity means faster handovers and closer coordination with your treating team. We actively cover Nedlands and are ready to visit within 24–48 hours.',
   },
   subiaco: {
     id: 'subiaco',
@@ -71,6 +73,7 @@ const suburbsMap: Record<string, SuburbData> = {
     description: 'Providing in-home nursing care, wound management, medication support, and post-hospital recovery across the City of Gosnells, including Gosnells, Maddington, Kenwick, and Thornlie.',
     surroundingSuburbs: 'Maddington, Kenwick, Thornlie, and Huntingdale',
     localHealthcareFocus: 'chronic illness monitoring, post-hospital transition care, and home nursing',
+    localSpecificText: 'Our registered nurses provide home nursing services across Gosnells, Maddington, Kenwick, and Thornlie. We coordinate closely with Armadale Kelmscott Memorial Hospital to ensure a smooth discharge process. We actively cover the Gosnells region and are ready to visit within 24–48 hours.',
   },
   armadale: {
     id: 'armadale',
@@ -125,6 +128,7 @@ const suburbsMap: Record<string, SuburbData> = {
     description: 'Companion care, respite nursing, and active medication reconciliation in South Perth, Como, and Kensington.',
     surroundingSuburbs: 'Como, Kensington, and Manning',
     localHealthcareFocus: 'medication management, companion care, and GP clinical coordination',
+    localSpecificText: 'We support families across South Perth, Como, and Manning. We actively cover South Perth and are ready to visit within 24–48 hours. Our clients recovering from hospital stays are often discharged from Royal Perth Hospital or St John of God Murdoch — we liaise with discharge teams to make sure nursing care is in place before you leave hospital, not after.',
   },
   claremont: {
     id: 'claremont',
@@ -134,6 +138,7 @@ const suburbsMap: Record<string, SuburbData> = {
     description: 'In-home clinical nursing and aged care support in Claremont, Karrakatta, and Mount Claremont. Post-surgical wound care, medication checks, and nursing assessments.',
     surroundingSuburbs: 'Karrakatta, Mount Claremont, and Swanbourne',
     localHealthcareFocus: 'clinical home nursing assessments, sterile dressing changes, and aged care coordination',
+    localSpecificText: 'Care N Cure provides in-home nursing across Claremont and neighbouring Cottesloe, Swanbourne, and Mosman Park. We actively cover Claremont and are ready to visit within 24–48 hours. Many of our clients in the area are recovering from procedures at Hollywood Private Hospital or Bethesda Hospital, both close by — we coordinate directly with these teams for a smooth handover from hospital to home.',
   },
   inglewood: {
     id: 'inglewood',
@@ -143,6 +148,7 @@ const suburbsMap: Record<string, SuburbData> = {
     description: 'Registered nurse visits, sterile dressings, injections, and blood pressure monitoring in Inglewood, Maylands, and Bedford.',
     surroundingSuburbs: 'Maylands, Bedford, and Bayswater',
     localHealthcareFocus: 'wound care management, vital signs tracking, and medication safety support',
+    localSpecificText: 'We provide home nursing across Inglewood, Mount Lawley, and Bedford, working alongside GPs and specialists along the Beaufort Street medical precinct. We actively cover Inglewood and can visit within 24–48 hours, coordinating with Royal Perth and Sir Charles Gairdner Hospitals for post-hospital care.',
   },
   booragoon: {
     id: 'booragoon',
@@ -161,6 +167,7 @@ const suburbsMap: Record<string, SuburbData> = {
     description: 'Home nursing care in Canning Vale, Willetton, and Riverton. Registered nurses providing post-hospital support, wound dressings, and chronic disease monitoring.',
     surroundingSuburbs: 'Willetton, Riverton, and Southern River',
     localHealthcareFocus: 'chronic disease management, registered nurse assessments, and home care package support',
+    localSpecificText: 'We support families across Canning Vale, Willetton, and Riverton. We actively cover Canning Vale and are ready to visit within 24–48 hours. Patients transitioning back home after procedures at Fiona Stanley Hospital or St John of God Murdoch can expect prompt care coordination and clinical handovers before discharge.',
   },
   wembley: {
     id: 'wembley',
@@ -179,6 +186,7 @@ const suburbsMap: Record<string, SuburbData> = {
     description: 'Clinical nursing and home care in Floreat and Perry Lakes. Post-hospital support, companion care, and mobility supervision by registered nurses.',
     surroundingSuburbs: 'Wembley, Jolimont, and Churchlands',
     localHealthcareFocus: 'post-hospital recovery support, companion care, and mobility supervision',
+    localSpecificText: 'Serving Floreat, City Beach, and Wembley Downs, our nurses actively cover Floreat and are ready to visit within 24–48 hours. We are familiar with the western suburbs and coordinate closely with Hollywood Private Hospital and Bethesda Hospital for post-hospital and chronic care support.',
   },
   'mount-pleasant': {
     id: 'mount-pleasant',
@@ -197,6 +205,7 @@ const suburbsMap: Record<string, SuburbData> = {
     description: 'Clinical nursing services, post-operative support, and medication checks in Leederville, West Leederville, and North Perth.',
     surroundingSuburbs: 'West Leederville, North Perth, and Wembley',
     localHealthcareFocus: 'clinical nursing services, post-operative assessments, and injection support',
+    localSpecificText: 'Covering Leederville, West Leederville, and North Perth, our nurses actively cover Leederville and are ready to visit within 24–48 hours. We coordinate with Sir Charles Gairdner Hospital and QEII Medical Centre for clients transitioning home after a hospital stay.',
   },
   'victoria-park': {
     id: 'victoria-park',
@@ -317,6 +326,11 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
                 <p className="text-body leading-relaxed mt-3">
                   {getLocalText(data)}
                 </p>
+                {data.localSpecificText && (
+                  <p className="text-body leading-relaxed mt-3 font-semibold text-navy bg-teal-50/50 p-4 rounded-xl border border-teal-100/50">
+                    {data.localSpecificText}
+                  </p>
+                )}
                 <p className="text-body leading-relaxed mt-3">
                   Care N Cure is a Perth-based nursing practice founded by Jinu and Zuhair — two registered nurses with a combined 25+ years of hospital and community nursing experience. We provide in-home nursing visits across {data.name} and all adjacent Perth suburbs.
                 </p>

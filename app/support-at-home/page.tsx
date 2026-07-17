@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { PageHeader } from '@/components/page-header'
 import { CTASection } from '@/components/sections/cta'
 import { ServicePageSchema, FAQPageSchema } from '@/components/schema'
@@ -16,16 +17,24 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    question: 'What types of activities are covered under support at home?',
-    answer: 'Support at home covers a wide range of daily living assistance, including personal care (showering, dressing, grooming), domestic assistance (light cleaning, laundry, meal preparation), transport (doctor visits, grocery shopping), and social companionship.',
+    question: "Is Support at Home the same as a Home Care Package?",
+    answer: "Support at Home is the newer government program that has replaced Home Care Packages for new participants. If you already have an existing Home Care Package, your current arrangement continues — we manage both.",
   },
   {
-    question: 'How does nursing oversight benefit standard home support?',
-    answer: 'While support workers assist with daily tasks, having our Registered Nurse co-founders oversee the care plan ensures that any changes in physical health, cognitive patterns, or wound healing are identified early and escalated appropriately before a crisis occurs.',
+    question: "Do I need an assessment to access Support at Home funding?",
+    answer: "Yes, through My Aged Care. We can guide you through this process at no cost, or support you if you're already assessed and looking for a new provider.",
   },
   {
-    question: 'Can I use government funding for support at home?',
-    answer: 'Yes. Support at home is one of the most common services funded through Home Care Packages (HCP). We can deliver these services using your government funding or on a private fee-for-service basis.',
+    question: "What makes Care N Cure's Support at Home different?",
+    answer: "Every client gets a dedicated Nurse Coordinator, not just a rotating support worker roster. Clinical oversight is built into every package, not an optional extra.",
+  },
+  {
+    question: "Can I use Support at Home funding alongside private nursing?",
+    answer: "Yes — many families combine funded support at home with privately-paid nursing visits for extra clinical needs. We help you work out the right mix.",
+  },
+  {
+    question: "How quickly can Support at Home begin?",
+    answer: "Once your funding is confirmed, we can typically begin within 24–48 hours.",
   },
 ]
 
@@ -69,6 +78,41 @@ export default function SupportAtHome() {
                 <p className="text-body text-lg leading-relaxed mt-4">
                   Remaining in your own home as you age should not mean struggling with daily tasks or feeling isolated. If you need a professional <strong>nurse for home</strong> care or general daily support, our services are designed to assist you with the practical aspects of daily life while ensuring your health is monitored by qualified nursing professionals.
                 </p>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-navy text-2xl font-bold">What Does &ldquo;Support at Home&rdquo; Actually Mean?</h3>
+                <p className="text-body leading-relaxed">
+                  Support at Home is the Australian Government's home care program (replacing the old <Link href="/homecare-packages" className="text-teal-text hover:underline font-semibold">Home Care Packages</Link> system) for older Australians who want to stay independent at home rather than move into residential aged care. It funds a mix of personal care, domestic assistance, social support, and — where Care N Cure is involved — nurse-led clinical oversight on top of the everyday support.
+                </p>
+                <p className="text-body leading-relaxed">
+                  This is where we differ from most Support at Home providers: your support isn't just a roster of support workers ticking off tasks. It's coordinated by a Registered Nurse who checks in, monitors changes in health, and flags concerns before they become hospital visits. We provide clinical guidance and home care visits throughout the metropolitan area, including <Link href="/locations/canning-vale" className="text-teal-text hover:underline font-semibold">Canning Vale</Link> and <Link href="/locations/gosnells" className="text-teal-text hover:underline font-semibold">Gosnells</Link>.
+                </p>
+                <div className="bg-surface p-6 rounded-2xl border border-border">
+                  <p className="text-navy font-bold mb-2">Support at Home typically covers:</p>
+                  <ul className="space-y-3 text-body text-sm">
+                    <li className="flex items-start gap-2">
+                      <span className="text-teal-accent font-bold">•</span>
+                      <span>Personal care (showering, dressing, grooming)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-teal-accent font-bold">•</span>
+                      <span>Domestic assistance (cleaning, laundry, meal prep)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-teal-accent font-bold">•</span>
+                      <span><Link href="/companion-care" className="text-teal-text hover:underline font-semibold">Social support and companionship</Link></span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-teal-accent font-bold">•</span>
+                      <span>Transport to appointments</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-teal-accent font-bold">•</span>
+                      <span>Nursing oversight and clinical check-ins (with Care N Cure&apos;s <Link href="/medication-management" className="text-teal-text hover:underline font-semibold">medication & health monitoring</Link> services)</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
 
               <div className="space-y-6">

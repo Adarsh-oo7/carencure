@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { PageHeader } from '@/components/page-header'
 import { CTASection } from '@/components/sections/cta'
 import { ServicePageSchema, FAQPageSchema } from '@/components/schema'
@@ -16,20 +17,24 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    question: 'How do I hire a private nurse in Perth?',
-    answer: 'Hiring a private nurse with Care N Cure is simple. Call us directly on 1300 919 663 to speak with a Registered Nurse co-founder. We discuss your clinical needs, contact your medical team if required, and schedule a free in-home clinical assessment to begin services.',
+    question: "What's the difference between private nursing and a home care package?",
+    answer: "Private nursing is paid directly by you or your family, with no waitlist or government assessment — care can often start within 24–48 hours. A Home Care Package (HCP) is government-funded and requires a My Aged Care assessment first. We support both, and many families use private nursing to bridge the gap while waiting on a package.",
   },
   {
-    question: 'Can I hire a private nurse for post-surgical recovery?',
-    answer: 'Yes. We specialize in post-operative recovery care at home. A private Registered Nurse can visit to manage surgical dressings, remove sutures or staples, manage drains, administer injections, and closely monitor for signs of infection or complications.',
+    question: "Do I need a referral to get a private nurse at home?",
+    answer: "No. You can call us directly, or your GP or hospital discharge team can refer you — either way works.",
   },
   {
-    question: 'Is private nurse hire covered by Home Care Packages (HCP) or NDIS?',
-    answer: 'Yes. Private nursing can be funded through your Home Care Package (HCP) Level 1–4, NDIS (plan-managed or self-managed), DVA, or through private pay. Speak to your care manager or contact us directly to coordinate funding.',
+    question: "Are your private nurses fully registered?",
+    answer: "Yes. Every nurse is registered with AHPRA (Australian Health Practitioner Regulation Agency). We don't use support workers or assistants in nursing for clinical tasks — only Registered Nurses.",
   },
   {
-    question: 'What does a private nurse at home do compared to standard support workers?',
-    answer: 'A private nurse at home from Care N Cure is a university-qualified Registered Nurse (RN) registered with AHPRA. Unlike standard support workers, an in home nurse can perform sterile wound care, complex medication management, clinical health assessments, and liaise directly with your GP or surgeon to catch changes in your condition early.',
+    question: "How is this different from private nursing care through an agency?",
+    answer: "Most agencies assign whichever nurse is available that day. We assign one dedicated Nurse Coordinator to you for the life of your care — the same person who did your first assessment is the one who shows up next time.",
+  },
+  {
+    question: "Can private nursing be claimed on private health insurance?",
+    answer: "Many of our clinical services can be claimed through private health insurance extras, depending on your policy. We're happy to help you check what's covered.",
   },
 ]
 
@@ -73,6 +78,50 @@ export default function PrivateNursing() {
                 <div className="section-divider" />
                 <p className="text-body text-lg leading-relaxed mt-4">
                   For complex medical needs, ageing family members, or post-surgical recovery, generic care agencies often fall short. We make it simple to find professional <strong>nurse at home care</strong>. We connect you with a dedicated <strong>in home nurse</strong> who brings clinical expertise, health assessment skills, and consistent coordination directly to you.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-navy text-2xl font-bold">What Is a Private Nurse at Home?</h3>
+                <p className="text-body leading-relaxed">
+                  A private nurse at home is a fully Registered Nurse (RN) who provides clinical care in your own home — not a support worker, not a carer, a registered clinical professional. That means <Link href="/wound-care" className="text-teal-text hover:underline font-semibold">sterile wound care</Link>, <Link href="/medication-management" className="text-teal-text hover:underline font-semibold">medication management</Link>, injections, catheter care, and health monitoring, delivered by someone qualified to notice when something's wrong and act on it.
+                </p>
+                <p className="text-body leading-relaxed">
+                  At Care N Cure, private nursing means one more thing most agencies don't offer: the same nurse, every visit. Your dedicated Nurse Coordinator learns your medical history, your routine, and your family — so nothing gets lost between visits. We offer consistent visiting routes throughout areas such as <Link href="/locations/nedlands" className="text-teal-text hover:underline font-semibold">Nedlands</Link> and <Link href="/locations/claremont" className="text-teal-text hover:underline font-semibold">Claremont</Link>.
+                </p>
+                <div className="bg-surface p-6 rounded-2xl border border-border">
+                  <p className="text-navy font-bold mb-2">Private nursing at home is right for you if:</p>
+                  <ul className="space-y-3 text-body text-sm">
+                    <li className="flex items-start gap-2">
+                      <span className="text-teal-accent font-bold">•</span>
+                      <span>You're recovering from surgery or a hospital stay and need clinical <Link href="/post-hospital-care" className="text-teal-text hover:underline font-semibold">post-hospital care</Link> without readmission.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-teal-accent font-bold">•</span>
+                      <span>You or a family member is managing a chronic condition (diabetes, COPD, heart failure, Parkinson's, dementia) and needs regular clinical eyes at home.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-teal-accent font-bold">•</span>
+                      <span>You want nursing care without the wait times of the public system or a My Aged Care assessment.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-teal-accent font-bold">•</span>
+                      <span>You've been let down by rotating support workers and want consistency, clinical accountability, or extra <Link href="/support-at-home" className="text-teal-text hover:underline font-semibold">support at home</Link>.</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="bg-teal-50/50 p-6 rounded-2xl border border-teal-100 space-y-3">
+                <h3 className="text-navy text-xl font-bold">Private Nursing Pricing</h3>
+                <p className="text-body text-sm leading-relaxed">
+                  Every situation is different, so we quote after a free assessment — but as a guide, Perth's Registered Nurse clinical care starts from <strong>$100*</strong>, with the exact cost depending on visit frequency, complexity, and time of day. We're consistently one of the more affordable private nursing options in Perth because we don't carry the overhead of a large call-centre agency.
+                </p>
+                <p className="text-body text-sm leading-relaxed">
+                  We'll always tell you the cost upfront, in writing, before care begins — no surprises on the invoice.
+                </p>
+                <p className="text-body text-xs italic text-gray-500 mt-2">
+                  *Indicative starting price. Confirmed during your free care assessment.
                 </p>
               </div>
 

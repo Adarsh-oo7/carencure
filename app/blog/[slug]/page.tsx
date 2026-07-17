@@ -234,6 +234,14 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                 })}
               </div>
 
+              {/* Bottom article CTA for Private Nursing */}
+              <div className="mt-8 p-6 bg-teal-50/50 rounded-2xl border border-teal-100/50">
+                <h4 className="text-navy font-bold text-lg mb-2">Looking for a Private Registered Nurse at Home?</h4>
+                <p className="text-body text-sm leading-relaxed mb-0">
+                  Because the people you love deserve to stay home safely, Care N Cure provides dedicated, consistent registered nursing care across Perth. Learn more about our <Link href="/private-nursing" className="text-teal-text hover:underline font-semibold">Private Nursing at Home</Link> services, or contact us to discuss your family&apos;s needs.
+                </p>
+              </div>
+
               {/* Tags */}
               <div className="mt-10 pt-6 border-t border-border flex flex-wrap items-center gap-2">
                 <Tag className="w-4 h-4 text-body" />

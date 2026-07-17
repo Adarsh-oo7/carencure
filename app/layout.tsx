@@ -90,20 +90,23 @@ export default function RootLayout({
       <head>
         <meta
           httpEquiv="Content-Security-Policy"
-          content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://va.vercel-scripts.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://vitals.vercel-insights.com https://*.vercel-analytics.com; font-src 'self' data:;"
+          content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://va.vercel-scripts.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://vitals.vercel-insights.com https://*.vercel-analytics.com https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net; font-src 'self' data:;"
         />
-        {/* GA4 — replace G-XXXXXXXXXX with real Measurement ID */}
-        {/* 
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-        <script dangerouslySetInnerHTML={{ __html: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-XXXXXXXXXX', {
-            'custom_map': {'dimension1': 'suburb_page', 'dimension2': 'service_page'}
-          });
-        `}} />
-        */}
+        {/* Google Analytics 4 — G-STW2MFLRC5 */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-STW2MFLRC5" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-STW2MFLRC5', {
+                'anonymize_ip': true,
+                'cookie_flags': 'SameSite=None;Secure'
+              });
+            `,
+          }}
+        />
       </head>
       <body className={`${inter.variable} font-sans antialiased flex flex-col min-h-screen bg-surface`}>
         <a

@@ -359,6 +359,162 @@ Care N Cure provides professional wound care across all Perth suburbs. Our regis
       'infection prevention',
     ],
   },
+  {
+    id: '5',
+    slug: 'how-to-find-a-private-nurse-in-perth',
+    title: 'How to Find a Private Nurse in Perth (Without Getting Lost in the System)',
+    excerpt: 'Discover what a private nurse actually does, how fast care can start, what it costs, and how to hire a qualified clinical professional in Perth without the waitlist.',
+    content: `Navigating the healthcare system when a loved one needs professional medical support at home can feel like learning a foreign language in a crisis. If you are searching for a **private nurse** or a **home nurse in Perth**, you have likely run into a frustrating wall of jargon, long waitlists, and rotating rosters of support workers. Because the people you love deserve to stay home safely, understanding how to hire a qualified clinical professional is the key to preventing unnecessary hospital readmissions.
+
+## What Does a Private Nurse Actually Do?
+
+One of the most common points of confusion for families is the difference between a support worker (or carer) and a Registered Nurse (RN).
+
+A support worker is an invaluable helper who assists with everyday activities such as light cleaning, showering, or cooking. However, they do not have clinical training. A **private nurse** is a university-qualified Registered Nurse registered with the Australian Health Practitioner Regulation Agency (AHPRA).
+
+Clinical private nursing at home covers essential medical tasks, including:
+- Complex sterile wound care and dressing changes after major surgeries
+- Medication management, including subcutaneous injections and intravenous therapy
+- Catheter, stoma, and peg-tube care
+- Regular health monitoring, clinical assessments, and GP or surgeon communication
+
+At Care N Cure, we believe you shouldn't have to explain your medical history to a new face every time. We offer a dedicated Nurse Coordinator who manages your care and visits you personally every time, ensuring absolute consistency.
+
+## How Fast Can Home Care Start?
+
+When a family member is discharged from a Perth hospital, or when a chronic condition suddenly flares up, you cannot afford to wait weeks for a government assessment.
+
+With private nurse hire, there is no waitlist. Because services are funded directly by you, your family, or your private health insurance extras, care can typically begin within 24 to 48 hours. The process is straightforward:
+- You call us directly (no GP referral required, though hospital discharge coordinators often refer to us).
+- We coordinate a free, comprehensive clinical assessment in your home.
+- Your dedicated Nurse Coordinator designs a custom plan and schedules the first visit.
+
+If you are waiting for a government-funded package, private nursing is also an excellent bridge to ensure safety in the interim.
+
+## What Does a Private Nurse in Perth Cost?
+
+Financial transparency is vital when managing home care. In Perth, Registered Nurse clinical visits typically start from $100 per visit, depending on the complexity of the care, frequency of visits, and timing.
+
+Because we are a locally owned nursing practice and don't carry the heavy overheads of large call-centre agencies, we are able to provide premium, consistent care at some of the most competitive rates in Western Australia. We always quote you the exact cost upfront, in writing, with no hidden fees or exit charges.
+
+## How Care N Cure Can Help
+
+If you're ready to secure professional, warm, and highly accountable care for your family, please visit our [Private Nursing at Home](/private-nursing) page to explore our services in detail, or [Contact Us](/contact) today to schedule a free care assessment. You'll speak directly with one of our registered nurse founders, not an administrative operator.`,
+    author: 'Jinu Maecheril Sukumaran, RN',
+    date: '2026-07-15',
+    category: 'Private Nursing',
+    image: '/blog/home-nursing-seniors.jpg',
+    readTime: 8,
+    tags: ['private nurse', 'home nurse perth', 'registered nurse', 'Perth healthcare'],
+  },
+  {
+    id: '6',
+    slug: 'home-care-packages-perth-nursing',
+    title: 'Home Care Packages in Perth: Where Nursing Actually Fits In',
+    excerpt: 'Explain HCP levels 1-4 in plain English, what is typically covered, and where nurse-led oversight changes clinical outcomes for Perth seniors.',
+    content: `For older Australians in Western Australia, securing government support to remain independent in their own homes is a priority. However, navigating the My Aged Care system is notoriously complex. When looking into **home care packages perth** or **home care packages wa**, many families are surprised to learn that standard support plans often miss a crucial element: registered clinical nursing oversight.
+
+## Understanding Home Care Packages (HCP) Levels 1–4
+
+The Australian government provides Home Care Packages to help seniors access services tailored to their needs. These packages are split into four levels:
+- **Level 1 (Basic Care Needs):** Small subsidies for basic domestic assistance or social support.
+- **Level 2 (Low Care Needs):** Funding for additional transport, personal care, or basic aids.
+- **Level 3 (Intermediate Care Needs):** Designed for seniors who require more frequent support and some clinical assistance.
+- **Level 4 (High Care Needs):** Substantial funding for complex daily care, mobility assistance, and clinical nursing.
+
+While these packages are designed to cover everyday living tasks, many traditional providers manage them using administrative staff who assign rotating rosters of support workers.
+
+## Where Nursing Fits In (And Why It Matters)
+
+At Care N Cure, we believe that aged care coordination must be led by clinicians. This is where our clinical case management model makes a significant difference.
+
+Whether you are on a Level 2 or Level 4 package, having a Registered Nurse oversee your care means:
+- **Early Detection:** A clinical professional notices subtle changes in medication compliance, cognitive baselines, or physical mobility before they escalate into an emergency.
+- **Wound & Medication Safety:** Qualified RNs handle complex wound care and coordinate with local pharmacies and GPs to manage your medications.
+- **Specialist Liaison:** We act as your clinical advocate, speaking directly to your GP, cardiologist, or geriatrician to ensure your care is aligned.
+
+Many families combine their government funding with private services to bridge care gaps while waiting for their package level to be upgraded.
+
+## Accessing Your Support at Home
+
+If you are ready to transition your care to a provider that prioritizes clinical accountability and roster consistency, we can help. Learn more about how we structure our services on our [Home Care Packages](/homecare-packages) page, or check out our general [Support at Home](/support-at-home) options to see how we can assist you today.`,
+    author: 'Mohamed Zuhair Parayil Ummer, RN',
+    date: '2026-07-10',
+    category: 'Funded Care',
+    image: '/blog/post-surgery-recovery.jpg',
+    readTime: 7,
+    tags: ['home care packages perth', 'home care packages wa', 'aged care funding', 'clinical oversight'],
+  },
+  {
+    id: '7',
+    slug: 'signs-your-parent-needs-in-home-nursing',
+    title: 'Signs Your Parent Needs In-Home Nursing, Not Aged Care',
+    excerpt: 'A practical clinical checklist for adult children to recognize when an ageing parent needs professional in-home nursing rather than moving to residential aged care.',
+    content: `It is one of the hardest realizations an adult child can face: seeing that a parent is no longer managing safely at home. Often, the immediate reaction is to search in a panic for 'aged care near me' or look into residential nursing facilities. However, moving a parent out of their home is a major transition that can cause significant distress. For many Perth families, **in home aged care** or home nursing is not just a viable alternative — it is the superior choice for their health and happiness.
+
+## Practical Checklist: Signs Your Parent Needs Support
+
+It is easy to miss the early warning signs of decline when you visit a parent regularly. Use this practical checklist to assess if they need professional support:
+- **Medication Mistakes:** Are they missing doses, doubling up on pills, or struggling to manage their prescriptions?
+- **Unexplained Weight Loss:** Is the fridge empty, or are they struggling to stand and prepare meals safely?
+- **Wound Healing Issues:** Are skin tears, bruises, or surgical wounds taking too long to heal, or showing signs of infection?
+- **Mobility and Falls:** Are they holding onto walls or furniture to walk, or have they had near-miss slips in the shower?
+- **Social Isolation:** Have they stopped attending local groups, or do they seem increasingly withdrawn?
+
+If you notice these signs, it does not mean they must move into a care facility. It simply means they need professional, clinical support at home.
+
+## The Case for In-Home Care vs. Residential Aged Care
+
+The research is clear: seniors recover faster, sleep better, and experience lower infection rates when they remain in their own homes.
+
+By choosing home nursing, your parent maintains their independence, their routines, and their connection to their community. At Care N Cure, we reinforce this by assigning a dedicated Nurse Coordinator. Your parent sees the exact same nurse every visit, building a trusted clinical relationship that helps them feel safe and respected.
+
+## Setting Up Care for Your Parent
+
+You don't have to navigate this transition alone. Explore how we combine clinical oversight with daily assistance on our [Private Nursing](/private-nursing) page, or read about our daily living services on our [Support at Home](/support-at-home) page. Contact us today to arrange a free, respectful consultation for your family.`,
+    author: 'Jinu Maecheril Sukumaran, RN',
+    date: '2026-07-05',
+    category: 'Senior Care',
+    image: '/blog/chronic-disease-management.jpg',
+    readTime: 9,
+    tags: ['in home aged care', 'aged care near me', 'elderly care', 'home support'],
+  },
+  {
+    id: '8',
+    slug: 'hospital-discharge-what-happens-next',
+    title: 'Hospital Discharge: What Actually Happens Next',
+    excerpt: 'A realistic walk-through of the post-operative discharge timeline and how post-hospital nurse coordination prevents costly readmissions.',
+    content: `The day you or a loved one is discharged from a Perth hospital should be a day of relief. However, for many families, the transition from ward to home is filled with anxiety. The reality of modern healthcare is that hospital stays are shorter than ever, meaning patients are often discharged while still requiring complex clinical care. If you don't have a structured plan for **post hospital care**, the risk of an avoidable readmission increases dramatically.
+
+## The Realistic Discharge Timeline: Where Things Go Wrong
+
+A successful transition home requires careful coordination. Here is what a typical discharge timeline looks like, and where potential issues arise:
+- **Before Discharge:** The hospital ward team prepares a discharge summary. If you don't have a nurse review this, critical details about new medications or wound dressings can be misunderstood.
+- **The First 24 Hours:** This is the most vulnerable period. If pain medications aren't managed correctly, or if wound dressings are handled improperly, complications can arise immediately.
+- **The First 7 Days:** Surgical wounds must be monitored for infection, sutures or staples may need removal, and mobility exercises must be supervised to prevent falls.
+
+Without clinical oversight, managing these tasks can quickly overwhelm family carers.
+
+## Preventing Readmission with Clinical Coordination
+
+Having a Registered Nurse visit you at home during the first week post-discharge ensures a smooth handover. At Care N Cure, our nurses:
+- Perform immediate medication checks against your hospital discharge summary to eliminate errors.
+- Manage surgical dressings using sterile, aseptic techniques.
+- Liaise directly with your GP and surgical team to provide clinical updates.
+- Supervise mobility and rehabilitation exercises.
+
+By coordinating care early, we help you focus entirely on your recovery in the comfort of your own home.
+
+## Securing Your Post-Hospital Support
+
+If you or a loved one has an upcoming procedure at Hollywood Private, Bethesda, or Fiona Stanley Hospital, we recommend planning your recovery support in advance. Explore our services on the [Post-Hospital Care](/post-hospital-care) page, and get in touch with our team today to ensure your transition home is safe, smooth, and supported.`,
+    author: 'Mohamed Zuhair Parayil Ummer, RN',
+    date: '2026-07-01',
+    category: 'Post-Hospital Care',
+    image: '/blog/wound-care-practices.jpg',
+    readTime: 8,
+    tags: ['post hospital care', 'discharge planning', 'wound management', 'recovery'],
+  },
 ]
 
 export function getBlogPost(slug: string): BlogPost | undefined {
