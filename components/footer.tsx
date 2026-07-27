@@ -33,14 +33,18 @@ export function Footer() {
             <p className="text-white/70 text-sm leading-relaxed mb-5">
               One Client. One Dedicated Nurse Coordinator. Helping Australians stay safe, supported, and independent at home.
             </p>
-            <div className="space-y-2 text-sm">
+            <div className="space-y-2.5 text-sm">
               <div className="flex items-start gap-2">
-                <Shield className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: 'var(--teal-accent)' }} />
-                <span className="text-white/70">ABN: 87 152 479 362</span>
+                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-teal-accent" />
+                <span className="text-white/80 font-medium">15 Rockefeller Way, Harrisdale WA 6112</span>
               </div>
               <div className="flex items-start gap-2">
                 <Shield className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: 'var(--teal-accent)' }} />
-                <span className="text-white/70">ASIC Registered — 13 March 2026</span>
+                <span className="text-white/70">ABN: 87 152 479 362 (ASIC Registered)</span>
+              </div>
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 rounded-full text-xs text-teal-accent font-bold mt-1">
+                <span>★ 5.0 Google Rating</span>
+                <span className="text-white/60">(12 Reviews)</span>
               </div>
             </div>
           </div>

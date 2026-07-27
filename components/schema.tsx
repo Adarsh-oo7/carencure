@@ -8,10 +8,19 @@ const PHONE = '1300 919 663'
 const PHONE_SCHEMA = '+611300919663'
 const EMAIL = 'hello@carencure.com.au'
 const ADDRESS = {
-  addressLocality: 'Perth',
+  streetAddress: '15 Rockefeller Way',
+  addressLocality: 'Harrisdale',
   addressRegion: 'WA',
-  postalCode: '6000',
+  postalCode: '6112',
   addressCountry: 'AU',
+}
+
+const AGGREGATE_RATING = {
+  '@type': 'AggregateRating',
+  ratingValue: '5.0',
+  reviewCount: '12',
+  bestRating: '5',
+  worstRating: '1',
 }
 const AREA_SERVED = [
   'Perth', 'Nedlands', 'Subiaco', 'Cottesloe', 'Claremont',
@@ -51,6 +60,7 @@ export function MedicalBusinessSchema() {
           '@type': 'PostalAddress',
           ...ADDRESS,
         },
+        aggregateRating: AGGREGATE_RATING,
         priceRange: '$$',
         currenciesAccepted: 'AUD',
         paymentAccepted: 'Cash, Credit Card, Home Care Package, NDIS, DVA',

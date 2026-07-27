@@ -88,8 +88,9 @@ export default function ContactPage() {
                     <MapPin className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="text-navy text-lg font-bold">Perth Metropolitan Office & Service Radius</h3>
-                    <p className="text-body text-sm mt-1">Serving Nedlands, Subiaco, Gosnells, Armadale, Rockingham, Joondalup, Midland, Fremantle, and all Perth suburbs.</p>
+                    <h3 className="text-navy text-lg font-bold">Practice Address & Service Radius</h3>
+                    <p className="text-navy font-semibold text-sm mt-1">15 Rockefeller Way, Harrisdale WA 6112</p>
+                    <p className="text-body text-xs mt-0.5">Serving Harrisdale, Nedlands, Subiaco, Gosnells, Armadale, Rockingham, Joondalup, Midland, Fremantle, and all Perth metro suburbs within 50km.</p>
                   </div>
                 </div>
 
