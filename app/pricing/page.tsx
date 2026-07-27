@@ -67,10 +67,14 @@ export default function PricingPage() {
                   In-Home Registered Nurse Rates & Funding Options in Perth
                 </h1>
                 <div className="section-divider my-4" />
-                <div className="bg-teal-subtle/40 p-6 rounded-2xl border border-teal-border">
+                <div className="bg-teal-subtle/40 p-6 rounded-2xl border border-teal-border space-y-3">
                   <p className="text-navy font-semibold text-lg leading-relaxed">
                     At Care N Cure, we believe families deserve complete clarity when hiring a <strong>private nurse in Perth</strong>. Our clinical fees reflect high-level care delivered exclusively by AHPRA-Registered Nurses—with no hidden administration surcharges, no lock-in contracts, and full compatibility with NDIS, Home Care Packages, and self-funded private care.
                   </p>
+                  <div className="pt-2 border-t border-teal-border/60 flex items-center gap-2 text-teal-accent font-bold text-sm">
+                    <CheckCircle2 className="w-5 h-5 shrink-0" />
+                    <span>50km Service Radius — 0 Transportation / Travel Charges for Perth Metro Clients!</span>
+                  </div>
                 </div>
               </div>
 
