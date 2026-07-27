@@ -30,6 +30,16 @@ const suburbs = [
   'victoria-park',
   'joondalup',
   'midland',
+  'scarborough',
+  'sorrento',
+  'duncraig',
+  'karrinyup',
+  'como',
+  'bicton',
+  'east-fremantle',
+  'shenton-park',
+  'dalkeith',
+  'city-beach',
 ]
 
 // Must match slug values in lib/blog-data.ts
@@ -70,6 +80,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: NOW,
       changeFrequency: 'monthly',
       priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/ndis-nursing`,
+      lastModified: NOW,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/pricing`,
+      lastModified: NOW,
+      changeFrequency: 'monthly',
+      priority: 0.85,
     },
     {
       url: `${BASE_URL}/private-nursing/elderly-care`,

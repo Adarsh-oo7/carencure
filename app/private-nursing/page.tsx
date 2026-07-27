@@ -2,51 +2,61 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { PageHeader } from '@/components/page-header'
 import { CTASection } from '@/components/sections/cta'
-import { ServicePageSchema, FAQPageSchema } from '@/components/schema'
+import { ServicePageSchema } from '@/components/schema'
 import { ContactForm } from '@/components/contact-form'
-import { Activity, ShieldCheck, HeartPulse, UserCheck, CheckCircle } from 'lucide-react'
+import { Activity, ShieldCheck, HeartPulse, UserCheck, CheckCircle2, Stethoscope, Phone, Award, Clock, DollarSign, MapPin, AlertCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Private Nurse Perth | In-Home Registered Nursing | Care N Cure',
+    absolute: 'Private Nursing Perth | In-Home Registered Nurse Hire | Care N Cure',
   },
-  description: 'Hire a qualified private nurse in Perth. AHPRA-registered RNs for in-home clinical care, post-surgery recovery & chronic disease management. Same nurse, every visit.',
+  description: 'Hire a qualified private nurse in Perth. AHPRA-registered RNs for in-home clinical care, complex wound care, post-hospital recovery & chronic disease management. Dedicated nurse every visit.',
   alternates: { canonical: 'https://carencure.com.au/private-nursing' },
 }
 
-
 const faqs = [
   {
-    question: "What's the difference between private nursing and a home care package?",
-    answer: "Private nursing is paid directly by you or your family, with no waitlist or government assessment — care can often start within 24–48 hours. A Home Care Package (HCP) is government-funded and requires a My Aged Care assessment first. We support both, and many families use private nursing to bridge the gap while waiting on a package.",
+    question: "How much does private nursing cost in Perth?",
+    answer: "Private Registered Nurse visits in Perth range from $110 to $160 per hour for standard weekday clinical care, depending on care complexity. Weekend, after-hours, and public holiday visits range between $160 and $220 per hour. Detailed pricing is available on our pricing schedule, and services can be self-funded or funded through NDIS or Home Care Packages.",
   },
   {
-    question: "Do I need a referral to get a private nurse at home?",
-    answer: "No. You can call us directly, or your GP or hospital discharge team can refer you — either way works.",
+    question: "Do you accept NDIS or Home Care Packages (HCP)?",
+    answer: "Yes. Care N Cure is fully compatible with NDIS funding (under Capacity Building and Core Supports) and Home Care Packages (Levels 1 to 4). We also support self-managed participants, plan-managed participants, and private fee-for-service clients.",
   },
   {
-    question: "Are your private nurses fully registered?",
-    answer: "Yes. Every nurse is registered with AHPRA (Australian Health Practitioner Regulation Agency). We don't use support workers or assistants in nursing for clinical tasks — only Registered Nurses.",
+    question: "Can I get 24-hour private nursing care in Perth?",
+    answer: "Yes. We offer flexible schedule coverage ranging from short 1-hour clinical visits for wound care or injection administration to extended day shifts and 24-hour around-the-clock nursing care for complex post-operative recovery or palliative support.",
   },
   {
-    question: "How is this different from private nursing care through an agency?",
-    answer: "Most agencies assign whichever nurse is available that day. We assign one dedicated Nurse Coordinator to you for the life of your care — the same person who did your first assessment is the one who shows up next time.",
+    question: "Do I need a doctor's referral to hire a private nurse?",
+    answer: "No referral is required. You or a family member can hire a private nurse directly by calling Care N Cure on 1300 919 663. However, if you are being discharged from a hospital or require specific medical treatments, we liaise closely with your treating GP or hospital specialist.",
+  },
+  {
+    question: "What is the difference between a Registered Nurse (RN) and a home carer?",
+    answer: "A Registered Nurse (RN) holds a university degree, is licensed by AHPRA, and is authorized to perform complex clinical procedures such as sterile wound dressing, urinary catheterization, IV medication administration, and clinical health assessments. A support worker or home carer provides non-clinical assistance such as light housework, companionship, and basic personal hygiene.",
   },
   {
     question: "Can private nursing be claimed on private health insurance?",
-    answer: "Many of our clinical services can be claimed through private health insurance extras, depending on your policy. We're happy to help you check what's covered.",
+    answer: "Depending on your private health fund and extras policy, clinical nursing services ordered by a doctor may qualify for partial or full rebates. We supply itemized invoices to assist you in making claims with your insurer.",
+  },
+  {
+    question: "How quickly can in-home private nursing care start in Perth?",
+    answer: "In most cases across metropolitan Perth, care can commence within 24 to 48 hours following an initial phone consultation and clinical intake assessment. Urgent post-hospital discharge support can often be arranged on the same day.",
+  },
+  {
+    question: "What happens if my dedicated nurse is sick or on leave?",
+    answer: "While you are assigned a primary dedicated Nurse Coordinator for continuity, Care N Cure maintains a small, closely acquainted team of secondary Registered Nurses. In the event of planned leave or illness, your hand-off is managed seamlessly by an RN who has already reviewed your medical history.",
   },
 ]
-
 
 export default function PrivateNursing() {
   return (
     <>
       <ServicePageSchema
-        serviceName="Private Nurse Perth | In-Home Registered Nursing | Care N Cure"
-        description="Hire a qualified private nurse in Perth. AHPRA-registered nurses for in-home clinical care, post-surgical recovery, and chronic disease management. Same nurse, every visit."
+        serviceName="Private Nursing Perth | In-Home Registered Nurse Hire | Care N Cure"
+        description="Hire a qualified private nurse in Perth. AHPRA-registered RNs for in-home clinical care, complex wound management, post-hospital recovery & chronic disease management. Dedicated nurse every visit."
         url="/private-nursing"
-        procedureType="In-Home Nursing Care"
+        procedureType="In-Home Clinical Nursing Care"
         faqs={faqs}
         breadcrumb={[
           { name: 'Home', item: 'https://carencure.com.au/' },
@@ -55,154 +65,253 @@ export default function PrivateNursing() {
         ]}
       />
 
-
       <PageHeader
-        title="Private Nurse Hire & In-Home Care"
-        subtitle="Professional, registered nursing care on your schedule, in the quiet privacy of your own home."
+        title="Private Nursing Perth — In-Home Registered Nurse Care"
+        subtitle="Hire an AHPRA-registered nurse for personalized, clinical care in the quiet comfort and privacy of your own home."
         breadcrumbItems={[
           { name: 'Services', href: '/services' },
-          { name: 'Private Nurse Hire', href: '/private-nursing' },
+          { name: 'Private Nursing', href: '/private-nursing' },
         ]}
-        label="Private Registered Nurses"
+        label="Professional In-Home Clinical Care"
       />
 
+      {/* Answer-First Section */}
       <section className="section-py bg-white">
         <div className="section-container">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             
-            {/* Main Content */}
-            <div className="lg:col-span-7 space-y-8">
+            {/* Main Content Column */}
+            <div className="lg:col-span-7 space-y-10">
+              
+              {/* Answer-First Summary Box */}
               <div>
-                <p className="section-label mb-2">Dedicated Nursing Support</p>
-                <h2 className="text-navy text-3xl font-bold">Hire a qualified private nurse for personalized home care</h2>
-                <div className="section-divider" />
-                <p className="text-body text-lg leading-relaxed mt-4">
-                  For complex medical needs, ageing family members, or post-surgical recovery, generic care agencies often fall short. We make it simple to find professional <strong>nurse at home care</strong>. We connect you with a dedicated <strong>in home nurse</strong> who brings clinical expertise, health assessment skills, and consistent coordination directly to you.
-                </p>
-              </div>
-
-              <div className="space-y-4">
-                <h3 className="text-navy text-2xl font-bold">What Is a Private Nurse at Home?</h3>
-                <p className="text-body leading-relaxed">
-                  A private nurse at home is a fully Registered Nurse (RN) who provides clinical care in your own home — not a support worker, not a carer, a registered clinical professional. That means <Link href="/wound-care" className="text-teal-text hover:underline font-semibold">sterile wound care</Link>, <Link href="/medication-management" className="text-teal-text hover:underline font-semibold">medication management</Link>, injections, catheter care, and health monitoring, delivered by someone qualified to notice when something's wrong and act on it.
-                </p>
-                <p className="text-body leading-relaxed">
-                  At Care N Cure, private nursing means one more thing most agencies don't offer: the same nurse, every visit. Your dedicated Nurse Coordinator learns your medical history, your routine, and your family — so nothing gets lost between visits. We offer consistent visiting routes throughout areas such as <Link href="/locations/nedlands" className="text-teal-text hover:underline font-semibold">Nedlands</Link> and <Link href="/locations/claremont" className="text-teal-text hover:underline font-semibold">Claremont</Link>.
-                </p>
-                <div className="bg-surface p-6 rounded-2xl border border-border">
-                  <p className="text-navy font-bold mb-2">Private nursing at home is right for you if:</p>
-                  <ul className="space-y-3 text-body text-sm">
-                    <li className="flex items-start gap-2">
-                      <span className="text-teal-accent font-bold">•</span>
-                      <span>You're recovering from surgery or a hospital stay and need clinical <Link href="/post-hospital-care" className="text-teal-text hover:underline font-semibold">post-hospital care</Link> without readmission.</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-teal-accent font-bold">•</span>
-                      <span>You or a family member is managing a chronic condition (diabetes, COPD, heart failure, Parkinson's, dementia) and needs regular clinical eyes at home.</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-teal-accent font-bold">•</span>
-                      <span>You want nursing care without the wait times of the public system or a My Aged Care assessment.</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-teal-accent font-bold">•</span>
-                      <span>You've been let down by rotating support workers and want consistency, clinical accountability, or extra <Link href="/support-at-home" className="text-teal-text hover:underline font-semibold">support at home</Link>.</span>
-                    </li>
-                  </ul>
+                <p className="section-label mb-2">Dedicated Registered Nursing</p>
+                <h1 className="text-navy text-3xl md:text-4xl font-bold leading-tight">
+                  Hire a Qualified Private Nurse in Perth, WA
+                </h1>
+                <div className="section-divider my-4" />
+                <div className="bg-teal-subtle/50 p-6 rounded-2xl border border-teal-border">
+                  <p className="text-navy font-semibold text-lg leading-relaxed">
+                    <strong>Private nursing in Perth</strong> is specialized, in-home clinical healthcare delivered by qualified AHPRA-Registered Nurses (RNs) without public waiting lists or government aged care delays. Care N Cure provides dedicated Nurse Coordinators for complex wound management, post-surgical recovery, medication administration, and chronic disease support across all Perth metropolitan suburbs. Families and self-funded individuals can initiate clinical nursing visits within 24 to 48 hours.
+                  </p>
                 </div>
               </div>
 
-              <div className="bg-teal-50/50 p-6 rounded-2xl border border-teal-100 space-y-3">
-                <h3 className="text-navy text-xl font-bold">Private Nursing Pricing</h3>
-                <p className="text-body text-sm leading-relaxed">
-                  Every situation is different, so we quote after a free assessment — but as a guide, Perth's Registered Nurse clinical care starts from <strong>$100*</strong>, with the exact cost depending on visit frequency, complexity, and time of day. We're consistently one of the more affordable private nursing options in Perth because we don't carry the overhead of a large call-centre agency.
-                </p>
-                <p className="text-body text-sm leading-relaxed">
-                  We'll always tell you the cost upfront, in writing, before care begins — no surprises on the invoice.
-                </p>
-                <p className="text-body text-xs italic text-gray-500 mt-2">
-                  *Indicative starting price. Confirmed during your free care assessment.
-                </p>
-              </div>
-
+              {/* H2: What Does In-Home Private Nursing Cover in Perth? */}
               <div className="space-y-4">
-                <h2 className="text-navy text-2xl font-bold">Private Nurses for Home Care in Perth</h2>
+                <h2 className="text-navy text-2xl font-bold">What Does In-Home Private Nursing Cover in Perth?</h2>
                 <p className="text-body leading-relaxed">
-                  Navigating clinical needs without hospital readmissions is a primary goal for many families. Our <strong>private nurses for home care</strong> provide high-level clinical governance. From clinical assessments and medication safety to liaison with GPs and discharge teams, your care is fully managed by university-trained Registered Nurses.
+                  Unlike non-clinical home care services that focus solely on housework or companionship, <strong>private nursing care</strong> provides licensed medical treatment in the home. When health conditions require expert clinical judgment, hiring a private nurse ensures safety, accurate health tracking, and professional treatment execution.
                 </p>
-              </div>
-
-              <div className="space-y-6">
-                <h3 className="text-navy text-xl font-bold">Our Private Nursing Services include:</h3>
-                <p className="text-body">
-                  Every client receives a custom care plan overseen by our clinical founders. We ensure you get professional, consistent care from the same nurse at every visit.
+                <p className="text-body leading-relaxed">
+                  Our Registered Nurses perform a comprehensive array of clinical procedures, including:
                 </p>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
-                  <div className="card-base p-5 flex gap-4">
-                    <Activity className="w-8 h-8 text-teal-accent flex-shrink-0" />
-                    <div>
-                      <h4 className="text-navy font-bold mb-1">In-Home Clinical Visits</h4>
-                      <p className="text-body text-sm">Flexible home visits by a Registered Nurse for clinical tasks, health monitoring, vital checks, and medication safety.</p>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                  <div className="bg-surface p-5 rounded-xl border border-border space-y-2">
+                    <div className="flex items-center gap-2 text-teal-accent font-bold">
+                      <Stethoscope className="w-5 h-5" />
+                      <span>Complex Wound Care</span>
                     </div>
+                    <p className="text-body text-sm">
+                      Sterile surgical dressing changes, pressure injury therapy, vacuum-assisted closure (VAC), and skin tear management. Learn about our specialized <Link href="/wound-care" className="text-teal-text font-semibold hover:underline">sterile wound care services</Link>.
+                    </p>
                   </div>
 
-                  <div className="card-base p-5 flex gap-4">
-                    <HeartPulse className="w-8 h-8 text-teal-accent flex-shrink-0" />
-                    <div>
-                      <h4 className="text-navy font-bold mb-1">In-Home Respite & Support</h4>
-                      <p className="text-body text-sm">Giving family caregivers essential respite, knowing their loved one is in the hands of a qualified AHPRA Registered Nurse.</p>
+                  <div className="bg-surface p-5 rounded-xl border border-border space-y-2">
+                    <div className="flex items-center gap-2 text-teal-accent font-bold">
+                      <ShieldCheck className="w-5 h-5" />
+                      <span>Medication Administration</span>
                     </div>
+                    <p className="text-body text-sm">
+                      IV antibiotic infusions, subcutaneous injections, complex dosing management, and liaising with community pharmacies for <Link href="/medication-management" className="text-teal-text font-semibold hover:underline">medication management</Link>.
+                    </p>
                   </div>
 
-                  <div className="card-base p-5 flex gap-4">
-                    <ShieldCheck className="w-8 h-8 text-teal-accent flex-shrink-0" />
-                    <div>
-                      <h4 className="text-navy font-bold mb-1">Post-Operative Recovery</h4>
-                      <p className="text-body text-sm">Active clinical oversight following major hospital discharges — managing dressings, stitches, and physical therapy exercise compliance.</p>
+                  <div className="bg-surface p-5 rounded-xl border border-border space-y-2">
+                    <div className="flex items-center gap-2 text-teal-accent font-bold">
+                      <HeartPulse className="w-5 h-5" />
+                      <span>Post-Hospital Recovery</span>
                     </div>
+                    <p className="text-body text-sm">
+                      Post-operative vital sign monitoring, drain care, pain management, and early detection of surgical complications. Explore our <Link href="/post-hospital-care" className="text-teal-text font-semibold hover:underline">post-hospital care</Link>.
+                    </p>
                   </div>
 
-                  <div className="card-base p-5 flex gap-4">
-                    <UserCheck className="w-8 h-8 text-teal-accent flex-shrink-0" />
-                    <div>
-                      <h4 className="text-navy font-bold mb-1">One Dedicated Nurse Coordinator</h4>
-                      <p className="text-body text-sm">No roster surprises or strangers. Your dedicated nurse coordinator handles your case from start to finish.</p>
+                  <div className="bg-surface p-5 rounded-xl border border-border space-y-2">
+                    <div className="flex items-center gap-2 text-teal-accent font-bold">
+                      <Activity className="w-5 h-5" />
+                      <span>Catheter & Continence Care</span>
                     </div>
+                    <p className="text-body text-sm">
+                      Insertion, flushing, and ongoing management of indwelling catheters (IDC), suprapubic catheters (SPC), and continence assessments.
+                    </p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-surface p-6 rounded-2xl border border-border">
-                <h3 className="text-navy text-xl font-bold mb-3 flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-teal-accent" />
-                  Benefits of hiring a private nurse
-                </h3>
-                <ul className="space-y-3 text-body text-sm">
-                  <li className="flex items-start gap-2">
-                    <span className="text-teal-accent font-bold">•</span>
-                    <span><strong>Tailored Scheduling:</strong> Arrange visits when they suit you best, with options for hourly clinical checks or extended care.</span>
+              {/* H2: Who Is Private Nursing For? */}
+              <div className="space-y-4">
+                <h2 className="text-navy text-2xl font-bold">Who Needs a Private Nurse at Home?</h2>
+                <p className="text-body leading-relaxed">
+                  Private nursing care is designed for individuals and families who require professional clinical management outside of a hospital environment. It is ideal for:
+                </p>
+                <ul className="space-y-3 text-body">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-teal-accent shrink-0 mt-1" />
+                    <span><strong>Surgical Patients:</strong> Individuals returning home after major orthopedic, cardiac, or general surgery needing skilled wound care and pain management.</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-teal-accent font-bold">•</span>
-                    <span><strong>GP and Specialist Liaison:</strong> We handle complex updates to doctors and surgeons, ensuring seamless continuity.</span>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-teal-accent shrink-0 mt-1" />
+                    <span><strong>Seniors Waiting for Aged Care Funding:</strong> Older Perth residents bridging the multi-month waiting list for government Home Care Packages (HCP).</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-teal-accent font-bold">•</span>
-                    <span><strong>A Professional Clinical Partner:</strong> Direct access to your registered nurse coordinator without passing through call center receptionists.</span>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-teal-accent shrink-0 mt-1" />
+                    <span><strong>NDIS Participants (Self & Plan Managed):</strong> Individuals with disability requiring high-intensity clinical interventions. Check our dedicated <Link href="/ndis-nursing" className="text-teal-text font-semibold hover:underline">NDIS Nursing Care</Link> page.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-teal-accent shrink-0 mt-1" />
+                    <span><strong>Families Seeking Peace of Mind:</strong> Relatives who live interstate or work full-time and need a qualified clinician overseeing their parent's health.</span>
                   </li>
                 </ul>
               </div>
+
+              {/* H2: The Dedicated Nurse Advantage: Why Roster Continuity Matters */}
+              <div className="space-y-4 bg-teal-subtle/30 p-8 rounded-2xl border border-teal-border">
+                <div className="flex items-center gap-3">
+                  <UserCheck className="w-7 h-7 text-teal-accent" />
+                  <h2 className="text-navy text-2xl font-bold">The Dedicated Nurse Advantage: Why Roster Continuity Matters</h2>
+                </div>
+                <p className="text-body leading-relaxed">
+                  Standard nursing agencies in Perth often rely on rotating rosters, sending different temporary or casual nurses on every visit. This constant turnover forces clients to repeat their medical history repeatedly, increases the risk of missed clinical nuances, and disrupts personal comfort.
+                </p>
+                <p className="text-body leading-relaxed">
+                  Care N Cure operates under a strict <strong>One Dedicated Nurse Coordinator model</strong>. You are assigned a single primary Registered Nurse who conducts your baseline clinical assessment and returns for every scheduled visit. This creates trust, enables early detection of subtle health changes, and provides a direct point of contact for your GP and family. Read more about how our <Link href="/your-dedicated-nurse" className="text-teal-text font-semibold hover:underline">dedicated Nurse Coordinator model</Link> sets us apart.
+                </p>
+              </div>
+
+              {/* H2: How Much Does a Private Nurse Cost in Perth? */}
+              <div className="space-y-4">
+                <h2 className="text-navy text-2xl font-bold">How Much Does a Private Nurse Cost in Perth?</h2>
+                <p className="text-body leading-relaxed">
+                  Private nursing rates in Perth are structured transparently without hidden booking fees. Costs vary depending on schedule requirements and clinical complexity:
+                </p>
+                
+                <div className="overflow-x-auto border border-border rounded-xl">
+                  <table className="w-full text-left text-sm text-body">
+                    <thead className="bg-navy text-white text-xs uppercase">
+                      <tr>
+                        <th className="p-4">Service Tier</th>
+                        <th className="p-4">Hourly Rate (AUD)</th>
+                        <th className="p-4">Inclusions & Details</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-border bg-white">
+                      <tr>
+                        <td className="p-4 font-semibold text-navy">Weekday Clinical Care (8am–6pm)</td>
+                        <td className="p-4 font-bold text-teal-accent">$110 – $160 / hr</td>
+                        <td className="p-4 text-xs">AHPRA RN home visit, sterile dressing, catheter care, health checks.</td>
+                      </tr>
+                      <tr>
+                        <td className="p-4 font-semibold text-navy">After-Hours & Evening Care</td>
+                        <td className="p-4 font-bold text-teal-accent">$160 – $195 / hr</td>
+                        <td className="p-4 text-xs">Evening injections, pain management, post-discharge evening checks.</td>
+                      </tr>
+                      <tr>
+                        <td className="p-4 font-semibold text-navy">Weekend & Public Holidays</td>
+                        <td className="p-4 font-bold text-teal-accent">$180 – $240 / hr</td>
+                        <td className="p-4 text-xs">Weekend clinical support & rapid emergency response.</td>
+                      </tr>
+                      <tr>
+                        <td className="p-4 font-semibold text-navy">24-Hour Shift / Overnight Care</td>
+                        <td className="p-4 font-bold text-teal-accent">Custom Quote</td>
+                        <td className="p-4 text-xs">Continuous clinical oversight for high-dependency recovery. See our full <Link href="/pricing" className="text-teal-text font-semibold hover:underline">pricing breakdown</Link>.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              {/* H2: Funding Options: NDIS, HCP, and Private Insurance */}
+              <div className="space-y-4">
+                <h2 className="text-navy text-2xl font-bold">Funding Options: NDIS, Home Care Packages & Health Insurance</h2>
+                <p className="text-body leading-relaxed">
+                  While many clients pay out-of-pocket for private nursing to receive immediate support without waiting lists, several funding pathways are available to reduce or cover care costs:
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+                  <div className="p-4 bg-surface rounded-xl border border-border space-y-1">
+                    <h3 className="font-bold text-navy">NDIS Funding</h3>
+                    <p className="text-xs text-body">Covered under Capacity Building or Core Supports for eligible participants.</p>
+                  </div>
+                  <div className="p-4 bg-surface rounded-xl border border-border space-y-1">
+                    <h3 className="font-bold text-navy">Home Care Packages</h3>
+                    <p className="text-xs text-body">Sub-contracted clinical nursing under HCP Levels 1, 2, 3, and 4.</p>
+                  </div>
+                  <div className="p-4 bg-surface rounded-xl border border-border space-y-1">
+                    <h3 className="font-bold text-navy">Private Health Extras</h3>
+                    <p className="text-xs text-body">Rebates available from selected private health funds with GP referral.</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* H2: Service Areas Across Metropolitan Perth */}
+              <div className="space-y-4">
+                <h2 className="text-navy text-2xl font-bold">Private Nursing Service Areas in Perth</h2>
+                <p className="text-body leading-relaxed">
+                  Care N Cure provides mobile in-home private nursing visits across all Perth metropolitan suburbs. Our primary service hubs include:
+                </p>
+                <div className="flex flex-wrap gap-2 pt-1">
+                  {['Nedlands', 'Subiaco', 'Cottesloe', 'Claremont', 'South Perth', 'Applecross', 'Joondalup', 'Fremantle', 'Mount Lawley', 'Midland', 'Canning Vale', 'Armadale', 'Rockingham'].map((suburb, i) => (
+                    <Link
+                      key={i}
+                      href={`/locations/${suburb.toLowerCase().replace(/\s+/g, '-')}`}
+                      className="px-3 py-1.5 bg-surface text-navy font-semibold text-xs rounded-lg border border-border hover:border-teal-accent transition-colors flex items-center gap-1"
+                    >
+                      <MapPin className="w-3 h-3 text-teal-accent" /> {suburb} Private Nurse
+                    </Link>
+                  ))}
+                </div>
+                <p className="text-body text-sm pt-2">
+                  Visiting clients near major healthcare institutions including <em>Sir Charles Gairdner Hospital, Hollywood Private Hospital, St John of God Subiaco & Murdoch, and Joondalup Health Campus</em>. Explore our <Link href="/locations/joondalup" className="text-teal-text font-semibold hover:underline">Northern Perth community nursing care</Link>.
+                </p>
+              </div>
+
+              {/* FAQs Section */}
+              <div className="space-y-6 pt-6">
+                <h2 className="text-navy text-2xl font-bold">Frequently Asked Questions</h2>
+                <div className="space-y-4">
+                  {faqs.map((faq, idx) => (
+                    <div key={idx} className="bg-surface p-6 rounded-xl border border-border space-y-2">
+                      <h3 className="text-navy font-bold text-lg">{faq.question}</h3>
+                      <p className="text-body text-sm leading-relaxed">{faq.answer}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
             </div>
 
-            {/* Sidebar Form */}
+            {/* Sticky Sidebar Form */}
             <div className="lg:col-span-5">
-              <div className="sticky top-24">
-                <ContactForm
-                  title="Enquire About Private Nursing"
-                  subtitle="Provide your contact details below. A registered nurse co-founder will call you back shortly to discuss how we can support you."
-                  defaultService="Private Nursing at Home"
-                />
+              <div className="sticky top-28 bg-surface p-6 rounded-2xl border border-border shadow-sm space-y-6">
+                <div className="space-y-2">
+                  <span className="px-3 py-1 bg-teal-subtle text-teal-text text-xs font-bold rounded-full uppercase tracking-wider">Fast Dispatch</span>
+                  <h3 className="text-navy text-xl font-bold">Book a Private Nurse Consultation</h3>
+                  <p className="text-body text-sm">
+                    Speak directly with a Registered Nurse about your in-home care requirements. Same-day response.
+                  </p>
+                </div>
+                <ContactForm defaultService="Private Nursing" />
+                <div className="pt-4 border-t border-border space-y-2 text-xs text-slate-500">
+                  <div className="flex items-center gap-2">
+                    <ShieldCheck className="w-4 h-4 text-teal-accent" />
+                    <span>AHPRA Registered Nurses Only</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Phone className="w-4 h-4 text-teal-accent" />
+                    <span>Call 1300 919 663 for immediate dispatch</span>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -210,53 +319,7 @@ export default function PrivateNursing() {
         </div>
       </section>
 
-      {/* FAQ Accordion Section */}
-      <section className="section-py bg-surface border-t border-border">
-        <div className="section-container max-w-3xl">
-          <div className="text-center mb-8">
-            <h2 className="text-navy font-bold">Frequently Asked Questions</h2>
-            <div className="section-divider mx-auto" />
-          </div>
-          <div className="card-base p-6 divide-y divide-border">
-            {faqs.map((faq, index) => (
-              <div key={index} className="py-4 first:pt-0 last:pb-0">
-                <h4 className="text-navy font-bold mb-2">{faq.question}</h4>
-                <p className="text-body text-sm leading-relaxed">{faq.answer}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section-py bg-white border-t border-border">
-        <div className="section-container max-w-4xl">
-          <h2 className="text-navy font-bold text-xl mb-6">Related Nursing Services</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
-              { label: 'Clinical Nursing Support', href: '/registered-nurses-clinical-care-services' },
-              { label: 'Wound Care Services', href: '/wound-care' },
-              { label: 'Medication Monitoring', href: '/medication-management' },
-              { label: 'Post-Surgery Recovery', href: '/post-hospital-care' },
-              { label: 'Funded Care Options', href: '/homecare-packages' },
-            ].map(({ label, href }) => (
-              <a
-                key={href}
-                href={href}
-                className="card-base p-4 text-sm font-semibold text-navy hover:text-teal-accent flex items-center gap-2 transition-colors"
-              >
-                <span className="text-teal-accent">→</span>
-                {label}
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <CTASection
-        title="Looking for a trusted private nurse in Perth?"
-        description="Call us directly to speak to our registered nurse founders, or request a callback using our secure enquiry form."
-        secondaryLink={{ text: 'Contact Us Now', href: '/contact' }}
-      />
+      <CTASection />
     </>
   )
 }

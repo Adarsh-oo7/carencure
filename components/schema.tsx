@@ -19,7 +19,9 @@ const AREA_SERVED = [
   'Rockingham', 'Fremantle', 'South Perth', 'Mount Pleasant',
   'Wembley', 'Floreat', 'Leederville', 'Victoria Park',
   'Joondalup', 'Midland', 'Booragoon', 'Canning Vale',
-  'Applecross',
+  'Applecross', 'Scarborough', 'Sorrento', 'Duncraig',
+  'Karrinyup', 'Como', 'Bicton', 'East Fremantle',
+  'Shenton Park', 'Dalkeith', 'City Beach',
 ]
 
 // ── MedicalOrganization (Homepage primary schema) ──────────────────────────

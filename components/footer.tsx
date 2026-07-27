@@ -50,8 +50,10 @@ export function Footer() {
             <h4 className="font-semibold text-white text-base mb-4">Our Services</h4>
             <ul className="space-y-2.5">
               {[
-                { label: 'Post-Hospital Recovery Care', href: '/post-hospital-care' },
                 { label: 'Private Nursing at Home', href: '/private-nursing' },
+                { label: 'NDIS Nursing Care', href: '/ndis-nursing' },
+                { label: 'Pricing & Rates', href: '/pricing' },
+                { label: 'Post-Hospital Recovery Care', href: '/post-hospital-care' },
                 { label: 'Registered Nurses Clinical care Services', href: '/registered-nurses-clinical-care-services' },
                 { label: 'Support at home', href: '/support-at-home' },
                 { label: 'Homecare packages', href: '/homecare-packages' },
