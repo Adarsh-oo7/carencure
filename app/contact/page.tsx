@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { PageHeader } from '@/components/page-header'
 import { ContactForm } from '@/components/contact-form'
-import { Phone, Mail, MapPin, ShieldCheck, Navigation, MessageCircle, Send, Linkedin, Instagram, Clock, ArrowRight } from 'lucide-react'
+import { Phone, Mail, MapPin, ShieldCheck, Navigation, MessageCircle, Send, Linkedin, Instagram, Clock, ArrowRight, Stethoscope } from 'lucide-react'
 import { MedicalBusinessSchema } from '@/components/schema'
 
 export const metadata: Metadata = {
@@ -220,6 +221,22 @@ export default function ContactPage() {
                   <p className="text-body text-xs leading-relaxed">
                     In-home nursing care assessments and visits can commence within <strong>24 to 48 hours</strong> of booking across all Perth suburbs. Emergency discharge support available.
                   </p>
+                </div>
+
+                <div className="bg-surface p-6 rounded-2xl border border-border space-y-3">
+                  <div className="flex items-center gap-2 text-navy font-bold text-sm">
+                    <Stethoscope className="w-4 h-4 text-teal-accent" />
+                    <span>Healthcare Professional Referrals</span>
+                  </div>
+                  <p className="text-body text-xs leading-relaxed">
+                    Are you a GP, hospital discharge planner, or allied clinician? Use our streamlined patient referral pathway.
+                  </p>
+                  <Link
+                    href="/referrals"
+                    className="text-teal-accent font-semibold text-xs hover:underline flex items-center gap-1 mt-1"
+                  >
+                    Go to Referral Page <ArrowRight className="w-3 h-3" />
+                  </Link>
                 </div>
               </div>
             </div>
