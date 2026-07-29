@@ -10,6 +10,7 @@ const PHONE_HREF = 'tel:1300919663'
 
 const serviceLinks = [
   { label: 'Private Nursing at Home', href: '/private-nursing' },
+  { label: 'Elderly Care at Home', href: '/private-nursing/elderly-care' },
   { label: 'NDIS Nursing Care', href: '/ndis-nursing' },
   { label: 'Pricing & Rates', href: '/pricing' },
   { label: 'Post-Hospital Recovery Care', href: '/post-hospital-care' },

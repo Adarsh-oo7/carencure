@@ -484,6 +484,16 @@ const suburbGeo: Record<string, SuburbGeoData> = {
   'victoria-park': { lat: -31.978,  lng: 115.884,  postCode: '6100', nearbySuburbs: 'Lathlain, East Victoria Park, Carlisle' },
   joondalup:       { lat: -31.745,  lng: 115.766,  postCode: '6027', nearbySuburbs: 'Edgewater, Kingsley, Beldon' },
   midland:         { lat: -31.889,  lng: 116.002,  postCode: '6056', nearbySuburbs: 'Guildford, Swan Valley, Bassendean' },
+  scarborough:     { lat: -31.895,  lng: 115.762,  postCode: '6019', nearbySuburbs: 'Trigg, Doubleview, Wembley Downs' },
+  sorrento:        { lat: -31.822,  lng: 115.748,  postCode: '6020', nearbySuburbs: 'Hillarys, Marmion, Duncraig' },
+  duncraig:        { lat: -31.827,  lng: 115.777,  postCode: '6023', nearbySuburbs: 'Carine, Greenwood, Padbury' },
+  karrinyup:       { lat: -31.874,  lng: 115.782,  postCode: '6018', nearbySuburbs: 'Gwelup, Innaloo, Stirling' },
+  como:            { lat: -32.001,  lng: 115.864,  postCode: '6152', nearbySuburbs: 'Manning, Salter Point, South Perth' },
+  bicton:          { lat: -32.030,  lng: 115.783,  postCode: '6157', nearbySuburbs: 'Palmyra, Attadale, East Fremantle' },
+  'east-fremantle':{ lat: -32.035,  lng: 115.761,  postCode: '6158', nearbySuburbs: 'Fremantle, Bicton, Palmyra' },
+  'shenton-park':  { lat: -31.961,  lng: 115.803,  postCode: '6008', nearbySuburbs: 'Daglish, Subiaco, Jolimont' },
+  dalkeith:        { lat: -32.001,  lng: 115.801,  postCode: '6009', nearbySuburbs: 'Nedlands, Claremont, Crawley' },
+  'city-beach':    { lat: -31.936,  lng: 115.761,  postCode: '6015', nearbySuburbs: 'Floreat, Wembley Downs, Scarborough' },
 }
 
 export function SuburbPageSchema({ suburb, url }: { suburb: string; url: string }) {

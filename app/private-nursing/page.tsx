@@ -167,6 +167,10 @@ export default function PrivateNursing() {
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-teal-accent shrink-0 mt-1" />
+                    <span><strong>Elderly Care & Geriatric Support:</strong> Seniors needing specialized support at home for chronic conditions, mobility, cognitive tracking, and general wellbeing. Read more about our <Link href="/private-nursing/elderly-care" className="text-teal-text font-semibold hover:underline">Elderly Care at Home</Link> services.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-teal-accent shrink-0 mt-1" />
                     <span><strong>NDIS Participants (Self & Plan Managed):</strong> Individuals with disability requiring high-intensity clinical interventions. Check our dedicated <Link href="/ndis-nursing" className="text-teal-text font-semibold hover:underline">NDIS Nursing Care</Link> page.</span>
                   </li>
                   <li className="flex items-start gap-3">

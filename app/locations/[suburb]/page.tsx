@@ -605,6 +605,47 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
         </div>
       </section>
 
+      {/* Nearby/Related Suburbs Internal Linking Section */}
+      {(() => {
+        let related = Object.values(suburbsMap).filter((s) => s.id !== data.id && s.region === data.region)
+        if (related.length < 5) {
+          const others = Object.values(suburbsMap).filter((s) => s.id !== data.id && s.region !== data.region)
+          related = [...related, ...others].slice(0, 5)
+        } else {
+          related = related.slice(0, 5)
+        }
+
+        return (
+          <section className="section-py bg-white border-t border-border">
+            <div className="section-container">
+              <div className="text-center mb-8">
+                <h2 className="text-navy text-2xl font-bold">Other Suburbs We Service Near {data.name}</h2>
+                <div className="section-divider mx-auto" />
+                <p className="text-body text-sm max-w-xl mx-auto mt-2">
+                  We provide registered nurse home care visits with zero travel charges across the entire Perth metro region, including these nearby suburbs:
+                </p>
+              </div>
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-5xl mx-auto">
+                {related.map((s) => (
+                  <Link
+                    key={s.id}
+                    href={`/locations/${s.id}`}
+                    className="flex flex-col p-4 rounded-xl border border-border bg-surface hover:border-teal-accent hover:shadow-xs transition-all text-center group"
+                  >
+                    <span className="text-navy font-bold text-sm group-hover:text-teal-text transition-colors">
+                      {s.name}
+                    </span>
+                    <span className="text-muted-brand text-[10px] uppercase font-bold mt-1">
+                      {s.region}
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )
+      })()}
+
       <CTASection
         title={`Looking for a private registered nurse in ${data.name}?`}
         description={`Call co-founders Jinu and Zuhair directly. Speak directly with a registered nurse to design a recovery or care plan today.`}

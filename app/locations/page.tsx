@@ -36,6 +36,16 @@ const additionalSuburbs = [
   { name: 'Victoria Park', href: '/locations/victoria-park', description: 'Private nursing, wound care, and medication management in Victoria Park.', distance: 'Inner East' },
   { name: 'Joondalup', href: '/locations/joondalup', description: 'Professional in-home nursing across Joondalup, Edgewater, and Currambine.', distance: 'Northern Suburbs' },
   { name: 'Midland', href: '/locations/midland', description: 'Registered nurse home visits in Midland, Middle Swan, and Guildford.', distance: 'Eastern Suburbs' },
+  { name: 'Scarborough', href: '/locations/scarborough', description: 'In-home registered nurse visits in Scarborough, Trigg, and Wembley Downs.', distance: 'Northern Suburbs' },
+  { name: 'Sorrento', href: '/locations/sorrento', description: 'Private nursing and registered nurse home visits across Sorrento, Hillarys, and Marmion.', distance: 'Northern Suburbs' },
+  { name: 'Duncraig', href: '/locations/duncraig', description: 'In-home clinical nursing care in Duncraig, Carine, and Greenwood.', distance: 'Northern Suburbs' },
+  { name: 'Karrinyup', href: '/locations/karrinyup', description: 'Registered nurse home care in Karrinyup, Gwelup, and Innaloo. Post-surgical care.', distance: 'Northern Suburbs' },
+  { name: 'Como', href: '/locations/como', description: 'In-home registered nurse visits in Como, Manning, and Salter Point. Private nursing.', distance: 'Inner South' },
+  { name: 'Bicton', href: '/locations/bicton', description: 'Clinical home nursing in Bicton, Palmyra, and East Fremantle. Sterile wound dressing.', distance: 'Fremantle Area' },
+  { name: 'East Fremantle', href: '/locations/east-fremantle', description: 'Private nursing and post-hospital care in East Fremantle and Bicton. Dedicated RN.', distance: 'Fremantle Area' },
+  { name: 'Shenton Park', href: '/locations/shenton-park', description: 'Registered nurse home visits in Shenton Park, Daglish, and Subiaco. Complex wound care.', distance: 'Western Suburbs' },
+  { name: 'Dalkeith', href: '/locations/dalkeith', description: 'In-home private nursing care in Dalkeith, Nedlands, and Claremont. Registered nurses.', distance: 'Western Suburbs' },
+  { name: 'City Beach', href: '/locations/city-beach', description: 'In-home registered nurse visits in City Beach and Floreat. Post-surgical recovery.', distance: 'Western Suburbs' },
 ]
 
 // Combined for components that need flat list
