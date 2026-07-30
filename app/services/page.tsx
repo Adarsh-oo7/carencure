@@ -154,8 +154,8 @@ export default function ServicesPage() {
             </h2>
             <div className="section-divider mx-auto" />
             <p className="text-body text-base leading-relaxed mt-4">
-              Care N Cure is a Perth-based in-home nursing practice led by Jinu and Zuhair — two
-              registered nurses with a combined 25+ years of clinical experience. Unlike large
+              Care N Cure is a Perth-based in-home nursing practice led by Jinu — a
+              registered nurse with over a decade of clinical experience. Unlike large
               agencies, every service we offer is clinically guided. You get nurses, not support
               workers acting as nurses.
             </p>

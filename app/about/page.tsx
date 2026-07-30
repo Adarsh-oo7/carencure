@@ -28,17 +28,7 @@ const founders = [
     experience: '10+ years experience',
     bio: [
       'Jinu is a registered nurse with over 10 years of clinical experience across hospital and community settings. He is based in Perth, Western Australia, and has built his career caring for Australians across some of Perth’s busiest health environments.',
-      'His clinical background spans acute nursing, post-surgical recovery, wound management, and patient education. He co-founded The Nurse Who Knows You because every Australian deserves a nurse who truly knows them — not a different stranger at every visit.',
-    ],
-  },
-  {
-    id: 'about-founder-zuhair',
-    name: 'Mohamed Zuhair Parayil Ummer',
-    credential: 'Registered Nurse (RN)',
-    experience: '15+ years experience',
-    bio: [
-      'Zuhair is a registered nurse with more than 15 years of clinical experience in critical care nursing and the management of complex client needs. Based in Perth, Western Australia, he has dedicated his career to supporting Australians through some of their most challenging and vulnerable times.',
-      'His clinical background and expertise include medication management, chronic disease monitoring, and post-hospital recovery care. As co-founder of The Nurse Who Knows You, Zuhair is passionate about delivering consistent, compassionate, and dignified nursing care in the comfort of clients\' homes. He believes everyone deserves access to high-quality healthcare that is tailored to their individual needs and circumstances.',
+      'His clinical background spans acute nursing, post-surgical recovery, wound management, and patient education. He founded The Nurse Who Knows You because every Australian deserves a nurse who truly knows them — not a different stranger at every visit.',
     ],
   },
 ]
@@ -47,8 +37,7 @@ export default function AboutPage() {
   return (
     <>
       <MedicalBusinessSchema />
-      <PersonSchema name="Jinu Maecheril Sukumaran" jobTitle="Registered Nurse, Co-Founder" description="Co-founder of The Nurse Who Knows You. 10+ years nursing experience." />
-      <PersonSchema name="Mohamed Zuhair Parayil Ummer" jobTitle="Registered Nurse, Co-Founder" description="Co-founder of The Nurse Who Knows You. 15+ years nursing experience." />
+      <PersonSchema name="Jinu Maecheril Sukumaran" jobTitle="Registered Nurse, Founder" description="Founder of The Nurse Who Knows You. 10+ years nursing experience." />
       <BreadcrumbSchema items={[
         { name: 'Home', href: '/' },
         { name: 'About', href: '/about' },
@@ -70,13 +59,10 @@ export default function AboutPage() {
             <div className="section-divider" />
             <div className="space-y-5">
               <p className="text-body text-lg leading-relaxed">
-                Jinu and Zuhair are registered nurses who spent over a decade working across Perth’s hospital network. Time and again, they watched the same thing unfold — Australians discharged from Sir Charles Gairdner, Royal Perth, Fiona Stanley, and Joondalup Health Campus, sent home with complex needs and no reliable nursing support waiting for them.
+                Jinu is a registered nurse who spent over a decade working across Perth’s hospital network. Time and again, he watched the same thing unfold — Australians discharged from Sir Charles Gairdner, Royal Perth, Fiona Stanley, and Joondalup Health Campus, sent home with complex needs and no reliable nursing support waiting for them.
               </p>
               <p className="text-body leading-relaxed">
-                Zuhair is a Registered Nurse based in Perth, Western Australia, with more than 15 years of clinical experience in critical care nursing and the management of complex client needs. Throughout his career, he has been committed to supporting Australians during some of their most challenging and vulnerable times.
-              </p>
-              <p className="text-body leading-relaxed">
-                In March 2026, Jinu and Zuhair registered Care N Cure with ASIC to close that gap. Not an agency. Not a directory. A proper nursing practice operating as The Nurse Who Knows You — where registered nurses take personal responsibility for the clinical care of every client they are assigned.
+                In March 2026, Jinu registered Care N Cure with ASIC to close that gap. Not an agency. Not a directory. A proper nursing practice operating as The Nurse Who Knows You — where registered nurses take personal responsibility for the clinical care of every client they are assigned.
               </p>
               <p className="text-body leading-relaxed font-medium text-navy">
                 We believe every Australian deserves to recover at home with dignity, surrounded by people who genuinely know and care for them.
@@ -90,13 +76,13 @@ export default function AboutPage() {
       <section className="section-py bg-white" id="founders">
         <div className="section-container">
           <div className="text-center mb-12">
-            <p className="section-label mb-3">Meet the Founders</p>
-            <h2 className="text-navy mb-4">Jinu & Zuhair</h2>
+            <p className="section-label mb-3">Meet the Founder</p>
+            <h2 className="text-navy mb-4">Jinu Maecheril Sukumaran</h2>
             <div className="section-divider mx-auto" />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="flex justify-center max-w-2xl mx-auto">
             {founders.map(({ id, name, credential, bio, experience }) => (
-              <div key={id} id={id} className="card-base overflow-hidden">
+              <div key={id} id={id} className="card-base overflow-hidden w-full">
                 {/* <div className="relative h-52 flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #091E30, #1A3D5C)' }}>
                    <div className="flex flex-col items-center gap-3 text-center px-8">
                     <div className="w-20 h-20 rounded-full flex items-center justify-center text-2xl font-bold" style={{ background: 'rgba(197,238,228,0.15)', color: 'var(--teal)', border: '2px dashed rgba(197,238,228,0.4)' }}>
@@ -170,8 +156,8 @@ export default function AboutPage() {
       </section> */}
 
       <CTASection
-        title="Want to speak with Jinu or Zuhair directly?"
-        description="Call us now. As founders, we are involved in every care assessment. You will speak with a registered nurse, not a receptionist."
+        title="Want to speak with Jinu directly?"
+        description="Call now. As our founder, Jinu is personally involved in every care assessment. You will speak with a registered nurse, not a receptionist."
         secondaryLink={{ text: 'Contact us', href: '/contact' }}
       />
     </>

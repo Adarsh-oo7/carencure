@@ -65,7 +65,7 @@ const suburbsMap: Record<string, SuburbData> = {
     description: 'Delivering companion care, medication management, and mobility support for seniors in Cottesloe, Swanbourne, and Peppermint Grove.',
     surroundingSuburbs: 'Swanbourne, Peppermint Grove, and Mosman Park',
     localHealthcareFocus: 'elderly clinical support, mobility assistance, and dedicated nurse checks',
-    localSpecificText: 'For our Cottesloe clients, we offer specialized geriatric support and post-hospital nursing visits. Our co-founders Jinu and Zuhair supervise all clinical assessments in the coastal suburbs, working closely with local GP clinics to maintain your safety, independence, and comfort at home. We actively cover Cottesloe and are ready to visit within 24–48 hours.',
+    localSpecificText: 'For our Cottesloe clients, we offer specialized geriatric support and post-hospital nursing visits. Our founder Jinu supervises all clinical assessments in the coastal suburbs, working closely with local GP clinics to maintain your safety, independence, and comfort at home. We actively cover Cottesloe and are ready to visit within 24–48 hours.',
   },
   gosnells: {
     id: 'gosnells',
@@ -405,7 +405,7 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
     },
     {
       question: 'Are your nurses fully registered with AHPRA?',
-      answer: 'Yes. All nurses at Care N Cure are registered with the Australian Health Practitioner Regulation Agency (AHPRA) and hold current registration as Registered Nurses. Our co-founders Jinu and Zuhair have 10+ and 15+ years of clinical experience respectively.',
+      answer: 'Yes. All nurses at Care N Cure are registered with the Australian Health Practitioner Regulation Agency (AHPRA) and hold current registration as Registered Nurses. Our founder Jinu has 10+ years of clinical experience.',
     },
     {
       question: `How quickly can a nurse visit me in ${data.name}?`,
@@ -457,7 +457,7 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
                   </p>
                 )}
                 <p className="text-body leading-relaxed mt-3">
-                  Care N Cure is a Perth-based nursing practice founded by Jinu and Zuhair — two registered nurses with a combined 25+ years of hospital and community nursing experience. We provide in-home nursing visits across {data.name} and all adjacent Perth suburbs.
+                  Care N Cure is a Perth-based nursing practice founded by Jinu — a registered nurse with over a decade of hospital and community nursing experience. We provide in-home nursing visits across {data.name} and all adjacent Perth suburbs.
                 </p>
               </div>
 
@@ -648,7 +648,7 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
 
       <CTASection
         title={`Looking for a private registered nurse in ${data.name}?`}
-        description={`Call co-founders Jinu and Zuhair directly. Speak directly with a registered nurse to design a recovery or care plan today.`}
+        description={`Call our founder Jinu directly. Speak directly with a registered nurse to design a recovery or care plan today.`}
         secondaryLink={{ text: 'Call Us Now', href: '/contact', isPhone: false }}
       />
     </>

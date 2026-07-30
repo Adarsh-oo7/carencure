@@ -109,7 +109,7 @@ export default function ReferralsPage() {
                 </h2>
                 <div className="section-divider" />
                 <p className="text-body text-lg leading-relaxed mt-4">
-                  Care N Cure was founded by two experienced registered nurses — Jinu and Zuhair — who
+                  Care N Cure was founded by Jinu, an experienced registered nurse who
                   spent over a decade working inside Perth's hospital network. We understand what a
                   good discharge looks like, and we make it our job to ensure it goes smoothly.
                 </p>

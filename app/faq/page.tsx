@@ -28,7 +28,7 @@ const allFaqs = [
   {
     id: 'faq-3',
     question: 'Are your nurses fully registered?',
-    answer: 'Yes. Every nurse at our practice is a fully registered nurse. Our founders, Jinu and Zuhair, are registered nurses with over a decade of clinical experience in Perth hospital and community settings. Registration ensures the practitioner is subject to strict professional and national standards.',
+    answer: 'Yes. Every nurse at our practice is a fully registered nurse. Our founder, Jinu, is a registered nurse with over a decade of clinical experience in Perth hospital and community settings. Registration ensures the practitioner is subject to strict professional and national standards.',
   },
   {
     id: 'faq-4',
@@ -100,8 +100,8 @@ export default function FAQPage() {
       </div>
 
       <CTASection
-        title="Still have a question? Ask our founders."
-        description="Jinu and Zuhair are available to answer any clinical or pricing questions. No call centres, just direct professional advice."
+        title="Still have a question? Ask our founder."
+        description="Jinu is available to answer any clinical or pricing questions. No call centres, just direct professional advice."
         secondaryLink={{ text: 'Send an Enquiry', href: '/contact' }}
       />
     </>

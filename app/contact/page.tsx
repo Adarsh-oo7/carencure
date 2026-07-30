@@ -46,7 +46,7 @@ export default function ContactPage() {
                 </h1>
                 <div className="section-divider my-4" />
                 <p className="text-body text-base leading-relaxed">
-                  No call centres or delayed ticketing systems. Speak or message directly with our registered nurse founders, <strong>Jinu & Zuhair</strong>, for immediate clinical guidance, hospital discharge support, or care bookings.
+                  No call centres or delayed ticketing systems. Speak or message directly with our registered nurse founder, <strong>Jinu</strong>, for immediate clinical guidance, hospital discharge support, or care bookings.
                 </p>
               </div>
 

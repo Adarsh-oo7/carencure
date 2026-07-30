@@ -12,16 +12,6 @@ const founders = [
     quote: 'I became a nurse to make a difference in people’s lives — and the best way to do that at home is to be the same face every visit. That’s why we built our practice around one nurse, one client.',
     bio: 'Jinu brings over a decade of clinical nursing experience across hospital and community settings. His approach to care is built on clinical precision and genuine empathy — qualities he now brings directly to Perth families through The Nurse Who Knows You.',
   },
-  {
-    id: 'founder-zuhair',
-    initials: 'MZ',
-    name: 'Mohamed Zuhair Parayil Ummer',
-    credential: 'Registered Nurse (RN)',
-    experience: '15+ years nursing experience',
-    background: 'Based in Perth — dedicated to Perth’s community',
-    quote: 'Families deserve one nurse who knows them — their medications, their fears, their progress. Not a different face each week. That continuity is what changes outcomes.',
-    bio: 'Zuhair has more than 15 years of clinical experience in critical care nursing and the management of complex client needs. He co-founded our practice to provide Perth families with consistent, compassionate, and dignified nursing care at home.',
-  },
 ]
 
 export function FoundersPreview() {
@@ -29,22 +19,22 @@ export function FoundersPreview() {
     <section className="section-py bg-white" aria-labelledby="founders-heading">
       <div className="section-container">
         <div className="text-center mb-12">
-          <p className="section-label mb-3">Our Founders</p>
+          <p className="section-label mb-3">Our Founder</p>
           <h2 id="founders-heading" className="text-navy mb-4">
-            Meet Jinu & Zuhair
+            Meet Jinu
           </h2>
           <div className="section-divider mx-auto" />
           <p className="text-body max-w-2xl mx-auto text-lg">
-            Our practice was founded by two registered nurses with over 10 years of clinical experience each. We started this because we saw first-hand how hard it is to get reliable, qualified nursing care at home in Perth.
+            Our practice was founded by an experienced registered nurse with over 10 years of clinical experience. We started this because we saw first-hand how hard it is to get reliable, qualified nursing care at home in Perth.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+        <div className="flex justify-center mb-10">
           {founders.map(({ id, initials, name, credential, experience, background, quote, bio }) => (
             <div
               key={id}
               id={id}
-              className="card-base overflow-hidden flex flex-col"
+              className="card-base overflow-hidden flex flex-col max-w-xl w-full"
               itemScope
               itemType="https://schema.org/Person"
             >

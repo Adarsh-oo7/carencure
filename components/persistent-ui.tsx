@@ -55,13 +55,10 @@ export function PersistentUI() {
             </button>
             
             <div className="flex items-center gap-3.5">
-              {/* Overlapping Initials Avatars (representing Jinu & Zuhair) */}
-              <div className="flex -space-x-3.5">
+              {/* Initials Avatar (representing Jinu) */}
+              <div className="flex">
                 <div className="w-10 h-10 rounded-full border-2 border-white bg-navy flex items-center justify-center font-bold text-xs shadow-sm text-teal-accent">
                   JS
-                </div>
-                <div className="w-10 h-10 rounded-full border-2 border-white bg-teal-accent flex items-center justify-center font-bold text-xs shadow-sm text-navy">
-                  ZU
                 </div>
               </div>
               <div>

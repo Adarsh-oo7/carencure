@@ -73,7 +73,7 @@ export default function QualityFeedbackPage() {
                   <div>
                     <h4 className="text-navy font-bold mb-2 text-base">Active Clinical Oversight</h4>
                     <p className="text-body text-xs leading-relaxed">
-                      Our co-founders, Jinu and Zuhair, review care plans, coordinate handovers with discharging hospitals, and maintain direct contact with your local General Practitioners.
+                      Our founder, Jinu, reviews care plans, coordinates handovers with discharging hospitals, and maintains direct contact with your local General Practitioners.
                     </p>
                   </div>
                 </div>

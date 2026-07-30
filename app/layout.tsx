@@ -30,7 +30,6 @@ export const metadata: Metadata = {
   ],
   authors: [
     { name: 'Jinu Maecheril Sukumaran, RN' },
-    { name: 'Mohamed Zuhair Parayil Ummer, RN' },
   ],
   creator: 'Care N Cure',
   publisher: 'Care N Cure',

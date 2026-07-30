@@ -162,22 +162,7 @@ export function MedicalBusinessSchema() {
             '@type': 'Person',
             name: 'Jinu Maecheril Sukumaran',
             jobTitle: 'Registered Nurse (RN)',
-            description: 'Co-founder with 10+ years clinical nursing experience',
-            hasCredential: {
-              '@type': 'EducationalOccupationalCredential',
-              credentialCategory: 'Professional Registration',
-              name: 'Registered Nurse',
-              recognizedBy: {
-                '@type': 'Organization',
-                name: 'Australian Health Practitioner Regulation Agency (AHPRA)',
-              },
-            },
-          },
-          {
-            '@type': 'Person',
-            name: 'Mohamed Zuhair Parayil Ummer',
-            jobTitle: 'Registered Nurse (RN)',
-            description: 'Co-founder with 15+ years critical care nursing experience',
+            description: 'Founder with 10+ years clinical nursing experience',
             hasCredential: {
               '@type': 'EducationalOccupationalCredential',
               credentialCategory: 'Professional Registration',

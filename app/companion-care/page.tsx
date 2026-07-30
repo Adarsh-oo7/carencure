@@ -192,7 +192,7 @@ export default function CompanionCare() {
 
       <CTASection
         title="Looking for reliable, nurse-led companionship for a parent?"
-        description="Speak with co-founders Jinu and Zuhair to coordinate a regular and caring companion plan today."
+        description="Speak with our founder Jinu to coordinate a regular and caring companion plan today."
         secondaryLink={{ text: 'Call Us Now', href: '/contact' }}
       />
     </>

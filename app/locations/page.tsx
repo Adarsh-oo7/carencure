@@ -107,7 +107,7 @@ export default function LocationsPage() {
               <h2 className="text-navy text-3xl font-bold">Coordinating with Perth&apos;s leading hospitals</h2>
               <div className="section-divider" />
               <p className="text-body text-sm leading-relaxed">
-                A seamless discharge relies on clear communication. Jinu and Zuhair have spent over a decade working in hospital settings and know exactly how to manage medical handovers. We speak directly to hospital coordinators to make sure everything is in place before you arrive home.
+                A seamless discharge relies on clear communication. Jinu has spent over a decade working in hospital settings and knows exactly how to manage medical handovers. We speak directly to hospital coordinators to make sure everything is in place before you arrive home.
               </p>
               <p className="text-body text-sm font-semibold text-navy">
                 We coordinate transitions with all public and private Perth hospitals.

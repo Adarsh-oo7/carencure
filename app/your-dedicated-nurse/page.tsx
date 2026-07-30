@@ -190,18 +190,18 @@ export default function YourDedicatedNursePage() {
               Built by Nurses. For Families.
             </h2>
             <p className="text-body text-lg leading-relaxed mb-8">
-              Our practice was founded by Jinu and Zuhair — two registered nurses with over a decade
-              of clinical experience each in Australian hospitals and home care settings. They built
-              the Dedicated Nurse model because they saw firsthand what happens when continuity of
+              Our practice was founded by Jinu — a registered nurse with over a decade
+              of clinical experience in Australian hospitals and home care settings. He built
+              the Dedicated Nurse model because he saw firsthand what happens when continuity of
               care breaks down after hospital discharge. Every nurse at our practice follows the same
-              model they designed.
+              model he designed.
             </p>
             <Link
               href="/about"
               className="inline-flex items-center gap-2 bg-teal-700 text-white font-semibold px-6 py-3 rounded-xl hover:bg-teal-800 transition-colors"
               id="founders-about-cta"
             >
-              Meet Jinu and Zuhair
+              Meet Jinu
             </Link>
           </div>
         </div>

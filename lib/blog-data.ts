@@ -73,7 +73,7 @@ If your loved one has recently been discharged from hospital, or if you are mana
 
 We cover all Perth metro suburbs including Nedlands, Subiaco, Applecross, South Perth, Mount Lawley, Fremantle, Cottesloe, Gosnells, Armadale, Rockingham, and surrounding areas.
 
-Call 1300 919 663 or visit carencure.com.au/contact to book a free initial assessment. Our founders Jinu and Zuhair — both experienced registered nurses — are personally involved in every new client assessment.`,
+Call 1300 919 663 or visit carencure.com.au/contact to book a free initial assessment. Our founder Jinu — an experienced registered nurse — is personally involved in every new client assessment.`,
     author: 'Jinu Maecheril Sukumaran, RN',
     date: '2026-06-20',
     category: 'Senior Care',
@@ -163,7 +163,7 @@ For life-threatening emergencies, always call 000 first.
 We provide structured post-operative nursing programs for Perth patients recovering from all surgical specialties — orthopaedic, cardiac, general surgery, gynaecological, and oncological procedures. Our visiting schedule is designed around your specific clinical needs, typically most intensive in the first week and tapering as you progress.
 
 Call us on 1300 919 663 to arrange a pre-discharge consultation or to start post-operative care from day one after you arrive home.`,
-    author: 'Mohamed Zuhair Parayil Ummer, RN',
+    author: 'Jinu Maecheril Sukumaran, RN',
     date: '2026-06-15',
     category: 'Post-Surgery Care',
     image: '/blog/post-surgery-recovery.jpg',
@@ -345,7 +345,7 @@ Our nurses inspect diabetic feet at every visit — regardless of whether wound 
 Many Perth residents attempt to manage post-surgical wounds, chronic ulcers, or skin tears at home without professional support. In straightforward cases, this may be adequate. In complex cases — or where the patient is elderly, diabetic, immunocompromised, or has poor circulation — attempting home wound management without nursing support is risky.
 
 Care N Cure provides professional wound care across all Perth suburbs. Our registered nurses bring clinical-grade products, sterile technique, and the assessment skills to identify problems early. If you or a family member has a wound that needs professional attention, call us to arrange an assessment.`,
-    author: 'Mohamed Zuhair Parayil Ummer, RN',
+    author: 'Jinu Maecheril Sukumaran, RN',
     date: '2026-05-30',
     category: 'Wound Care',
     image: '/blog/wound-care-practices.jpg',
@@ -438,7 +438,7 @@ Many families combine their government funding with private services to bridge c
 ## Accessing Your Support at Home
 
 If you are ready to transition your care to a provider that prioritizes clinical accountability and roster consistency, we can help. Learn more about how we structure our services on our [Home Care Packages](/homecare-packages) page, or check out our general [Support at Home](/support-at-home) options to see how we can assist you today.`,
-    author: 'Mohamed Zuhair Parayil Ummer, RN',
+    author: 'Jinu Maecheril Sukumaran, RN',
     date: '2026-07-10',
     category: 'Funded Care',
     image: '/blog/post-surgery-recovery.jpg',
@@ -508,7 +508,7 @@ By coordinating care early, we help you focus entirely on your recovery in the c
 ## Securing Your Post-Hospital Support
 
 If you or a loved one has an upcoming procedure at Hollywood Private, Bethesda, or Fiona Stanley Hospital, we recommend planning your recovery support in advance. Explore our services on the [Post-Hospital Care](/post-hospital-care) page, and get in touch with our team today to ensure your transition home is safe, smooth, and supported.`,
-    author: 'Mohamed Zuhair Parayil Ummer, RN',
+    author: 'Jinu Maecheril Sukumaran, RN',
     date: '2026-07-01',
     category: 'Post-Hospital Care',
     image: '/blog/wound-care-practices.jpg',
