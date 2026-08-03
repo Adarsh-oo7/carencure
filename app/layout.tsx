@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     apple: '/logo.png',
   },
   alternates: {
-    canonical: 'https://carencure.com.au',
+    canonical: './',
   },
 }
 
@@ -86,6 +86,10 @@ export default function RootLayout({
   return (
     <html lang="en-AU" className="scroll-smooth">
       <head>
+        <meta name="geo.region" content="AU-WA" />
+        <meta name="geo.placename" content="Perth" />
+        <meta name="geo.position" content="-31.9505;115.8605" />
+        <meta name="ICBM" content="-31.9505, 115.8605" />
         <meta
           httpEquiv="Content-Security-Policy"
           content="default-src 'self'; frame-src 'self' https://www.google.com https://*.google.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://va.vercel-scripts.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; connect-src 'self' https://vitals.vercel-insights.com https://*.vercel-analytics.com https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://cloudflareinsights.com; font-src 'self' data: https://fonts.gstatic.com;"

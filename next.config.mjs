@@ -8,26 +8,21 @@ const nextConfig = {
   },
   async redirects() {
     return [
-      // Old static HTML redirect files removed — send 301 to proper Next.js routes
+      // Legacy index.html redirects for root and all subdirectories
       {
-        source: '/locations/midland/index.html',
-        destination: '/locations/midland',
+        source: '/index.html',
+        destination: '/',
         permanent: true,
       },
       {
-        source: '/locations/joondalup/index.html',
-        destination: '/locations/joondalup',
+        source: '/:path*/index.html',
+        destination: '/:path*',
         permanent: true,
       },
-      // Trailing-slash variants for suburb pages (safety net)
+      // Redirect legacy .html endpoints to clean paths
       {
-        source: '/locations/midland/',
-        destination: '/locations/midland',
-        permanent: true,
-      },
-      {
-        source: '/locations/joondalup/',
-        destination: '/locations/joondalup',
+        source: '/:path*.html',
+        destination: '/:path*',
         permanent: true,
       },
     ]
@@ -60,7 +55,7 @@ const nextConfig = {
           },
           {
             key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://va.vercel-scripts.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://vitals.vercel-insights.com https://*.vercel-analytics.com; font-src 'self' data:;",
+            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://*.googletagmanager.com https://www.google-analytics.com https://va.vercel-scripts.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://vitals.vercel-insights.com https://*.vercel-analytics.com https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://www.google.com https://*.google.com https://stats.g.doubleclick.net; font-src 'self' data:;",
           },
         ],
       },

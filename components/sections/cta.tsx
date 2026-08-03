@@ -114,22 +114,22 @@ export function CTASection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
-              href="/contact"
-              className="btn-phone text-lg w-full sm:w-auto justify-center"
-              id="cta-book-btn"
-            >
-              Book a Free Consultation
-              <ArrowRight className="w-5 h-5" />
-            </Link>
             <a
               href={PHONE_HREF}
-              className="btn-outline-white text-lg w-full sm:w-auto justify-center cursor-pointer inline-flex items-center gap-2"
+              className="btn-phone text-lg w-full sm:w-auto justify-center cursor-pointer inline-flex items-center gap-2 font-extrabold shadow-2xl hover:scale-105 transition-all"
               id="cta-call-btn"
             >
-              <Phone className="w-5 h-5 flex-shrink-0" />
-              Call Us Today
+              <Phone className="w-5 h-5 flex-shrink-0 animate-pulse text-teal-accent" />
+              <span>Call Now: 1300 919 663</span>
             </a>
+            <Link
+              href="/contact"
+              className="btn-outline-white text-lg w-full sm:w-auto justify-center inline-flex items-center gap-2"
+              id="cta-book-btn"
+            >
+              <span>Enquire Online</span>
+              <ArrowRight className="w-5 h-5" />
+            </Link>
           </div>
 
           <p className="mt-8 text-xs text-white/40">

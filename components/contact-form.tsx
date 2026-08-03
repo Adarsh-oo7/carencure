@@ -188,17 +188,26 @@ export function ContactForm({
         )}
       </button>
 
-      <p className="text-sm text-center" style={{ color: 'var(--text-muted)' }}>
-        Prefer to call?{' '}
-        <a
-          href={PHONE_HREF}
-          className="font-semibold text-navy underline cursor-pointer inline font-inherit"
-          style={{ minHeight: 'auto' }}
-        >
-          Call Us directly
-        </a>{' '}
-        — we answer every call.
-      </p>
+      <div className="pt-2 border-t border-border/60 flex flex-col gap-2 text-xs text-body/80">
+        <div className="flex items-center justify-between gap-2 bg-teal-50/60 p-2.5 rounded-lg border border-teal-100/60">
+          <span className="font-semibold text-teal-800 flex items-center gap-1.5">
+            <span className="w-2 h-2 rounded-full bg-teal-500 animate-pulse" />
+            2-Hour Response Time
+          </span>
+          <span className="text-navy font-medium">Direct RN Handovers</span>
+        </div>
+        <p className="text-center text-xs mt-1" style={{ color: 'var(--text-muted)' }}>
+          Prefer to call?{' '}
+          <a
+            href={PHONE_HREF}
+            className="font-bold text-navy underline cursor-pointer inline font-inherit"
+            style={{ minHeight: 'auto' }}
+          >
+            Call 1300 919 663
+          </a>{' '}
+          — you will speak directly with a Registered Nurse.
+        </p>
+      </div>
     </form>
   )
 }

@@ -10,16 +10,9 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
         disallow: [
           '/api/',
-          '/_next/',
           '/cdn-cgi/',
-          // Prevent Next.js dynamic OG image routes from being crawled as web pages
           '/opengraph-image*',
           '/*opengraph-image*',
-          // Prevent static fonts and asset files from being crawled as web pages
-          '/_next/static/*',
-          '/*.woff2$',
-          '/*.woff$',
-          '/*.ttf$',
         ],
       },
     ],
@@ -27,3 +20,4 @@ export default function robots(): MetadataRoute.Robots {
     host: 'https://carencure.com.au',
   }
 }
+

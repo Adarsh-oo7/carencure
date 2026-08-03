@@ -22,6 +22,7 @@ export function Footer() {
                   alt="Care N Cure logo"
                   width={36}
                   height={36}
+                  style={{ width: 'auto', height: 'auto' }}
                   className="h-8 w-auto"
                 />
               </div>
@@ -70,7 +71,7 @@ export function Footer() {
                 { label: 'Funded Care (HCP)', href: '/funded-care' },
                 { label: 'Hospital to Home', href: '/post-hospital-care' },
               ].map((link) => (
-                <li key={link.href}>
+                <li key={`${link.href}-${link.label}`}>
                   <Link
                     href={link.href}
                     className="text-white/70 hover:text-white text-sm transition-colors"
@@ -110,7 +111,7 @@ export function Footer() {
                 { label: 'Midland', href: '/locations/midland' },
                 { label: 'All Suburbs →', href: '/locations' },
               ].map((link) => (
-                <div key={link.href}>
+                <div key={`${link.href}-${link.label}`}>
                   <Link
                     href={link.href}
                     className="text-white/70 hover:text-white text-xs transition-colors block"

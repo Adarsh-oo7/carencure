@@ -205,15 +205,28 @@ export function PersistentUI() {
               <svg viewBox="0 0 24 24" className="w-7 h-7 fill-current animate-in zoom-in-50 duration-300">
                 <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.625 1.45 5.489.002 9.961-4.47 9.964-9.96.002-2.66-1.023-5.158-2.884-7.02C16.49 1.76 13.992.73 11.33.73c-5.49 0-9.962 4.471-9.965 9.961-.001 1.93.52 3.473 1.503 5.062L1.87 21.08l5.46-1.432zM17.18 14.86c-.305-.153-1.802-.888-2.083-.99-.281-.102-.485-.153-.687.153-.202.305-.783.99-.96 1.194-.177.203-.355.228-.66.076-.305-.152-1.287-.475-2.451-1.513-.906-.808-1.517-1.807-1.695-2.112-.178-.305-.019-.47.133-.621.137-.136.305-.355.457-.533.153-.177.203-.305.305-.508.102-.203.05-.381-.026-.533-.076-.152-.687-1.656-.94-2.266-.247-.595-.499-.513-.687-.523-.178-.01-.381-.01-.584-.01-.203 0-.533.076-.812.381-.28.305-1.066 1.042-1.066 2.541s1.091 2.946 1.243 3.149c.153.203 2.15 3.284 5.207 4.603.727.314 1.294.5 1.737.641.73.232 1.393.197 1.917.12.584-.087 1.802-.736 2.056-1.447.253-.71.253-1.32.177-1.447-.076-.127-.28-.203-.584-.355z" />
               </svg>
-              {/* Notification Badge */}
-              <span className="absolute -top-1 -right-1 w-5.5 h-5.5 bg-rose-500 rounded-full border-2 border-white flex items-center justify-center text-[10px] font-extrabold text-white animate-bounce">
-                1
-              </span>
               {/* Pulse animation rings */}
               <span className="absolute -z-10 inset-0 rounded-full bg-emerald-500/30 animate-ping opacity-75" />
             </>
           )}
         </button>
+      </div>
+
+      {/* Mobile Sticky CTA Bar (Visible only on mobile devices) */}
+      <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-navy/95 backdrop-blur-md border-t border-navy-light/40 p-2.5 px-4 flex items-center justify-between gap-3 shadow-2xl">
+        <a
+          href={PHONE_HREF}
+          className="flex-1 bg-gradient-to-r from-emerald-600 to-teal-500 hover:from-emerald-500 hover:to-teal-400 text-white font-bold text-sm py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 shadow-lg active:scale-98 transition-all"
+        >
+          <Phone className="w-4 h-4 fill-current animate-pulse" />
+          <span>Call: 1300 919 663</span>
+        </a>
+        <a
+          href="/contact"
+          className="bg-white/10 hover:bg-white/20 text-white font-semibold text-xs py-2.5 px-3 rounded-xl border border-white/20 text-center whitespace-nowrap transition-all"
+        >
+          Enquire Online
+        </a>
       </div>
     </div>
   )

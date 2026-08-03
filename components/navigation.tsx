@@ -161,6 +161,7 @@ export function Navigation() {
                   alt="Care N Cure logo"
                   width={48}
                   height={48}
+                  style={{ width: 'auto', height: 'auto' }}
                   className="w-9 h-9 sm:w-12 sm:h-12 object-contain"
                   priority
                 />
@@ -201,7 +202,7 @@ export function Navigation() {
                   >
                     {serviceLinks.map((link) => (
                       <Link
-                        key={link.href}
+                        key={`${link.href}-${link.label}`}
                         href={link.href}
                         className="block px-4 py-2.5 text-sm text-body hover:bg-surface hover:text-navy font-medium transition-colors"
                         role="menuitem"
@@ -237,7 +238,7 @@ export function Navigation() {
                   >
                     {locationLinks.map((link) => (
                       <Link
-                        key={link.href}
+                        key={`${link.href}-${link.label}`}
                         href={link.href}
                         className="block px-4 py-2.5 text-sm text-body hover:bg-surface hover:text-navy font-medium transition-colors"
                         role="menuitem"
@@ -321,7 +322,7 @@ export function Navigation() {
                   <div className="pl-4 mt-1 flex flex-col gap-1">
                     {serviceLinks.map((link) => (
                       <Link
-                        key={link.href}
+                        key={`${link.href}-${link.label}`}
                         href={link.href}
                         className="px-3 py-2.5 text-sm text-body hover:text-navy font-medium border-l-2 border-teal transition-colors"
                         onClick={() => setIsOpen(false)}
@@ -347,7 +348,7 @@ export function Navigation() {
                   <div className="pl-4 mt-1 flex flex-col gap-1">
                     {locationLinks.map((link) => (
                       <Link
-                        key={link.href}
+                        key={`${link.href}-${link.label}`}
                         href={link.href}
                         className="px-3 py-2.5 text-sm text-body hover:text-navy font-medium border-l-2 transition-colors"
                         onClick={() => setIsOpen(false)}

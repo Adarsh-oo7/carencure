@@ -414,6 +414,54 @@ export function ServicePageSchema({
   )
 }
 
+// ── HowTo schema (for Google Rich Snippets & Voice Search) ───────────────────
+export function HowToSchema() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: 'How to Book a Private Registered Nurse in Perth',
+    description: 'Step-by-step guide to booking an AHPRA-registered nurse for in-home clinical care, post-hospital recovery, or wound management in Perth, WA.',
+    totalTime: 'PT5M',
+    step: [
+      {
+        '@type': 'HowToStep',
+        position: 1,
+        name: 'Call or Enquire Online',
+        text: 'Contact Care N Cure on 1300 919 663 or submit an enquiry online to speak directly with a Registered Nurse co-founder.',
+        url: `${SITE_URL}/contact`,
+      },
+      {
+        '@type': 'HowToStep',
+        position: 2,
+        name: 'Free In-Home Care Assessment',
+        text: 'A Registered Nurse Coordinator conducts a comprehensive clinical assessment at your home or hospital bedside.',
+        url: `${SITE_URL}/your-dedicated-nurse`,
+      },
+      {
+        '@type': 'HowToStep',
+        position: 3,
+        name: 'Receive Your Personalised Care Plan',
+        text: 'We design a tailored clinical nursing plan coordinating medication, wound care, and GP handovers.',
+        url: `${SITE_URL}/services`,
+      },
+      {
+        '@type': 'HowToStep',
+        position: 4,
+        name: 'Start In-Home Nursing Visits',
+        text: 'Your dedicated Registered Nurse commences regular home visits within 24 to 48 hours.',
+        url: `${SITE_URL}/private-nursing`,
+      },
+    ],
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
 // ── Breadcrumb schema (standalone, reusable) ───────────────────────────────
 export function BreadcrumbSchema({
   items,

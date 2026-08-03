@@ -227,6 +227,7 @@ export function HeroSection({
                   style={{
                     objectFit: 'contain',
                     filter: 'brightness(0) invert(1)',
+                    width: 'auto',
                   }}
                   className="h-7 w-auto"
                 />
@@ -240,13 +241,15 @@ export function HeroSection({
         {/* Trust / value props strip */}
         <div className="mt-6 sm:mt-8 mb-12 sm:mb-0 flex flex-row flex-wrap gap-y-2.5 gap-x-4 sm:gap-x-6 relative z-10" role="list" aria-label="Key credentials">
           {[
-            '✓ Registered Nurses',
-            '✓ Visits within 24–48 hrs',
+            '✓ AHPRA Registered Nurses',
+            '✓ 1-on-1 Dedicated Nurse Coordinator',
+            '✓ Visits Within 24–48 Hrs',
+            '✓ ★ 5.0 Google Rating (Perth)',
           ].map((item) => (
             <span
               key={item}
               role="listitem"
-              className="text-xs sm:text-sm font-semibold text-teal-accent"
+              className="text-xs sm:text-sm font-bold text-teal-accent"
               style={{ textShadow: '0 2px 10px rgba(0,0,0,0.9)' }}
             >
               {item}
