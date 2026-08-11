@@ -81,7 +81,7 @@ export default function ElderlyPrivateNursing() {
               <div className="space-y-6">
                 <h3 className="text-navy text-xl font-bold">Private Clinical Support for Seniors</h3>
                 <p className="text-body">
-                  Our co-founders and nurse coordinators are AHPRA-registered Registered Nurses with extensive backgrounds in acute and community care. We coordinate directly with your parent&apos;s GP, write clear care logs, and ensure that they receive consistent care.
+                  Our founder Jinu and nurse coordinators are AHPRA-registered Registered Nurses with extensive backgrounds in acute and community care. We coordinate directly with your parent&apos;s GP, write clear care logs, and ensure that they receive consistent care.
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">

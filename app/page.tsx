@@ -15,25 +15,29 @@ import { FundedCareSection } from '@/components/sections/funded-care-section'
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Private Nurse Perth | Home Nursing Care | Care N Cure',
+    absolute: 'Home Nurse Perth | In-Home Nursing Care | Care N Cure',
   },
   description:
-    "Perth's trusted registered nurse home care service. Dedicated nurse coordinators for private nursing, wound care & post-hospital support. Call 1300 919 663.",
+    "Perth's trusted in-home nursing care & private home nurses. AHPRA-registered nurse coordinators for wound care, post-hospital recovery & aged care. Call 1300 919 663.",
   keywords: [
-    'private nursing Perth',
+    'home nurse Perth',
+    'in home nursing care Perth',
     'home nursing Perth',
+    'home care nurse Perth',
+    'nurse at home care Perth',
+    'private nurse Perth',
+    'private nursing Perth',
     'registered nurse home visit Perth',
     'dedicated nurse coordinator',
     'Care N Cure Perth',
     'The Nurse Who Knows You',
-    'in-home nursing Perth WA',
     'home care packages Perth',
     'aged care Perth',
   ],
   alternates: { canonical: 'https://carencure.com.au' },
   openGraph: {
-    title: 'Private Nurse Perth | Home Nursing Care | Care N Cure',
-    description: "Perth's trusted registered nurse home care service. Dedicated nurse coordinators for private nursing, wound care & post-hospital support. Call 1300 919 663.",
+    title: 'Home Nurse Perth | In-Home Nursing Care | Care N Cure',
+    description: "Perth's trusted in-home nursing care & private home nurses. AHPRA-registered nurse coordinators for wound care, post-hospital recovery & aged care. Call 1300 919 663.",
     url: 'https://carencure.com.au',
   },
 }

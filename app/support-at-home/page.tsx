@@ -236,7 +236,7 @@ export default function SupportAtHome() {
 
       <CTASection
         title="Start with a free in-home consultation."
-        description="Speak directly with our nurse co-founders to review your daily routine and design a comfortable support schedule."
+        description="Speak directly with our founder Jinu to review your daily routine and design a comfortable support schedule."
         secondaryLink={{ text: 'Contact Us Now', href: '/contact' }}
       />
     </>

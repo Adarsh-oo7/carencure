@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     question: 'Can you care for complex diabetic ulcers or surgical drains?',
-    answer: 'Yes. Our co-founders are highly experienced clinical nurses with hospital backgrounds. We are fully trained in complex wound therapies including compression therapy, diabetic foot ulcer management, skin tear repair, and surgical drain monitoring.',
+    answer: 'Yes. Our founder Jinu and nurse coordinators are highly experienced clinical nurses with hospital backgrounds. We are fully trained in complex wound therapies including compression therapy, diabetic foot ulcer management, skin tear repair, and surgical drain monitoring.',
   },
 ]
 

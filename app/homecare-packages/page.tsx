@@ -4,7 +4,7 @@ import { PageHeader } from '@/components/page-header'
 import { CTASection } from '@/components/sections/cta'
 import { ServicePageSchema, FAQPageSchema } from '@/components/schema'
 import { ContactForm } from '@/components/contact-form'
-import { Award, ShieldCheck, HeartPulse, UserCheck, CheckCircle } from 'lucide-react'
+import { Award, ShieldCheck, HeartPulse, UserCheck, CheckCircle, CheckCircle2 } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: {
@@ -125,23 +125,108 @@ export default function HomecarePackages() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-teal-accent font-bold">•</span>
-                    <span><strong>Home and daily support:</strong> Showers, light cleaning, washing, dressing, cooking, and shopping trips.</span>
+                    <span><strong>Home and daily support:</strong> Personal care, hygiene support, and everyday <Link href="/support-at-home" className="text-teal-text hover:underline font-semibold">support at home</Link>.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-teal-accent font-bold">•</span>
-                    <span><strong>Allied health & equipment:</strong> Physiotherapy, occupational therapy assessments, walker selection, and bathroom rails.</span>
+                    <span><strong>Allied health & equipment:</strong> Physiotherapy, occupational therapy assessments, and mobility aids.</span>
                   </li>
                 </ul>
               </div>
+
+              {/* H2: Clinical Oversight Included */}
+              <div className="space-y-4">
+                <h2 className="text-navy text-2xl font-bold">Clinical Nursing Included in Your Package</h2>
+                <p className="text-body leading-relaxed">
+                  Most HCP providers charge exorbitant administration fees and subcontract clinical nursing at marked-up rates. Because Care N Cure is an independent registered nursing practice, clinical care is built directly into our service DNA.
+                </p>
+                <p className="text-body leading-relaxed">
+                  Your package funds can cover:
+                </p>
+                <ul className="space-y-3 text-body">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-teal-accent shrink-0 mt-1" />
+                    <span><strong>Complex Wound Care:</strong> Surgical dressings, ulcer management, and skin tear therapy by an AHPRA Registered Nurse.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-teal-accent shrink-0 mt-1" />
+                    <span><strong>Medication Management:</strong> Dose administration aid setups, injections, and liaising with your prescribing GP.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-teal-accent shrink-0 mt-1" />
+                    <span><strong>Continence & Catheter Care:</strong> Catheter changes, hygiene plans, and continence product supply management.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-teal-accent shrink-0 mt-1" />
+                    <span><strong>Post-Hospital Support:</strong> Smooth discharge planning to prevent re-admission following hospital stays.</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* H2: Support at Home Transition */}
+              <div className="space-y-4 bg-teal-subtle/30 p-8 rounded-2xl border border-teal-border">
+                <h2 className="text-navy text-2xl font-bold">Transitioning to Support at Home (July 2025 Reform)</h2>
+                <p className="text-body leading-relaxed">
+                  The Australian Government is replacing Home Care Packages with the new <strong>Support at Home program</strong>. Care N Cure is fully aligned with these upcoming reforms to ensure your care funding continues without interruption.
+                </p>
+                <p className="text-body leading-relaxed">
+                  Whether you currently hold a Home Care Package or are waiting for an ACAT assessment, our Registered Nurse team helps you navigate funding rules so you receive maximum clinical value from your allocation. Read more on our dedicated <Link href="/support-at-home" className="text-teal-text font-semibold hover:underline">Support at Home reforms guide</Link>.
+                </p>
+              </div>
+
+              {/* H2: Why Choose Care N Cure for Your Package? */}
+              <div className="space-y-4">
+                <h2 className="text-navy text-2xl font-bold">Why Choose Care N Cure for Your Home Care Package?</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="p-5 bg-surface rounded-xl border border-border space-y-2">
+                    <div className="flex items-center gap-2 font-bold text-navy">
+                      <UserCheck className="w-5 h-5 text-teal-accent" />
+                      <span>Dedicated Nurse Coordinator</span>
+                    </div>
+                    <p className="text-body text-xs leading-relaxed">
+                      You are matched with one primary Registered Nurse who conducts visits and oversees your care plan — no revolving door of staff.
+                    </p>
+                  </div>
+                  <div className="p-5 bg-surface rounded-xl border border-border space-y-2">
+                    <div className="flex items-center gap-2 font-bold text-navy">
+                      <ShieldCheck className="w-5 h-5 text-teal-accent" />
+                      <span>Low Admin Fees</span>
+                    </div>
+                    <p className="text-body text-xs leading-relaxed">
+                      We keep management fees low so more of your package funding goes directly toward clinical visits and hands-on care.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* FAQs */}
+              <div className="space-y-6 pt-6">
+                <h2 className="text-navy text-2xl font-bold">Home Care Package FAQs</h2>
+                <div className="space-y-4">
+                  {faqs.map((faq, idx) => (
+                    <div key={idx} className="bg-surface p-6 rounded-xl border border-border space-y-2">
+                      <h3 className="text-navy font-bold text-lg">{faq.question}</h3>
+                      <p className="text-body text-sm leading-relaxed">{faq.answer}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
             </div>
 
-            {/* Sidebar Form */}
+            {/* Sidebar Contact Form */}
             <div className="lg:col-span-5">
-              <div className="sticky top-24">
+              <div className="sticky top-28 bg-surface p-6 rounded-2xl border border-border shadow-sm space-y-6">
+                <div className="space-y-2">
+                  <span className="px-3 py-1 bg-teal-subtle text-teal-text text-xs font-bold rounded-full uppercase tracking-wider font-sans">Package Support</span>
+                  <h3 className="text-navy text-xl font-bold">Maximise Your Care Package</h3>
+                  <p className="text-body text-sm">
+                    Speak directly with a Registered Nurse about allocating your HCP or Support at Home funds.
+                  </p>
+                </div>
                 <ContactForm
-                  title="Enquire About Packages"
-                  subtitle="Provide your details below. Our Registered Nurse co-founders will call you to discuss your package options."
-                  defaultService="Homecare packages"
+                  defaultService="Home Care Packages"
+                  subtitle="Provide your details below. Our Registered Nurse founder will call you to discuss your package options."
                 />
               </div>
             </div>

@@ -192,7 +192,7 @@ export default function MobilitySupport() {
 
       <CTASection
         title="Ready to rebuild your strength safely?"
-        description="Our Perth-based co-founders will design a customised mobility and exercise monitoring framework with you."
+        description="Our Perth-based founder Jinu and nurse team will design a customised mobility and exercise monitoring framework with you."
         secondaryLink={{ text: 'Contact Us Now', href: '/contact' }}
       />
     </>

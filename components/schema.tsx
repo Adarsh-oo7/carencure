@@ -41,9 +41,17 @@ export function MedicalBusinessSchema() {
       {
         '@type': 'MedicalOrganization',
         '@id': `${SITE_URL}/#medicalorg`,
-        name: 'Care N Cure',
-        alternateName: 'The Nurse Who Knows You',
+        name: 'Care N Cure Nursing Care Services',
+        legalName: 'Care N Cure Nursing Care Services',
+        taxID: '87152479362',
+        alternateName: ['Care N Cure', 'The Nurse Who Knows You'],
         url: SITE_URL,
+        sameAs: [
+          'https://morningpost.com.au/perth/local/home-care/',
+          'https://www.agedcareatlas.com.au/facility/8d37dcb0-87a1-4b3c-8938-18ec302c083e',
+          'https://www.linkedin.com/company/carencure-au/',
+          'https://www.instagram.com/carencurenursing/',
+        ],
         logo: {
           '@type': 'ImageObject',
           url: `${SITE_URL}/logo.png`,
@@ -202,7 +210,16 @@ export function OrganizationSchema() {
     '@type': 'Organization',
     '@id': `${SITE_URL}/#organization`,
     name: 'Care N Cure Nursing Care Services',
+    legalName: 'Care N Cure Nursing Care Services',
+    alternateName: ['Care N Cure', 'The Nurse Who Knows You'],
+    taxID: '87152479362',
     url: SITE_URL,
+    sameAs: [
+      'https://morningpost.com.au/perth/local/home-care/',
+      'https://www.agedcareatlas.com.au/facility/8d37dcb0-87a1-4b3c-8938-18ec302c083e',
+      'https://www.linkedin.com/company/carencure-au/',
+      'https://www.instagram.com/carencurenursing/',
+    ],
     logo: {
       '@type': 'ImageObject',
       url: `${SITE_URL}/logo.png`,
@@ -427,7 +444,7 @@ export function HowToSchema() {
         '@type': 'HowToStep',
         position: 1,
         name: 'Call or Enquire Online',
-        text: 'Contact Care N Cure on 1300 919 663 or submit an enquiry online to speak directly with a Registered Nurse co-founder.',
+        text: 'Contact Care N Cure on 1300 919 663 or submit an enquiry online to speak directly with our Registered Nurse founder.',
         url: `${SITE_URL}/contact`,
       },
       {

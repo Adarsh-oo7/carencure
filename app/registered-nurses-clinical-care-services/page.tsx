@@ -139,7 +139,7 @@ export default function ClinicalCareServices() {
               <div className="sticky top-24">
                 <ContactForm
                   title="Enquire About Clinical Care"
-                  subtitle="Provide your contact details below. A registered nurse co-founder will call you back shortly to discuss how we can support you."
+                  subtitle="Provide your contact details below. Our Registered Nurse founder will call you back shortly to discuss how we can support you."
                   defaultService="Registered Nurses Clinical care Services"
                 />
               </div>

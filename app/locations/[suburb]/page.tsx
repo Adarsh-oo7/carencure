@@ -577,7 +577,7 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
               <div className="sticky top-24">
                 <ContactForm
                   title={`Enquire in ${data.name}`}
-                  subtitle={`Provide your details below. A registered nurse co-founder will call you back shortly to discuss nursing support in ${data.name}.`}
+                  subtitle={`Provide your details below. Our Registered Nurse founder will call you back shortly to discuss nursing support in ${data.name}.`}
                   defaultSuburb={data.name}
                 />
               </div>
