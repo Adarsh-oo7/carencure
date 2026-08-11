@@ -25,6 +25,22 @@ const nextConfig = {
         destination: '/:path*',
         permanent: true,
       },
+      // Fix Google Search Console 404 reported URL errors
+      {
+        source: '/locations/cottesloe-Cottesloe',
+        destination: '/locations/cottesloe',
+        permanent: true,
+      },
+      {
+        source: '/cdn-cgi/l/email-protection',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/cdn-cgi/:path*',
+        destination: '/',
+        permanent: true,
+      },
     ]
   },
 
