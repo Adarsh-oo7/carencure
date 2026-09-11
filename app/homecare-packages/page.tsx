@@ -8,25 +8,25 @@ import { Award, ShieldCheck, HeartPulse, UserCheck, CheckCircle, CheckCircle2 } 
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Home Care Packages Perth | HCP Nursing | Care N Cure',
+    absolute: 'Home Care Packages Perth | Self-Managed HCP Nursing Support',
   },
-  description: 'Navigate Home Care Packages Levels 1-4 with RN case managers. We coordinate nursing visits, wound care & clinical oversight. Perth-based, locally owned.',
+  description: 'Nurse-led Home Care Package support in Perth, including clinical nursing, wound care and care coordination for HCP Levels 1–4 and self-managed plans. Call 1300 919 663.',
   alternates: { canonical: 'https://carencure.com.au/homecare-packages' },
 }
 
 
 const faqs = [
   {
-    question: 'How do I apply for a Home Care Package?',
-    answer: 'You can apply by contacting My Aged Care on 1800 200 422 or visiting myagedcare.gov.au to request an Aged Care Assessment Team (ACAT) assessment. We can help guide you through this process and help prepare you for the assessment.',
+    question: 'How do I apply for a Home Care Package or Support at Home?',
+    answer: 'You can apply by contacting My Aged Care on 1800 200 422 or visiting myagedcare.gov.au to request an ACAT assessment. We can help guide you through what clinical evidence is helpful to prepare for your assessment.',
   },
   {
-    question: 'What are the charges for package and care management?',
-    answer: 'We believe in absolute financial transparency. We charge competitive, flat fees for care management and package administration, with no hidden costs, exit fees, or basic daily fee charges. This ensures a larger percentage of your package budget is spent on direct care services.',
+    question: 'Can I use Care N Cure for clinical nursing with a self-managed package?',
+    answer: 'Yes! We actively support self-managed Home Care Package clients (including participants partnering with Trilogy Care or other approved management platforms). You can engage our AHPRA-registered nurses directly for wound care, medication oversight, and clinical visits, paying via your package funds.',
   },
   {
-    question: 'Can I transfer my existing Home Care Package to Care N Cure?',
-    answer: 'Yes. Switching providers is straightforward. You will need to contact My Aged Care to reactivate your referral code, notify your current provider of your intent to exit (checking your current agreement for notice periods), and sign a new agreement with us. We will assist you with every step to ensure continuity of care.',
+    question: 'What is the transition from Home Care Packages to Support at Home?',
+    answer: 'The Australian Government is transitioning aged care at home to the Support at Home program. If you currently hold a Home Care Package (Levels 1–4), your existing funding and service continuity remain protected, and Care N Cure provides seamless nursing support across both systems.',
   },
 ]
 
@@ -34,8 +34,8 @@ export default function HomecarePackages() {
   return (
     <>
       <ServicePageSchema
-        serviceName="Home Care Packages Perth | HCP Nursing | Care N Cure"
-        description="Navigate Home Care Packages Levels 1-4 with RN case managers. We coordinate nursing visits, wound care & clinical oversight. Perth-based, locally owned."
+        serviceName="Home Care Packages Perth | Self-Managed HCP Nursing Support"
+        description="Nurse-led Home Care Package support in Perth, including clinical nursing, wound care and care coordination for HCP Levels 1–4 and self-managed plans. Call 1300 919 663."
         url="/homecare-packages"
         procedureType="Home Care Packages Co-ordination"
         faqs={faqs}
@@ -48,11 +48,11 @@ export default function HomecarePackages() {
 
 
       <PageHeader
-        title="Home Care Packages"
-        subtitle="Government-funded support (HCP Levels 1–4) coordinated by dedicated Registered Nurses."
+        title="Home Care Packages & Support at Home Perth"
+        subtitle="Clinical registered nursing care and case coordination for HCP Levels 1–4 and self-managed packages."
         breadcrumbItems={[
           { name: 'Services', href: '/#services' },
-          { name: 'Homecare Packages', href: '/homecare-packages' },
+          { name: 'Home Care Packages', href: '/homecare-packages' },
         ]}
         label="Funded Care Packages"
       />

@@ -6,6 +6,7 @@ import { ContactForm } from '@/components/contact-form'
 import { CTASection } from '@/components/sections/cta'
 import { SuburbPageSchema, FAQPageSchema, BreadcrumbSchema } from '@/components/schema'
 import { CheckCircle2, ShieldCheck, Phone, Stethoscope, HeartPulse } from 'lucide-react'
+import { CtaUncertaintyReducer } from '@/components/sections/cta-uncertainty-reducer'
 
 // Define the suburb data mapping
 interface SuburbData {
@@ -75,17 +76,17 @@ const suburbsMap: Record<string, SuburbData> = {
     description: 'Providing in-home nursing care, wound management, medication support, and post-hospital recovery across the City of Gosnells, including Gosnells, Maddington, Kenwick, and Thornlie.',
     surroundingSuburbs: 'Maddington, Kenwick, Thornlie, and Huntingdale',
     localHealthcareFocus: 'chronic illness monitoring, post-hospital transition care, and home nursing',
-    localSpecificText: 'Our registered nurses provide home nursing services across Gosnells, Maddington, Kenwick, and Thornlie. We coordinate closely with Armadale Kelmscott Memorial Hospital to ensure a smooth discharge process. We actively cover the Gosnells region and are ready to visit within 24–48 hours.',
+    localSpecificText: 'Our registered nurses provide home nursing services across Gosnells, Maddington, Kenwick, and Thornlie. For clients returning home from facilities like Armadale Kelmscott Memorial Hospital, we accept referrals from discharge teams and work alongside local GPs to support continuous recovery at home within 24–48 hours.',
   },
   armadale: {
     id: 'armadale',
-    name: 'City of Armadale',
+    name: 'Armadale',
     region: 'Perth South-East',
-    nearestHospital: 'Armadale Kelmscott Memorial Hospital',
-    description: 'Registered nurse home visits for post-surgical recovery, wound care, and chronic condition management across the City of Armadale, including Armadale, Kelmscott, and Byford.',
-    surroundingSuburbs: 'Kelmscott, Seville Grove, Mount Nasura, and Byford',
-    localHealthcareFocus: 'clinical nursing visits, medication safety, and wound dressing changes',
-    localSpecificText: 'We provide local clinical nursing support across Armadale and the hills district. Our nurses frequently coordinate care for clients returning from Armadale Kelmscott Memorial Hospital, helping them manage complex medication schedules and sterile wound dressings. We are ready to organize an in-home assessment in Armadale within 24–48 hours.',
+    nearestHospital: 'Armadale Health Service (Armadale Kelmscott Memorial Hospital)',
+    description: 'Professional in-home nursing care, community nursing, and aged care at home across Armadale, Kelmscott, Seville Grove, Mount Nasura, Mount Richon, Roleystone, Bedfordale, Wungong, and Champion Lakes.',
+    surroundingSuburbs: 'Kelmscott, Seville Grove, Mount Nasura, Mount Richon, and Roleystone',
+    localHealthcareFocus: 'post-hospital recovery, sterile wound dressings, medication safety, and community nursing',
+    localSpecificText: 'Care N Cure delivers dedicated in-home registered nursing care across Armadale and surrounding south-east Perth suburbs. Operating from our Harrisdale base, our registered nurses visit clients across Armadale, Kelmscott, Seville Grove, and nearby suburbs. We accept referrals from hospital discharge planners, GPs, and families, providing structured in-home clinical assessments within 24 to 48 hours of enquiry.',
   },
   rockingham: {
     id: 'rockingham',
@@ -95,7 +96,7 @@ const suburbsMap: Record<string, SuburbData> = {
     description: 'Professional in-home nursing care, sterile wound dressings, and medication management across Rockingham, Baldivis, and the surrounding southern corridor.',
     surroundingSuburbs: 'Safety Bay, Shoalwater, Waikiki, and Baldivis',
     localHealthcareFocus: 'hospital discharge coordination, vital signs tracking, and respite support',
-    localSpecificText: 'We actively support families across Rockingham and Baldivis. Our Registered Nurses coordinate closely with Rockingham General Hospital\'s discharge planning teams to ensure wound care supplies and medication safety measures are fully prepared at home. We can schedule clinical nursing visits in the Rockingham area within 24–48 hours of booking.',
+    localSpecificText: 'We actively support families across Rockingham and Baldivis. For clients returning home from facilities like Rockingham General Hospital, our registered nurses accept referrals and liaise with treating doctors to ensure wound care supplies and medication safety measures are established safely at home within 24–48 hours.',
   },
   applecross: {
     id: 'applecross',
@@ -105,7 +106,7 @@ const suburbsMap: Record<string, SuburbData> = {
     description: 'Providing in-home private nursing visits and post-operative recovery around Applecross, Mount Pleasant, and Ardross.',
     surroundingSuburbs: 'Mount Pleasant, Ardross, and Alfred Cove',
     localHealthcareFocus: 'private nursing care, post-surgical rehabilitation, and specialist handovers',
-    localSpecificText: 'Our Registered Nurses support Applecross residents returning home from St John of God Murdoch or Fiona Stanley Hospital, providing professional wound care and medication management. We cooperate with local clinics along Canning Highway to ensure a continuous care path. We actively cover Applecross and are ready to visit within 24–48 hours.',
+    localSpecificText: 'Our Registered Nurses support Applecross residents returning home from local facilities like St John of God Murdoch or Fiona Stanley Hospital, providing professional wound care and medication management in communication with your treating GP. We actively cover Applecross and arrange visits within 24–48 hours.',
   },
   'mount-lawley': {
     id: 'mount-lawley',
@@ -115,7 +116,7 @@ const suburbsMap: Record<string, SuburbData> = {
     description: 'Registered nurse visits, blood pressure monitoring, subcutaneous injections, and complex medication safety in Mount Lawley, Highgate, and Inglewood.',
     surroundingSuburbs: 'Highgate, Inglewood, Menora, and North Perth',
     localHealthcareFocus: 'subcutaneous injections, blood pressure monitoring, and complex medication safety',
-    localSpecificText: 'Our nursing team serves Mount Lawley and surrounding inner-north areas. We coordinate closely with doctors along the Beaufort Street medical district and Royal Perth Hospital discharge coordinators. We specialize in managing post-operative recovery and complex clinical care at home. We can visit Mount Lawley clients within 24–48 hours.',
+    localSpecificText: 'Our nursing team serves Mount Lawley and surrounding inner-north areas. We accept referrals for clients returning home from facilities like Royal Perth Hospital, coordinating clinical nursing care at home alongside your treating doctor. We can visit Mount Lawley clients within 24–48 hours.',
   },
   fremantle: {
     id: 'fremantle',
@@ -125,7 +126,7 @@ const suburbsMap: Record<string, SuburbData> = {
     description: 'Post-hospital recovery care, wound management, and nursing-led respite care in Fremantle, East Fremantle, and South Fremantle.',
     surroundingSuburbs: 'East Fremantle, South Fremantle, and Beaconsfield',
     localHealthcareFocus: 'respite nursing, post-hospital recovery, and medical care planning',
-    localSpecificText: 'For residents in Fremantle, South Fremantle, and East Fremantle, we offer comprehensive post-surgical recovery and clinical nursing. We coordinate with Fiona Stanley and Fremantle Hospital teams to organize immediate post-discharge wound care. Our team covers Fremantle actively and is available for visits within 24–48 hours.',
+    localSpecificText: 'For residents in Fremantle, South Fremantle, and East Fremantle, we offer comprehensive post-surgical recovery and clinical nursing. For clients returning home from facilities like Fiona Stanley Hospital or Fremantle Hospital, we accept referrals from discharge teams to organise home nursing within 24–48 hours.',
   },
   'south-perth': {
     id: 'south-perth',
@@ -135,7 +136,7 @@ const suburbsMap: Record<string, SuburbData> = {
     description: 'Companion care, respite nursing, and active medication reconciliation in South Perth, Como, and Kensington.',
     surroundingSuburbs: 'Como, Kensington, and Manning',
     localHealthcareFocus: 'medication management, companion care, and GP clinical coordination',
-    localSpecificText: 'We support families across South Perth, Como, and Manning. We actively cover South Perth and are ready to visit within 24–48 hours. Our clients recovering from hospital stays are often discharged from Royal Perth Hospital or St John of God Murdoch — we liaise with discharge teams to make sure nursing care is in place before you leave hospital, not after.',
+    localSpecificText: 'We support families across South Perth, Como, and Manning. For clients returning home from facilities such as Royal Perth Hospital or St John of God Murdoch, we accept referrals from discharge teams and families to help put nursing care in place within 24–48 hours of return home.',
   },
   claremont: {
     id: 'claremont',
@@ -275,7 +276,7 @@ const suburbsMap: Record<string, SuburbData> = {
     description: 'In-home clinical nursing care in Duncraig, Carine, and Greenwood. Professional registered nurse visits for wound management and chronic condition oversight.',
     surroundingSuburbs: 'Carine, Greenwood, and Padbury',
     localHealthcareFocus: 'chronic disease management, sterile dressings, and medication reconciliation',
-    localSpecificText: 'Our Duncraig nursing care team delivers specialized clinical home visits. We coordinate with local GPs and Joondalup Health Campus to ensure safe, continuous health management in your own home.',
+    localSpecificText: 'Our Duncraig nursing care team delivers specialized clinical home visits. We accept referrals from local GPs and hospital discharge planners to support continuous health management in your own home.',
   },
   karrinyup: {
     id: 'karrinyup',
@@ -285,7 +286,7 @@ const suburbsMap: Record<string, SuburbData> = {
     description: 'Registered nurse home care in Karrinyup, Gwelup, and Innaloo. Post-surgical care, wound dressing changes, and dedicated nurse coordination.',
     surroundingSuburbs: 'Gwelup, Innaloo, and Stirling',
     localHealthcareFocus: 'post-operative surgical recovery, health tracking, and medication safety',
-    localSpecificText: 'Serving Karrinyup and surrounding areas, our Registered Nurses coordinate post-hospital handovers from Sir Charles Gairdner Hospital to provide seamless wound dressing and medication management.',
+    localSpecificText: 'Serving Karrinyup and surrounding areas, our Registered Nurses support clients returning home from facilities like Sir Charles Gairdner Hospital, providing professional wound dressing and medication oversight.',
   },
   como: {
     id: 'como',
@@ -295,7 +296,7 @@ const suburbsMap: Record<string, SuburbData> = {
     description: 'In-home registered nurse visits in Como, Manning, and Salter Point. Private nursing, medication administration, and post-hospital support.',
     surroundingSuburbs: 'Manning, Salter Point, and South Perth',
     localHealthcareFocus: 'medication management, companion care, and clinical health tracking',
-    localSpecificText: 'Our nursing team provides dedicated clinical home visits across Como and Manning. We liaise with Royal Perth Hospital and SJOG Murdoch discharge teams to arrange immediate post-hospital nursing support.',
+    localSpecificText: 'Our nursing team provides dedicated clinical home visits across Como and Manning. We accept referrals for clients discharged from facilities like Royal Perth Hospital or SJOG Murdoch to establish in-home nursing support within 24–48 hours.',
   },
   bicton: {
     id: 'bicton',
@@ -305,7 +306,7 @@ const suburbsMap: Record<string, SuburbData> = {
     description: 'Clinical home nursing in Bicton, Palmyra, and East Fremantle. Sterile wound dressing, catheter management, and post-surgery care.',
     surroundingSuburbs: 'Palmyra, Attadale, and East Fremantle',
     localHealthcareFocus: 'sterile wound care, catheter management, and post-surgical recovery',
-    localSpecificText: 'We support Bicton and Melville area residents with expert Registered Nurse care. We coordinate with Fiona Stanley Hospital to ensure post-surgical wound dressings and medications are managed safely at home.',
+    localSpecificText: 'We support Bicton and Melville area residents with dedicated Registered Nurse care. For clients returning home after hospital procedures, we provide sterile wound dressings and medication safety support at home.',
   },
   'east-fremantle': {
     id: 'east-fremantle',
@@ -315,7 +316,7 @@ const suburbsMap: Record<string, SuburbData> = {
     description: 'Private nursing and post-hospital care in East Fremantle and Bicton. Dedicated registered nurse coordinator for every client.',
     surroundingSuburbs: 'Fremantle, Bicton, and Palmyra',
     localHealthcareFocus: 'post-hospital recovery, clinical health monitoring, and GP coordination',
-    localSpecificText: 'Our Registered Nurses provide specialized in-home clinical care across East Fremantle. We liaise directly with local medical practices and hospital specialists for seamless post-discharge recovery.',
+    localSpecificText: 'Our Registered Nurses provide in-home clinical care across East Fremantle. We liaise with your treating GP and specialists to provide structured post-discharge nursing recovery.',
   },
   'shenton-park': {
     id: 'shenton-park',
@@ -325,7 +326,7 @@ const suburbsMap: Record<string, SuburbData> = {
     description: 'Registered nurse home visits in Shenton Park, Daglish, and Subiaco. Complex wound management, medication supervision, and clinical assessments.',
     surroundingSuburbs: 'Daglish, Subiaco, and Jolimont',
     localHealthcareFocus: 'complex wound care, post-surgical recovery, and medication management',
-    localSpecificText: 'Located adjacent to QEII Medical Centre, our Shenton Park nursing team facilitates fast hospital handovers from SCGH and Hollywood Private Hospital for post-operative nursing care.',
+    localSpecificText: 'Located in proximity to the QEII Medical Centre precinct, our nursing team accepts referrals for post-operative nursing care following procedures at local health facilities.',
   },
   dalkeith: {
     id: 'dalkeith',
@@ -335,7 +336,7 @@ const suburbsMap: Record<string, SuburbData> = {
     description: 'In-home private nursing care in Dalkeith, Nedlands, and Claremont. Registered nurses providing high-touch clinical care and chronic disease support.',
     surroundingSuburbs: 'Nedlands, Claremont, and Crawley',
     localHealthcareFocus: 'private clinical nursing, dedicated nurse coordination, and wound management',
-    localSpecificText: 'Our Dalkeith private nursing services offer personalized, high-touch clinical care. We coordinate with specialists along Hollywood Medical Centre to provide expert wound dressings and health assessments at home.',
+    localSpecificText: 'Our Dalkeith private nursing services offer personalized, clinical home care. We communicate with your treating doctors to provide sterile wound dressings and health assessments at home.',
   },
   'city-beach': {
     id: 'city-beach',
@@ -345,7 +346,7 @@ const suburbsMap: Record<string, SuburbData> = {
     description: 'In-home registered nurse visits in City Beach and Floreat. Post-surgical recovery, medication checks, and dedicated clinical care.',
     surroundingSuburbs: 'Floreat, Wembley Downs, and Scarborough',
     localHealthcareFocus: 'post-surgical rehabilitation, vital sign tracking, and mobility support',
-    localSpecificText: 'We support City Beach residents with professional in-home nursing visits. Our Registered Nurses work alongside local Western Suburbs GPs to ensure comprehensive post-hospital recovery and care.',
+    localSpecificText: 'We support City Beach residents with professional in-home nursing visits. Our Registered Nurses work alongside your treating GP to support comprehensive post-hospital recovery and care.',
   },
 }
 
@@ -368,24 +369,24 @@ export async function generateMetadata({ params }: { params: Promise<{ suburb: s
   return {
     title: {
       absolute:
-        suburb === 'claremont'
-          ? 'Wound Care Claremont | Home Nursing | Care N Cure Perth'
-          : `Private Nursing ${data.name} | Home Care ${data.region} | Care N Cure`,
+        suburb === 'armadale'
+          ? 'Armadale Home Care & Community Nursing | Care N Cure Perth'
+          : `${data.name} Home Care & Community Nursing | Care N Cure Perth`,
     },
     description:
-      suburb === 'claremont'
-        ? 'Sterile wound dressing changes at home in Claremont by AHPRA-registered nurses. Post-surgical care, wound infection monitoring & medication management. Call 1300 919 663.'
-        : `Registered nurse home care in ${data.name}, ${nearbyShort}. Post-surgical recovery, wound care & medication management. 24-48hr response. Call 1300 919 663.`,
+      suburb === 'armadale'
+        ? 'In-home nursing and aged-care support in Armadale and nearby south-east Perth suburbs, subject to availability. Speak with a registered nurse.'
+        : `In-home nursing & aged care in ${data.name} (${data.region}). Sterile wound care, medication management & post-hospital recovery by AHPRA registered nurses. Call 1300 919 663.`,
     alternates: { canonical: `https://carencure.com.au/locations/${suburb}` },
     openGraph: {
       title:
-        suburb === 'claremont'
-          ? 'Wound Care Claremont | Home Nursing | Care N Cure Perth'
-          : `Private Nursing ${data.name} | Home Care ${data.region} | Care N Cure`,
+        suburb === 'armadale'
+          ? 'Armadale Home Care & Community Nursing | Care N Cure Perth'
+          : `${data.name} Home Care & Community Nursing | Care N Cure Perth`,
       description:
-        suburb === 'claremont'
-          ? 'Sterile wound dressing changes at home in Claremont by AHPRA-registered nurses. Post-surgical care, wound infection monitoring & medication management. Call 1300 919 663.'
-          : `Registered nurse home care in ${data.name}, ${nearbyShort}. Post-surgical recovery, wound care & medication management. 24-48hr response. Call 1300 919 663.`,
+        suburb === 'armadale'
+          ? 'In-home nursing and aged-care support in Armadale and nearby south-east Perth suburbs, subject to availability. Speak with a registered nurse.'
+          : `In-home nursing & aged care in ${data.name} (${data.region}). Sterile wound care, medication management & post-hospital recovery by AHPRA registered nurses. Call 1300 919 663.`,
       url: `https://carencure.com.au/locations/${suburb}`,
     },
   }
@@ -400,8 +401,11 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
 
   const faqs = [
     {
-      question: `Do you provide nursing services in ${data.name}?`,
-      answer: `Yes. Care N Cure registered nurses travel to ${data.name} and the surrounding area. Call us on 1300 919 663 to confirm availability and book a free initial assessment.`,
+      question: `Do you provide in-home nursing services across ${data.name} and nearby suburbs?`,
+      answer:
+        suburb === 'armadale'
+          ? 'Yes. Care N Cure registered nurses travel directly to homes across Armadale, Kelmscott, Seville Grove, Mount Nasura, Mount Richon, Roleystone, Bedfordale, Wungong, and Champion Lakes. Initial clinical assessments are arranged within 24–48 hours of enquiry.'
+          : `Yes. Care N Cure registered nurses travel to ${data.name} and the surrounding area. Call us on 1300 919 663 to confirm availability and book an initial assessment.`,
     },
     {
       question: 'Are your nurses fully registered with AHPRA?',
@@ -409,11 +413,11 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
     },
     {
       question: `How quickly can a nurse visit me in ${data.name}?`,
-      answer: `We aim to arrange an initial assessment within 24–48 hours of enquiry for clients in ${data.name}. For urgent post-discharge situations, call us directly and we will prioritise your case.`,
+      answer: `We arrange an initial clinical assessment within 24–48 hours of enquiry for clients in ${data.name}. For urgent post-discharge situations, call us directly on 1300 919 663 and we will prioritise your intake.`,
     },
     {
       question: 'What does in-home nursing cost?',
-      answer: 'We provide clear, transparent pricing during your free initial assessment. Private nursing is available as a private-pay service. We also support clients with Home Care Packages (HCP), NDIS, and DVA funding. Call us to discuss your situation.',
+      answer: 'Standard weekday clinical visits typically range from $110 to $160 per hour, depending on care complexity. Private nursing is available as a private-pay service. We also support clients with Home Care Packages (HCP Levels 1-4), Support at Home, NDIS, and DVA funding. Call us to discuss your situation.',
     },
   ]
 
@@ -423,7 +427,11 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
       <FAQPageSchema faqs={faqs} />
 
       <PageHeader
-        title={`Home Nursing in ${data.name}`}
+        title={
+          suburb === 'armadale'
+            ? 'Home Nursing and Community Care in Armadale'
+            : `${data.name} Home Care & Community Nursing`
+        }
         subtitle={`Registered nurses providing in-home clinical care across ${data.name} and surrounding Perth suburbs.`}
         breadcrumbItems={[
           { name: 'Locations', href: '/locations' },
@@ -441,9 +449,11 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
 
               <div>
                 <p className="section-label mb-2">Serving {data.region}</p>
-                <h2 className="text-navy text-3xl font-bold">
-                  Clinical home nursing in {data.name}, Perth WA
-                </h2>
+                <h1 className="text-navy text-3xl font-bold">
+                  {suburb === 'armadale'
+                    ? 'Home Nursing and Community Care in Armadale'
+                    : `Clinical Home Nursing & Community Care in ${data.name}, Perth WA`}
+                </h1>
                 <div className="section-divider" />
                 <p className="text-body text-lg leading-relaxed mt-4">
                   {data.description}
@@ -459,6 +469,68 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
                 <p className="text-body leading-relaxed mt-3">
                   Care N Cure is a Perth-based nursing practice founded by Jinu — a registered nurse with over a decade of hospital and community nursing experience. We provide in-home nursing visits across {data.name} and all adjacent Perth suburbs.
                 </p>
+
+                {suburb === 'armadale' && (
+                  <div className="space-y-6 pt-6 border-t border-border mt-6">
+                    <h2 className="text-navy text-2xl font-bold">In-Home Clinical Nursing for Armadale & South-East Perth Families</h2>
+                    <p className="text-body leading-relaxed">
+                      Finding qualified, consistent clinical care at home can be challenging for families navigating post-operative recovery or caring for aging parents. In Armadale and neighboring communities, Care N Cure provides a direct alternative to institutional aged care facilities or rotating agency rosters. Every client is paired with a dedicated AHPRA-Registered Nurse Coordinator who gets to know your medical background, coordinates with your doctors, and visits on a predictable schedule.
+                    </p>
+
+                    <h3 className="text-navy text-xl font-bold">Local Service Coverage in Armadale & South-East Perth</h3>
+                    <p className="text-body leading-relaxed text-sm">
+                      Operating from our clinical base in Harrisdale, our nursing team regularly visits clients across the City of Armadale. We actively service <strong>Armadale, Kelmscott, Seville Grove, Mount Nasura, Mount Richon, Roleystone, Bedfordale, Wungong, and Champion Lakes</strong>. Clinical visit availability, response scheduling, and any applicable travel terms are confirmed transparently during your initial consultation.
+                    </p>
+
+                    <h3 className="text-navy text-xl font-bold">Post-Hospital Recovery Support: Returning Home to Armadale</h3>
+                    <p className="text-body leading-relaxed text-sm">
+                      For Armadale residents returning home after hospital care — including from facilities such as <strong>Armadale Health Service (Armadale Kelmscott Memorial Hospital)</strong> or <strong>Fiona Stanley Hospital</strong> — safe recovery depends on continuous care at home. Care N Cure accepts referrals from hospital discharge planners, doctors, GPs and allied-health professionals across Perth, subject to client suitability, consent and service availability. With client and family consent, our Registered Nurses review discharge summaries, verify medications with your doctor, and initiate sterile dressing routines within 24 to 48 hours of return.
+                    </p>
+                    <p className="text-xs text-amber-900 bg-amber-50 p-3 rounded-lg border border-amber-200/80 leading-relaxed">
+                      <strong>Medical Notice:</strong> We are not an emergency service. For urgent or life-threatening concerns, call <strong>000</strong>.
+                    </p>
+
+                    <h3 className="text-navy text-xl font-bold">Common In-Home Clinical Needs in Armadale</h3>
+                    <ul className="space-y-2.5 text-body text-sm">
+                      <li className="flex items-start gap-2">
+                        <span className="text-teal-accent font-bold">•</span>
+                        <span><strong>Complex Wound Management:</strong> Aseptic dressings for surgical incisions, diabetic foot ulcers, pressure injuries, and skin tears.</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-teal-accent font-bold">•</span>
+                        <span><strong>Medication Safety & Injections:</strong> Subcutaneous injections (e.g. Clexane, insulin), medication reconciliation against hospital lists, and Webster-pak supervision.</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-teal-accent font-bold">•</span>
+                        <span><strong>Chronic Disease Monitoring:</strong> Routine clinical tracking of blood pressure, blood glucose, oxygen saturation, and respiratory stability for elderly parents.</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-teal-accent font-bold">•</span>
+                        <span><strong>Catheter & Continence Support:</strong> Routine clinical care and management for indwelling and supra-pubic catheters by registered clinicians.</span>
+                      </li>
+                    </ul>
+
+                    <h3 className="text-navy text-xl font-bold">Flexible Funding: Private-Pay, Home Care Packages & NDIS</h3>
+                    <p className="text-body leading-relaxed text-sm">
+                      Clinical nursing in Armadale is available through private fee-for-service with transparent hourly rates ($110–$160/hr weekdays). We also support clients with active <strong>Home Care Packages (HCP Levels 1 to 4)</strong> and <strong>Support at Home</strong> via self-managed and provider partnerships (including Trilogy Care), as well as <strong>NDIS</strong> self-managed and plan-managed participants.
+                    </p>
+
+                    <h3 className="text-navy text-xl font-bold">What Happens on Your First Armadale Home Visit?</h3>
+                    <p className="text-body leading-relaxed text-sm">
+                      On our initial visit, your dedicated Nurse Coordinator conducts a comprehensive clinical intake: reviewing current vitals, evaluating mobility and home safety, assessing any open wounds, and reconciling all medications. Together with you and your family, we develop an individualised care plan that integrates with your treating Armadale GP or specialist.
+                    </p>
+
+                    <div className="p-5 bg-teal-50/80 rounded-xl border border-teal-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                      <div>
+                        <p className="text-navy font-bold text-base">Need in-home nursing in Armadale?</p>
+                        <p className="text-body text-xs mt-0.5">Speak directly with a Perth registered nurse about scheduling an initial clinical assessment.</p>
+                      </div>
+                      <a href="tel:1300919663" className="btn-phone text-xs px-5 py-2.5 shrink-0">
+                        Call 1300 919 663
+                      </a>
+                    </div>
+                  </div>
+                )}
               </div>
 
               <div className="space-y-4">
@@ -573,13 +645,14 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
             </div>
 
             {/* Right Column Form */}
-            <div className="lg:col-span-5">
-              <div className="sticky top-24">
+            <div className="lg:col-span-5 space-y-6">
+              <div className="sticky top-24 space-y-6">
                 <ContactForm
                   title={`Enquire in ${data.name}`}
-                  subtitle={`Provide your details below. Our Registered Nurse founder will call you back shortly to discuss nursing support in ${data.name}.`}
+                  subtitle={`Provide your details below. Our Registered Nurse team will contact you to discuss clinical nursing support in ${data.name}.`}
                   defaultSuburb={data.name}
                 />
+                <CtaUncertaintyReducer />
               </div>
             </div>
 

@@ -15,13 +15,6 @@ const ADDRESS = {
   addressCountry: 'AU',
 }
 
-const AGGREGATE_RATING = {
-  '@type': 'AggregateRating',
-  ratingValue: '5.0',
-  reviewCount: '12',
-  bestRating: '5',
-  worstRating: '1',
-}
 const AREA_SERVED = [
   'Perth', 'Nedlands', 'Subiaco', 'Cottesloe', 'Claremont',
   'Mount Lawley', 'Inglewood', 'Gosnells', 'Armadale',
@@ -68,7 +61,6 @@ export function MedicalBusinessSchema() {
           '@type': 'PostalAddress',
           ...ADDRESS,
         },
-        aggregateRating: AGGREGATE_RATING,
         priceRange: '$$',
         currenciesAccepted: 'AUD',
         paymentAccepted: 'Cash, Credit Card, Home Care Package, NDIS, DVA',
@@ -99,6 +91,14 @@ export function MedicalBusinessSchema() {
           '@type': 'OfferCatalog',
           name: 'Nursing Services',
           itemListElement: [
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'MedicalProcedure',
+                name: 'Community Nursing Care',
+                url: `${SITE_URL}/community-nursing`,
+              },
+            },
             {
               '@type': 'Offer',
               itemOffered: {
@@ -234,8 +234,6 @@ export function OrganizationSchema() {
       '@type': 'PostalAddress',
       ...ADDRESS,
     },
-    legalName: 'Care N Cure Nursing Care Services',
-    taxID: '87152479362',
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'Customer Service',

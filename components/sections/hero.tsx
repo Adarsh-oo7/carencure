@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Phone, ArrowRight } from 'lucide-react'
+import { trackPhoneClick, trackConsultationRequest } from '@/lib/analytics'
 
 const PHONE_NUMBER = '1300 919 663'
 const PHONE_HREF = 'tel:1300919663'
@@ -160,6 +161,7 @@ export function HeroSection({
                 ctaPrimary.isPhone ? (
                   <a
                     href={PHONE_HREF}
+                    onClick={() => trackPhoneClick('hero_primary')}
                     className="btn-phone cursor-pointer inline-flex items-center gap-2"
                     id="hero-call-cta"
                     aria-label={ctaPrimary.text}
@@ -170,6 +172,7 @@ export function HeroSection({
                 ) : (
                   <Link
                     href={ctaPrimary.href}
+                    onClick={() => trackConsultationRequest('hero_primary')}
                     className="btn-phone"
                     id="hero-primary-cta"
                     aria-label={ctaPrimary.text}
@@ -183,6 +186,7 @@ export function HeroSection({
                 ctaSecondary.isPhone ? (
                   <a
                     href={PHONE_HREF}
+                    onClick={() => trackPhoneClick('hero_secondary')}
                     className="btn-outline-white cursor-pointer animate-fade-in inline-flex items-center gap-2"
                     id="hero-secondary-cta"
                     aria-label={ctaSecondary.text}
@@ -193,6 +197,7 @@ export function HeroSection({
                 ) : (
                   <Link
                     href={ctaSecondary.href}
+                    onClick={() => trackConsultationRequest('hero_secondary')}
                     className="btn-outline-white"
                     id="hero-secondary-cta"
                     aria-label={ctaSecondary.text}
@@ -239,12 +244,12 @@ export function HeroSection({
         {/* End CTA row */}
 
         {/* Trust / value props strip */}
-        <div className="mt-6 sm:mt-8 mb-12 sm:mb-0 flex flex-row flex-wrap gap-y-2.5 gap-x-4 sm:gap-x-6 relative z-10" role="list" aria-label="Key credentials">
+        <div className="mt-6 sm:mt-8 mb-4 flex flex-row flex-wrap gap-y-2.5 gap-x-4 sm:gap-x-6 relative z-10" role="list" aria-label="Key credentials">
           {[
-            '✓ AHPRA Registered Nurses',
-            '✓ 1-on-1 Dedicated Nurse Coordinator',
-            '✓ Visits Within 24–48 Hrs',
-            '✓ ★ 5.0 Google Rating (Perth)',
+            '✓ AHPRA-Registered Nurses',
+            '✓ Dedicated Nurse Coordinator',
+            '✓ 24–48-Hour Assessment Response',
+            '✓ Perth Metropolitan Coverage',
           ].map((item) => (
             <span
               key={item}
@@ -257,14 +262,24 @@ export function HeroSection({
           ))}
         </div>
 
-        {/* Trust ribbon */}
-        <div className="hidden sm:flex mt-8 items-center gap-3 flex-wrap">
-          <div
-            className="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold"
-            style={{ background: 'rgba(197,238,228,0.15)', border: '1px solid rgba(197,238,228,0.3)', color: 'rgba(197,238,228,0.95)' }}
-          >
-            🏠 Home Care Package Provider
-          </div>
+        {/* Who we help micro-row */}
+        <div className="pt-3 border-t border-white/10 flex flex-wrap items-center gap-2 text-xs text-white/80 relative z-10">
+          <span className="font-semibold text-teal-accent">Who we help:</span>
+          <span>Older parents</span>
+          <span className="text-white/40">•</span>
+          <span>Post-hospital recovery</span>
+          <span className="text-white/40">•</span>
+          <span>Wound care</span>
+          <span className="text-white/40">•</span>
+          <span>Medication support</span>
+          <span className="text-white/40">•</span>
+          <span>Chronic conditions</span>
+        </div>
+
+        {/* Emergency disclaimer */}
+        <div className="mt-3 flex items-center gap-2 text-[11px] text-white/70 relative z-10">
+          <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0" />
+          <span>Not for emergencies. In a medical emergency, immediately call <strong>000</strong>.</span>
         </div>
 
       </div>

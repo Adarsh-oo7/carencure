@@ -6,7 +6,17 @@ import Link from 'next/link'
 const PHONE_NUMBER = '1300 919 663'
 const PHONE_HREF = 'tel:1300919663'
 
-export function CTASection() {
+interface CTASectionProps {
+  title?: string
+  description?: string
+  secondaryLink?: { text: string; href: string; isPhone?: boolean }
+}
+
+export function CTASection({
+  title,
+  description,
+  secondaryLink,
+}: CTASectionProps = {}) {
   const chooseUsReasons = [
     'One person who knows their loved one',
     'Less confusion and fewer handovers',
@@ -107,10 +117,10 @@ export function CTASection() {
             The Nurse Who Knows You
           </p>
           <h2 className="text-white font-extrabold text-3xl sm:text-4xl lg:text-5xl max-w-3xl mx-auto leading-tight mb-4">
-            Helping Australians Stay Safe, Supported, and Independent at Home
+            {title || 'Helping Australians Stay Safe, Supported, and Independent at Home'}
           </h2>
           <p className="text-teal-100 text-lg sm:text-xl font-medium max-w-2xl mx-auto mb-10">
-            One Client. One Nurse Coordinator. One Trusted Relationship.
+            {description || 'One Client. One Nurse Coordinator. One Trusted Relationship.'}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -123,11 +133,11 @@ export function CTASection() {
               <span>Call Now: 1300 919 663</span>
             </a>
             <Link
-              href="/contact"
+              href={secondaryLink?.href || '/contact'}
               className="btn-outline-white text-lg w-full sm:w-auto justify-center inline-flex items-center gap-2"
               id="cta-book-btn"
             >
-              <span>Enquire Online</span>
+              <span>{secondaryLink?.text || 'Enquire Online'}</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>

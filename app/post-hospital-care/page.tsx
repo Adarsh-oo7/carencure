@@ -17,15 +17,15 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: 'How soon can post-hospital care start?',
-    answer: 'We coordinate with hospital discharge teams (Fiona Stanley, Sir Charles Gairdner, Royal Perth, etc.) to start care the very day you return home, or within 24 hours of discharge.',
+    answer: 'We accept referrals from hospital discharge planners, social workers, and families across Perth, scheduling initial in-home clinical assessments within 24 to 48 hours of return home.',
   },
   {
     question: 'Do you manage medication changes after hospital discharge?',
-    answer: 'Yes. Our registered nurses do a complete medication reconciliation, checking new hospital prescriptions against your existing home medications to prevent dangerous double-dosing or omissions.',
+    answer: 'Yes. Our registered nurses perform medication reconciliation against your hospital discharge summary and existing home medications, helping prevent duplicate dosing or missed prescriptions.',
   },
   {
     question: 'Can you communicate with my GP or surgeon?',
-    answer: 'Absolutely. We document every clinical sign and provide clean, concise clinical handovers directly to your GP or surgical team as needed, ensuring continuity of care.',
+    answer: 'Yes. With your consent, we share clinical updates and observations directly with your treating GP or surgical team, ensuring joined-up continuity of care.',
   },
 ]
 
@@ -64,10 +64,20 @@ export default function PostHospitalCare() {
             <div className="lg:col-span-7 space-y-8">
               <div>
                 <p className="section-label mb-2">Safe Discharges</p>
-                <h2 className="text-navy text-3xl font-bold">Reducing readmissions through qualified clinical oversight</h2>
+                <h2 className="text-navy text-3xl font-bold">Supporting safe recovery through qualified clinical oversight</h2>
                 <div className="section-divider" />
-                <p className="text-body text-lg leading-relaxed mt-4">
-                  The first 72 hours after leaving a Perth hospital are the most critical. Research shows that post-hospital complications, medication errors, and unexpected readmissions are heavily reduced when a Registered Nurse manages the transition home.
+                <div className="bg-teal-50/70 p-5 rounded-2xl border border-teal-200/70 mt-6 mb-4">
+                  <p className="text-navy font-semibold text-base leading-relaxed">
+                    Care N Cure accepts referrals from hospital discharge planners, doctors, GPs and allied-health professionals across Perth, subject to client suitability, consent and service availability.
+                  </p>
+                </div>
+                <div className="p-4 rounded-xl bg-amber-50 border border-amber-200/80 mb-6">
+                  <p className="text-xs text-amber-900 leading-relaxed">
+                    <strong>Medical Notice:</strong> We are not an emergency service. For urgent or life-threatening concerns, call <strong>000</strong>.
+                  </p>
+                </div>
+                <p className="text-body text-base leading-relaxed mt-4">
+                  The first days after leaving hospital require close attention. Having a dedicated Registered Nurse to manage sterile wound dressings, verify medication regimens, and monitor recovery parameters at home provides reassurance and clinical continuity during this critical transition.
                 </p>
               </div>
 

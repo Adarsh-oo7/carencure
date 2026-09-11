@@ -7,15 +7,15 @@ import { Stethoscope, Building2, Heart, ClipboardList, Phone, Mail, ArrowRight }
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Healthcare Referrals | Partner With Care N Cure | Perth Nurses',
+    absolute: 'Healthcare Referrals | Registered Nurse Home Care | Care N Cure Perth',
   },
   description:
-    'Refer your patients to Perth\'s dedicated nurse coordinators. Seamless care transitions, clinical oversight & GP communication. Partner with Care N Cure.',
+    'Care N Cure accepts referrals from hospital discharge planners, doctors, GPs and allied-health professionals across Perth, subject to client suitability, consent and service availability.',
   alternates: { canonical: 'https://carencure.com.au/referrals' },
   openGraph: {
-    title: 'Healthcare Referrals | Partner With Care N Cure | Perth Nurses',
+    title: 'Healthcare Referrals | Registered Nurse Home Care | Care N Cure Perth',
     description:
-      'Streamlined referral process for GPs, hospitals, and discharge coordinators in Perth. Our registered nurses follow up within 24 hours.',
+      'Care N Cure accepts referrals from hospital discharge planners, doctors, GPs and allied-health professionals across Perth, subject to client suitability, consent and service availability.',
     url: 'https://carencure.com.au/referrals',
   },
 }
@@ -25,7 +25,7 @@ const faqs = [
   {
     question: 'How quickly will Care N Cure respond to a referral?',
     answer:
-      'We aim to contact the patient or their family within 24 hours of receiving a referral. For urgent post-discharge situations, please call us directly on 1300 919 663 and we will prioritise the response.',
+      'We aim to contact the patient or their family within 24 to 48 hours of receiving a referral. For urgent post-discharge situations, please call us directly on 1300 919 663.',
   },
   {
     question: 'What information do you need to process a referral?',
@@ -50,7 +50,7 @@ const referralTypes = [
     icon: Building2,
     title: 'Hospital Discharge Teams',
     description:
-      'Working directly with discharge coordinators at Fiona Stanley, Sir Charles Gairdner, Royal Perth, and Rockingham General. We take clinical handovers seriously and will have a nurse ready before your patient arrives home.',
+      'We accept referrals from hospital discharge planners, social workers, and clinical teams across Perth. With client consent, we review discharge summaries and coordinate in-home nursing assessment plans as patients return home.',
   },
   {
     id: 'referral-gp',
@@ -108,15 +108,21 @@ export default function ReferralsPage() {
                   A nursing practice that speaks your clinical language
                 </h2>
                 <div className="section-divider" />
-                <p className="text-body text-lg leading-relaxed mt-4">
-                  Care N Cure was founded by Jinu, an experienced registered nurse who
-                  spent over a decade working inside Perth's hospital network. We understand what a
-                  good discharge looks like, and we make it our job to ensure it goes smoothly.
+                <div className="bg-teal-50/70 p-5 rounded-2xl border border-teal-200/70 mt-6 mb-4">
+                  <p className="text-navy font-semibold text-base leading-relaxed">
+                    Care N Cure accepts referrals from hospital discharge planners, doctors, GPs and allied-health professionals across Perth, subject to client suitability, consent and service availability.
+                  </p>
+                </div>
+                <div className="p-4 rounded-xl bg-amber-50 border border-amber-200/80 mb-6">
+                  <p className="text-xs text-amber-900 leading-relaxed">
+                    <strong>Medical Notice:</strong> We are not an emergency service. For urgent or life-threatening concerns, call <strong>000</strong>.
+                  </p>
+                </div>
+                <p className="text-body text-base leading-relaxed mt-4">
+                  Care N Cure was founded by Jinu, an experienced registered nurse with over a decade of hospital and community nursing experience in Western Australia. We understand what a safe discharge looks like, and we work collaboratively with referring professionals to ensure continuity of care.
                 </p>
                 <p className="text-body leading-relaxed mt-3">
-                  Whether you are a hospital discharge coordinator, a GP, or a family member seeking
-                  care, our referral process is straightforward. We respond fast, we document
-                  thoroughly, and we communicate back to the treating team.
+                  Whether you are a hospital discharge coordinator, a GP, an allied health professional, or a family member seeking care, our intake process is straightforward. We document our clinical observations and communicate back to the treating team.
                 </p>
               </div>
 

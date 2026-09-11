@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Phone, Send } from 'lucide-react'
+import { trackFormSubmit, trackPhoneClick } from '@/lib/analytics'
 
 const PHONE_HREF = 'tel:1300919663'
 const PHONE_NUMBER = '1300 919 663'
@@ -9,6 +10,7 @@ const PHONE_NUMBER = '1300 919 663'
 const serviceOptions = [
   'Post-Hospital Recovery Care',
   'Private Nursing at Home',
+  'Community Nursing Care',
   'Registered Nurses Clinical care Services',
   'Support at home',
   'Homecare packages',
@@ -38,6 +40,10 @@ export function ContactForm({
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setLoading(true)
+    const formData = new FormData(e.currentTarget)
+    const service = (formData.get('service') as string) || defaultService
+    const suburb = (formData.get('suburb') as string) || defaultSuburb
+    trackFormSubmit('contact_form', service, suburb)
     // Placeholder: wire up to your form backend (e.g. Formspree, Netlify Forms)
     await new Promise((r) => setTimeout(r, 800))
     setLoading(false)
@@ -188,24 +194,36 @@ export function ContactForm({
         )}
       </button>
 
-      <div className="pt-2 border-t border-border/60 flex flex-col gap-2 text-xs text-body/80">
+      <div className="pt-2 border-t border-border/60 flex flex-col gap-2.5 text-xs text-body/80">
         <div className="flex items-center justify-between gap-2 bg-teal-50/60 p-2.5 rounded-lg border border-teal-100/60">
           <span className="font-semibold text-teal-800 flex items-center gap-1.5">
             <span className="w-2 h-2 rounded-full bg-teal-500 animate-pulse" />
-            2-Hour Response Time
+            24–48-Hour Assessment Response
           </span>
-          <span className="text-navy font-medium">Direct RN Handovers</span>
+          <span className="text-navy font-medium">Direct RN Intake</span>
         </div>
+        
+        {/* Emergency disclaimer required for healthcare compliance */}
+        <p className="text-[11px] text-amber-800 bg-amber-50/80 p-2.5 rounded-lg border border-amber-200/60 leading-relaxed">
+          <strong>Medical Notice:</strong> This form is not for emergencies. If someone is seriously unwell or in immediate danger, call <strong>000</strong> or contact your treating medical service.
+        </p>
+
+        {/* Privacy notice */}
+        <p className="text-[11px] text-body/70 text-center">
+          By submitting this form, you agree to our <a href="/privacy" className="underline hover:text-navy">privacy policy</a>. We collect only the contact details necessary to respond to your clinical enquiry.
+        </p>
+
         <p className="text-center text-xs mt-1" style={{ color: 'var(--text-muted)' }}>
           Prefer to call?{' '}
           <a
             href={PHONE_HREF}
+            onClick={() => trackPhoneClick('contact_form_footer')}
             className="font-bold text-navy underline cursor-pointer inline font-inherit"
             style={{ minHeight: 'auto' }}
           >
             Call 1300 919 663
           </a>{' '}
-          — you will speak directly with a Registered Nurse.
+          — speak directly with a Registered Nurse.
         </p>
       </div>
     </form>

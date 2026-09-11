@@ -5,22 +5,24 @@ import { ServicePageSchema } from '@/components/schema'
 import { ContactForm } from '@/components/contact-form'
 import { Heart, ShieldCheck, HeartPulse, UserCheck, CheckCircle } from 'lucide-react'
 
+import { CtaUncertaintyReducer } from '@/components/sections/cta-uncertainty-reducer'
+
 export const metadata: Metadata = {
   title: {
-    absolute: 'Private Nurses for Elderly Perth | In-Home Elderly Care | Care N Cure',
+    absolute: 'Private Nurses for Elderly Perth | Aged Care at Home | Care N Cure',
   },
-  description: 'Professional private nurses for elderly care in Perth. AHPRA-registered Registered Nurse coordinators for medication safety, respite, and chronic disease support.',
+  description: 'Registered nursing support for elderly parents in Perth, including medication safety, wound care, chronic-condition monitoring and recovery at home.',
   alternates: { canonical: 'https://carencure.com.au/private-nursing/elderly-care' },
 }
 
 const faqs = [
   {
     question: 'How do I hire private nurses for elderly care in Perth?',
-    answer: 'Hiring private nurses for elderly family members is direct with Care N Cure. Call us on 1300 919 663. A Registered Nurse coordinator will discuss your clinical and daily care needs, coordinate with current doctors, and organize a free in-home consultation.',
+    answer: 'Hiring private nurses for elderly family members is direct with Care N Cure. Call us on 1300 919 663. A Registered Nurse coordinator will discuss your clinical and daily care needs, coordinate with current doctors, and organize an initial in-home assessment.',
   },
   {
     question: 'Can private nursing care be covered by Home Care Packages?',
-    answer: 'Yes. Most elderly clients use their Home Care Package (HCP) Level 1–4, NDIS funding, or DVA benefits to cover the cost of in-home nursing care. We partner with self-managed and fully managed packages to coordinate clinical nursing seamlessly.',
+    answer: 'Yes. Most elderly clients use their Home Care Package (HCP) Level 1–4, NDIS funding, or DVA benefits to cover the cost of in-home nursing care. We partner with self-managed and provider-managed packages to coordinate clinical nursing seamlessly.',
   },
   {
     question: 'What is the benefit of having a dedicated nurse coordinator for an elderly parent?',
@@ -32,8 +34,8 @@ export default function ElderlyPrivateNursing() {
   return (
     <>
       <ServicePageSchema
-        serviceName="Private Nurses for Elderly Perth | In-Home Elderly Care | Care N Cure"
-        description="Professional private nurses for elderly care in Perth. Dedicated Registered Nurse coordinators for medication safety, respite, and chronic disease support."
+        serviceName="Private Nurses for Elderly Perth | Aged Care at Home | Care N Cure"
+        description="Registered nursing support for elderly parents in Perth, including medication safety, wound care, chronic-condition monitoring and recovery at home."
         url="/private-nursing/elderly-care"
         procedureType="Elderly Private Nursing Care"
         faqs={faqs}
@@ -46,8 +48,8 @@ export default function ElderlyPrivateNursing() {
       />
 
       <PageHeader
-        title="Private Nurses for Elderly"
-        subtitle="Dedicated Registered Nurse coordinators providing premium clinical care and companionship at home for Perth seniors."
+        title="Private Nurses for Elderly Parents in Perth"
+        subtitle="Dedicated Registered Nurse coordinators providing clinical care, health monitoring, and dignity at home for Perth seniors."
         breadcrumbItems={[
           { name: 'Services', href: '/services' },
           { name: 'Private Nursing', href: '/private-nursing' },
@@ -64,7 +66,7 @@ export default function ElderlyPrivateNursing() {
             <div className="lg:col-span-7 space-y-8">
               <div>
                 <p className="section-label mb-2">Elderly Home Nursing</p>
-                <h2 className="text-navy text-3xl font-bold">Premium private nurses for hire in Perth</h2>
+                <h1 className="text-navy text-3xl font-bold">Private Nurses for Elderly Parents in Perth</h1>
                 <div className="section-divider" />
                 <p className="text-body text-lg leading-relaxed mt-4">
                   As our parents and loved ones age, their clinical care needs often become more complex. Standard aged care agencies and general support workers cannot administer clinical procedures or monitor health changes with a clinical eye. We provide access to professional, dedicated <strong>private nurses for elderly</strong> care, offering peace of mind to families across Perth.

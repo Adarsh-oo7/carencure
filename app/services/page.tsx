@@ -58,6 +58,14 @@ const services = [
     icon: Activity,
   },
   {
+    id: 'service-community-nursing',
+    title: 'Community Nursing Care',
+    description:
+      'Professional registered nurse visits for ongoing clinical treatments, catheter management, injections, and chronic illness oversight across Perth.',
+    href: '/community-nursing',
+    icon: Stethoscope,
+  },
+  {
     id: 'service-wound-care',
     title: 'Wound Care & Dressing',
     description:

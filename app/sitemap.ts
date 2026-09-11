@@ -82,6 +82,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${BASE_URL}/community-nursing`,
+      lastModified: NOW,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
       url: `${BASE_URL}/ndis-nursing`,
       lastModified: NOW,
       changeFrequency: 'monthly',

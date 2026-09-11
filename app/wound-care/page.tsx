@@ -64,10 +64,10 @@ export default function WoundCare() {
             <div className="lg:col-span-7 space-y-8">
               <div>
                 <p className="section-label mb-2">Sterile Technique</p>
-                <h2 className="text-navy text-3xl font-bold">Expert dressing management to support rapid, infection-free healing</h2>
+                <h2 className="text-navy text-3xl font-bold">Expert dressing management under aseptic clinical technique</h2>
                 <div className="section-divider" />
                 <p className="text-body text-lg leading-relaxed mt-4">
-                  Improper wound care is one of the leading causes of infection and readmission after surgery. Our Registered Nurses use strict aseptic techniques and premium, clinically-appropriate dressings to ensure your wound heals safely and cleanly.
+                  Proper dressing management is essential for surgical recovery and chronic wound care. Our Registered Nurses follow strict aseptic techniques and clinically-appropriate dressings to support clean, safe healing and identify signs of complications early.
                 </p>
               </div>
 

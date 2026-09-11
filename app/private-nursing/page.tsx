@@ -6,11 +6,13 @@ import { ServicePageSchema } from '@/components/schema'
 import { ContactForm } from '@/components/contact-form'
 import { Activity, ShieldCheck, HeartPulse, UserCheck, CheckCircle2, Stethoscope, Phone, Award, Clock, DollarSign, MapPin, AlertCircle } from 'lucide-react'
 
+import { CtaUncertaintyReducer } from '@/components/sections/cta-uncertainty-reducer'
+
 export const metadata: Metadata = {
   title: {
-    absolute: 'Private Nursing Perth | In-Home Registered Nurse Hire | Care N Cure',
+    absolute: 'Private Nurse Perth | In-Home Registered Nursing Care | Care N Cure',
   },
-  description: 'Hire a qualified private nurse in Perth. AHPRA-registered RNs for in-home clinical care, complex wound care, post-hospital recovery & chronic disease management. Dedicated nurse every visit.',
+  description: 'Need a private nurse at home in Perth? Discuss wound care, medication support, injections, recovery and elderly care with a dedicated Nurse Coordinator.',
   alternates: { canonical: 'https://carencure.com.au/private-nursing' },
 }
 
@@ -24,16 +26,16 @@ const faqs = [
     answer: "Yes. Care N Cure is fully compatible with NDIS funding (under Capacity Building and Core Supports) and Home Care Packages (Levels 1 to 4). We also support self-managed participants, plan-managed participants, and private fee-for-service clients.",
   },
   {
-    question: "Can I get 24-hour private nursing care in Perth?",
-    answer: "Yes. We offer flexible schedule coverage ranging from short 1-hour clinical visits for wound care or injection administration to extended day shifts and 24-hour around-the-clock nursing care for complex post-operative recovery or palliative support.",
+    question: "Can I get extended private nursing care in Perth?",
+    answer: "Yes. We offer flexible schedule coverage ranging from short clinical visits for wound care or injection administration to extended day shifts and overnight nursing support for complex post-operative recovery or palliative support, subject to scheduling availability.",
   },
   {
     question: "Do I need a doctor's referral to hire a private nurse?",
-    answer: "No referral is required. You or a family member can hire a private nurse directly by calling Care N Cure on 1300 919 663. However, if you are being discharged from a hospital or require specific medical treatments, we liaise closely with your treating GP or hospital specialist.",
+    answer: "No referral is required for private-pay care. You or a family member can contact Care N Cure directly on 1300 919 663. However, if you are transitioning from hospital or require prescription treatments, we liaise closely with your treating GP or surgeon with your consent.",
   },
   {
     question: "What is the difference between a Registered Nurse (RN) and a home carer?",
-    answer: "A Registered Nurse (RN) holds a university degree, is licensed by AHPRA, and is authorized to perform complex clinical procedures such as sterile wound dressing, urinary catheterization, IV medication administration, and clinical health assessments. A support worker or home carer provides non-clinical assistance such as light housework, companionship, and basic personal hygiene.",
+    answer: "A Registered Nurse (RN) holds an accredited university degree, is licensed by AHPRA, and is authorized to perform complex clinical procedures such as sterile wound dressing, urinary catheterization, IV medication administration, and clinical health assessments. A support worker or home carer provides non-clinical assistance such as light housework, companionship, and basic personal hygiene.",
   },
   {
     question: "Can private nursing be claimed on private health insurance?",
@@ -41,7 +43,7 @@ const faqs = [
   },
   {
     question: "How quickly can in-home private nursing care start in Perth?",
-    answer: "In most cases across metropolitan Perth, care can commence within 24 to 48 hours following an initial phone consultation and clinical intake assessment. Urgent post-hospital discharge support can often be arranged on the same day.",
+    answer: "In most cases across metropolitan Perth, an initial clinical assessment can be arranged within 24 to 48 hours following your intake enquiry. For urgent post-hospital discharge situations, call 1300 919 663 and we will prioritise your intake.",
   },
   {
     question: "What happens if my dedicated nurse is sick or on leave?",
@@ -53,8 +55,8 @@ export default function PrivateNursing() {
   return (
     <>
       <ServicePageSchema
-        serviceName="Private Nursing Perth | In-Home Registered Nurse Hire | Care N Cure"
-        description="Hire a qualified private nurse in Perth. AHPRA-registered RNs for in-home clinical care, complex wound management, post-hospital recovery & chronic disease management. Dedicated nurse every visit."
+        serviceName="Private Nurse Perth | In-Home Registered Nursing Care | Care N Cure"
+        description="Need a private nurse at home in Perth? Discuss wound care, medication support, injections, recovery and elderly care with a dedicated Nurse Coordinator."
         url="/private-nursing"
         procedureType="In-Home Clinical Nursing Care"
         faqs={faqs}
@@ -66,8 +68,8 @@ export default function PrivateNursing() {
       />
 
       <PageHeader
-        title="Private Nursing Perth — In-Home Registered Nurse Care"
-        subtitle="Hire an AHPRA-registered nurse for personalized, clinical care in the quiet comfort and privacy of your own home."
+        title="Private Nursing Care at Home in Perth"
+        subtitle="AHPRA-registered nurses providing personalized, clinical care in the comfort and privacy of your own home."
         breadcrumbItems={[
           { name: 'Services', href: '/services' },
           { name: 'Private Nursing', href: '/private-nursing' },
@@ -87,7 +89,7 @@ export default function PrivateNursing() {
               <div>
                 <p className="section-label mb-2">Dedicated Registered Nursing</p>
                 <h1 className="text-navy text-3xl md:text-4xl font-bold leading-tight">
-                  Hire a Qualified Private Nurse in Perth, WA
+                  Private Nursing Care at Home in Perth
                 </h1>
                 <div className="section-divider my-4" />
                 <div className="bg-teal-subtle/50 p-6 rounded-2xl border border-teal-border">
@@ -296,27 +298,30 @@ export default function PrivateNursing() {
             </div>
 
             {/* Sticky Sidebar Form */}
-            <div className="lg:col-span-5">
-              <div className="sticky top-28 bg-surface p-6 rounded-2xl border border-border shadow-sm space-y-6">
+            <div className="lg:col-span-5 space-y-6">
+              <div className="bg-surface p-6 rounded-2xl border border-border shadow-sm space-y-6">
                 <div className="space-y-2">
-                  <span className="px-3 py-1 bg-teal-subtle text-teal-text text-xs font-bold rounded-full uppercase tracking-wider">Fast Dispatch</span>
+                  <span className="px-3 py-1 bg-teal-subtle text-teal-text text-xs font-bold rounded-full uppercase tracking-wider">Clinical Intake</span>
                   <h3 className="text-navy text-xl font-bold">Book a Private Nurse Consultation</h3>
                   <p className="text-body text-sm">
-                    Speak directly with a Registered Nurse about your in-home care requirements. Same-day response.
+                    Speak directly with a Registered Nurse about your in-home clinical care requirements across Perth.
                   </p>
                 </div>
-                <ContactForm defaultService="Private Nursing" />
+                <ContactForm defaultService="Private Nursing at Home" />
                 <div className="pt-4 border-t border-border space-y-2 text-xs text-slate-500">
                   <div className="flex items-center gap-2">
                     <ShieldCheck className="w-4 h-4 text-teal-accent" />
-                    <span>AHPRA Registered Nurses Only</span>
+                    <span>AHPRA-Registered Nurses Only</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Phone className="w-4 h-4 text-teal-accent" />
-                    <span>Call 1300 919 663 for immediate dispatch</span>
+                    <span>Call 1300 919 663 for clinical triage</span>
                   </div>
                 </div>
               </div>
+
+              {/* Uncertainty Reducer */}
+              <CtaUncertaintyReducer />
             </div>
 
           </div>

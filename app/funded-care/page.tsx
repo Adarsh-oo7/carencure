@@ -11,33 +11,31 @@ import { ServicePageSchema } from '@/components/schema'
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Funded Care Perth | Home Care Packages & NDIS | Care N Cure',
+    absolute: 'Support at Home and Nursing Funding Perth | Care N Cure',
   },
-  description: 'Access government-funded home care in Perth. Home Care Packages, NDIS, DVA & post-hospital transition support. RN-coordinated care across all Perth suburbs.',
+  description: 'Understand private pay, Support at Home, CHSP, DVA and NDIS nursing pathways in Perth. We explain next steps without promising funding approval.',
   alternates: { canonical: 'https://carencure.com.au/funded-care' },
 }
-
-
 
 const fundingCards = [
   {
     id: 'hcp',
-    title: 'Home Care Packages (HCP)',
+    title: 'Support at Home & Home Care Packages (HCP)',
     whatItIs:
-      'A government-funded program for older Australians (65+) who need coordinated support at home. Packages are available at four levels — from basic support (Level 1) to high-level care needs (Level 4). Funding is managed by an approved provider.',
+      'Government funding for older Australians who need clinical nursing and personal support to stay safely at home. As the Commonwealth transitions from Home Care Packages to the Support at Home program, clinical nursing remains an approved core service.',
     whoIsEligible:
-      'Australians aged 65 and over (50+ for Aboriginal and Torres Strait Islander people) assessed as needing coordinated care at home.',
+      'Australians aged 65 and over (50+ for First Nations people) assessed via My Aged Care (ACAT or regional assessment).',
     whatItCovers: [
-      'Registered nursing visits',
-      'Wound care and medication management',
-      'Personal care and hygiene support',
-      'Allied health and mobility support',
-      'Care coordination and case management',
+      'Registered nursing visits and health monitoring',
+      'Complex wound care and aseptic dressing changes',
+      'Medication oversight and administration',
+      'Catheter care and clinical assessments',
+      'Care coordination and liaison with treating GPs',
     ],
     howToAccess:
       'Register with My Aged Care at myagedcare.gov.au or call 1800 200 422 to request an ACAT assessment.',
     howWeHelp:
-      'We are an approved Home Care Package provider. Once your package is assigned, we can begin services immediately and help you get maximum value from your funding.',
+      'We deliver registered nursing care for self-managed package holders and subcontract with approved care management providers such as Trilogy Care. We help families understand their clinical budget without promising funding approval.',
   },
 
   {
@@ -95,22 +93,21 @@ const navigationSteps = [
 const faqs = [
   {
     id: 'fq-hcp',
-    question: 'Can I use my Home Care Package with you?',
+    question: 'Can I use my Home Care Package or Support at Home funds with Care N Cure?',
     answer:
-      'Yes. Once your package is assigned through My Aged Care, we can begin delivering services under your funding immediately.',
+      'Yes. If you self-manage your package or your approved care management provider (such as Trilogy Care) allows choice of clinical subcontractor, our registered nurses can deliver your clinical care under your approved budget.',
   },
   {
     id: 'fq-no-package',
     question: "What if I don't have a package yet?",
     answer:
-      "We can provide private nursing while you wait for your package to be approved — packages can take time to be assigned. We'll also guide you through the My Aged Care registration and assessment process step by step.",
+      "We provide private nursing while you wait for your assessment or assignment through My Aged Care. We can outline the assessment steps without charging administration fees for basic advice.",
   },
-
   {
     id: 'fq-timeline',
     question: 'How long does funding approval take?',
     answer:
-      'It varies. Home Care Package waitlists can be significant. We recommend starting the process early — and we can provide private nursing in the interim.',
+      'Approval and package assignment timeframes depend entirely on the Commonwealth My Aged Care queue. Because waiting periods can take months, many families start with private nursing visits to manage immediate clinical needs.',
   },
 ]
 
@@ -118,8 +115,8 @@ export default function FundedCarePage() {
   return (
     <>
       <ServicePageSchema
-        serviceName="Funded Care Perth | Home Care Packages & NDIS | Care N Cure"
-        description="Access government-funded home care in Perth. Home Care Packages, NDIS, DVA & post-hospital transition support. RN-coordinated care across all Perth suburbs."
+        serviceName="Support at Home and Nursing Funding Perth | Care N Cure"
+        description="Understand private pay, Support at Home, CHSP, DVA and NDIS nursing pathways in Perth. We explain next steps without promising funding approval."
         url="/funded-care"
         procedureType="Funded Home Care Guidance"
         faqs={faqs}
@@ -294,6 +291,12 @@ export default function FundedCarePage() {
               </AccordionItem>
             ))}
           </Accordion>
+
+          <div className="mt-8 p-4 rounded-xl bg-amber-50 border border-amber-200/80 text-center">
+            <p className="text-xs text-amber-900 leading-relaxed">
+              <strong>Medical Disclaimer:</strong> In-home care services are not an emergency service. If the person requiring care is acutely unwell or experiencing a life-threatening medical emergency, call <strong>000</strong> immediately.
+            </p>
+          </div>
         </div>
       </section>
 
