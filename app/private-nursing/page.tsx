@@ -94,7 +94,7 @@ export default function PrivateNursing() {
                 <div className="section-divider my-4" />
                 <div className="bg-teal-subtle/50 p-6 rounded-2xl border border-teal-border">
                   <p className="text-navy font-semibold text-lg leading-relaxed">
-                    <strong>Private nursing in Perth</strong> is specialized, in-home clinical healthcare delivered by qualified AHPRA-Registered Nurses (RNs) without public waiting lists or government aged care delays. Care N Cure provides dedicated Nurse Coordinators for complex wound management, post-surgical recovery, medication administration, and chronic disease support across all Perth metropolitan suburbs. Families and self-funded individuals can initiate clinical nursing visits within 24 to 48 hours.
+                    <strong>Private nursing in Perth</strong> is specialized, in-home clinical healthcare delivered by qualified AHPRA-Registered Nurses (RNs) as an independent fee-for-service option while navigating or waiting for government aged care packages. Care N Cure provides dedicated Nurse Coordinators for complex wound management, post-surgical recovery, medication administration, and chronic disease support across all Perth metropolitan suburbs. Families and self-funded individuals can arrange an intake assessment within 24 to 48 hours.
                   </p>
                 </div>
               </div>
@@ -242,7 +242,7 @@ export default function PrivateNursing() {
               <div className="space-y-4">
                 <h2 className="text-navy text-2xl font-bold">Funding Options: NDIS, Home Care Packages & Health Insurance</h2>
                 <p className="text-body leading-relaxed">
-                  While many clients pay out-of-pocket for private nursing to receive immediate support without waiting lists, several funding pathways are available to reduce or cover care costs:
+                  While many clients pay out-of-pocket for private nursing to initiate care promptly, several funding pathways are available to reduce or cover care costs:
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
                   <div className="p-4 bg-surface rounded-xl border border-border space-y-1">

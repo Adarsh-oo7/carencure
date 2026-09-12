@@ -100,7 +100,7 @@ export function ServiceAreas() {
         {/* Guarantee Banner */}
         <div className="text-center space-y-4 pt-4 border-t border-white/10">
           <p className="text-white/80 text-sm font-medium">
-            ✨ <strong>Zero Travel Fee Guarantee:</strong> No travel fees charged for all clients within our 50km Perth service radius.
+            ✨ <strong>Transparent Local Coverage:</strong> Dedicated registered nurse home visits across the Perth metropolitan area with travel terms confirmed upfront during intake.
           </p>
           <Link
             href="/locations"

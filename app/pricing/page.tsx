@@ -112,8 +112,8 @@ export default function PricingPage() {
                       Evening care, weekend appointments, and urgent hospital discharge care. Tailored for families requiring rapid clinical intervention outside normal hours.
                     </p>
                     <ul className="text-xs text-slate-600 space-y-2 border-t border-border pt-3">
-                      <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-teal-accent" /> Rapid dispatch (24–48 hrs)</li>
-                      <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-teal-accent" /> 24/7 Phone Nurse Access</li>
+                      <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-teal-accent" /> Priority intake assessment (24–48 hrs)</li>
+                      <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-teal-accent" /> Direct Nurse Coordinator communication</li>
                     </ul>
                   </div>
 
@@ -126,7 +126,7 @@ export default function PricingPage() {
                 <div className="space-y-3">
                   <div className="p-4 bg-surface rounded-xl border border-border">
                     <h3 className="text-navy font-bold text-base">1. Self-Funded Private Care</h3>
-                    <p className="text-body text-sm mt-1">Direct fee-for-service with itemized invoices. No waiting lists or My Aged Care assessments required. Care starts immediately.</p>
+                    <p className="text-body text-sm mt-1">Direct fee-for-service with itemized invoices. No government queue required; visits scheduled subject to clinician availability.</p>
                   </div>
                   <div className="p-4 bg-surface rounded-xl border border-border">
                     <h3 className="text-navy font-bold text-base">2. NDIS Participant Funding</h3>

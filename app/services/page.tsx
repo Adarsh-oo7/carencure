@@ -243,7 +243,7 @@ export default function ServicesPage() {
 
       <CTASection
         title="Not sure which service you need?"
-        description="Call us — you'll speak directly with a registered nurse who will assess your situation and recommend the right care plan. No waiting lists, no call centres."
+        description="Call us — speak directly with a registered nurse who will discuss your situation and outline appropriate care options."
         secondaryLink={{ text: 'Contact Us', href: '/contact' }}
       />
     </>
