@@ -18,31 +18,31 @@ import { CtaUncertaintyReducer } from '@/components/sections/cta-uncertainty-red
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Home Nursing Care Services Perth | In-Home Elderly Care & Private Nurses | Care N Cure',
+    absolute: 'Home Care Services WA & In-Home Aged Care Perth | Care N Cure Nursing',
   },
   description:
-    'Perth in-home nursing care service by AHPRA registered nurses. Dedicated nurse coordinators for elderly care, wound care, medication safety, post-hospital recovery & Home Care Packages. Call 1300 919 663.',
+    'Trusted Perth in-home aged care & home care services across WA by AHPRA registered nurses. Support at Home, Home Care Packages (HCP) & private nurse hire. Call 1300 919 663.',
   keywords: [
+    'home care services wa',
+    'home care services',
+    'aged care near me perth',
+    'aged care agency perth',
+    'aged care in home support',
+    'aged care nursing services',
+    'home nursing services perth',
     'nursing care at home service',
-    'home nursing care services',
     'private in home care for the elderly',
-    'private nurse home',
+    'private nurse perth',
     'private nurses for home care',
-    'home nurse services perth',
-    'home nurse Perth',
-    'in-home nursing WA',
-    'home care byford',
     'home care packages Perth',
     'Support at Home Perth',
-    'aged care Perth',
     'Care N Cure',
-    'The Nurse Who Knows You',
   ],
   alternates: { canonical: 'https://carencure.com.au' },
   openGraph: {
-    title: 'Home Nursing Care Services Perth | In-Home Elderly Care & Private Nurses | Care N Cure',
+    title: 'Home Care Services WA & In-Home Aged Care Perth | Care N Cure Nursing',
     description:
-      'Perth in-home nursing care service by AHPRA registered nurses. Dedicated nurse coordinators for elderly care, wound care, medication safety, post-hospital recovery & Home Care Packages. Call 1300 919 663.',
+      'Trusted Perth in-home aged care & home care services across WA by AHPRA registered nurses. Support at Home, Home Care Packages (HCP) & private nurse hire. Call 1300 919 663.',
     url: 'https://carencure.com.au',
   },
 }

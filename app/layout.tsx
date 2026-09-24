@@ -123,7 +123,7 @@ export default function RootLayout({
           Skip to main content
         </a>
         <Navigation />
-        <main className="flex-1" id="main-content">
+        <main className="flex-1 pb-16 md:pb-0" id="main-content">
           {children}
         </main>
         <Footer />

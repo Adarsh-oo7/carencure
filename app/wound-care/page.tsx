@@ -7,14 +7,22 @@ import { Bandage, ShieldAlert, Award, Stethoscope, CheckCircle } from 'lucide-re
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Wound Care Perth | Home Wound Dressing | Care N Cure',
+    absolute: 'In-Home Wound Care Perth | Wound Dressing & Stitches Removal | Care N Cure',
   },
-  description: 'Professional sterile wound management at home. Post-surgical dressings, chronic ulcer care, infection monitoring by AHPRA-registered nurses. Perth-wide service.',
+  description: 'AHPRA Registered Nurses providing sterile home wound care across Perth. Surgical dressings, stitch & staple removal, diabetic ulcers & pressure injury care. Call 1300 919 663.',
   alternates: { canonical: 'https://carencure.com.au/wound-care' },
 }
 
 
 const faqs = [
+  {
+    question: 'Can you remove surgical stitches or staples at home in Perth?',
+    answer: 'Yes. Our AHPRA-registered nurses carry sterile single-use suture cutters, staple removers, and antiseptic prep. With your surgeon or GP discharge order, we assess incision healing, gently remove sutures or staples at your bedside, and apply protective dressings without requiring a stressful clinic trip.',
+  },
+  {
+    question: 'What are the benefits of in-home wound care vs an outpatient wound clinic?',
+    answer: 'In-home wound care eliminates painful car travel, avoids crowded hospital waiting rooms where infection risks are high, and allows assessment in your own clean environment. Furthermore, having the same dedicated Registered Nurse evaluate your wound sequentially ensures subtle healing changes or early infections are caught immediately.',
+  },
   {
     question: 'How often does a wound dressing need changing?',
     answer: 'This depends entirely on the wound type, the level of exudate (discharge), and the surgeon or nurse specialist&apos;s recommendations. It can range from daily changes to once or twice a week. We establish a clear plan during our first visit.',
@@ -33,8 +41,8 @@ export default function WoundCare() {
   return (
     <>
       <ServicePageSchema
-        serviceName="Wound Care Perth | Home Wound Dressing | Care N Cure"
-        description="Professional sterile wound management at home. Post-surgical dressings, chronic ulcer care, infection monitoring by AHPRA-registered nurses. Perth-wide service."
+        serviceName="In-Home Wound Care Perth | Wound Dressing & Stitches Removal"
+        description="AHPRA Registered Nurses providing sterile home wound care across Perth. Surgical dressings, stitch & staple removal, diabetic ulcers & pressure injury care. Call 1300 919 663."
         url="/wound-care"
         procedureType="Wound Care"
         faqs={faqs}
@@ -47,8 +55,8 @@ export default function WoundCare() {
 
 
       <PageHeader
-        title="Wound Care & Dressing"
-        subtitle="Sterile, professional wound management in the comfort and hygiene of your home."
+        title="Wound Care & Dressing at Home"
+        subtitle="Sterile, professional wound management, staple removal, and ulcer therapy in the comfort of your home."
         breadcrumbItems={[
           { name: 'Services', href: '/#services' },
           { name: 'Wound Care', href: '/wound-care' },
@@ -69,6 +77,43 @@ export default function WoundCare() {
                 <p className="text-body text-lg leading-relaxed mt-4">
                   Proper dressing management is essential for surgical recovery and chronic wound care. Our Registered Nurses follow strict aseptic techniques and clinically-appropriate dressings to support clean, safe healing and identify signs of complications early.
                 </p>
+              </div>
+
+              {/* H2: Removal of Stitches & Surgical Staples at Home */}
+              <div className="bg-teal-subtle/40 p-6 rounded-2xl border border-teal-border space-y-3">
+                <h3 className="text-navy text-xl font-bold flex items-center gap-2">
+                  <Bandage className="w-5 h-5 text-teal-accent" />
+                  Removal of Stitches & Surgical Staples at Home
+                </h3>
+                <p className="text-body text-sm leading-relaxed">
+                  Traveling to a clinic with fresh surgical wounds can be uncomfortable, painful, and risky for post-operative patients. Care N Cure provides bedside <strong>removal of stitches (sutures) and surgical clips/staples</strong> across Perth. Our Registered Nurses thoroughly inspect the wound closure line, test wound tensile strength, apply sterile antiseptic prep, and gently remove closures as ordered by your surgeon.
+                </p>
+              </div>
+
+              {/* H2: Benefits of In-Home Wound Care vs Outpatient Clinics */}
+              <div className="space-y-4">
+                <h3 className="text-navy text-2xl font-bold">Benefits of In-Home Wound Care vs Outpatient Clinics</h3>
+                <p className="text-body text-sm leading-relaxed">
+                  Families searching for private wound care clinics often find that mobile in-home nursing provides superior medical and personal benefits:
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="p-4 bg-surface rounded-xl border border-border">
+                    <h4 className="font-bold text-navy text-sm mb-1">Lower Infection Exposure</h4>
+                    <p className="text-xs text-body">Avoid exposure to hospital-acquired resistant bacteria in crowded outpatient waiting rooms.</p>
+                  </div>
+                  <div className="p-4 bg-surface rounded-xl border border-border">
+                    <h4 className="font-bold text-navy text-sm mb-1">Zero Painful Travel</h4>
+                    <p className="text-xs text-body">No uncomfortable car transfers, wheelchair loading, or parking hassles while recovering.</p>
+                  </div>
+                  <div className="p-4 bg-surface rounded-xl border border-border">
+                    <h4 className="font-bold text-navy text-sm mb-1">Clinical Continuity</h4>
+                    <p className="text-xs text-body">The same dedicated Registered Nurse tracks wound healing and photographs progress at each visit.</p>
+                  </div>
+                  <div className="p-4 bg-surface rounded-xl border border-border">
+                    <h4 className="font-bold text-navy text-sm mb-1">Doctor Collaboration</h4>
+                    <p className="text-xs text-body">Direct progress updates and clinical photographic reports provided to your GP or surgeon.</p>
+                  </div>
+                </div>
               </div>
 
               <div className="space-y-6">

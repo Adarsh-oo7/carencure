@@ -10,14 +10,18 @@ import { CtaUncertaintyReducer } from '@/components/sections/cta-uncertainty-red
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Private Nursing Care at Home Perth | In-Home Nurse Care | Care N Cure',
+    absolute: 'Private Nurse Perth | Hire In-Home Registered Nurses | Care N Cure',
   },
   description:
-    'In-home private nursing care in Perth by AHPRA registered nurses. Dedicated Nurse Coordinator for wound care, injections, medication, recovery & aged care. Call 1300 919 663.',
+    'Need to hire a private nurse at home in Perth? AHPRA Registered Nurses for wound care, injections, post-op recovery & elderly care. No referral needed. Call 1300 919 663.',
   alternates: { canonical: 'https://carencure.com.au/private-nursing' },
 }
 
 const faqs = [
+  {
+    question: "How do I hire a private nurse for home care in Perth?",
+    answer: "Hiring a private nurse with Care N Cure requires no doctor referral. Simply call our nurse intake desk directly on 1300 919 663 or submit an online request. We evaluate your clinical care requirements over a brief telephone triage, agree on a transparent schedule and quote, and assign a dedicated AHPRA Registered Nurse who arrives at your residence within 24 to 48 hours.",
+  },
   {
     question: "How much does private nursing cost in Perth?",
     answer: "Private Registered Nurse visits in Perth range from $110 to $160 per hour for standard weekday clinical care, depending on care complexity. Weekend, after-hours, and public holiday visits range between $160 and $220 per hour. Detailed pricing is available on our pricing schedule, and services can be self-funded or funded through NDIS or Home Care Packages.",
@@ -236,6 +240,64 @@ export default function PrivateNursing() {
                       </tr>
                     </tbody>
                   </table>
+                </div>
+              </div>
+
+              {/* H2: How to Hire a Private Nurse for Home Care in Perth (Step-by-Step) */}
+              <div className="space-y-6 bg-gradient-to-br from-teal-subtle/50 to-white p-8 rounded-2xl border border-teal-border">
+                <div className="space-y-2">
+                  <span className="section-label">Fast, Direct Onboarding</span>
+                  <h2 className="text-navy text-2xl md:text-3xl font-bold">
+                    How to Hire a Private Nurse for Home Care in Perth
+                  </h2>
+                  <p className="text-body text-sm leading-relaxed">
+                    Hiring a private nurse with Care N Cure does not require waiting for doctor referrals or navigating government bureaucracy. You can arrange one-off clinical visits, day-rate nursing, or ongoing aged care support in three simple steps:
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                  <div className="bg-white p-5 rounded-xl border border-border shadow-sm space-y-2">
+                    <div className="w-8 h-8 rounded-full bg-teal-accent text-white font-bold text-sm flex items-center justify-center">
+                      1
+                    </div>
+                    <h3 className="font-bold text-navy text-base">Direct Phone Triage</h3>
+                    <p className="text-xs text-body leading-relaxed">
+                      Call our Nurse Coordinator at <strong className="text-navy">1300 919 663</strong>. We discuss your medical needs, doctor instructions, and schedule preferences in minutes.
+                    </p>
+                  </div>
+
+                  <div className="bg-white p-5 rounded-xl border border-border shadow-sm space-y-2">
+                    <div className="w-8 h-8 rounded-full bg-teal-accent text-white font-bold text-sm flex items-center justify-center">
+                      2
+                    </div>
+                    <h3 className="font-bold text-navy text-base">Clear Upfront Plan</h3>
+                    <p className="text-xs text-body leading-relaxed">
+                      Receive an itemised care schedule and transparent quote. Choose private self-funding, NDIS billing, or Home Care Package allocation. No lock-in contracts.
+                    </p>
+                  </div>
+
+                  <div className="bg-white p-5 rounded-xl border border-border shadow-sm space-y-2">
+                    <div className="w-8 h-8 rounded-full bg-teal-accent text-white font-bold text-sm flex items-center justify-center">
+                      3
+                    </div>
+                    <h3 className="font-bold text-navy text-base">In-Home RN Visit</h3>
+                    <p className="text-xs text-body leading-relaxed">
+                      Your dedicated AHPRA Registered Nurse arrives at your home within 24 to 48 hours with full clinical supplies, establishing care continuity.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex flex-col sm:flex-row items-center gap-4 pt-2">
+                  <a
+                    href="tel:1300919663"
+                    className="btn btn-primary w-full sm:w-auto flex items-center justify-center gap-2 shadow-md"
+                  >
+                    <Phone className="w-4 h-4 fill-current" />
+                    <span>Call 1300 919 663 to Hire a Nurse</span>
+                  </a>
+                  <p className="text-xs text-muted text-center sm:text-left">
+                    Speak directly with a Perth Registered Nurse · Rapid 24–48h intake across all metro suburbs
+                  </p>
                 </div>
               </div>
 

@@ -6,19 +6,33 @@ import { FAQSection } from '@/components/sections/faq-section'
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Home Nursing FAQ | Private Nurse Questions | Care N Cure Perth',
+    absolute: 'In-Home Nurse Perth FAQ | How to Hire Home Care Nurses | Care N Cure',
   },
-  description: 'Answers to common questions about private nursing, Home Care Packages, NDIS funding, costs & service areas. Perth\'s registered nurse home care provider.',
+  description: 'Frequently asked questions about hiring an in-home nurse in Perth. Learn about registered nurse home visits, aged care packages, clinical costs & 24/7 care. Call 1300 919 663.',
   alternates: { canonical: 'https://carencure.com.au/faq' },
 }
 
 const allFaqs = [
   {
+    id: 'faq-hire-nurse',
+    question: 'How do I hire an in-home nurse in Perth?',
+    answer: 'Hiring an in-home Registered Nurse with Care N Cure is direct and rapid. You can call our nursing coordinator directly on 1300 919 663 or complete our online enquiry form. We conduct a free clinical triage over the phone, agree on a transparent care plan and fee structure, and can schedule your dedicated AHPRA Registered Nurse home visit within 24 to 48 hours across the Perth metro area.',
+  },
+  {
+    id: 'faq-nurse-day',
+    question: 'Can I hire a private nurse for a single day or short-term recovery?',
+    answer: 'Yes. We offer flexible nurse hire arrangements ranging from a single clinical visit (for sterile wound dressing, IV antibiotic administration, or catheter changes) to full-day or multi-day bedside recovery support following hospital discharge. There are no lock-in contracts.',
+  },
+  {
+    id: 'faq-nurse-cost',
+    question: 'How much does it cost to hire a private nurse for home care in Perth?',
+    answer: 'In Perth, standard weekday private Registered Nurse visits range between $110 and $160 per hour depending on clinical complexity. Evening, weekend, and public holiday rates range from $160 to $240 per hour. Care N Cure provides clear, upfront pricing with zero hidden travel surcharges for metro Perth.',
+  },
+  {
     id: 'faq-1',
-    question: 'What is the Support at Home program in 2026 ?',
+    question: 'What is the Support at Home program in 2026?',
     answer:
       "It's the Australian Government's main program for in-home aged care in 2026. It replaced Home Care Packages on 1 November 2025 and introduced eight classification levels with quarterly budgets.",
-
   },
   {
     id: 'faq-2',
