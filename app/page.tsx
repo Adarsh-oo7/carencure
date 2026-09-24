@@ -18,36 +18,55 @@ import { CtaUncertaintyReducer } from '@/components/sections/cta-uncertainty-red
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Home Care Services WA & In-Home Aged Care Perth | Care N Cure Nursing',
+    absolute: 'At Home Nurse Perth | Aged Care In-Home Support & Home Care Services WA | Care N Cure',
   },
   description:
-    'Trusted Perth in-home aged care & home care services across WA by AHPRA registered nurses. Support at Home, Home Care Packages (HCP) & private nurse hire. Call 1300 919 663.',
+    'Need an at-home nurse near you in Perth? AHPRA Registered Nurses for aged care in-home support, home care services WA, wound care & post-hospital recovery. Call 1300 919 663.',
   keywords: [
+    'at home nurse near me',
+    'at home nurse service perth',
+    'at home nurse care',
+    'aged care in home support',
+    'aged care in home services',
+    'aged home care services',
+    'aged care agency perth',
     'home care services wa',
     'home care services',
     'aged care near me perth',
-    'aged care agency perth',
-    'aged care in home support',
     'aged care nursing services',
-    'home nursing services perth',
-    'nursing care at home service',
-    'private in home care for the elderly',
+    'best home care package providers',
     'private nurse perth',
-    'private nurses for home care',
     'home care packages Perth',
-    'Support at Home Perth',
     'Care N Cure',
   ],
   alternates: { canonical: 'https://carencure.com.au' },
   openGraph: {
-    title: 'Home Care Services WA & In-Home Aged Care Perth | Care N Cure Nursing',
+    title: 'At Home Nurse Perth | Aged Care In-Home Support & Home Care Services WA | Care N Cure',
     description:
-      'Trusted Perth in-home aged care & home care services across WA by AHPRA registered nurses. Support at Home, Home Care Packages (HCP) & private nurse hire. Call 1300 919 663.',
+      'Need an at-home nurse near you in Perth? AHPRA Registered Nurses for aged care in-home support, home care services WA, wound care & post-hospital recovery. Call 1300 919 663.',
     url: 'https://carencure.com.au',
   },
 }
 
 const homeFaqs = [
+  {
+    id: 'faq-at-home-nurse',
+    question: 'Is there an at-home nurse near me in Perth?',
+    answer:
+      'Yes. Care N Cure is a Perth-based in-home nursing practice with AHPRA Registered Nurses visiting clients across the entire metropolitan area — from Joondalup and Rockingham to Armadale, Claremont, and South Perth. No GP referral is needed. Simply call 1300 919 663 and we arrange a clinical intake assessment within 24–48 hours.',
+  },
+  {
+    id: 'faq-aged-care-support',
+    question: 'What aged care in-home support do you provide?',
+    answer:
+      'We provide clinical aged care in-home support for seniors across Perth, delivered by AHPRA Registered Nurses. This includes comprehensive health assessments, wound dressing and staple removal, medication management and injections, catheter care, vital signs monitoring, and coordination with GPs and specialists. Services are available privately, or funded through Home Care Packages (HCP Levels 1–4), Support at Home, or NDIS.',
+  },
+  {
+    id: 'faq-aged-care-agency',
+    question: 'Are you an aged care agency in Perth?',
+    answer:
+      'Care N Cure is a registered nurse-led in-home aged care practice based in Harrisdale, Perth. Unlike traditional aged care agencies that dispatch rotating support workers, every Care N Cure client is assigned a dedicated Registered Nurse Coordinator who attends every visit. We are AHPRA-registered and provide clinical nursing — not just personal care or domestic support.',
+  },
   {
     id: 'faq-what-private-nurse',
     question: 'What is a private nurse at home?',

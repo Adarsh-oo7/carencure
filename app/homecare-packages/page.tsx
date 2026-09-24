@@ -8,10 +8,23 @@ import { Award, ShieldCheck, HeartPulse, UserCheck, CheckCircle, CheckCircle2 } 
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Home Care Packages Perth (HCP Levels 1-4) & Aged Care WA | Care N Cure',
+    absolute: 'Home Care Packages Perth | Self-Managed HCP (Levels 1-4) & Aged Care WA | Care N Cure',
   },
   description:
-    'Nurse-led Home Care Package support in Perth & WA. Clinical nursing, respite, wound care & care coordination for HCP Levels 1–4. Call 1300 919 663.',
+    'Nurse-led Home Care Package management in Perth & WA. Self-managed HCP Levels 1–4, aged care packages, clinical nursing & care coordination. Call 1300 919 663.',
+  keywords: [
+    'home care packages perth',
+    'home care packages western australia',
+    'home care packages wa',
+    'home care package perth',
+    'self-managed home care packages perth',
+    'aged care packages perth',
+    'aged care home packages perth',
+    'funded nursing care',
+    'best home care package providers',
+    'hcp care perth',
+    'home care package provider perth',
+  ],
   alternates: { canonical: 'https://carencure.com.au/homecare-packages' },
 }
 
@@ -66,11 +79,25 @@ export default function HomecarePackages() {
             <div className="lg:col-span-7 space-y-8">
               <div>
                 <p className="section-label mb-2">Government Funding</p>
-                <h2 className="text-navy text-3xl font-bold">Maximise your care with nurse-led package management</h2>
+                <h2 className="text-navy text-3xl font-bold">Home Care Packages Perth: Nurse-Led HCP Management</h2>
                 <div className="section-divider" />
                 <p className="text-body text-lg leading-relaxed mt-4">
                   A Home Care Package (HCP) allows you to choose your own provider to coordinate your services. At Care N Cure, we believe that aged care coordination should be run by clinicians, not administrative staff. Our co-founders oversee your care plan, budget, and services to ensure you get the absolute best outcomes, integrating clinical oversight seamlessly with your everyday <Link href="/support-at-home" className="text-teal-text hover:underline font-semibold">support at home</Link>.
                 </p>
+
+                {/* Self-managed HCP section */}
+                <div className="bg-teal-subtle/40 p-5 rounded-xl border border-teal-border mt-5 space-y-3">
+                  <h3 className="font-bold text-navy text-lg">Self-Managed Home Care Packages in Perth</h3>
+                  <p className="text-body text-sm leading-relaxed">
+                    Choosing a <strong>self-managed Home Care Package</strong> gives you direct control over how your HCP funds are spent. Instead of having a case manager allocate your budget, you coordinate services directly with approved providers like Care N Cure. This means:
+                  </p>
+                  <ul className="space-y-2 text-sm text-body">
+                    <li className="flex items-start gap-2"><span className="text-teal-accent font-bold">✓</span><span><strong>Lower administrative fees</strong> — more of your package budget goes to actual nursing care.</span></li>
+                    <li className="flex items-start gap-2"><span className="text-teal-accent font-bold">✓</span><span><strong>Choose your own RN</strong> — work directly with Care N Cure’s dedicated Nurse Coordinator.</span></li>
+                    <li className="flex items-start gap-2"><span className="text-teal-accent font-bold">✓</span><span><strong>Flexible scheduling</strong> — adjust visit frequency and services as your needs change.</span></li>
+                  </ul>
+                  <p className="text-xs text-muted pt-1">We actively support self-managed HCP clients partnering with Trilogy Care and other approved management platforms across Perth WA.</p>
+                </div>
               </div>
 
               <div className="space-y-6">

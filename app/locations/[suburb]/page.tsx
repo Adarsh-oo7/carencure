@@ -410,23 +410,33 @@ export async function generateMetadata({ params }: { params: Promise<{ suburb: s
     title: {
       absolute:
         suburb === 'armadale'
-          ? 'Armadale Home Care & Community Nursing | Care N Cure Perth'
-          : `${data.name} Home Care & Community Nursing | Care N Cure Perth`,
+          ? 'At Home Nurse Armadale | In-Home Aged Care & Nursing | Care N Cure'
+          : `At Home Nurse ${data.name} | In-Home Aged Care & Nursing | Care N Cure`,
     },
     description:
       suburb === 'armadale'
-        ? 'In-home nursing and aged-care support in Armadale and nearby south-east Perth suburbs, subject to availability. Speak with a registered nurse.'
-        : `In-home nursing & aged care in ${data.name} (${data.region}). Sterile wound care, medication management & post-hospital recovery by AHPRA registered nurses. Call 1300 919 663.`,
+        ? 'AHPRA registered nurses providing at-home nursing care in Armadale & south-east Perth. Wound care, aged care in-home support, post-hospital recovery. Call 1300 919 663.'
+        : `AHPRA Registered Nurses visiting ${data.name} for at-home nursing care, aged care in-home support & wound management. Rapid 24–48h intake. Call 1300 919 663.`,
     alternates: { canonical: `https://carencure.com.au/locations/${suburb}` },
+    keywords: [
+      `at home nurse ${data.name.toLowerCase()}`,
+      `at home nurse care ${data.name.toLowerCase()}`,
+      `at home nurse near me`,
+      `aged care in home support ${data.name.toLowerCase()}`,
+      `aged care in home services ${data.name.toLowerCase()}`,
+      `in home nursing ${data.name.toLowerCase()}`,
+      `home care nurse ${data.name.toLowerCase()}`,
+      `private nurse ${data.name.toLowerCase()}`,
+    ],
     openGraph: {
       title:
         suburb === 'armadale'
-          ? 'Armadale Home Care & Community Nursing | Care N Cure Perth'
-          : `${data.name} Home Care & Community Nursing | Care N Cure Perth`,
+          ? 'At Home Nurse Armadale | In-Home Aged Care & Nursing | Care N Cure'
+          : `At Home Nurse ${data.name} | In-Home Aged Care & Nursing | Care N Cure`,
       description:
         suburb === 'armadale'
-          ? 'In-home nursing and aged-care support in Armadale and nearby south-east Perth suburbs, subject to availability. Speak with a registered nurse.'
-          : `In-home nursing & aged care in ${data.name} (${data.region}). Sterile wound care, medication management & post-hospital recovery by AHPRA registered nurses. Call 1300 919 663.`,
+          ? 'AHPRA registered nurses providing at-home nursing care in Armadale & south-east Perth. Wound care, aged care in-home support, post-hospital recovery. Call 1300 919 663.'
+          : `AHPRA Registered Nurses visiting ${data.name} for at-home nursing care, aged care in-home support & wound management. Rapid 24–48h intake. Call 1300 919 663.`,
       url: `https://carencure.com.au/locations/${suburb}`,
     },
   }
@@ -440,6 +450,17 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
   }
 
   const faqs = [
+    {
+      question: `Is there an at-home nurse near me in ${data.name}, Perth?`,
+      answer:
+        suburb === 'armadale'
+          ? 'Yes. Care N Cure registered nurses travel directly to your door in Armadale, Kelmscott, Seville Grove, Mount Nasura, Mount Richon, and Champion Lakes. You do not need a GP referral — simply call 1300 919 663 and we arrange a clinical intake assessment within 24–48 hours.'
+          : `Yes. Care N Cure is a Perth-based in-home nursing practice. Our AHPRA Registered Nurses travel to ${data.name} and surrounding suburbs for clinical visits. No referral is required. Call 1300 919 663 and we will arrange an intake within 24–48 hours.`,
+    },
+    {
+      question: `What aged care in-home support is available in ${data.name}?`,
+      answer: `We provide comprehensive aged care in-home support for seniors in ${data.name}, including clinical nursing assessments, wound dressing, medication safety, subcutaneous injections, catheter management, and health monitoring. Services can be funded privately, through a Home Care Package (HCP Levels 1–4), or under the Support at Home program.`,
+    },
     {
       question: `Do you provide in-home nursing services across ${data.name} and nearby suburbs?`,
       answer:
@@ -469,10 +490,10 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
       <PageHeader
         title={
           suburb === 'armadale'
-            ? 'Home Nursing and Community Care in Armadale'
-            : `${data.name} Home Care & Community Nursing`
+            ? 'At-Home Nurse & Aged Care In-Home Support in Armadale'
+            : `At-Home Nurse & Aged Care In-Home Support — ${data.name}`
         }
-        subtitle={`Registered nurses providing in-home clinical care across ${data.name} and surrounding Perth suburbs.`}
+        subtitle={`AHPRA Registered Nurses providing clinical at-home nursing care and aged care in-home support across ${data.name} and surrounding Perth suburbs.`}
         breadcrumbItems={[
           { name: 'Locations', href: '/locations' },
           { name: data.name, href: `/locations/${suburb}` },
@@ -491,13 +512,21 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
                 <p className="section-label mb-2">Serving {data.region}</p>
                 <h2 className="text-navy text-3xl font-bold">
                   {suburb === 'armadale'
-                    ? 'Home Nursing and Community Care in Armadale'
-                    : `Clinical Home Nursing & Community Care in ${data.name}, Perth WA`}
+                    ? 'At-Home Nurse & Aged Care In-Home Support in Armadale, Perth'
+                    : `At-Home Nurse & Aged Care In-Home Support in ${data.name}, Perth WA`}
                 </h2>
                 <div className="section-divider" />
                 <p className="text-body text-lg leading-relaxed mt-4">
                   {data.description}
                 </p>
+
+                {/* At-home nurse intent answer box */}
+                <div className="bg-teal-subtle/40 p-5 rounded-xl border border-teal-border mt-4">
+                  <p className="text-navy font-semibold text-sm leading-relaxed">
+                    <strong>Looking for an at-home nurse near you in {data.name}?</strong> Care N Cure AHPRA Registered Nurses travel directly to your door — no referral required. We provide aged care in-home support, wound dressing, medication administration, and post-hospital recovery nursing. Call <a href="tel:1300919663" className="text-teal-text hover:underline font-bold">1300 919 663</a> for a same-day intake discussion.
+                  </p>
+                </div>
+
                 <p className="text-body leading-relaxed mt-3">
                   {getLocalText(data)}
                 </p>
@@ -760,9 +789,9 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
       })()}
 
       <CTASection
-        title={`Looking for a private registered nurse in ${data.name}?`}
-        description={`Call our founder Jinu directly. Speak directly with a registered nurse to design a recovery or care plan today.`}
-        secondaryLink={{ text: 'Call Us Now', href: '/contact', isPhone: false }}
+        title={`Need an at-home nurse or aged care support in ${data.name}?`}
+        description={`Our AHPRA Registered Nurses visit ${data.name} residents within 24–48 hours. No referral needed. Private funding, Home Care Packages, NDIS, and Support at Home all accepted. Call 1300 919 663.`}
+        secondaryLink={{ text: 'Book a Nurse in ' + data.name, href: '/contact', isPhone: false }}
       />
     </>
   )
