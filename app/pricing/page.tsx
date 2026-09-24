@@ -63,9 +63,9 @@ export default function PricingPage() {
             <div className="lg:col-span-7 space-y-8">
               <div>
                 <p className="section-label mb-2">Clear & Honest Pricing</p>
-                <h1 className="text-navy text-3xl md:text-4xl font-bold leading-tight">
+                <h2 className="text-navy text-3xl md:text-4xl font-bold leading-tight">
                   In-Home Registered Nurse Rates & Funding Options in Perth
-                </h1>
+                </h2>
                 <div className="section-divider my-4" />
                 <div className="bg-teal-subtle/40 p-6 rounded-2xl border border-teal-border space-y-3">
                   <p className="text-navy font-semibold text-lg leading-relaxed">

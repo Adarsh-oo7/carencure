@@ -40,6 +40,10 @@ const suburbs = [
   'shenton-park',
   'dalkeith',
   'city-beach',
+  'harrisdale',
+  'byford',
+  'piara-waters',
+  'thornlie',
 ]
 
 // Must match slug values in lib/blog-data.ts

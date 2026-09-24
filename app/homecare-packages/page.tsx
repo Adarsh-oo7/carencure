@@ -8,9 +8,10 @@ import { Award, ShieldCheck, HeartPulse, UserCheck, CheckCircle, CheckCircle2 } 
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Home Care Packages Perth | Self-Managed HCP Nursing Support',
+    absolute: 'Home Care Packages Perth (HCP Levels 1-4) & Aged Care WA | Care N Cure',
   },
-  description: 'Nurse-led Home Care Package support in Perth, including clinical nursing, wound care and care coordination for HCP Levels 1–4 and self-managed plans. Call 1300 919 663.',
+  description:
+    'Nurse-led Home Care Package support in Perth & WA. Clinical nursing, respite, wound care & care coordination for HCP Levels 1–4. Call 1300 919 663.',
   alternates: { canonical: 'https://carencure.com.au/homecare-packages' },
 }
 

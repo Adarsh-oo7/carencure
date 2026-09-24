@@ -25,10 +25,85 @@ const nextConfig = {
         destination: '/:path*',
         permanent: true,
       },
-      // Fix Google Search Console 404 reported URL errors
+      // Fix Google Search Console 404 reported URL errors (legacy suburb-Suburb slug pattern)
+      {
+        source: '/locations/fremantle-Fremantle',
+        destination: '/locations/fremantle',
+        permanent: true,
+      },
+      {
+        source: '/locations/inglewood-Inglewood',
+        destination: '/locations/inglewood',
+        permanent: true,
+      },
+      {
+        source: '/locations/nedlands-Nedlands',
+        destination: '/locations/nedlands',
+        permanent: true,
+      },
       {
         source: '/locations/cottesloe-Cottesloe',
         destination: '/locations/cottesloe',
+        permanent: true,
+      },
+      {
+        source: '/locations/victoria-park-Victoria-Park',
+        destination: '/locations/victoria-park',
+        permanent: true,
+      },
+      {
+        source: '/locations/subiaco-Subiaco',
+        destination: '/locations/subiaco',
+        permanent: true,
+      },
+      {
+        source: '/locations/applecross-Applecross',
+        destination: '/locations/applecross',
+        permanent: true,
+      },
+      {
+        source: '/locations/claremont-Claremont',
+        destination: '/locations/claremont',
+        permanent: true,
+      },
+      {
+        source: '/locations/gosnells-Gosnells',
+        destination: '/locations/gosnells',
+        permanent: true,
+      },
+      {
+        source: '/locations/armadale-Armadale',
+        destination: '/locations/armadale',
+        permanent: true,
+      },
+      {
+        source: '/locations/rockingham-Rockingham',
+        destination: '/locations/rockingham',
+        permanent: true,
+      },
+      {
+        source: '/locations/south-perth-South-Perth',
+        destination: '/locations/south-perth',
+        permanent: true,
+      },
+      {
+        source: '/locations/canning-vale-Canning-Vale',
+        destination: '/locations/canning-vale',
+        permanent: true,
+      },
+      {
+        source: '/locations/mount-lawley-Mount-Lawley',
+        destination: '/locations/mount-lawley',
+        permanent: true,
+      },
+      {
+        source: '/locations/joondalup-Joondalup',
+        destination: '/locations/joondalup',
+        permanent: true,
+      },
+      {
+        source: '/locations/midland-Midland',
+        destination: '/locations/midland',
         permanent: true,
       },
       {

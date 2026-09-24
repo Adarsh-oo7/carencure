@@ -70,9 +70,9 @@ export default function NdisNursingPage() {
             <div className="lg:col-span-7 space-y-8">
               <div>
                 <p className="section-label mb-2">NDIS Clinical Support</p>
-                <h1 className="text-navy text-3xl md:text-4xl font-bold leading-tight">
+                <h2 className="text-navy text-3xl md:text-4xl font-bold leading-tight">
                   Qualified In-Home NDIS Nursing Care Across Metropolitan Perth
-                </h1>
+                </h2>
                 <div className="section-divider my-4" />
                 <div className="bg-teal-subtle/40 p-6 rounded-2xl border border-teal-border">
                   <p className="text-navy font-semibold text-lg leading-relaxed">

@@ -348,6 +348,46 @@ const suburbsMap: Record<string, SuburbData> = {
     localHealthcareFocus: 'post-surgical rehabilitation, vital sign tracking, and mobility support',
     localSpecificText: 'We support City Beach residents with professional in-home nursing visits. Our Registered Nurses work alongside your treating GP to support comprehensive post-hospital recovery and care.',
   },
+  harrisdale: {
+    id: 'harrisdale',
+    name: 'Harrisdale',
+    region: 'Perth South-East',
+    nearestHospital: 'Armadale Health Service & Fiona Stanley Hospital',
+    description: 'Care N Cure is proudly based in Harrisdale at 15 Rockefeller Way. We provide rapid in-home registered nurse visits, complex wound care, medication management, and aged care nursing across Harrisdale, Piara Waters, and Southern River.',
+    surroundingSuburbs: 'Piara Waters, Southern River, and Canning Vale',
+    localHealthcareFocus: 'dedicated nurse coordination, elderly home care, sterile wound management, and rapid intake assessments',
+    localSpecificText: 'Harrisdale is Care N Cure\'s home base. Located right here on Rockefeller Way, our Registered Nurses provide immediate local availability with priority 24-hour intake response, zero travel charges, and continuous, familiar clinical care for Harrisdale families.',
+  },
+  byford: {
+    id: 'byford',
+    name: 'Byford',
+    region: 'Perth South-East',
+    nearestHospital: 'Armadale Health Service',
+    description: 'In-home clinical nursing and aged care in Byford and the Serpentine-Jarrahdale region. Professional registered nurse visits for wound care, post-hospital recovery, and Home Care Packages.',
+    surroundingSuburbs: 'Armadale, Cardup, and Darling Downs',
+    localHealthcareFocus: 'in-home aged care nursing, post-hospital recovery, chronic condition monitoring, and medication management',
+    localSpecificText: 'Byford is one of Perth\'s fastest-growing communities, and local families deserve high-quality clinical nursing without traveling to distant clinics. Care N Cure provides qualified Registered Nurse visits directly to Byford homes with zero travel surcharge, coordinating closely with Armadale Health Service and local GPs.',
+  },
+  'piara-waters': {
+    id: 'piara-waters',
+    name: 'Piara Waters',
+    region: 'Perth South-East',
+    nearestHospital: 'Fiona Stanley Hospital & Armadale Health Service',
+    description: 'Professional in-home registered nurse visits across Piara Waters and Harrisdale. Clinical wound dressing, elderly care coordination, and post-discharge recovery.',
+    surroundingSuburbs: 'Harrisdale, Southern River, and Cockburn Central',
+    localHealthcareFocus: 'sterile wound care, medication reconciliation, elderly support, and vital sign monitoring',
+    localSpecificText: 'Minutes from our Harrisdale headquarters, Piara Waters clients receive rapid clinical assessment and dedicated Registered Nurse coordination. Whether recovering from surgery or needing ongoing elderly care at home, we deliver trusted 1-on-1 nursing.',
+  },
+  thornlie: {
+    id: 'thornlie',
+    name: 'Thornlie',
+    region: 'Perth South-East',
+    nearestHospital: 'Armadale Health Service & Fiona Stanley Hospital',
+    description: 'Providing dedicated in-home registered nurse visits and community aged care across Thornlie, Langford, and Canning Vale. Clinical wound care, medication oversight, and dedicated nurse coordination.',
+    surroundingSuburbs: 'Langford, Canning Vale, and Gosnells',
+    localHealthcareFocus: 'community nursing care, elderly home care, post-surgical dressing changes, and chronic condition management',
+    localSpecificText: 'Thornlie residents are just minutes from our primary South-East Perth nursing team. We work closely with local medical centres along Spencer Road and Thornlie Square, as well as Armadale Health Service. Whether your loved one needs sterile wound management, daily medication checks, or Home Care Package coordination, we provide registered nurse visits with zero travel surcharges.',
+  },
 }
 
 // Generate static params for all suburbs
@@ -449,11 +489,11 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
 
               <div>
                 <p className="section-label mb-2">Serving {data.region}</p>
-                <h1 className="text-navy text-3xl font-bold">
+                <h2 className="text-navy text-3xl font-bold">
                   {suburb === 'armadale'
                     ? 'Home Nursing and Community Care in Armadale'
                     : `Clinical Home Nursing & Community Care in ${data.name}, Perth WA`}
-                </h1>
+                </h2>
                 <div className="section-divider" />
                 <p className="text-body text-lg leading-relaxed mt-4">
                   {data.description}

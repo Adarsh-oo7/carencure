@@ -41,8 +41,8 @@ export function HeroSection({
           alt="Registered nurse providing compassionate in-home care to an elderly patient in Perth, WA — The Nurse Who Knows You"
           fill
           priority
-          quality={90}
-          sizes="100vw"
+          quality={75}
+          sizes="(max-width: 768px) 100vw, 100vw"
           style={{ objectFit: 'cover', objectPosition: 'center 30%' }}
         />
 

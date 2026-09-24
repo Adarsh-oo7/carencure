@@ -7,9 +7,10 @@ import { Activity, ShieldCheck, HeartPulse, UserCheck, CheckCircle } from 'lucid
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Clinical Nursing Perth | Registered Nurse Home Care | Care N Cure',
+    absolute: 'Home Nursing Services Perth | Registered Nurses Clinical Care | Care N Cure',
   },
-  description: 'University-trained RNs delivering complex clinical care at home. Sterile procedures, vital monitoring, GP liaison & chronic illness management across Perth.',
+  description:
+    'AHPRA registered home nursing services across Perth. Sterile wound dressing, catheter changes, injections, medication safety & chronic care. Call 1300 919 663.',
   alternates: { canonical: 'https://carencure.com.au/registered-nurses-clinical-care-services' },
 }
 

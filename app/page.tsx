@@ -18,32 +18,31 @@ import { CtaUncertaintyReducer } from '@/components/sections/cta-uncertainty-red
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Home Nurse Perth | In-Home Nursing Care & Private Nurses | Care N Cure',
+    absolute: 'Home Nursing Care Services Perth | In-Home Elderly Care & Private Nurses | Care N Cure',
   },
   description:
-    'Perth in-home nursing by registered nurses. Wound care, post-hospital recovery, aged care and health monitoring with one dedicated Nurse Coordinator. Call 1300 919 663.',
+    'Perth in-home nursing care service by AHPRA registered nurses. Dedicated nurse coordinators for elderly care, wound care, medication safety, post-hospital recovery & Home Care Packages. Call 1300 919 663.',
   keywords: [
+    'nursing care at home service',
+    'home nursing care services',
+    'private in home care for the elderly',
+    'private nurse home',
+    'private nurses for home care',
+    'home nurse services perth',
     'home nurse Perth',
-    'in home nursing care Perth',
-    'home nursing Perth',
-    'home care nurse Perth',
-    'nurse at home care Perth',
-    'private nurse Perth',
-    'private nursing Perth',
-    'registered nurse home visit Perth',
-    'community nursing care Perth',
-    'dedicated nurse coordinator',
-    'Care N Cure Perth',
-    'The Nurse Who Knows You',
+    'in-home nursing WA',
+    'home care byford',
     'home care packages Perth',
     'Support at Home Perth',
     'aged care Perth',
+    'Care N Cure',
+    'The Nurse Who Knows You',
   ],
   alternates: { canonical: 'https://carencure.com.au' },
   openGraph: {
-    title: 'Home Nurse Perth | In-Home Nursing Care & Private Nurses | Care N Cure',
+    title: 'Home Nursing Care Services Perth | In-Home Elderly Care & Private Nurses | Care N Cure',
     description:
-      'Perth in-home nursing by registered nurses. Wound care, post-hospital recovery, aged care and health monitoring with one dedicated Nurse Coordinator. Call 1300 919 663.',
+      'Perth in-home nursing care service by AHPRA registered nurses. Dedicated nurse coordinators for elderly care, wound care, medication safety, post-hospital recovery & Home Care Packages. Call 1300 919 663.',
     url: 'https://carencure.com.au',
   },
 }

@@ -24,6 +24,7 @@ const AREA_SERVED = [
   'Applecross', 'Scarborough', 'Sorrento', 'Duncraig',
   'Karrinyup', 'Como', 'Bicton', 'East Fremantle',
   'Shenton Park', 'Dalkeith', 'City Beach',
+  'Harrisdale', 'Byford', 'Piara Waters', 'Thornlie',
 ]
 
 // ── MedicalOrganization (Homepage primary schema) ──────────────────────────

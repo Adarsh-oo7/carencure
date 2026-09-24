@@ -10,9 +10,10 @@ import { CtaUncertaintyReducer } from '@/components/sections/cta-uncertainty-red
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Private Nurse Perth | In-Home Registered Nursing Care | Care N Cure',
+    absolute: 'Private Nursing Care at Home Perth | In-Home Nurse Care | Care N Cure',
   },
-  description: 'Need a private nurse at home in Perth? Discuss wound care, medication support, injections, recovery and elderly care with a dedicated Nurse Coordinator.',
+  description:
+    'In-home private nursing care in Perth by AHPRA registered nurses. Dedicated Nurse Coordinator for wound care, injections, medication, recovery & aged care. Call 1300 919 663.',
   alternates: { canonical: 'https://carencure.com.au/private-nursing' },
 }
 
@@ -88,9 +89,9 @@ export default function PrivateNursing() {
               {/* Answer-First Summary Box */}
               <div>
                 <p className="section-label mb-2">Dedicated Registered Nursing</p>
-                <h1 className="text-navy text-3xl md:text-4xl font-bold leading-tight">
+                <h2 className="text-navy text-3xl md:text-4xl font-bold leading-tight">
                   Private Nursing Care at Home in Perth
-                </h1>
+                </h2>
                 <div className="section-divider my-4" />
                 <div className="bg-teal-subtle/50 p-6 rounded-2xl border border-teal-border">
                   <p className="text-navy font-semibold text-lg leading-relaxed">

@@ -129,9 +129,9 @@ export default function CommunityNursingPage() {
 
               <div>
                 <p className="section-label mb-2">Registered Nurse Care in the Community</p>
-                <h1 className="text-navy text-3xl md:text-4xl font-bold leading-tight">
+                <h2 className="text-navy text-3xl md:text-4xl font-bold leading-tight">
                   Community Nursing Care in Perth by AHPRA-Registered Nurses
-                </h1>
+                </h2>
                 <div className="section-divider my-4" />
                 <div className="bg-teal-subtle/50 p-6 rounded-2xl border border-teal-border">
                   <p className="text-navy font-semibold text-lg leading-relaxed">

@@ -19,7 +19,7 @@ const PHONE_HREF = 'tel:1300919663'
 const WHATSAPP_HREF = 'https://wa.me/61481748516?text=Hi%20Care%20N%20Cure%2C%20I%20would%20like%20to%20enquire%20about%20your%20nursing%20services.'
 const SMS_HREF = 'sms:+61481748516'
 const INSTAGRAM_HREF = 'https://www.instagram.com/carencurenursing/?utm_source=ig_web_button_share_sheet'
-const LINKEDIN_HREF = 'https://www.linkedin.com/company/care-n-cure-nursing-care-services/'
+const LINKEDIN_HREF = 'https://www.linkedin.com/company/carencure-au/'
 
 export default function ContactPage() {
   return (
@@ -41,9 +41,9 @@ export default function ContactPage() {
             <div className="lg:col-span-7 space-y-8">
               <div>
                 <p className="section-label mb-2">Instant Clinical Connect</p>
-                <h1 className="text-navy text-3xl md:text-4xl font-bold leading-tight">
+                <h2 className="text-navy text-3xl md:text-4xl font-bold leading-tight">
                   Reach Out Directly to Our Nursing Team
-                </h1>
+                </h2>
                 <div className="section-divider my-4" />
                 <p className="text-body text-base leading-relaxed">
                   No call centres or delayed ticketing systems. Speak or message directly with our registered nurse founder, <strong>Jinu</strong>, for immediate clinical guidance, hospital discharge support, or care bookings.

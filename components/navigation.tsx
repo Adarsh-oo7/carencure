@@ -25,14 +25,15 @@ const serviceLinks = [
 
 const locationLinks = [
   { label: 'All Perth Suburbs', href: '/locations' },
+  { label: 'Harrisdale (HQ)', href: '/locations/harrisdale' },
+  { label: 'Byford', href: '/locations/byford' },
   { label: 'Nedlands', href: '/locations/nedlands' },
   { label: 'Subiaco', href: '/locations/subiaco' },
   { label: 'City of Gosnells', href: '/locations/gosnells' },
   { label: 'City of Armadale', href: '/locations/armadale' },
+  { label: 'Canning Vale', href: '/locations/canning-vale' },
   { label: 'Rockingham', href: '/locations/rockingham' },
   { label: 'Applecross', href: '/locations/applecross' },
-  { label: 'Mount Lawley', href: '/locations/mount-lawley' },
-  { label: 'Fremantle', href: '/locations/fremantle' },
   { label: 'South Perth', href: '/locations/south-perth' },
 ]
 
@@ -252,6 +253,9 @@ export function Navigation() {
 
               <Link href="/about" className="text-sm font-medium text-body hover:text-navy transition-colors" style={{ lineHeight: 1, padding: '4px 0' }}>
                 About
+              </Link>
+              <Link href="/testimonials" className="text-sm font-medium text-body hover:text-navy transition-colors" style={{ lineHeight: 1, padding: '4px 0' }}>
+                Clinical Standards
               </Link>
               <Link href="/faq" className="text-sm font-medium text-body hover:text-navy transition-colors" style={{ lineHeight: 1, padding: '4px 0' }}>
                 FAQ

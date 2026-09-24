@@ -8,9 +8,10 @@ import { HeartHandshake, ShieldCheck, Home, Car, CheckCircle } from 'lucide-reac
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Support at Home Perth | Home Care Assistance | Care N Cure',
+    absolute: 'Support at Home Perth | In-Home Aged Care Services WA | Care N Cure',
   },
-  description: 'Nurse-led companion and domestic care under clinical oversight. Personal care, social support & daily living assistance in Perth. AHPRA-registered nurses.',
+  description:
+    'Nurse-led Support at Home & aged care services across Perth, WA. Dedicated nurse coordinators, personal care, daily living assistance & 0 travel fees. Call 1300 919 663.',
   alternates: { canonical: 'https://carencure.com.au/support-at-home' },
 }
 

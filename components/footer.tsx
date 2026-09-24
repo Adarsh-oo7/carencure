@@ -88,6 +88,8 @@ export function Footer() {
             <h4 className="font-semibold text-white text-base mb-4">Perth Locations</h4>
             <div className="grid grid-cols-2 gap-x-4 gap-y-2.5">
               {[
+                { label: 'Harrisdale (HQ)', href: '/locations/harrisdale' },
+                { label: 'Byford', href: '/locations/byford' },
                 { label: 'Nedlands', href: '/locations/nedlands' },
                 { label: 'Subiaco', href: '/locations/subiaco' },
                 { label: 'Cottesloe', href: '/locations/cottesloe' },
@@ -95,6 +97,7 @@ export function Footer() {
                 { label: 'Wembley', href: '/locations/wembley' },
                 { label: 'Floreat', href: '/locations/floreat' },
                 { label: 'Gosnells', href: '/locations/gosnells' },
+                { label: 'Thornlie', href: '/locations/thornlie' },
                 { label: 'Armadale', href: '/locations/armadale' },
                 { label: 'Rockingham', href: '/locations/rockingham' },
                 { label: 'Applecross', href: '/locations/applecross' },
@@ -244,6 +247,7 @@ export function Footer() {
             </div>
             <div className="flex flex-wrap gap-6 justify-center">
               <Link href="/about" className="text-white/50 hover:text-white text-sm transition-colors">About</Link>
+              <Link href="/testimonials" className="text-white/50 hover:text-white text-sm transition-colors">Clinical Standards</Link>
               <Link href="/contact" className="text-white/50 hover:text-white text-sm transition-colors">Contact</Link>
               <Link href="/faq" className="text-white/50 hover:text-white text-sm transition-colors">FAQ</Link>
               <Link href="/privacy" className="text-white/50 hover:text-white text-sm transition-colors">Privacy Policy</Link>
