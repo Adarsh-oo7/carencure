@@ -68,11 +68,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     // ── High-priority service pages ──
     {
+      url: `${BASE_URL}/aged-care`,
+      lastModified: NOW,
+      changeFrequency: 'monthly',
+      priority: 0.95,
+    },
+    {
       url: `${BASE_URL}/your-dedicated-nurse`,
       lastModified: NOW,
       changeFrequency: 'monthly',
       priority: 0.95,
     },
+    {
+      url: `${BASE_URL}/personal-care`,
+      lastModified: NOW,
+      changeFrequency: 'monthly',
+      priority: 0.92,
+    },
+    {
+      url: `${BASE_URL}/physiotherapy`,
+      lastModified: NOW,
+      changeFrequency: 'monthly',
+      priority: 0.92,
+    },
+    {
+      url: `${BASE_URL}/nutritionist`,
+      lastModified: NOW,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+
     {
       url: `${BASE_URL}/post-hospital-care`,
       lastModified: NOW,

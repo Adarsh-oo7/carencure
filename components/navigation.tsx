@@ -9,18 +9,22 @@ const PHONE_NUMBER = '1300 919 663'
 const PHONE_HREF = 'tel:1300919663'
 
 const serviceLinks = [
+  { label: 'Aged Care at Home', href: '/aged-care' },
   { label: 'Private Nursing at Home', href: '/private-nursing' },
   { label: 'Elderly Care at Home', href: '/private-nursing/elderly-care' },
+  { label: 'Personal Care at Home', href: '/personal-care' },
   { label: 'NDIS Nursing Care', href: '/ndis-nursing' },
-  { label: 'Pricing & Rates', href: '/pricing' },
+  { label: 'Support at Home', href: '/support-at-home' },
+  { label: 'Home Care Packages', href: '/homecare-packages' },
+  { label: 'Physiotherapy at Home', href: '/physiotherapy' },
+  { label: 'Nutritionist at Home', href: '/nutritionist' },
   { label: 'Post-Hospital Recovery Care', href: '/post-hospital-care' },
-  { label: 'Registered Nurses Clinical care Services', href: '/registered-nurses-clinical-care-services' },
-  { label: 'Support at home', href: '/support-at-home' },
-  { label: 'Homecare packages', href: '/homecare-packages' },
   { label: 'Wound Care at Home', href: '/wound-care' },
   { label: 'Medication Management', href: '/medication-management' },
   { label: 'Mobility Support', href: '/mobility-support' },
   { label: 'Companion Care', href: '/companion-care' },
+  { label: 'Registered Nurses Clinical Care', href: '/registered-nurses-clinical-care-services' },
+  { label: 'Pricing & Rates', href: '/pricing' },
 ]
 
 const locationLinks = [
