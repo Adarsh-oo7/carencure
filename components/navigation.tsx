@@ -9,7 +9,7 @@ const PHONE_NUMBER = '1300 919 663'
 const PHONE_HREF = 'tel:1300919663'
 
 const serviceLinks = [
-  { label: 'Aged Care at Home', href: '/aged-care' },
+  { label: 'Aged Care at Home Perth', href: '/aged-care-at-home-perth' },
   { label: 'Private Nursing at Home', href: '/private-nursing' },
   { label: 'Elderly Care at Home', href: '/private-nursing/elderly-care' },
   { label: 'Personal Care at Home', href: '/personal-care' },
@@ -24,6 +24,7 @@ const serviceLinks = [
   { label: 'Mobility Support', href: '/mobility-support' },
   { label: 'Companion Care', href: '/companion-care' },
   { label: 'Registered Nurses Clinical Care', href: '/registered-nurses-clinical-care-services' },
+  { label: 'Healthcare Referrals', href: '/referrals' },
   { label: 'Pricing & Rates', href: '/pricing' },
 ]
 
@@ -258,6 +259,9 @@ export function Navigation() {
               <Link href="/about" className="text-sm font-medium text-body hover:text-navy transition-colors" style={{ lineHeight: 1, padding: '4px 0' }}>
                 About
               </Link>
+              <Link href="/referrals" className="text-sm font-medium text-body hover:text-navy transition-colors" style={{ lineHeight: 1, padding: '4px 0' }}>
+                Referrals
+              </Link>
               <Link href="/testimonials" className="text-sm font-medium text-body hover:text-navy transition-colors" style={{ lineHeight: 1, padding: '4px 0' }}>
                 Clinical Standards
               </Link>
@@ -370,6 +374,7 @@ export function Navigation() {
               </div>
 
               <Link href="/about" className="px-3 py-3 text-body font-medium hover:bg-surface hover:text-navy rounded-lg transition-colors" onClick={() => setIsOpen(false)}>About</Link>
+              <Link href="/referrals" className="px-3 py-3 text-body font-medium hover:bg-surface hover:text-navy rounded-lg transition-colors" onClick={() => setIsOpen(false)}>Healthcare Referrals</Link>
               <Link href="/testimonials" className="px-3 py-3 text-body font-medium hover:bg-surface hover:text-navy rounded-lg transition-colors" onClick={() => setIsOpen(false)}>Quality & Feedback</Link>
               <Link href="/faq" className="px-3 py-3 text-body font-medium hover:bg-surface hover:text-navy rounded-lg transition-colors" onClick={() => setIsOpen(false)}>FAQ</Link>
               <Link href="/contact" className="px-3 py-3 text-body font-medium hover:bg-surface hover:text-navy rounded-lg transition-colors" onClick={() => setIsOpen(false)}>Contact</Link>

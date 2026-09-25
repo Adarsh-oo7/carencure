@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { MapPin, Phone, Mail, Clock, Shield, ExternalLink, Linkedin, MessageSquare } from 'lucide-react'
+import { MapPin, Phone, Mail, Clock, Shield, ExternalLink, MessageSquare, Star } from 'lucide-react'
 
 const PHONE_NUMBER = '1300 919 663'
 const PHONE_HREF = 'tel:1300919663'
@@ -55,21 +55,23 @@ export function Footer() {
             <h4 className="font-semibold text-white text-base mb-4">Our Services</h4>
             <ul className="space-y-2.5">
               {[
+                { label: 'Aged Care at Home Perth', href: '/aged-care-at-home-perth' },
                 { label: 'Private Nursing at Home', href: '/private-nursing' },
                 { label: 'Elderly Care at Home', href: '/private-nursing/elderly-care' },
                 { label: 'NDIS Nursing Care', href: '/ndis-nursing' },
-                { label: 'Pricing & Rates', href: '/pricing' },
+                { label: 'Homecare Packages (HCP)', href: '/homecare-packages' },
+                { label: 'Support at Home', href: '/support-at-home' },
                 { label: 'Post-Hospital Recovery Care', href: '/post-hospital-care' },
-                { label: 'Registered Nurses Clinical care Services', href: '/registered-nurses-clinical-care-services' },
-                { label: 'Support at home', href: '/support-at-home' },
-                { label: 'Homecare packages', href: '/homecare-packages' },
+                { label: 'Registered Nurses Clinical Care', href: '/registered-nurses-clinical-care-services' },
+                { label: 'Personal Care at Home', href: '/personal-care' },
+                { label: 'Physiotherapy at Home', href: '/physiotherapy' },
+                { label: 'Nutritionist at Home', href: '/nutritionist' },
                 { label: 'Wound Care at Home', href: '/wound-care' },
                 { label: 'Medication Management', href: '/medication-management' },
                 { label: 'Mobility Support', href: '/mobility-support' },
-                { label: 'Companion Care', href: '/companion-care' },
-                { label: 'Your Dedicated Nurse™', href: '/your-dedicated-nurse' },
-                { label: 'Funded Care (HCP)', href: '/funded-care' },
-                { label: 'Hospital to Home', href: '/post-hospital-care' },
+                { label: 'Pricing & Rates', href: '/pricing' },
+                { label: 'Healthcare Referrals', href: '/referrals' },
+                { label: 'Clinical Governance & Reviews', href: '/testimonials' },
               ].map((link) => (
                 <li key={`${link.href}-${link.label}`}>
                   <Link
@@ -156,28 +158,29 @@ export function Footer() {
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: 'var(--teal-accent)' }} />
                 <span className="text-white/70">
-                  Perth, WA
+                  15 Rockefeller Way, Harrisdale WA 6112 (Serving Perth Metro)
                 </span>
               </div>
 
               <div className="flex items-start gap-2.5">
                 <Clock className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: 'var(--teal-accent)' }} />
-                <div className="text-white/70">
-                  <div>Monday – Friday: 9:00am – 6:00pm</div>
+                <div className="text-white/70 text-xs">
+                  <div className="font-semibold text-white/90">Phone & Intake: Mon–Fri 9am–6pm</div>
+                  <div className="text-white/50 mt-0.5">Nursing Visits: 7 Days / Scheduled Shifts</div>
                 </div>
               </div>
               <div className="flex flex-col gap-3 mt-4 pt-4 border-t border-white/10">
                 <p className="text-white/50 text-xs font-semibold uppercase tracking-wider">Connect With Us</p>
                 <div className="grid grid-cols-2 gap-y-3 gap-x-2">
                   <a
-                    href="https://www.linkedin.com/company/carencure-au/"
+                    href="https://share.google/AFv5vHsJl8uVnocto"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="Care N Cure on LinkedIn"
-                    className="flex items-center gap-2 text-white/60 hover:text-white transition-colors text-xs"
+                    aria-label="Care N Cure Google 5-Star Profile and Reviews"
+                    className="flex items-center gap-2 text-white/80 hover:text-white transition-colors text-xs font-semibold"
                   >
-                    <Linkedin className="w-4 h-4 flex-shrink-0" style={{ color: 'var(--teal-accent)' }} />
-                    <span>LinkedIn</span>
+                    <Star className="w-4 h-4 flex-shrink-0 text-amber-400 fill-amber-400" />
+                    <span>Google 5.0★</span>
                   </a>
                   
                   <a

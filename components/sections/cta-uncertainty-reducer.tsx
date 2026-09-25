@@ -66,6 +66,21 @@ export function CtaUncertaintyReducer() {
         </div>
       </div>
 
+      <div className="pt-3 border-t border-teal-200/60 flex flex-wrap items-center justify-between gap-3 text-xs">
+        <span className="font-semibold text-navy">Helpful Patient & Provider Links:</span>
+        <div className="flex flex-wrap gap-3">
+          <Link href="/aged-care-at-home-perth" className="text-teal-text font-bold hover:underline">
+            Aged Care at Home (For Families) →
+          </Link>
+          <Link href="/referrals" className="text-teal-text font-bold hover:underline">
+            GP & Hospital Referrals →
+          </Link>
+          <Link href="/testimonials" className="text-teal-text font-bold hover:underline">
+            Clinical Standards & Reviews →
+          </Link>
+        </div>
+      </div>
+
       <div className="flex items-start gap-2.5 pt-2 border-t border-teal-200/50 text-xs text-navy/80 bg-white/80 p-3 rounded-xl">
         <AlertCircle className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
         <p>

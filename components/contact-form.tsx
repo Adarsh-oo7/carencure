@@ -8,17 +8,31 @@ const PHONE_HREF = 'tel:1300919663'
 const PHONE_NUMBER = '1300 919 663'
 
 const serviceOptions = [
-  'Post-Hospital Recovery Care',
+  'Aged Care at Home / Elderly Support',
   'Private Nursing at Home',
-  'Community Nursing Care',
-  'Registered Nurses Clinical care Services',
-  'Support at home',
-  'Homecare packages',
+  'NDIS Nursing & Clinical Support',
+  'Post-Hospital Recovery Care',
+  'Home Care Packages (HCP) Guidance',
+  'Support at Home Program',
+  'Registered Nurses Clinical Care',
   'Wound Care at Home',
   'Medication Management',
+  'Personal Care Assistance',
+  'Physiotherapy at Home',
+  'Nutritionist & Dietetics at Home',
   'Mobility & Rehabilitation Support',
   'Companion Care',
-  'Not sure — need advice',
+  'Not sure — need clinical advice',
+]
+
+const fundingOptions = [
+  'Private / Self-Funded',
+  'Home Care Package (HCP)',
+  'Support at Home Program',
+  'NDIS (Self or Plan Managed)',
+  'DVA / Veterans Affairs',
+  'Hospital Transition / Discharge',
+  'Not sure / Need guidance',
 ]
 
 interface ContactFormProps {
@@ -43,7 +57,8 @@ export function ContactForm({
     const formData = new FormData(e.currentTarget)
     const service = (formData.get('service') as string) || defaultService
     const suburb = (formData.get('suburb') as string) || defaultSuburb
-    trackFormSubmit('contact_form', service, suburb)
+    const funding = (formData.get('funding') as string) || ''
+    trackFormSubmit('contact_form', service, suburb, funding)
     // Placeholder: wire up to your form backend (e.g. Formspree, Netlify Forms)
     await new Promise((r) => setTimeout(r, 800))
     setLoading(false)
@@ -134,7 +149,7 @@ export function ContactForm({
             name="suburb"
             type="text"
             defaultValue={defaultSuburb}
-            placeholder="e.g. Nedlands"
+            placeholder="e.g. Harrisdale, Nedlands"
             className="border border-border rounded-lg px-4 py-3 text-body bg-white focus:outline-none focus:ring-2 w-full"
             style={{ fontSize: '1rem', minHeight: '48px' }}
           />
@@ -156,6 +171,24 @@ export function ContactForm({
             ))}
           </select>
         </div>
+      </div>
+
+      <div className="flex flex-col gap-1.5">
+        <label htmlFor="contact-funding" className="text-sm font-semibold text-navy">
+          Funding Pathway <span className="text-xs font-normal text-slate-500">(Optional)</span>
+        </label>
+        <select
+          id="contact-funding"
+          name="funding"
+          defaultValue=""
+          className="border border-border rounded-lg px-4 py-3 text-body bg-white focus:outline-none focus:ring-2 w-full"
+          style={{ fontSize: '1rem', minHeight: '48px' }}
+        >
+          <option value="">Select funding type (e.g. HCP, NDIS, Private, DVA)…</option>
+          {fundingOptions.map((f) => (
+            <option key={f} value={f}>{f}</option>
+          ))}
+        </select>
       </div>
 
       <div className="flex flex-col gap-1.5">

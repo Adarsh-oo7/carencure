@@ -393,7 +393,7 @@ If you are waiting for a government-funded package, private nursing is also an e
 
 ## What Does a Private Nurse in Perth Cost?
 
-Financial transparency is vital when managing home care. In Perth, Registered Nurse clinical visits typically start from $100 per visit, depending on the complexity of the care, frequency of visits, and timing.
+Financial transparency is vital when managing home care. In Perth, Registered Nurse clinical visits typically start from $110 per hour, depending on the complexity of the care, frequency of visits, and timing.
 
 Because we are a locally owned nursing practice and don't carry the heavy overheads of large call-centre agencies, we are able to provide premium, consistent care at some of the most competitive rates in Western Australia. We always quote you the exact cost upfront, in writing, with no hidden fees or exit charges.
 

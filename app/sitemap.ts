@@ -68,6 +68,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     // ── High-priority service pages ──
     {
+      url: `${BASE_URL}/aged-care-at-home-perth`,
+      lastModified: NOW,
+      changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    {
       url: `${BASE_URL}/aged-care`,
       lastModified: NOW,
       changeFrequency: 'monthly',

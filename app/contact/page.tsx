@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { PageHeader } from '@/components/page-header'
 import { ContactForm } from '@/components/contact-form'
-import { Phone, Mail, MapPin, ShieldCheck, Navigation, MessageCircle, Send, Linkedin, Instagram, Clock, ArrowRight, Stethoscope } from 'lucide-react'
+import { Phone, Mail, MapPin, ShieldCheck, Navigation, MessageCircle, Send, Star, Instagram, Clock, ArrowRight, Stethoscope } from 'lucide-react'
 import { MedicalBusinessSchema } from '@/components/schema'
 
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ const PHONE_HREF = 'tel:1300919663'
 const WHATSAPP_HREF = 'https://wa.me/61481748516?text=Hi%20Care%20N%20Cure%2C%20I%20would%20like%20to%20enquire%20about%20your%20nursing%20services.'
 const SMS_HREF = 'sms:+61481748516'
 const INSTAGRAM_HREF = 'https://www.instagram.com/carencurenursing/?utm_source=ig_web_button_share_sheet'
-const LINKEDIN_HREF = 'https://www.linkedin.com/company/carencure-au/'
+const GOOGLE_PROFILE_HREF = 'https://share.google/AFv5vHsJl8uVnocto'
 
 export default function ContactPage() {
   return (
@@ -144,34 +144,48 @@ export default function ContactPage() {
                     </div>
                   </a>
 
-                  {/* LinkedIn Professional Network */}
+                  {/* Google Business Profile & Reviews */}
                   <a
-                    href={LINKEDIN_HREF}
+                    href={GOOGLE_PROFILE_HREF}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-5 rounded-2xl border border-blue-200 bg-blue-50/40 hover:bg-blue-100/50 transition-all duration-200 flex items-center gap-4 group shadow-sm"
+                    className="p-5 rounded-2xl border border-amber-200 bg-amber-50/40 hover:bg-amber-100/50 transition-all duration-200 flex items-center gap-4 group shadow-sm"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-blue-600 text-white flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
-                      <Linkedin className="w-6 h-6" />
+                    <div className="w-12 h-12 rounded-xl bg-amber-500 text-white flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                      <Star className="w-6 h-6 fill-white" />
                     </div>
                     <div>
-                      <span className="text-xs font-extrabold uppercase tracking-wider text-blue-700">Professional</span>
-                      <h4 className="text-navy text-lg font-bold leading-tight">LinkedIn Page</h4>
-                      <p className="text-body text-xs mt-0.5">Connect with RN Founders</p>
+                      <span className="text-xs font-extrabold uppercase tracking-wider text-amber-700">Google Verified</span>
+                      <h4 className="text-navy text-lg font-bold leading-tight">5.0★ Google Profile</h4>
+                      <p className="text-body text-xs mt-0.5">12 Verified Client Reviews</p>
                     </div>
                   </a>
 
                 </div>
               </div>
 
-              {/* Office Location & Map */}
+              {/* Office Location, Hours & Map */}
               <div className="space-y-4 pt-4 border-t border-slate-100">
                 <div className="flex items-start gap-3">
                   <MapPin className="w-6 h-6 text-teal-accent shrink-0 mt-1" />
                   <div>
-                    <h3 className="text-navy text-lg font-bold">Practice Location</h3>
+                    <h3 className="text-navy text-lg font-bold">Practice Headquarters</h3>
                     <p className="text-navy font-semibold text-sm mt-0.5">15 Rockefeller Way, Harrisdale WA 6112</p>
                     <p className="text-body text-xs mt-0.5">Serving Harrisdale, Nedlands, Subiaco, Gosnells, Armadale, Rockingham, Joondalup, Midland, Fremantle, and all Perth metro suburbs within 50km.</p>
+                  </div>
+                </div>
+
+                {/* Operating & Clinical Hours Clarification */}
+                <div className="p-4 bg-surface rounded-xl border border-border flex items-start gap-3">
+                  <Clock className="w-5 h-5 text-teal-accent shrink-0 mt-0.5" />
+                  <div className="text-xs text-body space-y-1">
+                    <p className="font-bold text-navy text-sm">Operating & Care Availability Hours</p>
+                    <p>
+                      <strong>Phone Intake & Family Enquiries:</strong> Monday – Friday: 9:00 am – 6:00 pm (WST)
+                    </p>
+                    <p>
+                      <strong>In-Home Clinical Nursing Visits:</strong> Scheduled 7 Days a week, including weekends and urgent post-hospital discharge support.
+                    </p>
                   </div>
                 </div>
 

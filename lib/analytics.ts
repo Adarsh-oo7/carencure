@@ -22,11 +22,21 @@ const SAFE_SERVICE_MAP: Record<string, string> = {
   'post-hospital recovery care': 'post-hospital',
   'private nursing': 'private-nursing',
   'private nursing at home': 'private-nursing',
+  'aged care at home': 'aged-care',
+  'aged care': 'aged-care',
+  'aged care at home / elderly support': 'aged-care',
+  'elderly care at home': 'aged-care',
   'community nursing': 'community-nursing',
   'community nursing care': 'community-nursing',
   'registered nurses clinical care services': 'clinical-nursing',
   'support at home': 'support-at-home',
   'homecare packages': 'hcp-funding',
+  'ndis nursing': 'ndis-nursing',
+  'ndis nursing & clinical support': 'ndis-nursing',
+  'physiotherapy at home': 'physiotherapy',
+  'dietitian & nutritionist at home': 'nutritionist',
+  'personal care assistance': 'personal-care',
+  'personal care at home': 'personal-care',
   'wound care': 'wound-care',
   'wound care at home': 'wound-care',
   'medication management': 'medication-support',
@@ -45,6 +55,18 @@ function sanitizeLocation(location?: string): string {
   // Only allow lowercase alphanumeric characters, no free text, notes, or addresses
   const clean = location.toLowerCase().replace(/[^a-z0-9-]/g, '').slice(0, 30)
   return clean || 'perth-metro'
+}
+
+function sanitizeFunding(funding?: string): string {
+  if (!funding) return 'unspecified'
+  const normalized = funding.toLowerCase().trim()
+  if (normalized.includes('hcp') || normalized.includes('package')) return 'home-care-package'
+  if (normalized.includes('support at home')) return 'support-at-home'
+  if (normalized.includes('ndis')) return 'ndis'
+  if (normalized.includes('private') || normalized.includes('self')) return 'private-funded'
+  if (normalized.includes('dva')) return 'dva'
+  if (normalized.includes('hospital')) return 'hospital-discharge'
+  return 'not-sure'
 }
 
 export function trackPhoneClick(location: string = 'header') {
@@ -75,13 +97,19 @@ export function trackFormStart(formName: string = 'contact_form') {
   })
 }
 
-export function trackFormSubmit(formName: string = 'contact_form', rawService?: string, rawSuburb?: string) {
+export function trackFormSubmit(
+  formName: string = 'contact_form',
+  rawService?: string,
+  rawSuburb?: string,
+  rawFunding?: string
+) {
   // Only send high-level broad categories, NEVER free-text messages, medical notes, or personal identifiers
   trackEvent('form_submit', {
     form_name: formName,
     service_category: sanitizeService(rawService),
     location: sanitizeLocation(rawSuburb),
-    lead_type: 'family-enquiry',
+    funding_pathway: sanitizeFunding(rawFunding),
+    lead_type: rawService?.toLowerCase().includes('aged care') ? 'aged-care-lead' : 'nursing-care-lead',
   })
 }
 

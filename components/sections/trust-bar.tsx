@@ -33,8 +33,8 @@ const trustItems = [
   },
   {
     icon: CheckCircle2,
-    label: "Perth's Registered Nurses Clinical Care from $100*",  
-    sub: 'Pricing tailored case by case',
+    label: "Registered Nurse Clinical Care from $110/hr*",
+    sub: 'Transparent weekday rates · Case-by-case',
     id: 'trust-pricing',
   },
   {

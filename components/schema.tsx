@@ -35,15 +35,15 @@ export function MedicalBusinessSchema() {
       {
         '@type': 'MedicalOrganization',
         '@id': `${SITE_URL}/#medicalorg`,
-        name: 'Care N Cure Nursing Care Services',
-        legalName: 'Care N Cure Nursing Care Services',
+        name: 'CARE N CURE NURSING CARE SERVICES',
+        legalName: 'CARE N CURE NURSING CARE SERVICES',
         taxID: '87152479362',
-        alternateName: ['Care N Cure', 'The Nurse Who Knows You'],
+        alternateName: ['Care N Cure Nursing Care Services', 'Care N Cure', 'The Nurse Who Knows You'],
         url: SITE_URL,
         sameAs: [
+          'https://share.google/AFv5vHsJl8uVnocto',
           'https://morningpost.com.au/perth/local/home-care/',
           'https://www.agedcareatlas.com.au/facility/8d37dcb0-87a1-4b3c-8938-18ec302c083e',
-          'https://www.linkedin.com/company/carencure-au/',
           'https://www.instagram.com/carencurenursing/',
         ],
         logo: {
@@ -54,7 +54,7 @@ export function MedicalBusinessSchema() {
         },
         image: `${SITE_URL}/og-image.jpg`,
         description:
-          'Perth-based registered nurse home care services. Dedicated nurse coordinators providing private nursing, wound care, medication management, and post-hospital care across Perth, WA.',
+          'Perth-based registered nurse home care services from Harrisdale. Dedicated nurse coordinators providing private nursing, aged care at home, NDIS nursing, wound care, medication management, and post-hospital care across Perth, WA.',
         slogan: 'One Client. One Nurse Coordinator. One Trusted Relationship.',
         telephone: PHONE_SCHEMA,
         email: EMAIL,
@@ -71,40 +71,34 @@ export function MedicalBusinessSchema() {
             dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
             opens: '09:00',
             closes: '18:00',
+            description: 'Intake and Phone Support Hours: Mon-Fri 9:00am - 6:00pm. In-home nursing visits scheduled 7 days.',
           },
           {
             '@type': 'OpeningHoursSpecification',
             dayOfWeek: ['Saturday', 'Sunday'],
             opens: '09:00',
             closes: '17:00',
+            description: 'Scheduled clinical shifts & urgent post-hospital nursing visits.',
           },
         ],
         areaServed: {
           '@type': 'GeoCircle',
           geoMidpoint: {
             '@type': 'GeoCoordinates',
-            latitude: -31.9505,
-            longitude: 115.8605,
+            latitude: -32.1318,
+            longitude: 115.9231,
           },
           geoRadius: '50000',
         },
         hasOfferCatalog: {
           '@type': 'OfferCatalog',
-          name: 'Nursing Services',
+          name: 'Care N Cure Healthcare & Nursing Services',
           itemListElement: [
             {
               '@type': 'Offer',
               itemOffered: {
                 '@type': 'MedicalProcedure',
-                name: 'Community Nursing Care',
-                url: `${SITE_URL}/community-nursing`,
-              },
-            },
-            {
-              '@type': 'Offer',
-              itemOffered: {
-                '@type': 'MedicalProcedure',
-                name: 'Private Nursing',
+                name: 'Private Nursing at Home',
                 url: `${SITE_URL}/private-nursing`,
               },
             },
@@ -112,8 +106,16 @@ export function MedicalBusinessSchema() {
               '@type': 'Offer',
               itemOffered: {
                 '@type': 'MedicalProcedure',
-                name: 'Wound Care',
-                url: `${SITE_URL}/wound-care`,
+                name: 'Aged Care at Home Perth',
+                url: `${SITE_URL}/aged-care-at-home-perth`,
+              },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'MedicalProcedure',
+                name: 'NDIS Nursing Care',
+                url: `${SITE_URL}/ndis-nursing`,
               },
             },
             {
@@ -128,8 +130,16 @@ export function MedicalBusinessSchema() {
               '@type': 'Offer',
               itemOffered: {
                 '@type': 'MedicalProcedure',
-                name: 'Medication Management',
-                url: `${SITE_URL}/medication-management`,
+                name: 'Home Care Packages',
+                url: `${SITE_URL}/homecare-packages`,
+              },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'MedicalProcedure',
+                name: 'Support at Home',
+                url: `${SITE_URL}/support-at-home`,
               },
             },
             {
@@ -144,8 +154,16 @@ export function MedicalBusinessSchema() {
               '@type': 'Offer',
               itemOffered: {
                 '@type': 'MedicalProcedure',
-                name: 'Home Care Packages',
-                url: `${SITE_URL}/homecare-packages`,
+                name: 'Wound Care at Home',
+                url: `${SITE_URL}/wound-care`,
+              },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'MedicalProcedure',
+                name: 'Medication Management',
+                url: `${SITE_URL}/medication-management`,
               },
             },
             {
@@ -162,6 +180,38 @@ export function MedicalBusinessSchema() {
                 '@type': 'MedicalProcedure',
                 name: 'Companion Care',
                 url: `${SITE_URL}/companion-care`,
+              },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'MedicalProcedure',
+                name: 'Personal Care at Home',
+                url: `${SITE_URL}/personal-care`,
+              },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'MedicalProcedure',
+                name: 'Physiotherapy at Home',
+                url: `${SITE_URL}/physiotherapy`,
+              },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'MedicalProcedure',
+                name: 'Nutritionist at Home',
+                url: `${SITE_URL}/nutritionist`,
+              },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'MedicalProcedure',
+                name: 'Healthcare Referrals',
+                url: `${SITE_URL}/referrals`,
               },
             },
           ],
@@ -210,15 +260,15 @@ export function OrganizationSchema() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     '@id': `${SITE_URL}/#organization`,
-    name: 'Care N Cure Nursing Care Services',
-    legalName: 'Care N Cure Nursing Care Services',
-    alternateName: ['Care N Cure', 'The Nurse Who Knows You'],
+    name: 'CARE N CURE NURSING CARE SERVICES',
+    legalName: 'CARE N CURE NURSING CARE SERVICES',
+    alternateName: ['Care N Cure Nursing Care Services', 'Care N Cure', 'The Nurse Who Knows You'],
     taxID: '87152479362',
     url: SITE_URL,
     sameAs: [
+      'https://share.google/AFv5vHsJl8uVnocto',
       'https://morningpost.com.au/perth/local/home-care/',
       'https://www.agedcareatlas.com.au/facility/8d37dcb0-87a1-4b3c-8938-18ec302c083e',
-      'https://www.linkedin.com/company/carencure-au/',
       'https://www.instagram.com/carencurenursing/',
     ],
     logo: {
@@ -228,7 +278,7 @@ export function OrganizationSchema() {
       height: 512,
     },
     description:
-      'Founder-led private nursing practice in Perth, WA. Registered nurses providing in-home clinical care for post-hospital recovery, wound care, and chronic disease management.',
+      'Founder-led private nursing practice in Perth, WA from Harrisdale. Registered nurses providing in-home clinical care, aged care at home, post-hospital recovery, wound care, and chronic disease management.',
     telephone: PHONE_SCHEMA,
     email: EMAIL,
     address: {
@@ -258,9 +308,10 @@ export function LocalBusinessSchema() {
     '@context': 'https://schema.org',
     '@type': ['LocalBusiness', 'MedicalBusiness'],
     '@id': `${SITE_URL}/#local-business`,
-    name: 'Care N Cure Nursing Care Services',
+    name: 'CARE N CURE NURSING CARE SERVICES',
+    alternateName: ['Care N Cure Nursing Care Services', 'Care N Cure'],
     description:
-      'In-home nursing care by registered nurses. Perth, WA. Dedicated nurse coordinators for private nursing, wound care, medication management, and post-hospital support.',
+      'In-home nursing care by registered nurses. Harrisdale & Perth, WA. Dedicated nurse coordinators for private nursing, aged care at home, wound care, medication management, and post-hospital support.',
     url: SITE_URL,
     image: `${SITE_URL}/logo.png`,
     telephone: PHONE_SCHEMA,
@@ -271,8 +322,8 @@ export function LocalBusinessSchema() {
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: -31.9505,
-      longitude: 115.8605,
+      latitude: -32.1318,
+      longitude: 115.9231,
     },
     priceRange: '$$',
     areaServed: AREA_SERVED.map((area) => ({
@@ -280,7 +331,22 @@ export function LocalBusinessSchema() {
       name: area,
       containedInPlace: { '@type': 'State', name: 'Western Australia' },
     })),
-    openingHours: ['Mo-Fr 09:00-18:00', 'Sa-Su 09:00-17:00'],
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        opens: '09:00',
+        closes: '18:00',
+        description: 'Office & Intake Hours',
+      },
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Saturday', 'Sunday'],
+        opens: '09:00',
+        closes: '17:00',
+        description: 'Scheduled Clinical Care',
+      },
+    ],
   }
 
   return (
