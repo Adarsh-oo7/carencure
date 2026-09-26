@@ -36,28 +36,28 @@ export const metadata: Metadata = {
   authors: [
     { name: 'Jinu Maecheril Sukumaran, RN' },
   ],
-  creator: 'Care N Cure',
-  publisher: 'Care N Cure',
+  creator: 'CARE N CURE NURSING CARE SERVICES',
+  publisher: 'CARE N CURE NURSING CARE SERVICES',
   openGraph: {
     type: 'website',
     locale: 'en_AU',
     url: 'https://carencure.com.au',
-    siteName: 'Care N Cure — The Nurse Who Knows You',
-    title: 'Home Nurse Perth | In-Home Nursing Care | Care N Cure',
-    description: "Perth's trusted in-home nursing care & private home nurses. AHPRA-registered nurse coordinators for wound care, post-hospital recovery & aged care. Call 1300 919 663.",
+    siteName: 'CARE N CURE NURSING CARE SERVICES',
+    title: 'Care N Cure Nursing Care Services | At Home Nurse Perth & Aged Care Support',
+    description: "Perth's trusted in-home nursing care & private home nurses from Harrisdale. AHPRA-registered nurse coordinators for wound care, post-hospital recovery & aged care. Call 1300 919 663.",
     images: [
       {
         url: 'https://carencure.com.au/opengraph-image',
         width: 1200,
         height: 630,
-        alt: 'Care N Cure — Registered Nurse Home Care Perth WA',
+        alt: 'CARE N CURE NURSING CARE SERVICES — Registered Nurse Home Care Perth WA',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Home Nurse Perth | In-Home Nursing Care | Care N Cure',
-    description: "Perth's trusted in-home nursing care & private home nurses. AHPRA-registered nurse coordinators for wound care, post-hospital recovery & aged care. Call 1300 919 663.",
+    title: 'Care N Cure Nursing Care Services | At Home Nurse Perth & Aged Care Support',
+    description: "Perth's trusted in-home nursing care & private home nurses from Harrisdale. AHPRA-registered nurse coordinators for wound care, post-hospital recovery & aged care. Call 1300 919 663.",
   },
   robots: {
     index: true,

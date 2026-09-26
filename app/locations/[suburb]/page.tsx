@@ -93,10 +93,10 @@ const suburbsMap: Record<string, SuburbData> = {
     name: 'Rockingham',
     region: 'Perth South',
     nearestHospital: 'Rockingham General Hospital',
-    description: 'Professional in-home nursing care, sterile wound dressings, and medication management across Rockingham, Baldivis, and the surrounding southern corridor.',
+    description: 'Professional in-home nursing care, community nursing care Baldivis, sterile wound dressings, and medication management across Rockingham, Baldivis, and the surrounding southern corridor.',
     surroundingSuburbs: 'Safety Bay, Shoalwater, Waikiki, and Baldivis',
-    localHealthcareFocus: 'hospital discharge coordination, vital signs tracking, and respite support',
-    localSpecificText: 'We actively support families across Rockingham and Baldivis. For clients returning home from facilities like Rockingham General Hospital, our registered nurses accept referrals and liaise with treating doctors to ensure wound care supplies and medication safety measures are established safely at home within 24–48 hours.',
+    localHealthcareFocus: 'community nursing care Baldivis, hospital discharge coordination, vital signs tracking, and at home nurse support',
+    localSpecificText: 'We actively support families across Rockingham and Baldivis with trusted community nursing care. For clients returning home from facilities like Rockingham General Hospital or looking for an at home nurse near me in Rockingham or Baldivis, our registered nurses accept referrals and liaise with treating doctors to ensure wound care supplies and medication safety measures are established safely at home within 24–48 hours.',
   },
   applecross: {
     id: 'applecross',
@@ -133,10 +133,10 @@ const suburbsMap: Record<string, SuburbData> = {
     name: 'South Perth',
     region: 'Inner South',
     nearestHospital: 'Royal Perth Hospital & Fiona Stanley Hospital',
-    description: 'Companion care, respite nursing, and active medication reconciliation in South Perth, Como, and Kensington.',
+    description: 'Home nurse Perth and South Perth clinical nursing services, companion care, respite nursing, and active medication reconciliation in South Perth, Como, and Kensington.',
     surroundingSuburbs: 'Como, Kensington, and Manning',
-    localHealthcareFocus: 'medication management, companion care, and GP clinical coordination',
-    localSpecificText: 'We support families across South Perth, Como, and Manning. For clients returning home from facilities such as Royal Perth Hospital or St John of God Murdoch, we accept referrals from discharge teams and families to help put nursing care in place within 24–48 hours of return home.',
+    localHealthcareFocus: 'home nurse Perth visits, medication management, companion care, and GP clinical coordination',
+    localSpecificText: 'We support families seeking a qualified home nurse in Perth across South Perth, Como, Manning, and Kensington. For clients returning home from facilities such as Royal Perth Hospital or St John of God Murdoch, we accept referrals from discharge teams and families to put personalized nursing care in place within 24–48 hours of return home.',
   },
   claremont: {
     id: 'claremont',
@@ -406,37 +406,47 @@ export async function generateMetadata({ params }: { params: Promise<{ suburb: s
   // Build a concise surrounding-suburbs string (max 2 suburbs)
   const nearbyShort = data.surroundingSuburbs.split(',').slice(0, 2).join(' &')
 
+  let pageTitle = `At Home Nurse ${data.name} | In-Home Aged Care & Nursing | Care N Cure`
+  let pageDesc = `AHPRA Registered Nurses visiting ${data.name} for at-home nursing care, aged care in-home support & wound management. Rapid 24–48h intake. Call 1300 919 663.`
+
+  if (suburb === 'armadale') {
+    pageTitle = 'At Home Nurse Armadale | In-Home Aged Care & Nursing | Care N Cure'
+    pageDesc = 'AHPRA registered nurses providing at-home nursing care in Armadale & south-east Perth. Wound care, aged care in-home support, post-hospital recovery. Call 1300 919 663.'
+  } else if (suburb === 'rockingham') {
+    pageTitle = 'At Home Nurse Rockingham & Baldivis | Community Nursing Care | Care N Cure'
+    pageDesc = 'Community nursing care in Rockingham, Baldivis & southern Perth. AHPRA registered nurses for at-home nursing care, wound dressings & post-hospital recovery. Call 1300 919 663.'
+  } else if (suburb === 'south-perth') {
+    pageTitle = 'Home Nurse Perth & South Perth | In-Home Clinical Nursing | Care N Cure'
+    pageDesc = 'Experienced home nurse services in South Perth, Como & Kensington. Clinical health checks, medication safety & aged care at home with zero travel fees. Call 1300 919 663.'
+  }
+
+  const customKeywords = [
+    `at home nurse ${data.name.toLowerCase()}`,
+    `at home nurse care ${data.name.toLowerCase()}`,
+    `at home nurse near me`,
+    `aged care in home support ${data.name.toLowerCase()}`,
+    `aged care in home services ${data.name.toLowerCase()}`,
+    `in home nursing ${data.name.toLowerCase()}`,
+    `home care nurse ${data.name.toLowerCase()}`,
+    `private nurse ${data.name.toLowerCase()}`,
+  ]
+
+  if (suburb === 'rockingham') {
+    customKeywords.push('community nursing care baldivis', 'community nursing care rockingham', 'at home nurse baldivis')
+  } else if (suburb === 'south-perth') {
+    customKeywords.push('home nurse perth', 'home nurse near me', 'in home nurse perth')
+  }
+
   return {
     title: {
-      absolute:
-        suburb === 'armadale'
-          ? 'At Home Nurse Armadale | In-Home Aged Care & Nursing | Care N Cure'
-          : `At Home Nurse ${data.name} | In-Home Aged Care & Nursing | Care N Cure`,
+      absolute: pageTitle,
     },
-    description:
-      suburb === 'armadale'
-        ? 'AHPRA registered nurses providing at-home nursing care in Armadale & south-east Perth. Wound care, aged care in-home support, post-hospital recovery. Call 1300 919 663.'
-        : `AHPRA Registered Nurses visiting ${data.name} for at-home nursing care, aged care in-home support & wound management. Rapid 24–48h intake. Call 1300 919 663.`,
+    description: pageDesc,
     alternates: { canonical: `https://carencure.com.au/locations/${suburb}` },
-    keywords: [
-      `at home nurse ${data.name.toLowerCase()}`,
-      `at home nurse care ${data.name.toLowerCase()}`,
-      `at home nurse near me`,
-      `aged care in home support ${data.name.toLowerCase()}`,
-      `aged care in home services ${data.name.toLowerCase()}`,
-      `in home nursing ${data.name.toLowerCase()}`,
-      `home care nurse ${data.name.toLowerCase()}`,
-      `private nurse ${data.name.toLowerCase()}`,
-    ],
+    keywords: customKeywords,
     openGraph: {
-      title:
-        suburb === 'armadale'
-          ? 'At Home Nurse Armadale | In-Home Aged Care & Nursing | Care N Cure'
-          : `At Home Nurse ${data.name} | In-Home Aged Care & Nursing | Care N Cure`,
-      description:
-        suburb === 'armadale'
-          ? 'AHPRA registered nurses providing at-home nursing care in Armadale & south-east Perth. Wound care, aged care in-home support, post-hospital recovery. Call 1300 919 663.'
-          : `AHPRA Registered Nurses visiting ${data.name} for at-home nursing care, aged care in-home support & wound management. Rapid 24–48h intake. Call 1300 919 663.`,
+      title: pageTitle,
+      description: pageDesc,
       url: `https://carencure.com.au/locations/${suburb}`,
     },
   }

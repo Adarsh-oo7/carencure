@@ -18,11 +18,15 @@ import { CtaUncertaintyReducer } from '@/components/sections/cta-uncertainty-red
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'At Home Nurse Perth | Aged Care In-Home Support & Home Care Services WA | Care N Cure',
+    absolute: 'Care N Cure Nursing Care Services | At Home Nurse Perth & Aged Care Support',
   },
   description:
-    'Need an at-home nurse near you in Perth? AHPRA Registered Nurses for aged care in-home support, home care services WA, wound care & post-hospital recovery. Call 1300 919 663.',
+    'CARE N CURE NURSING CARE SERVICES: Perth nurse-led in-home care & registered nursing from Harrisdale. At-home nurse near you, aged care in-home support, wound care & post-hospital recovery. Call 1300 919 663.',
   keywords: [
+    'care n cure nursing care services',
+    'care n cure',
+    'home nursing services',
+    'home nursing services perth',
     'at home nurse near me',
     'at home nurse service perth',
     'at home nurse care',
@@ -37,13 +41,12 @@ export const metadata: Metadata = {
     'best home care package providers',
     'private nurse perth',
     'home care packages Perth',
-    'Care N Cure',
   ],
   alternates: { canonical: 'https://carencure.com.au' },
   openGraph: {
-    title: 'At Home Nurse Perth | Aged Care In-Home Support & Home Care Services WA | Care N Cure',
+    title: 'Care N Cure Nursing Care Services | At Home Nurse Perth & Aged Care Support',
     description:
-      'Need an at-home nurse near you in Perth? AHPRA Registered Nurses for aged care in-home support, home care services WA, wound care & post-hospital recovery. Call 1300 919 663.',
+      'CARE N CURE NURSING CARE SERVICES: Perth nurse-led in-home care & registered nursing from Harrisdale. At-home nurse near you, aged care in-home support, wound care & post-hospital recovery. Call 1300 919 663.',
     url: 'https://carencure.com.au',
   },
 }

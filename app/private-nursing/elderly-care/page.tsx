@@ -21,11 +21,15 @@ import { CtaUncertaintyReducer } from '@/components/sections/cta-uncertainty-red
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Private In-Home Care for the Elderly Perth | Aged Care Nursing | Care N Cure',
+    absolute: 'At Home Nurse for Elderly Perth | Private In-Home Care & Nursing | Care N Cure',
   },
   description:
-    'Dedicated private in-home care for the elderly across Perth. AHPRA-registered nurse coordinators providing wound care, medication safety, chronic disease support & HCP funding compatibility. Call 1300 919 663.',
+    'Need an at home nurse for an elderly parent in Perth? Care N Cure provides AHPRA-registered nurse coordinators for private in-home elderly care, wound dressing, medication safety & HCP support. Call 1300 919 663.',
   keywords: [
+    'at home nurse for elderly',
+    'at home nurses for elderly',
+    'at home nurse elderly',
+    'how to hire a private nurse for home care',
     'private in home care for the elderly',
     'nursing care at home service',
     'private nurse home',
@@ -40,9 +44,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: 'https://carencure.com.au/private-nursing/elderly-care' },
   openGraph: {
-    title: 'Private In-Home Care for the Elderly Perth | Aged Care Nursing | Care N Cure',
+    title: 'At Home Nurse for Elderly Perth | Private In-Home Care & Nursing | Care N Cure',
     description:
-      'Compassionate, registered-nurse-led elderly care at home in Perth. Dedicated nurse coordinators, medication management, wound care, and seamless Home Care Package funding.',
+      'Compassionate at home nurses for elderly care across Perth. Dedicated AHPRA registered nurse coordinators, medication management, wound care, and HCP funding.',
     url: 'https://carencure.com.au/private-nursing/elderly-care',
   },
 }
@@ -99,14 +103,14 @@ export default function ElderlyPrivateNursing() {
       <FAQPageSchema faqs={faqs} />
 
       <PageHeader
-        title="Private In-Home Care for the Elderly in Perth"
-        subtitle="Dedicated Registered Nurse coordinators providing clinical care, medication safety, and health monitoring so your loved ones can age safely with dignity at home."
+        title="At Home Nurse for Elderly in Perth | Private In-Home Care"
+        subtitle="Dedicated AHPRA-registered nurse coordinators providing clinical care, medication safety, and health monitoring so your aging loved ones can live safely with dignity at home."
         breadcrumbItems={[
           { name: 'Services', href: '/services' },
           { name: 'Private Nursing', href: '/private-nursing' },
           { name: 'Elderly Care', href: '/private-nursing/elderly-care' },
         ]}
-        label="Elderly In-Home Nursing & Aged Care"
+        label="Elderly In-Home Nursing & Aged Care Perth"
       />
 
       <section className="section-py bg-white">
@@ -120,7 +124,7 @@ export default function ElderlyPrivateNursing() {
               <div>
                 <p className="section-label mb-2">Dedicated Registered Nursing</p>
                 <h2 className="text-navy text-3xl md:text-4xl font-bold leading-tight">
-                  Private In-Home Nursing Care for Elderly Parents &amp; Seniors in Perth
+                  At Home Nurses for Elderly Parents &amp; Seniors Across Perth
                 </h2>
                 <div className="section-divider my-4" />
                 <div className="bg-teal-subtle/40 p-6 rounded-2xl border border-teal-border space-y-4">
@@ -128,11 +132,11 @@ export default function ElderlyPrivateNursing() {
                     When an aging parent or loved one begins to experience declining mobility, complex medication regimens, or fragile health, families often face an overwhelming dilemma: residential aged care or struggling alone at home.
                   </p>
                   <p className="text-body text-base leading-relaxed">
-                    <strong>Care N Cure delivers the safe, dignified alternative.</strong> Through our specialized <strong>private in-home care for the elderly</strong>, your parent is assigned a dedicated AHPRA-Registered Nurse Coordinator who delivers qualified clinical oversight, coordinates with their GP, and keeps your family informed—right in the familiar comfort of their Perth home.
+                    <strong>Care N Cure delivers the safe, dignified alternative.</strong> Through our specialized <strong>at home nurse for elderly</strong> services and <strong>private in-home care for the elderly</strong>, your parent is assigned a dedicated AHPRA-Registered Nurse Coordinator who delivers qualified clinical oversight, coordinates with their GP, and keeps your family informed—right in the familiar comfort of their Perth home.
                   </p>
                   <div className="pt-2 border-t border-teal-border/60 flex items-center gap-2 text-teal-accent font-bold text-sm">
                     <CheckCircle2 className="w-5 h-5 shrink-0" />
-                    <span>Intake assessments arranged within 24–48 hours · 0 travel fees within 50km radius</span>
+                    <span>Intake assessments arranged within 24–48 hours · 0 travel fees within 50km Perth radius</span>
                   </div>
                 </div>
               </div>
@@ -282,6 +286,62 @@ export default function ElderlyPrivateNursing() {
                       <h4 className="text-navy font-bold mb-1">Direct Family Updates</h4>
                       <p className="text-body text-xs leading-relaxed">
                         Clear clinical handover notes sent directly to designated adult children or guardians after each visit, providing genuine peace of mind.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* How to Hire a Private Nurse for Home Care */}
+              <div className="card-base p-6 border border-border bg-white space-y-4">
+                <h3 className="text-navy text-2xl font-bold">
+                  How to Hire a Private Nurse for Home Care in Perth
+                </h3>
+                <p className="text-body text-sm leading-relaxed">
+                  Arranging qualified clinical in-home care for an aging parent or loved one does not need to be stressful or bogged down by red tape. Here is how our simple 4-step process works:
+                </p>
+                <div className="space-y-4 pt-2">
+                  <div className="flex items-start gap-4">
+                    <span className="w-8 h-8 rounded-full bg-navy text-white font-bold flex items-center justify-center shrink-0 text-sm">
+                      1
+                    </span>
+                    <div>
+                      <h4 className="font-bold text-navy text-base">Direct Clinical Call or Message</h4>
+                      <p className="text-body text-xs leading-relaxed">
+                        Call our nursing line on <a href="tel:1300919663" className="text-teal-text font-bold hover:underline">1300 919 663</a> or WhatsApp <a href="https://wa.me/61481748516" target="_blank" rel="noopener noreferrer" className="text-teal-text font-bold hover:underline">+61 481 748 516</a>. You will speak directly with an AHPRA Registered Nurse coordinator—not a general call center.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <span className="w-8 h-8 rounded-full bg-teal-accent text-navy font-bold flex items-center justify-center shrink-0 text-sm">
+                      2
+                    </span>
+                    <div>
+                      <h4 className="font-bold text-navy text-base">Comprehensive In-Home Assessment</h4>
+                      <p className="text-body text-xs leading-relaxed">
+                        Within 24 to 48 hours, your designated Registered Nurse visits your parent at home in Perth to conduct a complete clinical, medication, mobility, and environmental assessment.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <span className="w-8 h-8 rounded-full bg-navy text-white font-bold flex items-center justify-center shrink-0 text-sm">
+                      3
+                    </span>
+                    <div>
+                      <h4 className="font-bold text-navy text-base">Tailored Care Plan &amp; Funding Setup</h4>
+                      <p className="text-body text-xs leading-relaxed">
+                        We tailor a care schedule aligned with your parent&apos;s routine. We connect directly with your Home Care Package (HCP) manager, Support at Home provider, or arrange straightforward fee-for-service private billing.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <span className="w-8 h-8 rounded-full bg-teal-accent text-navy font-bold flex items-center justify-center shrink-0 text-sm">
+                      4
+                    </span>
+                    <div>
+                      <h4 className="font-bold text-navy text-base">Consistent Visits &amp; Family Handovers</h4>
+                      <p className="text-body text-xs leading-relaxed">
+                        Your dedicated nurse arrives on schedule for each clinical visit, liaises with your parent&apos;s GP, and provides immediate digital handover updates to family members after every visit.
                       </p>
                     </div>
                   </div>
