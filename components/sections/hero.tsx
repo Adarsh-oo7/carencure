@@ -41,9 +41,9 @@ export function HeroSection({
           alt="Registered nurse providing compassionate in-home care to an elderly patient in Perth, WA — The Nurse Who Knows You"
           fill
           priority
-          quality={75}
+          quality={80}
           sizes="(max-width: 768px) 100vw, 100vw"
-          style={{ objectFit: 'cover', objectPosition: 'center 30%' }}
+          style={{ objectFit: 'cover', objectPosition: 'center 25%' }}
         />
 
         {/* Mobile overlay */}
@@ -51,23 +51,23 @@ export function HeroSection({
           className="absolute inset-0 block sm:hidden"
           style={{
             background:
-              'linear-gradient(180deg, rgba(9,30,48,0.70) 0%, rgba(9,30,48,0.45) 55%, rgba(9,30,48,0.15) 100%)',
+              'linear-gradient(180deg, rgba(9,30,48,0.85) 0%, rgba(9,30,48,0.70) 55%, rgba(9,30,48,0.40) 100%)',
           }}
         />
 
-        {/* Desktop overlay */}
+        {/* Desktop overlay — strong dark gradient on left for crystal-clear readability while keeping nurse & patient visible on right */}
         <div
           className="absolute inset-0 hidden sm:block"
           style={{
             background:
-              'linear-gradient(90deg, rgba(9,30,48,0.82) 0%, rgba(9,30,48,0.55) 40%, rgba(9,30,48,0.15) 70%, transparent 100%)',
+              'linear-gradient(90deg, rgba(9,30,48,0.95) 0%, rgba(9,30,48,0.88) 42%, rgba(9,30,48,0.50) 70%, rgba(9,30,48,0.20) 100%)',
           }}
         />
       </div>
 
       {/* Subtle grid texture */}
       <div
-        className="absolute inset-0 opacity-[0.04] pointer-events-none"
+        className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{
           backgroundImage:
             'linear-gradient(rgba(197,238,228,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(197,238,228,0.5) 1px, transparent 1px)',
@@ -76,17 +76,16 @@ export function HeroSection({
         aria-hidden="true"
       />
 
-      {/* ── Content ── */}
-      <div className="relative section-container pt-20 pb-48 sm:pt-36 sm:pb-48 z-10">
+      {/* ── Content — Balanced padding so CTAs are visible above the fold on all laptop screens ── */}
+      <div className="relative section-container pt-8 pb-16 sm:pt-12 sm:pb-20 z-10">
 
-        {/* Text content — constrained to 640px */}
-        <div style={{ maxWidth: '640px' }} className="animate-fade-in">
-          <div className="h-2 sm:h-14" />
+        {/* Text content — constrained to 660px */}
+        <div style={{ maxWidth: '660px' }} className="animate-fade-in">
 
           {badge && (
-            <div className="trust-badge mb-6 inline-flex" role="note" aria-label="Credential badge">
+            <div className="trust-badge mb-3 sm:mb-4 inline-flex items-center gap-2" role="note" aria-label="Credential badge">
               <span
-                className="w-2 h-2 rounded-full flex-shrink-0"
+                className="w-2 h-2 rounded-full flex-shrink-0 animate-pulse"
                 style={{ background: 'var(--teal-accent)' }}
               />
               {badge}
@@ -95,34 +94,27 @@ export function HeroSection({
 
           <h1
             id="hero-heading"
-            className="text-white mb-4 sm:mb-6"
+            className="text-white mb-3 sm:mb-4"
             itemProp="name"
             style={{
-              fontSize: 'clamp(1.6rem, 5vw, 3.5rem)',
+              fontSize: 'clamp(1.75rem, 3.6vw, 2.85rem)',
               fontWeight: 800,
-              lineHeight: 1.15,
+              lineHeight: 1.18,
               letterSpacing: '-0.02em',
-              textShadow: '0 2px 25px rgba(0,0,0,0.65)',
+              textShadow: '0 2px 20px rgba(0,0,0,0.7)',
             }}
           >
             {headline}
           </h1>
 
-          <p
-            className="block sm:hidden mb-6 text-white/90 leading-relaxed"
-            style={{ fontSize: '1rem', textShadow: '0 1px 12px rgba(0,0,0,0.6)' }}
-            itemProp="description"
-          >
-            Because the people you love deserve to stay home — safe, properly cared for, and with a nurse who actually knows them.
-          </p>
           <div
-            className="hidden sm:block mb-10"
+            className="mb-6 sm:mb-7"
             itemProp="description"
             style={{
-              fontSize: 'clamp(1.05rem, 1.8vw, 1.2rem)',
-              lineHeight: 1.75,
+              fontSize: 'clamp(0.95rem, 1.4vw, 1.1rem)',
+              lineHeight: 1.6,
               color: 'rgba(255,255,255,0.95)',
-              textShadow: '0 1px 12px rgba(0,0,0,0.6)',
+              textShadow: '0 1px 10px rgba(0,0,0,0.6)',
             }}
           >
             {subheadline}
@@ -130,126 +122,93 @@ export function HeroSection({
         </div>
         {/* End constrained text block */}
 
-        {/* CTA row — full width, stacks vertically below 900px, horizontal above */}
-        <div
-          className="flex flex-col w-full mt-0 gap-6"
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-          }}
-        >
-          <style>{`
-            @media (min-width: 900px) {
-              .cta-row {
-                flex-direction: row !important;
-                align-items: center !important;
-                justify-content: space-between !important;
-              }
-              .logo-block {
-                align-items: flex-end !important;
-              }
-            }
-          `}</style>
+        {/* CTA buttons & Partner badge row */}
+        <div className="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-6 mt-6 mb-6">
+          {/* Buttons */}
+          <div className="flex flex-col sm:flex-row gap-3">
+            {ctaPrimary && (
+              ctaPrimary.isPhone ? (
+                <a
+                  href={PHONE_HREF}
+                  onClick={() => trackPhoneClick('hero_primary')}
+                  className="btn-phone cursor-pointer inline-flex items-center justify-center gap-2 text-sm sm:text-base font-bold shadow-lg"
+                  id="hero-call-cta"
+                  aria-label={ctaPrimary.text}
+                >
+                  <Phone className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
+                  {ctaPrimary.text}
+                </a>
+              ) : (
+                <Link
+                  href={ctaPrimary.href}
+                  onClick={() => trackConsultationRequest('hero_primary')}
+                  className="btn-phone inline-flex items-center justify-center gap-2 text-sm sm:text-base font-bold shadow-lg"
+                  id="hero-primary-cta"
+                  aria-label={ctaPrimary.text}
+                >
+                  {ctaPrimary.text}
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+                </Link>
+              )
+            )}
+            {ctaSecondary && (
+              ctaSecondary.isPhone ? (
+                <a
+                  href={PHONE_HREF}
+                  onClick={() => trackPhoneClick('hero_secondary')}
+                  className="btn-outline-white cursor-pointer inline-flex items-center justify-center gap-2 text-sm sm:text-base font-bold"
+                  id="hero-secondary-cta"
+                  aria-label={ctaSecondary.text}
+                >
+                  <Phone className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
+                  {ctaSecondary.text}
+                </a>
+              ) : (
+                <Link
+                  href={ctaSecondary.href}
+                  onClick={() => trackConsultationRequest('hero_secondary')}
+                  className="btn-outline-white inline-flex items-center justify-center gap-2 text-sm sm:text-base font-bold"
+                  id="hero-secondary-cta"
+                  aria-label={ctaSecondary.text}
+                >
+                  {ctaSecondary.text}
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              )
+            )}
+          </div>
 
-          <div
-            className="cta-row flex w-full gap-6"
-            style={{ flexDirection: 'column' }}
-          >
-            {/* Left: buttons */}
-            <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-4">
-              {ctaPrimary && (
-                ctaPrimary.isPhone ? (
-                  <a
-                    href={PHONE_HREF}
-                    onClick={() => trackPhoneClick('hero_primary')}
-                    className="btn-phone cursor-pointer inline-flex items-center gap-2"
-                    id="hero-call-cta"
-                    aria-label={ctaPrimary.text}
-                  >
-                    <Phone className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
-                    {ctaPrimary.text}
-                  </a>
-                ) : (
-                  <Link
-                    href={ctaPrimary.href}
-                    onClick={() => trackConsultationRequest('hero_primary')}
-                    className="btn-phone"
-                    id="hero-primary-cta"
-                    aria-label={ctaPrimary.text}
-                  >
-                    {ctaPrimary.text}
-                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
-                  </Link>
-                )
-              )}
-              {ctaSecondary && (
-                ctaSecondary.isPhone ? (
-                  <a
-                    href={PHONE_HREF}
-                    onClick={() => trackPhoneClick('hero_secondary')}
-                    className="btn-outline-white cursor-pointer animate-fade-in inline-flex items-center gap-2"
-                    id="hero-secondary-cta"
-                    aria-label={ctaSecondary.text}
-                  >
-                    <Phone className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
-                    {ctaSecondary.text}
-                  </a>
-                ) : (
-                  <Link
-                    href={ctaSecondary.href}
-                    onClick={() => trackConsultationRequest('hero_secondary')}
-                    className="btn-outline-white"
-                    id="hero-secondary-cta"
-                    aria-label={ctaSecondary.text}
-                  >
-                    {ctaSecondary.text}
-                    <ArrowRight className="w-5 h-5" />
-                  </Link>
-                )
-              )}
-            </div>
-
-            {/* Right: logo + text — below buttons under 900px, far right above 900px */}
-            <div
-              className="logo-block flex flex-col gap-2"
-              style={{ alignItems: 'flex-start' }}
+          {/* Partner badge */}
+          <div className="flex items-center gap-2.5 bg-white/10 backdrop-blur-md px-3.5 py-2 rounded-xl border border-white/15 w-fit">
+            <span
+              className="text-[11px] font-semibold tracking-wider uppercase text-white/80"
+              style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}
             >
-              <span
-                className="text-xs font-semibold tracking-wide text-white/90"
-                style={{
-                  lineHeight: 1.35,
-                  textShadow: '0 1px 4px rgba(0,0,0,0.5)',
-                }}
-              >
-                PARTNERING WITH
-              </span>
-              <div className="bg-white/5 backdrop-blur-sm px-3.5 py-2.5 rounded-xl border border-white/10 flex items-center justify-center">
-                <Image
-                  src="/trilogylogo.png"
-                  alt="Trilogy logo"
-                  width={110}
-                  height={32}
-                  style={{
-                    objectFit: 'contain',
-                    filter: 'brightness(0) invert(1)',
-                    width: 'auto',
-                  }}
-                  className="h-7 w-auto"
-                />
-              </div>
-            </div>
-
+              Partnering with
+            </span>
+            <Image
+              src="/trilogylogo.png"
+              alt="Trilogy Care logo"
+              width={88}
+              height={24}
+              style={{
+                objectFit: 'contain',
+                filter: 'brightness(0) invert(1)',
+                width: 'auto',
+              }}
+              className="h-5 sm:h-6 w-auto"
+            />
           </div>
         </div>
         {/* End CTA row */}
 
         {/* Trust / value props strip */}
-        <div className="mt-6 sm:mt-8 mb-4 flex flex-row flex-wrap gap-y-2.5 gap-x-4 sm:gap-x-6 relative z-10" role="list" aria-label="Key credentials">
+        <div className="flex flex-row flex-wrap items-center gap-x-4 sm:gap-x-6 gap-y-2 relative z-10" role="list" aria-label="Key credentials">
           {[
             '✓ AHPRA-Registered Nurses',
             '✓ Dedicated Nurse Coordinator',
-            '✓ 24–48-Hour Assessment Response',
-            '✓ Perth Metropolitan Coverage',
+            '✓ 24–48-Hour Assessment',
+            '✓ Perth Metro Coverage',
           ].map((item) => (
             <span
               key={item}
@@ -263,7 +222,7 @@ export function HeroSection({
         </div>
 
         {/* Who we help micro-row */}
-        <div className="pt-3 border-t border-white/10 flex flex-wrap items-center gap-2 text-xs text-white/80 relative z-10">
+        <div className="mt-3 pt-3 border-t border-white/10 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-white/75 relative z-10">
           <span className="font-semibold text-teal-accent">Who we help:</span>
           <span>Older parents</span>
           <span className="text-white/40">•</span>
@@ -271,9 +230,9 @@ export function HeroSection({
           <span className="text-white/40">•</span>
           <span>Wound care</span>
           <span className="text-white/40">•</span>
-          <span>Medication support</span>
+          <span>Medication safety</span>
           <span className="text-white/40">•</span>
-          <span>Chronic conditions</span>
+          <span>Chronic health conditions</span>
         </div>
 
         {/* Emergency disclaimer */}

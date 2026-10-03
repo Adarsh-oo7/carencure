@@ -128,20 +128,17 @@ export default function HomePage() {
         badge="The Nurse Who Knows You"
         headline="Home Nursing Care in Perth by a Dedicated Registered Nurse"
         subheadline={
-          <div className="space-y-4">
-            <h2 className="text-teal-accent text-xl sm:text-2xl font-bold">
+          <div className="space-y-2.5">
+            <p className="text-teal-accent text-base sm:text-lg font-bold tracking-wide">
               One Client. One Dedicated Nurse Coordinator. One Trusted Relationship.
-            </h2>
-            <p className="text-white/95 text-lg leading-relaxed">
-              A trusted Perth nurse at home for clinical care, recovery, aged care and ongoing health support—with one consistent point of contact for your family.
             </p>
-            <p className="font-semibold text-teal-accent text-base sm:text-lg leading-relaxed">
-              No rotating casual rosters. No repeating your medical story at every visit. Just a qualified nurse who genuinely knows your situation.
+            <p className="text-white/90 text-sm sm:text-base leading-relaxed">
+              Perth nurse-led in-home care for clinical recovery, wound dressings, and aged care support. Same qualified Registered Nurse every visit—no rotating casual rosters.
             </p>
           </div>
         }
         ctaPrimary={{ text: 'Call 1300 919 663', href: 'tel:1300919663', isPhone: true }}
-        ctaSecondary={{ text: 'Book a free nurse consultation', href: '/contact' }}
+        ctaSecondary={{ text: 'Book a Free Nurse Consultation', href: '/contact' }}
       />
 
       {/* Decision Block: What kind of support are you looking for? */}

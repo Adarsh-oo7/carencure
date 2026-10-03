@@ -8,39 +8,53 @@ import { Menu, X, Phone, ChevronDown } from 'lucide-react'
 const PHONE_NUMBER = '1300 919 663'
 const PHONE_HREF = 'tel:1300919663'
 
-const serviceLinks = [
-  { label: 'Aged Care at Home Perth', href: '/aged-care-at-home-perth' },
-  { label: 'Private Nursing at Home', href: '/private-nursing' },
-  { label: 'Elderly Care at Home', href: '/private-nursing/elderly-care' },
-  { label: 'Personal Care at Home', href: '/personal-care' },
-  { label: 'NDIS Nursing Care', href: '/ndis-nursing' },
-  { label: 'Support at Home', href: '/support-at-home' },
-  { label: 'Home Care Packages', href: '/homecare-packages' },
-  { label: 'Physiotherapy at Home', href: '/physiotherapy' },
-  { label: 'Nutritionist at Home', href: '/nutritionist' },
-  { label: 'Post-Hospital Recovery Care', href: '/post-hospital-care' },
-  { label: 'Wound Care at Home', href: '/wound-care' },
-  { label: 'Medication Management', href: '/medication-management' },
-  { label: 'Mobility Support', href: '/mobility-support' },
-  { label: 'Companion Care', href: '/companion-care' },
-  { label: 'Registered Nurses Clinical Care', href: '/registered-nurses-clinical-care-services' },
-  { label: 'Healthcare Referrals', href: '/referrals' },
-  { label: 'Pricing & Rates', href: '/pricing' },
+const clinicalServices = [
+  { label: 'Registered Nurses Clinical Care', href: '/registered-nurses-clinical-care-services', desc: 'Complex wound, injections, vitals & clinical reviews' },
+  { label: 'Private Nursing at Home', href: '/private-nursing', desc: '1-on-1 dedicated clinical nursing visits' },
+  { label: 'Wound Care at Home', href: '/wound-care', desc: 'Sterile surgical & chronic wound dressings' },
+  { label: 'Medication Management', href: '/medication-management', desc: 'Administration, Webster-pak & safety reviews' },
+  { label: 'Post-Hospital Recovery Care', href: '/post-hospital-care', desc: 'Safe transitions home after hospital stay' },
+  { label: 'Mobility & Rehab Support', href: '/mobility-support', desc: 'Gentle rehabilitation & fall prevention' },
+  { label: 'NDIS Nursing Care', href: '/ndis-nursing', desc: 'Clinical care for NDIS participants' },
 ]
 
-const locationLinks = [
-  { label: 'All Perth Suburbs', href: '/locations' },
+const agedCareServices = [
+  { label: 'Aged Care at Home Perth', href: '/aged-care-at-home-perth', desc: 'Comprehensive senior home care in Perth' },
+  { label: 'Support at Home (2026)', href: '/support-at-home', desc: 'Guidance & care under the new framework' },
+  { label: 'Home Care Packages (HCP)', href: '/homecare-packages', desc: 'Self-managed & provider-managed support' },
+  { label: 'Elderly Care at Home', href: '/private-nursing/elderly-care', desc: 'Dedicated senior nurse companion & checks' },
+  { label: 'Personal Care at Home', href: '/personal-care', desc: 'Dignified showering, grooming & daily tasks' },
+  { label: 'Companion Care', href: '/companion-care', desc: 'Friendly visits, social outings & respite' },
+  { label: 'Physiotherapy & Nutrition', href: '/physiotherapy', desc: 'In-home allied health support' },
+  { label: 'Pricing & Transparent Rates', href: '/pricing', desc: 'Clear hourly rates with zero hidden fees' },
+]
+
+// Flat list for mobile & fallbacks
+const serviceLinks = [...clinicalServices, ...agedCareServices, { label: 'Healthcare Referrals', href: '/referrals' }]
+
+const baseSuburbs = [
   { label: 'Harrisdale (HQ)', href: '/locations/harrisdale' },
-  { label: 'Byford', href: '/locations/byford' },
-  { label: 'Nedlands', href: '/locations/nedlands' },
-  { label: 'Subiaco', href: '/locations/subiaco' },
+  { label: 'Piara Waters', href: '/locations/piara-waters' },
+  { label: 'Southern River', href: '/locations/southern-river' },
+  { label: 'Canning Vale', href: '/locations/canning-vale' },
+  { label: 'Thornlie', href: '/locations/thornlie' },
   { label: 'City of Gosnells', href: '/locations/gosnells' },
   { label: 'City of Armadale', href: '/locations/armadale' },
-  { label: 'Canning Vale', href: '/locations/canning-vale' },
-  { label: 'Rockingham', href: '/locations/rockingham' },
-  { label: 'Applecross', href: '/locations/applecross' },
-  { label: 'South Perth', href: '/locations/south-perth' },
+  { label: 'Byford', href: '/locations/byford' },
 ]
+
+const metroSuburbs = [
+  { label: 'Rockingham & Baldivis', href: '/locations/rockingham' },
+  { label: 'Nedlands & Subiaco', href: '/locations/nedlands' },
+  { label: 'Cottesloe & Claremont', href: '/locations/cottesloe' },
+  { label: 'Applecross & Melville', href: '/locations/applecross' },
+  { label: 'South Perth & Como', href: '/locations/south-perth' },
+  { label: 'Cockburn Central', href: '/locations/cockburn-central' },
+  { label: 'Willetton & Bull Creek', href: '/locations/willetton' },
+  { label: 'Joondalup (North)', href: '/locations/joondalup' },
+]
+
+const locationLinks = [...baseSuburbs, ...metroSuburbs]
 
 const topBarItems = [
   { text: 'Locally Owned & Operated' },
@@ -109,10 +123,10 @@ export function Navigation() {
         style={{ overflow: 'visible' }}
       >
         {/* Top phone bar / Sliding Marquee */}
-        <div className="bg-navy text-white py-2.5 overflow-hidden select-none relative z-50 border-b border-navy-light group-marquee">
+        <div className="bg-navy text-white py-2 overflow-hidden select-none relative z-50 border-b border-navy-light group-marquee">
           <a
             href={PHONE_HREF}
-            className="block hover:text-teal-300 transition-colors cursor-pointer text-white font-medium text-xs tracking-wider"
+            className="block hover:text-teal-300 transition-colors cursor-pointer text-white font-medium text-[11px] sm:text-xs tracking-wider"
             id="nav-phone-top"
             style={{ minHeight: 'auto' }}
           >
@@ -179,19 +193,19 @@ export function Navigation() {
             </Link>
 
             {/* Desktop nav */}
-            <div className="hidden lg:flex items-center gap-5">
-              <Link href="/" className="text-sm font-medium text-body hover:text-navy transition-colors" style={{ lineHeight: 1, padding: '4px 0' }}>
+            <div className="hidden lg:flex items-center gap-4 xl:gap-5">
+              <Link href="/" className="text-sm font-semibold text-body hover:text-navy transition-colors" style={{ lineHeight: 1, padding: '4px 0' }}>
                 Home
               </Link>
 
-              {/* Services dropdown */}
+              {/* Services 2-column Mega dropdown */}
               <div
                 className="relative"
                 onMouseEnter={handleServicesMouseEnter}
                 onMouseLeave={handleServicesMouseLeave}
               >
                 <button
-                  className="flex items-center gap-1 text-sm font-medium text-body hover:text-navy transition-colors"
+                  className="flex items-center gap-1 text-sm font-semibold text-body hover:text-navy transition-colors"
                   style={{ lineHeight: 1, padding: '4px 0', background: 'none', border: 'none', cursor: 'pointer' }}
                   aria-haspopup="true"
                   aria-expanded={servicesOpen}
@@ -202,32 +216,81 @@ export function Navigation() {
                 </button>
                 {servicesOpen && (
                   <div
-                    className="absolute top-full left-0 w-72 card-base py-2 mt-1 shadow-xl z-50"
+                    className="absolute top-full -left-20 w-[600px] bg-white rounded-2xl p-5 mt-2 shadow-2xl border border-border z-50 animate-in fade-in slide-in-from-top-2 duration-200"
                     role="menu"
                     aria-labelledby="services-menu-btn"
                   >
-                    {serviceLinks.map((link) => (
-                      <Link
-                        key={`${link.href}-${link.label}`}
-                        href={link.href}
-                        className="block px-4 py-2.5 text-sm text-body hover:bg-surface hover:text-navy font-medium transition-colors"
-                        role="menuitem"
-                      >
-                        {link.label}
+                    <div className="grid grid-cols-2 gap-5">
+                      {/* Clinical Care Column */}
+                      <div>
+                        <div className="text-[11px] font-bold uppercase tracking-wider text-teal-text pb-2 mb-2 border-b border-border flex items-center justify-between">
+                          <span>Clinical Nursing Care</span>
+                          <span className="text-[10px] text-muted-brand font-normal">AHPRA RNs</span>
+                        </div>
+                        <div className="flex flex-col gap-1">
+                          {clinicalServices.map((link) => (
+                            <Link
+                              key={link.href}
+                              href={link.href}
+                              className="px-2.5 py-2 rounded-lg hover:bg-surface transition-colors group block"
+                              role="menuitem"
+                            >
+                              <div className="text-xs font-bold text-navy group-hover:text-teal-text transition-colors">
+                                {link.label}
+                              </div>
+                              <div className="text-[11px] text-body line-clamp-1">
+                                {link.desc}
+                              </div>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Aged Care & Support Column */}
+                      <div>
+                        <div className="text-[11px] font-bold uppercase tracking-wider text-teal-text pb-2 mb-2 border-b border-border flex items-center justify-between">
+                          <span>Aged Care & Support</span>
+                          <span className="text-[10px] text-muted-brand font-normal">At Home</span>
+                        </div>
+                        <div className="flex flex-col gap-1">
+                          {agedCareServices.map((link) => (
+                            <Link
+                              key={link.href}
+                              href={link.href}
+                              className="px-2.5 py-2 rounded-lg hover:bg-surface transition-colors group block"
+                              role="menuitem"
+                            >
+                              <div className="text-xs font-bold text-navy group-hover:text-teal-text transition-colors">
+                                {link.label}
+                              </div>
+                              <div className="text-[11px] text-body line-clamp-1">
+                                {link.desc}
+                              </div>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Bottom strip */}
+                    <div className="pt-3 mt-3 border-t border-border flex items-center justify-between text-xs">
+                      <span className="text-muted-brand text-[11px]">No GP referral required to start care</span>
+                      <Link href="/services" className="text-teal-text font-bold hover:underline">
+                        Explore All Services Overview →
                       </Link>
-                    ))}
+                    </div>
                   </div>
                 )}
               </div>
 
-              {/* Locations dropdown */}
+              {/* Locations 2-column dropdown */}
               <div
                 className="relative"
                 onMouseEnter={handleLocationsMouseEnter}
                 onMouseLeave={handleLocationsMouseLeave}
               >
                 <button
-                  className="flex items-center gap-1 text-sm font-medium text-body hover:text-navy transition-colors"
+                  className="flex items-center gap-1 text-sm font-semibold text-body hover:text-navy transition-colors"
                   style={{ lineHeight: 1, padding: '4px 0', background: 'none', border: 'none', cursor: 'pointer' }}
                   aria-haspopup="true"
                   aria-expanded={locationsOpen}
@@ -238,37 +301,75 @@ export function Navigation() {
                 </button>
                 {locationsOpen && (
                   <div
-                    className="absolute top-full left-0 w-56 card-base py-2 mt-1 shadow-xl z-50"
+                    className="absolute top-full -left-16 w-[480px] bg-white rounded-2xl p-4 mt-2 shadow-2xl border border-border z-50 animate-in fade-in slide-in-from-top-2 duration-200"
                     role="menu"
                     aria-labelledby="locations-menu-btn"
                   >
-                    {locationLinks.map((link) => (
-                      <Link
-                        key={`${link.href}-${link.label}`}
-                        href={link.href}
-                        className="block px-4 py-2.5 text-sm text-body hover:bg-surface hover:text-navy font-medium transition-colors"
-                        role="menuitem"
-                      >
-                        {link.label}
+                    <div className="grid grid-cols-2 gap-4">
+                      {/* Home Base Column */}
+                      <div>
+                        <div className="text-[11px] font-bold uppercase tracking-wider text-teal-text pb-1.5 mb-1.5 border-b border-border">
+                          South-East & Base
+                        </div>
+                        <div className="flex flex-col gap-0.5">
+                          {baseSuburbs.map((link) => (
+                            <Link
+                              key={link.href}
+                              href={link.href}
+                              className="px-2.5 py-1.5 text-xs text-body hover:bg-surface hover:text-navy rounded font-medium transition-colors"
+                              role="menuitem"
+                            >
+                              {link.label}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Greater Perth Column */}
+                      <div>
+                        <div className="text-[11px] font-bold uppercase tracking-wider text-teal-text pb-1.5 mb-1.5 border-b border-border">
+                          Greater Perth Metro
+                        </div>
+                        <div className="flex flex-col gap-0.5">
+                          {metroSuburbs.map((link) => (
+                            <Link
+                              key={link.href}
+                              href={link.href}
+                              className="px-2.5 py-1.5 text-xs text-body hover:bg-surface hover:text-navy rounded font-medium transition-colors"
+                              role="menuitem"
+                            >
+                              {link.label}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Bottom link */}
+                    <div className="pt-2.5 mt-2 border-t border-border flex items-center justify-between text-xs">
+                      <span className="text-[11px] text-muted-brand">Zero travel fees within 50km</span>
+                      <Link href="/locations" className="text-teal-text font-bold hover:underline">
+                        View All 43+ Suburbs →
                       </Link>
-                    ))}
+                    </div>
                   </div>
                 )}
               </div>
 
-              <Link href="/about" className="text-sm font-medium text-body hover:text-navy transition-colors" style={{ lineHeight: 1, padding: '4px 0' }}>
+              <Link href="/about" className="text-sm font-semibold text-body hover:text-navy transition-colors" style={{ lineHeight: 1, padding: '4px 0' }}>
                 About
               </Link>
-              <Link href="/referrals" className="text-sm font-medium text-body hover:text-navy transition-colors" style={{ lineHeight: 1, padding: '4px 0' }}>
+              <Link href="/referrals" className="text-sm font-semibold text-body hover:text-navy transition-colors" style={{ lineHeight: 1, padding: '4px 0' }}>
                 Referrals
               </Link>
-              <Link href="/testimonials" className="text-sm font-medium text-body hover:text-navy transition-colors" style={{ lineHeight: 1, padding: '4px 0' }}>
-                Clinical Standards
+              <Link href="/testimonials" className="text-sm font-semibold text-body hover:text-navy transition-colors inline-flex items-center gap-1" style={{ lineHeight: 1, padding: '4px 0' }}>
+                <span>Reviews</span>
+                <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-teal-50 text-teal-700 font-bold border border-teal-200">5.0★</span>
               </Link>
-              <Link href="/faq" className="text-sm font-medium text-body hover:text-navy transition-colors" style={{ lineHeight: 1, padding: '4px 0' }}>
+              <Link href="/faq" className="text-sm font-semibold text-body hover:text-navy transition-colors" style={{ lineHeight: 1, padding: '4px 0' }}>
                 FAQ
               </Link>
-              <Link href="/contact" className="text-sm font-medium text-body hover:text-navy transition-colors" style={{ lineHeight: 1, padding: '4px 0' }}>
+              <Link href="/contact" className="text-sm font-semibold text-body hover:text-navy transition-colors" style={{ lineHeight: 1, padding: '4px 0' }}>
                 Contact
               </Link>
             </div>
