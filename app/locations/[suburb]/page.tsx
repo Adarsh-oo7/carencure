@@ -5,7 +5,7 @@ import { PageHeader } from '@/components/page-header'
 import { ContactForm } from '@/components/contact-form'
 import { CTASection } from '@/components/sections/cta'
 import { SuburbPageSchema, FAQPageSchema, BreadcrumbSchema } from '@/components/schema'
-import { CheckCircle2, ShieldCheck, Phone, Stethoscope, HeartPulse } from 'lucide-react'
+import { CheckCircle2, ShieldCheck, Phone, Stethoscope, HeartPulse, MapPin } from 'lucide-react'
 import { CtaUncertaintyReducer } from '@/components/sections/cta-uncertainty-reducer'
 
 // Define the suburb data mapping
@@ -18,6 +18,8 @@ interface SuburbData {
   surroundingSuburbs: string
   localHealthcareFocus: string
   localSpecificText?: string
+  /** Approximate drive time from the Harrisdale base — only for nearby suburbs */
+  fromBase?: string
 }
 
 function getLocalText(data: SuburbData): string {
@@ -77,6 +79,7 @@ const suburbsMap: Record<string, SuburbData> = {
     surroundingSuburbs: 'Maddington, Kenwick, Thornlie, and Huntingdale',
     localHealthcareFocus: 'chronic illness monitoring, post-hospital transition care, and home nursing',
     localSpecificText: 'Our registered nurses provide home nursing services across Gosnells, Maddington, Kenwick, and Thornlie. For clients returning home from facilities like Armadale Kelmscott Memorial Hospital, we accept referrals from discharge teams and work alongside local GPs to support continuous recovery at home within 24–48 hours.',
+    fromBase: 'approx. 10–15 minutes',
   },
   armadale: {
     id: 'armadale',
@@ -87,6 +90,7 @@ const suburbsMap: Record<string, SuburbData> = {
     surroundingSuburbs: 'Kelmscott, Seville Grove, Mount Nasura, Mount Richon, and Roleystone',
     localHealthcareFocus: 'post-hospital recovery, sterile wound dressings, medication safety, and community nursing',
     localSpecificText: 'Care N Cure delivers dedicated in-home registered nursing care across Armadale and surrounding south-east Perth suburbs. Operating from our Harrisdale base, our registered nurses visit clients across Armadale, Kelmscott, Seville Grove, and nearby suburbs. We accept referrals from hospital discharge planners, GPs, and families, providing structured in-home clinical assessments within 24 to 48 hours of enquiry.',
+    fromBase: 'approx. 15 minutes',
   },
   rockingham: {
     id: 'rockingham',
@@ -177,6 +181,7 @@ const suburbsMap: Record<string, SuburbData> = {
     surroundingSuburbs: 'Willetton, Riverton, and Southern River',
     localHealthcareFocus: 'chronic disease management, registered nurse assessments, and home care package support',
     localSpecificText: 'We support families across Canning Vale, Willetton, and Riverton. We actively cover Canning Vale and are ready to visit within 24–48 hours. Patients transitioning back home after procedures at Fiona Stanley Hospital or St John of God Murdoch can expect prompt care coordination and clinical handovers before discharge.',
+    fromBase: 'approx. 10 minutes',
   },
   wembley: {
     id: 'wembley',
@@ -367,6 +372,7 @@ const suburbsMap: Record<string, SuburbData> = {
     surroundingSuburbs: 'Armadale, Cardup, and Darling Downs',
     localHealthcareFocus: 'in-home aged care nursing, post-hospital recovery, chronic condition monitoring, and medication management',
     localSpecificText: 'Byford is one of Perth\'s fastest-growing communities, and local families deserve high-quality clinical nursing without traveling to distant clinics. Care N Cure provides qualified Registered Nurse visits directly to Byford homes with zero travel surcharge, coordinating closely with Armadale Health Service and local GPs.',
+    fromBase: 'approx. 20 minutes',
   },
   'piara-waters': {
     id: 'piara-waters',
@@ -377,6 +383,7 @@ const suburbsMap: Record<string, SuburbData> = {
     surroundingSuburbs: 'Harrisdale, Southern River, and Cockburn Central',
     localHealthcareFocus: 'sterile wound care, medication reconciliation, elderly support, and vital sign monitoring',
     localSpecificText: 'Minutes from our Harrisdale headquarters, Piara Waters clients receive rapid clinical assessment and dedicated Registered Nurse coordination. Whether recovering from surgery or needing ongoing elderly care at home, we deliver trusted 1-on-1 nursing.',
+    fromBase: 'approx. 5 minutes',
   },
   thornlie: {
     id: 'thornlie',
@@ -387,6 +394,93 @@ const suburbsMap: Record<string, SuburbData> = {
     surroundingSuburbs: 'Langford, Canning Vale, and Gosnells',
     localHealthcareFocus: 'community nursing care, elderly home care, post-surgical dressing changes, and chronic condition management',
     localSpecificText: 'Thornlie residents are just minutes from our primary South-East Perth nursing team. We work closely with local medical centres along Spencer Road and Thornlie Square, as well as Armadale Health Service. Whether your loved one needs sterile wound management, daily medication checks, or Home Care Package coordination, we provide registered nurse visits with zero travel surcharges.',
+    fromBase: 'approx. 15 minutes',
+  },
+  'southern-river': {
+    id: 'southern-river',
+    name: 'Southern River',
+    region: 'Perth South-East',
+    nearestHospital: 'Fiona Stanley Hospital & Armadale Health Service',
+    description: 'Local aged care at home and community nursing in Southern River, Huntingdale, and Harrisdale. Registered nurse visits for seniors, wound care, medication checks, and post-hospital recovery.',
+    surroundingSuburbs: 'Harrisdale, Huntingdale, and Gosnells',
+    localHealthcareFocus: 'aged care at home, medication safety, chronic condition monitoring, and family respite',
+    localSpecificText: 'Southern River borders our Harrisdale base, so our Registered Nurses are genuinely local — not driving in from across the city. Many Southern River families care for parents who have moved in with them or live nearby; we provide reliable nurse visits, medication oversight, and wound care so family carers get real support and peace of mind.',
+    fromBase: 'approx. 5–10 minutes',
+  },
+  forrestdale: {
+    id: 'forrestdale',
+    name: 'Forrestdale',
+    region: 'Perth South-East',
+    nearestHospital: 'Armadale Health Service & Fiona Stanley Hospital',
+    description: 'In-home aged care and registered nurse visits in Forrestdale, Hilbert, and Piara Waters. Wound dressings, medication management, and elderly health monitoring close to home.',
+    surroundingSuburbs: 'Piara Waters, Harrisdale, and Hilbert',
+    localHealthcareFocus: 'elderly home nursing, wound care, and medication reconciliation',
+    localSpecificText: 'Forrestdale is right next door to our Harrisdale base. For semi-rural properties where larger providers struggle to roster consistent staff, Care N Cure provides the same dedicated Registered Nurse every visit, coordinating with Armadale Health Service and your local GP.',
+    fromBase: 'approx. 5–10 minutes',
+  },
+  willetton: {
+    id: 'willetton',
+    name: 'Willetton',
+    region: 'Perth South-East',
+    nearestHospital: 'Fiona Stanley Hospital & St John of God Murdoch',
+    description: 'Aged care at home and registered nurse visits in Willetton, Riverton, and Rossmoyne. Medication management, wound care, and post-hospital recovery for seniors.',
+    surroundingSuburbs: 'Riverton, Rossmoyne, and Bull Creek',
+    localHealthcareFocus: 'aged care in-home support, medication management, and post-surgical recovery',
+    localSpecificText: 'Willetton has one of Perth\'s most established older communities, with many long-time residents choosing to age in the family home. Our Registered Nurses support Willetton, Riverton, and Rossmoyne seniors with medication checks, wound care, and health monitoring, coordinating with Fiona Stanley Hospital and local GPs near Southlands.',
+    fromBase: 'approx. 15 minutes',
+  },
+  kelmscott: {
+    id: 'kelmscott',
+    name: 'Kelmscott',
+    region: 'Perth South-East',
+    nearestHospital: 'Armadale Health Service (Armadale Kelmscott Memorial Hospital)',
+    description: 'Community nursing and aged care at home across Kelmscott, Camillo, Champion Lakes, and Roleystone. Registered nurse visits for wound care, medications, and post-hospital support.',
+    surroundingSuburbs: 'Armadale, Camillo, Champion Lakes, and Roleystone',
+    localHealthcareFocus: 'community nursing, post-hospital recovery, wound care, and elderly support',
+    localSpecificText: 'Armadale Kelmscott Memorial Hospital is the local hospital for most of our Kelmscott clients. We accept referrals from its discharge teams and local GPs, and provide registered nurse visits for wound care, injections, and medication safety, usually within 24–48 hours.',
+    fromBase: 'approx. 15 minutes',
+  },
+  'cockburn-central': {
+    id: 'cockburn-central',
+    name: 'Cockburn Central',
+    region: 'Perth South',
+    nearestHospital: 'Fiona Stanley Hospital & St John of God Murdoch',
+    description: 'Aged care at home and registered nurse visits across Cockburn Central, Success, Atwell, Aubin Grove, and Jandakot. Wound care, medication support, and post-discharge nursing.',
+    surroundingSuburbs: 'Success, Atwell, Aubin Grove, and Jandakot',
+    localHealthcareFocus: 'post-discharge nursing, wound care, medication safety, and aged care support',
+    localSpecificText: 'Cockburn Central sits minutes from Fiona Stanley Hospital, Perth\'s largest southern hospital. Many of our Cockburn, Success, and Atwell clients come to us straight after discharge — we review the discharge summary, check medications against the hospital list, and set up wound care at home within 24–48 hours.',
+    fromBase: 'approx. 10–15 minutes',
+  },
+  'bull-creek': {
+    id: 'bull-creek',
+    name: 'Bull Creek',
+    region: 'Perth South',
+    nearestHospital: 'Fiona Stanley Hospital & St John of God Murdoch',
+    description: 'In-home aged care and registered nurse visits in Bull Creek, Leeming, Bateman, and Murdoch. Medication management, wound dressings, and chronic condition monitoring.',
+    surroundingSuburbs: 'Leeming, Bateman, and Murdoch',
+    localHealthcareFocus: 'aged care at home, chronic disease monitoring, and post-surgical wound care',
+    localSpecificText: 'Bull Creek and Leeming families are close to both Fiona Stanley Hospital and St John of God Murdoch. Our Registered Nurses coordinate closely with both hospitals and local GPs so ageing parents can recover and stay well at home.',
+    fromBase: 'approx. 15–20 minutes',
+  },
+  melville: {
+    id: 'melville',
+    name: 'Melville',
+    region: 'Perth South',
+    nearestHospital: 'Fiona Stanley Hospital & Fremantle Hospital',
+    description: 'Aged care at home, Support at Home nursing, and registered nurse visits across Melville, Alfred Cove, Palmyra, and Myaree.',
+    surroundingSuburbs: 'Alfred Cove, Palmyra, Myaree, and Bicton',
+    localHealthcareFocus: 'aged care home support, Support at Home nursing, medication management, and wound care',
+    localSpecificText: 'The City of Melville has a large, long-established community of older residents, many ageing in the family home. Melville families often ask us how Support at Home (which replaced Home Care Packages) applies to nursing — we explain it plainly, and provide the registered nurse visits your parent needs to stay safely at home.',
+  },
+  baldivis: {
+    id: 'baldivis',
+    name: 'Baldivis',
+    region: 'Perth South',
+    nearestHospital: 'Rockingham General Hospital',
+    description: 'Community nursing care and aged care at home in Baldivis, Wellard, and Warnbro. Registered nurse visits for wound care, medication management, and post-hospital recovery.',
+    surroundingSuburbs: 'Wellard, Warnbro, and Rockingham',
+    localHealthcareFocus: 'community nursing care Baldivis, post-hospital recovery, and elderly medication support',
+    localSpecificText: 'Baldivis is one of Perth\'s fastest-growing family suburbs, and many households now include an ageing parent. Care N Cure provides community nursing care in Baldivis — wound care, injections, and medication checks — coordinating with Rockingham General Hospital and local GPs.',
   },
 }
 
@@ -406,35 +500,82 @@ export async function generateMetadata({ params }: { params: Promise<{ suburb: s
   // Build a concise surrounding-suburbs string (max 2 suburbs)
   const nearbyShort = data.surroundingSuburbs.split(',').slice(0, 2).join(' &')
 
-  let pageTitle = `At Home Nurse ${data.name} | In-Home Aged Care & Nursing | Care N Cure`
-  let pageDesc = `AHPRA Registered Nurses visiting ${data.name} for at-home nursing care, aged care in-home support & wound management. Rapid 24–48h intake. Call 1300 919 663.`
+  // Mirrors how Perth families actually search (GSC): "aged care [suburb]", "home care [suburb]", "community nursing care [suburb]"
+  let pageTitle = `Aged Care & Home Nurse ${data.name} WA | In-Home Care | Care N Cure`
+  let pageDesc = `Local aged care at home & community nursing in ${data.name}, Perth. Same AHPRA Registered Nurse every visit. Private or Support at Home. No referral. Call 1300 919 663.`
 
   if (suburb === 'armadale') {
     pageTitle = 'At Home Nurse Armadale | In-Home Aged Care & Nursing | Care N Cure'
     pageDesc = 'AHPRA registered nurses providing at-home nursing care in Armadale & south-east Perth. Wound care, aged care in-home support, post-hospital recovery. Call 1300 919 663.'
   } else if (suburb === 'rockingham') {
-    pageTitle = 'At Home Nurse Rockingham & Baldivis | Community Nursing Care | Care N Cure'
-    pageDesc = 'Community nursing care in Rockingham, Baldivis & southern Perth. AHPRA registered nurses for at-home nursing care, wound dressings & post-hospital recovery. Call 1300 919 663.'
+    pageTitle = 'Home Nurse Rockingham & Baldivis | AHPRA Registered In-Home Nursing | Care N Cure'
+    pageDesc = 'Need a home nurse in Rockingham or Baldivis? AHPRA Registered Nurses for wound care, medication management & post-hospital recovery across southern Perth. No referral needed. Call 1300 919 663.'
   } else if (suburb === 'south-perth') {
     pageTitle = 'Home Nurse Perth & South Perth | In-Home Clinical Nursing | Care N Cure'
     pageDesc = 'Experienced home nurse services in South Perth, Como & Kensington. Clinical health checks, medication safety & aged care at home with zero travel fees. Call 1300 919 663.'
+  } else if (suburb === 'joondalup') {
+    pageTitle = 'Home Nurse Joondalup | AHPRA Registered In-Home Nursing & Aged Care | Care N Cure'
+    pageDesc = 'Need a home nurse in Joondalup or northern Perth? AHPRA Registered Nurses for wound care, aged care, medication management & post-hospital recovery. No referral needed. Call 1300 919 663.'
+  } else if (suburb === 'claremont') {
+    pageTitle = 'Home Nurse Claremont | Wound Care & In-Home Nursing Perth | Care N Cure'
+    pageDesc = 'AHPRA Registered Nurses providing in-home wound care, medication management & post-hospital nursing in Claremont & western Perth suburbs. Call 1300 919 663.'
+  } else if (suburb === 'gosnells') {
+    pageTitle = 'Home Nurse Gosnells | In-Home Nursing & Aged Care | Care N Cure'
+    pageDesc = 'AHPRA Registered Nurses for in-home nursing care, wound management & aged care across Gosnells, Maddington, Kenwick & Thornlie. Call 1300 919 663.'
   }
 
   const customKeywords = [
+    `aged care ${data.name.toLowerCase()}`,
+    `home care ${data.name.toLowerCase()}`,
+    `community nursing care ${data.name.toLowerCase()}`,
+    `aged care at home ${data.name.toLowerCase()}`,
+    `carers for elderly ${data.name.toLowerCase()}`,
+    `support at home ${data.name.toLowerCase()}`,
+    `home nurse ${data.name.toLowerCase()}`,
     `at home nurse ${data.name.toLowerCase()}`,
-    `at home nurse care ${data.name.toLowerCase()}`,
     `at home nurse near me`,
-    `aged care in home support ${data.name.toLowerCase()}`,
-    `aged care in home services ${data.name.toLowerCase()}`,
+    `nurse at home ${data.name.toLowerCase()}`,
     `in home nursing ${data.name.toLowerCase()}`,
+    `registered nurse home visit ${data.name.toLowerCase()}`,
+    `aged care in home support ${data.name.toLowerCase()}`,
     `home care nurse ${data.name.toLowerCase()}`,
     `private nurse ${data.name.toLowerCase()}`,
+    `wound care nurse ${data.name.toLowerCase()}`,
   ]
 
   if (suburb === 'rockingham') {
-    customKeywords.push('community nursing care baldivis', 'community nursing care rockingham', 'at home nurse baldivis')
+    customKeywords.push(
+      'community nursing care baldivis',
+      'community nursing care rockingham',
+      'at home nurse baldivis',
+      'home nurse rockingham',
+      'nurse at home rockingham',
+      'in home nursing rockingham'
+    )
+  } else if (suburb === 'joondalup') {
+    customKeywords.push(
+      'home nurse joondalup',
+      'nurse at home joondalup',
+      'in home nursing joondalup',
+      'aged care joondalup',
+      'private nurse joondalup'
+    )
   } else if (suburb === 'south-perth') {
     customKeywords.push('home nurse perth', 'home nurse near me', 'in home nurse perth')
+  } else if (suburb === 'gosnells') {
+    customKeywords.push(
+      'home nurse gosnells',
+      'nursing care gosnells',
+      'aged care gosnells',
+      'nurse at home maddington',
+      'in home nursing kenwick'
+    )
+  } else if (suburb === 'claremont') {
+    customKeywords.push(
+      'home nurse claremont',
+      'wound care nurse claremont perth',
+      'in home nursing claremont'
+    )
   }
 
   return {
@@ -448,6 +589,14 @@ export async function generateMetadata({ params }: { params: Promise<{ suburb: s
       title: pageTitle,
       description: pageDesc,
       url: `https://carencure.com.au/locations/${suburb}`,
+      type: 'website',
+      siteName: 'Care N Cure Nursing Care Services',
+      locale: 'en_AU',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: pageTitle,
+      description: pageDesc,
     },
   }
 }
@@ -469,7 +618,11 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
     },
     {
       question: `What aged care in-home support is available in ${data.name}?`,
-      answer: `We provide comprehensive aged care in-home support for seniors in ${data.name}, including clinical nursing assessments, wound dressing, medication safety, subcutaneous injections, catheter management, and health monitoring. Services can be funded privately, through a Home Care Package (HCP Levels 1–4), or under the Support at Home program.`,
+      answer: `We provide comprehensive aged care in-home support for seniors in ${data.name}, including clinical nursing assessments, wound dressing, medication safety, subcutaneous injections, catheter management, and health monitoring. Services can be paid privately or funded through Support at Home (which replaced Home Care Packages on 1 November 2025), NDIS or DVA.`,
+    },
+    {
+      question: `We're still waiting for a My Aged Care assessment — can care start in ${data.name} now?`,
+      answer: `Yes. Many ${data.name} families start with private nursing visits while they wait for their My Aged Care assessment or Support at Home budget, then continue with the same nurse once funding is in place. You can register with My Aged Care on 1800 200 422 — we are happy to explain the steps.`,
     },
     {
       question: `Do you provide in-home nursing services across ${data.name} and nearby suburbs?`,
@@ -488,7 +641,7 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
     },
     {
       question: 'What does in-home nursing cost?',
-      answer: 'Standard weekday clinical visits typically range from $110 to $160 per hour, depending on care complexity. Private nursing is available as a private-pay service. We also support clients with Home Care Packages (HCP Levels 1-4), Support at Home, NDIS, and DVA funding. Call us to discuss your situation.',
+      answer: 'Standard weekday clinical visits typically range from $110 to $160 per hour, depending on care complexity. Private nursing is available as a private-pay service. We also support clients with Support at Home budgets (formerly Home Care Packages), NDIS, and DVA funding. Under Support at Home, clinical care such as nursing does not attract a participant contribution. Call us to discuss your situation.',
     },
   ]
 
@@ -531,6 +684,12 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
                 </p>
 
                 {/* At-home nurse intent answer box */}
+                {data.fromBase && (
+                  <p className="inline-flex items-center gap-2 mt-4 px-3 py-1.5 rounded-full bg-teal-50 border border-teal-200 text-teal-900 text-xs font-semibold">
+                    <MapPin className="w-3.5 h-3.5" aria-hidden="true" />
+                    Local team: {data.name} is {data.fromBase} from our Harrisdale base
+                  </p>
+                )}
                 <div className="bg-teal-subtle/40 p-5 rounded-xl border border-teal-border mt-4">
                   <p className="text-navy font-semibold text-sm leading-relaxed">
                     <strong>Looking for an at-home nurse near you in {data.name}?</strong> Care N Cure AHPRA Registered Nurses travel directly to your door — no referral required. We provide aged care in-home support, wound dressing, medication administration, and post-hospital recovery nursing. Call <a href="tel:1300919663" className="text-teal-text hover:underline font-bold">1300 919 663</a> for a same-day intake discussion.
@@ -610,6 +769,29 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
                     </div>
                   </div>
                 )}
+              </div>
+
+              {/* Local family mindset — answers the real worries behind "aged care [suburb]" searches */}
+              <div className="space-y-4 p-6 rounded-2xl border border-border bg-surface">
+                <h2 className="text-navy text-2xl font-bold">What {data.name} families usually ask us first</h2>
+                <div className="space-y-4 text-sm text-body leading-relaxed">
+                  <div>
+                    <h3 className="text-navy font-bold text-base">&ldquo;Mum&apos;s Home Care Package changed to Support at Home — what does that mean?&rdquo;</h3>
+                    <p className="mt-1">Since 1 November 2025, Home Care Packages have been replaced by the Support at Home program, with budgets managed quarterly. Under Support at Home, clinical care such as registered nursing does not attract a participant contribution. We explain your options in plain English and work alongside your provider or self-managed arrangement. <Link href="/support-at-home" className="text-teal-text font-semibold hover:underline">Read our Support at Home guide</Link>.</p>
+                  </div>
+                  <div>
+                    <h3 className="text-navy font-bold text-base">&ldquo;We&apos;re stuck waiting for My Aged Care — can someone help now?&rdquo;</h3>
+                    <p className="mt-1">Yes. Private nurse visits can start within 24–48 hours in {data.name}, with no referral. When funding comes through, your parent keeps the same nurse.</p>
+                  </div>
+                  <div>
+                    <h3 className="text-navy font-bold text-base">&ldquo;Will it be a different stranger every week?&rdquo;</h3>
+                    <p className="mt-1">No. Large agencies often rotate staff. With Care N Cure, one dedicated Registered Nurse gets to know your parent, their GP, and their routine — and is the person you call.</p>
+                  </div>
+                  <div>
+                    <h3 className="text-navy font-bold text-base">&ldquo;Are you actually local?&rdquo;</h3>
+                    <p className="mt-1">Yes. We are a Perth nursing practice based at 15 Rockefeller Way, Harrisdale WA 6112, rated 5.0 on Google by local families. {data.fromBase ? `${data.name} is ${data.fromBase} from our base.` : `We visit ${data.name} and nearby ${data.surroundingSuburbs} regularly.`}</p>
+                  </div>
+                </div>
               </div>
 
               <div className="space-y-4">
@@ -800,7 +982,7 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
 
       <CTASection
         title={`Need an at-home nurse or aged care support in ${data.name}?`}
-        description={`Our AHPRA Registered Nurses visit ${data.name} residents within 24–48 hours. No referral needed. Private funding, Home Care Packages, NDIS, and Support at Home all accepted. Call 1300 919 663.`}
+        description={`Our AHPRA Registered Nurses visit ${data.name} residents within 24–48 hours. No referral needed. Private funding, Support at Home (formerly Home Care Packages), NDIS, and DVA. Call 1300 919 663.`}
         secondaryLink={{ text: 'Book a Nurse in ' + data.name, href: '/contact', isPhone: false }}
       />
     </>

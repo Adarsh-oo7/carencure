@@ -7,10 +7,35 @@ import { Smile, ShieldCheck, Heart, Sparkles, CheckCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Companion Care Perth | Home Companion Services | Care N Cure',
+    absolute: 'Companion Care Perth | Nurse-Led In-Home Companionship | Care N Cure',
   },
-  description: 'Meaningful companionship with nurse-led oversight. Social engagement, meal support & wellbeing checks by caring professionals. Serving Perth & surrounds.',
+  description:
+    'Perth\'s nurse-supervised companion care service. Social engagement, wellbeing checks & meal support for seniors at home. Registered Nurse oversight on every visit. Serving Perth metro. Call 1300 919 663.',
+  keywords: [
+    'companion care perth',
+    'elderly companion care perth',
+    'in home companion care perth',
+    'companion services for elderly perth',
+    'social support elderly perth',
+    'nurse companion care perth',
+    'home companion perth',
+    'elderly social engagement perth',
+  ],
   alternates: { canonical: 'https://carencure.com.au/companion-care' },
+  openGraph: {
+    title: 'Companion Care Perth | Nurse-Led In-Home Companionship | Care N Cure',
+    description:
+      'Perth\'s nurse-supervised companion care service. Social engagement, wellbeing checks & meal support for seniors at home. Call 1300 919 663.',
+    url: 'https://carencure.com.au/companion-care',
+    type: 'website',
+    siteName: 'Care N Cure Nursing Care Services',
+    locale: 'en_AU',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Companion Care Perth | Nurse-Led In-Home Companionship | Care N Cure',
+    description: 'Nurse-supervised companion care for seniors across Perth. Social engagement, wellbeing checks & meal support. Call 1300 919 663.',
+  },
 }
 
 

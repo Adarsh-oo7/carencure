@@ -21,33 +21,39 @@ import { CtaUncertaintyReducer } from '@/components/sections/cta-uncertainty-red
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'At Home Nurse for Elderly Perth | Private In-Home Care & Nursing | Care N Cure',
+    absolute: 'At Home Nurse for Elderly Perth | Private In-Home Elderly Care | Care N Cure',
   },
   description:
-    'Need an at home nurse for an elderly parent in Perth? Care N Cure provides AHPRA-registered nurse coordinators for private in-home elderly care, wound dressing, medication safety & HCP support. Call 1300 919 663.',
+    'Caring for an elderly parent in Perth? Care N Cure provides dedicated AHPRA Registered Nurses for in-home elderly care — wound dressing, medication safety, health monitoring & HCP/Support at Home funding. No referral needed. Call 1300 919 663.',
   keywords: [
+    'at home nurse for elderly perth',
     'at home nurse for elderly',
-    'at home nurses for elderly',
-    'at home nurse elderly',
+    'private nurse for elderly perth',
+    'private in home care for the elderly perth',
+    'in home nursing care for elderly perth',
+    'nursing care for elderly at home',
+    'elderly home care nurse perth',
+    'aged care nurse at home perth',
+    'nurse for elderly parent perth',
     'how to hire a private nurse for home care',
-    'private in home care for the elderly',
-    'nursing care at home service',
-    'private nurse home',
-    'home nursing care services',
-    'private nurses for home care',
-    'nurses for home care',
-    'private nurses for elderly perth',
-    'in home aged care perth',
-    'home care packages perth',
-    'support at home perth',
-    'elderly care nursing perth',
+    'home care packages perth elderly',
+    'support at home perth elderly',
+    'private nursing elderly care perth wa',
   ],
   alternates: { canonical: 'https://carencure.com.au/private-nursing/elderly-care' },
   openGraph: {
-    title: 'At Home Nurse for Elderly Perth | Private In-Home Care & Nursing | Care N Cure',
+    title: 'At Home Nurse for Elderly Perth | Private In-Home Elderly Care | Care N Cure',
     description:
-      'Compassionate at home nurses for elderly care across Perth. Dedicated AHPRA registered nurse coordinators, medication management, wound care, and HCP funding.',
+      'Dedicated AHPRA Registered Nurses for in-home elderly care across Perth. Wound dressing, medication safety, health monitoring & HCP funding. No referral needed. Call 1300 919 663.',
     url: 'https://carencure.com.au/private-nursing/elderly-care',
+    type: 'website',
+    siteName: 'Care N Cure Nursing Care Services',
+    locale: 'en_AU',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'At Home Nurse for Elderly Perth | Care N Cure',
+    description: 'AHPRA Registered Nurses for in-home elderly care across Perth. No referral needed. Wound care, medication & HCP funding support.',
   },
 }
 

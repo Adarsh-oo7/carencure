@@ -25,6 +25,9 @@ const AREA_SERVED = [
   'Karrinyup', 'Como', 'Bicton', 'East Fremantle',
   'Shenton Park', 'Dalkeith', 'City Beach',
   'Harrisdale', 'Byford', 'Piara Waters', 'Thornlie',
+  'Southern River', 'Forrestdale', 'Willetton', 'Kelmscott',
+  'Cockburn Central', 'Success', 'Atwell', 'Bull Creek', 'Leeming',
+  'Melville', 'Baldivis', 'Riverton', 'Huntingdale', 'Maddington',
 ]
 
 // ── MedicalOrganization (Homepage primary schema) ──────────────────────────

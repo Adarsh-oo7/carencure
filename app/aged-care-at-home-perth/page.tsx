@@ -18,34 +18,37 @@ import {
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Aged Care at Home Perth | In-Home Aged Care Support & Nursing WA | Care N Cure',
+    absolute: 'Aged Care at Home Perth | Local Nurse-Led Aged Care Agency WA | Care N Cure',
   },
   description:
-    'Nurse-led aged care in-home support for seniors across Perth, Harrisdale & Canning Vale. Registered nurse visits, personal care, Home Care Packages (HCP Levels 1–4) & 24–48h intake. Call 1300 919 663.',
+    'Local, nurse-led aged care agency in Perth (Harrisdale). Same Registered Nurse every visit, Support at Home & private care, start in 24–48h while you wait for My Aged Care. 5.0★ Google. Call 1300 919 663.',
   keywords: [
     'aged care at home perth',
+    'aged care agency perth',
+    'aged care agency perth wa',
+    'age care agency in perth',
+    'aged care agencies perth',
+    'aged care providers perth',
     'aged care in home support',
     'aged care in home services perth',
     'in home aged care perth',
     'aged care support at home perth',
-    'aged care agency perth',
     'aged care near me perth',
-    'aged care home services wa',
-    'aged care assistance at home',
+    'aged care wa',
+    'carers for elderly perth',
     'aged care canning vale',
     'aged care at home harrisdale',
     'elderly care at home perth',
-    'home care packages perth',
+    'support at home providers perth',
     'support at home perth',
     'private aged care perth',
     'home nursing for elderly perth',
-    'registered nurse elderly care perth',
   ],
   alternates: { canonical: 'https://carencure.com.au/aged-care-at-home-perth' },
   openGraph: {
-    title: 'Aged Care at Home Perth | In-Home Aged Care Support & Nursing WA | Care N Cure',
+    title: 'Aged Care at Home Perth | Local Nurse-Led Aged Care Agency WA | Care N Cure',
     description:
-      'Nurse-led aged care in-home support for seniors across Perth. Registered nurse visits, personal care, medication management & Home Care Packages. Call 1300 919 663.',
+      'Local nurse-led aged care in Perth. Same Registered Nurse every visit, Support at Home & private care, 24–48h start. Call 1300 919 663.',
     url: 'https://carencure.com.au/aged-care-at-home-perth',
   },
 }
@@ -54,7 +57,12 @@ const faqs = [
   {
     question: 'How do I arrange aged care at home for my elderly parent in Perth?',
     answer:
-      'Arranging care is straightforward. You can call Care N Cure directly on 1300 919 663 to speak with a Registered Nurse Coordinator. If your parent has an existing Home Care Package (HCP Levels 1–4) or wishes to self-fund private nursing, we can complete an in-home assessment and start care within 24 to 48 hours. If you have not yet applied through My Aged Care, our team guides your family step-by-step through the assessment process.',
+      'Call Care N Cure on 1300 919 663 to speak with a Registered Nurse. If your parent already has a Support at Home budget (formerly a Home Care Package), or you prefer to pay privately, we complete an in-home assessment and can start care within 24 to 48 hours. If you have not yet applied, register with My Aged Care (1800 200 422) — we guide your family through each step.',
+  },
+  {
+    question: 'Is Care N Cure an aged care agency in Perth?',
+    answer:
+      'Care N Cure is a local, nurse-led aged care and home nursing practice based in Harrisdale, Perth. Unlike a traditional agency that sends whoever is available, every family is matched with one dedicated Registered Nurse who coordinates their care, talks to their GP, and visits on a predictable schedule.',
   },
   {
     question: 'Why choose nurse-led home care over a standard aged care agency?',
@@ -62,19 +70,19 @@ const faqs = [
       'Standard agencies typically send rotating support workers with varying experience. At Care N Cure, every family is assigned One Dedicated Registered Nurse Coordinator. Your coordinator oversees clinical health, coordinates with your parent’s GP and specialists, monitors chronic conditions, administers medications, dresses complex wounds, and provides a continuous trusted relationship for your family.',
   },
   {
-    question: 'Can we use Home Care Package (HCP) or Support at Home funding?',
+    question: 'Home Care Packages changed to Support at Home — what does that mean for us?',
     answer:
-      'Yes. Care N Cure works with self-managed and plan-managed Home Care Package providers (including our partnership with Trilogy Care) and is fully aligned with the Australian Government Support at Home program. We ensure transparent pricing with zero travel fees across our 50km Perth metro radius.',
+      'On 1 November 2025, Home Care Packages were replaced by the Support at Home program. People now receive one of eight funding classifications, managed as quarterly budgets. Existing package holders moved across automatically. Under Support at Home, clinical care such as registered nursing does not attract a participant contribution. The Commonwealth Home Support Programme (CHSP) continues until at least July 2027. We work with your Support at Home provider or self-managed arrangement — including our partnership with Trilogy Care.',
   },
   {
     question: 'Do you offer aged care at home in Harrisdale, Piara Waters, and surrounding suburbs?',
     answer:
-      'Yes. Our practice headquarters is located at 15 Rockefeller Way, Harrisdale WA 6112. We provide immediate in-home aged care coverage across Harrisdale, Piara Waters, Canning Vale, Southern River, Armadale, Gosnells, Cockburn, South Perth, Nedlands, and all Perth metropolitan suburbs within 50km.',
+      'Yes. Our practice is based at 15 Rockefeller Way, Harrisdale WA 6112. We provide in-home aged care across Harrisdale, Piara Waters, Southern River, Forrestdale, Canning Vale, Thornlie, Gosnells, Armadale, Kelmscott, Byford, Willetton, Cockburn Central and Bull Creek, plus most Perth metropolitan suburbs within 50km.',
   },
   {
     question: 'Can private nursing care start immediately while we wait for My Aged Care approval?',
     answer:
-      'Absolutely. My Aged Care approvals can take months. Many Perth families engage Care N Cure for private in-home nursing or personal care on an interim basis, and then transition seamlessly to government funding once their package is assigned.',
+      'Absolutely. Assessments and funding can take months. Many Perth families engage Care N Cure for private in-home nursing or personal care on an interim basis, then continue with the same nurse once their Support at Home budget is assigned.',
   },
 ]
 
@@ -96,8 +104,8 @@ export default function AgedCareAtHomePerthPage() {
 
       {/* Page Header */}
       <PageHeader
-        title="Aged Care at Home in Perth and Harrisdale"
-        subtitle="Compassionate, nurse-led in-home care for your loved ones. One dedicated nurse coordinator, transparent Home Care Package support, and clinical excellence."
+        title="Aged Care at Home in Perth — A Local, Nurse-Led Team"
+        subtitle="Based in Harrisdale and rated 5.0 on Google by local families. One dedicated Registered Nurse, plain-English help with Support at Home, and care that can start in 24–48 hours."
         breadcrumbItems={[
           { name: 'Services', href: '/services' },
           { name: 'Aged Care at Home Perth', href: '/aged-care-at-home-perth' },
@@ -142,10 +150,10 @@ export default function AgedCareAtHomePerthPage() {
                 <div className="p-4 rounded-xl border border-border bg-surface flex flex-col gap-2">
                   <div className="flex items-center gap-2.5">
                     <FileCheck className="w-5 h-5 text-teal-accent shrink-0" />
-                    <h3 className="font-bold text-navy text-sm">HCP & Support at Home</h3>
+                    <h3 className="font-bold text-navy text-sm">Support at Home &amp; Private</h3>
                   </div>
                   <p className="text-xs text-body">
-                    Transparent pricing compatible with Home Care Packages (Levels 1–4) and the new Support at Home framework.
+                    Works with Support at Home budgets (formerly Home Care Packages), private pay, NDIS and DVA. No participant contribution for clinical nursing under Support at Home.
                   </p>
                 </div>
 
@@ -309,6 +317,72 @@ export default function AgedCareAtHomePerthPage() {
         </div>
       </section>
 
+      {/* How Perth families choose — addresses the local decision mindset */}
+      <section className="section-py bg-white">
+        <div className="section-container">
+          <div className="text-center max-w-2xl mx-auto mb-10">
+            <p className="section-label">Choosing an Aged Care Provider in Perth</p>
+            <h2 className="text-navy text-2xl sm:text-3xl font-extrabold mt-1">
+              Large Aged Care Agency or Local Nurse-Led Team?
+            </h2>
+            <p className="text-body text-sm mt-3">
+              Perth families searching for aged care usually compare a few big providers with smaller local teams. Here is an honest comparison to help you decide.
+            </p>
+          </div>
+          <div className="overflow-x-auto max-w-4xl mx-auto">
+            <table className="w-full text-sm border border-border rounded-xl overflow-hidden">
+              <thead className="bg-surface text-navy">
+                <tr>
+                  <th scope="col" className="text-left p-4 font-bold">What families ask</th>
+                  <th scope="col" className="text-left p-4 font-bold">Typical large agency</th>
+                  <th scope="col" className="text-left p-4 font-bold text-teal-text">Care N Cure (Harrisdale)</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-border text-body">
+                <tr>
+                  <td className="p-4 font-semibold text-navy">Who visits Mum?</td>
+                  <td className="p-4">Whoever is rostered that week</td>
+                  <td className="p-4">The same dedicated Registered Nurse</td>
+                </tr>
+                <tr>
+                  <td className="p-4 font-semibold text-navy">Who do I call?</td>
+                  <td className="p-4">A central call centre</td>
+                  <td className="p-4">Your nurse coordinator, directly</td>
+                </tr>
+                <tr>
+                  <td className="p-4 font-semibold text-navy">How fast can care start?</td>
+                  <td className="p-4">Often a waitlist for new clients</td>
+                  <td className="p-4">Assessment within 24–48 hours</td>
+                </tr>
+                <tr>
+                  <td className="p-4 font-semibold text-navy">Clinical skills</td>
+                  <td className="p-4">Mostly support workers, nurses on request</td>
+                  <td className="p-4">AHPRA Registered Nurses for clinical care</td>
+                </tr>
+                <tr>
+                  <td className="p-4 font-semibold text-navy">Waiting for My Aged Care?</td>
+                  <td className="p-4">Usually need funding first</td>
+                  <td className="p-4">Start privately now, keep the same nurse later</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div className="max-w-4xl mx-auto mt-8 p-6 rounded-2xl bg-teal-50/60 border border-teal-200 text-sm text-body leading-relaxed">
+            <h3 className="text-navy font-bold text-base mb-2">Support at Home in plain English (WA, 2026)</h3>
+            <ul className="space-y-1.5 list-disc pl-5">
+              <li>Home Care Packages were replaced by <strong>Support at Home</strong> on 1 November 2025.</li>
+              <li>Funding is now one of <strong>eight classifications</strong>, managed as <strong>quarterly budgets</strong>.</li>
+              <li><strong>Clinical care</strong> (such as registered nursing) has <strong>no participant contribution</strong>.</li>
+              <li>Existing package holders moved across automatically; CHSP continues until at least July 2027.</li>
+              <li>Start with <strong>My Aged Care: 1800 200 422</strong>. Waiting? We can start private visits now.</li>
+            </ul>
+            <Link href="/support-at-home" className="inline-flex items-center gap-1 mt-3 text-teal-text font-bold hover:underline">
+              Full Support at Home guide <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Suburb Coverage Map / Focus */}
       <section className="section-py bg-white">
         <div className="section-container">
@@ -319,7 +393,7 @@ export default function AgedCareAtHomePerthPage() {
                 Caring for Seniors in Harrisdale & Across Greater Perth
               </h2>
               <p className="text-white/80 text-sm leading-relaxed mb-6">
-                Based at 15 Rockefeller Way, Harrisdale WA 6112, our nursing team regularly visits elderly clients throughout the South-East corridor (Harrisdale, Piara Waters, Canning Vale, Armadale, Gosnells, Thornlie) as well as Nedlands, Claremont, Cottesloe, Fremantle, Rockingham, South Perth, and Joondalup.
+                Based at 15 Rockefeller Way, Harrisdale WA 6112, our nursing team regularly visits elderly clients throughout the South-East corridor (Harrisdale, Piara Waters, Southern River, Forrestdale, Canning Vale, Thornlie, Gosnells, Armadale, Kelmscott, Byford, Willetton) and the southern suburbs (Cockburn Central, Bull Creek, Melville, Baldivis), as well as Nedlands, Claremont, Fremantle, Rockingham, South Perth, and Joondalup.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link
@@ -352,6 +426,24 @@ export default function AgedCareAtHomePerthPage() {
                 >
                   South Perth →
                 </Link>
+                {[
+                  ['piara-waters', 'Piara Waters'],
+                  ['southern-river', 'Southern River'],
+                  ['thornlie', 'Thornlie'],
+                  ['kelmscott', 'Kelmscott'],
+                  ['willetton', 'Willetton'],
+                  ['cockburn-central', 'Cockburn Central'],
+                  ['melville', 'Melville'],
+                  ['baldivis', 'Baldivis'],
+                ].map(([slug, name]) => (
+                  <Link
+                    key={slug}
+                    href={`/locations/${slug}`}
+                    className="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-semibold transition-colors"
+                  >
+                    {name} →
+                  </Link>
+                ))}
                 <Link
                   href="/locations"
                   className="px-4 py-2 rounded-xl bg-teal-accent text-navy font-bold text-xs hover:bg-teal-300 transition-colors"
@@ -388,7 +480,7 @@ export default function AgedCareAtHomePerthPage() {
       {/* CTA Section */}
       <CTASection
         title="Speak with a Perth Registered Nurse Today"
-        subtitle="Call 1300 919 663 or send an enquiry to discuss how we can support your parent to live comfortably at home."
+        description="Call 1300 919 663 or send an enquiry to discuss how we can support your parent to live comfortably at home."
       />
     </>
   )

@@ -7,10 +7,35 @@ import { MedicalBusinessSchema } from '@/components/schema'
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Contact Care N Cure | Direct Nurse Reach Out | Perth',
+    absolute: 'Book a Home Nurse Perth | Contact Care N Cure Nursing Care Services',
   },
-  description: 'Connect directly with an AHPRA registered nurse in Perth via Phone, WhatsApp, SMS, Instagram, or Email. 50km service radius with zero travel charges.',
+  description:
+    'Ready to book a home nurse in Perth? Contact Care N Cure directly by phone, WhatsApp, or SMS. An AHPRA Registered Nurse will respond within hours. No referral needed. Call 1300 919 663.',
+  keywords: [
+    'book a home nurse perth',
+    'contact home nurse perth',
+    'care n cure contact',
+    'book registered nurse perth',
+    'enquire home nursing perth',
+    'book a nurse visit perth',
+    'home nursing enquiry perth',
+    'care n cure nursing phone number',
+  ],
   alternates: { canonical: 'https://carencure.com.au/contact' },
+  openGraph: {
+    title: 'Book a Home Nurse Perth | Contact Care N Cure Nursing Care Services',
+    description:
+      'Book a home nurse in Perth. Call, WhatsApp or SMS Care N Cure for an AHPRA Registered Nurse response within hours. No referral needed. Call 1300 919 663.',
+    url: 'https://carencure.com.au/contact',
+    type: 'website',
+    siteName: 'Care N Cure Nursing Care Services',
+    locale: 'en_AU',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Book a Home Nurse Perth | Contact Care N Cure',
+    description: 'Book a home nurse in Perth. Call, WhatsApp or SMS. An AHPRA Registered Nurse responds within hours.',
+  },
 }
 
 const EMAIL = 'hello@carencure.com.au'

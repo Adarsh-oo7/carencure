@@ -10,11 +10,41 @@ import { CtaUncertaintyReducer } from '@/components/sections/cta-uncertainty-red
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Private Nurse Perth | Hire In-Home Registered Nurses | Care N Cure',
+    absolute: 'Private Nurse Perth | Hire an AHPRA Registered Nurse at Home | Care N Cure',
   },
   description:
-    'Need to hire a private nurse at home in Perth? AHPRA Registered Nurses for wound care, injections, post-op recovery & elderly care. No referral needed. Call 1300 919 663.',
+    'Hire a private registered nurse at home in Perth — no GP referral needed. Care N Cure provides AHPRA-registered nurses for wound care, injections, medication management, post-op recovery & elderly care across Perth metro. Call 1300 919 663.',
+  keywords: [
+    'private nurse perth',
+    'private nurse at home perth',
+    'hire a private nurse perth',
+    'private home nurse perth',
+    'registered nurse home visit perth',
+    'nurse at home perth',
+    'private nursing care perth',
+    'in home nursing perth',
+    'mobile nurse perth',
+    'how to hire a private nurse for home care',
+    'private nursing services perth wa',
+    'private nurse near me perth',
+    'at home nurse perth',
+    'nursing care at home perth',
+  ],
   alternates: { canonical: 'https://carencure.com.au/private-nursing' },
+  openGraph: {
+    title: 'Private Nurse Perth | Hire an AHPRA Registered Nurse at Home | Care N Cure',
+    description:
+      'Hire a private registered nurse at home in Perth — no GP referral needed. AHPRA-registered nurses for wound care, injections, post-op recovery & elderly care across Perth metro. Call 1300 919 663.',
+    url: 'https://carencure.com.au/private-nursing',
+    type: 'website',
+    siteName: 'Care N Cure Nursing Care Services',
+    locale: 'en_AU',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Private Nurse Perth | AHPRA Registered In-Home Nursing | Care N Cure',
+    description: 'Hire a private registered nurse at home in Perth. No GP referral needed. Wound care, injections, aged care. Call 1300 919 663.',
+  },
 }
 
 const faqs = [

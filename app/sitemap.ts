@@ -44,6 +44,14 @@ const suburbs = [
   'byford',
   'piara-waters',
   'thornlie',
+  'southern-river',
+  'forrestdale',
+  'willetton',
+  'kelmscott',
+  'cockburn-central',
+  'bull-creek',
+  'melville',
+  'baldivis',
 ]
 
 // Must match slug values in lib/blog-data.ts

@@ -2,6 +2,18 @@ import Link from 'next/link'
 import { MapPin, ArrowRight, ShieldCheck, Navigation } from 'lucide-react'
 
 const suburbs = [
+  { name: 'Harrisdale', href: '/locations/harrisdale' },
+  { name: 'Piara Waters', href: '/locations/piara-waters' },
+  { name: 'Southern River', href: '/locations/southern-river' },
+  { name: 'Forrestdale', href: '/locations/forrestdale' },
+  { name: 'Thornlie', href: '/locations/thornlie' },
+  { name: 'Kelmscott', href: '/locations/kelmscott' },
+  { name: 'Byford', href: '/locations/byford' },
+  { name: 'Willetton', href: '/locations/willetton' },
+  { name: 'Cockburn Central', href: '/locations/cockburn-central' },
+  { name: 'Bull Creek', href: '/locations/bull-creek' },
+  { name: 'Melville', href: '/locations/melville' },
+  { name: 'Baldivis', href: '/locations/baldivis' },
   { name: 'Nedlands', href: '/locations/nedlands' },
   { name: 'Subiaco', href: '/locations/subiaco' },
   { name: 'Cottesloe', href: '/locations/cottesloe' },
