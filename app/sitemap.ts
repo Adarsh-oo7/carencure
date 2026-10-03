@@ -74,12 +74,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.95,
     },
     {
-      url: `${BASE_URL}/aged-care`,
-      lastModified: NOW,
-      changeFrequency: 'monthly',
-      priority: 0.95,
-    },
-    {
       url: `${BASE_URL}/your-dedicated-nurse`,
       lastModified: NOW,
       changeFrequency: 'monthly',

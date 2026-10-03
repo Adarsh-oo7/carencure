@@ -8,27 +8,37 @@ import {
   HelpCircle,
   Building2,
   ArrowRight,
+  HeartHandshake,
+  UserCheck,
+  Activity,
 } from 'lucide-react'
 
 interface DecisionOption {
   title: string
   description: string
   href: string
-  icon: typeof Stethoscope
+  icon: any
   badge: string
 }
 
 const options: DecisionOption[] = [
   {
+    title: 'Aged care at home in Perth',
+    description: 'Nurse-led in-home aged care support, daily living assistance, chronic illness monitoring, and dignified aging at home.',
+    href: '/aged-care-at-home-perth',
+    icon: HeartHandshake,
+    badge: 'Aged Care at Home',
+  },
+  {
     title: 'In-home care for an elderly parent',
-    description: 'Dedicated registered nurse visits, medication safety, health monitoring, and Home Care Package / Support at Home coordination.',
+    description: 'Dedicated registered nurse coordinators, medication safety, health monitoring, and direct family handover notes.',
     href: '/private-nursing/elderly-care',
     icon: Heart,
-    badge: 'Aged & Elderly Care',
+    badge: 'Elderly Care',
   },
   {
     title: 'A private nurse for a clinical task',
-    description: 'Injections, catheter changes, health assessments, or acute registered nursing care at home.',
+    description: 'Injections, catheter changes, clinical health assessments, or acute registered nursing care at home in Perth.',
     href: '/private-nursing',
     icon: Stethoscope,
     badge: 'Private Nursing',
@@ -48,25 +58,32 @@ const options: DecisionOption[] = [
     badge: 'Aged Care Funding',
   },
   {
+    title: 'NDIS nursing & complex clinical needs',
+    description: 'AHPRA registered nurse home visits for complex clinical needs, continence assessments, catheter care, and NDIS participants.',
+    href: '/ndis-nursing',
+    icon: Building2,
+    badge: 'NDIS Nursing',
+  },
+  {
     title: 'Wound dressing or ulcer management',
-    description: 'Sterile surgical wound dressings, skin tears, pressure injuries, and chronic ulcer management.',
+    description: 'Sterile surgical wound dressings, skin tears, pressure injuries, and chronic ulcer healing progression reviews.',
     href: '/wound-care',
     icon: Bandage,
     badge: 'Wound Care',
   },
   {
-    title: 'Medication management & injections',
-    description: 'Medication reconciliation, Webster-pack safety, insulin and Clexane injections, and vital sign tracking.',
-    href: '/medication-management',
-    icon: Pill,
-    badge: 'Medication Support',
+    title: 'Personal care & daily routine support',
+    description: 'Gentle, respectful showering, grooming, dressing, and hygiene support supervised by Registered Nurse coordinators.',
+    href: '/personal-care',
+    icon: UserCheck,
+    badge: 'Personal Care',
   },
   {
-    title: 'Community nursing for complex needs & NDIS',
-    description: 'AHPRA registered nurse home visits for complex clinical needs, continence, and NDIS participants.',
-    href: '/community-nursing',
-    icon: Building2,
-    badge: 'Community Nursing',
+    title: 'Physiotherapy & mobile dietitian',
+    description: 'In-home physiotherapy for mobility and falls prevention, plus accredited dietitians for aged care and diabetic nutrition.',
+    href: '/physiotherapy',
+    icon: Activity,
+    badge: 'Allied Health',
   },
 ]
 

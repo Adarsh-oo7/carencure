@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { PageHeader } from '@/components/page-header'
 import { CTASection } from '@/components/sections/cta'
-import { ServicePageSchema } from '@/components/schema'
+import { ServicePageSchema, FAQPageSchema } from '@/components/schema'
 import { ContactForm } from '@/components/contact-form'
 import { Heart, CheckCircle, HeartPulse, ShieldCheck, ArrowRight, UserCheck, Sparkles, Clock } from 'lucide-react'
 
@@ -81,6 +81,7 @@ export default function PersonalCare() {
           { name: 'Personal Care', item: 'https://carencure.com.au/personal-care' },
         ]}
       />
+      <FAQPageSchema faqs={faqs} />
 
       <PageHeader
         title="Personal Care at Home in Perth"

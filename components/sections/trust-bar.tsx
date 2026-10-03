@@ -1,66 +1,66 @@
-import { MapPin, HeartHandshake, Stethoscope, Handshake, Heart, CheckCircle2 } from 'lucide-react'
+import { Star, HeartHandshake, ShieldCheck, Handshake, Heart, Clock } from 'lucide-react'
 
 const trustItems = [
   {
-    icon: MapPin,
-    label: 'Locally Owned & Operated',
-    sub: 'Proudly Perth-based home care',
-    id: 'trust-local',
+    icon: Star,
+    label: '★ 5.0 Google Rating',
+    sub: '12 Verified Perth Family Reviews',
+    id: 'trust-rating',
+    iconColor: '#CA8A04',
   },
   {
-    icon: HeartHandshake,
-    label: 'Support at Home Provider',
-    sub: 'Nurse-led companion and domestic care',
-    id: 'trust-sah',
-  },
-  {
-    icon: Stethoscope,
-    label: 'Home & Community Nursing',
-    sub: 'Specialist clinical and palliative care',
-    id: 'trust-nursing',
+    icon: Heart,
+    label: 'Dedicated Nurse Coordinator',
+    sub: 'The same nurse who knows your parent',
+    id: 'trust-dedicated',
+    iconColor: '#0D9488',
   },
   {
     icon: Handshake,
     label: 'Partnering with Trilogy Care',
-    sub: 'Approved Home Care Package management',
+    sub: 'Approved Home Care Packages (Levels 1–4)',
     id: 'trust-trilogy',
+    iconColor: '#0D9488',
   },
   {
-    icon: Heart,
-    label: 'Your Dedicated Nurse™ Model',
-    sub: 'One nurse coordinator assigned to you',
-    id: 'trust-dedicated',
+    icon: Clock,
+    label: 'Rapid 24–48h Assessment',
+    sub: 'Fast clinical intake across Perth',
+    id: 'trust-intake',
+    iconColor: '#0D9488',
   },
   {
-    icon: CheckCircle2,
-    label: "Registered Nurse Clinical Care from $110/hr*",
-    sub: 'Transparent weekday rates · Case-by-case',
+    icon: ShieldCheck,
+    label: '0 Travel Surcharges',
+    sub: '50km Perth metropolitan service radius',
+    id: 'trust-travel',
+    iconColor: '#0D9488',
+  },
+  {
+    icon: HeartHandshake,
+    label: 'Transparent Rates from $110/hr*',
+    sub: 'No lock-in contracts or hidden fees',
     id: 'trust-pricing',
-  },
-  {
-    icon: CheckCircle2,
-    label: 'Lower-Cost Home Care Provider',
-    sub: 'One of Australia’s more affordable home care options',
-    id: 'trust-cost',
+    iconColor: '#0D9488',
   },
 ]
 
 export function TrustBar() {
   return (
-    <section className="py-8 bg-white border-b border-border" aria-label="Trust credentials">
+    <section className="py-7 bg-white border-b border-border shadow-xs" aria-label="Trust credentials">
       <div className="section-container">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6">
-          {trustItems.map(({ icon: Icon, label, sub, id }) => (
-            <div key={id} id={id} className="flex flex-col items-center text-center gap-2 py-3">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          {trustItems.map(({ icon: Icon, label, sub, id, iconColor }) => (
+            <div key={id} id={id} className="flex flex-col items-center text-center gap-2 py-2 px-1">
               <div
-                className="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0"
-                style={{ background: 'var(--teal)', color: 'var(--navy)' }}
+                className="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0 shadow-xs"
+                style={{ background: 'var(--teal-subtle)', color: iconColor }}
               >
                 <Icon className="w-5 h-5" />
               </div>
               <div>
-                <div className="font-semibold text-sm text-navy leading-tight">{label}</div>
-                <div className="text-xs mt-0.5" style={{ color: 'var(--text-muted)' }}>{sub}</div>
+                <div className="font-bold text-xs sm:text-sm text-navy leading-snug">{label}</div>
+                <div className="text-[11px] mt-0.5 leading-tight" style={{ color: 'var(--text-muted)' }}>{sub}</div>
               </div>
             </div>
           ))}

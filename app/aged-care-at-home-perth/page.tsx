@@ -18,24 +18,36 @@ import {
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Aged Care at Home in Perth | Home Care Packages | Care N Cure',
+    absolute: 'Aged Care at Home Perth | In-Home Aged Care Support & Nursing WA | Care N Cure',
   },
   description:
-    'Registered nurse-led aged care at home in Perth and Harrisdale. Compassionate in-home elderly care, Home Care Package guidance, Support at Home, medication oversight, and dedicated nurse coordinators. Call 1300 919 663.',
+    'Nurse-led aged care in-home support for seniors across Perth, Harrisdale & Canning Vale. Registered nurse visits, personal care, Home Care Packages (HCP Levels 1–4) & 24–48h intake. Call 1300 919 663.',
   keywords: [
     'aged care at home perth',
+    'aged care in home support',
+    'aged care in home services perth',
+    'in home aged care perth',
+    'aged care support at home perth',
+    'aged care agency perth',
+    'aged care near me perth',
+    'aged care home services wa',
+    'aged care assistance at home',
+    'aged care canning vale',
     'aged care at home harrisdale',
     'elderly care at home perth',
-    'home care packages harrisdale',
+    'home care packages perth',
     'support at home perth',
     'private aged care perth',
     'home nursing for elderly perth',
-    'aged care provider near piara waters',
-    'in home aged care perth',
-    'aged care support at home perth',
     'registered nurse elderly care perth',
   ],
   alternates: { canonical: 'https://carencure.com.au/aged-care-at-home-perth' },
+  openGraph: {
+    title: 'Aged Care at Home Perth | In-Home Aged Care Support & Nursing WA | Care N Cure',
+    description:
+      'Nurse-led aged care in-home support for seniors across Perth. Registered nurse visits, personal care, medication management & Home Care Packages. Call 1300 919 663.',
+    url: 'https://carencure.com.au/aged-care-at-home-perth',
+  },
 }
 
 const faqs = [

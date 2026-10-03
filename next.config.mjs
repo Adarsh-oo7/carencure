@@ -25,6 +25,12 @@ const nextConfig = {
         destination: '/:path*',
         permanent: true,
       },
+      // Redirect /aged-care to primary canonical URL to avoid keyword cannibalization
+      {
+        source: '/aged-care',
+        destination: '/aged-care-at-home-perth',
+        permanent: true,
+      },
       // Fix Google Search Console 404 reported URL errors (legacy suburb-Suburb slug pattern)
       {
         source: '/locations/fremantle-Fremantle',

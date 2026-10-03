@@ -14,27 +14,49 @@ import {
   Package,
   Stethoscope,
   ArrowRight,
+  ShieldCheck,
+  UserCheck,
+  Apple,
+  Heart,
 } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Our Nursing Services | Home Care Perth | Care N Cure',
+    absolute: 'Our Nursing & Aged Care Services | Home Care Perth | Care N Cure',
   },
   description:
-    'Full range of registered nurse home care services. Private nursing, wound care, medication management, post-hospital care & Home Care Package coordination.',
+    'Comprehensive nurse-led home care & aged care in Perth. Private nursing, aged care at home, NDIS nursing, wound care, physiotherapy, dietitian & HCP management. Call 1300 919 663.',
   alternates: { canonical: 'https://carencure.com.au/services' },
   openGraph: {
-    title: 'Our Nursing Services | Home Care Perth | Care N Cure',
+    title: 'Our Nursing & Aged Care Services | Home Care Perth | Care N Cure',
     description:
-      'Full range of registered nurse home care services. Private nursing, wound care, medication management, post-hospital care & Home Care Package coordination.',
+      'Comprehensive nurse-led home care & aged care in Perth. Private nursing, aged care at home, NDIS nursing, wound care, physiotherapy, dietitian & HCP management.',
     url: 'https://carencure.com.au/services',
   },
 }
 
 const services = [
   {
+    id: 'service-aged-care-at-home',
+    title: 'Aged Care at Home Perth',
+    description:
+      'AHPRA registered nurse-led aged care in-home support, Home Care Package guidance, Support at Home, and daily living coordination across Perth.',
+    href: '/aged-care-at-home-perth',
+    icon: HeartHandshake,
+    highlight: true,
+  },
+  {
+    id: 'service-elderly-care',
+    title: 'Elderly Care at Home',
+    description:
+      'Dedicated nurse coordinators for aging parents. Medication safety, health monitoring, chronic disease management, and regular family updates.',
+    href: '/private-nursing/elderly-care',
+    icon: Heart,
+    highlight: true,
+  },
+  {
     id: 'service-your-dedicated-nurse',
-    title: 'Your Dedicated Nurse',
+    title: 'Your Dedicated Nurse™',
     description:
       'One client. One nurse coordinator. A single registered nurse who learns your history, builds a relationship with your family, and stays with you across every visit.',
     href: '/your-dedicated-nurse',
@@ -42,12 +64,12 @@ const services = [
     highlight: true,
   },
   {
-    id: 'service-post-hospital-care',
-    title: 'Post-Hospital Recovery Care',
+    id: 'service-ndis-nursing',
+    title: 'NDIS Nursing Care',
     description:
-      'Safe, supported transitions from hospital to home. Our nurses coordinate with discharge teams and provide clinical oversight during your recovery period.',
-    href: '/post-hospital-care',
-    icon: HeartPulse,
+      'Clinical registered nurse support for NDIS participants with complex health requirements, continence assessments, catheter care, and enteral nutrition.',
+    href: '/ndis-nursing',
+    icon: ShieldCheck,
   },
   {
     id: 'service-private-nursing',
@@ -58,6 +80,70 @@ const services = [
     icon: Activity,
   },
   {
+    id: 'service-personal-care',
+    title: 'Personal Care at Home',
+    description:
+      'Gentle, respectful showering, grooming, dressing, and hygiene support supervised by Registered Nurse coordinators.',
+    href: '/personal-care',
+    icon: UserCheck,
+  },
+  {
+    id: 'service-homecare-packages',
+    title: 'Home Care Packages (HCP)',
+    description:
+      'Government-funded HCP Level 1–4 coordination managed by registered nurses. Transparent fees, no exit charges, and partnership with Trilogy Care.',
+    href: '/homecare-packages',
+    icon: Package,
+  },
+  {
+    id: 'service-support-at-home',
+    title: 'Support at Home Program',
+    description:
+      'Daily living assistance including personal care, domestic support, shopping, and clinical coordination under the Australian Support at Home framework.',
+    href: '/support-at-home',
+    icon: Home,
+  },
+  {
+    id: 'service-physiotherapy',
+    title: 'Physiotherapy at Home',
+    description:
+      'Experienced mobile physiotherapists visiting your home across Perth for post-surgery rehab, falls prevention, and mobility restoration.',
+    href: '/physiotherapy',
+    icon: PersonStanding,
+  },
+  {
+    id: 'service-nutritionist',
+    title: 'Nutritionist & Dietitian',
+    description:
+      'Accredited Practising Dietitians for diabetic meal planning, dysphagia diets, involuntary weight loss, and aged care nutritional care.',
+    href: '/nutritionist',
+    icon: Apple,
+  },
+  {
+    id: 'service-post-hospital-care',
+    title: 'Post-Hospital Recovery Care',
+    description:
+      'Safe, supported transitions from hospital to home. Our nurses coordinate with discharge teams and provide clinical oversight during your recovery.',
+    href: '/post-hospital-care',
+    icon: HeartPulse,
+  },
+  {
+    id: 'service-wound-care',
+    title: 'Wound Care & Sterile Dressings',
+    description:
+      'Sterile dressing changes, post-surgical wound management, skin tear repair, chronic ulcer care, and infection prevention using advanced wound products.',
+    href: '/wound-care',
+    icon: Bandage,
+  },
+  {
+    id: 'service-medication-management',
+    title: 'Medication Management & Injections',
+    description:
+      'Registered nurse administration of medications, Webster pack setup, medication reconciliation, and monitoring for side effects and drug interactions.',
+    href: '/medication-management',
+    icon: Pill,
+  },
+  {
     id: 'service-community-nursing',
     title: 'Community Nursing Care',
     description:
@@ -66,68 +152,12 @@ const services = [
     icon: Stethoscope,
   },
   {
-    id: 'service-wound-care',
-    title: 'Wound Care & Dressing',
-    description:
-      'Sterile dressing changes, post-surgical wound management, skin tear repair, chronic ulcer care, and infection prevention using advanced wound products.',
-    href: '/wound-care',
-    icon: Bandage,
-  },
-  {
-    id: 'service-medication-management',
-    title: 'Medication Management',
-    description:
-      'Registered nurse administration of medications, Webster pack setup, medication reconciliation, and monitoring for side effects and drug interactions.',
-    href: '/medication-management',
-    icon: Pill,
-  },
-  {
-    id: 'service-mobility-support',
-    title: 'Mobility & Rehabilitation Support',
-    description:
-      'Nurse-supervised mobility exercises, fall prevention assessments, post-orthopaedic rehabilitation support, and safe transfer techniques.',
-    href: '/mobility-support',
-    icon: PersonStanding,
-  },
-  {
     id: 'service-companion-care',
     title: 'Companion Care',
     description:
       'Social engagement, emotional support, transport assistance, and daily companionship — all under registered nurse oversight to monitor wellbeing.',
     href: '/companion-care',
     icon: HeartHandshake,
-  },
-  {
-    id: 'service-registered-nurses-clinical-care',
-    title: 'Registered Nurses Clinical Care',
-    description:
-      'Comprehensive clinical nursing assessments, chronic disease monitoring, care planning, and long-term in-home nursing care coordination.',
-    href: '/registered-nurses-clinical-care-services',
-    icon: Home,
-  },
-  {
-    id: 'service-homecare-packages',
-    title: 'Home Care Packages (HCP)',
-    description:
-      'Government-funded HCP Level 1–4 coordination managed by registered nurses. Transparent fees, no exit charges, and maximum care from your funding.',
-    href: '/homecare-packages',
-    icon: Package,
-  },
-  {
-    id: 'service-support-at-home',
-    title: 'Support at Home',
-    description:
-      'Daily living assistance including personal care, domestic support, shopping, and social activities — all delivered under registered nurse clinical oversight.',
-    href: '/support-at-home',
-    icon: Home,
-  },
-  {
-    id: 'service-funded-care',
-    title: 'Funded Care Options',
-    description:
-      'Guidance on accessing NDIS, DVA, and aged care funding streams. We help you navigate the system and maximise your entitlements.',
-    href: '/funded-care',
-    icon: Package,
   },
 ]
 
