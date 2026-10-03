@@ -97,7 +97,7 @@ export default function RootLayout({
         <meta name="ICBM" content="-31.9505, 115.8605" />
         <meta
           httpEquiv="Content-Security-Policy"
-          content="default-src 'self'; frame-src 'self' https://www.google.com https://*.google.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://va.vercel-scripts.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; connect-src 'self' https://vitals.vercel-insights.com https://*.vercel-analytics.com https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://cloudflareinsights.com; font-src 'self' data: https://fonts.gstatic.com;"
+          content="default-src 'self'; frame-src 'self' https://www.google.com https://*.google.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://va.vercel-scripts.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; connect-src 'self' https://vitals.vercel-insights.com https://*.vercel-analytics.com https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://cloudflareinsights.com; font-src 'self' data: https://fonts.gstatic.com;"
         />
         {/* Google Analytics 4 — G-STW2MFLRC5 */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-STW2MFLRC5" />
