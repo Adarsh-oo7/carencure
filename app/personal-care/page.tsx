@@ -176,7 +176,7 @@ export default function PersonalCare() {
                 <h2 className="text-navy text-xl font-bold">Related Services</h2>
                 <div className="flex flex-wrap gap-3">
                   {[
-                    { label: 'Aged Care at Home', href: '/aged-care' },
+                    { label: 'Aged Care at Home', href: '/aged-care-at-home-perth' },
                     { label: 'Companion Care', href: '/companion-care' },
                     { label: 'NDIS Nursing Care', href: '/ndis-nursing' },
                     { label: 'Home Care Packages', href: '/homecare-packages' },

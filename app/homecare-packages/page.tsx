@@ -194,12 +194,12 @@ export default function HomecarePackages() {
 
               {/* H2: Support at Home Transition */}
               <div className="space-y-4 bg-teal-subtle/30 p-8 rounded-2xl border border-teal-border">
-                <h2 className="text-navy text-2xl font-bold">Transitioning to Support at Home (July 2025 Reform)</h2>
+                <h2 className="text-navy text-2xl font-bold">Support at Home Program (Commenced 1 November 2025)</h2>
                 <p className="text-body leading-relaxed">
-                  The Australian Government is replacing Home Care Packages with the new <strong>Support at Home program</strong>. Care N Cure is fully aligned with these upcoming reforms to ensure your care funding continues without interruption.
+                  The Australian Government officially commenced the <strong>Support at Home program on 1 November 2025</strong>, replacing traditional Home Care Packages and Short-Term Restorative Care (STRC). Care N Cure is fully aligned with these reforms: existing package holders retain their grandfathered budgets, while newly approved participants receive care under Support at Home classifications.
                 </p>
                 <p className="text-body leading-relaxed">
-                  Whether you currently hold a Home Care Package or are waiting for an ACAT assessment, our Registered Nurse team helps you navigate funding rules so you receive maximum clinical value from your allocation. Read more on our dedicated <Link href="/support-at-home" className="text-teal-text font-semibold hover:underline">Support at Home reforms guide</Link>.
+                  Whether you currently hold a Home Care Package or are waiting for an assessment, our Registered Nurse team helps you navigate funding rules so your care budget delivers direct clinical value without administrative waste. Read more on our dedicated <Link href="/support-at-home" className="text-teal-text font-semibold hover:underline">Support at Home guide</Link>.
                 </p>
               </div>
 

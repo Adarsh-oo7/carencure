@@ -52,7 +52,7 @@ const faqs = [
   },
   {
     question: 'What are the benefits of in-home wound care vs an outpatient wound clinic?',
-    answer: 'In-home wound care eliminates painful car travel, avoids crowded hospital waiting rooms where infection risks are high, and allows assessment in your own clean environment. Furthermore, having the same dedicated Registered Nurse evaluate your wound sequentially ensures subtle healing changes or early infections are caught immediately.',
+    answer: 'In-home wound care minimizes painful travel, avoids crowded hospital waiting rooms where infection risks are elevated, and allows assessment in your own clean home environment. Furthermore, having a dedicated Registered Nurse evaluate your wound sequentially ensures subtle healing changes or early infections are caught promptly.',
   },
   {
     question: 'How often does a wound dressing need changing?',

@@ -125,7 +125,7 @@ export function Navigation() {
               </span>
               <span className="inline-flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-teal-accent" />
-                Support at Home & HCP Provider
+                Support at Home Clinical Partner
               </span>
               <span className="inline-flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-teal-accent" />
@@ -414,7 +414,7 @@ export function Navigation() {
                     <Phone className="w-4 h-4 text-navy" />
                   </div>
                   <div className="flex flex-col text-left leading-tight">
-                    <span className="text-[10px] font-extrabold uppercase tracking-wider text-navy/70">Nurse Intake 24/7</span>
+                    <span className="text-[10px] font-extrabold uppercase tracking-wider text-navy/70">Nurse Intake Desk</span>
                     <span className="text-sm font-extrabold text-navy tracking-tight">1300 919 663</span>
                   </div>
                 </a>

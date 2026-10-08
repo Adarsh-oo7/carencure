@@ -190,18 +190,28 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             <article className="lg:col-span-8 prose max-w-none">
               <div className="space-y-5">
                 {contentParagraphs.map((paragraph, index) => {
+                  const renderMarkdown = (text: string) => {
+                    return text
+                      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                      .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-teal-text hover:underline font-semibold">$1</a>')
+                  }
+
                   if (paragraph.startsWith('## ')) {
                     return (
-                      <h2 key={index} className="text-navy text-2xl font-bold mt-8 mb-4">
-                        {paragraph.replace('## ', '')}
-                      </h2>
+                      <h2
+                        key={index}
+                        className="text-navy text-2xl font-bold mt-8 mb-4"
+                        dangerouslySetInnerHTML={{ __html: renderMarkdown(paragraph.replace('## ', '')) }}
+                      />
                     )
                   }
                   if (paragraph.startsWith('### ')) {
                     return (
-                      <h3 key={index} className="text-navy text-xl font-bold mt-6 mb-3">
-                        {paragraph.replace('### ', '')}
-                      </h3>
+                      <h3
+                        key={index}
+                        className="text-navy text-xl font-bold mt-6 mb-3"
+                        dangerouslySetInnerHTML={{ __html: renderMarkdown(paragraph.replace('### ', '')) }}
+                      />
                     )
                   }
                   if (paragraph.startsWith('1. ') || paragraph.startsWith('- ')) {
@@ -213,10 +223,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                             <span className="text-teal-accent mt-1 font-bold flex-shrink-0">•</span>
                             <span
                               dangerouslySetInnerHTML={{
-                                __html: item
-                                  .replace(/^\d+\.\s/, '')
-                                  .replace(/^-\s/, '')
-                                  .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>'),
+                                __html: renderMarkdown(
+                                  item.replace(/^\d+\.\s/, '').replace(/^-\s/, '')
+                                ),
                               }}
                             />
                           </li>
@@ -229,7 +238,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                       key={index}
                       className="text-body leading-relaxed"
                       dangerouslySetInnerHTML={{
-                        __html: paragraph.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>'),
+                        __html: renderMarkdown(paragraph),
                       }}
                     />
                   )

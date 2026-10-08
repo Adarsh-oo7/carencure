@@ -172,7 +172,7 @@ export default function Nutritionist() {
                 <h2 className="text-navy text-xl font-bold">Related Services</h2>
                 <div className="flex flex-wrap gap-3">
                   {[
-                    { label: 'Aged Care In-Home Support', href: '/aged-care' },
+                    { label: 'Aged Care In-Home Support', href: '/aged-care-at-home-perth' },
                     { label: 'Home Physiotherapy', href: '/physiotherapy' },
                     { label: 'NDIS Nursing Care', href: '/ndis-nursing' },
                     { label: 'Companion Care', href: '/companion-care' },

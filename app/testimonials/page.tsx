@@ -6,9 +6,9 @@ import { BreadcrumbSchema } from '@/components/schema'
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Client Testimonials | Home Nursing Reviews | Care N Cure Perth',
+    absolute: 'Clinical Quality & Feedback | Governance & Standards | Care N Cure Perth',
   },
-  description: 'Read what Perth families say about our dedicated nurse coordinators. Real reviews from clients receiving private nursing, wound care & home care support.',
+  description: 'Our clinical quality framework, AHPRA regulatory compliance, feedback procedures, and healthcare governance for in-home nursing care across Perth.',
   alternates: { canonical: 'https://carencure.com.au/testimonials' },
 }
 
@@ -17,12 +17,12 @@ export default function QualityFeedbackPage() {
     <>
       <BreadcrumbSchema items={[
         { name: 'Home', href: '/' },
-        { name: 'Quality & Feedback', href: '/testimonials' },
+        { name: 'Clinical Quality & Feedback', href: '/testimonials' },
       ]} />
       <PageHeader
-        title="Quality & Feedback"
-        subtitle="Our commitment to clinical excellence and transparency."
-        breadcrumbItems={[{ name: 'Quality & Feedback', href: '/testimonials' }]}
+        title="Clinical Quality & Client Feedback"
+        subtitle="Our commitment to clinical excellence, regulatory transparency, and continuous improvement."
+        breadcrumbItems={[{ name: 'Clinical Quality & Feedback', href: '/testimonials' }]}
         label="Clinical Governance"
       />
 

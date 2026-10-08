@@ -45,7 +45,7 @@ Hospital environments, however excellent, are inherently stressful. Unfamiliar s
 
 **3. Reduced Risk of Hospital-Acquired Infection**
 
-One of the most underappreciated risks of residential and hospital care is exposure to multi-resistant organisms — golden staph, gram-negative bacteria, and Clostridium difficile. In-home nursing care eliminates this risk. Your loved one recovers in their own environment, reducing exposure to pathogens dramatically.
+One of the most underappreciated risks of residential and hospital care is exposure to multi-resistant organisms — golden staph, gram-negative bacteria, and Clostridium difficile. In-home nursing care significantly reduces this risk: by recovering in their own familiar home environment under sterile aseptic nursing techniques, seniors experience substantially lower exposure to clinical pathogens.
 
 **4. Family Involvement in Care**
 
@@ -229,7 +229,7 @@ Our nurses monitor respiratory rate, oxygen saturation, sputum character, and in
 
 Medication non-adherence is the single biggest driver of preventable hospital admissions in chronic disease patients. It is often not deliberate — patients become confused about which tablet to take when, miss doses, or stop medications due to side effects they haven't disclosed to their doctor.
 
-Our nurses review your complete medication list at each visit, check compliance, identify side effects, and liaise with your GP when medication changes are needed. For patients at high risk, we arrange Webster pack dispensing through local pharmacies, which eliminates the dosing confusion entirely.
+Our nurses review your complete medication list at each visit, check compliance, identify side effects, and liaise with your GP when medication changes are needed. For patients at high risk, we arrange Webster pack dispensing through local pharmacies, which significantly minimizes medication administration errors and dosing confusion.
 
 ## When to Call Your Nurse
 
@@ -414,15 +414,17 @@ If you're ready to secure professional, warm, and highly accountable care for yo
     excerpt: 'Explain HCP levels 1-4 in plain English, what is typically covered, and where nurse-led oversight changes clinical outcomes for Perth seniors.',
     content: `For older Australians in Western Australia, securing government support to remain independent in their own homes is a priority. However, navigating the My Aged Care system is notoriously complex. When looking into **home care packages perth** or **home care packages wa**, many families are surprised to learn that standard support plans often miss a crucial element: registered clinical nursing oversight.
 
-## Understanding Home Care Packages (HCP) Levels 1–4
+## Understanding Support at Home & Home Care Packages (HCP)
 
-The Australian government provides Home Care Packages to help seniors access services tailored to their needs. These packages are split into four levels:
-- **Level 1 (Basic Care Needs):** Small subsidies for basic domestic assistance or social support.
-- **Level 2 (Low Care Needs):** Funding for additional transport, personal care, or basic aids.
-- **Level 3 (Intermediate Care Needs):** Designed for seniors who require more frequent support and some clinical assistance.
-- **Level 4 (High Care Needs):** Substantial funding for complex daily care, mobility assistance, and clinical nursing.
+On **1 November 2025**, the Australian Government officially commenced the **Support at Home program**, replacing traditional Home Care Packages (Levels 1–4) and Short-Term Restorative Care (STRC). 
 
-While these packages are designed to cover everyday living tasks, many traditional providers manage them using administrative staff who assign rotating rosters of support workers.
+For Perth seniors who already held an approved Home Care Package, existing allocations are grandfathered to protect their funding level and care continuity:
+- **Level 1 (Basic Care Needs):** Allocations for basic domestic assistance or companionship.
+- **Level 2 (Low Care Needs):** Funding for transport, personal care, and assistive devices.
+- **Level 3 (Intermediate Care Needs):** For seniors requiring frequent support and clinical nursing.
+- **Level 4 (High Care Needs):** Comprehensive funding for complex nursing, mobility support, and daily care.
+
+Under Support at Home, clinical nursing services (such as wound care, medication management, and catheter maintenance) are classified under clinical care, meaning participants can access registered nursing without out-of-pocket co-contributions.
 
 ## Where Nursing Fits In (And Why It Matters)
 
@@ -450,7 +452,7 @@ If you are ready to transition your care to a provider that prioritizes clinical
     slug: 'signs-your-parent-needs-in-home-nursing',
     title: 'Signs Your Parent Needs In-Home Nursing, Not Aged Care',
     excerpt: 'A practical clinical checklist for adult children to recognize when an ageing parent needs professional in-home nursing rather than moving to residential aged care.',
-    content: `It is one of the hardest realizations an adult child can face: seeing that a parent is no longer managing safely at home. Often, the immediate reaction is to search in a panic for 'aged care near me' or look into residential nursing facilities. However, moving a parent out of their home is a major transition that can cause significant distress. For many Perth families, **in home aged care** or home nursing is not just a viable alternative — it is the superior choice for their health and happiness.
+    content: `It is one of the hardest realizations an adult child can face: seeing that a parent is no longer managing safely at home. Often, the immediate reaction is to search in a panic for 'aged care near me' or look into residential nursing facilities. However, moving a parent out of their home is a major transition that can cause significant distress. For many Perth families, **in home aged care** and nurse-led support is an effective, compassionate alternative that preserves personal independence and familiar comfort.
 
 ## Practical Checklist: Signs Your Parent Needs Support
 
@@ -465,9 +467,9 @@ If you notice these signs, it does not mean they must move into a care facility.
 
 ## The Case for In-Home Care vs. Residential Aged Care
 
-The research is clear: seniors recover faster, sleep better, and experience lower infection rates when they remain in their own homes.
+Clinical evidence and patient experience consistently show that older Australians often recover more comfortably, maintain better sleep rhythms, and reduce exposure to facility-acquired infections when supported safely at home.
 
-By choosing home nursing, your parent maintains their independence, their routines, and their connection to their community. At Care N Cure, we reinforce this by assigning a dedicated Nurse Coordinator. Your parent sees the exact same nurse every visit, building a trusted clinical relationship that helps them feel safe and respected.
+By choosing home nursing, your parent maintains their independence, their routines, and their connection to their community. At Care N Cure, we reinforce this by assigning a dedicated Nurse Coordinator and maintaining planned continuity. Your parent works with a dedicated primary clinician who truly knows their medical history, helping them feel safe, respected, and supported.
 
 ## Setting Up Care for Your Parent
 

@@ -262,8 +262,8 @@ export default function PrivateNursing() {
                       </tr>
                       <tr>
                         <td className="p-4 font-semibold text-navy">Weekend & Public Holidays</td>
-                        <td className="p-4 font-bold text-teal-accent">$180 – $240 / hr</td>
-                        <td className="p-4 text-xs">Weekend clinical support & rapid emergency response.</td>
+                        <td className="p-4 font-bold text-teal-accent">$160 – $220 / hr</td>
+                        <td className="p-4 text-xs">Weekend clinical nursing visits & urgent post-discharge care.</td>
                       </tr>
                       <tr>
                         <td className="p-4 font-semibold text-navy">24-Hour Shift / Overnight Care</td>

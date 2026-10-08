@@ -159,13 +159,13 @@ export default function ReferralsPage() {
                       step: '2',
                       title: 'Send clinical information',
                       detail:
-                        'Discharge summary, care plan, or GP letter can be emailed or faxed. Not mandatory but helps us prepare a targeted nursing assessment.',
+                        'Discharge summary, care plan, or GP letter can be emailed to hello@carencure.com.au. Not mandatory but helps us prepare a targeted nursing assessment.',
                     },
                     {
                       step: '3',
-                      title: 'We contact the patient within 24 hours',
+                      title: 'We contact the patient within 24–48 hours',
                       detail:
-                        'Our registered nurse founders make first contact, conduct an initial needs assessment, and agree a care schedule with the patient and family.',
+                        'Our registered nurse founders make contact within 24 to 48 hours, conduct an initial clinical triage assessment, and coordinate a care schedule with the patient and family.',
                     },
                     {
                       step: '4',

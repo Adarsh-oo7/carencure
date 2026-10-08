@@ -170,7 +170,7 @@ export default function Physiotherapy() {
                 <h2 className="text-navy text-xl font-bold">Related Services</h2>
                 <div className="flex flex-wrap gap-3">
                   {[
-                    { label: 'Aged Care In-Home Support', href: '/aged-care' },
+                    { label: 'Aged Care In-Home Support', href: '/aged-care-at-home-perth' },
                     { label: 'NDIS Nursing Care', href: '/ndis-nursing' },
                     { label: 'Mobility Support', href: '/mobility-support' },
                     { label: 'Home Care Packages', href: '/homecare-packages' },
