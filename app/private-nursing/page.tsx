@@ -362,11 +362,11 @@ export default function PrivateNursing() {
                   Care N Cure provides mobile in-home private nursing visits across all Perth metropolitan suburbs. Our primary service hubs include:
                 </p>
                 <div className="flex flex-wrap gap-2 pt-1">
-                  {['Nedlands', 'Subiaco', 'Cottesloe', 'Claremont', 'South Perth', 'Applecross', 'Joondalup', 'Fremantle', 'Mount Lawley', 'Midland', 'Canning Vale', 'Armadale', 'Rockingham'].map((suburb, i) => (
+                  {['Harrisdale', 'Canning Vale', 'Southern River', 'Piara Waters', 'Cockburn Central', 'Willetton', 'Bull Creek', 'Armadale', 'Gosnells', 'Thornlie', 'Kelmscott', 'Byford', 'Rockingham', 'Baldivis', 'Melville', 'Applecross', 'Fremantle', 'Claremont', 'Nedlands', 'Subiaco', 'Cottesloe', 'South Perth', 'Joondalup'].map((suburb, i) => (
                     <Link
                       key={i}
                       href={`/locations/${suburb.toLowerCase().replace(/\s+/g, '-')}`}
-                      className="px-3 py-1.5 bg-surface text-navy font-semibold text-xs rounded-lg border border-border hover:border-teal-accent transition-colors flex items-center gap-1"
+                      className="px-3 py-1.5 bg-surface text-navy font-semibold text-xs rounded-lg border border-border hover:border-teal-accent hover:bg-white transition-colors flex items-center gap-1"
                     >
                       <MapPin className="w-3 h-3 text-teal-accent" /> {suburb} Private Nurse
                     </Link>
