@@ -507,6 +507,36 @@ export async function generateMetadata({ params }: { params: Promise<{ suburb: s
   if (suburb === 'armadale') {
     pageTitle = 'At Home Nurse Armadale | In-Home Aged Care & Nursing | Care N Cure'
     pageDesc = 'AHPRA registered nurses providing at-home nursing care in Armadale & south-east Perth. Wound care, aged care in-home support, post-hospital recovery. Call 1300 919 663.'
+  } else if (suburb === 'canning-vale') {
+    pageTitle = 'Aged Care Canning Vale & Community Nursing Care | Care N Cure Perth'
+    pageDesc = 'Aged care in-home support & community nursing in Canning Vale, WA. Sterile wound dressings, medication & Support at Home by AHPRA RNs. 10 mins from Harrisdale HQ. Call 1300 919 663.'
+  } else if (suburb === 'harrisdale') {
+    pageTitle = 'Aged Care & Home Nurse Harrisdale WA | Head Office & Local Intake | Care N Cure'
+    pageDesc = 'Care N Cure headquarters at 15 Rockefeller Way, Harrisdale. Same-day nurse intake, sterile wound care & aged care at home with dedicated RN every visit. Call 1300 919 663.'
+  } else if (suburb === 'southern-river') {
+    pageTitle = 'Aged Care at Home Southern River WA | Registered Nurse Home Visits | Care N Cure'
+    pageDesc = 'Local aged care at home & clinical nursing in Southern River. Minutes from Harrisdale HQ. Sterile wound dressings, post-hospital recovery & senior support. Call 1300 919 663.'
+  } else if (suburb === 'piara-waters') {
+    pageTitle = 'Home Nurse & Aged Care Piara Waters WA | In-Home Clinical Care | Care N Cure'
+    pageDesc = 'Local registered nurse home visits in Piara Waters WA. 5 minutes from our Harrisdale base. Chronic illness monitoring, wound care & aged care support. Call 1300 919 663.'
+  } else if (suburb === 'thornlie') {
+    pageTitle = 'Community Nursing Care Thornlie & Aged Care at Home WA | Care N Cure'
+    pageDesc = 'Community nursing care & aged care in Thornlie, Langford & Crestwood. Sterile wound dressings, subcutaneous injections & senior support. No GP referral needed. Call 1300 919 663.'
+  } else if (suburb === 'willetton') {
+    pageTitle = 'Aged Care at Home Willetton & Riverton WA | Registered Nurses | Care N Cure'
+    pageDesc = 'Aged care at home & clinical nursing for Willetton, Riverton & Rossmoyne seniors. Same Registered Nurse coordinator every visit. Zero travel fees. Call 1300 919 663.'
+  } else if (suburb === 'cockburn-central') {
+    pageTitle = 'Home Nurse Cockburn Central, Success & Atwell | Aged Care WA | Care N Cure'
+    pageDesc = 'AHPRA Registered Nurses serving Cockburn Central, Success, Atwell & Aubin Grove. Post-hospital discharge nursing near Fiona Stanley Hospital. Call 1300 919 663.'
+  } else if (suburb === 'bull-creek') {
+    pageTitle = 'In-Home Nursing & Aged Care Bull Creek & Leeming WA | Care N Cure'
+    pageDesc = 'In-home nursing care & aged care support in Bull Creek, Leeming & Bateman. Clinical wound care & medication management near Fiona Stanley. Call 1300 919 663.'
+  } else if (suburb === 'melville') {
+    pageTitle = 'Home Care Packages Melville & Aged Care at Home WA | Care N Cure'
+    pageDesc = 'Aged care home packages, Support at Home & clinical nursing in Melville, Alfred Cove & Myaree. Self-managed HCP partner. Call 1300 919 663.'
+  } else if (suburb === 'baldivis') {
+    pageTitle = 'Home Nurse Baldivis & Community Nursing Care WA | Care N Cure'
+    pageDesc = 'Community nursing care & aged care in Baldivis, Wellard & Warnbro. Sterile wound dressings, elderly care & Support at Home by AHPRA RNs. Call 1300 919 663.'
   } else if (suburb === 'rockingham') {
     pageTitle = 'Home Nurse Rockingham & Baldivis | AHPRA Registered In-Home Nursing | Care N Cure'
     pageDesc = 'Need a home nurse in Rockingham or Baldivis? AHPRA Registered Nurses for wound care, medication management & post-hospital recovery across southern Perth. No referral needed. Call 1300 919 663.'
@@ -522,6 +552,24 @@ export async function generateMetadata({ params }: { params: Promise<{ suburb: s
   } else if (suburb === 'gosnells') {
     pageTitle = 'Home Nurse Gosnells | In-Home Nursing & Aged Care | Care N Cure'
     pageDesc = 'AHPRA Registered Nurses for in-home nursing care, wound management & aged care across Gosnells, Maddington, Kenwick & Thornlie. Call 1300 919 663.'
+  } else if (suburb === 'byford') {
+    pageTitle = 'In-Home Aged Care Byford & Serpentine WA | Registered Nurses | Care N Cure'
+    pageDesc = 'Aged care in-home support & registered nurse visits in Byford & Serpentine-Jarrahdale. Dedicated nurse companion & clinical care. Call 1300 919 663.'
+  } else if (suburb === 'applecross') {
+    pageTitle = 'Private Nurse Applecross & Melville | Clinical Home Care Perth | Care N Cure'
+    pageDesc = 'Private nursing visits, surgical wound dressings & clinical assessments in Applecross & Mount Pleasant. Dedicated AHPRA nurse. Call 1300 919 663.'
+  } else if (suburb === 'fremantle') {
+    pageTitle = 'Home Nurse Fremantle & East Fremantle WA | Clinical Care | Care N Cure'
+    pageDesc = 'Clinical home nursing & aged care in Fremantle, East Fremantle & Bicton. Post-hospital surgical transitions & wound care. Call 1300 919 663.'
+  } else if (suburb === 'nedlands') {
+    pageTitle = 'Private Nurse Nedlands | Surgical Wound Care & Hospital Recovery | Care N Cure'
+    pageDesc = 'Clinical nursing care near Sir Charles Gairdner Hospital & Hollywood Private in Nedlands, Dalkeith & Crawley. Fast 24-48h start. Call 1300 919 663.'
+  } else if (suburb === 'subiaco') {
+    pageTitle = 'Home Nurse Subiaco | Sterile Wound Care & Post-Operative Nursing | Care N Cure'
+    pageDesc = 'Registered nurse visits across Subiaco, Jolimont & West Perth. Sterile wound dressings, stitch/staple removal & medication reviews. Call 1300 919 663.'
+  } else if (suburb === 'cottesloe') {
+    pageTitle = 'Home Nurse Cottesloe | Private Elderly Care & Companion Nursing | Care N Cure'
+    pageDesc = 'Private nursing & aged care companion support in Cottesloe, Swanbourne & Peppermint Grove. AHPRA Registered Nurse coordinator. Call 1300 919 663.'
   }
 
   const customKeywords = [

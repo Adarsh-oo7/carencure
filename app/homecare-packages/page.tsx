@@ -8,22 +8,23 @@ import { Award, ShieldCheck, HeartPulse, UserCheck, CheckCircle, CheckCircle2 } 
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Home Care Packages Perth | Self-Managed HCP (Levels 1-4) & Aged Care WA | Care N Cure',
+    absolute: 'Home Care Packages Perth | Self-Managed HCP Levels 1-4 & Support at Home | Care N Cure',
   },
   description:
-    'Nurse-led Home Care Package management in Perth & WA. Self-managed HCP Levels 1–4, aged care packages, clinical nursing & care coordination. Call 1300 919 663.',
+    'Nurse-led Home Care Package support in Perth. We partner with self-managed HCP participants (Trilogy Care) for clinical nursing, sterile wound care, medication reviews & Support at Home. Call 1300 919 663.',
   keywords: [
     'home care packages perth',
-    'home care packages western australia',
+    'best in-home nursing care providers for support at home',
+    'best home care package providers',
     'home care packages wa',
-    'home care package perth',
-    'self-managed home care packages perth',
+    'home care packages western australia',
     'aged care packages perth',
     'aged care home packages perth',
-    'funded nursing care',
-    'best home care package providers',
+    'self-managed home care packages perth',
+    'support at home perth',
     'hcp care perth',
     'home care package provider perth',
+    'funded nursing care wa',
   ],
   alternates: { canonical: 'https://carencure.com.au/homecare-packages' },
 }

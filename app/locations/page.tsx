@@ -6,67 +6,77 @@ import { LocalBusinessSchema } from '@/components/schema'
 import { Building2, Stethoscope, Landmark, HeartHandshake } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: { absolute: 'Aged Care & Home Nursing Service Areas Perth WA | Care N Cure' },
-  description: 'Local aged care at home & community nursing across Perth. Based in Harrisdale — serving Canning Vale, Southern River, Armadale, Gosnells, Cockburn, Willetton & 50+ suburbs. Call 1300 919 663.',
+  title: { absolute: 'Aged Care & Home Nurse Perth Service Areas | Local RN Care | Care N Cure' },
+  description: 'Looking for aged care at home or a private registered nurse in Perth? Based at 15 Rockefeller Way, Harrisdale — covering Canning Vale, Southern River, Cockburn, Willetton, Rockingham, Joondalup & 43+ suburbs. 24–48h start. Call 1300 919 663.',
+  keywords: [
+    'aged care service areas perth',
+    'home nurse perth',
+    'in home nursing perth',
+    'aged care at home perth',
+    'community nursing care perth',
+    'aged care canning vale',
+    'home nurse rockingham',
+    'home nurse joondalup',
+    'aged care southern river',
+    'home nurse cockburn',
+    'aged care armadale',
+    'private nurse perth',
+    'support at home perth',
+  ],
   alternates: { canonical: 'https://carencure.com.au/locations' },
+  openGraph: {
+    title: 'Aged Care & Home Nurse Perth Service Areas | Care N Cure',
+    description: 'AHPRA Registered Nurses delivering in-home clinical care & aged care across Perth. Immediate intake from our Harrisdale base. Call 1300 919 663.',
+    url: 'https://carencure.com.au/locations',
+    type: 'website',
+  },
 }
 
-// Home-base corridor — closest to 15 Rockefeller Way, Harrisdale (strongest local relevance)
+// Home-base corridor — closest to 15 Rockefeller Way, Harrisdale (strongest local relevance & fastest intake)
 const homeBaseSuburbs = [
-  { name: 'Harrisdale', href: '/locations/harrisdale', description: 'Our home base at 15 Rockefeller Way. Fastest response for aged care and nurse visits.', distance: 'Home Base' },
-  { name: 'Piara Waters', href: '/locations/piara-waters', description: 'Aged care at home and registered nurse visits, about 5 minutes from our base.', distance: 'Home Base' },
-  { name: 'Southern River', href: '/locations/southern-river', description: 'Local aged care, medication checks and wound care for Southern River families.', distance: 'Home Base' },
-  { name: 'Forrestdale', href: '/locations/forrestdale', description: 'Same dedicated nurse every visit for Forrestdale and Hilbert seniors.', distance: 'Home Base' },
-  { name: 'Canning Vale', href: '/locations/canning-vale', description: 'Community nursing care, wound dressings and chronic disease monitoring in Canning Vale.', distance: 'Perth South-East' },
-  { name: 'Thornlie', href: '/locations/thornlie', description: 'Community nursing care and elderly home care in Thornlie and Langford.', distance: 'Perth South-East' },
-  { name: 'City of Gosnells', href: '/locations/gosnells', description: 'In-home nursing care, wound management, and medication support across the City of Gosnells.', distance: 'Perth South-East' },
-  { name: 'City of Armadale', href: '/locations/armadale', description: 'Registered nurse visits for post-hospital recovery and chronic condition management in Armadale.', distance: 'Perth South-East' },
-  { name: 'Kelmscott', href: '/locations/kelmscott', description: 'Community nursing and aged care at home in Kelmscott, Camillo and Champion Lakes.', distance: 'Perth South-East' },
-  { name: 'Byford', href: '/locations/byford', description: 'In-home aged care nursing for Byford and the Serpentine-Jarrahdale area.', distance: 'Perth South-East' },
-  { name: 'Willetton', href: '/locations/willetton', description: 'Aged care at home for Willetton, Riverton and Rossmoyne seniors.', distance: 'Perth South-East' },
-  { name: 'Cockburn Central', href: '/locations/cockburn-central', description: 'Post-discharge nursing near Fiona Stanley for Success, Atwell and Aubin Grove.', distance: 'Perth South' },
+  { name: 'Harrisdale', href: '/locations/harrisdale', description: 'Our head office at 15 Rockefeller Way. Immediate same-day response for aged care and nurse visits.', distance: 'Home Base' },
+  { name: 'Piara Waters', href: '/locations/piara-waters', description: 'Aged care at home and registered nurse visits, about 5 minutes from our base.', distance: '5 mins from base' },
+  { name: 'Southern River', href: '/locations/southern-river', description: 'Local aged care, sterile wound dressings and medication checks for Southern River families.', distance: '8 mins from base' },
+  { name: 'Canning Vale', href: '/locations/canning-vale', description: 'Community nursing care, wound dressings and chronic disease monitoring in Canning Vale.', distance: '10 mins from base' },
+  { name: 'Willetton', href: '/locations/willetton', description: 'Aged care at home & clinical nursing for Willetton, Riverton and Rossmoyne seniors.', distance: '15 mins from base' },
+  { name: 'Cockburn Central', href: '/locations/cockburn-central', description: 'Post-discharge nursing near Fiona Stanley for Success, Atwell, Cockburn and Aubin Grove.', distance: '15 mins from base' },
+  { name: 'Bull Creek', href: '/locations/bull-creek', description: 'In-home aged care and clinical recovery in Bull Creek, Leeming and Bateman.', distance: '15 mins from base' },
+  { name: 'Thornlie', href: '/locations/thornlie', description: 'Community nursing care and elderly home care in Thornlie, Langford and Crestwood.', distance: '12 mins from base' },
+  { name: 'City of Gosnells', href: '/locations/gosnells', description: 'In-home nursing care, wound management, and medication support across the City of Gosnells.', distance: '12 mins from base' },
+  { name: 'City of Armadale', href: '/locations/armadale', description: 'Registered nurse visits for post-hospital recovery and chronic condition management in Armadale.', distance: '15 mins from base' },
+  { name: 'Kelmscott', href: '/locations/kelmscott', description: 'Community nursing and aged care at home in Kelmscott, Camillo and Champion Lakes.', distance: '15 mins from base' },
+  { name: 'Byford', href: '/locations/byford', description: 'In-home aged care nursing for Byford and the Serpentine-Jarrahdale corridor.', distance: '18 mins from base' },
+  { name: 'Forrestdale', href: '/locations/forrestdale', description: 'Dedicated registered nurse visits for Forrestdale, Hilbert and Haynes residents.', distance: '10 mins from base' },
 ]
 
-const primarySuburbs = [
-  { name: 'Nedlands', href: '/locations/nedlands', description: 'Clinical nursing recovery care near Sir Charles Gairdner Hospital and Hollywood Private.', distance: 'Western Suburbs' },
-  { name: 'Subiaco', href: '/locations/subiaco', description: 'Sterile wound dressings and medication management for Subiaco and West Perth residents.', distance: 'Western Suburbs' },
-  { name: 'Cottesloe', href: '/locations/cottesloe', description: 'Nursing-led companion care and mobility support for seniors in beachside Cottesloe.', distance: 'Western Suburbs' },
-  { name: 'Bull Creek', href: '/locations/bull-creek', description: 'In-home aged care in Bull Creek, Leeming and Bateman near Fiona Stanley.', distance: 'Perth South' },
-  { name: 'Melville', href: '/locations/melville', description: 'Support at Home nursing and aged care in Melville, Alfred Cove and Myaree.', distance: 'Perth South' },
-  { name: 'Rockingham', href: '/locations/rockingham', description: 'Professional home nursing, wound care, and medication management across the Rockingham area.', distance: 'Perth South' },
-  { name: 'Baldivis', href: '/locations/baldivis', description: 'Community nursing care and aged care at home in Baldivis, Wellard and Warnbro.', distance: 'Perth South' },
-  { name: 'Applecross', href: '/locations/applecross', description: 'In-home private nursing visits and post-surgical recovery around Melville and Applecross.', distance: 'Perth South' },
-  { name: 'Mount Lawley', href: '/locations/mount-lawley', description: 'Registered nurse visits, blood pressure monitoring, and injection administration.', distance: 'Inner North' },
-  { name: 'Fremantle', href: '/locations/fremantle', description: 'Post-hospital transitions and chronic condition management for the Fremantle region.', distance: 'Fremantle Area' },
-  { name: 'South Perth', href: '/locations/south-perth', description: 'Companion care, respite nursing, and active medication reconciliation in South Perth.', distance: 'Inner South' },
+// Priority Metro Hubs — High client demand and proven search volume
+const priorityMetroHubs = [
+  { name: 'Rockingham', href: '/locations/rockingham', description: 'Dedicated home nursing, sterile wound dressings, and medication management across Rockingham & Safety Bay.', distance: 'South Coastal Hub' },
+  { name: 'Baldivis', href: '/locations/baldivis', description: 'Community nursing care and aged care at home across Baldivis, Wellard and Warnbro.', distance: 'South Metro Hub' },
+  { name: 'Melville', href: '/locations/melville', description: 'Support at Home nursing, HCP management and aged care in Melville, Alfred Cove and Myaree.', distance: 'Melville Area' },
+  { name: 'Applecross', href: '/locations/applecross', description: 'In-home private nursing visits and post-surgical recovery around Melville, Mount Pleasant and Applecross.', distance: 'Inner South' },
+  { name: 'Booragoon', href: '/locations/booragoon', description: 'Post-surgical recovery and wound care near Garden City, Booragoon and Brentwood.', distance: 'Melville Area' },
+  { name: 'Fremantle', href: '/locations/fremantle', description: 'Post-hospital transitions and chronic condition management for the Fremantle harbour region.', distance: 'Fremantle Area' },
+  { name: 'East Fremantle', href: '/locations/east-fremantle', description: 'Private nursing and post-hospital care in East Fremantle and Bicton. Dedicated RN.', distance: 'Fremantle Area' },
+  { name: 'South Perth', href: '/locations/south-perth', description: 'Companion care, respite nursing, and active medication reconciliation in South Perth & Como.', distance: 'Inner South' },
+  { name: 'Victoria Park', href: '/locations/victoria-park', description: 'Private nursing, wound care, and medication management in Victoria Park & Burswood.', distance: 'Inner East' },
 ]
 
-const additionalSuburbs = [
+// Western & Northern Corridors
+const northernAndWesternSuburbs = [
+  { name: 'Joondalup', href: '/locations/joondalup', description: 'Professional in-home nursing across Joondalup, Edgewater, Currambine and Ocean Reef.', distance: 'Northern Hub' },
   { name: 'Claremont', href: '/locations/claremont', description: 'In-home nursing and aged care in Claremont, Karrakatta, and Mount Claremont.', distance: 'Western Suburbs' },
-  { name: 'Inglewood', href: '/locations/inglewood', description: 'Registered nurse visits, sterile dressings, and monitoring in Inglewood and Maylands.', distance: 'Inner North' },
-  { name: 'Booragoon', href: '/locations/booragoon', description: 'Post-surgical recovery and wound care near Garden City, Booragoon and Myaree.', distance: 'Perth South' },
-  { name: 'Wembley', href: '/locations/wembley', description: 'Private home nursing care across Wembley and Wembley Downs.', distance: 'Western Suburbs' },
+  { name: 'Nedlands', href: '/locations/nedlands', description: 'Clinical nursing recovery care near Sir Charles Gairdner Hospital and Hollywood Private in Nedlands & Dalkeith.', distance: 'Western Suburbs' },
+  { name: 'Subiaco', href: '/locations/subiaco', description: 'Sterile wound dressings and medication management for Subiaco, Jolimont and West Perth residents.', distance: 'Western Suburbs' },
+  { name: 'Cottesloe', href: '/locations/cottesloe', description: 'Nursing-led companion care and mobility support for seniors in beachside Cottesloe & Swanbourne.', distance: 'Western Suburbs' },
+  { name: 'Wembley', href: '/locations/wembley', description: 'Private home nursing care across Wembley, Wembley Downs and West Leederville.', distance: 'Western Suburbs' },
   { name: 'Floreat', href: '/locations/floreat', description: 'Clinical nursing and post-hospital support in Floreat and Perry Lakes.', distance: 'Western Suburbs' },
-  { name: 'Mount Pleasant', href: '/locations/mount-pleasant', description: 'Registered nurse visits in Mount Pleasant and Brentwood — medication and wound care.', distance: 'Perth South' },
-  { name: 'Leederville', href: '/locations/leederville', description: 'Clinical nursing, post-operative support, and medication checks in Leederville.', distance: 'Inner North' },
-  { name: 'Victoria Park', href: '/locations/victoria-park', description: 'Private nursing, wound care, and medication management in Victoria Park.', distance: 'Inner East' },
-  { name: 'Joondalup', href: '/locations/joondalup', description: 'Professional in-home nursing across Joondalup, Edgewater, and Currambine.', distance: 'Northern Suburbs' },
-  { name: 'Midland', href: '/locations/midland', description: 'Registered nurse home visits in Midland, Middle Swan, and Guildford.', distance: 'Eastern Suburbs' },
-  { name: 'Scarborough', href: '/locations/scarborough', description: 'In-home registered nurse visits in Scarborough, Trigg, and Wembley Downs.', distance: 'Northern Suburbs' },
-  { name: 'Sorrento', href: '/locations/sorrento', description: 'Private nursing and registered nurse home visits across Sorrento, Hillarys, and Marmion.', distance: 'Northern Suburbs' },
   { name: 'Duncraig', href: '/locations/duncraig', description: 'In-home clinical nursing care in Duncraig, Carine, and Greenwood.', distance: 'Northern Suburbs' },
   { name: 'Karrinyup', href: '/locations/karrinyup', description: 'Registered nurse home care in Karrinyup, Gwelup, and Innaloo. Post-surgical care.', distance: 'Northern Suburbs' },
-  { name: 'Como', href: '/locations/como', description: 'In-home registered nurse visits in Como, Manning, and Salter Point. Private nursing.', distance: 'Inner South' },
-  { name: 'Bicton', href: '/locations/bicton', description: 'Clinical home nursing in Bicton, Palmyra, and East Fremantle. Sterile wound dressing.', distance: 'Fremantle Area' },
-  { name: 'East Fremantle', href: '/locations/east-fremantle', description: 'Private nursing and post-hospital care in East Fremantle and Bicton. Dedicated RN.', distance: 'Fremantle Area' },
-  { name: 'Shenton Park', href: '/locations/shenton-park', description: 'Registered nurse home visits in Shenton Park, Daglish, and Subiaco. Complex wound care.', distance: 'Western Suburbs' },
-  { name: 'Dalkeith', href: '/locations/dalkeith', description: 'In-home private nursing care in Dalkeith, Nedlands, and Claremont. Registered nurses.', distance: 'Western Suburbs' },
-  { name: 'City Beach', href: '/locations/city-beach', description: 'In-home registered nurse visits in City Beach and Floreat. Post-surgical recovery.', distance: 'Western Suburbs' },
+  { name: 'Sorrento', href: '/locations/sorrento', description: 'Private nursing and registered nurse home visits across Sorrento, Hillarys, and Marmion.', distance: 'Northern Suburbs' },
+  { name: 'Scarborough', href: '/locations/scarborough', description: 'In-home registered nurse visits in Scarborough, Trigg, and City Beach.', distance: 'Coastal North' },
+  { name: 'Midland', href: '/locations/midland', description: 'Registered nurse home visits in Midland, Middle Swan, and Guildford.', distance: 'Eastern Corridor' },
 ]
-
-// Combined for components that need flat list
-const suburbsList = [...primarySuburbs, ...additionalSuburbs]
-
 
 const hospitalPartners = [
   { name: 'Fiona Stanley Hospital', location: 'Murdoch', icon: Building2, desc: 'Coordinating safe discharges for south metro surgical and medical patients.' },
@@ -82,20 +92,55 @@ export default function LocationsPage() {
 
       <PageHeader
         title="Aged Care & Home Nursing Across Perth"
-        subtitle="A local Harrisdale nursing team providing aged care at home and registered nurse visits across the Perth metro area."
+        subtitle="A local Harrisdale nursing team providing aged care at home and registered nurse visits across all metropolitan Perth suburbs."
         breadcrumbItems={[{ name: 'Locations', href: '/locations' }]}
-        label="Perth Metro Coverage"
+        label="Perth Metropolitan Coverage"
       />
 
-      {/* Home-base corridor */}
+      {/* Immediate Client Intake Callout */}
+      <section className="bg-gradient-to-r from-navy via-navy-light to-navy text-white py-6 border-b border-teal-500/30">
+        <div className="section-container">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="text-center md:text-left">
+              <span className="inline-block px-3 py-1 bg-teal-accent/20 text-teal-accent rounded-full text-xs font-bold uppercase tracking-wider mb-1">
+                Direct Nurse Intake Hotline
+              </span>
+              <h3 className="text-lg md:text-xl font-bold text-white">Need an At-Home Nurse or Aged Care in Your Suburb?</h3>
+              <p className="text-xs md:text-sm text-slate-300">
+                AHPRA Registered Nurses visit your home directly. No GP referral needed · Zero travel fees within 50km · 24–48h assessment.
+              </p>
+            </div>
+            <div className="flex items-center gap-3 shrink-0">
+              <a
+                href="tel:1300919663"
+                className="inline-flex items-center gap-2 bg-teal-accent hover:bg-teal-dark text-navy font-bold px-5 py-2.5 rounded-xl shadow-md transition-all text-sm"
+              >
+                Call 1300 919 663
+              </a>
+              <a
+                href="https://wa.me/61481748516"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-4 py-2.5 rounded-xl border border-white/20 transition-all text-sm"
+              >
+                WhatsApp RN
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Priority Tier 1: Home-Base South-East Corridor */}
       <section className="section-py bg-white">
         <div className="section-container">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <p className="section-label mb-2">Our Home Base · 15 Rockefeller Way, Harrisdale</p>
-            <h2 className="text-navy font-bold">Local aged care for Perth&apos;s south-east</h2>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-teal-50 border border-teal-200 text-teal-800 text-xs font-bold uppercase tracking-wider mb-3">
+              <span>⚡ Priority Area 1 · Head Office Catchment</span>
+            </div>
+            <h2 className="text-navy font-bold text-2xl md:text-3xl">Immediate Care Corridor: Perth&apos;s South-East</h2>
             <div className="section-divider mx-auto" />
             <p className="text-body text-base leading-relaxed">
-              Our nurses live and work in this corridor. These suburbs are closest to our Harrisdale base, so families get the fastest intake, the most flexible visit times, and the same nurse every time.
+              Based at <strong>15 Rockefeller Way, Harrisdale</strong>, our Registered Nurses live and operate right in this corridor. Families in these suburbs receive <strong>same-day / 24-hour intake</strong>, maximum schedule flexibility, and zero travel surcharges.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -112,20 +157,50 @@ export default function LocationsPage() {
         </div>
       </section>
 
-      {/* Main Service Area Intro & Suburb Grid */}
+      {/* Priority Tier 2: High-Demand Metro & Coastal Corridors */}
       <section className="section-py bg-surface">
         <div className="section-container">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <p className="section-label mb-2">Perth WA Coverage</p>
-            <h2 className="text-navy font-bold">Across the wider Perth metro area</h2>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-900 text-xs font-bold uppercase tracking-wider mb-3">
+              <span>🌊 Priority Area 2 · South & Coastal Metro</span>
+            </div>
+            <h2 className="text-navy font-bold text-2xl md:text-3xl">Southern Corridor & Fremantle Region</h2>
             <div className="section-divider mx-auto" />
             <p className="text-body text-base leading-relaxed">
-              We also visit families across the southern, western, northern and inner suburbs of Perth. If your suburb isn&apos;t listed, call us — we likely still cover it.
+              Active nursing coverage for high-density patient communities across Rockingham, Baldivis, Fremantle, and the City of Melville. Comprehensive Support at Home packages, complex wound care, and clinical nursing.
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {suburbsList.map((suburb) => (
+            {priorityMetroHubs.map((suburb) => (
+              <SuburbCard
+                key={suburb.name}
+                name={suburb.name}
+                href={suburb.href}
+                description={suburb.description}
+                distance={suburb.distance}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Priority Tier 3: Western & Northern Corridors */}
+      <section className="section-py bg-white">
+        <div className="section-container">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-900 text-xs font-bold uppercase tracking-wider mb-3">
+              <span>🩺 Priority Area 3 · Western Suburbs & North Metro</span>
+            </div>
+            <h2 className="text-navy font-bold text-2xl md:text-3xl">Northern Corridor & Western Suburbs</h2>
+            <div className="section-divider mx-auto" />
+            <p className="text-body text-base leading-relaxed">
+              Clinical post-operative surgical nursing, hospital transitions from SCGH and Hollywood Private, sterile wound care, and companion elderly care across Joondalup and the western coastal suburbs.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {northernAndWesternSuburbs.map((suburb) => (
               <SuburbCard
                 key={suburb.name}
                 name={suburb.name}

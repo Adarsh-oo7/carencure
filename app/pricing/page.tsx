@@ -10,7 +10,17 @@ export const metadata: Metadata = {
   title: {
     absolute: 'Private Nursing Rates & Care Pricing Perth | Care N Cure',
   },
-  description: 'Transparent private nursing rates in Perth. Fee structure for registered nurse home visits, NDIS price guide alignment, Home Care Packages, and private health rebates.',
+  description: 'Transparent private nursing rates in Perth. Clear fee structure for registered nurse home visits ($110–$160/hr), NDIS price guide alignment, Home Care Packages, and private health rebates. Call 1300 919 663.',
+  keywords: [
+    'private nursing rates perth',
+    'private nurse cost perth',
+    'how much does a private nurse cost perth',
+    'home nursing cost perth',
+    'registered nurse hourly rate perth',
+    'aged care costs perth',
+    'ndis nursing rates perth',
+    'home care package fees perth',
+  ],
   alternates: { canonical: 'https://carencure.com.au/pricing' },
 }
 

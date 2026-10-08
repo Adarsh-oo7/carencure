@@ -18,25 +18,25 @@ import {
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Aged Care at Home Perth | Local Nurse-Led Aged Care Agency WA | Care N Cure',
+    absolute: 'Aged Care at Home Perth WA | In-Home Support & Nurse Agency | Care N Cure',
   },
   description:
-    'Local, nurse-led aged care agency in Perth (Harrisdale). Same Registered Nurse every visit, Support at Home & private care, start in 24–48h while you wait for My Aged Care. 5.0★ Google. Call 1300 919 663.',
+    'Need aged care at home in Perth? Care N Cure provides dedicated AHPRA Registered Nurses for elderly in-home support, Support at Home & private care. Fast 24–48h start while waiting for My Aged Care. 5.0★ Google. Call 1300 919 663.',
   keywords: [
+    'aged care in home support',
     'aged care at home perth',
+    'aged care in home services perth',
     'aged care agency perth',
     'aged care agency perth wa',
-    'age care agency in perth',
-    'aged care agencies perth',
-    'aged care providers perth',
-    'aged care in home support',
-    'aged care in home services perth',
-    'in home aged care perth',
+    'best home care providers perth',
+    'best in-home nursing care providers for support at home',
     'aged care support at home perth',
     'aged care near me perth',
+    'in home aged care perth',
     'aged care wa',
     'carers for elderly perth',
     'aged care canning vale',
+    'aged care southern river',
     'aged care at home harrisdale',
     'elderly care at home perth',
     'support at home providers perth',

@@ -10,13 +10,16 @@ export const metadata: Metadata = {
     absolute: 'Wound Care Nurse Perth | In-Home Wound Dressing & Stitch Removal | Care N Cure',
   },
   description:
-    'Need a wound care nurse at home in Perth? AHPRA Registered Nurses provide sterile wound dressing changes, surgical stitch & staple removal, diabetic ulcer care & pressure injury management. No clinic visit needed. Call 1300 919 663.',
+    'Need a wound care nurse or wound dressing at home near you in Perth? AHPRA Registered Nurses provide sterile wound dressing changes, surgical stitch & staple removal, diabetic ulcer care & pressure injury management. Same-day & 24h intake. Call 1300 919 663.',
   keywords: [
     'wound care nurse perth',
+    'wound dressing near me',
     'wound dressing at home perth',
     'in home wound care perth',
+    'wound care perth',
     'wound care nurse at home perth',
     'wound dressing nurse perth',
+    'mobile wound dressing perth',
     'stitch removal at home perth',
     'staple removal at home perth',
     'wound management perth',
