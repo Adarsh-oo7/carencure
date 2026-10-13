@@ -72,7 +72,7 @@ export async function POST(request: Request) {
     }
 
     // Forward via FormSubmit for instant email dispatch
-    const primaryEmail = process.env.NOTIFICATION_EMAIL || 'carencurenursing@gmail.com'
+    const primaryToken = process.env.FORMSUBMIT_TOKEN || 'a9d6b96eba2c033545f0f8f196ac6e70'
     const ccEmail = process.env.NOTIFICATION_CC_EMAIL || 'hello@carencure.com.au'
 
     const emailSubject = formType === 'hospital_referral'
@@ -106,7 +106,7 @@ export async function POST(request: Request) {
     }
 
     try {
-      const emailRes = await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(primaryEmail)}`, {
+      const emailRes = await fetch(`https://formsubmit.co/ajax/${primaryToken}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
