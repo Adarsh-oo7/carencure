@@ -47,7 +47,21 @@ export function ReferralForm() {
 
   async function onSubmit(data: ReferralFormValues) {
     try {
-      console.log('Referral data:', data)
+      await fetch('/api/enquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          formType: 'hospital_referral',
+          referrerName: data.referrerName,
+          referrerEmail: data.referrerEmail,
+          referrerPhone: data.referrerPhone,
+          patientName: data.patientName,
+          patientEmail: data.patientEmail,
+          patientPhone: data.patientPhone,
+          relationship: data.relationship,
+          message: data.message,
+        }),
+      })
       setSubmitted(true)
       form.reset()
       setTimeout(() => setSubmitted(false), 5000)

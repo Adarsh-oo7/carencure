@@ -50,8 +50,18 @@ export function ConsultationForm() {
 
   async function onSubmit(data: ConsultationFormValues) {
     try {
-      // In a real app, you'd send this to your backend
-      console.log('Form data:', data)
+      await fetch('/api/enquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          formType: 'consultation',
+          name: data.fullName,
+          email: data.email,
+          phone: data.phone,
+          service: data.serviceType,
+          message: data.message ? `Client Age: ${data.age}. ${data.message}` : `Client Age: ${data.age}`,
+        }),
+      })
       setSubmitted(true)
       form.reset()
       setTimeout(() => setSubmitted(false), 5000)

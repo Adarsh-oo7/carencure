@@ -50,22 +50,56 @@ export function ContactForm({
 }: ContactFormProps) {
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [submittedData, setSubmittedData] = useState<{
+    name: string
+    suburb: string
+    service: string
+  } | null>(null)
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setLoading(true)
     const formData = new FormData(e.currentTarget)
-    const service = (formData.get('service') as string) || defaultService
+    const name = (formData.get('name') as string) || ''
+    const phone = (formData.get('phone') as string) || ''
     const suburb = (formData.get('suburb') as string) || defaultSuburb
+    const service = (formData.get('service') as string) || defaultService
     const funding = (formData.get('funding') as string) || ''
+    const message = (formData.get('message') as string) || ''
+
     trackFormSubmit('contact_form', service, suburb, funding)
-    // Placeholder: wire up to your form backend (e.g. Formspree, Netlify Forms)
-    await new Promise((r) => setTimeout(r, 800))
+
+    try {
+      await fetch('/api/enquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          formType: 'contact',
+          name,
+          phone,
+          suburb,
+          service,
+          funding,
+          message,
+        }),
+      })
+    } catch (err) {
+      console.error('Failed to submit enquiry:', err)
+    }
+
+    setSubmittedData({ name, suburb, service })
     setLoading(false)
     setSubmitted(true)
   }
 
   if (submitted) {
+    const waText = encodeURIComponent(
+      `Hi Care N Cure, I just submitted an enquiry for ${submittedData?.name || 'care'} in ${
+        submittedData?.suburb || 'Perth'
+      }${submittedData?.service ? ` regarding ${submittedData.service}` : ''}. Would love to speak with a Registered Nurse coordinator.`
+    )
+    const waUrl = `https://wa.me/61481748516?text=${waText}`
+
     return (
       <div
         className="card-base p-8 text-center flex flex-col items-center gap-4 bg-white"
@@ -79,16 +113,29 @@ export function ContactForm({
           ✓
         </div>
         <h3 className="text-navy font-bold text-xl">Thank you — we&apos;ll be in touch soon</h3>
-        <p className="text-body text-sm">
-          We aim to respond within 2 hours during business hours. For urgent care needs, please{' '}
+        <p className="text-body text-sm max-w-md">
+          Your enquiry has been logged directly with our Perth Registered Nurse intake team. We aim to respond within 2 hours during business hours.
+        </p>
+
+        <div className="w-full flex flex-col sm:flex-row gap-3 mt-3">
+          <a
+            href={waUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 flex items-center justify-center gap-2 font-semibold py-3 px-4 rounded-xl text-white transition-all shadow-sm"
+            style={{ backgroundColor: '#25D366' }}
+          >
+            <span>💬 Chat on WhatsApp</span>
+          </a>
           <a
             href={PHONE_HREF}
-            className="font-semibold text-navy underline cursor-pointer inline font-inherit"
-            style={{ minHeight: 'auto' }}
+            className="flex-1 flex items-center justify-center gap-2 font-semibold py-3 px-4 rounded-xl text-white transition-all shadow-sm"
+            style={{ backgroundColor: 'var(--navy)' }}
           >
-            call us directly
-          </a>.
-        </p>
+            <Phone className="w-4 h-4" />
+            <span>Call 1300 919 663</span>
+          </a>
+        </div>
       </div>
     )
   }

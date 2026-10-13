@@ -1,0 +1,116 @@
+import { NextResponse } from 'next/server'
+import fs from 'fs'
+import path from 'path'
+
+export async function POST(request: Request) {
+  try {
+    const body = await request.json()
+    const {
+      formType = 'contact',
+      name = '',
+      phone = '',
+      email = '',
+      suburb = '',
+      service = '',
+      funding = '',
+      message = '',
+      // Referral specific
+      referrerName = '',
+      referrerEmail = '',
+      referrerPhone = '',
+      patientName = '',
+      patientEmail = '',
+      patientPhone = '',
+      relationship = '',
+    } = body
+
+    const enquiryRecord = {
+      id: `enquiry_${Date.now()}_${Math.random().toString(36).slice(2, 7)}`,
+      timestamp: new Date().toISOString(),
+      formType,
+      data: {
+        name: name || referrerName || patientName,
+        phone: phone || referrerPhone || patientPhone,
+        email: email || referrerEmail || patientEmail,
+        suburb,
+        service,
+        funding,
+        message,
+        referrer: {
+          name: referrerName,
+          email: referrerEmail,
+          phone: referrerPhone,
+          relationship,
+        },
+        patient: {
+          name: patientName,
+          email: patientEmail,
+          phone: patientPhone,
+        },
+      },
+    }
+
+    // Persist to local data directory so no lead is EVER lost
+    try {
+      const dataDir = path.join(process.cwd(), 'data')
+      if (!fs.existsSync(dataDir)) {
+        fs.mkdirSync(dataDir, { recursive: true })
+      }
+      const filePath = path.join(dataDir, 'enquiries.json')
+      let existing: any[] = []
+      if (fs.existsSync(filePath)) {
+        try {
+          existing = JSON.parse(fs.readFileSync(filePath, 'utf8'))
+        } catch {
+          existing = []
+        }
+      }
+      existing.unshift(enquiryRecord)
+      fs.writeFileSync(filePath, JSON.stringify(existing, null, 2), 'utf8')
+    } catch (saveError) {
+      console.error('Failed to save enquiry to data/enquiries.json:', saveError)
+    }
+
+    // Optional webhook or external forwarding if configured
+    if (process.env.ENQUIRY_WEBHOOK_URL) {
+      try {
+        await fetch(process.env.ENQUIRY_WEBHOOK_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(enquiryRecord),
+        })
+      } catch (webhookError) {
+        console.error('Webhook notification error:', webhookError)
+      }
+    }
+
+    return NextResponse.json({
+      success: true,
+      message: 'Enquiry received successfully',
+      id: enquiryRecord.id,
+    })
+  } catch (error: any) {
+    console.error('Enquiry API Error:', error)
+    return NextResponse.json(
+      { success: false, error: error.message || 'Failed to process enquiry' },
+      { status: 500 }
+    )
+  }
+}
+
+export async function GET() {
+  // Safe endpoint for admins to inspect enquiry count
+  try {
+    const filePath = path.join(process.cwd(), 'data', 'enquiries.json')
+    if (fs.existsSync(filePath)) {
+      const list = JSON.parse(fs.readFileSync(filePath, 'utf8'))
+      return NextResponse.json({
+        totalEnquiries: list.length,
+        recent: list.slice(0, 5),
+      })
+    }
+    return NextResponse.json({ totalEnquiries: 0, recent: [] })
+  } catch (err: any) {
+    return NextResponse.json({ error: err.message }, { status: 500 })
+  }
+}
