@@ -70,7 +70,7 @@ export function ContactForm({
     trackFormSubmit('contact_form', service, suburb, funding)
 
     try {
-      await fetch('/api/enquiry', {
+      const res = await fetch('/api/enquiry', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -83,8 +83,35 @@ export function ContactForm({
           message,
         }),
       })
+      if (!res.ok) throw new Error('API submission responded with error')
     } catch (err) {
-      console.error('Failed to submit enquiry:', err)
+      console.warn('Local API failed, dispatching directly via FormSubmit:', err)
+      try {
+        await fetch('https://formsubmit.co/ajax/carencurenursing@gmail.com', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+            'Origin': 'https://carencure.com.au',
+            'Referer': 'https://carencure.com.au/',
+          },
+          body: JSON.stringify({
+            _subject: `🚨 New Care Enquiry: ${name} - ${service} (${suburb || 'Perth'})`,
+            _template: 'table',
+            _captcha: 'false',
+            _cc: 'hello@carencure.com.au',
+            'Full Name': name,
+            'Phone Number': phone,
+            'Suburb / Location': suburb,
+            'Service Needed': service,
+            'Funding Pathway': funding,
+            'Message': message,
+            'Submitted At': new Date().toLocaleString('en-AU', { timeZone: 'Australia/Perth' }),
+          }),
+        })
+      } catch (fallbackErr) {
+        console.error('Direct fallback also failed:', fallbackErr)
+      }
     }
 
     setSubmittedData({ name, suburb, service })

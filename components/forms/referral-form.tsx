@@ -47,7 +47,7 @@ export function ReferralForm() {
 
   async function onSubmit(data: ReferralFormValues) {
     try {
-      await fetch('/api/enquiry', {
+      const res = await fetch('/api/enquiry', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -62,12 +62,42 @@ export function ReferralForm() {
           message: data.message,
         }),
       })
-      setSubmitted(true)
-      form.reset()
-      setTimeout(() => setSubmitted(false), 5000)
+      if (!res.ok) throw new Error('API submission responded with error')
     } catch (error) {
-      console.error('Error submitting form:', error)
+      console.warn('API route failed, dispatching via FormSubmit:', error)
+      try {
+        await fetch('https://formsubmit.co/ajax/carencurenursing@gmail.com', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+            'Origin': 'https://carencure.com.au',
+            'Referer': 'https://carencure.com.au/',
+          },
+          body: JSON.stringify({
+            _subject: `🚨 New Hospital Referral: ${data.patientName} (${data.referrerName} - ${data.relationship})`,
+            _template: 'table',
+            _captcha: 'false',
+            _cc: 'hello@carencure.com.au',
+            'Form Type': 'Hospital / Provider Referral',
+            'Referrer Name': data.referrerName,
+            'Referrer Email': data.referrerEmail,
+            'Referrer Phone': data.referrerPhone,
+            'Referrer Role / Relationship': data.relationship,
+            'Patient Name': data.patientName,
+            'Patient Email': data.patientEmail,
+            'Patient Phone': data.patientPhone,
+            'Clinical Notes / Message': data.message || 'None',
+            'Submitted At': new Date().toLocaleString('en-AU', { timeZone: 'Australia/Perth' }),
+          }),
+        })
+      } catch (fallbackErr) {
+        console.error('Fallback error:', fallbackErr)
+      }
     }
+    setSubmitted(true)
+    form.reset()
+    setTimeout(() => setSubmitted(false), 5000)
   }
 
   return (

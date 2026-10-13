@@ -71,6 +71,59 @@ export async function POST(request: Request) {
       console.error('Failed to save enquiry to data/enquiries.json:', saveError)
     }
 
+    // Forward via FormSubmit for instant email dispatch
+    const primaryEmail = process.env.NOTIFICATION_EMAIL || 'carencurenursing@gmail.com'
+    const ccEmail = process.env.NOTIFICATION_CC_EMAIL || 'hello@carencure.com.au'
+
+    const emailSubject = formType === 'hospital_referral'
+      ? `🚨 New Hospital Referral: ${patientName || referrerName || 'Patient'} (${relationship || 'Provider'})`
+      : `🚨 New Care Enquiry: ${name || 'Client'} - ${service || formType} (${suburb || 'Perth'})`
+
+    const formSubmitPayload = {
+      _subject: emailSubject,
+      _template: 'table',
+      _captcha: 'false',
+      _cc: ccEmail,
+      ...(email ? { _replyto: email } : referrerEmail ? { _replyto: referrerEmail } : {}),
+      'Form Type': formType,
+      'Client / Enquirer Name': name || patientName || 'N/A',
+      'Contact Phone': phone || referrerPhone || patientPhone || 'N/A',
+      'Contact Email': email || referrerEmail || patientEmail || 'N/A',
+      'Suburb / Location': suburb || 'Perth Metropolitan Area',
+      'Service Requested': service || 'Aged Care & In-Home Nursing',
+      'Funding Pathway': funding || 'Not specified',
+      'Details / Clinical Notes': message || 'None provided',
+      ...(formType === 'hospital_referral' ? {
+        'Referrer Name': referrerName,
+        'Referrer Organization / Role': relationship,
+        'Referrer Phone': referrerPhone,
+        'Referrer Email': referrerEmail,
+        'Patient Full Name': patientName,
+        'Patient Phone': patientPhone,
+        'Patient Email': patientEmail,
+      } : {}),
+      'Submitted At (Perth AWST)': new Date().toLocaleString('en-AU', { timeZone: 'Australia/Perth' }),
+    }
+
+    try {
+      const emailRes = await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(primaryEmail)}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+          'Origin': 'https://carencure.com.au',
+          'Referer': 'https://carencure.com.au/',
+        },
+        body: JSON.stringify(formSubmitPayload),
+      })
+      const emailJson = await emailRes.json().catch(() => ({}))
+      if (!emailRes.ok) {
+        console.warn('FormSubmit email notice:', emailJson)
+      }
+    } catch (emailErr) {
+      console.error('Failed to dispatch FormSubmit email notification:', emailErr)
+    }
+
     // Optional webhook or external forwarding if configured
     if (process.env.ENQUIRY_WEBHOOK_URL) {
       try {
@@ -86,7 +139,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({
       success: true,
-      message: 'Enquiry received successfully',
+      message: 'Enquiry received and notification dispatched',
       id: enquiryRecord.id,
     })
   } catch (error: any) {
