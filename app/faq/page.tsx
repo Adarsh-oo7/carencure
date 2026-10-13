@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: {
     absolute: 'In-Home Nurse Perth FAQ | How to Hire Home Care Nurses | Care N Cure',
   },
-  description: 'Frequently asked questions about hiring an in-home nurse in Perth. Learn about registered nurse home visits, aged care packages, clinical costs & 24/7 care. Call 1300 919 663.',
+  description: 'Frequently asked questions about hiring an in-home nurse in Perth. Learn about registered nurse home visits, aged care packages, Support at Home & clinical costs. Call 1300 919 663.',
   alternates: { canonical: 'https://carencure.com.au/faq' },
 }
 

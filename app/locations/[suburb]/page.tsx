@@ -502,7 +502,7 @@ export async function generateMetadata({ params }: { params: Promise<{ suburb: s
 
   // Mirrors how Perth families actually search (GSC): "aged care [suburb]", "home care [suburb]", "community nursing care [suburb]"
   let pageTitle = `Aged Care & Home Nurse ${data.name} WA | In-Home Care | Care N Cure`
-  let pageDesc = `Local aged care at home & community nursing in ${data.name}, Perth. Same AHPRA Registered Nurse every visit. Private or Support at Home. No referral. Call 1300 919 663.`
+  let pageDesc = `Local aged care at home & community nursing in ${data.name}, Perth. Dedicated Registered Nurse coordinator. Private or Support at Home. No referral. Call 1300 919 663.`
 
   if (suburb === 'armadale') {
     pageTitle = 'At Home Nurse Armadale | In-Home Aged Care & Nursing | Care N Cure'
@@ -512,7 +512,7 @@ export async function generateMetadata({ params }: { params: Promise<{ suburb: s
     pageDesc = 'Aged care in-home support & community nursing in Canning Vale, WA. Sterile wound dressings, medication & Support at Home by AHPRA RNs. 10 mins from Harrisdale HQ. Call 1300 919 663.'
   } else if (suburb === 'harrisdale') {
     pageTitle = 'Aged Care & Home Nurse Harrisdale WA | Head Office & Local Intake | Care N Cure'
-    pageDesc = 'Care N Cure headquarters at 15 Rockefeller Way, Harrisdale. Same-day nurse intake, sterile wound care & aged care at home with dedicated RN every visit. Call 1300 919 663.'
+    pageDesc = 'Care N Cure headquarters at 15 Rockefeller Way, Harrisdale. Same-day nurse intake, sterile wound care & aged care at home with a dedicated RN coordinator. Call 1300 919 663.'
   } else if (suburb === 'southern-river') {
     pageTitle = 'Aged Care at Home Southern River WA | Registered Nurse Home Visits | Care N Cure'
     pageDesc = 'Local aged care at home & clinical nursing in Southern River. Minutes from Harrisdale HQ. Sterile wound dressings, post-hospital recovery & senior support. Call 1300 919 663.'
@@ -524,7 +524,7 @@ export async function generateMetadata({ params }: { params: Promise<{ suburb: s
     pageDesc = 'Community nursing care & aged care in Thornlie, Langford & Crestwood. Sterile wound dressings, subcutaneous injections & senior support. No GP referral needed. Call 1300 919 663.'
   } else if (suburb === 'willetton') {
     pageTitle = 'Aged Care at Home Willetton & Riverton WA | Registered Nurses | Care N Cure'
-    pageDesc = 'Aged care at home & clinical nursing for Willetton, Riverton & Rossmoyne seniors. Same Registered Nurse coordinator every visit. Zero travel fees. Call 1300 919 663.'
+    pageDesc = 'Aged care at home & clinical nursing for Willetton, Riverton & Rossmoyne seniors. Dedicated Registered Nurse coordinator. Zero travel fees. Call 1300 919 663.'
   } else if (suburb === 'cockburn-central') {
     pageTitle = 'Home Nurse Cockburn Central, Success & Atwell | Aged Care WA | Care N Cure'
     pageDesc = 'AHPRA Registered Nurses serving Cockburn Central, Success, Atwell & Aubin Grove. Post-hospital discharge nursing near Fiona Stanley Hospital. Call 1300 919 663.'

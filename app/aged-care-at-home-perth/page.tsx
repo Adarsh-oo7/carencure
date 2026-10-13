@@ -18,10 +18,10 @@ import {
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Aged Care at Home Perth WA | In-Home Support & Nurse Agency | Care N Cure',
+    absolute: 'Aged Care at Home Perth | Nurse-Led Provider | Care N Cure',
   },
   description:
-    'Need aged care at home in Perth? Care N Cure provides dedicated AHPRA Registered Nurses for elderly in-home support, Support at Home & private care. Fast 24–48h start while waiting for My Aged Care. 5.0★ Google. Call 1300 919 663.',
+    'Aged care at home in Perth, led by Registered Nurses. In-home support for elderly parents — private, Support at Home or while waiting for My Aged Care. Assessment in 24–48h.',
   keywords: [
     'aged care in home support',
     'aged care at home perth',
@@ -46,9 +46,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: 'https://carencure.com.au/aged-care-at-home-perth' },
   openGraph: {
-    title: 'Aged Care at Home Perth | Local Nurse-Led Aged Care Agency WA | Care N Cure',
+    title: 'Aged Care at Home Perth | Nurse-Led Provider | Care N Cure',
     description:
-      'Local nurse-led aged care in Perth. Same Registered Nurse every visit, Support at Home & private care, 24–48h start. Call 1300 919 663.',
+      'Local nurse-led aged care in Perth. Dedicated Registered Nurse coordinator, Support at Home & private care, 24–48h assessment.',
     url: 'https://carencure.com.au/aged-care-at-home-perth',
   },
 }

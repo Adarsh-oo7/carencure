@@ -21,7 +21,7 @@ import { CtaUncertaintyReducer } from '@/components/sections/cta-uncertainty-red
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'At Home Nurse for Elderly Perth | Private In-Home Elderly Care | Care N Cure',
+    absolute: 'Elderly Nursing Care at Home Perth | Care N Cure',
   },
   description:
     'Caring for an elderly parent in Perth? Care N Cure provides dedicated AHPRA Registered Nurses for in-home elderly care — wound dressing, medication safety, health monitoring & HCP/Support at Home funding. No referral needed. Call 1300 919 663.',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: 'https://carencure.com.au/private-nursing/elderly-care' },
   openGraph: {
-    title: 'At Home Nurse for Elderly Perth | Private In-Home Elderly Care | Care N Cure',
+    title: 'Elderly Nursing Care at Home Perth | Care N Cure',
     description:
       'Dedicated AHPRA Registered Nurses for in-home elderly care across Perth. Wound dressing, medication safety, health monitoring & HCP funding. No referral needed. Call 1300 919 663.',
     url: 'https://carencure.com.au/private-nursing/elderly-care',
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'At Home Nurse for Elderly Perth | Care N Cure',
+    title: 'Elderly Nursing Care at Home Perth | Care N Cure',
     description: 'AHPRA Registered Nurses for in-home elderly care across Perth. No referral needed. Wound care, medication & HCP funding support.',
   },
 }

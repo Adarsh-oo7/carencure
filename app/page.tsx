@@ -18,10 +18,10 @@ import { CtaUncertaintyReducer } from '@/components/sections/cta-uncertainty-red
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Home Nurse Perth | AHPRA Registered In-Home Nursing & Aged Care | Care N Cure',
+    absolute: 'Home Care & Nursing Perth | Aged Care at Home | Care N Cure',
   },
   description:
-    "Perth's local nurse-led home care & aged care team, based in Harrisdale. Same AHPRA Registered Nurse every visit, no referral needed. Wound care, medication & post-hospital recovery. Call 1300 919 663.",
+    'Local nurse-led home care for elderly parents across Perth. Registered Nurse visits for wound care, medication & hospital recovery. Private or Support at Home. Assessment in 24–48h.',
   keywords: [
     'home nurse perth',
     'care n cure nursing care services',
@@ -43,9 +43,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: 'https://carencure.com.au' },
   openGraph: {
-    title: 'Home Nurse Perth | AHPRA Registered In-Home Nursing & Aged Care | Care N Cure',
+    title: 'Home Care & Nursing Perth | Aged Care at Home | Care N Cure',
     description:
-      'Perth\'s nurse-led home care service. AHPRA Registered Nurses visit you at home — no referral needed. Wound care, medication, aged care & post-hospital recovery across Perth metro. Call 1300 919 663.',
+      'Local nurse-led home care for elderly parents across Perth. Registered Nurse visits for wound care, medication & hospital recovery. Private or Support at Home. Assessment in 24–48h.',
     url: 'https://carencure.com.au',
     type: 'website',
     siteName: 'Care N Cure Nursing Care Services',
@@ -53,12 +53,18 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Home Nurse Perth | AHPRA Registered In-Home Nursing | Care N Cure',
-    description: 'Perth\'s nurse-led home care service. No referral needed. Wound care, aged care & post-hospital recovery. Call 1300 919 663.',
+    title: 'Home Care & Nursing Perth | Aged Care at Home | Care N Cure',
+    description: 'Local nurse-led home care for elderly parents across Perth. Registered Nurse visits, private or Support at Home. Assessment in 24–48h.',
   },
 }
 
 const homeFaqs = [
+  {
+    id: 'faq-home-care-nursing',
+    question: 'What is home care nursing, and how is it different from home care services?',
+    answer:
+      'Home care services usually means help with daily living — cleaning, meals, showering and companionship, delivered by support workers. Home care nursing is clinical care delivered at home by a Registered Nurse: wound dressings, medication management, injections, catheter care, health monitoring and liaising with your GP. Care N Cure is a nurse-led home care provider in Perth, so an RN oversees your parent\'s care plan and can arrange personal care support alongside clinical visits.',
+  },
   {
     id: 'faq-at-home-nurse',
     question: 'Is there an at-home nurse near me in Perth?',
@@ -75,7 +81,7 @@ const homeFaqs = [
     id: 'faq-aged-care-agency',
     question: 'Are you an aged care agency in Perth?',
     answer:
-      'Care N Cure is a registered nurse-led in-home aged care practice based in Harrisdale, Perth. Unlike traditional aged care agencies that dispatch rotating support workers, every Care N Cure client is assigned a dedicated Registered Nurse Coordinator who attends every visit. We are AHPRA-registered and provide clinical nursing — not just personal care or domestic support.',
+      'Care N Cure is a registered nurse-led in-home aged care practice based in Harrisdale, Perth. Unlike traditional aged care agencies that dispatch rotating support workers, every Care N Cure client is assigned a dedicated Registered Nurse Coordinator, with a small, familiar back-up team for planned leave. We are AHPRA-registered and provide clinical nursing — not just personal care or domestic support.',
   },
   {
     id: 'faq-what-private-nurse',
@@ -133,7 +139,7 @@ export default function HomePage() {
               One Client. One Dedicated Nurse Coordinator. One Trusted Relationship.
             </p>
             <p className="text-white/90 text-sm sm:text-base leading-relaxed">
-              Perth nurse-led in-home care for clinical recovery, wound dressings, and aged care support. Same qualified Registered Nurse every visit—no rotating casual rosters.
+              Perth nurse-led in-home care for clinical recovery, wound dressings, and aged care support. A dedicated Registered Nurse coordinator and a small, familiar team — no rotating casual rosters.
             </p>
           </div>
         }
