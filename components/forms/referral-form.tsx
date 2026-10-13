@@ -47,53 +47,31 @@ export function ReferralForm() {
 
   async function onSubmit(data: ReferralFormValues) {
     try {
-      const res = await fetch('/api/enquiry', {
+      await fetch('https://formsubmit.co/ajax/a9d6b96eba2c033545f0f8f196ac6e70', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
         body: JSON.stringify({
-          formType: 'hospital_referral',
-          referrerName: data.referrerName,
-          referrerEmail: data.referrerEmail,
-          referrerPhone: data.referrerPhone,
-          patientName: data.patientName,
-          patientEmail: data.patientEmail,
-          patientPhone: data.patientPhone,
-          relationship: data.relationship,
-          message: data.message,
+          _subject: `🚨 New Hospital Referral: ${data.patientName} (${data.referrerName} - ${data.relationship})`,
+          _template: 'table',
+          _captcha: 'false',
+          _cc: 'hello@carencure.com.au',
+          'Form Type': 'Hospital / Healthcare Provider Referral',
+          'Referrer Name': data.referrerName,
+          'Referrer Email': data.referrerEmail,
+          'Referrer Phone': data.referrerPhone,
+          'Referrer Role / Relationship': data.relationship,
+          'Patient Name': data.patientName,
+          'Patient Email': data.patientEmail,
+          'Patient Phone': data.patientPhone,
+          'Clinical Notes / Message': data.message || 'None provided',
+          'Submitted At': new Date().toLocaleString('en-AU', { timeZone: 'Australia/Perth' }),
         }),
       })
-      if (!res.ok) throw new Error('API submission responded with error')
     } catch (error) {
-      console.warn('API route failed, dispatching via FormSubmit:', error)
-      try {
-        await fetch('https://formsubmit.co/ajax/a9d6b96eba2c033545f0f8f196ac6e70', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json',
-            'Origin': 'https://carencure.com.au',
-            'Referer': 'https://carencure.com.au/',
-          },
-          body: JSON.stringify({
-            _subject: `🚨 New Hospital Referral: ${data.patientName} (${data.referrerName} - ${data.relationship})`,
-            _template: 'table',
-            _captcha: 'false',
-            _cc: 'hello@carencure.com.au',
-            'Form Type': 'Hospital / Provider Referral',
-            'Referrer Name': data.referrerName,
-            'Referrer Email': data.referrerEmail,
-            'Referrer Phone': data.referrerPhone,
-            'Referrer Role / Relationship': data.relationship,
-            'Patient Name': data.patientName,
-            'Patient Email': data.patientEmail,
-            'Patient Phone': data.patientPhone,
-            'Clinical Notes / Message': data.message || 'None',
-            'Submitted At': new Date().toLocaleString('en-AU', { timeZone: 'Australia/Perth' }),
-          }),
-        })
-      } catch (fallbackErr) {
-        console.error('Fallback error:', fallbackErr)
-      }
+      console.warn('Referral submission notice:', error)
     }
     setSubmitted(true)
     form.reset()

@@ -70,48 +70,28 @@ export function ContactForm({
     trackFormSubmit('contact_form', service, suburb, funding)
 
     try {
-      const res = await fetch('/api/enquiry', {
+      await fetch('https://formsubmit.co/ajax/a9d6b96eba2c033545f0f8f196ac6e70', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
         body: JSON.stringify({
-          formType: 'contact',
-          name,
-          phone,
-          suburb,
-          service,
-          funding,
-          message,
+          _subject: `🚨 New Care Enquiry: ${name || 'Client'} - ${service || 'Home Care'} (${suburb || 'Perth'})`,
+          _template: 'table',
+          _captcha: 'false',
+          _cc: 'hello@carencure.com.au',
+          'Full Name': name,
+          'Phone Number': phone,
+          'Suburb / Location': suburb || 'Perth Metro',
+          'Service Needed': service || 'Aged Care & In-Home Nursing',
+          'Funding Pathway': funding || 'Not specified',
+          'Message / Details': message || 'None provided',
+          'Submitted At': new Date().toLocaleString('en-AU', { timeZone: 'Australia/Perth' }),
         }),
       })
-      if (!res.ok) throw new Error('API submission responded with error')
     } catch (err) {
-      console.warn('Local API failed, dispatching directly via FormSubmit:', err)
-      try {
-        await fetch('https://formsubmit.co/ajax/a9d6b96eba2c033545f0f8f196ac6e70', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json',
-            'Origin': 'https://carencure.com.au',
-            'Referer': 'https://carencure.com.au/',
-          },
-          body: JSON.stringify({
-            _subject: `🚨 New Care Enquiry: ${name} - ${service} (${suburb || 'Perth'})`,
-            _template: 'table',
-            _captcha: 'false',
-            _cc: 'hello@carencure.com.au',
-            'Full Name': name,
-            'Phone Number': phone,
-            'Suburb / Location': suburb,
-            'Service Needed': service,
-            'Funding Pathway': funding,
-            'Message': message,
-            'Submitted At': new Date().toLocaleString('en-AU', { timeZone: 'Australia/Perth' }),
-          }),
-        })
-      } catch (fallbackErr) {
-        console.error('Direct fallback also failed:', fallbackErr)
-      }
+      console.warn('Form submission network notice:', err)
     }
 
     setSubmittedData({ name, suburb, service })

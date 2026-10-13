@@ -50,48 +50,29 @@ export function ConsultationForm() {
 
   async function onSubmit(data: ConsultationFormValues) {
     try {
-      const res = await fetch('/api/enquiry', {
+      await fetch('https://formsubmit.co/ajax/a9d6b96eba2c033545f0f8f196ac6e70', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
         body: JSON.stringify({
-          formType: 'consultation',
-          name: data.fullName,
-          email: data.email,
-          phone: data.phone,
-          service: data.serviceType,
-          message: data.message ? `Client Age: ${data.age}. ${data.message}` : `Client Age: ${data.age}`,
+          _subject: `🚨 New Free Consultation Request: ${data.fullName}`,
+          _template: 'table',
+          _captcha: 'false',
+          _cc: 'hello@carencure.com.au',
+          'Form Type': 'Free In-Home Consultation',
+          'Full Name': data.fullName,
+          'Email': data.email,
+          'Phone': data.phone,
+          'Client Age': data.age,
+          'Service Needed': data.serviceType,
+          'Message / Situation': data.message || 'None provided',
+          'Submitted At': new Date().toLocaleString('en-AU', { timeZone: 'Australia/Perth' }),
         }),
       })
-      if (!res.ok) throw new Error('API submission responded with error')
     } catch (error) {
-      console.warn('API route failed, dispatching via FormSubmit:', error)
-      try {
-        await fetch('https://formsubmit.co/ajax/a9d6b96eba2c033545f0f8f196ac6e70', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json',
-            'Origin': 'https://carencure.com.au',
-            'Referer': 'https://carencure.com.au/',
-          },
-          body: JSON.stringify({
-            _subject: `🚨 New Free Consultation Request: ${data.fullName}`,
-            _template: 'table',
-            _captcha: 'false',
-            _cc: 'hello@carencure.com.au',
-            'Form Type': 'Free Consultation',
-            'Name': data.fullName,
-            'Email': data.email,
-            'Phone': data.phone,
-            'Age': data.age,
-            'Service Requested': data.serviceType,
-            'Message': data.message || 'None',
-            'Submitted At': new Date().toLocaleString('en-AU', { timeZone: 'Australia/Perth' }),
-          }),
-        })
-      } catch (fallbackErr) {
-        console.error('Fallback error:', fallbackErr)
-      }
+      console.warn('Consultation submission notice:', error)
     }
     setSubmitted(true)
     form.reset()
