@@ -18,20 +18,20 @@ import {
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Aged Care at Home Perth | Nurse-Led Provider | Care N Cure',
+    absolute: 'Aged Care Agency Perth | In-Home Nurse-Led Care | Care N Cure',
   },
   description:
-    'Aged care at home in Perth, led by Registered Nurses. In-home support for elderly parents — private, Support at Home or while waiting for My Aged Care. Assessment in 24–48h.',
+    'Nurse-led aged care agency in Perth. AHPRA Registered Nurse coordinators providing in-home care for elderly parents — Support at Home, private care, 24–48h assessment.',
   keywords: [
+    'aged care agency perth',
+    'aged care agency in perth',
+    'aged care agencies perth',
+    'aged care agency perth wa',
     'aged care in home support',
     'aged care at home perth',
     'aged care in home services perth',
-    'aged care agency perth',
-    'aged care agency perth wa',
     'best home care providers perth',
-    'best in-home nursing care providers for support at home',
     'aged care support at home perth',
-    'aged care near me perth',
     'in home aged care perth',
     'aged care wa',
     'carers for elderly perth',
@@ -40,15 +40,14 @@ export const metadata: Metadata = {
     'aged care at home harrisdale',
     'elderly care at home perth',
     'support at home providers perth',
-    'support at home perth',
-    'private aged care perth',
+    'private aged care agency perth',
     'home nursing for elderly perth',
   ],
   alternates: { canonical: 'https://carencure.com.au/aged-care-at-home-perth' },
   openGraph: {
-    title: 'Aged Care at Home Perth | Nurse-Led Provider | Care N Cure',
+    title: 'Aged Care Agency Perth | In-Home Nurse-Led Care | Care N Cure',
     description:
-      'Local nurse-led aged care in Perth. Dedicated Registered Nurse coordinator, Support at Home & private care, 24–48h assessment.',
+      'Trusted nurse-led aged care agency in Perth. One dedicated Registered Nurse coordinator, Support at Home & private care, 24–48h assessment across Perth.',
     url: 'https://carencure.com.au/aged-care-at-home-perth',
   },
 }
@@ -62,10 +61,10 @@ const faqs = [
   {
     question: 'Is Care N Cure an aged care agency in Perth?',
     answer:
-      'Care N Cure is a local, nurse-led aged care and home nursing practice based in Harrisdale, Perth. Unlike a traditional agency that sends whoever is available, every family is matched with one dedicated Registered Nurse who coordinates their care, talks to their GP, and visits on a predictable schedule.',
+      'Yes, Care N Cure is a premier nurse-led aged care agency and in-home care provider serving families across metropolitan Perth from Harrisdale. Unlike typical aged care agencies that send rotating carers with varying skill levels, our agency matches your elderly parent with one dedicated Registered Nurse coordinator who personally manages their clinical care, talks with their GP, and visits on a predictable schedule.',
   },
   {
-    question: 'Why choose nurse-led home care over a standard aged care agency?',
+    question: 'Why choose a nurse-led aged care agency over a standard care provider?',
     answer:
       'Standard agencies typically send rotating support workers with varying experience. At Care N Cure, every family is assigned One Dedicated Registered Nurse Coordinator. Your coordinator oversees clinical health, coordinates with your parent’s GP and specialists, monitors chronic conditions, administers medications, dresses complex wounds, and provides a continuous trusted relationship for your family.',
   },
@@ -90,27 +89,27 @@ export default function AgedCareAtHomePerthPage() {
   return (
     <>
       <ServicePageSchema
-        serviceName="Aged Care at Home in Perth"
-        description="Compassionate, Registered Nurse-led aged care at home across Perth and Harrisdale. Dedicated nurse coordinators, Home Care Packages, and Support at Home."
+        serviceName="Aged Care Agency in Perth"
+        description="Premier Registered Nurse-led aged care agency serving metropolitan Perth from Harrisdale. Dedicated nurse coordinators, private elderly care, and Support at Home."
         url="/aged-care-at-home-perth"
-        procedureType="Aged Care at Home & Nurse Coordination"
+        procedureType="Aged Care Agency & In-Home Nursing Care"
         faqs={faqs}
         breadcrumb={[
           { name: 'Home', item: 'https://carencure.com.au/' },
-          { name: 'Aged Care at Home Perth', item: 'https://carencure.com.au/aged-care-at-home-perth' },
+          { name: 'Aged Care Agency Perth', item: 'https://carencure.com.au/aged-care-at-home-perth' },
         ]}
       />
       <FAQPageSchema faqs={faqs} />
 
       {/* Page Header */}
       <PageHeader
-        title="Aged Care at Home in Perth — A Local, Nurse-Led Team"
-        subtitle="Based in Harrisdale and rated 5.0 on Google by local families. One dedicated Registered Nurse, plain-English help with Support at Home, and care that can start in 24–48 hours."
+        title="Aged Care Agency in Perth — Nurse-Led In-Home Care"
+        subtitle="Perth's trusted nurse-led aged care agency based in Harrisdale. One dedicated Registered Nurse coordinator, Support at Home budgets & private care, with assessments starting in 24–48 hours."
         breadcrumbItems={[
           { name: 'Services', href: '/services' },
-          { name: 'Aged Care at Home Perth', href: '/aged-care-at-home-perth' },
+          { name: 'Aged Care Agency Perth', href: '/aged-care-at-home-perth' },
         ]}
-        label="Nurse-Led Senior Care"
+        label="Nurse-Led Aged Care Agency"
       />
 
       {/* Hero Family Intent Section */}
