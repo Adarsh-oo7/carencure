@@ -500,7 +500,7 @@ Without clinical oversight, managing these tasks can quickly overwhelm family ca
 ## Preventing Readmission with Clinical Coordination
 
 Having a Registered Nurse visit you at home during the first week post-discharge ensures a smooth handover. At Care N Cure, our nurses:
-- Perform immediate medication checks against your hospital discharge summary to eliminate errors.
+- Perform immediate medication checks against your hospital discharge summary to identify discrepancies and minimise medication errors.
 - Manage surgical dressings using sterile, aseptic techniques.
 - Liaise directly with your GP and surgical team to provide clinical updates.
 - Supervise mobility and rehabilitation exercises.

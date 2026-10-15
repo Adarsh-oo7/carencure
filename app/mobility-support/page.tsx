@@ -120,7 +120,7 @@ export default function MobilitySupport() {
                 <ul className="space-y-3 text-body text-sm">
                   <li className="flex items-start gap-2">
                     <span className="text-teal-accent font-bold">•</span>
-                    <span><strong>Manual handling safety:</strong> Using professional, body-mechanics-based techniques to eliminate strain.</span>
+                    <span><strong>Manual handling safety:</strong> Using professional, body-mechanics-based techniques to reduce physical strain and prevent falls.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-teal-accent font-bold">•</span>

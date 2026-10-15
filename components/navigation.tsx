@@ -383,10 +383,9 @@ export function Navigation() {
                 </Link>
                 <Link
                   href="/testimonials"
-                  className="px-2.5 py-1.5 text-sm font-semibold text-body hover:text-navy hover:bg-surface rounded-lg transition-colors inline-flex items-center gap-1.5"
+                  className="px-2.5 py-1.5 text-sm font-semibold text-body hover:text-navy hover:bg-surface rounded-lg transition-colors"
                 >
-                  <span>Reviews</span>
-                  <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-bold border border-emerald-200">5.0★</span>
+                  Quality & Feedback
                 </Link>
                 <Link
                   href="/faq"
@@ -509,7 +508,7 @@ export function Navigation() {
 
                 <Link href="/about" className="px-3 py-2.5 text-body font-medium hover:bg-surface hover:text-navy rounded-lg transition-colors" onClick={() => setIsOpen(false)}>About</Link>
                 <Link href="/referrals" className="px-3 py-2.5 text-body font-medium hover:bg-surface hover:text-navy rounded-lg transition-colors" onClick={() => setIsOpen(false)}>Healthcare Referrals</Link>
-                <Link href="/testimonials" className="px-3 py-2.5 text-body font-medium hover:bg-surface hover:text-navy rounded-lg transition-colors" onClick={() => setIsOpen(false)}>Reviews (5.0★)</Link>
+                <Link href="/testimonials" className="px-3 py-2.5 text-body font-medium hover:bg-surface hover:text-navy rounded-lg transition-colors" onClick={() => setIsOpen(false)}>Quality & Feedback</Link>
                 <Link href="/faq" className="px-3 py-2.5 text-body font-medium hover:bg-surface hover:text-navy rounded-lg transition-colors" onClick={() => setIsOpen(false)}>FAQ</Link>
                 <Link href="/contact" className="px-3 py-2.5 text-body font-medium hover:bg-surface hover:text-navy rounded-lg transition-colors" onClick={() => setIsOpen(false)}>Contact</Link>
 

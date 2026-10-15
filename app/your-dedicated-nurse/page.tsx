@@ -5,8 +5,10 @@ import { CheckCircle2, XCircle } from 'lucide-react'
 import { ServicePageSchema } from '@/components/schema'
 
 export const metadata: Metadata = {
-  title: 'Your Dedicated Nurse | Personal Nurse Coordinator Perth | Care N Cure',
-  description: 'One nurse coordinator assigned to you for the entire care journey. Consistent, personalised nursing care across Perth. Call 1300 919 663.',
+  title: {
+    absolute: 'Your Dedicated Nurse Perth | Personal Nurse Coordinator | Care N Cure',
+  },
+  description: 'One dedicated nurse coordinator assigned to your care journey. Consistent, personalised nursing care across Perth. Call 1300 919 663.',
   alternates: { canonical: 'https://carencure.com.au/your-dedicated-nurse' },
 }
 

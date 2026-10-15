@@ -296,8 +296,8 @@ export function ContactForm({
         </p>
 
         {/* Privacy notice */}
-        <p className="text-[11px] text-body/70 text-center">
-          By submitting this form, you agree to our <a href="/privacy" className="underline hover:text-navy">privacy policy</a>. We collect only the contact details necessary to respond to your clinical enquiry.
+        <p className="text-[11px] text-body/70 text-center leading-relaxed">
+          <strong>Privacy Notice:</strong> We collect your contact details and a general summary of care requirements to arrange an initial clinical assessment. For privacy protection, please do not include sensitive medical records in this initial web form; detailed clinical discharge summaries can be provided directly to your Registered Nurse coordinator during intake. By submitting, you agree to our <a href="/privacy" className="underline hover:text-navy">privacy policy</a>.
         </p>
 
         <p className="text-center text-xs mt-1" style={{ color: 'var(--text-muted)' }}>

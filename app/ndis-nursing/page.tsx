@@ -159,7 +159,7 @@ export default function NdisNursingPage() {
                   Many agency providers assign whichever casual worker or nurse is available on a given day. For NDIS participants with complex medical needs, spinal injuries, or sensory sensitivities, unfamiliar staff can cause anxiety and increase clinical risk.
                 </p>
                 <p className="text-body leading-relaxed">
-                  Care N Cure guarantees the <strong>One Dedicated Nurse model</strong>. The same Registered Nurse Coordinator conducts your clinical assessment, designs your care plan, and visits you on every scheduled appointment. Explore our <Link href="/your-dedicated-nurse" className="text-teal-text hover:underline font-semibold">dedicated nurse model</Link> to see how care continuity improves outcomes.
+                  Care N Cure operates a <strong>Dedicated Nurse Coordinator model</strong>. Your primary Registered Nurse conducts your clinical assessment, designs your care plan, and manages your ongoing visits, supported by a small, familiar backup clinical team for planned leave. Explore our <Link href="/your-dedicated-nurse" className="text-teal-text hover:underline font-semibold">dedicated nurse model</Link> to see how care continuity supports safety and stability.
                 </p>
               </div>
 

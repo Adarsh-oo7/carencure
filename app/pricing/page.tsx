@@ -91,39 +91,65 @@ export default function PricingPage() {
               {/* Pricing Cards Tiers */}
               <div className="space-y-6">
                 <h2 className="text-navy text-2xl font-bold">Standard Fee Structure</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   
-                  <div className="bg-surface p-6 rounded-2xl border border-border space-y-4 shadow-sm">
-                    <div className="flex items-center gap-2 text-teal-accent font-bold text-sm uppercase tracking-wide">
-                      <Clock className="w-4 h-4" /> Weekday Clinical Visit
+                  <div className="bg-surface p-6 rounded-2xl border border-border space-y-4 shadow-sm flex flex-col justify-between">
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-2 text-teal-accent font-bold text-xs uppercase tracking-wide">
+                        <Clock className="w-4 h-4" /> Weekday Clinical Care
+                      </div>
+                      <div className="text-navy">
+                        <span className="text-3xl font-extrabold">$110 – $160</span>
+                        <span className="text-slate-500 text-xs"> / hour</span>
+                      </div>
+                      <p className="text-body text-xs leading-relaxed">
+                        Standard daytime visits (8am – 6pm, Mon – Fri) for <Link href="/wound-care" className="text-teal-text font-semibold hover:underline">sterile wound management</Link>, medication administration, catheter changes, and clinical health checks.
+                      </p>
                     </div>
-                    <div className="text-navy">
-                      <span className="text-4xl font-extrabold">$110 – $160</span>
-                      <span className="text-slate-500 text-sm"> / hour</span>
-                    </div>
-                    <p className="text-body text-xs leading-relaxed">
-                      Standard daytime visits (8am – 6pm, Mon – Fri) for <Link href="/wound-care" className="text-teal-text font-semibold hover:underline">sterile wound management</Link>, medication administration, catheter changes, and clinical health checks.
-                    </p>
                     <ul className="text-xs text-slate-600 space-y-2 border-t border-border pt-3">
-                      <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-teal-accent" /> Qualified AHPRA Registered Nurse</li>
-                      <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-teal-accent" /> Dedicated Nurse Coordinator</li>
+                      <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-teal-accent shrink-0" /> Qualified AHPRA Registered Nurse</li>
+                      <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-teal-accent shrink-0" /> Dedicated Nurse Coordinator</li>
+                      <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-teal-accent shrink-0" /> 1-Hour Minimum Booking</li>
                     </ul>
                   </div>
 
-                  <div className="bg-surface p-6 rounded-2xl border border-border space-y-4 shadow-sm">
-                    <div className="flex items-center gap-2 text-teal-accent font-bold text-sm uppercase tracking-wide">
-                      <Clock className="w-4 h-4" /> Weekend & After-Hours
+                  <div className="bg-surface p-6 rounded-2xl border border-border space-y-4 shadow-sm flex flex-col justify-between">
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-2 text-teal-accent font-bold text-xs uppercase tracking-wide">
+                        <Clock className="w-4 h-4" /> Evening & After-Hours
+                      </div>
+                      <div className="text-navy">
+                        <span className="text-3xl font-extrabold">$160 – $195</span>
+                        <span className="text-slate-500 text-xs"> / hour</span>
+                      </div>
+                      <p className="text-body text-xs leading-relaxed">
+                        Evening clinical visits (6pm – 10pm) for post-operative recovery, evening injections, pain monitoring, and complex wound care requiring time-critical oversight.
+                      </p>
                     </div>
-                    <div className="text-navy">
-                      <span className="text-4xl font-extrabold">$160 – $220</span>
-                      <span className="text-slate-500 text-sm"> / hour</span>
-                    </div>
-                    <p className="text-body text-xs leading-relaxed">
-                      Evening care, weekend appointments, and urgent hospital discharge care. Tailored for families requiring rapid clinical intervention outside normal hours.
-                    </p>
                     <ul className="text-xs text-slate-600 space-y-2 border-t border-border pt-3">
-                      <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-teal-accent" /> Priority intake assessment (24–48 hrs)</li>
-                      <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-teal-accent" /> Direct Nurse Coordinator communication</li>
+                      <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-teal-accent shrink-0" /> Evening clinical nursing cover</li>
+                      <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-teal-accent shrink-0" /> Medication & pain oversight</li>
+                      <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-teal-accent shrink-0" /> 1-Hour Minimum Booking</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-surface p-6 rounded-2xl border border-border space-y-4 shadow-sm flex flex-col justify-between">
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-2 text-teal-accent font-bold text-xs uppercase tracking-wide">
+                        <Clock className="w-4 h-4" /> Weekend & Public Holidays
+                      </div>
+                      <div className="text-navy">
+                        <span className="text-3xl font-extrabold">$160 – $220</span>
+                        <span className="text-slate-500 text-xs"> / hour</span>
+                      </div>
+                      <p className="text-body text-xs leading-relaxed">
+                        Saturday, Sunday, and Public Holiday appointments for urgent post-discharge care, chronic condition monitoring, and continuous family respite support.
+                      </p>
+                    </div>
+                    <ul className="text-xs text-slate-600 space-y-2 border-t border-border pt-3">
+                      <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-teal-accent shrink-0" /> Rapid hospital discharge intake</li>
+                      <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-teal-accent shrink-0" /> Direct clinician contact</li>
+                      <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-teal-accent shrink-0" /> Zero hidden booking fees</li>
                     </ul>
                   </div>
 

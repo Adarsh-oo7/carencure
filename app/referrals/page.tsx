@@ -5,17 +5,19 @@ import { CTASection } from '@/components/sections/cta'
 import { ServicePageSchema, FAQPageSchema } from '@/components/schema'
 import { Stethoscope, Building2, Heart, ClipboardList, Phone, Mail, ArrowRight } from 'lucide-react'
 
+import { ReferralForm } from '@/components/forms/referral-form'
+
 export const metadata: Metadata = {
   title: {
     absolute: 'Healthcare Referrals | Registered Nurse Home Care | Care N Cure Perth',
   },
   description:
-    'Care N Cure accepts referrals from hospital discharge planners, doctors, GPs and allied-health professionals across Perth, subject to client suitability, consent and service availability.',
+    'Care N Cure accepts clinician referrals from hospital discharge planners, GPs, and allied health professionals across Perth. Acknowledged within 24 hours; home assessments within 24–48 hours.',
   alternates: { canonical: 'https://carencure.com.au/referrals' },
   openGraph: {
     title: 'Healthcare Referrals | Registered Nurse Home Care | Care N Cure Perth',
     description:
-      'Care N Cure accepts referrals from hospital discharge planners, doctors, GPs and allied-health professionals across Perth, subject to client suitability, consent and service availability.',
+      'Care N Cure accepts clinician referrals from hospital discharge planners, GPs, and allied health professionals across Perth. Acknowledged within 24 hours; home assessments within 24–48 hours.',
     url: 'https://carencure.com.au/referrals',
   },
 }
@@ -159,13 +161,13 @@ export default function ReferralsPage() {
                       step: '2',
                       title: 'Send clinical information',
                       detail:
-                        'Discharge summary, care plan, or GP letter can be emailed to hello@carencure.com.au. Not mandatory but helps us prepare a targeted nursing assessment.',
+                        'Discharge summaries, hospital care plans, or GP letters can be emailed to hello@carencure.com.au or reviewed directly with our nurse during the home visit. Please verify patient or guardian consent before submitting health records.',
                     },
                     {
                       step: '3',
-                      title: 'We contact the patient within 24–48 hours',
+                      title: 'Intake triage & visit scheduling (24–48 hours)',
                       detail:
-                        'Our registered nurse founders make contact within 24 to 48 hours, conduct an initial clinical triage assessment, and coordinate a care schedule with the patient and family.',
+                        'Our Registered Nurse Coordinator acknowledges all referrals within 24 hours, conducts an initial phone triage assessment with the patient or family, and schedules the home clinical assessment within 24 to 48 hours.',
                     },
                     {
                       step: '4',
@@ -188,50 +190,47 @@ export default function ReferralsPage() {
               </div>
             </div>
 
-            {/* Contact Sidebar */}
+            {/* Contact & Online Referral Form Sidebar */}
             <div className="lg:col-span-5">
               <div className="sticky top-24 space-y-6">
                 <div className="card-base p-6">
-                  <h3 className="text-navy font-bold text-xl mb-4">Contact us to refer</h3>
-                  <div className="space-y-4">
+                  <h3 className="text-navy font-bold text-xl mb-2">Submit Patient Referral</h3>
+                  <p className="text-xs text-body leading-relaxed mb-5">
+                    Clinicians, hospital teams, and family coordinators can submit referrals online below. Intake acknowledged within 24 hours.
+                  </p>
+                  
+                  <ReferralForm />
+
+                  <div className="mt-6 pt-5 border-t border-border flex flex-col gap-3">
+                    <p className="text-xs text-slate-500 font-semibold uppercase tracking-wider">Or contact our intake desk directly:</p>
                     <a
                       href="tel:1300919663"
                       id="referral-phone-cta"
-                      className="flex items-center gap-3 p-4 rounded-xl border border-teal-accent/30 bg-teal-accent/5 hover:bg-teal-accent/10 transition-colors group"
+                      className="flex items-center gap-3 p-3 rounded-xl border border-teal-accent/30 bg-teal-accent/5 hover:bg-teal-accent/10 transition-colors group"
                     >
-                      <div className="w-10 h-10 rounded-lg bg-teal-accent/10 flex items-center justify-center">
-                        <Phone className="w-5 h-5 text-teal-accent" />
+                      <div className="w-9 h-9 rounded-lg bg-teal-accent/10 flex items-center justify-center">
+                        <Phone className="w-4 h-4 text-teal-accent" />
                       </div>
                       <div>
-                        <p className="text-xs text-body font-medium">Call us directly</p>
-                        <p className="text-navy font-bold">1300 919 663</p>
+                        <p className="text-[11px] text-body font-medium">Phone Intake</p>
+                        <p className="text-navy font-bold text-sm">1300 919 663</p>
                       </div>
                       <ArrowRight className="w-4 h-4 text-teal-accent ml-auto group-hover:translate-x-1 transition-transform" />
                     </a>
                     <a
                       href="mailto:hello@carencure.com.au"
                       id="referral-email-cta"
-                      className="flex items-center gap-3 p-4 rounded-xl border border-border hover:border-teal-accent/30 hover:bg-surface transition-colors group"
+                      className="flex items-center gap-3 p-3 rounded-xl border border-border hover:border-teal-accent/30 hover:bg-surface transition-colors group"
                     >
-                      <div className="w-10 h-10 rounded-lg bg-surface flex items-center justify-center">
-                        <Mail className="w-5 h-5 text-teal-accent" />
+                      <div className="w-9 h-9 rounded-lg bg-surface flex items-center justify-center">
+                        <Mail className="w-4 h-4 text-teal-accent" />
                       </div>
                       <div>
-                        <p className="text-xs text-body font-medium">Email a referral</p>
+                        <p className="text-[11px] text-body font-medium">Email Secure Summary</p>
                         <p className="text-navy font-bold text-sm">hello@carencure.com.au</p>
                       </div>
                       <ArrowRight className="w-4 h-4 text-teal-accent ml-auto group-hover:translate-x-1 transition-transform" />
                     </a>
-                  </div>
-                  <div className="mt-6 pt-6 border-t border-border">
-                    <Link
-                      href="/contact"
-                      id="referral-contact-form-cta"
-                      className="btn-primary w-full text-center flex items-center justify-center gap-2"
-                    >
-                      Use our contact form
-                      <ArrowRight className="w-4 h-4" />
-                    </Link>
                   </div>
                 </div>
 
@@ -268,7 +267,7 @@ export default function ReferralsPage() {
 
       <CTASection
         title="Ready to refer? We'll take it from here."
-        description="Call 1300 919 663 or email hello@carencure.com.au. A registered nurse will respond within 24 hours and personally manage the patient's care pathway."
+        description="Call 1300 919 663 or submit above. A registered nurse coordinator will acknowledge your referral within 24 hours and coordinate the in-home assessment within 24–48 hours."
         secondaryLink={{ text: 'Contact Us', href: '/contact' }}
       />
     </>

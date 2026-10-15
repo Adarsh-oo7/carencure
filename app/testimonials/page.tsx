@@ -81,9 +81,9 @@ export default function QualityFeedbackPage() {
                 <div className="card-base p-6 border border-border flex gap-4">
                   <FileText className="w-8 h-8 text-teal-accent flex-shrink-0" />
                   <div>
-                    <h4 className="text-navy font-bold mb-2 text-base">Roster Continuity Guarantee</h4>
+                    <h4 className="text-navy font-bold mb-2 text-base">Dedicated Clinical Coordinator</h4>
                     <p className="text-body text-xs leading-relaxed">
-                      We pair every client with a dedicated Nurse Coordinator, guaranteeing you see the same nurse who understands your health journey inside-out.
+                      We pair every client with a dedicated Registered Nurse Coordinator who understands your health history, supported by a small, familiar clinical backup team for planned leave.
                     </p>
                   </div>
                 </div>

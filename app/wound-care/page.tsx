@@ -125,7 +125,7 @@ export default function WoundCare() {
               <div className="space-y-4">
                 <h3 className="text-navy text-2xl font-bold">Benefits of In-Home Wound Care vs Outpatient Clinics</h3>
                 <p className="text-body text-sm leading-relaxed">
-                  Families searching for private wound care clinics often find that mobile in-home nursing provides superior medical and personal benefits:
+                  Families searching for private wound care clinics often find that mobile in-home nursing provides distinct clinical and personal benefits:
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="p-4 bg-surface rounded-xl border border-border">
@@ -191,7 +191,7 @@ export default function WoundCare() {
               <div className="bg-surface p-6 rounded-2xl border border-border">
                 <h3 className="text-navy text-xl font-bold mb-3 flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-teal-accent" />
-                  How we ensure superior wound outcomes
+                  How we support safe wound healing
                 </h3>
                 <ul className="space-y-3 text-body text-sm">
                   <li className="flex items-start gap-2">

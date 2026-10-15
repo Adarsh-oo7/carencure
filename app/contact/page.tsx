@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     absolute: 'Book a Home Nurse Perth | Contact Care N Cure Nursing Care Services',
   },
   description:
-    'Ready to book a home nurse in Perth? Contact Care N Cure directly by phone, WhatsApp, or SMS. An AHPRA Registered Nurse will respond within hours. No referral needed. Call 1300 919 663.',
+    'Ready to book a home nurse in Perth? Contact Care N Cure directly by phone, WhatsApp, or online enquiry. Registered Nurse acknowledgment within 24 hours; in-home clinical assessments arranged within 24–48 hours across Perth. Call 1300 919 663.',
   keywords: [
     'book a home nurse perth',
     'contact home nurse perth',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Book a Home Nurse Perth | Contact Care N Cure Nursing Care Services',
     description:
-      'Book a home nurse in Perth. Call, WhatsApp or SMS Care N Cure for an AHPRA Registered Nurse response within hours. No referral needed. Call 1300 919 663.',
+      'Book a home nurse in Perth. Call, WhatsApp, or enquire online. Registered Nurse acknowledgment within 24 hours; in-home visits arranged within 24–48 hours across Perth. Call 1300 919 663.',
     url: 'https://carencure.com.au/contact',
     type: 'website',
     siteName: 'Care N Cure Nursing Care Services',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Book a Home Nurse Perth | Contact Care N Cure',
-    description: 'Book a home nurse in Perth. Call, WhatsApp or SMS. An AHPRA Registered Nurse responds within hours.',
+    description: 'Book a home nurse in Perth. Registered Nurse acknowledgment within 24 hours; home visits arranged within 24–48 hours.',
   },
 }
 
@@ -75,12 +75,12 @@ export default function ContactPage() {
                 </p>
               </div>
 
-              {/* 50km Zero Travel Guarantee Banner */}
+              {/* Service Radius Banner */}
               <div className="p-4 bg-teal-subtle/50 border border-teal-border rounded-2xl flex items-center gap-3 shadow-xs">
                 <Navigation className="w-6 h-6 text-teal-accent shrink-0" />
                 <div>
-                  <h4 className="font-bold text-navy text-sm">50km Service Radius — 0 Transportation Charges</h4>
-                  <p className="text-body text-xs mt-0.5">We cover all Perth metropolitan suburbs within 50km with zero travel surcharges for clients.</p>
+                  <h4 className="font-bold text-navy text-sm">Metropolitan Perth Service Radius</h4>
+                  <p className="text-body text-xs mt-0.5">We cover Perth metropolitan suburbs from our Harrisdale base with transparent travel terms confirmed upfront during clinical intake.</p>
                 </div>
               </div>
 
