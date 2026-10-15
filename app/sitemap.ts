@@ -64,6 +64,7 @@ const blogSlugs = [
   'home-care-packages-perth-nursing',
   'signs-your-parent-needs-in-home-nursing',
   'hospital-discharge-what-happens-next',
+  'best-home-care-providers-perth',
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {

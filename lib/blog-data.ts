@@ -517,6 +517,107 @@ If you or a loved one has an upcoming procedure at Hollywood Private, Bethesda, 
     readTime: 8,
     tags: ['post hospital care', 'discharge planning', 'wound management', 'recovery'],
   },
+  {
+    id: '9',
+    slug: 'best-home-care-providers-perth',
+    title: 'Top Home Care Providers in Perth: 2026 Comparison & Guide',
+    excerpt:
+      'A comprehensive comparison of the top home care providers, aged care agencies, and nurse-led services in Perth. Compare clinical oversight, staffing models, and response times.',
+    content: `Choosing the right in-home care provider for an ageing parent or loved one in Perth is one of the most critical healthcare decisions a family can make. With the transition to the Australian Government's Support at Home program (commenced 1 November 2025) and an expanding landscape of providers, understanding your options is essential.
+
+Perth families typically evaluate providers based on four core criteria: clinical capabilities, staffing continuity (same caregiver vs. rotating staff), onboarding response time, and funding flexibility (Support at Home budgets, private pay, and NDIS).
+
+This independent 2026 guide provides an objective overview of the top home care providers and agencies operating across metropolitan Perth.
+
+---
+
+## The Landscape: 3 Types of Home Care in Perth
+
+Before comparing individual providers, it helps to understand the three distinct models operating in Western Australia:
+
+1. **Nurse-Led Clinical Practices (e.g., Care N Cure)**: Specialised healthcare practices owned and operated by Registered Nurses. Focuses on clinical management, complex wound care, medication safety, post-hospital recovery, and assigning one dedicated nurse coordinator.
+2. **Large Non-Profit & Faith-Based Providers (e.g., Amana Living, Juniper, Brightwater)**: Long-established organisations offering residential aged care, retirement villages, and community home support. Well-suited for general domestic assistance and day clubs across broad WA regions.
+3. **Private Hourly Carer Agencies & Brokerage Providers (e.g., The CareSide, Perth Care Partners)**: Focus primarily on daily living assistance, personal care, and lower package-management fees.
+
+---
+
+## Top Home Care Providers in Perth Compared
+
+### 1. Care N Cure Nursing Care Services
+- **Headquarters**: Harrisdale WA 6112 (Services all Perth metro within 50km)
+- **Primary Model**: Nurse-Led In-Home Clinical Care
+- **Core Services**: Complex wound management, post-hospital surgical recovery, medication oversight, catheter/stoma care, chronic disease management, and Support at Home clinical coordination.
+- **Key Strength**: *One Dedicated Nurse Coordinator*. Every family is paired with a named AHPRA Registered Nurse who coordinates all care, communicates with the patient's GP, and visits consistently. Free clinical assessments scheduled within 24 to 48 hours.
+- **Pricing**: Transparent hourly tiers ($110–$160 standard weekday, $160–$195 after-hours, $160–$220 weekend/holiday) with no hidden administrative fees and 1-hour minimum bookings.
+- **Contact**: 1300 919 663 | [carencure.com.au](/)
+
+### 2. Amana Living
+- **Headquarters**: Subiaco & Perth Metro
+- **Primary Model**: Faith-based not-for-profit aged care provider (operating since 1962).
+- **Core Services**: Home care packages, domestic cleaning, gardening, social clubs, dementia day respite, and residential aged care homes.
+- **Best For**: Families seeking an all-in-one provider that spans independent living, social community clubs, and eventual residential placement.
+
+### 3. Juniper
+- **Headquarters**: Balcatta WA (Services Perth, Peel, and regional WA)
+- **Primary Model**: Uniting Church not-for-profit organisation (over 75 years in WA).
+- **Core Services**: Everyday domestic help, meal prep, shopping, allied health (physio, podiatry), and nursing services.
+- **Best For**: Seniors across regional WA and Perth who need everyday household support and social activity connections.
+
+### 4. Brightwater Care Group
+- **Headquarters**: Inglewood & Perth Metro (operating for over 120 years).
+- **Primary Model**: Comprehensive disability, dementia, and aged care organisation.
+- **Core Services**: Supported independent living, brain injury rehabilitation, residential care homes, and in-home community support.
+- **Best For**: Complex neurological conditions, acquired brain injuries, and specialized allied health rehabilitation.
+
+### 5. The CareSide
+- **Headquarters**: Subiaco WA
+- **Primary Model**: Low-overhead home care provider.
+- **Core Services**: Personal care, companion care, meal preparation, and self-managed package administration.
+- **Best For**: Families looking to maximise hourly domestic care from their government package through lower management fees.
+
+### 6. Perth Care Partners
+- **Headquarters**: Balcatta WA
+- **Primary Model**: Private in-home care agency.
+- **Core Services**: Hourly personal care, dementia assistance, 24-hour overnight care, and palliative care support.
+- **Best For**: Families needing flexible private daily living care and companionship.
+
+---
+
+## Provider Comparison Matrix
+
+| Provider | Staffing Model | Clinical Nurse Coordinator | Assessment Speed | Service Coverage |
+| :--- | :--- | :--- | :--- | :--- |
+| **Care N Cure** | One Dedicated Nurse | **Yes (Every visit)** | **24–48 Hours** | Entire Perth Metro (50km) |
+| **Amana Living** | Roster-Based Carers | Available on request | 1–3 Weeks | Perth Metro & South West |
+| **Juniper** | Team-Based Support Workers | Clinical team oversight | 1–2 Weeks | Statewide WA |
+| **Brightwater** | Multidisciplinary Staff | Allied health focus | 1–2 Weeks | Perth Metro Corridor |
+| **The CareSide** | Contracted Carers | Case manager oversight | 3–7 Days | Perth Metro |
+| **Perth Care Partners** | Private Carers | Clinical manager | 2–5 Days | North & South Corridor |
+
+---
+
+## How to Decide Which Provider Is Right for Your Family
+
+When selecting a provider, ask these five practical questions:
+
+1. **Does Mum or Dad have clinical needs?** If your parent has wounds, diabetes, complex medications, catheter care, or recently left hospital, choose a nurse-led practice like [Care N Cure](/aged-care-at-home-perth). If they solely require lawn mowing and light cleaning, a general non-profit home care provider may suffice.
+2. **Will the same person visit each time?** Inquire whether you will have a dedicated nurse coordinator or a rotating pool of agency carers. Continuity of care is proven to prevent medication mistakes and catch early symptoms of deterioration.
+3. **How quickly can care start?** When an elderly parent is discharged on short notice from Fiona Stanley, Hollywood, or SCGH, waiting two weeks for a provider assessment is not viable. Look for providers that offer in-home clinical assessments within 24–48 hours.
+4. **How are fees structured?** Ensure the provider publishes transparent hourly rates across standard hours, evenings, and weekends, with no hidden exit or establishment penalties.
+5. **How does funding work?** Under the Support at Home program, registered nursing care incurs zero participant contribution. Check whether the provider works collaboratively with self-managed arrangements and partners like Trilogy Care.
+
+---
+
+## Speak with a Registered Nurse in Perth
+
+If you need immediate in-home nursing care, post-hospital recovery, or advice navigating your Support at Home funding, call Care N Cure on **1300 919 663** or [submit an enquiry online](/contact). One of our experienced Registered Nurses will discuss your loved one’s clinical needs directly.`,
+    author: 'Jinu Maecheril Sukumaran, RN',
+    date: '2026-10-15',
+    category: 'Senior Care',
+    image: '/blog/home-nursing-seniors.jpg',
+    readTime: 9,
+    tags: ['best home care providers perth', 'aged care agency perth', 'home care comparison', 'support at home', 'private nursing'],
+  },
 ]
 
 export function getBlogPost(slug: string): BlogPost | undefined {
