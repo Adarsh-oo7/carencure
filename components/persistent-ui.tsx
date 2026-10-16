@@ -12,16 +12,7 @@ const SMS_HREF = 'sms:+61481748516'
 
 export function PersistentUI() {
   const [isOpen, setIsOpen] = useState(false)
-  const [showTooltip, setShowTooltip] = useState(false)
   const widgetRef = useRef<HTMLDivElement>(null)
-
-  // Show tooltip after 3 seconds on page load
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowTooltip(true)
-    }, 3000)
-    return () => clearTimeout(timer)
-  }, [])
 
   // Close when clicking outside
   useEffect(() => {
@@ -36,8 +27,8 @@ export function PersistentUI() {
 
   return (
     <>
-      {/* Floating Action Menu & Trigger (elevated on mobile so it doesn't overlap bottom bar) */}
-      <div className="fixed bottom-20 right-4 md:bottom-6 md:right-6 z-50 font-sans" ref={widgetRef}>
+      {/* Floating Action Menu & Trigger (Desktop only — on mobile, the fixed bottom bar provides instant Call/WhatsApp) */}
+      <div className="hidden md:block fixed bottom-6 right-6 z-50 font-sans" ref={widgetRef}>
         {/* Floating Chat Card */}
         {isOpen && (
           <div
@@ -164,32 +155,9 @@ export function PersistentUI() {
 
         {/* Floating Action Button (Trigger) */}
         <div className="relative flex items-center justify-end">
-          {/* Tooltip */}
-          {showTooltip && !isOpen && (
-            <div className="absolute right-16 bg-navy text-white text-xs font-semibold px-4 py-2.5 rounded-xl shadow-xl whitespace-nowrap animate-in fade-in slide-in-from-right-3 duration-300 flex items-center gap-2 border border-navy-light/20">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span>Chat with a Nurse Coordinator</span>
-              <button
-                onClick={(e) => {
-                  e.stopPropagation()
-                  setShowTooltip(false)
-                }}
-                className="ml-2 text-white/60 hover:text-white transition-colors cursor-pointer"
-                aria-label="Close message bubble"
-                style={{ minHeight: 'auto' }}
-              >
-                <X className="w-3 h-3" />
-              </button>
-              <div className="absolute top-1/2 -right-1.5 -translate-y-1/2 w-3 h-3 bg-navy rotate-45 border-r border-t border-navy-light/10" />
-            </div>
-          )}
-
           {/* WhatsApp Icon FAB Button */}
           <button
-            onClick={() => {
-              setIsOpen(!isOpen)
-              setShowTooltip(false)
-            }}
+            onClick={() => setIsOpen(!isOpen)}
             className="relative w-14 h-14 rounded-full flex items-center justify-center text-white cursor-pointer shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-emerald-500/25 active:scale-95 border-none outline-none z-50"
             style={{
               background: isOpen ? 'var(--navy)' : '#25D366',

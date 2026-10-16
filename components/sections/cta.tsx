@@ -130,7 +130,7 @@ export function CTASection({
               id="cta-call-btn"
             >
               <Phone className="w-5 h-5 flex-shrink-0 animate-pulse text-teal-accent" />
-              <span>Call Now: 1300 919 663</span>
+              <span>Call Nurse Desk: 1300 919 663</span>
             </a>
             <Link
               href={secondaryLink?.href || '/contact'}

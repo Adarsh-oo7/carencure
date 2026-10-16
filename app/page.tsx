@@ -131,20 +131,20 @@ export default function HomePage() {
       <FAQPageSchema faqs={homeFaqs.map(faq => ({ question: faq.question, answer: faq.answer }))} />
 
       <HeroSection
-        badge="Perth's Trusted Nurse-Led Care"
+        badge="Perth Nurse-Led Home Care · Harrisdale Base"
         headline="Home Care & Nursing Care in Perth by a Dedicated Registered Nurse"
         subheadline={
-          <div className="space-y-2.5">
-            <p className="text-teal-accent text-base sm:text-lg font-bold tracking-wide">
+          <div className="space-y-2">
+            <p className="text-teal-accent text-base sm:text-lg font-bold tracking-tight">
               One Client. One Dedicated Nurse Coordinator. One Trusted Relationship.
             </p>
             <p className="text-white/90 text-sm sm:text-base leading-relaxed">
-              Perth nurse-led in-home care for aged care support, clinical recovery, wound dressings, and medication management. A dedicated Registered Nurse coordinator and a small, familiar team — no rotating casual rosters.
+              Clinical in-home aged care, sterile wound dressings, and hospital discharge recovery across Perth. Every family is supported by a qualified AHPRA Registered Nurse coordinator — no call centres, and no rotating casual rosters.
             </p>
           </div>
         }
         ctaPrimary={{ text: 'Call 1300 919 663', href: 'tel:1300919663', isPhone: true }}
-        ctaSecondary={{ text: 'Book a Free Nurse Consultation', href: '/contact' }}
+        ctaSecondary={{ text: 'Book Free Consultation', href: '/contact' }}
       />
 
       {/* Decision Block: What kind of support are you looking for? */}

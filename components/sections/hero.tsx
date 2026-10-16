@@ -2,10 +2,9 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { Phone, ArrowRight } from 'lucide-react'
+import { Phone, ArrowRight, ShieldCheck, UserCheck, Clock, MapPin } from 'lucide-react'
 import { trackPhoneClick, trackConsultationRequest } from '@/lib/analytics'
 
-const PHONE_NUMBER = '1300 919 663'
 const PHONE_HREF = 'tel:1300919663'
 
 interface HeroProps {
@@ -26,7 +25,7 @@ export function HeroSection({
   return (
     <section
       className="relative overflow-hidden"
-      style={{ minHeight: '85vh', background: '#091E30' }}
+      style={{ minHeight: '82vh', background: '#091E30' }}
       aria-labelledby="hero-heading"
       itemScope
       itemType="https://schema.org/MedicalBusiness"
@@ -41,31 +40,31 @@ export function HeroSection({
           alt="Registered nurse providing compassionate in-home care to an elderly patient in Perth, WA — The Nurse Who Knows You"
           fill
           priority
-          quality={80}
+          quality={85}
           sizes="(max-width: 768px) 100vw, 100vw"
-          style={{ objectFit: 'cover', objectPosition: 'center 25%' }}
+          style={{ objectFit: 'cover', objectPosition: 'center 22%' }}
         />
 
-        {/* Mobile overlay */}
+        {/* Mobile overlay: deeper dark gradient so white text is 100% legible without glare */}
         <div
           className="absolute inset-0 block sm:hidden"
           style={{
             background:
-              'linear-gradient(180deg, rgba(9,30,48,0.85) 0%, rgba(9,30,48,0.70) 55%, rgba(9,30,48,0.40) 100%)',
+              'linear-gradient(180deg, rgba(9,30,48,0.92) 0%, rgba(9,30,48,0.85) 65%, rgba(9,30,48,0.55) 100%)',
           }}
         />
 
-        {/* Desktop overlay — strong dark gradient on left for crystal-clear readability while keeping nurse & patient visible on right */}
+        {/* Desktop overlay — soft directional gradient allowing nurse & patient on right to shine while text on left has ultra-high contrast */}
         <div
           className="absolute inset-0 hidden sm:block"
           style={{
             background:
-              'linear-gradient(90deg, rgba(9,30,48,0.95) 0%, rgba(9,30,48,0.88) 42%, rgba(9,30,48,0.50) 70%, rgba(9,30,48,0.20) 100%)',
+              'linear-gradient(90deg, rgba(9,30,48,0.96) 0%, rgba(9,30,48,0.88) 46%, rgba(9,30,48,0.45) 75%, rgba(9,30,48,0.15) 100%)',
           }}
         />
       </div>
 
-      {/* Subtle grid texture */}
+      {/* Subtle medical grid texture */}
       <div
         className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{
@@ -76,184 +75,127 @@ export function HeroSection({
         aria-hidden="true"
       />
 
-      {/* ── Content — Balanced padding so CTAs are visible above the fold on all laptop screens ── */}
-      <div className="relative section-container pt-8 pb-16 sm:pt-12 sm:pb-20 z-10">
+      {/* ── Content Container ── */}
+      <div className="relative section-container pt-8 pb-24 sm:pt-14 sm:pb-32 z-10">
+        <div style={{ maxWidth: '680px' }} className="animate-fade-in">
 
-        {/* Text content — constrained to 660px */}
-        <div style={{ maxWidth: '660px' }} className="animate-fade-in">
-
+          {/* Credential Badge */}
           {badge && (
-            <div className="trust-badge mb-3 sm:mb-4 inline-flex items-center gap-2" role="note" aria-label="Credential badge">
-              <span
-                className="w-2 h-2 rounded-full flex-shrink-0 animate-pulse"
-                style={{ background: 'var(--teal-accent)' }}
-              />
-              {badge}
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-accent/15 border border-teal-accent/30 text-teal-accent text-xs font-bold tracking-wide uppercase mb-4 sm:mb-5 backdrop-blur-md shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-teal-accent animate-pulse" />
+              <span>{badge}</span>
             </div>
           )}
 
+          {/* Main SEO H1 */}
           <h1
             id="hero-heading"
-            className="text-white mb-3 sm:mb-4"
+            className="text-white mb-4 sm:mb-5 tracking-tight font-extrabold"
             itemProp="name"
             style={{
-              fontSize: 'clamp(1.75rem, 3.6vw, 2.85rem)',
-              fontWeight: 800,
-              lineHeight: 1.18,
-              letterSpacing: '-0.02em',
-              textShadow: '0 2px 20px rgba(0,0,0,0.7)',
+              fontSize: 'clamp(1.75rem, 4.2vw, 2.9rem)',
+              lineHeight: 1.15,
+              textShadow: '0 2px 20px rgba(0,0,0,0.8)',
             }}
           >
             {headline}
           </h1>
 
+          {/* Subheadline & Value Prop */}
           <div
-            className="mb-6 sm:mb-7"
+            className="mb-7 sm:mb-8 text-white/95 text-base sm:text-lg leading-relaxed"
             itemProp="description"
-            style={{
-              fontSize: 'clamp(0.95rem, 1.4vw, 1.1rem)',
-              lineHeight: 1.6,
-              color: 'rgba(255,255,255,0.95)',
-              textShadow: '0 1px 10px rgba(0,0,0,0.6)',
-            }}
+            style={{ textShadow: '0 1px 8px rgba(0,0,0,0.7)' }}
           >
             {subheadline}
           </div>
-        </div>
-        {/* End constrained text block */}
 
-        {/* CTA buttons & Partner badge row */}
-        <div className="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-6 mt-6 mb-6">
-          {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3">
+          {/* CTA Actions Group */}
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-7">
             {ctaPrimary && (
-              ctaPrimary.isPhone ? (
-                <a
-                  href={PHONE_HREF}
-                  onClick={() => trackPhoneClick('hero_primary')}
-                  className="btn-phone cursor-pointer inline-flex items-center justify-center gap-2 text-sm sm:text-base font-bold shadow-lg"
-                  id="hero-call-cta"
-                  aria-label={ctaPrimary.text}
-                >
-                  <Phone className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
-                  {ctaPrimary.text}
-                </a>
-              ) : (
-                <Link
-                  href={ctaPrimary.href}
-                  onClick={() => trackConsultationRequest('hero_primary')}
-                  className="btn-phone inline-flex items-center justify-center gap-2 text-sm sm:text-base font-bold shadow-lg"
-                  id="hero-primary-cta"
-                  aria-label={ctaPrimary.text}
-                >
-                  {ctaPrimary.text}
-                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
-                </Link>
-              )
+              <a
+                href={PHONE_HREF}
+                onClick={() => trackPhoneClick('hero_primary')}
+                className="btn-phone cursor-pointer inline-flex items-center justify-center gap-2.5 text-base sm:text-lg font-extrabold px-6 py-3.5 rounded-xl shadow-xl transition-all duration-200 hover:scale-[1.02] active:scale-95"
+                id="hero-call-cta"
+                aria-label={ctaPrimary.text}
+              >
+                <Phone className="w-5 h-5 flex-shrink-0 text-navy" />
+                <span>{ctaPrimary.text}</span>
+                <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse ml-1" />
+              </a>
             )}
+
             {ctaSecondary && (
-              ctaSecondary.isPhone ? (
-                <a
-                  href={PHONE_HREF}
-                  onClick={() => trackPhoneClick('hero_secondary')}
-                  className="btn-outline-white cursor-pointer inline-flex items-center justify-center gap-2 text-sm sm:text-base font-bold"
-                  id="hero-secondary-cta"
-                  aria-label={ctaSecondary.text}
-                >
-                  <Phone className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
-                  {ctaSecondary.text}
-                </a>
-              ) : (
-                <Link
-                  href={ctaSecondary.href}
-                  onClick={() => trackConsultationRequest('hero_secondary')}
-                  className="btn-outline-white inline-flex items-center justify-center gap-2 text-sm sm:text-base font-bold"
-                  id="hero-secondary-cta"
-                  aria-label={ctaSecondary.text}
-                >
-                  {ctaSecondary.text}
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              )
+              <Link
+                href={ctaSecondary.href}
+                onClick={() => trackConsultationRequest('hero_secondary')}
+                className="btn-outline-white inline-flex items-center justify-center gap-2 text-sm sm:text-base font-bold px-5 py-3.5 rounded-xl backdrop-blur-md transition-all duration-200 hover:bg-white/15"
+                id="hero-secondary-cta"
+                aria-label={ctaSecondary.text}
+              >
+                <span>{ctaSecondary.text}</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
             )}
           </div>
 
-          {/* Partner badge */}
-          <div className="flex items-center gap-2.5 bg-white/10 backdrop-blur-md px-3.5 py-2 rounded-xl border border-white/15 w-fit">
-            <span
-              className="text-[11px] font-semibold tracking-wider uppercase text-white/80"
-              style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}
-            >
-              Partnering with
-            </span>
-            <Image
-              src="/trilogylogo.png"
-              alt="Trilogy Care logo"
-              width={88}
-              height={24}
-              style={{
-                objectFit: 'contain',
-                filter: 'brightness(0) invert(1)',
-                width: 'auto',
-              }}
-              className="h-5 sm:h-6 w-auto"
-            />
+          {/* Reassurance Grid / Trust Strip — Sleek Glassmorphic Cards (No Truncation) */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-5 border-t border-white/15">
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-3 py-2 rounded-xl border border-white/15 text-white text-xs font-semibold shadow-xs">
+              <ShieldCheck className="w-4 h-4 text-teal-accent shrink-0" />
+              <span className="whitespace-nowrap">AHPRA Registered</span>
+            </div>
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-3 py-2 rounded-xl border border-white/15 text-white text-xs font-semibold shadow-xs">
+              <UserCheck className="w-4 h-4 text-teal-accent shrink-0" />
+              <span className="whitespace-nowrap">One Dedicated RN</span>
+            </div>
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-3 py-2 rounded-xl border border-white/15 text-white text-xs font-semibold shadow-xs">
+              <Clock className="w-4 h-4 text-teal-accent shrink-0" />
+              <span className="whitespace-nowrap">24–48h Intake</span>
+            </div>
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-3 py-2 rounded-xl border border-white/15 text-white text-xs font-semibold shadow-xs">
+              <MapPin className="w-4 h-4 text-teal-accent shrink-0" />
+              <span className="whitespace-nowrap">All Perth Suburbs</span>
+            </div>
           </div>
-        </div>
-        {/* End CTA row */}
 
-        {/* Trust / value props strip */}
-        <div className="flex flex-row flex-wrap items-center gap-x-4 sm:gap-x-6 gap-y-2 relative z-10" role="list" aria-label="Key credentials">
-          {[
-            '✓ AHPRA-Registered Nurses',
-            '✓ Dedicated Nurse Coordinator',
-            '✓ 24–48-Hour Assessment',
-            '✓ Perth Metro Coverage',
-          ].map((item) => (
-            <span
-              key={item}
-              role="listitem"
-              className="text-xs sm:text-sm font-bold text-teal-accent"
-              style={{ textShadow: '0 2px 10px rgba(0,0,0,0.9)' }}
-            >
-              {item}
+          {/* Trilogy Care Partner & Emergency Disclaimer Microbar */}
+          <div className="mt-5 flex flex-wrap items-center justify-between gap-3 text-xs text-white/80">
+            <div className="flex items-center gap-2.5">
+              <span className="font-semibold text-white/90">Clinical Partner:</span>
+              <Image
+                src="/trilogylogo.png"
+                alt="Trilogy Care logo"
+                width={88}
+                height={22}
+                style={{
+                  objectFit: 'contain',
+                  filter: 'brightness(0) invert(1)',
+                  width: 'auto',
+                }}
+                className="h-5 w-auto opacity-95"
+              />
+            </div>
+            <span className="text-white/70 text-[11px] sm:text-xs">
+              For non-urgent clinical intake. In an emergency, immediately call <strong className="text-white font-bold">000</strong>.
             </span>
-          ))}
-        </div>
+          </div>
 
-        {/* Who we help micro-row */}
-        <div className="mt-3 pt-3 border-t border-white/10 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-white/75 relative z-10">
-          <span className="font-semibold text-teal-accent">Who we help:</span>
-          <span>Older parents</span>
-          <span className="text-white/40">•</span>
-          <span>Post-hospital recovery</span>
-          <span className="text-white/40">•</span>
-          <span>Wound care</span>
-          <span className="text-white/40">•</span>
-          <span>Medication safety</span>
-          <span className="text-white/40">•</span>
-          <span>Chronic health conditions</span>
         </div>
-
-        {/* Emergency disclaimer */}
-        <div className="mt-3 flex items-center gap-2 text-[11px] text-white/70 relative z-10">
-          <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0" />
-          <span>Not for emergencies. In a medical emergency, immediately call <strong>000</strong>.</span>
-        </div>
-
       </div>
 
-      {/* Bottom wave */}
-      <div className="absolute bottom-0 left-0 right-0" aria-hidden="true">
+      {/* Bottom wave transition into page content */}
+      <div className="absolute bottom-0 left-0 right-0 pointer-events-none" aria-hidden="true">
         <svg
-          viewBox="0 0 1440 60"
+          viewBox="0 0 1440 48"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="none"
-          style={{ display: 'block', width: '100%', height: '60px' }}
+          style={{ display: 'block', width: '100%', height: '48px' }}
         >
           <path
-            d="M0 60L1440 60L1440 20C1200 60 960 0 720 20C480 40 240 0 0 20L0 60Z"
+            d="M0 48L1440 48L1440 16C1080 48 720 0 0 24L0 48Z"
             fill="var(--surface)"
           />
         </svg>

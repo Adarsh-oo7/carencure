@@ -136,12 +136,12 @@ export function Navigation() {
             {/* Mobile / Tablet Left */}
             <div className="flex md:hidden items-center gap-1.5 text-[11px] text-white/90 font-medium truncate">
               <span className="w-1.5 h-1.5 rounded-full bg-teal-accent shrink-0" />
-              <span className="truncate">Perth Nurse-Led Home Care</span>
+              <span className="truncate">Perth Nurse-Led · Harrisdale HQ · All Suburbs</span>
             </div>
 
-            {/* Right: Phone & Location Quick Info */}
-            <div className="flex items-center gap-3 lg:gap-5 text-[11px] lg:text-xs font-semibold shrink-0">
-              <span className="hidden sm:inline text-white/70">Harrisdale HQ • All Perth Suburbs</span>
+            {/* Right: Phone & Location Quick Info (Desktop / Tablet) */}
+            <div className="hidden sm:flex items-center gap-3 lg:gap-5 text-[11px] lg:text-xs font-semibold shrink-0">
+              <span className="text-white/70">Harrisdale HQ • All Perth Suburbs</span>
               <a
                 href={PHONE_HREF}
                 className="inline-flex items-center gap-1.5 text-teal-accent hover:text-white transition-colors cursor-pointer"
@@ -419,16 +419,17 @@ export function Navigation() {
                 </a>
               </div>
 
-              {/* Mobile: Direct Call Button + Hamburger */}
+              {/* Mobile: Direct Call Icon Button + Hamburger */}
               <div className="flex lg:hidden items-center gap-2">
                 <a
                   href={PHONE_HREF}
-                  className="flex items-center gap-1.5 bg-navy text-white text-xs sm:text-sm font-bold px-3 py-2 rounded-xl cursor-pointer hover:bg-navy-light transition-colors"
+                  className="flex items-center gap-1.5 bg-navy hover:bg-navy-light text-white text-xs font-bold px-3 py-2 rounded-xl transition-all shadow-xs cursor-pointer"
                   id="nav-mobile-call"
-                  aria-label="Call 1300 919 663"
+                  aria-label="Call Registered Nurse Desk: 1300 919 663"
                 >
                   <Phone className="w-3.5 h-3.5 text-teal-accent" />
-                  <span>1300 919 663</span>
+                  <span className="hidden sm:inline">1300 919 663</span>
+                  <span className="sm:hidden font-semibold">Call RN</span>
                 </a>
                 <button
                   className="p-2 rounded-xl hover:bg-surface transition-colors text-navy"

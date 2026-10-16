@@ -18,7 +18,7 @@ const trustItems = [
   {
     icon: Handshake,
     label: 'Partnering with Trilogy Care',
-    sub: 'Approved Home Care Packages (Levels 1–4)',
+    sub: 'Support at Home & HCP Approved Partner',
     id: 'trust-trilogy',
     iconColor: '#0D9488',
   },
@@ -31,7 +31,7 @@ const trustItems = [
   },
   {
     icon: ShieldCheck,
-    label: '0 Travel Surcharges',
+    label: '$0 Travel Surcharges',
     sub: '50km Perth metropolitan service radius',
     id: 'trust-travel',
     iconColor: '#0D9488',
