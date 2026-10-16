@@ -76,12 +76,12 @@ export function HeroSection({
       />
 
       {/* ── Content Container ── */}
-      <div className="relative section-container pt-8 pb-24 sm:pt-14 sm:pb-32 z-10">
-        <div style={{ maxWidth: '680px' }} className="animate-fade-in">
+      <div className="relative section-container pt-6 pb-20 sm:pt-10 sm:pb-24 z-10">
+        <div style={{ maxWidth: '580px' }} className="animate-fade-in">
 
           {/* Credential Badge */}
           {badge && (
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-accent/15 border border-teal-accent/30 text-teal-accent text-xs font-bold tracking-wide uppercase mb-4 sm:mb-5 backdrop-blur-md shadow-sm">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-accent/15 border border-teal-accent/30 text-teal-accent text-xs font-bold tracking-wide uppercase mb-3 sm:mb-4 backdrop-blur-md shadow-sm">
               <span className="w-2 h-2 rounded-full bg-teal-accent animate-pulse" />
               <span>{badge}</span>
             </div>
@@ -90,10 +90,10 @@ export function HeroSection({
           {/* Main SEO H1 */}
           <h1
             id="hero-heading"
-            className="text-white mb-4 sm:mb-5 tracking-tight font-extrabold"
+            className="text-white mb-3 sm:mb-4 tracking-tight font-extrabold"
             itemProp="name"
             style={{
-              fontSize: 'clamp(1.75rem, 4.2vw, 2.9rem)',
+              fontSize: 'clamp(1.75rem, 3.6vw, 2.75rem)',
               lineHeight: 1.15,
               textShadow: '0 2px 20px rgba(0,0,0,0.8)',
             }}
@@ -103,20 +103,20 @@ export function HeroSection({
 
           {/* Subheadline & Value Prop */}
           <div
-            className="mb-7 sm:mb-8 text-white/95 text-base sm:text-lg leading-relaxed"
+            className="mb-5 sm:mb-6 text-white/95 text-base sm:text-lg leading-relaxed"
             itemProp="description"
             style={{ textShadow: '0 1px 8px rgba(0,0,0,0.7)' }}
           >
             {subheadline}
           </div>
 
-          {/* CTA Actions Group */}
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-7">
+          {/* CTA Actions Group with matched heights */}
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-5 sm:mb-6">
             {ctaPrimary && (
               <a
                 href={PHONE_HREF}
                 onClick={() => trackPhoneClick('hero_primary')}
-                className="btn-phone cursor-pointer inline-flex items-center justify-center gap-2.5 text-base sm:text-lg font-extrabold px-6 py-3.5 rounded-xl shadow-xl transition-all duration-200 hover:scale-[1.02] active:scale-95"
+                className="btn-phone cursor-pointer inline-flex items-center justify-center gap-2.5 h-[50px] text-base sm:text-lg font-extrabold px-6 rounded-xl shadow-xl transition-all duration-200 hover:scale-[1.02] active:scale-95 shrink-0"
                 id="hero-call-cta"
                 aria-label={ctaPrimary.text}
               >
@@ -130,7 +130,7 @@ export function HeroSection({
               <Link
                 href={ctaSecondary.href}
                 onClick={() => trackConsultationRequest('hero_secondary')}
-                className="btn-outline-white inline-flex items-center justify-center gap-2 text-sm sm:text-base font-bold px-5 py-3.5 rounded-xl backdrop-blur-md transition-all duration-200 hover:bg-white/15"
+                className="btn-outline-white inline-flex items-center justify-center gap-2 h-[50px] text-sm sm:text-base font-bold px-6 rounded-xl backdrop-blur-md transition-all duration-200 hover:bg-white/15 shrink-0"
                 id="hero-secondary-cta"
                 aria-label={ctaSecondary.text}
               >
@@ -140,46 +140,24 @@ export function HeroSection({
             )}
           </div>
 
-          {/* Reassurance Grid / Trust Strip — Sleek Glassmorphic Cards (No Truncation) */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-5 border-t border-white/15">
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-3 py-2 rounded-xl border border-white/15 text-white text-xs font-semibold shadow-xs">
+          {/* Reassurance Grid — Balanced 2x2 Grid with Full Legibility */}
+          <div className="grid grid-cols-2 gap-2 sm:gap-2.5 pt-4 border-t border-white/15 max-w-[540px]">
+            <div className="flex items-center gap-2 sm:gap-2.5 bg-white/10 backdrop-blur-md px-3 sm:px-3.5 py-2 sm:py-2.5 rounded-xl border border-white/15 text-white text-[11px] sm:text-xs font-semibold shadow-xs">
               <ShieldCheck className="w-4 h-4 text-teal-accent shrink-0" />
-              <span className="whitespace-nowrap">AHPRA Registered</span>
+              <span className="truncate sm:overflow-visible">AHPRA Nurses</span>
             </div>
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-3 py-2 rounded-xl border border-white/15 text-white text-xs font-semibold shadow-xs">
+            <div className="flex items-center gap-2 sm:gap-2.5 bg-white/10 backdrop-blur-md px-3 sm:px-3.5 py-2 sm:py-2.5 rounded-xl border border-white/15 text-white text-[11px] sm:text-xs font-semibold shadow-xs">
               <UserCheck className="w-4 h-4 text-teal-accent shrink-0" />
-              <span className="whitespace-nowrap">One Dedicated RN</span>
+              <span className="truncate sm:overflow-visible">Dedicated RN</span>
             </div>
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-3 py-2 rounded-xl border border-white/15 text-white text-xs font-semibold shadow-xs">
+            <div className="flex items-center gap-2 sm:gap-2.5 bg-white/10 backdrop-blur-md px-3 sm:px-3.5 py-2 sm:py-2.5 rounded-xl border border-white/15 text-white text-[11px] sm:text-xs font-semibold shadow-xs">
               <Clock className="w-4 h-4 text-teal-accent shrink-0" />
-              <span className="whitespace-nowrap">24–48h Intake</span>
+              <span className="truncate sm:overflow-visible">24–48h Intake</span>
             </div>
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-3 py-2 rounded-xl border border-white/15 text-white text-xs font-semibold shadow-xs">
+            <div className="flex items-center gap-2 sm:gap-2.5 bg-white/10 backdrop-blur-md px-3 sm:px-3.5 py-2 sm:py-2.5 rounded-xl border border-white/15 text-white text-[11px] sm:text-xs font-semibold shadow-xs">
               <MapPin className="w-4 h-4 text-teal-accent shrink-0" />
-              <span className="whitespace-nowrap">All Perth Suburbs</span>
+              <span className="truncate sm:overflow-visible">All Perth Suburbs</span>
             </div>
-          </div>
-
-          {/* Trilogy Care Partner & Emergency Disclaimer Microbar */}
-          <div className="mt-5 flex flex-wrap items-center justify-between gap-3 text-xs text-white/80">
-            <div className="flex items-center gap-2.5">
-              <span className="font-semibold text-white/90">Clinical Partner:</span>
-              <Image
-                src="/trilogylogo.png"
-                alt="Trilogy Care logo"
-                width={88}
-                height={22}
-                style={{
-                  objectFit: 'contain',
-                  filter: 'brightness(0) invert(1)',
-                  width: 'auto',
-                }}
-                className="h-5 w-auto opacity-95"
-              />
-            </div>
-            <span className="text-white/70 text-[11px] sm:text-xs">
-              For non-urgent clinical intake. In an emergency, immediately call <strong className="text-white font-bold">000</strong>.
-            </span>
           </div>
 
         </div>
