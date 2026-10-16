@@ -76,7 +76,7 @@ export function HeroSection({
       />
 
       {/* ── Content Container ── */}
-      <div className="relative section-container pt-6 pb-20 sm:pt-10 sm:pb-24 z-10">
+      <div className="relative section-container pt-10 pb-20 sm:pt-16 sm:pb-24 z-10">
         <div style={{ maxWidth: '580px' }} className="animate-fade-in">
 
           {/* Credential Badge */}
