@@ -56,11 +56,15 @@ const faqs = [
   },
   {
     question: "How much does private nursing cost in Perth?",
-    answer: "Private Registered Nurse visits in Perth range from $110 to $160 per hour for standard weekday clinical care, depending on care complexity. Weekend, after-hours, and public holiday visits range between $160 and $220 per hour. Detailed pricing is available on our pricing schedule, and services can be self-funded or funded through NDIS or Home Care Packages.",
+    answer: "Private Registered Nurse visits in Perth range from $110 to $160 per hour for standard weekday clinical care, depending on care complexity. Weekend, after-hours, and public holiday visits range between $160 and $220 per hour. Detailed pricing is available on our pricing schedule, and services can be self-funded or funded through NDIS or Support at Home.",
   },
   {
-    question: "Do you accept NDIS or Home Care Packages (HCP)?",
-    answer: "Yes. Care N Cure is fully compatible with NDIS funding (under Capacity Building and Core Supports) and Home Care Packages (Levels 1 to 4). We also support self-managed participants, plan-managed participants, and private fee-for-service clients.",
+    question: "Can I hire a nurse for a day, and what does it cost?",
+    answer: "Yes. You can book a single home visit, a few hours, or a full day shift with an AHPRA Registered Nurse. Care is billed hourly at our published rates: $110 to $160 per hour on weekdays, and $160 to $220 per hour on weekends and public holidays. As a guide, an 8-hour weekday shift is roughly $880 to $1,280 depending on clinical complexity. We confirm a written quote before care starts.",
+  },
+  {
+    question: "Do you accept NDIS or Support at Home funding?",
+    answer: "Yes. Care N Cure works with NDIS participants and with Support at Home recipients (the program that replaced Home Care Packages on 1 November 2025), including self-managed arrangements. We also support plan-managed participants and private fee-for-service clients.",
   },
   {
     question: "Can I get extended private nursing care in Perth?",
@@ -105,7 +109,7 @@ export default function PrivateNursing() {
       />
 
       <PageHeader
-        title="Private Nursing Care at Home in Perth"
+        title="Private Nurse at Home in Perth"
         subtitle="AHPRA-registered nurses providing personalized, clinical care in the comfort and privacy of your own home."
         breadcrumbItems={[
           { name: 'Services', href: '/services' },

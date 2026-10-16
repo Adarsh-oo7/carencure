@@ -109,7 +109,7 @@ export default function ElderlyPrivateNursing() {
       <FAQPageSchema faqs={faqs} />
 
       <PageHeader
-        title="At Home Nurse for Elderly in Perth | Private In-Home Care"
+        title="Elderly Nursing Care at Home in Perth"
         subtitle="Dedicated AHPRA-registered nurse coordinators providing clinical care, medication safety, and health monitoring so your aging loved ones can live safely with dignity at home."
         breadcrumbItems={[
           { name: 'Services', href: '/services' },
