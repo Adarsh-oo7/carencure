@@ -10,7 +10,7 @@ import { CtaUncertaintyReducer } from '@/components/sections/cta-uncertainty-red
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Private Nurse Perth | Hire an AHPRA Registered Nurse at Home | Care N Cure',
+    absolute: 'Private Nurse at Home Perth | Hire an AHPRA Registered Nurse | Care N Cure',
   },
   description:
     'Need a private nurse or home nursing services in Perth? Care N Cure provides AHPRA Registered Nurses for in-home clinical care, sterile wound dressings, injections & aged care support. No GP referral needed. 24–48h start. Call 1300 919 663.',

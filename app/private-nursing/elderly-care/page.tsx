@@ -21,7 +21,7 @@ import { CtaUncertaintyReducer } from '@/components/sections/cta-uncertainty-red
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Elderly Nursing Care at Home Perth | Care N Cure',
+    absolute: 'Elderly Nursing Care at Home Perth | At Home Nurses for Elderly | Care N Cure',
   },
   description:
     'Caring for an elderly parent in Perth? Care N Cure provides dedicated AHPRA Registered Nurses for in-home elderly care — wound dressing, medication safety, health monitoring & HCP/Support at Home funding. No referral needed. Call 1300 919 663.',
