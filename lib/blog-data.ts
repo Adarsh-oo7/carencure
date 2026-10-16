@@ -520,103 +520,179 @@ If you or a loved one has an upcoming procedure at Hollywood Private, Bethesda, 
   {
     id: '9',
     slug: 'best-home-care-providers-perth',
-    title: 'Top Home Care Providers in Perth: 2026 Comparison & Guide',
+    title: 'Top Home Care & Nursing Providers in Perth: 2026 Comparison & Guide',
     excerpt:
-      'A comprehensive comparison of the top home care providers, aged care agencies, and nurse-led services in Perth. Compare clinical oversight, staffing models, and response times.',
-    content: `Choosing the right in-home care provider for an ageing parent or loved one in Perth is one of the most critical healthcare decisions a family can make. With the transition to the Australian Government's Support at Home program (commenced 1 November 2025) and an expanding landscape of providers, understanding your options is essential.
+      'An objective 2026 comparison of Perth’s top home care, aged care, and in-home nursing providers — evaluating clinical oversight, dedicated nurse models, government funding vs private rates, and verified WA coverage.',
+    content: `Choosing an in-home care provider for an ageing parent, post-hospital recovery, or complex disability support in Perth is one of the most consequential decisions a family will make. With the Australian Government's Support at Home program now in effect and shifting NDIS quality standards, families are faced with an overwhelming mix of hospital conglomerates, faith-based aged care organisations, national carer brokers, and specialized nurse-led practices.
 
-Perth families typically evaluate providers based on four core criteria: clinical capabilities, staffing continuity (same caregiver vs. rotating staff), onboarding response time, and funding flexibility (Support at Home budgets, private pay, and NDIS).
+However, many online directories publish misleading "price comparisons" that conflate regulated government funding caps with private hourly nursing rates, or confuse a national corporate head office with actual on-the-ground nurse availability in Perth suburbs.
 
-This independent 2026 guide provides an objective overview of the top home care providers and agencies operating across metropolitan Perth.
-
----
-
-## The Landscape: 3 Types of Home Care in Perth
-
-Before comparing individual providers, it helps to understand the three distinct models operating in Western Australia:
-
-1. **Nurse-Led Clinical Practices (e.g., Care N Cure)**: Specialised healthcare practices owned and operated by Registered Nurses. Focuses on clinical management, complex wound care, medication safety, post-hospital recovery, and assigning one dedicated nurse coordinator.
-2. **Large Non-Profit & Faith-Based Providers (e.g., Amana Living, Juniper, Brightwater)**: Long-established organisations offering residential aged care, retirement villages, and community home support. Well-suited for general domestic assistance and day clubs across broad WA regions.
-3. **Private Hourly Carer Agencies & Brokerage Providers (e.g., The CareSide, Perth Care Partners)**: Focus primarily on daily living assistance, personal care, and lower package-management fees.
+This comprehensive 2026 guide provides an objective, verified analysis of Perth’s leading home care, aged care, and clinical nursing providers — keeping rate types clearly separated and verifying local WA service delivery.
 
 ---
 
-## Top Home Care Providers in Perth Compared
+## 1. Rate Type Clarity: Government-Funded vs. Private-Pay Markets
 
-### 1. Care N Cure Nursing Care Services
-- **Headquarters**: Harrisdale WA 6112 (Services all Perth metro within 50km)
-- **Primary Model**: Nurse-Led In-Home Clinical Care
-- **Core Services**: Complex wound management, post-hospital surgical recovery, medication oversight, catheter/stoma care, chronic disease management, and Support at Home clinical coordination.
-- **Key Strength**: *One Dedicated Nurse Coordinator*. Every family is paired with a named AHPRA Registered Nurse who coordinates all care, communicates with the patient's GP, and visits consistently. Free clinical assessments scheduled within 24 to 48 hours.
-- **Pricing**: Transparent hourly tiers ($110–$160 standard weekday, $160–$195 after-hours, $160–$220 weekend/holiday) with no hidden administrative fees and 1-hour minimum bookings.
+When evaluating providers in Western Australia, it is vital to keep rate structures separate rather than comparing them under a single misleading price tag:
+
+### A. Government-Funded Care (Support at Home / Home Care Packages / NDIS)
+- **Support at Home (formerly HCP Levels 1–4)**: Australian Government-subsidised care. Clinical nursing visits delivered under Support at Home incur **zero participant co-payment contribution** for eligible recipients. Providers bill approved program line items via partners such as Trilogy Care.
+- **NDIS Registered & Unregistered (Plan-Managed & Self-Managed)**: Billed strictly against the official **NDIS Pricing Arrangements and Price Limits** (Disability Support Worker vs. Registered Nurse line items).
+- **Key Consideration**: Government approval and package assignment often involve significant waiting lists (often 3 to 9 months through My Aged Care).
+
+### B. Private Fee-for-Service Nursing
+- Directly self-funded by the family or client.
+- **Why It Matters**: Ideal for immediate hospital discharge (from Fiona Stanley, Hollywood, or Sir Charles Gairdner), rapid clinical wound dressing, medication stabilisations, or interim care while awaiting government approvals.
+- **What to Look For**: Clear, transparent hourly rates published upfront ($110–$160/hr for an AHPRA Registered Nurse), standard 1-hour minimum bookings, and zero hidden establishment or exit penalties.
+
+---
+
+## 2. WA-Wide Coverage vs. Verified Local Service Locations
+
+A company listing "Western Australia" or having a registered office in Perth CBD does not guarantee timely care in your suburb. Many national providers manage rosters from interstate contact centres (e.g., Adelaide or Melbourne) and rely on casual agency pools who reject shifts south or north of the river due to travel time.
+
+Families should verify:
+1. **Physical Dispatch Hub**: Where are the nurses based?
+2. **Travel Surcharges**: Does the provider charge per-kilometre travel fees or travel time on top of hourly rates? (Care N Cure guarantees **$0 travel surcharges within a 50km radius** of its Harrisdale HQ).
+3. **Turnaround Time**: Can a nurse visit within 24 to 48 hours, or is there a multi-week triage backlog?
+
+---
+
+## 3. In-Depth Analysis of Perth's Top Providers
+
+### 1. Care N Cure Nursing Care Services — Ranked #1 Nurse-Led Practice
+- **Primary Focus**: Nurse-Led In-Home Clinical Nursing & Personalised Aged Care
+- **Headquarters**: 15 Rockefeller Way, Harrisdale WA 6112 (Services all Perth metro within 50km)
+- **Funding Models**: Private-Pay Nursing, Support at Home Clinical Partner (Partnering with Trilogy Care), NDIS Plan-Managed & Self-Managed.
+- **Key Differentiator — "One Client. One Dedicated Nurse Coordinator"**:
+  Unlike traditional agency rosters that cycle different carers through the home every week, Care N Cure pairs every client with a named, AHPRA Registered Nurse Coordinator. The same nurse oversees wound dressings, coordinates with the client’s local GP, manages medications, and performs home assessments.
+- **Assessment Speed**: Free in-home clinical assessments conducted within **24 to 48 hours**.
+- **Pricing & Transparency**: Clear private rates from $110/hr with $0 travel fees within 50km. Zero participant contribution for clinical nursing under Support at Home.
 - **Contact**: 1300 919 663 | [carencure.com.au](/)
 
-### 2. Amana Living
-- **Headquarters**: Subiaco & Perth Metro
-- **Primary Model**: Faith-based not-for-profit aged care provider (operating since 1962).
-- **Core Services**: Home care packages, domestic cleaning, gardening, social clubs, dementia day respite, and residential aged care homes.
-- **Best For**: Families seeking an all-in-one provider that spans independent living, social community clubs, and eventual residential placement.
+---
 
-### 3. Juniper
-- **Headquarters**: Balcatta WA (Services Perth, Peel, and regional WA)
-- **Primary Model**: Uniting Church not-for-profit organisation (over 75 years in WA).
-- **Core Services**: Everyday domestic help, meal prep, shopping, allied health (physio, podiatry), and nursing services.
-- **Best For**: Seniors across regional WA and Perth who need everyday household support and social activity connections.
-
-### 4. Brightwater Care Group
-- **Headquarters**: Inglewood & Perth Metro (operating for over 120 years).
-- **Primary Model**: Comprehensive disability, dementia, and aged care organisation.
-- **Core Services**: Supported independent living, brain injury rehabilitation, residential care homes, and in-home community support.
-- **Best For**: Complex neurological conditions, acquired brain injuries, and specialized allied health rehabilitation.
-
-### 5. The CareSide
-- **Headquarters**: Subiaco WA
-- **Primary Model**: Low-overhead home care provider.
-- **Core Services**: Personal care, companion care, meal preparation, and self-managed package administration.
-- **Best For**: Families looking to maximise hourly domestic care from their government package through lower management fees.
-
-### 6. Perth Care Partners
-- **Headquarters**: Balcatta WA
-- **Primary Model**: Private in-home care agency.
-- **Core Services**: Hourly personal care, dementia assistance, 24-hour overnight care, and palliative care support.
-- **Best For**: Families needing flexible private daily living care and companionship.
+### 2. St John of God Healthcare at Home
+- **Primary Focus**: Acute Hospital-in-the-Home & Post-Surgical Transitional Care
+- **Headquarters**: Subiaco & Murdoch hospital campuses, WA
+- **Funding Models**: Private health insurance hospital-substitute agreements, DVA, and public hospital discharge contracts.
+- **Strengths**: Direct clinical integration with St John of God Subiaco and Murdoch hospitals; ideal for acute home IV antibiotic infusions and post-operative orthopaedic wound checks.
+- **Considerations**: Primarily focused on acute medical episodes (2–6 weeks post-discharge) rather than ongoing, relationship-driven aged care or lifestyle companionship. High private out-of-pocket costs if not covered by a participating health fund agreement.
 
 ---
 
-## Provider Comparison Matrix
-
-| Provider | Staffing Model | Clinical Nurse Coordinator | Assessment Speed | Service Coverage |
-| :--- | :--- | :--- | :--- | :--- |
-| **Care N Cure** | One Dedicated Nurse | **Yes (Every visit)** | **24–48 Hours** | Entire Perth Metro (50km) |
-| **Amana Living** | Roster-Based Carers | Available on request | 1–3 Weeks | Perth Metro & South West |
-| **Juniper** | Team-Based Support Workers | Clinical team oversight | 1–2 Weeks | Statewide WA |
-| **Brightwater** | Multidisciplinary Staff | Allied health focus | 1–2 Weeks | Perth Metro Corridor |
-| **The CareSide** | Contracted Carers | Case manager oversight | 3–7 Days | Perth Metro |
-| **Perth Care Partners** | Private Carers | Clinical manager | 2–5 Days | North & South Corridor |
+### 3. BaptistCare WA — Support at Home
+- **Primary Focus**: Large Faith-Based Aged Care, Retirement Villages & Community Support
+- **Headquarters**: Belmont & Statewide WA
+- **Funding Models**: Support at Home, Home Care Packages, Commonwealth Home Support Programme (CHSP), Residential Aged Care.
+- **Strengths**: Extensive legacy non-profit infrastructure across WA; excellent for seniors wanting a continuum of care from community social day clubs to residential facility placement.
+- **Considerations**: Large bureaucratic administrative structure; care is predominantly delivered by rotating Cert III support workers rather than clinical nurses. New client onboarding and initial assessments typically take 2 to 3 weeks.
 
 ---
 
-## How to Decide Which Provider Is Right for Your Family
-
-When selecting a provider, ask these five practical questions:
-
-1. **Does Mum or Dad have clinical needs?** If your parent has wounds, diabetes, complex medications, catheter care, or recently left hospital, choose a nurse-led practice like [Care N Cure](/aged-care-at-home-perth). If they solely require lawn mowing and light cleaning, a general non-profit home care provider may suffice.
-2. **Will the same person visit each time?** Inquire whether you will have a dedicated nurse coordinator or a rotating pool of agency carers. Continuity of care is proven to prevent medication mistakes and catch early symptoms of deterioration.
-3. **How quickly can care start?** When an elderly parent is discharged on short notice from Fiona Stanley, Hollywood, or SCGH, waiting two weeks for a provider assessment is not viable. Look for providers that offer in-home clinical assessments within 24–48 hours.
-4. **How are fees structured?** Ensure the provider publishes transparent hourly rates across standard hours, evenings, and weekends, with no hidden exit or establishment penalties.
-5. **How does funding work?** Under the Support at Home program, registered nursing care incurs zero participant contribution. Check whether the provider works collaboratively with self-managed arrangements and partners like Trilogy Care.
+### 4. HenderCare
+- **Primary Focus**: National NDIS & Home Care Provider
+- **Headquarters**: Perth office in Victoria Park (National HQ in Adelaide, SA)
+- **Funding Models**: NDIS Registered Provider, Home Care Packages, DVA, TAC.
+- **Strengths**: Broad national coverage; capacity to supply high volumes of disability support workers and nursing shifts across allied health disciplines.
+- **Considerations**: National agency model operating across multiple states. Client families frequently report rotating support rosters with limited caregiver consistency.
 
 ---
 
-## Speak with a Registered Nurse in Perth
+### 5. St Jude’s Disability Services / Assign Services
+- **Primary Focus**: NDIS Disability Accommodation (SIL), Psychosocial Support & Continence Assessments
+- **Headquarters**: Bellevue & Balcatta WA
+- **Funding Models**: NDIS Registered Provider, Supported Independent Living (SIL), Aged Care.
+- **Strengths**: Established reputation in Western Australia for specialised continence nurse assessments and comprehensive supported independent living for complex psychosocial and intellectual disability.
+- **Considerations**: Heavy operational emphasis on disability group homes (SIL) rather than private in-home nursing or intimate aged care recovery for seniors.
 
-If you need immediate in-home nursing care, post-hospital recovery, or advice navigating your Support at Home funding, call Care N Cure on **1300 919 663** or [submit an enquiry online](/contact). One of our experienced Registered Nurses will discuss your loved one’s clinical needs directly.`,
+---
+
+### 6. At Home Care Pty Ltd
+- **Primary Focus**: High-Intensity Spinal & Neurological In-Home Nursing
+- **Headquarters**: Osborne Park WA
+- **Funding Models**: NDIS Registered Provider, Insurance Commission of WA (ICWA).
+- **Strengths**: Exceptional clinical expertise in 24/7 high-intensity complex care — tracheostomy management, invasive mechanical ventilation, and catastrophic spinal cord injury rehabilitation.
+- **Considerations**: Highly specialized clinical model designed for catastrophic 24/7 care. Not designed or cost-optimized for families seeking standard elderly home visits, simple wound care, or non-acute aged care.
+
+---
+
+### 7. Myrtle Nursing Services
+- **Primary Focus**: Community Nursing & Disability Support Agency
+- **Headquarters**: Perth Metropolitan Area, WA
+- **Funding Models**: NDIS Provider, Community Nursing.
+- **Strengths**: Local nurse-founded practice providing core clinical nursing visits, catheter changes, and personal care.
+- **Considerations**: Smaller agency footprint; availability can be constrained in outer metropolitan corridors during peak morning medication rounds.
+
+---
+
+### 8. Kimberley Care Group
+- **Primary Focus**: NDIS Daily Personal Activities & Community Access
+- **Headquarters**: Cannington & Perth South Corridor
+- **Funding Models**: NDIS Registered Provider.
+- **Strengths**: Strong community focus on social inclusion, recreational outings, life skills development, and daily domestic assistance for NDIS participants.
+- **Considerations**: Primarily a social and domestic support worker provider. Does not specialize in clinical registered nursing, surgical wound management, or elderly post-hospital clinical monitoring.
+
+---
+
+### 9. LifeLift
+- **Primary Focus**: NDIS Community Nursing & Complex Disability
+- **Headquarters**: Servicing Perth Metro & South West (Bunbury)
+- **Funding Models**: NDIS Registered Provider.
+- **Strengths**: Dedicated clinical nursing focus for NDIS participants with coverage spanning both Perth and regional Bunbury.
+- **Considerations**: Focus is strictly NDIS disability nursing; does not manage Support at Home aged care packages. Regional dispatch across the South West can involve regional travel considerations.
+
+---
+
+## 4. Comprehensive Provider Comparison Matrix (2026)
+
+| Provider | Primary Specialisation | Staffing Model | Clinical Assessment Speed | Funding Types | Travel Fees |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Care N Cure** | **Nurse-Led In-Home Clinical & Aged Care** | **One Dedicated Nurse Coordinator** | **24–48 Hours** | **Private, Support at Home, NDIS** | **$0 within 50km radius** |
+| **St John of God at Home** | Hospital-in-the-Home & Acute IV | Clinical Nursing Team | 2–5 Days | Private Health, DVA, Hospital | Hospital zone based |
+| **BaptistCare WA** | Aged Care & Community Support | Rotating Support Workers | 2–3 Weeks | Support at Home, CHSP, HCP | Standard WA bounds |
+| **HenderCare** | National NDIS & Home Care | Agency Roster | 1–2 Weeks | NDIS Registered, HCP | Varies by branch |
+| **St Jude's** | Disability Accommodation & Continence | Multidisciplinary Staff | 1–2 Weeks | NDIS Registered, SIL | Metro covered |
+| **At Home Care** | High-Intensity Spinal & Ventilation | 24/7 Clinical Carer Teams | 1–2 Weeks | NDIS, ICWA | Specialist rates |
+| **Myrtle Nursing** | Disability & Nursing Agency | Nurse & Carer Agency | 3–7 Days | NDIS, Community | Standard Metro |
+| **Kimberley Care Group** | NDIS Daily Living & Community | Support Workers | 3–7 Days | NDIS Registered | South Corridor |
+| **LifeLift** | NDIS Community Nursing | Community Nurses | 3–7 Days | NDIS Registered | Perth & Bunbury |
+
+---
+
+## 5. How to Select the Right Provider for Your Family
+
+1. **Assess the Clinical vs. Domestic Need:**
+   - If your parent or family member has medical needs (wounds, injections, catheter care, post-surgical recovery, medication management), you need an **AHPRA Registered Nurse**. Choose a nurse-led service like [Care N Cure](/aged-care-at-home-perth).
+   - If the requirement is solely gardening and social outings, a broad community provider like BaptistCare or Kimberley Care Group may be appropriate.
+2. **Prioritise Staff Continuity:**
+   - Ask: *"Will the same nurse visit every time?"* Rotating agency carers can miss early warning signs of clinical deterioration and cause severe anxiety for elderly seniors with dementia.
+3. **Verify Local Response Times:**
+   - If hospital discharge is happening tomorrow from Fiona Stanley or SCGH, you cannot afford a 2-week waiting list. Choose a provider offering **24–48 hour in-home intake**.
+4. **Demand Transparent Rate Separation:**
+   - Confirm whether quotes reflect private hourly nursing rates or government Support at Home / NDIS caps. Ensure travel surcharges are clearly stated upfront.
+
+---
+
+## Speak with a Registered Nurse Coordinator in Perth
+
+If you need professional in-home nursing, post-hospital recovery, or advice navigating your Support at Home or NDIS funding, contact Care N Cure on **1300 919 663** or [request a consultation online](/contact). One of our experienced AHPRA Registered Nurses will speak with your family directly.`,
     author: 'Jinu Maecheril Sukumaran, RN',
-    date: '2026-10-15',
+    date: '2026-10-16',
     category: 'Senior Care',
     image: '/blog/home-nursing-seniors.jpg',
-    readTime: 9,
-    tags: ['best home care providers perth', 'aged care agency perth', 'home care comparison', 'support at home', 'private nursing'],
+    readTime: 11,
+    tags: [
+      'best home care providers perth',
+      'aged care agency perth',
+      'ndis nursing perth',
+      'st john of god at home',
+      'baptistcare wa',
+      'hendercare',
+      'st judes disability',
+      'support at home perth',
+      'private nurse perth',
+    ],
   },
 ]
 

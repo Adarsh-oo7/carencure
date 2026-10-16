@@ -90,11 +90,11 @@ export function HeroSection({
           {/* Main SEO H1 */}
           <h1
             id="hero-heading"
-            className="text-white mb-3 sm:mb-4 tracking-tight font-extrabold"
+            className="text-white mb-2.5 sm:mb-4 tracking-tight font-extrabold"
             itemProp="name"
             style={{
-              fontSize: 'clamp(1.75rem, 3.6vw, 2.75rem)',
-              lineHeight: 1.15,
+              fontSize: 'clamp(1.45rem, 3.8vw, 2.75rem)',
+              lineHeight: 1.16,
               textShadow: '0 2px 20px rgba(0,0,0,0.8)',
             }}
           >
@@ -103,20 +103,20 @@ export function HeroSection({
 
           {/* Subheadline & Value Prop */}
           <div
-            className="mb-5 sm:mb-6 text-white/95 text-base sm:text-lg leading-relaxed"
+            className="mb-4 sm:mb-6 text-white/95 text-sm sm:text-lg leading-relaxed"
             itemProp="description"
             style={{ textShadow: '0 1px 8px rgba(0,0,0,0.7)' }}
           >
             {subheadline}
           </div>
 
-          {/* CTA Actions Group with matched heights */}
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-5 sm:mb-6">
+          {/* CTA Actions Group — Desktop shows both; Mobile shows single high-converting consultation action to eliminate phone button duplication */}
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
             {ctaPrimary && (
               <a
                 href={PHONE_HREF}
                 onClick={() => trackPhoneClick('hero_primary')}
-                className="btn-phone cursor-pointer inline-flex items-center justify-center gap-2.5 h-[50px] text-base sm:text-lg font-extrabold px-6 rounded-xl shadow-xl transition-all duration-200 hover:scale-[1.02] active:scale-95 shrink-0"
+                className="hidden sm:inline-flex btn-phone cursor-pointer items-center justify-center gap-2.5 h-[50px] text-base sm:text-lg font-extrabold px-6 rounded-xl shadow-xl transition-all duration-200 hover:scale-[1.02] active:scale-95 shrink-0"
                 id="hero-call-cta"
                 aria-label={ctaPrimary.text}
               >
@@ -130,7 +130,7 @@ export function HeroSection({
               <Link
                 href={ctaSecondary.href}
                 onClick={() => trackConsultationRequest('hero_secondary')}
-                className="btn-outline-white inline-flex items-center justify-center gap-2 h-[50px] text-sm sm:text-base font-bold px-6 rounded-xl backdrop-blur-md transition-all duration-200 hover:bg-white/15 shrink-0"
+                className="inline-flex items-center justify-center gap-2 h-[48px] sm:h-[50px] text-sm sm:text-base font-bold px-6 rounded-xl shadow-lg transition-all duration-200 bg-teal-accent text-navy hover:bg-teal-dark sm:bg-white/10 sm:text-white sm:border sm:border-white/20 sm:hover:bg-white/20 sm:backdrop-blur-md shrink-0"
                 id="hero-secondary-cta"
                 aria-label={ctaSecondary.text}
               >

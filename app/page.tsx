@@ -134,11 +134,11 @@ export default function HomePage() {
         badge="Perth Nurse-Led Home Care · Harrisdale Base"
         headline="Home Care & Nursing Care in Perth by a Dedicated Registered Nurse"
         subheadline={
-          <div className="space-y-2">
-            <p className="text-teal-accent text-base sm:text-lg font-bold tracking-tight">
+          <div className="space-y-1.5 sm:space-y-2">
+            <p className="text-teal-accent text-sm sm:text-lg font-bold tracking-tight">
               One Client. One Dedicated Nurse Coordinator. One Trusted Relationship.
             </p>
-            <p className="text-white/90 text-sm sm:text-base leading-relaxed">
+            <p className="text-white/90 text-xs sm:text-base leading-relaxed">
               Clinical in-home aged care, sterile wound dressings, and hospital discharge recovery across Perth. Every family is supported by a qualified AHPRA Registered Nurse coordinator — no call centres, and no rotating casual rosters.
             </p>
           </div>
