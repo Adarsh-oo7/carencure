@@ -131,15 +131,15 @@ export default function HomePage() {
       <FAQPageSchema faqs={homeFaqs.map(faq => ({ question: faq.question, answer: faq.answer }))} />
 
       <HeroSection
-        badge="The Nurse Who Knows You"
-        headline="Home Nursing Care in Perth by a Dedicated Registered Nurse"
+        badge="Perth's Trusted Nurse-Led Care"
+        headline="Home Care & Nursing Care in Perth by a Dedicated Registered Nurse"
         subheadline={
           <div className="space-y-2.5">
             <p className="text-teal-accent text-base sm:text-lg font-bold tracking-wide">
               One Client. One Dedicated Nurse Coordinator. One Trusted Relationship.
             </p>
             <p className="text-white/90 text-sm sm:text-base leading-relaxed">
-              Perth nurse-led in-home care for clinical recovery, wound dressings, and aged care support. A dedicated Registered Nurse coordinator and a small, familiar team — no rotating casual rosters.
+              Perth nurse-led in-home care for aged care support, clinical recovery, wound dressings, and medication management. A dedicated Registered Nurse coordinator and a small, familiar team — no rotating casual rosters.
             </p>
           </div>
         }
