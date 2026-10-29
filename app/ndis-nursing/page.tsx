@@ -10,32 +10,32 @@ import { getFundedPagesByHub } from '@/lib/funded-pages'
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'NDIS Nursing Perth | Registered NDIS Provider | In-Home Nurses | Care N Cure',
+    absolute: 'NDIS Nursing Perth | In-Home Clinical Nurses (Plan & Self-Managed) | Care N Cure',
   },
-  description: 'Registered NDIS provider in Perth for in-home nursing. AHPRA Registered Nurses for catheter care, PEG feeding, bowel care, wound care & insulin. Agency, Plan & Self-managed participants.',
+  description: 'Qualified in-home NDIS nursing care in Perth for Plan-Managed & Self-Managed participants. AHPRA Registered Nurses for catheter care, PEG feeding, complex wound care, bowel management & diabetes.',
   alternates: { canonical: 'https://carencure.com.au/ndis-nursing' },
 }
 
 const faqs = [
   {
     question: "Can I use my NDIS funding for Care N Cure nursing care in Perth?",
-    answer: "Yes. Nursing related to your disability is usually funded as a Disability-Related Health Support from your Core or Capacity Building budget. " + NDIS_STATUS_LINE,
+    answer: "Yes! If your NDIS plan is Plan-Managed or Self-Managed, you can engage Care N Cure for registered nurse clinical care under your Core or Capacity Building budgets. We invoice your Plan Manager directly with zero out-of-pocket expenses for you.",
   },
   {
-    question: "I'm Agency-managed (NDIA-managed). Can I use Care N Cure?",
-    answer: "Agency-managed participants can only use NDIS registered providers. " + NDIS_STATUS_LINE + " Every nurse on our team is also individually registered with AHPRA.",
+    question: "Do I need to be with an NDIS registered provider to hire an in-home nurse?",
+    answer: "No. Under NDIS choice-and-control rules, Plan-Managed and Self-Managed participants have full freedom to engage qualified independent nursing providers. Every nurse at Care N Cure is an AHPRA-registered nurse with extensive hospital and community clinical experience.",
   },
   {
     question: "What NDIS clinical nursing services does Care N Cure provide?",
-    answer: "Our AHPRA-registered nurses provide sterile wound care, urinary catheter management (SPC and indwelling), enteral (PEG) feeding management, tracheostomy care, subcutaneous injections, complex bowel care, diabetes management, and medication administration.",
+    answer: "Our AHPRA-registered nurses provide sterile wound care, suprapubic (SPC) and indwelling catheter management, enteral (PEG) tube feeding, complex bowel care, subcutaneous injections, diabetes management, and medication administration.",
   },
   {
-    question: "How does billing work for each plan type?",
-    answer: "Agency-managed: we claim through the NDIS portal under your service agreement. Plan-managed: we send itemised invoices to your plan manager. Self-managed: we give you a tax invoice to claim through the my NDIS portal. Prices stay at or below the current NDIS Pricing Arrangements and Price Limits.",
+    question: "How does billing work for Plan-Managed participants?",
+    answer: "We send itemised invoices directly to your NDIS Plan Manager under the official NDIS Pricing Arrangements and Price Limits. You do not have to pay out of pocket or manage paperwork.",
   },
   {
     question: "How quickly can NDIS nursing care start in Perth?",
-    answer: "Once a service agreement or care plan is finalized, we can initiate clinical assessments and home visits within 24 to 48 hours across all Perth metropolitan suburbs.",
+    answer: "Once a service agreement or care plan is finalized, we can initiate clinical assessments and in-home visits within 24 to 48 hours across all metropolitan Perth suburbs.",
   },
 ]
 
@@ -43,8 +43,8 @@ export default function NdisNursingPage() {
   return (
     <>
       <ServicePageSchema
-        serviceName="NDIS Nursing Perth | Registered NDIS Provider | In-Home Nurses | Care N Cure"
-        description="Registered NDIS provider in Perth for in-home nursing: catheter care, PEG feeding, bowel care, wound care and insulin management for Agency, Plan and Self-managed participants."
+        serviceName="NDIS Nursing Perth | In-Home Clinical Nurses (Plan & Self-Managed) | Care N Cure"
+        description="In-home NDIS nursing care in Perth for Plan-Managed & Self-Managed participants: catheter care, PEG feeding, bowel care, wound care and insulin management."
         url="/ndis-nursing"
         procedureType="NDIS Community Nursing Care"
         faqs={faqs}
@@ -56,13 +56,13 @@ export default function NdisNursingPage() {
       />
 
       <PageHeader
-        title="NDIS Nursing Care in Perth"
-        subtitle="In-home clinical nursing for NDIS participants from a registered NDIS provider — delivered by one dedicated AHPRA Registered Nurse."
+        title="NDIS Nursing Care in Perth (Plan & Self-Managed)"
+        subtitle="Specialised in-home clinical nursing for NDIS participants, delivered by dedicated AHPRA Registered Nurses across Greater Perth."
         breadcrumbItems={[
           { name: 'Services', href: '/services' },
           { name: 'NDIS Nursing Care', href: '/ndis-nursing' },
         ]}
-        label="Agency, Plan & Self-Managed NDIS Care"
+        label="Plan-Managed & Self-Managed NDIS Care"
       />
 
       {/* Answer-First Section */}
@@ -78,7 +78,7 @@ export default function NdisNursingPage() {
                 <div className="section-divider my-4" />
                 <div className="bg-teal-subtle/40 p-6 rounded-2xl border border-teal-border">
                   <p className="text-navy font-semibold text-lg leading-relaxed">
-                    Care N Cure provides <strong>NDIS nursing care in Perth</strong> as a <strong>registered NDIS provider</strong>, supporting <strong>Agency-managed, Plan-managed and Self-managed</strong> participants. Our AHPRA Registered Nurses deliver catheter care, PEG feeding, complex bowel care, wound and pressure care, insulin management and medication administration in your home — with one dedicated nurse for continuity and clinical safety.
+                    Care N Cure provides dedicated <strong>in-home NDIS nursing care in Perth</strong> for <strong>Plan-Managed</strong> and <strong>Self-Managed NDIS participants</strong>. Our team of qualified AHPRA Registered Nurses delivers sterile wound dressing, catheter management, medication administration, PEG feeding, and bowel care directly in your home. You get the clinical safety of a hospital-grade Registered Nurse with the comfort and dignity of staying in your own home.
                   </p>
                 </div>
               </div>
@@ -90,13 +90,9 @@ export default function NdisNursingPage() {
                   <span>How NDIS Funding Works With Care N Cure</span>
                 </div>
                 <p className="text-body text-sm leading-relaxed">
-                  {NDIS_STATUS_LINE} Every nurse on our team holds active <strong>AHPRA registration</strong> and hospital or community nursing experience.
+                  {NDIS_STATUS_LINE} Under NDIS guidelines, participants with <strong>Plan-Managed</strong> or <strong>Self-Managed</strong> funding have full choice and control to engage independent nursing services. Every nurse on our team holds active <strong>AHPRA registration</strong>.
                 </p>
-                <ul className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-xs font-semibold text-navy">
-                  <li className="flex items-center gap-2 bg-white p-3 rounded-xl border border-border">
-                    <CheckCircle2 className="w-4 h-4 text-teal-accent shrink-0" />
-                    <span>Agency-managed: claimed via the NDIS portal</span>
-                  </li>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs font-semibold text-navy">
                   <li className="flex items-center gap-2 bg-white p-3 rounded-xl border border-border">
                     <CheckCircle2 className="w-4 h-4 text-teal-accent shrink-0" />
                     <span>Plan-Managed: Direct billing to your plan manager</span>
@@ -212,7 +208,7 @@ export default function NdisNursingPage() {
             <div className="lg:col-span-5">
               <div className="sticky top-28 bg-surface p-6 rounded-2xl border border-border shadow-sm space-y-6">
                 <div className="space-y-2">
-                  <span className="px-3 py-1 bg-teal-subtle text-teal-text text-xs font-bold rounded-full uppercase tracking-wider">Registered NDIS Provider</span>
+                  <span className="px-3 py-1 bg-teal-subtle text-teal-text text-xs font-bold rounded-full uppercase tracking-wider">Plan & Self-Managed</span>
                   <h3 className="text-navy text-xl font-bold">Request NDIS Nursing Care</h3>
                   <p className="text-body text-sm">
                     Speak with an AHPRA Registered Nurse about your NDIS care requirements. We respond within 2 hours during business hours.

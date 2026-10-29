@@ -5,11 +5,13 @@
 // ============================================================
 
 export const NDIS_REGISTRATION = {
-  /** Confirmed by the business owner (Oct 2026). */
-  isRegistered: true,
-  /** NDIS Commission registration ID — add once supplied so pages can display it. */
+  /**
+   * Set to false until official NDIS Commission registration certificate
+   * and registration ID are confirmed. Care N Cure delivers clinical nursing
+   * for Plan-Managed and Self-Managed NDIS participants legally and compliantly.
+   */
+  isRegistered: false,
   registrationNumber: '',
-  /** Registration groups (e.g. "0114 Community Nursing Care") — add once supplied. */
   groups: [] as string[],
   registerUrl: 'https://www.ndiscommission.gov.au/provider-registration/find-registered-provider',
 }
@@ -25,6 +27,5 @@ export const AGED_CARE_REGISTRATION = {
   partnerExample: 'Trilogy Care',
 }
 
-export const NDIS_STATUS_LINE = NDIS_REGISTRATION.isRegistered
-  ? 'Care N Cure is a registered NDIS provider, so we can support Agency-managed (NDIA-managed), Plan-managed and Self-managed participants.'
-  : 'Care N Cure supports Plan-managed and Self-managed NDIS participants.'
+export const NDIS_STATUS_LINE =
+  'Care N Cure provides clinical nursing care for Plan-Managed and Self-Managed NDIS participants across Perth with AHPRA Registered Nurses. We invoice your Plan Manager directly at standard NDIS price limits with zero out-of-pocket hassle.'

@@ -42,9 +42,9 @@
 - GP liaison for prescription reviews, renewals, and adverse reaction prevention.
 - URL: https://carencure.com.au/medication-management
 
-### 6. NDIS Community Nursing (Registered NDIS Provider)
-- Registered NDIS provider supporting Agency-managed (NDIA-managed), Plan-managed, and Self-managed participants.
-- AHPRA Registered Nurses delivering complex disability clinical supports:
+### 6. NDIS Community Nursing (Plan & Self-Managed In-Home Care)
+- High-quality clinical nursing practice supporting Plan-Managed and Self-Managed NDIS participants across metropolitan Perth.
+- AHPRA Registered Nurses delivering complex disability clinical supports with direct billing to Plan Managers:
   - Catheter & continence care (suprapubic & indwelling): https://carencure.com.au/ndis-nursing/catheter-care
   - PEG & enteral feeding support: https://carencure.com.au/ndis-nursing/peg-feeding
   - Complex bowel care: https://carencure.com.au/ndis-nursing/bowel-care

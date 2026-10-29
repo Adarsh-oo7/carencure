@@ -54,9 +54,9 @@ export const fundedPages: LandingPage[] = [
   {
     slug: 'funding-guide',
     hub: 'ndis',
-    metaTitle: 'Using NDIS Funding for Nursing in Perth | Agency, Plan & Self-Managed | Care N Cure',
+    metaTitle: 'Using NDIS Funding for Nursing in Perth | Plan & Self-Managed Guide | Care N Cure',
     metaDescription:
-      'How NDIS participants in Perth use their plan for in-home Registered Nurse care: which budget, Agency vs Plan vs Self-managed, service agreements and what to ask your planner.',
+      'How Plan-Managed & Self-Managed NDIS participants in Perth use their plan for in-home Registered Nurse care: budgets, direct plan-manager billing, service agreements and clinical assessments.',
     label: 'NDIS Participant Guide',
     h1: 'How to Use Your NDIS Plan for In-Home Nursing in Perth',
     subtitle:
