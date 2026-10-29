@@ -76,12 +76,12 @@ export function HeroSection({
       />
 
       {/* ── Content Container ── */}
-      <div className="relative section-container pt-10 pb-20 sm:pt-16 sm:pb-24 z-10">
-        <div style={{ maxWidth: '580px' }} className="animate-fade-in">
+      <div className="relative section-container pt-12 pb-24 sm:pt-16 sm:pb-32 md:pt-20 md:pb-36 z-10">
+        <div style={{ maxWidth: '600px' }} className="animate-fade-in">
 
           {/* Credential Badge */}
           {badge && (
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-accent/15 border border-teal-accent/30 text-teal-accent text-xs font-bold tracking-wide uppercase mb-3 sm:mb-4 backdrop-blur-md shadow-sm">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-accent/20 border border-teal-accent/40 text-teal-accent text-xs font-bold tracking-wide uppercase mb-3 sm:mb-4 backdrop-blur-md shadow-sm">
               <span className="w-2 h-2 rounded-full bg-teal-accent animate-pulse" />
               <span>{badge}</span>
             </div>
@@ -90,12 +90,12 @@ export function HeroSection({
           {/* Main SEO H1 */}
           <h1
             id="hero-heading"
-            className="text-white mb-2.5 sm:mb-4 tracking-tight font-extrabold"
+            className="text-white mb-3 sm:mb-4 tracking-tight font-extrabold"
             itemProp="name"
             style={{
-              fontSize: 'clamp(1.45rem, 3.8vw, 2.75rem)',
+              fontSize: 'clamp(1.5rem, 3.2vw, 2.65rem)',
               lineHeight: 1.16,
-              textShadow: '0 2px 20px rgba(0,0,0,0.8)',
+              textShadow: '0 2px 20px rgba(0,0,0,0.85)',
             }}
           >
             {headline}
@@ -103,20 +103,20 @@ export function HeroSection({
 
           {/* Subheadline & Value Prop */}
           <div
-            className="mb-4 sm:mb-6 text-white/95 text-sm sm:text-lg leading-relaxed"
+            className="mb-5 sm:mb-6 text-white/95 text-sm sm:text-base md:text-lg leading-relaxed"
             itemProp="description"
             style={{ textShadow: '0 1px 8px rgba(0,0,0,0.7)' }}
           >
             {subheadline}
           </div>
 
-          {/* CTA Actions Group — Desktop shows both; Mobile shows single high-converting consultation action to eliminate phone button duplication */}
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+          {/* CTA Actions Group — Desktop shows both; Mobile shows single high-converting consultation action */}
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-5 sm:mb-7">
             {ctaPrimary && (
               <a
                 href={PHONE_HREF}
                 onClick={() => trackPhoneClick('hero_primary')}
-                className="hidden sm:inline-flex btn-phone cursor-pointer items-center justify-center gap-2.5 h-[50px] text-base sm:text-lg font-extrabold px-6 rounded-xl shadow-xl transition-all duration-200 hover:scale-[1.02] active:scale-95 shrink-0"
+                className="hidden! sm:inline-flex! btn-phone cursor-pointer items-center justify-center gap-2.5 h-[50px] text-base sm:text-lg font-extrabold px-6 rounded-xl shadow-xl transition-all duration-200 hover:scale-[1.02] active:scale-95 shrink-0"
                 id="hero-call-cta"
                 aria-label={ctaPrimary.text}
               >
@@ -130,31 +130,31 @@ export function HeroSection({
               <Link
                 href={ctaSecondary.href}
                 onClick={() => trackConsultationRequest('hero_secondary')}
-                className="inline-flex items-center justify-center gap-2 h-[48px] sm:h-[50px] text-sm sm:text-base font-bold px-6 rounded-xl shadow-lg transition-all duration-200 bg-teal-accent text-navy hover:bg-teal-dark sm:bg-white/10 sm:text-white sm:border sm:border-white/20 sm:hover:bg-white/20 sm:backdrop-blur-md shrink-0"
+                className="inline-flex items-center justify-center gap-2 h-[48px] sm:h-[50px] text-sm sm:text-base font-bold px-6 rounded-xl shadow-xl transition-all duration-200 bg-white text-navy hover:bg-teal-50 hover:shadow-2xl hover:scale-[1.02] active:scale-95 shrink-0 border-2 border-white cursor-pointer"
                 id="hero-secondary-cta"
                 aria-label={ctaSecondary.text}
               >
                 <span>{ctaSecondary.text}</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 text-navy shrink-0" />
               </Link>
             )}
           </div>
 
           {/* Reassurance Grid — Balanced 2x2 Grid with Full Legibility */}
-          <div className="grid grid-cols-2 gap-2 sm:gap-2.5 pt-4 border-t border-white/15 max-w-[540px]">
-            <div className="flex items-center gap-2 sm:gap-2.5 bg-white/10 backdrop-blur-md px-3 sm:px-3.5 py-2 sm:py-2.5 rounded-xl border border-white/15 text-white text-[11px] sm:text-xs font-semibold shadow-xs">
+          <div className="grid grid-cols-2 gap-2 sm:gap-2.5 pt-4 border-t border-white/20 max-w-[540px]">
+            <div className="flex items-center gap-2 sm:gap-2.5 bg-white/12 backdrop-blur-md px-3 sm:px-3.5 py-2.5 rounded-xl border border-white/20 text-white text-[11px] sm:text-xs font-semibold shadow-xs">
               <ShieldCheck className="w-4 h-4 text-teal-accent shrink-0" />
               <span className="truncate sm:overflow-visible">AHPRA Nurses</span>
             </div>
-            <div className="flex items-center gap-2 sm:gap-2.5 bg-white/10 backdrop-blur-md px-3 sm:px-3.5 py-2 sm:py-2.5 rounded-xl border border-white/15 text-white text-[11px] sm:text-xs font-semibold shadow-xs">
+            <div className="flex items-center gap-2 sm:gap-2.5 bg-white/12 backdrop-blur-md px-3 sm:px-3.5 py-2.5 rounded-xl border border-white/20 text-white text-[11px] sm:text-xs font-semibold shadow-xs">
               <UserCheck className="w-4 h-4 text-teal-accent shrink-0" />
               <span className="truncate sm:overflow-visible">Dedicated RN</span>
             </div>
-            <div className="flex items-center gap-2 sm:gap-2.5 bg-white/10 backdrop-blur-md px-3 sm:px-3.5 py-2 sm:py-2.5 rounded-xl border border-white/15 text-white text-[11px] sm:text-xs font-semibold shadow-xs">
+            <div className="flex items-center gap-2 sm:gap-2.5 bg-white/12 backdrop-blur-md px-3 sm:px-3.5 py-2.5 rounded-xl border border-white/20 text-white text-[11px] sm:text-xs font-semibold shadow-xs">
               <Clock className="w-4 h-4 text-teal-accent shrink-0" />
               <span className="truncate sm:overflow-visible">24–48h Intake</span>
             </div>
-            <div className="flex items-center gap-2 sm:gap-2.5 bg-white/10 backdrop-blur-md px-3 sm:px-3.5 py-2 sm:py-2.5 rounded-xl border border-white/15 text-white text-[11px] sm:text-xs font-semibold shadow-xs">
+            <div className="flex items-center gap-2 sm:gap-2.5 bg-white/12 backdrop-blur-md px-3 sm:px-3.5 py-2.5 rounded-xl border border-white/20 text-white text-[11px] sm:text-xs font-semibold shadow-xs">
               <MapPin className="w-4 h-4 text-teal-accent shrink-0" />
               <span className="truncate sm:overflow-visible">All Perth Suburbs</span>
             </div>
@@ -164,7 +164,7 @@ export function HeroSection({
       </div>
 
       {/* Bottom wave transition into page content */}
-      <div className="absolute bottom-0 left-0 right-0 pointer-events-none" aria-hidden="true">
+      <div className="absolute bottom-0 left-0 right-0 pointer-events-none z-0" aria-hidden="true">
         <svg
           viewBox="0 0 1440 48"
           fill="none"
