@@ -579,6 +579,10 @@ export async function generateMetadata({ params }: { params: Promise<{ suburb: s
     `aged care at home ${data.name.toLowerCase()}`,
     `carers for elderly ${data.name.toLowerCase()}`,
     `support at home ${data.name.toLowerCase()}`,
+    `home care packages ${data.name.toLowerCase()}`,
+    `ndis nursing ${data.name.toLowerCase()}`,
+    `ndis nurse ${data.name.toLowerCase()}`,
+    `disability care ${data.name.toLowerCase()}`,
     `home nurse ${data.name.toLowerCase()}`,
     `at home nurse ${data.name.toLowerCase()}`,
     `at home nurse near me`,
@@ -842,6 +846,90 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
                 </div>
               </div>
 
+              {/* Government-Funded Care Section: Support at Home & NDIS */}
+              <div className="space-y-6 pt-4 border-t border-border">
+                <div className="flex items-center gap-2 text-teal-accent font-bold text-xs uppercase tracking-wider">
+                  <ShieldCheck className="w-4 h-4" />
+                  <span>Government Funding Options in {data.name}</span>
+                </div>
+                <h2 className="text-navy text-2xl font-bold">
+                  Government-Funded Care in {data.name}: Support at Home & NDIS
+                </h2>
+                <p className="text-body leading-relaxed text-sm">
+                  Navigating government health funding can feel confusing. At Care N Cure, we work with families across {data.name} and surrounding {data.surroundingSuburbs} to maximize their approved budgets without administrative friction or revolving agency rosters.
+                </p>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {/* Support at Home Card */}
+                  <div className="bg-surface p-5 rounded-2xl border border-border space-y-3">
+                    <span className="inline-block px-3 py-1 bg-teal-subtle text-teal-text text-xs font-bold rounded-full uppercase tracking-wider">
+                      Aged Care (65+)
+                    </span>
+                    <h3 className="text-navy font-bold text-lg">Support at Home in {data.name}</h3>
+                    <p className="text-body text-xs leading-relaxed">
+                      Under the Australian Government Support at Home program, <strong>clinical nursing has $0 client contribution</strong>. If you or your parent in {data.name} holds an approved package or self-manages through a partner like Trilogy Care, our Registered Nurses deliver clinical care at no out-of-pocket cost to you.
+                    </p>
+                    <ul className="text-xs text-body space-y-1.5 pt-1">
+                      <li className="flex items-center gap-1.5 font-medium text-navy">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-teal-accent shrink-0" />
+                        <span>Wound care & sterile dressing routines</span>
+                      </li>
+                      <li className="flex items-center gap-1.5 font-medium text-navy">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-teal-accent shrink-0" />
+                        <span>Medication management & vitals tracking</span>
+                      </li>
+                    </ul>
+                    <div className="pt-2">
+                      <Link
+                        href="/support-at-home/clinical-nursing"
+                        className="inline-flex items-center gap-1 text-xs font-bold text-teal-text hover:underline"
+                      >
+                        Learn about Support at Home clinical nursing →
+                      </Link>
+                    </div>
+                  </div>
+
+                  {/* NDIS Card */}
+                  <div className="bg-surface p-5 rounded-2xl border border-border space-y-3">
+                    <span className="inline-block px-3 py-1 bg-teal-subtle text-teal-text text-xs font-bold rounded-full uppercase tracking-wider">
+                      NDIS Participants
+                    </span>
+                    <h3 className="text-navy font-bold text-lg">NDIS Nursing Care in {data.name}</h3>
+                    <p className="text-body text-xs leading-relaxed">
+                      For <strong>Plan-Managed and Self-Managed</strong> NDIS participants living in {data.name}, our AHPRA Registered Nurses deliver complex disability clinical supports in the comfort of your home. We invoice your Plan Manager directly under standard NDIS price limits with zero out-of-pocket costs.
+                    </p>
+                    <ul className="text-xs text-body space-y-1.5 pt-1">
+                      <li className="flex items-center gap-1.5 font-medium text-navy">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-teal-accent shrink-0" />
+                        <span>Catheter care (suprapubic & indwelling)</span>
+                      </li>
+                      <li className="flex items-center gap-1.5 font-medium text-navy">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-teal-accent shrink-0" />
+                        <span>PEG & enteral feeding, bowel care & insulin</span>
+                      </li>
+                    </ul>
+                    <div className="pt-2">
+                      <Link
+                        href="/ndis-nursing/funding-guide"
+                        className="inline-flex items-center gap-1 text-xs font-bold text-teal-text hover:underline"
+                      >
+                        Read the NDIS nursing participant guide →
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-teal-50/70 p-4 rounded-xl border border-teal-100 flex items-start gap-3 text-xs text-navy">
+                  <ShieldCheck className="w-5 h-5 text-teal-accent shrink-0 mt-0.5" />
+                  <div>
+                    <p className="font-bold">Zero Travel Surcharge Across {data.name}</p>
+                    <p className="text-body text-xs mt-0.5">
+                      Dispatched from our Harrisdale base (15 Rockefeller Way), we guarantee $0 travel surcharges for scheduled in-home nurse visits across {data.name} and surrounding suburbs within 50km.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
               <div className="space-y-4">
                 <h3 className="text-navy text-2xl font-bold">Why choose us in {data.name}?</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -902,6 +990,24 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-body">
                   <div className="flex items-center gap-2">
                     <HeartPulse className="w-4 h-4 text-teal-text flex-shrink-0" />
+                    <Link href="/support-at-home/clinical-nursing" className="hover:text-teal-text transition-colors font-medium">
+                      Support at Home Clinical Nursing
+                    </Link>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <HeartPulse className="w-4 h-4 text-teal-text flex-shrink-0" />
+                    <Link href="/ndis-nursing" className="hover:text-teal-text transition-colors font-medium">
+                      NDIS Nursing (Plan & Self-Managed)
+                    </Link>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <HeartPulse className="w-4 h-4 text-teal-text flex-shrink-0" />
+                    <Link href="/support-at-home/self-managed" className="hover:text-teal-text transition-colors font-medium">
+                      Self-Managed Home Care Packages
+                    </Link>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <HeartPulse className="w-4 h-4 text-teal-text flex-shrink-0" />
                     <Link href="/post-hospital-care" className="hover:text-teal-text transition-colors font-medium">
                       Post-Hospital Recovery Care
                     </Link>
@@ -914,26 +1020,20 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
                   </div>
                   <div className="flex items-center gap-2">
                     <HeartPulse className="w-4 h-4 text-teal-text flex-shrink-0" />
-                    <Link href="/registered-nurses-clinical-care-services" className="hover:text-teal-text transition-colors font-medium">
-                      Registered Nurses Clinical care Services
-                    </Link>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <HeartPulse className="w-4 h-4 text-teal-text flex-shrink-0" />
                     <Link href="/wound-care" className="hover:text-teal-text transition-colors font-medium">
                       Sterile Wound Dressings
                     </Link>
                   </div>
                   <div className="flex items-center gap-2">
                     <HeartPulse className="w-4 h-4 text-teal-text flex-shrink-0" />
-                    <Link href="/medication-management" className="hover:text-teal-text transition-colors font-medium">
-                      Injections & Vitals Monitoring
+                    <Link href="/ndis-nursing/catheter-care" className="hover:text-teal-text transition-colors font-medium">
+                      Catheter & Continence Care
                     </Link>
                   </div>
                   <div className="flex items-center gap-2">
                     <HeartPulse className="w-4 h-4 text-teal-text flex-shrink-0" />
                     <Link href="/medication-management" className="hover:text-teal-text transition-colors font-medium">
-                      Medication Management
+                      Medication Management & Injections
                     </Link>
                   </div>
                   <div className="flex items-center gap-2">

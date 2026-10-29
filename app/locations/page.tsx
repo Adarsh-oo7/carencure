@@ -130,6 +130,28 @@ export default function LocationsPage() {
         </div>
       </section>
 
+      {/* Government Funding Banner across all locations */}
+      <section className="bg-teal-subtle/50 py-5 border-b border-teal-border">
+        <div className="section-container">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-navy">
+            <div className="flex items-start gap-3 bg-white p-4 rounded-xl border border-border">
+              <span className="p-2 bg-teal-subtle text-teal-text rounded-lg font-bold shrink-0">Aged Care</span>
+              <div>
+                <p className="font-bold text-sm">Support at Home (Formerly Home Care Packages)</p>
+                <p className="text-body mt-0.5">Clinical nursing has $0 client contribution under Support at Home. We deliver clinical care across all Perth suburbs through partner providers like Trilogy Care and self-managed arrangements.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3 bg-white p-4 rounded-xl border border-border">
+              <span className="p-2 bg-teal-subtle text-teal-text rounded-lg font-bold shrink-0">NDIS Care</span>
+              <div>
+                <p className="font-bold text-sm">In-Home NDIS Nursing (Plan & Self-Managed)</p>
+                <p className="text-body mt-0.5">AHPRA Registered Nurses for catheter care, PEG feeding, complex wound dressings and medication management with direct billing to your Plan Manager.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Priority Tier 1: Home-Base South-East Corridor */}
       <section className="section-py bg-white">
         <div className="section-container">
