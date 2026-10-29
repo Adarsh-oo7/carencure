@@ -84,9 +84,9 @@ export function DedicatedNurseSection() {
           {/* Right: Duties checklist */}
           <div className="bg-white rounded-3xl p-8 sm:p-10 shadow-sm border border-slate-100 flex flex-col justify-between">
             <div>
-              <h3 className="text-navy font-bold text-xl sm:text-2xl mb-6">
+              <p className="text-navy font-bold text-xl sm:text-2xl mb-6">
                 Your dedicated Nurse Coordinator:
-              </h3>
+              </p>
               <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4">
                 {checklistItems.map((item, i) => (
                   <li key={i} className="flex items-start gap-3">

@@ -5,7 +5,7 @@ const fundingCards = [
   {
     id: 'funded-hcp',
     icon: Home,
-    title: 'Home Care Packages (HCP)',
+    title: 'Government Home Care Packages (HCP)',
     subtitle: 'Levels 1–4 · Government Funded',
     body: 'For older Australians needing ongoing support at home. Your HCP funds nursing visits, wound care, and clinical oversight. We work with self-managed and provider-managed packages.',
     badge: 'My Aged Care · myagedcare.gov.au',

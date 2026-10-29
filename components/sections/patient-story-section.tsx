@@ -44,9 +44,9 @@ export function PatientStorySection() {
         {/* Transition statement & Better way card */}
         <div className="max-w-4xl mx-auto mt-16 grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
           <div className="lg:col-span-2 space-y-4">
-            <h3 className="text-navy font-bold text-2xl">
+            <p className="text-navy font-bold text-2xl leading-snug">
               If this sounds familiar, you are not alone.
-            </h3>
+            </p>
             <p className="text-body text-base leading-relaxed">
               Many Australian families feel they are coordinating care themselves instead of receiving care.
             </p>
@@ -62,9 +62,9 @@ export function PatientStorySection() {
             <p className="text-teal-300 text-sm font-semibold uppercase tracking-widest mb-3">
               There Is A Better Way
             </p>
-            <h3 className="text-white font-bold text-2xl mb-4">
+            <p className="text-white font-bold text-2xl mb-4 leading-snug">
               At The Nurse Who Knows You, we do home care differently.
-            </h3>
+            </p>
             <p className="text-white/90 mb-6 leading-relaxed">
               Every client is assigned a dedicated Nurse Coordinator who becomes your consistent, trusted point of contact.
             </p>

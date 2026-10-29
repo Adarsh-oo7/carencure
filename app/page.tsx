@@ -18,10 +18,10 @@ import { CtaUncertaintyReducer } from '@/components/sections/cta-uncertainty-red
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Home Care & Nursing Perth | Aged Care at Home | Care N Cure',
+    absolute: 'Home Nursing Perth | Aged Care Support & Dedicated RNs | Care N Cure',
   },
   description:
-    'Local nurse-led home care for elderly parents across Perth. Registered Nurse visits for wound care, medication & hospital recovery. Private or Support at Home. Assessment in 24–48h.',
+    'Perth nurse-led home care & clinical visits for seniors. AHPRA Registered Nurses for wound care, medication & recovery. Private or Support at Home.',
   keywords: [
     'home nurse perth',
     'care n cure nursing care services',
@@ -43,9 +43,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: 'https://carencure.com.au' },
   openGraph: {
-    title: 'Home Care & Nursing Perth | Aged Care at Home | Care N Cure',
+    title: 'Home Nursing Perth | Aged Care Support & Dedicated RNs | Care N Cure',
     description:
-      'Local nurse-led home care for elderly parents across Perth. Registered Nurse visits for wound care, medication & hospital recovery. Private or Support at Home. Assessment in 24–48h.',
+      'Perth nurse-led home care & clinical visits for seniors. AHPRA Registered Nurses for wound care, medication & recovery. Private or Support at Home.',
     url: 'https://carencure.com.au',
     type: 'website',
     siteName: 'Care N Cure Nursing Care Services',
@@ -53,8 +53,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Home Care & Nursing Perth | Aged Care at Home | Care N Cure',
-    description: 'Local nurse-led home care for elderly parents across Perth. Registered Nurse visits, private or Support at Home. Assessment in 24–48h.',
+    title: 'Home Nursing Perth | Aged Care Support & Dedicated RNs | Care N Cure',
+    description:
+      'Perth nurse-led home care & clinical visits for seniors. AHPRA Registered Nurses for wound care, medication & recovery. Private or Support at Home.',
   },
 }
 

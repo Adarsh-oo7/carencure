@@ -52,7 +52,7 @@ export function Footer() {
 
           {/* Services + Key Pages */}
           <div>
-            <h4 className="font-semibold text-white text-base mb-4">Our Services</h4>
+            <p className="font-semibold text-white text-base mb-4">Our Services</p>
             <ul className="space-y-2.5">
               {[
                 { label: 'Aged Care at Home Perth', href: '/aged-care-at-home-perth' },
@@ -87,7 +87,7 @@ export function Footer() {
 
           {/* Locations */}
           <div>
-            <h4 className="font-semibold text-white text-base mb-4">Perth Locations</h4>
+            <p className="font-semibold text-white text-base mb-4">Perth Locations</p>
             <div className="grid grid-cols-2 gap-x-4 gap-y-2.5">
               {[
                 { label: 'Harrisdale (HQ)', href: '/locations/harrisdale' },
@@ -130,7 +130,7 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-semibold text-white text-base mb-4">Contact Us</h4>
+            <p className="font-semibold text-white text-base mb-4">Contact Us</p>
             <div className="space-y-4 text-sm">
               <div className="flex items-start gap-2.5">
                 <Phone className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: 'var(--teal-accent)' }} />

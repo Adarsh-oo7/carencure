@@ -142,11 +142,10 @@ export function ServicesGrid() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {services.map(({ id, icon: Icon, title, description, href, colour, iconColour }) => (
-            <Link
+            <div
               key={id}
-              href={href}
               id={id}
-              className="card-base p-7 service-card flex flex-col justify-between group hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-teal-border"
+              className="card-base p-7 service-card flex flex-col justify-between group hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-teal-border relative"
             >
               <div className="flex flex-col gap-4">
                 <div
@@ -156,7 +155,11 @@ export function ServicesGrid() {
                   <Icon className="w-6 h-6" style={{ color: iconColour }} />
                 </div>
                 <div>
-                  <h3 className="text-navy mb-2 font-bold text-lg leading-tight">{title}</h3>
+                  <h3 className="text-navy mb-2 font-bold text-lg leading-tight">
+                    <Link href={href} className="before:absolute before:inset-0 hover:text-teal-text transition-colors">
+                      {title}
+                    </Link>
+                  </h3>
                   <p className="text-body text-sm leading-relaxed">{description}</p>
                 </div>
               </div>
@@ -166,7 +169,7 @@ export function ServicesGrid() {
                 <span>Learn more</span>
                 <ArrowRight className="w-4 h-4" />
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </div>

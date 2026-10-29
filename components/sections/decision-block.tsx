@@ -73,7 +73,7 @@ const options: DecisionOption[] = [
   },
   {
     title: 'Personal care & daily routine support',
-    description: 'Gentle, respectful showering, grooming, dressing, and hygiene support supervised by Registered Nurse coordinators.',
+    description: 'Dignified daily routine assistance, showering, and morning care overseen by an AHPRA Registered Nurse coordinator.',
     href: '/personal-care',
     icon: UserCheck,
     badge: 'Personal Care',
@@ -112,9 +112,8 @@ export function DecisionBlock() {
           {options.map((opt) => {
             const Icon = opt.icon
             return (
-              <Link
+              <div
                 key={opt.href}
-                href={opt.href}
                 className="card-base p-6 flex flex-col justify-between hover:border-teal-accent hover:shadow-md transition-all group bg-white relative"
               >
                 <div>
@@ -126,18 +125,23 @@ export function DecisionBlock() {
                       {opt.badge}
                     </span>
                   </div>
-                  <h3 className="text-navy font-bold text-lg mb-2 group-hover:text-teal-text transition-colors">
-                    {opt.title}
+                  <h3 className="text-navy font-bold text-lg mb-2">
+                    <Link
+                      href={opt.href}
+                      className="before:absolute before:inset-0 hover:text-teal-text transition-colors"
+                    >
+                      {opt.title}
+                    </Link>
                   </h3>
                   <p className="text-body text-sm leading-relaxed mb-4">
                     {opt.description}
                   </p>
                 </div>
                 <div className="inline-flex items-center gap-1.5 text-xs font-bold text-navy group-hover:text-teal-text pt-3 border-t border-border/50">
-                  Explore Care Options
+                  <span>Explore Care Options</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>
-              </Link>
+              </div>
             )
           })}
         </div>
