@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next'
+import { fundedPages, hubPath } from '@/lib/funded-pages'
 
 export const dynamic = 'force-static'
 
@@ -262,5 +263,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  return [...staticPages, ...suburbPages, ...blogPages]
+  const fundedLandingPages: MetadataRoute.Sitemap = fundedPages.map((p) => ({
+    url: `${BASE_URL}${hubPath(p.hub)}/${p.slug}`,
+    lastModified: NOW,
+    changeFrequency: 'monthly' as const,
+    priority: 0.85,
+  }))
+
+  return [...staticPages, ...fundedLandingPages, ...suburbPages, ...blogPages]
 }

@@ -4,7 +4,9 @@ import { PageHeader } from '@/components/page-header'
 import { CTASection } from '@/components/sections/cta'
 import { ServicePageSchema, FAQPageSchema } from '@/components/schema'
 import { ContactForm } from '@/components/contact-form'
-import { HeartHandshake, ShieldCheck, Home, Car, CheckCircle } from 'lucide-react'
+import { HeartHandshake, ShieldCheck, Home, Car, CheckCircle, ArrowRight } from 'lucide-react'
+import { getFundedPagesByHub } from '@/lib/funded-pages'
+import { AGED_CARE_REGISTRATION } from '@/lib/registration'
 
 export const metadata: Metadata = {
   title: {
@@ -26,8 +28,12 @@ const faqs = [
     answer: "Yes, through My Aged Care. We can guide you through this process at no cost, or support you if you're already assessed and looking for a new provider.",
   },
   {
-    question: "What makes Care N Cure's Support at Home different?",
-    answer: "Every client gets a dedicated Nurse Coordinator, not just a rotating support worker roster. Clinical oversight is built into every package, not an optional extra.",
+    question: "Is Care N Cure a registered Support at Home provider?",
+    answer: `No. We deliver nursing and nurse-led care as an associated provider (subcontractor) through your registered Support at Home provider — for example ${AGED_CARE_REGISTRATION.partnerExample} — or privately. Your registered provider holds your agreement and budget; we provide a dedicated Registered Nurse.`,
+  },
+  {
+    question: "What makes Care N Cure's Support at Home nursing different?",
+    answer: "Every client gets a dedicated Registered Nurse rather than a rotating roster. Clinical supports such as nursing also have no client contribution under Support at Home.",
   },
   {
     question: "Can I use Support at Home funding alongside private nursing?",
@@ -87,7 +93,7 @@ export default function SupportAtHome() {
                   Support at Home is the Australian Government's home care program (replacing the old <Link href="/homecare-packages" className="text-teal-text hover:underline font-semibold">Home Care Packages</Link> system) for older Australians who want to stay independent at home rather than move into residential aged care. It funds a mix of personal care, domestic assistance, social support, and — where Care N Cure is involved — nurse-led clinical oversight on top of the everyday support.
                 </p>
                 <p className="text-body leading-relaxed">
-                  This is where we differ from most Support at Home providers: your support isn't just a roster of support workers ticking off tasks. It's coordinated by a Registered Nurse who checks in, monitors changes in health, and flags concerns before they become hospital visits. We provide clinical guidance and home care visits throughout the metropolitan area, including <Link href="/locations/canning-vale" className="text-teal-text hover:underline font-semibold">Canning Vale</Link> and <Link href="/locations/gosnells" className="text-teal-text hover:underline font-semibold">Gosnells</Link>.
+                  This is where Care N Cure helps: through your registered provider, we add a dedicated Registered Nurse who checks in, monitors changes in health, and flags concerns before they become hospital visits. We are not a registered Support at Home provider ourselves — we work as an associated provider for registered providers such as {AGED_CARE_REGISTRATION.partnerExample}, or privately. We provide clinical guidance and home care visits throughout the metropolitan area, including <Link href="/locations/canning-vale" className="text-teal-text hover:underline font-semibold">Canning Vale</Link> and <Link href="/locations/gosnells" className="text-teal-text hover:underline font-semibold">Gosnells</Link>.
                 </p>
                 <div className="bg-surface p-6 rounded-2xl border border-border">
                   <p className="text-navy font-bold mb-2">Support at Home typically covers:</p>
@@ -154,6 +160,22 @@ export default function SupportAtHome() {
                       <p className="text-body text-sm">Giving primary family members and carers a regular break, knowing their loved one is in safe hands.</p>
                     </div>
                   </div>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-navy text-2xl font-bold">Support at Home Guides</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {getFundedPagesByHub('sah').map((p) => (
+                    <Link
+                      key={p.slug}
+                      href={`/support-at-home/${p.slug}`}
+                      className="card-base p-4 flex items-center gap-2 text-sm font-semibold text-navy hover:text-teal-accent transition-colors"
+                    >
+                      <ArrowRight className="w-4 h-4 text-teal-accent shrink-0" />
+                      {p.metaTitle.split(' | ')[0]}
+                    </Link>
+                  ))}
                 </div>
               </div>
 
