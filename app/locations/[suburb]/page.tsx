@@ -18,7 +18,7 @@ interface SuburbData {
   surroundingSuburbs: string
   localHealthcareFocus: string
   localSpecificText?: string
-  /** Approximate drive time from the Harrisdale base — only for nearby suburbs */
+  /** Approximate drive time from the Gosnells headquarters — only for nearby suburbs */
   fromBase?: string
 }
 
@@ -72,14 +72,14 @@ const suburbsMap: Record<string, SuburbData> = {
   },
   gosnells: {
     id: 'gosnells',
-    name: 'City of Gosnells',
+    name: 'Gosnells',
     region: 'Perth South-East',
-    nearestHospital: 'Armadale Kelmscott Memorial Hospital',
-    description: 'Providing in-home nursing care, wound management, medication support, and post-hospital recovery across the City of Gosnells, including Gosnells, Maddington, Kenwick, and Thornlie.',
-    surroundingSuburbs: 'Maddington, Kenwick, Thornlie, and Huntingdale',
-    localHealthcareFocus: 'chronic illness monitoring, post-hospital transition care, and home nursing',
-    localSpecificText: 'Our registered nurses provide home nursing services across Gosnells, Maddington, Kenwick, and Thornlie. For clients returning home from facilities like Armadale Kelmscott Memorial Hospital, we accept referrals from discharge teams and work alongside local GPs to support continuous recovery at home within 24–48 hours.',
-    fromBase: 'approx. 10–15 minutes',
+    nearestHospital: 'Armadale Kelmscott Memorial Hospital & Fiona Stanley Hospital',
+    description: 'Care N Cure headquarters & clinical practice at 2232B Albany Hwy, Gosnells WA 6110. Rapid in-home registered nurse visits, complex wound care, aged care at home, medication management, and NDIS clinical nursing with immediate same-day/24-hour intake across Gosnells, Maddington, Kenwick, Thornlie, Southern River, and all Perth metro suburbs.',
+    surroundingSuburbs: 'Maddington, Kenwick, Thornlie, Huntingdale, and Southern River',
+    localHealthcareFocus: 'practice headquarters, in-home aged care, sterile wound dressings, subcutaneous injections, catheter care, and Armadale Hospital discharge coordination',
+    localSpecificText: 'Care N Cure is proudly headquartered at 2232B Albany Hwy, Gosnells WA 6110. As our central clinical base in South-East Perth, Gosnells and City of Gosnells residents receive priority same-day and 24-hour clinical nurse intake with $0 travel surcharges. Our AHPRA Registered Nurses deliver sterile wound dressing changes, chronic disease management, insulin/subcutaneous injections, catheter care, and coordinated Support at Home / HCP care. We work directly with local medical centres along Albany Highway, Corfield Doctors Surgery, Gosnells Healthcare Centre, and hospital discharge coordinators from Armadale Kelmscott Memorial Hospital and Fiona Stanley Hospital to ensure safe, dignified clinical recovery at home.',
+    fromBase: 'Practice Headquarters & Clinic Hub',
   },
   armadale: {
     id: 'armadale',
@@ -89,8 +89,8 @@ const suburbsMap: Record<string, SuburbData> = {
     description: 'Professional in-home nursing care, community nursing, and aged care at home across Armadale, Kelmscott, Seville Grove, Mount Nasura, Mount Richon, Roleystone, Bedfordale, Wungong, and Champion Lakes.',
     surroundingSuburbs: 'Kelmscott, Seville Grove, Mount Nasura, Mount Richon, and Roleystone',
     localHealthcareFocus: 'post-hospital recovery, sterile wound dressings, medication safety, and community nursing',
-    localSpecificText: 'Care N Cure delivers dedicated in-home registered nursing care across Armadale and surrounding south-east Perth suburbs. Operating from our Harrisdale base, our registered nurses visit clients across Armadale, Kelmscott, Seville Grove, and nearby suburbs. We accept referrals from hospital discharge planners, GPs, and families, providing structured in-home clinical assessments within 24 to 48 hours of enquiry.',
-    fromBase: 'approx. 15 minutes',
+    localSpecificText: 'Care N Cure delivers dedicated in-home registered nursing care across Armadale and surrounding south-east Perth suburbs. Operating from our Gosnells headquarters (2232B Albany Hwy), our registered nurses visit clients across Armadale, Kelmscott, Seville Grove, and nearby suburbs. We accept referrals from hospital discharge planners, GPs, and families, providing structured in-home clinical assessments within 24 to 48 hours of enquiry.',
+    fromBase: 'approx. 12 minutes',
   },
   rockingham: {
     id: 'rockingham',
@@ -358,10 +358,11 @@ const suburbsMap: Record<string, SuburbData> = {
     name: 'Harrisdale',
     region: 'Perth South-East',
     nearestHospital: 'Armadale Health Service & Fiona Stanley Hospital',
-    description: 'Care N Cure is proudly based in Harrisdale at 15 Rockefeller Way. We provide rapid in-home registered nurse visits, complex wound care, medication management, and aged care nursing across Harrisdale, Piara Waters, and Southern River.',
+    description: 'Care N Cure provides rapid in-home registered nurse visits, complex wound care, medication management, and aged care nursing across Harrisdale, Piara Waters, and Southern River.',
     surroundingSuburbs: 'Piara Waters, Southern River, and Canning Vale',
     localHealthcareFocus: 'dedicated nurse coordination, elderly home care, sterile wound management, and rapid intake assessments',
-    localSpecificText: 'Harrisdale is Care N Cure\'s home base. Located right here on Rockefeller Way, our Registered Nurses provide immediate local availability with priority 24-hour intake response, zero travel charges, and continuous, familiar clinical care for Harrisdale families.',
+    localSpecificText: 'Harrisdale is in our primary immediate service corridor. Our Registered Nurses provide immediate local availability with priority 24-hour intake response, zero travel charges, and continuous, familiar clinical care for Harrisdale families, coordinating directly with Armadale Health Service and local GPs.',
+    fromBase: 'approx. 10 minutes',
   },
   byford: {
     id: 'byford',
@@ -404,7 +405,7 @@ const suburbsMap: Record<string, SuburbData> = {
     description: 'Local aged care at home and community nursing in Southern River, Huntingdale, and Harrisdale. Registered nurse visits for seniors, wound care, medication checks, and post-hospital recovery.',
     surroundingSuburbs: 'Harrisdale, Huntingdale, and Gosnells',
     localHealthcareFocus: 'aged care at home, medication safety, chronic condition monitoring, and family respite',
-    localSpecificText: 'Southern River borders our Harrisdale base, so our Registered Nurses are genuinely local — not driving in from across the city. Many Southern River families care for parents who have moved in with them or live nearby; we provide reliable nurse visits, medication oversight, and wound care so family carers get real support and peace of mind.',
+    localSpecificText: 'Southern River is minutes from our Gosnells headquarters, so our Registered Nurses are genuinely local — not driving in from across the city. Many Southern River families care for parents who have moved in with them or live nearby; we provide reliable nurse visits, medication oversight, and wound care so family carers get real support and peace of mind.',
     fromBase: 'approx. 5–10 minutes',
   },
   forrestdale: {
@@ -415,8 +416,8 @@ const suburbsMap: Record<string, SuburbData> = {
     description: 'In-home aged care and registered nurse visits in Forrestdale, Hilbert, and Piara Waters. Wound dressings, medication management, and elderly health monitoring close to home.',
     surroundingSuburbs: 'Piara Waters, Harrisdale, and Hilbert',
     localHealthcareFocus: 'elderly home nursing, wound care, and medication reconciliation',
-    localSpecificText: 'Forrestdale is right next door to our Harrisdale base. For semi-rural properties where larger providers struggle to roster consistent staff, Care N Cure provides the same dedicated Registered Nurse every visit, coordinating with Armadale Health Service and your local GP.',
-    fromBase: 'approx. 5–10 minutes',
+    localSpecificText: 'Forrestdale is just minutes from our Gosnells headquarters. For semi-rural properties where larger providers struggle to roster consistent staff, Care N Cure provides the same dedicated Registered Nurse every visit, coordinating with Armadale Health Service and your local GP.',
+    fromBase: 'approx. 10–12 minutes',
   },
   willetton: {
     id: 'willetton',
@@ -504,21 +505,24 @@ export async function generateMetadata({ params }: { params: Promise<{ suburb: s
   let pageTitle = `Aged Care & Home Nurse ${data.name} WA | In-Home Care | Care N Cure`
   let pageDesc = `Local aged care at home & community nursing in ${data.name}, Perth. Dedicated Registered Nurse coordinator. Private or Support at Home. No referral. Call 1300 919 663.`
 
-  if (suburb === 'armadale') {
+  if (suburb === 'gosnells') {
+    pageTitle = 'Home Nurse Gosnells WA | Practice Headquarters & In-Home Aged Care | Care N Cure'
+    pageDesc = 'Care N Cure headquarters at 2232B Albany Hwy, Gosnells. Rapid in-home registered nurse visits, sterile wound care, injections, NDIS & aged care at home. Call 1300 919 663.'
+  } else if (suburb === 'armadale') {
     pageTitle = 'At Home Nurse Armadale | In-Home Aged Care & Nursing | Care N Cure'
     pageDesc = 'AHPRA registered nurses providing at-home nursing care in Armadale & south-east Perth. Wound care, aged care in-home support, post-hospital recovery. Call 1300 919 663.'
   } else if (suburb === 'canning-vale') {
     pageTitle = 'Aged Care Canning Vale & Community Nursing Care | Care N Cure Perth'
-    pageDesc = 'Aged care in-home support & community nursing in Canning Vale, WA. Sterile wound dressings, medication & Support at Home by AHPRA RNs. 10 mins from Harrisdale HQ. Call 1300 919 663.'
+    pageDesc = 'Aged care in-home support & community nursing in Canning Vale, WA. Sterile wound dressings, medication & Support at Home by AHPRA RNs. 10 mins from Gosnells HQ. Call 1300 919 663.'
   } else if (suburb === 'harrisdale') {
-    pageTitle = 'Aged Care & Home Nurse Harrisdale WA | Head Office & Local Intake | Care N Cure'
-    pageDesc = 'Care N Cure headquarters at 15 Rockefeller Way, Harrisdale. Same-day nurse intake, sterile wound care & aged care at home with a dedicated RN coordinator. Call 1300 919 663.'
+    pageTitle = 'Aged Care & Home Nurse Harrisdale WA | In-Home Clinical Care | Care N Cure'
+    pageDesc = 'In-home registered nurse visits & aged care in Harrisdale WA. Same-day nurse intake, sterile wound care & aged care with a dedicated RN coordinator. Call 1300 919 663.'
   } else if (suburb === 'southern-river') {
     pageTitle = 'Aged Care at Home Southern River WA | Registered Nurse Home Visits | Care N Cure'
-    pageDesc = 'Local aged care at home & clinical nursing in Southern River. Minutes from Harrisdale HQ. Sterile wound dressings, post-hospital recovery & senior support. Call 1300 919 663.'
+    pageDesc = 'Local aged care at home & clinical nursing in Southern River. Minutes from Gosnells HQ. Sterile wound dressings, post-hospital recovery & senior support. Call 1300 919 663.'
   } else if (suburb === 'piara-waters') {
     pageTitle = 'Home Nurse & Aged Care Piara Waters WA | In-Home Clinical Care | Care N Cure'
-    pageDesc = 'Local registered nurse home visits in Piara Waters WA. 5 minutes from our Harrisdale base. Chronic illness monitoring, wound care & aged care support. Call 1300 919 663.'
+    pageDesc = 'Local registered nurse home visits in Piara Waters WA. Minutes from our Gosnells headquarters. Chronic illness monitoring, wound care & aged care support. Call 1300 919 663.'
   } else if (suburb === 'thornlie') {
     pageTitle = 'Community Nursing Care Thornlie & Aged Care at Home WA | Care N Cure'
     pageDesc = 'Community nursing care & aged care in Thornlie, Langford & Crestwood. Sterile wound dressings, subcutaneous injections & senior support. No GP referral needed. Call 1300 919 663.'
@@ -739,7 +743,7 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
                 {data.fromBase && (
                   <p className="inline-flex items-center gap-2 mt-4 px-3 py-1.5 rounded-full bg-teal-50 border border-teal-200 text-teal-900 text-xs font-semibold">
                     <MapPin className="w-3.5 h-3.5" aria-hidden="true" />
-                    Local team: {data.name} is {data.fromBase} from our Harrisdale base
+                    Local team: {data.id === 'gosnells' ? 'Care N Cure Headquarters & Clinical Hub (2232B Albany Hwy)' : `${data.name} is ${data.fromBase} from our Gosnells headquarters`}
                   </p>
                 )}
                 <div className="bg-teal-subtle/40 p-5 rounded-xl border border-teal-border mt-4">
@@ -841,7 +845,7 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
                   </div>
                   <div>
                     <h3 className="text-navy font-bold text-base">&ldquo;Are you actually local?&rdquo;</h3>
-                    <p className="mt-1">Yes. We are a Perth nursing practice based at 15 Rockefeller Way, Harrisdale WA 6112, rated 5.0 on Google by local families. {data.fromBase ? `${data.name} is ${data.fromBase} from our base.` : `We visit ${data.name} and nearby ${data.surroundingSuburbs} regularly.`}</p>
+                    <p className="mt-1">Yes. We are a Perth nursing practice headquartered at 2232B Albany Hwy, Gosnells WA 6110, rated 5.0 on Google by local families. {data.id === 'gosnells' ? 'Gosnells is our clinical headquarters and primary dispatch base.' : (data.fromBase ? `${data.name} is ${data.fromBase} from our Gosnells headquarters.` : `We visit ${data.name} and nearby ${data.surroundingSuburbs} regularly.`)}</p>
                   </div>
                 </div>
               </div>
@@ -924,7 +928,7 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
                   <div>
                     <p className="font-bold">Zero Travel Surcharge Across {data.name}</p>
                     <p className="text-body text-xs mt-0.5">
-                      Dispatched from our Harrisdale base (15 Rockefeller Way), we guarantee $0 travel surcharges for scheduled in-home nurse visits across {data.name} and surrounding suburbs within 50km.
+                      Dispatched from our Gosnells headquarters (2232B Albany Hwy), we guarantee $0 travel surcharges for scheduled in-home nurse visits across {data.name} and surrounding suburbs within 50km.
                     </p>
                   </div>
                 </div>

@@ -33,12 +33,12 @@ const agedCareServices = [
 const serviceLinks = [...clinicalServices, ...agedCareServices, { label: 'Healthcare Referrals', href: '/referrals' }]
 
 const baseSuburbs = [
-  { label: 'Harrisdale (HQ)', href: '/locations/harrisdale' },
+  { label: 'Gosnells (HQ)', href: '/locations/gosnells' },
+  { label: 'Harrisdale', href: '/locations/harrisdale' },
   { label: 'Piara Waters', href: '/locations/piara-waters' },
   { label: 'Southern River', href: '/locations/southern-river' },
   { label: 'Canning Vale', href: '/locations/canning-vale' },
   { label: 'Thornlie', href: '/locations/thornlie' },
-  { label: 'City of Gosnells', href: '/locations/gosnells' },
   { label: 'City of Armadale', href: '/locations/armadale' },
   { label: 'Byford', href: '/locations/byford' },
 ]
@@ -136,12 +136,12 @@ export function Navigation() {
             {/* Mobile / Tablet Left */}
             <div className="flex md:hidden items-center gap-1.5 text-[11px] text-white/90 font-medium truncate">
               <span className="w-1.5 h-1.5 rounded-full bg-teal-accent shrink-0" />
-              <span className="truncate">Perth Nurse-Led · Harrisdale HQ · All Suburbs</span>
+              <span className="truncate">Perth Nurse-Led · Gosnells HQ · All Suburbs</span>
             </div>
 
             {/* Right: Phone & Location Quick Info (Desktop / Tablet) */}
             <div className="hidden sm:flex items-center gap-3 lg:gap-5 text-[11px] lg:text-xs font-semibold shrink-0">
-              <span className="text-white/70">Harrisdale HQ • All Perth Suburbs</span>
+              <span className="text-white/70">Gosnells HQ • All Perth Suburbs</span>
               <a
                 href={PHONE_HREF}
                 className="inline-flex items-center gap-1.5 text-teal-accent hover:text-white transition-colors cursor-pointer"

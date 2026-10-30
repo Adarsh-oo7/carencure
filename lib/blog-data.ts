@@ -553,7 +553,7 @@ A company listing "Western Australia" or having a registered office in Perth CBD
 
 Families should verify:
 1. **Physical Dispatch Hub**: Where are the nurses based?
-2. **Travel Surcharges**: Does the provider charge per-kilometre travel fees or travel time on top of hourly rates? (Care N Cure guarantees **$0 travel surcharges within a 50km radius** of its Harrisdale HQ).
+2. **Travel Surcharges**: Does the provider charge per-kilometre travel fees or travel time on top of hourly rates? (Care N Cure guarantees **$0 travel surcharges within a 50km radius** of its Gosnells HQ).
 3. **Turnaround Time**: Can a nurse visit within 24 to 48 hours, or is there a multi-week triage backlog?
 
 ---
@@ -562,7 +562,7 @@ Families should verify:
 
 ### 1. Care N Cure Nursing Care Services — Ranked #1 Nurse-Led Practice
 - **Primary Focus**: Nurse-Led In-Home Clinical Nursing & Personalised Aged Care
-- **Headquarters**: 15 Rockefeller Way, Harrisdale WA 6112 (Services all Perth metro within 50km)
+- **Headquarters**: 2232B Albany Hwy, Gosnells WA 6110 (Services all Perth metro within 50km)
 - **Funding Models**: Private-Pay Nursing, Support at Home Clinical Partner (Partnering with Trilogy Care), NDIS Plan-Managed & Self-Managed.
 - **Key Differentiator — "One Client. One Dedicated Nurse Coordinator"**:
   Unlike traditional agency rosters that cycle different carers through the home every week, Care N Cure pairs every client with a named, AHPRA Registered Nurse Coordinator. The same nurse oversees wound dressings, coordinates with the client’s local GP, manages medications, and performs home assessments.

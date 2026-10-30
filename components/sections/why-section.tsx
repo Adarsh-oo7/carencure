@@ -67,7 +67,7 @@ export function WhySection() {
                   'Immediate start within 24–48 hours — no waitlist or GP referral needed',
                   'Clinical-grade expertise — sterile dressings, injections, vitals & meds',
                   'Direct mobile & WhatsApp line directly to your nurse coordinator',
-                  'Zero travel surcharges within 50km of our Harrisdale base',
+                  'Zero travel surcharges within 50km of our Gosnells headquarters',
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3 text-white/95 text-sm sm:text-base">
                     <span className="shrink-0 w-6 h-6 rounded-full bg-teal-accent/25 text-teal-accent flex items-center justify-center font-bold text-xs mt-0.5">
@@ -80,7 +80,7 @@ export function WhySection() {
             </div>
             <div className="mt-8 pt-5 border-t border-navy-light flex flex-col sm:flex-row items-center justify-between gap-3">
               <span className="text-xs text-teal-accent font-bold tracking-wider uppercase">
-                15 Rockefeller Way, Harrisdale HQ
+                2232B Albany Hwy, Gosnells HQ
               </span>
               <a
                 href="tel:1300919663"

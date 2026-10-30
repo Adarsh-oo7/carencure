@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     url: 'https://carencure.com.au',
     siteName: 'CARE N CURE NURSING CARE SERVICES',
     title: 'Care N Cure Nursing Care Services | At Home Nurse Perth & Aged Care Support',
-    description: "Perth's trusted in-home nursing care & private home nurses from Harrisdale. AHPRA-registered nurse coordinators for wound care, post-hospital recovery & aged care. Call 1300 919 663.",
+    description: "Perth's trusted in-home nursing care & private home nurses headquartered at 2232B Albany Hwy, Gosnells. AHPRA-registered nurse coordinators for wound care, post-hospital recovery & aged care. Call 1300 919 663.",
     images: [
       {
         url: 'https://carencure.com.au/opengraph-image',
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Care N Cure Nursing Care Services | At Home Nurse Perth & Aged Care Support',
-    description: "Perth's trusted in-home nursing care & private home nurses from Harrisdale. AHPRA-registered nurse coordinators for wound care, post-hospital recovery & aged care. Call 1300 919 663.",
+    description: "Perth's trusted in-home nursing care & private home nurses headquartered at 2232B Albany Hwy, Gosnells. AHPRA-registered nurse coordinators for wound care, post-hospital recovery & aged care. Call 1300 919 663.",
   },
   robots: {
     index: true,
@@ -92,9 +92,9 @@ export default function RootLayout({
     <html lang="en-AU" className="scroll-smooth">
       <head>
         <meta name="geo.region" content="AU-WA" />
-        <meta name="geo.placename" content="Perth" />
-        <meta name="geo.position" content="-31.9505;115.8605" />
-        <meta name="ICBM" content="-31.9505, 115.8605" />
+        <meta name="geo.placename" content="Gosnells, Perth, WA" />
+        <meta name="geo.position" content="-32.0713;116.0021" />
+        <meta name="ICBM" content="-32.0713, 116.0021" />
         <meta
           httpEquiv="Content-Security-Policy"
           content="default-src 'self'; frame-src 'self' https://www.google.com https://*.google.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://va.vercel-scripts.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; connect-src 'self' https://vitals.vercel-insights.com https://*.vercel-analytics.com https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://cloudflareinsights.com; font-src 'self' data: https://fonts.gstatic.com;"

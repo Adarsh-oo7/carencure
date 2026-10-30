@@ -7,7 +7,7 @@ import { Building2, Stethoscope, Landmark, HeartHandshake } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: { absolute: 'Aged Care & Home Nurse Perth Service Areas | Local RN Care | Care N Cure' },
-  description: 'Looking for aged care at home or a private registered nurse in Perth? Based at 15 Rockefeller Way, Harrisdale — covering Canning Vale, Southern River, Cockburn, Willetton, Rockingham, Joondalup & 43+ suburbs. 24–48h start. Call 1300 919 663.',
+  description: 'Looking for aged care at home or a private registered nurse in Perth? Based at 2232B Albany Hwy, Gosnells — covering Gosnells, Thornlie, Canning Vale, Southern River, Cockburn, Willetton, Rockingham, Joondalup & 43+ suburbs. 24–48h start. Call 1300 919 663.',
   keywords: [
     'aged care service areas perth',
     'home nurse perth',
@@ -26,27 +26,27 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://carencure.com.au/locations' },
   openGraph: {
     title: 'Aged Care & Home Nurse Perth Service Areas | Care N Cure',
-    description: 'AHPRA Registered Nurses delivering in-home clinical care & aged care across Perth. Immediate intake from our Harrisdale base. Call 1300 919 663.',
+    description: 'AHPRA Registered Nurses delivering in-home clinical care & aged care across Perth. Immediate intake from our Gosnells headquarters. Call 1300 919 663.',
     url: 'https://carencure.com.au/locations',
     type: 'website',
   },
 }
 
-// Home-base corridor — closest to 15 Rockefeller Way, Harrisdale (strongest local relevance & fastest intake)
+// Home-base corridor — closest to 2232B Albany Hwy, Gosnells (strongest local relevance & fastest intake)
 const homeBaseSuburbs = [
-  { name: 'Harrisdale', href: '/locations/harrisdale', description: 'Our head office at 15 Rockefeller Way. Immediate same-day response for aged care and nurse visits.', distance: 'Home Base' },
-  { name: 'Piara Waters', href: '/locations/piara-waters', description: 'Aged care at home and registered nurse visits, about 5 minutes from our base.', distance: '5 mins from base' },
+  { name: 'City of Gosnells', href: '/locations/gosnells', description: 'Our practice headquarters at 2232B Albany Hwy. Immediate same-day response for aged care, wound care and clinical nurse visits.', distance: 'Home Base / HQ' },
+  { name: 'Thornlie', href: '/locations/thornlie', description: 'Community nursing care and elderly home care in Thornlie, Langford and Crestwood.', distance: '5 mins from base' },
+  { name: 'Harrisdale', href: '/locations/harrisdale', description: 'Dedicated registered nurse visits, complex wound care, and in-home aged care support.', distance: '10 mins from base' },
+  { name: 'Piara Waters', href: '/locations/piara-waters', description: 'Aged care at home and registered nurse visits, about 10 minutes from our base.', distance: '10 mins from base' },
   { name: 'Southern River', href: '/locations/southern-river', description: 'Local aged care, sterile wound dressings and medication checks for Southern River families.', distance: '8 mins from base' },
   { name: 'Canning Vale', href: '/locations/canning-vale', description: 'Community nursing care, wound dressings and chronic disease monitoring in Canning Vale.', distance: '10 mins from base' },
   { name: 'Willetton', href: '/locations/willetton', description: 'Aged care at home & clinical nursing for Willetton, Riverton and Rossmoyne seniors.', distance: '15 mins from base' },
   { name: 'Cockburn Central', href: '/locations/cockburn-central', description: 'Post-discharge nursing near Fiona Stanley for Success, Atwell, Cockburn and Aubin Grove.', distance: '15 mins from base' },
   { name: 'Bull Creek', href: '/locations/bull-creek', description: 'In-home aged care and clinical recovery in Bull Creek, Leeming and Bateman.', distance: '15 mins from base' },
-  { name: 'Thornlie', href: '/locations/thornlie', description: 'Community nursing care and elderly home care in Thornlie, Langford and Crestwood.', distance: '12 mins from base' },
-  { name: 'City of Gosnells', href: '/locations/gosnells', description: 'In-home nursing care, wound management, and medication support across the City of Gosnells.', distance: '12 mins from base' },
-  { name: 'City of Armadale', href: '/locations/armadale', description: 'Registered nurse visits for post-hospital recovery and chronic condition management in Armadale.', distance: '15 mins from base' },
-  { name: 'Kelmscott', href: '/locations/kelmscott', description: 'Community nursing and aged care at home in Kelmscott, Camillo and Champion Lakes.', distance: '15 mins from base' },
+  { name: 'City of Armadale', href: '/locations/armadale', description: 'Registered nurse visits for post-hospital recovery and chronic condition management in Armadale.', distance: '12 mins from base' },
+  { name: 'Kelmscott', href: '/locations/kelmscott', description: 'Community nursing and aged care at home in Kelmscott, Camillo and Champion Lakes.', distance: '10 mins from base' },
   { name: 'Byford', href: '/locations/byford', description: 'In-home aged care nursing for Byford and the Serpentine-Jarrahdale corridor.', distance: '18 mins from base' },
-  { name: 'Forrestdale', href: '/locations/forrestdale', description: 'Dedicated registered nurse visits for Forrestdale, Hilbert and Haynes residents.', distance: '10 mins from base' },
+  { name: 'Forrestdale', href: '/locations/forrestdale', description: 'Dedicated registered nurse visits for Forrestdale, Hilbert and Haynes residents.', distance: '12 mins from base' },
 ]
 
 // Priority Metro Hubs — High client demand and proven search volume
@@ -162,7 +162,7 @@ export default function LocationsPage() {
             <h2 className="text-navy font-bold text-2xl md:text-3xl">Immediate Care Corridor: Perth&apos;s South-East</h2>
             <div className="section-divider mx-auto" />
             <p className="text-body text-base leading-relaxed">
-              Based at <strong>15 Rockefeller Way, Harrisdale</strong>, our Registered Nurses live and operate right in this corridor. Families in these suburbs receive <strong>same-day / 24-hour intake</strong>, maximum schedule flexibility, and zero travel surcharges.
+              Based at <strong>2232B Albany Hwy, Gosnells</strong>, our Registered Nurses live and operate right in this corridor. Families in these suburbs receive <strong>same-day / 24-hour intake</strong>, maximum schedule flexibility, and zero travel surcharges.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">

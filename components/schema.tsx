@@ -8,10 +8,10 @@ const PHONE = '1300 919 663'
 const PHONE_SCHEMA = '+611300919663'
 const EMAIL = 'hello@carencure.com.au'
 const ADDRESS = {
-  streetAddress: '15 Rockefeller Way',
-  addressLocality: 'Harrisdale',
+  streetAddress: '2232B Albany Hwy',
+  addressLocality: 'Gosnells',
   addressRegion: 'WA',
-  postalCode: '6112',
+  postalCode: '6110',
   addressCountry: 'AU',
 }
 
@@ -57,7 +57,7 @@ export function MedicalBusinessSchema() {
         },
         image: `${SITE_URL}/og-image.jpg`,
         description:
-          'Perth-based registered nurse home care services from Harrisdale. Dedicated nurse coordinators providing private nursing, aged care at home, NDIS nursing, wound care, medication management, and post-hospital care across Perth, WA.',
+          'Perth-based registered nurse home care practice headquartered at 2232B Albany Hwy, Gosnells WA 6110. Dedicated nurse coordinators providing private nursing, aged care at home, NDIS nursing, wound care, medication management, and post-hospital care across Perth, WA.',
         slogan: 'One Client. One Nurse Coordinator. One Trusted Relationship.',
         telephone: PHONE_SCHEMA,
         email: EMAIL,
@@ -88,8 +88,8 @@ export function MedicalBusinessSchema() {
           '@type': 'GeoCircle',
           geoMidpoint: {
             '@type': 'GeoCoordinates',
-            latitude: -32.1318,
-            longitude: 115.9231,
+            latitude: -32.0713,
+            longitude: 116.0021,
           },
           geoRadius: '50000',
         },
@@ -281,7 +281,7 @@ export function OrganizationSchema() {
       height: 512,
     },
     description:
-      'Founder-led private nursing practice in Perth, WA from Harrisdale. Registered nurses providing in-home clinical care, aged care at home, post-hospital recovery, wound care, and chronic disease management.',
+      'Founder-led private nursing practice in Perth, WA headquartered at 2232B Albany Hwy, Gosnells. Registered nurses providing in-home clinical care, aged care at home, post-hospital recovery, wound care, and chronic disease management.',
     telephone: PHONE_SCHEMA,
     email: EMAIL,
     address: {
@@ -314,7 +314,7 @@ export function LocalBusinessSchema() {
     name: 'CARE N CURE NURSING CARE SERVICES',
     alternateName: ['Care N Cure Nursing Care Services', 'Care N Cure'],
     description:
-      'In-home nursing care by registered nurses. Harrisdale & Perth, WA. Dedicated nurse coordinators for private nursing, aged care at home, wound care, medication management, and post-hospital support.',
+      'In-home nursing care by registered nurses. Gosnells & Greater Perth, WA. Dedicated nurse coordinators for private nursing, aged care at home, wound care, medication management, and post-hospital support.',
     url: SITE_URL,
     image: `${SITE_URL}/logo.png`,
     telephone: PHONE_SCHEMA,
@@ -325,8 +325,8 @@ export function LocalBusinessSchema() {
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: -32.1318,
-      longitude: 115.9231,
+      latitude: -32.0713,
+      longitude: 116.0021,
     },
     priceRange: '$$',
     areaServed: AREA_SERVED.map((area) => ({

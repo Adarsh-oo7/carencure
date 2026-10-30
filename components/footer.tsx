@@ -37,7 +37,7 @@ export function Footer() {
             <div className="space-y-2.5 text-sm">
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-teal-accent" />
-                <span className="text-white/80 font-medium">15 Rockefeller Way, Harrisdale WA 6112</span>
+                <span className="text-white/80 font-medium">2232B Albany Hwy, Gosnells WA 6110</span>
               </div>
               <div className="flex items-start gap-2">
                 <Shield className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: 'var(--teal-accent)' }} />
@@ -90,7 +90,8 @@ export function Footer() {
             <p className="font-semibold text-white text-base mb-4">Perth Locations</p>
             <div className="grid grid-cols-2 gap-x-4 gap-y-2.5">
               {[
-                { label: 'Harrisdale (HQ)', href: '/locations/harrisdale' },
+                { label: 'Gosnells (HQ)', href: '/locations/gosnells' },
+                { label: 'Harrisdale', href: '/locations/harrisdale' },
                 { label: 'Byford', href: '/locations/byford' },
                 { label: 'Nedlands', href: '/locations/nedlands' },
                 { label: 'Subiaco', href: '/locations/subiaco' },
@@ -98,7 +99,6 @@ export function Footer() {
                 { label: 'Claremont', href: '/locations/claremont' },
                 { label: 'Wembley', href: '/locations/wembley' },
                 { label: 'Floreat', href: '/locations/floreat' },
-                { label: 'Gosnells', href: '/locations/gosnells' },
                 { label: 'Thornlie', href: '/locations/thornlie' },
                 { label: 'Armadale', href: '/locations/armadale' },
                 { label: 'Rockingham', href: '/locations/rockingham' },
@@ -158,7 +158,7 @@ export function Footer() {
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: 'var(--teal-accent)' }} />
                 <span className="text-white/70">
-                  15 Rockefeller Way, Harrisdale WA 6112 (Serving Perth Metro)
+                  2232B Albany Hwy, Gosnells WA 6110 (Serving Perth Metro)
                 </span>
               </div>
 

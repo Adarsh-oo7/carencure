@@ -74,9 +74,9 @@ const faqs = [
       'On 1 November 2025, Home Care Packages were replaced by the Support at Home program. People now receive one of eight funding classifications, managed as quarterly budgets. Existing package holders moved across automatically. Under Support at Home, clinical care such as registered nursing does not attract a participant contribution. The Commonwealth Home Support Programme (CHSP) continues until at least July 2027. We work with your Support at Home provider or self-managed arrangement — including our partnership with Trilogy Care.',
   },
   {
-    question: 'Do you offer aged care at home in Harrisdale, Piara Waters, and surrounding suburbs?',
+    question: 'Do you offer aged care at home in Gosnells, Harrisdale, Piara Waters, and surrounding suburbs?',
     answer:
-      'Yes. Our practice is based at 15 Rockefeller Way, Harrisdale WA 6112. We provide in-home aged care across Harrisdale, Piara Waters, Southern River, Forrestdale, Canning Vale, Thornlie, Gosnells, Armadale, Kelmscott, Byford, Willetton, Cockburn Central and Bull Creek, plus most Perth metropolitan suburbs within 50km.',
+      'Yes. Our practice is headquartered at 2232B Albany Hwy, Gosnells WA 6110. We provide in-home aged care across Gosnells, Thornlie, Maddington, Kenwick, Harrisdale, Piara Waters, Southern River, Forrestdale, Canning Vale, Armadale, Kelmscott, Byford, Willetton, Cockburn Central and Bull Creek, plus most Perth metropolitan suburbs within 50km.',
   },
   {
     question: 'Can private nursing care start immediately while we wait for My Aged Care approval?',
@@ -172,7 +172,7 @@ export default function AgedCareAtHomePerthPage() {
                     <h3 className="font-bold text-navy text-sm">50km Zero Travel Fee</h3>
                   </div>
                   <p className="text-xs text-body">
-                    Based at 15 Rockefeller Way, Harrisdale. We service all Perth metro suburbs within 50km with zero travel surcharges.
+                    Based at 2232B Albany Hwy, Gosnells. We service all Perth metro suburbs within 50km with zero travel surcharges.
                   </p>
                 </div>
               </div>
@@ -389,12 +389,18 @@ export default function AgedCareAtHomePerthPage() {
             <div className="max-w-3xl">
               <span className="text-teal-accent font-bold text-xs uppercase tracking-wider">Local Perth Presence</span>
               <h2 className="text-2xl sm:text-3xl font-extrabold mt-2 mb-4 text-white">
-                Caring for Seniors in Harrisdale & Across Greater Perth
+                Caring for Seniors in Gosnells & Across Greater Perth
               </h2>
               <p className="text-white/80 text-sm leading-relaxed mb-6">
-                Based at 15 Rockefeller Way, Harrisdale WA 6112, our nursing team regularly visits elderly clients throughout the South-East corridor (Harrisdale, Piara Waters, Southern River, Forrestdale, Canning Vale, Thornlie, Gosnells, Armadale, Kelmscott, Byford, Willetton) and the southern suburbs (Cockburn Central, Bull Creek, Melville, Baldivis), as well as Nedlands, Claremont, Fremantle, Rockingham, South Perth, and Joondalup.
+                Headquartered at 2232B Albany Hwy, Gosnells WA 6110, our nursing team regularly visits elderly clients throughout the South-East corridor (Gosnells, Thornlie, Maddington, Harrisdale, Piara Waters, Southern River, Forrestdale, Canning Vale, Armadale, Kelmscott, Byford, Willetton) and the southern suburbs (Cockburn Central, Bull Creek, Melville, Baldivis), as well as Nedlands, Claremont, Fremantle, Rockingham, South Perth, and Joondalup.
               </p>
               <div className="flex flex-wrap gap-3">
+                <Link
+                  href="/locations/gosnells"
+                  className="px-4 py-2 rounded-xl bg-teal-accent text-navy text-xs font-bold transition-colors"
+                >
+                  Gosnells (HQ) →
+                </Link>
                 <Link
                   href="/locations/harrisdale"
                   className="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-semibold transition-colors"

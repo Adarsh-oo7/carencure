@@ -174,7 +174,7 @@ export const fundedPages: LandingPage[] = [
           'Written quote and service agreement before care begins',
           'One named Registered Nurse per participant — no rotating strangers',
           'Clinical updates when needs change, and reports for plan reviews',
-          'Metropolitan Perth coverage from our Harrisdale base',
+          'Metropolitan Perth coverage from our Gosnells headquarters',
         ],
       },
       {
@@ -572,7 +572,7 @@ export const fundedPages: LandingPage[] = [
           'One dedicated Registered Nurse who knows your health history',
           'Clinical care delivered as an associated provider, invoiced to your provider',
           'Clear written quotes before care begins',
-          'Metropolitan Perth coverage from our Harrisdale base',
+          'Metropolitan Perth coverage from our Gosnells headquarters',
           'Private top-up visits available if you need more than your budget allows',
         ],
       },
@@ -650,7 +650,7 @@ export const fundedPages: LandingPage[] = [
       {
         heading: '4. Where Care N Cure fits',
         paragraphs: [
-          `Care N Cure is a nurse-led service based in Harrisdale. ${SAH_STATUS} Many Perth families keep their existing Support at Home provider and ask them to engage Care N Cure for nursing, or use us privately while waiting for funding.`,
+          `Care N Cure is a nurse-led service based in Gosnells (2232B Albany Hwy). ${SAH_STATUS} Many Perth families keep their existing Support at Home provider and ask them to engage Care N Cure for nursing, or use us privately while waiting for funding.`,
         ],
       },
     ],

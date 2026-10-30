@@ -80,7 +80,7 @@ export default function ContactPage() {
                 <Navigation className="w-6 h-6 text-teal-accent shrink-0" />
                 <div>
                   <h4 className="font-bold text-navy text-sm">Metropolitan Perth Service Radius</h4>
-                  <p className="text-body text-xs mt-0.5">We cover Perth metropolitan suburbs from our Harrisdale base with transparent travel terms confirmed upfront during clinical intake.</p>
+                  <p className="text-body text-xs mt-0.5">We cover Perth metropolitan suburbs from our Gosnells headquarters (2232B Albany Hwy) with transparent travel terms confirmed upfront during clinical intake.</p>
                 </div>
               </div>
 
@@ -195,8 +195,8 @@ export default function ContactPage() {
                   <MapPin className="w-6 h-6 text-teal-accent shrink-0 mt-1" />
                   <div>
                     <h3 className="text-navy text-lg font-bold">Practice Headquarters</h3>
-                    <p className="text-navy font-semibold text-sm mt-0.5">15 Rockefeller Way, Harrisdale WA 6112</p>
-                    <p className="text-body text-xs mt-0.5">Serving Harrisdale, Nedlands, Subiaco, Gosnells, Armadale, Rockingham, Joondalup, Midland, Fremantle, and all Perth metro suburbs within 50km.</p>
+                    <p className="text-navy font-semibold text-sm mt-0.5">2232B Albany Hwy, Gosnells WA 6110, Australia</p>
+                    <p className="text-body text-xs mt-0.5">Serving Gosnells, Thornlie, Maddington, Kenwick, Harrisdale, Southern River, Canning Vale, Armadale, Kelmscott, Cockburn, Nedlands, Joondalup, and all Perth metro suburbs within 50km.</p>
                   </div>
                 </div>
 
@@ -216,14 +216,14 @@ export default function ContactPage() {
 
                 <div className="rounded-2xl overflow-hidden border border-border shadow-sm">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3378.6854087778297!2d115.92314007624874!3d-32.131797273939895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b2039026a9c40ab%3A0x33a1d36ebabfec5b!2sCARE%20N%20CURE%20NURSING%20CARE%20SERVICES!5e0!3m2!1sen!2sin!4v1785132131562!5m2!1sen!2sin"
+                    src="https://maps.google.com/maps?q=2232B+Albany+Hwy,+Gosnells+WA+6110,+Australia&t=&z=15&ie=UTF8&iwloc=&output=embed"
                     width="100%"
                     height="280"
                     style={{ border: 0 }}
                     allowFullScreen={true}
                     loading="lazy"
                     referrerPolicy="strict-origin-when-cross-origin"
-                    title="Care N Cure Nursing Care Services Perth Location Map"
+                    title="Care N Cure Nursing Care Services Gosnells Perth Location Map"
                   />
                 </div>
               </div>

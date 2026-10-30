@@ -82,7 +82,7 @@ const homeFaqs = [
     id: 'faq-aged-care-agency',
     question: 'Are you an aged care agency in Perth?',
     answer:
-      'Care N Cure is a registered nurse-led in-home aged care practice based in Harrisdale, Perth. Unlike traditional aged care agencies that dispatch rotating support workers, every Care N Cure client is assigned a dedicated Registered Nurse Coordinator, with a small, familiar back-up team for planned leave. We are AHPRA-registered and provide clinical nursing — not just personal care or domestic support.',
+      'Care N Cure is a registered nurse-led in-home aged care practice headquartered at 2232B Albany Hwy, Gosnells, Perth. Unlike traditional aged care agencies that dispatch rotating support workers, every Care N Cure client is assigned a dedicated Registered Nurse Coordinator, with a small, familiar back-up team for planned leave. We are AHPRA-registered and provide clinical nursing — not just personal care or domestic support.',
   },
   {
     id: 'faq-what-private-nurse',
@@ -132,7 +132,7 @@ export default function HomePage() {
       <FAQPageSchema faqs={homeFaqs.map(faq => ({ question: faq.question, answer: faq.answer }))} />
 
       <HeroSection
-        badge="Perth Nurse-Led Home Care · Harrisdale Base"
+        badge="Perth Nurse-Led Home Care · Gosnells Base"
         headline="Home Care & Nursing Care in Perth by a Dedicated Registered Nurse"
         subheadline={
           <div className="space-y-1.5 sm:space-y-2">
