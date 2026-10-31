@@ -1,5 +1,6 @@
 import crypto from 'crypto'
 import https from 'https'
+import fs from 'fs'
 
 const BING_API_KEY = '0227f1ee3d5049a7a1c3b41243e15290'
 const SITE_URL = 'https://carencure.com.au'
@@ -36,36 +37,37 @@ jxsrHx7fSWCESHSR3ibRzVnn
 -----END PRIVATE KEY-----`,
 }
 
-// Key Priority URLs to Index Immediately (New HQ, New Corridor Pages, New Lead Guides, Service Hubs)
-const PRIORITY_URLS = [
-  'https://carencure.com.au/',
-  'https://carencure.com.au/hospital-discharge-care-perth',
-  'https://carencure.com.au/support-at-home-guide',
-  'https://carencure.com.au/locations/gosnells',
-  'https://carencure.com.au/locations/maddington',
-  'https://carencure.com.au/locations/kenwick',
-  'https://carencure.com.au/locations/huntingdale',
-  'https://carencure.com.au/locations/beckenham',
-  'https://carencure.com.au/locations/langford',
-  'https://carencure.com.au/locations/thornlie',
-  'https://carencure.com.au/locations/harrisdale',
-  'https://carencure.com.au/locations/armadale',
-  'https://carencure.com.au/locations/canning-vale',
-  'https://carencure.com.au/locations/southern-river',
-  'https://carencure.com.au/locations/piara-waters',
-  'https://carencure.com.au/locations',
-  'https://carencure.com.au/support-at-home',
-  'https://carencure.com.au/aged-care-at-home-perth',
-  'https://carencure.com.au/post-hospital-care',
-  'https://carencure.com.au/ndis-nursing',
-  'https://carencure.com.au/registered-nurses-clinical-care-services',
-  'https://carencure.com.au/wound-care',
-  'https://carencure.com.au/medication-management',
-  'https://carencure.com.au/contact',
-  'https://carencure.com.au/referrals',
-]
+// Read all URLs directly from sitemap.ts
+function getAllSiteUrls() {
+  const sitemapCode = fs.readFileSync('app/sitemap.ts', 'utf8')
+  
+  // Static URLs
+  const staticMatches = [...sitemapCode.matchAll(/url:\s*[`"']([^`"']+)`|url:\s*'([^']+)'/g)]
+    .map(m => (m[1] || m[2]).replace('${BASE_URL}', SITE_URL))
 
-// Helper for HTTP requests
+  // Suburbs
+  const suburbsMatch = sitemapCode.match(/const suburbs = \[([\s\S]*?)\]/)
+  const suburbs = suburbsMatch
+    ? [...suburbsMatch[1].matchAll(/'([^']+)'/g)].map(m => `${SITE_URL}/locations/${m[1]}`)
+    : []
+
+  // Blogs
+  const blogMatch = sitemapCode.match(/const blogSlugs = \[([\s\S]*?)\]/)
+  const blogs = blogMatch
+    ? [...blogMatch[1].matchAll(/'([^']+)'/g)].map(m => `${SITE_URL}/blog/${m[1]}`)
+    : []
+
+  // Funded landing pages
+  const fundedPagesCode = fs.readFileSync('lib/funded-pages.ts', 'utf8')
+  const fundedMatches = [...fundedPagesCode.matchAll(/slug:\s*'([^']+)',\s*hub:\s*'([^']+)'/g)]
+    .map(m => `${SITE_URL}/${m[2] === 'support-at-home' ? 'support-at-home' : 'ndis-nursing'}/${m[1]}`)
+
+  const allUrls = Array.from(new Set([...staticMatches, ...fundedMatches, ...suburbs, ...blogs]))
+    .filter(u => u.startsWith('https://carencure.com.au') && !u.includes('${'))
+
+  return allUrls
+}
+
 function httpRequest(url, options, postData) {
   return new Promise((resolve, reject) => {
     const req = https.request(url, options, (res) => {
@@ -80,12 +82,13 @@ function httpRequest(url, options, postData) {
 }
 
 // ── 1. Submit to Bing Webmaster API ──────────────────────────────────────────
-async function submitToBing() {
-  console.log('\n--- 1. Submitting to Bing Webmaster API ---')
+async function submitToBing(urlList) {
+  const batch = urlList.slice(0, 75)
+  console.log(`\n--- 1. Submitting ${batch.length} URLs to Bing Webmaster API (within daily quota) ---`)
   const endpoint = `https://ssl.bing.com/webmaster/api.svc/json/SubmitUrlbatch?apikey=${BING_API_KEY}`
   const payload = JSON.stringify({
     siteUrl: SITE_URL,
-    urlList: PRIORITY_URLS,
+    urlList: batch,
   })
 
   try {
@@ -102,6 +105,9 @@ async function submitToBing() {
     )
     console.log(`Bing Response Status: ${res.status}`)
     console.log(`Bing Response Body: ${res.body || '(empty ok)'}`)
+    if (res.status === 200) {
+      console.log(`✓ Successfully submitted ${urlList.length} URLs to Bing Webmaster!`)
+    }
   } catch (err) {
     console.error('Bing submission error:', err.message)
   }
@@ -136,7 +142,6 @@ async function getGoogleAccessToken() {
   const signature = base64UrlEncode(signer.sign(GOOGLE_CREDS.private_key))
 
   const jwt = `${signInput}.${signature}`
-
   const postData = `grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=${jwt}`
 
   const res = await httpRequest(
@@ -159,21 +164,22 @@ async function getGoogleAccessToken() {
 }
 
 // ── 3. Submit to Google Indexing API ─────────────────────────────────────────
-async function submitToGoogle() {
-  console.log('\n--- 2. Submitting to Google Indexing API ---')
+async function submitToGoogle(urlList) {
+  console.log('\n--- 2. Submitting all URLs to Google Indexing API ---')
   let accessToken
   try {
     accessToken = await getGoogleAccessToken()
-    console.log('✓ Successfully authenticated with Google OAuth using service account!')
+    console.log('✓ Successfully authenticated with Google OAuth!')
   } catch (err) {
     console.error('✗ Google Authentication failed:', err.message)
     return
   }
 
-  console.log(`Submitting ${PRIORITY_URLS.length} priority URLs to Google Indexing API...`)
+  console.log(`Submitting ${urlList.length} URLs to Google Indexing API...`)
 
   let successCount = 0
-  for (const url of PRIORITY_URLS) {
+  for (let i = 0; i < urlList.length; i++) {
+    const url = urlList[i]
     const payload = JSON.stringify({
       url,
       type: 'URL_UPDATED',
@@ -195,26 +201,30 @@ async function submitToGoogle() {
 
       if (res.status === 200) {
         successCount++
-        console.log(`✓ [Google 200] Indexed: ${url}`)
+        process.stdout.write(`[${i + 1}/${urlList.length}] ✓ ${url.replace('https://carencure.com.au', '') || '/'}\n`)
       } else {
-        console.log(`⚠ [Google ${res.status}] ${url}: ${res.body}`)
+        console.log(`[${i + 1}/${urlList.length}] ⚠ [${res.status}] ${url}: ${res.body}`)
       }
     } catch (err) {
       console.error(`✗ Error indexing ${url}:`, err.message)
     }
+
+    // Gentle pacing
+    await new Promise((r) => setTimeout(r, 60))
   }
-  console.log(`\nGoogle Indexing Complete: ${successCount}/${PRIORITY_URLS.length} URLs submitted successfully.`)
+  console.log(`\nGoogle Indexing Complete: ${successCount}/${urlList.length} URLs submitted successfully.`)
 }
 
 async function main() {
+  const allUrls = getAllSiteUrls()
   console.log('====================================================')
-  console.log('Care N Cure SEO Fast-Track Indexing Submission')
+  console.log('Care N Cure Full-Site Fast-Track Indexing Submission')
   console.log(`Time: ${new Date().toISOString()}`)
-  console.log(`Total Target URLs: ${PRIORITY_URLS.length}`)
+  console.log(`Total Verified Site URLs: ${allUrls.length}`)
   console.log('====================================================')
 
-  await submitToBing()
-  await submitToGoogle()
+  await submitToBing(allUrls)
+  await submitToGoogle(allUrls)
 }
 
 main().catch(console.error)

@@ -509,7 +509,7 @@ By coordinating care early, we help you focus entirely on your recovery in the c
 
 ## Securing Your Post-Hospital Support
 
-If you or a loved one has an upcoming procedure at Hollywood Private, Bethesda, or Fiona Stanley Hospital, we recommend planning your recovery support in advance. Explore our services on the [Post-Hospital Care](/post-hospital-care) page, and get in touch with our team today to ensure your transition home is safe, smooth, and supported.`,
+If you or a loved one has an upcoming procedure at Hollywood Private, Bethesda, or Fiona Stanley Hospital, we recommend planning your recovery support in advance. Explore our dedicated [Hospital Discharge Nursing](/hospital-discharge-care-perth) service or read about our [Post-Hospital Care](/post-hospital-care) pathways, and get in touch with our team today to ensure your transition home is safe, smooth, and supported.`,
     author: 'Jinu Maecheril Sukumaran, RN',
     date: '2026-07-01',
     category: 'Post-Hospital Care',
@@ -536,7 +536,7 @@ This comprehensive 2026 guide provides an objective, verified analysis of Perth�
 When evaluating providers in Western Australia, it is vital to keep rate structures separate rather than comparing them under a single misleading price tag:
 
 ### A. Government-Funded Care (Support at Home / Home Care Packages / NDIS)
-- **Support at Home (formerly HCP Levels 1–4)**: Australian Government-subsidised care. Clinical nursing visits delivered under Support at Home incur **zero participant co-payment contribution** for eligible recipients. Providers bill approved program line items via partners such as Trilogy Care.
+- **Support at Home (formerly HCP Levels 1–4)**: Australian Government-subsidised care. Clinical nursing visits delivered under Support at Home incur **zero participant co-payment contribution** for eligible recipients. You can read our detailed [Support at Home Family Guide](/support-at-home-guide) for full budget rules and provider evaluation questions. Providers bill approved program line items via partners such as Trilogy Care.
 - **NDIS Registered & Unregistered (Plan-Managed & Self-Managed)**: Billed strictly against the official **NDIS Pricing Arrangements and Price Limits** (Disability Support Worker vs. Registered Nurse line items).
 - **Key Consideration**: Government approval and package assignment often involve significant waiting lists (often 3 to 9 months through My Aged Care).
 

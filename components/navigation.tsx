@@ -11,6 +11,7 @@ const PHONE_HREF = 'tel:1300919663'
 const clinicalServices = [
   { label: 'Registered Nurses Clinical Care', href: '/registered-nurses-clinical-care-services', desc: 'Complex wound, injections, vitals & clinical reviews' },
   { label: 'Private Nursing at Home', href: '/private-nursing', desc: '1-on-1 dedicated clinical nursing visits' },
+  { label: 'Hospital Discharge Nursing', href: '/hospital-discharge-care-perth', desc: 'Urgent 24–48h nurse start after hospital discharge' },
   { label: 'Wound Care at Home', href: '/wound-care', desc: 'Sterile surgical & chronic wound dressings' },
   { label: 'Medication Management', href: '/medication-management', desc: 'Administration, Webster-pak & safety reviews' },
   { label: 'Post-Hospital Recovery Care', href: '/post-hospital-care', desc: 'Safe transitions home after hospital stay' },
@@ -21,6 +22,7 @@ const clinicalServices = [
 const agedCareServices = [
   { label: 'Aged Care at Home Perth', href: '/aged-care-at-home-perth', desc: 'Comprehensive senior home care in Perth' },
   { label: 'Support at Home (2026)', href: '/support-at-home', desc: 'Guidance & care under the new framework' },
+  { label: 'Support at Home 2026 Guide', href: '/support-at-home-guide', desc: 'Free downloadable family guide & budget rules' },
   { label: 'Home Care Packages (HCP)', href: '/homecare-packages', desc: 'Self-managed & provider-managed support' },
   { label: 'Elderly Care at Home', href: '/private-nursing/elderly-care', desc: 'Dedicated senior nurse companion & checks' },
   { label: 'Personal Care at Home', href: '/personal-care', desc: 'Dignified showering, grooming & daily tasks' },
