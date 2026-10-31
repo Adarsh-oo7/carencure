@@ -28,6 +28,7 @@ const AREA_SERVED = [
   'Southern River', 'Forrestdale', 'Willetton', 'Kelmscott',
   'Cockburn Central', 'Success', 'Atwell', 'Bull Creek', 'Leeming',
   'Melville', 'Baldivis', 'Riverton', 'Huntingdale', 'Maddington',
+  'Kenwick', 'Beckenham', 'Langford',
 ]
 
 // ── MedicalOrganization (Homepage primary schema) ──────────────────────────
@@ -222,6 +223,30 @@ export function MedicalBusinessSchema() {
                 '@type': 'MedicalProcedure',
                 name: 'Healthcare Referrals',
                 url: `${SITE_URL}/referrals`,
+              },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'MedicalProcedure',
+                name: 'Hospital Discharge Care Perth',
+                url: `${SITE_URL}/hospital-discharge-care-perth`,
+              },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'MedicalProcedure',
+                name: 'Support at Home 2026 Guide',
+                url: `${SITE_URL}/support-at-home-guide`,
+              },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'MedicalProcedure',
+                name: 'Printable Clinical Referral Form (PDF)',
+                url: `${SITE_URL}/referrals/print`,
               },
             },
           ],
