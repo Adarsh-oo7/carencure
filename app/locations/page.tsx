@@ -36,6 +36,11 @@ export const metadata: Metadata = {
 const homeBaseSuburbs = [
   { name: 'City of Gosnells', href: '/locations/gosnells', description: 'Our practice headquarters at 2232B Albany Hwy. Immediate same-day response for aged care, wound care and clinical nurse visits.', distance: 'Home Base / HQ' },
   { name: 'Thornlie', href: '/locations/thornlie', description: 'Community nursing care and elderly home care in Thornlie, Langford and Crestwood.', distance: '5 mins from base' },
+  { name: 'Maddington', href: '/locations/maddington', description: 'Aged care at home, wound care and medication checks along Albany Hwy in Maddington, Orange Grove and Martin.', distance: '5 mins from base' },
+  { name: 'Huntingdale', href: '/locations/huntingdale', description: 'Registered nurse visits and aged care at home for Huntingdale families, bordering Gosnells.', distance: '5–8 mins from base' },
+  { name: 'Kenwick', href: '/locations/kenwick', description: 'Injections, wound care and community nursing in Kenwick and Wattle Grove.', distance: '8–10 mins from base' },
+  { name: 'Langford', href: '/locations/langford', description: 'Elderly home nursing and medication management in Langford, between Thornlie and Beckenham.', distance: '10 mins from base' },
+  { name: 'Beckenham & Cannington', href: '/locations/beckenham', description: 'Hospital discharge nursing and aged care at home in Beckenham and Cannington.', distance: '10–12 mins from base' },
   { name: 'Harrisdale', href: '/locations/harrisdale', description: 'Dedicated registered nurse visits, complex wound care, and in-home aged care support.', distance: '10 mins from base' },
   { name: 'Piara Waters', href: '/locations/piara-waters', description: 'Aged care at home and registered nurse visits, about 10 minutes from our base.', distance: '10 mins from base' },
   { name: 'Southern River', href: '/locations/southern-river', description: 'Local aged care, sterile wound dressings and medication checks for Southern River families.', distance: '8 mins from base' },

@@ -39,6 +39,8 @@ const baseSuburbs = [
   { label: 'Southern River', href: '/locations/southern-river' },
   { label: 'Canning Vale', href: '/locations/canning-vale' },
   { label: 'Thornlie', href: '/locations/thornlie' },
+  { label: 'Maddington', href: '/locations/maddington' },
+  { label: 'Kenwick', href: '/locations/kenwick' },
   { label: 'City of Armadale', href: '/locations/armadale' },
   { label: 'Byford', href: '/locations/byford' },
 ]

@@ -93,6 +93,13 @@ export function MedicalBusinessSchema() {
           },
           geoRadius: '50000',
         },
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: '5.0',
+          reviewCount: '12',
+          bestRating: '5',
+          worstRating: '1',
+        },
         hasOfferCatalog: {
           '@type': 'OfferCatalog',
           name: 'Care N Cure Healthcare & Nursing Services',
@@ -350,6 +357,13 @@ export function LocalBusinessSchema() {
         description: 'Scheduled Clinical Care',
       },
     ],
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5.0',
+      reviewCount: '12',
+      bestRating: '5',
+      worstRating: '1',
+    },
   }
 
   return (

@@ -53,6 +53,11 @@ const suburbs = [
   'bull-creek',
   'melville',
   'baldivis',
+  'maddington',
+  'kenwick',
+  'huntingdale',
+  'beckenham',
+  'langford',
 ]
 
 // Must match slug values in lib/blog-data.ts
@@ -185,6 +190,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: NOW,
       changeFrequency: 'monthly',
       priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/support-at-home-guide`,
+      lastModified: NOW,
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/hospital-discharge-care-perth`,
+      lastModified: NOW,
+      changeFrequency: 'monthly',
+      priority: 0.9,
     },
     {
       url: `${BASE_URL}/funded-care`,

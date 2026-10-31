@@ -243,6 +243,8 @@ export default function SupportAtHome() {
               { label: 'Mobility Support', href: '/mobility-support' },
               { label: 'Private Nursing', href: '/private-nursing' },
               { label: 'Home Care Packages', href: '/homecare-packages' },
+              { label: 'Free Support at Home Family Guide', href: '/support-at-home-guide' },
+              { label: 'Hospital Discharge Nursing', href: '/hospital-discharge-care-perth' },
             ].map(({ label, href }) => (
               <a
                 key={href}

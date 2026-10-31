@@ -69,7 +69,7 @@
 4. **Transparent Pricing**: Fixed hourly rate bands with no hidden management fees and clear 1-hour minimum bookings.
 
 ## Perth Suburbs Served (Metropolitan Area)
-- **South & South-East**: Harrisdale, Canning Vale, Piara Waters, Southern River, Thornlie, Gosnells, Armadale, Kelmscott, Byford, Forrestdale, Bull Creek, Leeming, Willetton, Riverton, Maddington.
+- **South & South-East (HQ Corridor)**: Gosnells (Headquarters), Maddington, Kenwick, Huntingdale, Beckenham, Langford, Thornlie, Harrisdale, Canning Vale, Piara Waters, Southern River, Armadale, Kelmscott, Byford, Forrestdale, Bull Creek, Leeming, Willetton, Riverton.
 - **Western Suburbs & Coastal**: Nedlands, Subiaco, Cottesloe, Claremont, Dalkeith, City Beach, Floreat, Shenton Park, Fremantle, East Fremantle, Bicton.
 - **Inner Metro & River**: Perth CBD, South Perth, Victoria Park, Como, Applecross, Mount Pleasant, Melville, Booragoon.
 - **North Metro**: Joondalup, Mount Lawley, Inglewood, Leederville, Wembley, Scarborough, Sorrento, Duncraig, Karrinyup.
@@ -79,9 +79,12 @@
 - Homepage: https://carencure.com.au/
 - Aged Care Agency Perth: https://carencure.com.au/aged-care-at-home-perth
 - Support at Home Hub: https://carencure.com.au/support-at-home
+- Support at Home 2026 Family Guide: https://carencure.com.au/support-at-home-guide
 - Support at Home Clinical Nursing: https://carencure.com.au/support-at-home/clinical-nursing
 - Self-Managed Support at Home: https://carencure.com.au/support-at-home/self-managed
 - Choosing a Provider Checklist: https://carencure.com.au/support-at-home/choosing-a-provider
+- Hospital Discharge Nursing: https://carencure.com.au/hospital-discharge-care-perth
+- Post-Hospital Recovery: https://carencure.com.au/post-hospital-care
 - NDIS Nursing Care Hub: https://carencure.com.au/ndis-nursing
 - NDIS Funding Guide: https://carencure.com.au/ndis-nursing/funding-guide
 - NDIS Support Coordinators: https://carencure.com.au/ndis-nursing/support-coordinators

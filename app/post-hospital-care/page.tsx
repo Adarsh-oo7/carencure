@@ -191,6 +191,8 @@ export default function PostHospitalCare() {
               { label: 'Medication Management', href: '/medication-management' },
               { label: 'Clinical Nursing Care', href: '/registered-nurses-clinical-care-services' },
               { label: 'Home Care Packages', href: '/homecare-packages' },
+              { label: 'Hospital Discharge Referrals', href: '/hospital-discharge-care-perth' },
+              { label: 'Support at Home Family Guide', href: '/support-at-home-guide' },
             ].map(({ label, href }) => (
               <a
                 key={href}
