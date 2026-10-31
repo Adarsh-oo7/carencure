@@ -202,6 +202,9 @@ async function submitToGoogle(urlList) {
       if (res.status === 200) {
         successCount++
         process.stdout.write(`[${i + 1}/${urlList.length}] ✓ ${url.replace('https://carencure.com.au', '') || '/'}\n`)
+      } else if (res.status === 429 || res.body.includes('RESOURCE_EXHAUSTED')) {
+        console.log(`\nℹ Google daily quota limit (200 publish requests/day) reached. Remaining URLs will be submitted in tomorrow's automated run.`)
+        break
       } else {
         console.log(`[${i + 1}/${urlList.length}] ⚠ [${res.status}] ${url}: ${res.body}`)
       }

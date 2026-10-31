@@ -73,6 +73,8 @@ export function Footer() {
                 { label: 'Mobility Support', href: '/mobility-support' },
                 { label: 'Pricing & Rates', href: '/pricing' },
                 { label: 'Healthcare Referrals', href: '/referrals' },
+                { label: 'Printable Referral Slip (PDF)', href: '/referrals/print' },
+                { label: 'Leave a Google Review', href: '/review' },
                 { label: 'Clinical Governance & Reviews', href: '/testimonials' },
               ].map((link) => (
                 <li key={`${link.href}-${link.label}`}>

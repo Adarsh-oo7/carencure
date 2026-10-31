@@ -209,6 +209,7 @@ export default function HospitalDischargeCarePage() {
               <Link href="/wound-care" className="inline-flex items-center gap-1 text-teal-text font-semibold hover:underline">Wound care at home <ArrowRight className="w-3.5 h-3.5" /></Link>
               <Link href="/medication-management" className="inline-flex items-center gap-1 text-teal-text font-semibold hover:underline">Medication management <ArrowRight className="w-3.5 h-3.5" /></Link>
               <Link href="/referrals" className="inline-flex items-center gap-1 text-teal-text font-semibold hover:underline">Clinician referral info <ArrowRight className="w-3.5 h-3.5" /></Link>
+              <Link href="/referrals/print" className="inline-flex items-center gap-1 text-teal-text font-semibold hover:underline">Printable hospital referral slip (PDF) <ArrowRight className="w-3.5 h-3.5" /></Link>
             </div>
           </div>
           <div className="card-base p-6 md:p-8 bg-white">

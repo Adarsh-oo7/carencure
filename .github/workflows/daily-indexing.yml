@@ -1,0 +1,23 @@
+name: Daily Search Engine Indexing (Google & Bing)
+
+on:
+  schedule:
+    # 18:00 UTC = 2:00 AM Australian Western Standard Time (Perth AWST, UTC+8)
+    - cron: '0 18 * * *'
+  workflow_dispatch:
+
+jobs:
+  index:
+    name: Submit URLs to Google Indexing API & Bing Webmaster
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Execute automated indexing submission
+        run: node scripts/submit-indexing.mjs

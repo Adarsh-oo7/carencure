@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { PageHeader } from '@/components/page-header'
 import { CTASection } from '@/components/sections/cta'
 import { ServicePageSchema, FAQPageSchema } from '@/components/schema'
-import { Stethoscope, Building2, Heart, ClipboardList, Phone, Mail, ArrowRight } from 'lucide-react'
+import { Stethoscope, Building2, Heart, ClipboardList, Phone, Mail, ArrowRight, Printer } from 'lucide-react'
 
 import { ReferralForm } from '@/components/forms/referral-form'
 
@@ -195,9 +195,21 @@ export default function ReferralsPage() {
               <div className="sticky top-24 space-y-6">
                 <div className="card-base p-6">
                   <h3 className="text-navy font-bold text-xl mb-2">Submit Patient Referral</h3>
-                  <p className="text-xs text-body leading-relaxed mb-5">
-                    Clinicians, hospital teams, and family coordinators can submit referrals online below. Intake acknowledged within 24 hours.
-                  </p>
+                  <div className="mb-5 p-3 rounded-xl bg-teal-50 border border-teal-200/80 flex items-center justify-between gap-3">
+                    <div className="flex items-center gap-2.5">
+                      <Printer className="w-5 h-5 text-teal-accent flex-shrink-0" />
+                      <div>
+                        <p className="text-xs font-bold text-navy">Need a paper slip or PDF?</p>
+                        <p className="text-[11px] text-slate-600">Printable A4 referral form for hospital wards & GP clinics.</p>
+                      </div>
+                    </div>
+                    <Link
+                      href="/referrals/print"
+                      className="px-3 py-1.5 bg-navy hover:bg-navy-dark text-white text-xs font-semibold rounded-lg flex-shrink-0 transition-colors inline-flex items-center gap-1 shadow-sm"
+                    >
+                      Print Slip <ArrowRight className="w-3 h-3 text-teal-accent" />
+                    </Link>
+                  </div>
                   
                   <ReferralForm />
 
