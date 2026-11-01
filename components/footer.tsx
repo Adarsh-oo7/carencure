@@ -116,9 +116,12 @@ export function Footer() {
                 { label: 'Inglewood', href: '/locations/inglewood' },
                 { label: 'Leederville', href: '/locations/leederville' },
                 { label: 'Victoria Park', href: '/locations/victoria-park' },
-                { label: 'Joondalup', href: '/locations/joondalup' },
-                { label: 'Midland', href: '/locations/midland' },
-                { label: 'All Suburbs →', href: '/locations' },
+                { label: 'Baldivis', href: '/locations/baldivis' },
+                { label: 'Bunbury', href: '/locations/bunbury' },
+                { label: 'Busselton', href: '/locations/busselton' },
+                { label: 'Albany', href: '/locations/albany' },
+                { label: 'Geraldton', href: '/locations/geraldton' },
+                { label: 'All Suburbs & Regions →', href: '/locations' },
               ].map((link) => (
                 <div key={`${link.href}-${link.label}`}>
                   <Link

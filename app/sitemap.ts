@@ -58,6 +58,10 @@ const suburbs = [
   'huntingdale',
   'beckenham',
   'langford',
+  'bunbury',
+  'busselton',
+  'albany',
+  'geraldton',
 ]
 
 // Must match slug values in lib/blog-data.ts

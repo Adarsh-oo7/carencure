@@ -48,7 +48,8 @@ const baseSuburbs = [
 ]
 
 const metroSuburbs = [
-  { label: 'Rockingham & Baldivis', href: '/locations/rockingham' },
+  { label: 'Rockingham & Coastal', href: '/locations/rockingham' },
+  { label: 'Baldivis', href: '/locations/baldivis' },
   { label: 'Nedlands & Subiaco', href: '/locations/nedlands' },
   { label: 'Cottesloe & Claremont', href: '/locations/cottesloe' },
   { label: 'Applecross & Melville', href: '/locations/applecross' },
@@ -58,7 +59,14 @@ const metroSuburbs = [
   { label: 'Joondalup (North)', href: '/locations/joondalup' },
 ]
 
-const locationLinks = [...baseSuburbs, ...metroSuburbs]
+const regionalSuburbs = [
+  { label: 'Bunbury', href: '/locations/bunbury' },
+  { label: 'Busselton', href: '/locations/busselton' },
+  { label: 'Albany', href: '/locations/albany' },
+  { label: 'Geraldton', href: '/locations/geraldton' },
+]
+
+const locationLinks = [...baseSuburbs, ...metroSuburbs, ...regionalSuburbs]
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -311,11 +319,11 @@ export function Navigation() {
                   {locationsOpen && (
                     <div className="absolute top-full -left-20 pt-2 z-50">
                       <div
-                        className="w-[490px] bg-white rounded-2xl p-4 shadow-2xl border border-border animate-in fade-in slide-in-from-top-1 duration-150"
+                        className="w-[590px] bg-white rounded-2xl p-4 shadow-2xl border border-border animate-in fade-in slide-in-from-top-1 duration-150"
                         role="menu"
                         aria-labelledby="locations-menu-btn"
                       >
-                        <div className="grid grid-cols-2 gap-4">
+                        <div className="grid grid-cols-3 gap-3.5">
                           {/* Home Base Column */}
                           <div>
                             <div className="text-[11px] font-bold uppercase tracking-wider text-teal-text pb-1.5 mb-1.5 border-b border-border">
@@ -326,7 +334,7 @@ export function Navigation() {
                                 <Link
                                   key={link.href}
                                   href={link.href}
-                                  className="px-2.5 py-1.5 text-xs text-body hover:bg-surface hover:text-navy rounded font-medium transition-colors"
+                                  className="px-2 py-1 text-xs text-body hover:bg-surface hover:text-navy rounded font-medium transition-colors"
                                   role="menuitem"
                                   onClick={() => setLocationsOpen(false)}
                                 >
@@ -346,13 +354,36 @@ export function Navigation() {
                                 <Link
                                   key={link.href}
                                   href={link.href}
-                                  className="px-2.5 py-1.5 text-xs text-body hover:bg-surface hover:text-navy rounded font-medium transition-colors"
+                                  className="px-2 py-1 text-xs text-body hover:bg-surface hover:text-navy rounded font-medium transition-colors"
                                   role="menuitem"
                                   onClick={() => setLocationsOpen(false)}
                                 >
                                   {link.label}
                                 </Link>
                               ))}
+                            </div>
+                          </div>
+
+                          {/* Regional WA Column */}
+                          <div>
+                            <div className="text-[11px] font-bold uppercase tracking-wider text-teal-text pb-1.5 mb-1.5 border-b border-border">
+                              Regional WA Hubs
+                            </div>
+                            <div className="flex flex-col gap-0.5">
+                              {regionalSuburbs.map((link) => (
+                                <Link
+                                  key={link.href}
+                                  href={link.href}
+                                  className="px-2 py-1 text-xs text-body hover:bg-surface hover:text-navy rounded font-medium transition-colors"
+                                  role="menuitem"
+                                  onClick={() => setLocationsOpen(false)}
+                                >
+                                  {link.label}
+                                </Link>
+                              ))}
+                            </div>
+                            <div className="mt-3 p-2 rounded-lg bg-teal-50 border border-teal-200/60 text-[10px] text-slate-600 leading-tight">
+                              Hospital discharge transitions & clinical support across WA.
                             </div>
                           </div>
                         </div>

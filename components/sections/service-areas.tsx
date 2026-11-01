@@ -45,6 +45,10 @@ const suburbs = [
   { name: 'Shenton Park', href: '/locations/shenton-park' },
   { name: 'Dalkeith', href: '/locations/dalkeith' },
   { name: 'City Beach', href: '/locations/city-beach' },
+  { name: 'Bunbury', href: '/locations/bunbury' },
+  { name: 'Busselton', href: '/locations/busselton' },
+  { name: 'Albany', href: '/locations/albany' },
+  { name: 'Geraldton', href: '/locations/geraldton' },
 ]
 
 export function ServiceAreas() {

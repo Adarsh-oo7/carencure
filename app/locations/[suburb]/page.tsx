@@ -33,6 +33,9 @@ function getLocalText(data: SuburbData): string {
     'Inner East': `Our in-home nursing services are available to families in the inner-east region, providing professional clinical support by qualified Registered Nurses.`,
     'Northern Suburbs': `We extend our professional clinical nursing visits to the northern suburbs, ensuring access to registered nursing care close to home.`,
     'Eastern Suburbs': `Our clinical home nursing support covers the eastern corridor, providing registered nurse visits for wound management, injections, and health checks.`,
+    'South West WA': `Our clinical nursing team supports clients across Western Australia's South West region, delivering registered nurse home care, complex wound management, post-hospital recovery, and Support at Home coordination.`,
+    'Great Southern WA': `We provide dedicated registered nurse clinical care across the Great Southern region, supporting families with comprehensive in-home nursing, chronic condition monitoring, and palliative care.`,
+    'Mid West WA': `Our registered nurses deliver qualified in-home nursing care across the Mid West region, providing sterile wound care, medication support, and coordinated clinical care in your own home.`,
   };
 
   const basePhrase = regionPhrases[data.region] || `Our clinical home nursing services are available to residents across the Perth metropolitan area.`;
@@ -539,6 +542,47 @@ const suburbsMap: Record<string, SuburbData> = {
     localSpecificText: 'Langford is close to our Gosnells headquarters, between Thornlie and Beckenham. Many Langford residents have lived in the area for decades and want to stay in the family home — our Registered Nurses make that safer with regular health checks, medication management, wound care, and clear updates to family members and the treating GP.',
     fromBase: 'approx. 10 minutes',
   },
+  // ── Regional Western Australia Key Hubs ──
+  bunbury: {
+    id: 'bunbury',
+    name: 'Bunbury',
+    region: 'South West WA',
+    nearestHospital: 'Bunbury Regional Hospital & St John of God Bunbury Hospital',
+    description: 'Professional registered nurse in-home clinical care, aged care support, and complex nursing in Bunbury, Eaton, Australind, and Dalyellup. Coordinated discharge care with Bunbury Regional Hospital and St John of God Bunbury.',
+    surroundingSuburbs: 'East Bunbury, South Bunbury, Eaton, Australind, Dalyellup, and Carey Park',
+    localHealthcareFocus: 'Bunbury Hospital discharge care, complex wound dressings, NDIS clinical nursing, and Support at Home management',
+    localSpecificText: 'Bunbury is Western Australia\'s major South West hub. Care N Cure provides comprehensive registered nurse home visits across Bunbury, Eaton, Australind, Dalyellup, and South Bunbury. From complex surgical wound management following discharge from Bunbury Regional Hospital or St John of God Bunbury to regular medication administration, subcutaneous injections, catheter care, and Support at Home clinical nursing, our experienced AHPRA Registered Nurses deliver clinical excellence and family peace of mind directly in your home.',
+  },
+  busselton: {
+    id: 'busselton',
+    name: 'Busselton',
+    region: 'South West WA',
+    nearestHospital: 'Busselton Health Campus',
+    description: 'In-home clinical nursing care, aged care at home, and hospital discharge recovery in Busselton, Dunsborough, Geographe, and Vasse. Experienced AHPRA Registered Nurses for sterile wound care, medication management, and Support at Home.',
+    surroundingSuburbs: 'Dunsborough, Vasse, West Busselton, Geographe, and Broadwater',
+    localHealthcareFocus: 'elderly aged care at home, Busselton Health Campus discharge recovery, wound dressings, and medication safety',
+    localSpecificText: 'Busselton and the Geographe Bay region are home to many retirees and seniors who wish to age safely and comfortably in their own home. Care N Cure delivers dedicated registered nurse visits across Busselton, West Busselton, Vasse, Geographe, and Dunsborough. Working closely with Busselton Health Campus and local medical practices, our nurses handle post-operative surgical recovery, complex wound care, subcutaneous medications, and clinical health assessments so seniors can avoid unnecessary hospital readmissions.',
+  },
+  albany: {
+    id: 'albany',
+    name: 'Albany',
+    region: 'Great Southern WA',
+    nearestHospital: 'Albany Health Campus',
+    description: 'Registered nurse in-home clinical care, aged care at home, and chronic condition monitoring in Albany, Middleton Beach, and Spencer Park. Liaison with Albany Health Campus and Great Southern medical practices.',
+    surroundingSuburbs: 'Centennial Park, Middleton Beach, Spencer Park, Lockyer, Mount Melville, and Mira Mar',
+    localHealthcareFocus: 'Albany Health Campus post-discharge care, chronic condition management, sterile wound dressings, and palliative home nursing',
+    localSpecificText: 'Albany and the Great Southern community rely on dedicated healthcare continuity. Care N Cure provides registered nurse home care across Albany, Middleton Beach, Spencer Park, Centennial Park, and surrounding areas. We coordinate with treating GPs, specialists, and Albany Health Campus to deliver sterile wound care, medication administration, diabetes and vital signs tracking, and compassionate aged care at home for private, Support at Home, and NDIS participants.',
+  },
+  geraldton: {
+    id: 'geraldton',
+    name: 'Geraldton',
+    region: 'Mid West WA',
+    nearestHospital: 'Geraldton Regional Hospital & St John of God Geraldton Hospital',
+    description: 'Registered nurse in-home clinical care, aged care at home, sterile wound dressings, and Support at Home nursing in Geraldton, Bluff Point, and Wandina. Coordinated care with Geraldton Regional Hospital and local Mid West medical centres.',
+    surroundingSuburbs: 'Bluff Point, Beachlands, Wonthella, Mahomets Flats, Glenfield, and Wandina',
+    localHealthcareFocus: 'in-home clinical nursing, wound care, post-hospital recovery, Support at Home, and NDIS nursing oversight',
+    localSpecificText: 'Geraldton is the regional healthcare hub for Western Australia\'s Mid West. Whether you or a loved one are returning home from Geraldton Regional Hospital, St John of God Geraldton, or require regular clinical nursing visits at home in Geraldton, Bluff Point, Wandina, or Wonthella, Care N Cure provides qualified AHPRA Registered Nurse visits. We support private clients, Support at Home and Home Care Package recipients (associated provider), and NDIS participants with sterile wound dressings, subcutaneous injections, catheter management, and proactive GP communication.',
+  },
 }
 
 // Generate static params for all suburbs
@@ -630,6 +674,18 @@ export async function generateMetadata({ params }: { params: Promise<{ suburb: s
   } else if (suburb === 'cottesloe') {
     pageTitle = 'Home Nurse Cottesloe | Private Elderly Care & Companion Nursing | Care N Cure'
     pageDesc = 'Private nursing & aged care companion support in Cottesloe, Swanbourne & Peppermint Grove. AHPRA Registered Nurse coordinator. Call 1300 919 663.'
+  } else if (suburb === 'bunbury') {
+    pageTitle = 'Home Nurse Bunbury WA & In-Home Aged Care | Care N Cure'
+    pageDesc = 'Professional registered nurse home visits in Bunbury, Eaton & Australind. Bunbury Hospital discharge care, sterile wound dressings & NDIS nursing. Call 1300 919 663.'
+  } else if (suburb === 'busselton') {
+    pageTitle = 'Home Nurse Busselton WA & Community Nursing Care | Care N Cure'
+    pageDesc = 'In-home clinical nursing & aged care in Busselton, Dunsborough & Vasse. Busselton Health Campus post-hospital recovery, wound dressings & Support at Home. Call 1300 919 663.'
+  } else if (suburb === 'albany') {
+    pageTitle = 'Home Nurse Albany WA & In-Home Aged Care | Care N Cure'
+    pageDesc = 'AHPRA Registered Nurses providing in-home care in Albany, Middleton Beach & Spencer Park. Albany Health Campus discharge care, chronic illness & wound care. Call 1300 919 663.'
+  } else if (suburb === 'geraldton') {
+    pageTitle = 'Home Nurse Geraldton WA & In-Home Aged Care | Care N Cure'
+    pageDesc = 'Registered nurse visits & aged care at home in Geraldton, Bluff Point & Wandina. Sterile wound care, medication management & Geraldton Hospital discharge support. Call 1300 919 663.'
   }
 
   const customKeywords = [

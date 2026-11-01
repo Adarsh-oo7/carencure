@@ -83,6 +83,14 @@ const northernAndWesternSuburbs = [
   { name: 'Midland', href: '/locations/midland', description: 'Registered nurse home visits in Midland, Middle Swan, and Guildford.', distance: 'Eastern Corridor' },
 ]
 
+// Regional Western Australia Hubs — High client demand and hospital catchment coverage
+const regionalWAHubs = [
+  { name: 'Bunbury', href: '/locations/bunbury', description: 'Comprehensive in-home nursing, aged care support & Bunbury Hospital discharge care across Bunbury, Eaton, Australind and Dalyellup.', distance: 'South West Hub' },
+  { name: 'Busselton', href: '/locations/busselton', description: 'In-home clinical care, wound dressings & Support at Home nursing across Busselton, Dunsborough and Geographe Bay.', distance: 'South West Hub' },
+  { name: 'Albany', href: '/locations/albany', description: 'AHPRA registered nurse home care, chronic disease management & Albany Health Campus discharge care in the Great Southern.', distance: 'Great Southern Hub' },
+  { name: 'Geraldton', href: '/locations/geraldton', description: 'Clinical nursing care, sterile wound care & aged care at home across Geraldton, Bluff Point and Wandina.', distance: 'Mid West Hub' },
+]
+
 const hospitalPartners = [
   { name: 'Fiona Stanley Hospital', location: 'Murdoch', icon: Building2, desc: 'Coordinating safe discharges for south metro surgical and medical patients.' },
   { name: 'Sir Charles Gairdner Hospital', location: 'Nedlands', icon: Stethoscope, desc: 'Liaising with western suburbs discharge teams for orthopaedic and cardiac care.' },
@@ -228,6 +236,34 @@ export default function LocationsPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {northernAndWesternSuburbs.map((suburb) => (
+              <SuburbCard
+                key={suburb.name}
+                name={suburb.name}
+                href={suburb.href}
+                description={suburb.description}
+                distance={suburb.distance}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Regional Western Australia Hubs */}
+      <section className="section-py bg-surface border-t border-border">
+        <div className="section-container">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-teal-accent/15 border border-teal-accent/30 text-teal-dark text-xs font-bold uppercase tracking-wider mb-3">
+              <span>🌏 Regional Western Australia Care Network</span>
+            </div>
+            <h2 className="text-navy font-bold text-2xl md:text-3xl">Regional Western Australia Hubs</h2>
+            <div className="section-divider mx-auto" />
+            <p className="text-body text-base leading-relaxed">
+              Extending professional in-home clinical nursing, Support at Home coordination, and post-hospital recovery care to Western Australia&apos;s primary regional health centres.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {regionalWAHubs.map((suburb) => (
               <SuburbCard
                 key={suburb.name}
                 name={suburb.name}

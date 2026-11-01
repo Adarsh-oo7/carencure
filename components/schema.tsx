@@ -29,6 +29,7 @@ const AREA_SERVED = [
   'Cockburn Central', 'Success', 'Atwell', 'Bull Creek', 'Leeming',
   'Melville', 'Baldivis', 'Riverton', 'Huntingdale', 'Maddington',
   'Kenwick', 'Beckenham', 'Langford',
+  'Bunbury', 'Busselton', 'Albany', 'Geraldton',
 ]
 
 // ── MedicalOrganization (Homepage primary schema) ──────────────────────────
@@ -651,6 +652,16 @@ const suburbGeo: Record<string, SuburbGeoData> = {
   'shenton-park':  { lat: -31.961,  lng: 115.803,  postCode: '6008', nearbySuburbs: 'Daglish, Subiaco, Jolimont' },
   dalkeith:        { lat: -32.001,  lng: 115.801,  postCode: '6009', nearbySuburbs: 'Nedlands, Claremont, Crawley' },
   'city-beach':    { lat: -31.936,  lng: 115.761,  postCode: '6015', nearbySuburbs: 'Floreat, Wembley Downs, Scarborough' },
+  baldivis:        { lat: -32.336,  lng: 115.811,  postCode: '6171', nearbySuburbs: 'Wellard, Warnbro, Rockingham, Karnup' },
+  maddington:      { lat: -32.052,  lng: 115.989,  postCode: '6109', nearbySuburbs: 'Orange Grove, Martin, Kenwick, Gosnells' },
+  kenwick:         { lat: -32.036,  lng: 115.975,  postCode: '6107', nearbySuburbs: 'Wattle Grove, Maddington, Beckenham' },
+  huntingdale:     { lat: -32.067,  lng: 115.978,  postCode: '6110', nearbySuburbs: 'Southern River, Gosnells, Thornlie' },
+  beckenham:       { lat: -32.022,  lng: 115.961,  postCode: '6107', nearbySuburbs: 'Cannington, Kenwick, Langford' },
+  langford:        { lat: -32.038,  lng: 115.945,  postCode: '6147', nearbySuburbs: 'Thornlie, Beckenham, Kenwick' },
+  bunbury:         { lat: -33.327,  lng: 115.641,  postCode: '6230', nearbySuburbs: 'East Bunbury, Eaton, Australind, Dalyellup' },
+  busselton:       { lat: -33.655,  lng: 115.347,  postCode: '6280', nearbySuburbs: 'Dunsborough, Vasse, West Busselton, Geographe' },
+  albany:          { lat: -35.027,  lng: 117.884,  postCode: '6330', nearbySuburbs: 'Centennial Park, Middleton Beach, Spencer Park, Lockyer' },
+  geraldton:       { lat: -28.777,  lng: 114.614,  postCode: '6530', nearbySuburbs: 'Bluff Point, Beachlands, Wandina, Wonthella' },
 }
 
 export function SuburbPageSchema({ suburb, url }: { suburb: string; url: string }) {
