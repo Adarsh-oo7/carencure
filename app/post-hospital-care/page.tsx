@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { PageHeader } from '@/components/page-header'
 import { CTASection } from '@/components/sections/cta'
-import { ServicePageSchema, FAQPageSchema } from '@/components/schema'
+import { ServicePageSchema } from '@/components/schema'
 import { ContactForm } from '@/components/contact-form'
 import { ClipboardCheck, Heart, Shield, RefreshCw, CheckCircle } from 'lucide-react'
 
@@ -194,14 +195,14 @@ export default function PostHospitalCare() {
               { label: 'Hospital Discharge Referrals', href: '/hospital-discharge-care-perth' },
               { label: 'Support at Home Family Guide', href: '/support-at-home-guide' },
             ].map(({ label, href }) => (
-              <a
+              <Link
                 key={href}
                 href={href}
                 className="card-base p-4 text-sm font-semibold text-navy hover:text-teal-accent flex items-center gap-2 transition-colors"
               >
                 <span className="text-teal-accent">→</span>
                 {label}
-              </a>
+              </Link>
             ))}
           </div>
         </div>

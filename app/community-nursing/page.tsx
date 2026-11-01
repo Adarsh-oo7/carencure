@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { PageHeader } from '@/components/page-header'
 import { CTASection } from '@/components/sections/cta'
-import { ServicePageSchema, FAQPageSchema } from '@/components/schema'
+import { ServicePageSchema } from '@/components/schema'
 import { ContactForm } from '@/components/contact-form'
 import { CtaUncertaintyReducer } from '@/components/sections/cta-uncertainty-reducer'
 import {
@@ -108,7 +108,6 @@ export default function CommunityNursingPage() {
           { name: 'Community Nursing', item: 'https://carencure.com.au/community-nursing' },
         ]}
       />
-      <FAQPageSchema faqs={faqs} />
 
       <PageHeader
         title="Community Nursing Care Perth"

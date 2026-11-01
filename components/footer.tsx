@@ -91,7 +91,7 @@ export function Footer() {
 
           {/* Locations */}
           <div>
-            <p className="font-semibold text-white text-base mb-4">Perth Locations</p>
+            <p className="font-semibold text-white text-base mb-4">Locations & Regional WA</p>
             <div className="grid grid-cols-2 gap-x-4 gap-y-2.5">
               {[
                 { label: 'Gosnells (HQ)', href: '/locations/gosnells' },

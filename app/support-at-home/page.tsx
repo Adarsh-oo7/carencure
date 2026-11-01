@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { PageHeader } from '@/components/page-header'
 import { CTASection } from '@/components/sections/cta'
-import { ServicePageSchema, FAQPageSchema } from '@/components/schema'
+import { ServicePageSchema } from '@/components/schema'
 import { ContactForm } from '@/components/contact-form'
 import { HeartHandshake, ShieldCheck, Home, Car, CheckCircle, ArrowRight } from 'lucide-react'
 import { getFundedPagesByHub } from '@/lib/funded-pages'
@@ -246,14 +246,14 @@ export default function SupportAtHome() {
               { label: 'Free Support at Home Family Guide', href: '/support-at-home-guide' },
               { label: 'Hospital Discharge Nursing', href: '/hospital-discharge-care-perth' },
             ].map(({ label, href }) => (
-              <a
+              <Link
                 key={href}
                 href={href}
                 className="card-base p-4 text-sm font-semibold text-navy hover:text-teal-accent flex items-center gap-2 transition-colors"
               >
                 <span className="text-teal-accent">→</span>
                 {label}
-              </a>
+              </Link>
             ))}
           </div>
         </div>

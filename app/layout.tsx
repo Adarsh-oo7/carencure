@@ -81,6 +81,17 @@ export const metadata: Metadata = {
   alternates: {
     canonical: './',
   },
+  verification: {
+    other: {
+      'msvalidate.01': 'DA5104495A63BDB0DC26BCB169A94A40',
+    },
+  },
+  other: {
+    'geo.region': 'AU-WA',
+    'geo.placename': 'Gosnells, Perth, WA',
+    'geo.position': '-32.0713;116.0021',
+    'ICBM': '-32.0713, 116.0021',
+  },
 }
 
 export default function RootLayout({
@@ -95,9 +106,10 @@ export default function RootLayout({
         <meta name="geo.placename" content="Gosnells, Perth, WA" />
         <meta name="geo.position" content="-32.0713;116.0021" />
         <meta name="ICBM" content="-32.0713, 116.0021" />
+        <meta name="msvalidate.01" content="DA5104495A63BDB0DC26BCB169A94A40" />
         <meta
           httpEquiv="Content-Security-Policy"
-          content="default-src 'self'; frame-src 'self' https://www.google.com https://*.google.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://va.vercel-scripts.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; connect-src 'self' https://vitals.vercel-insights.com https://*.vercel-analytics.com https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://cloudflareinsights.com; font-src 'self' data: https://fonts.gstatic.com;"
+          content="default-src 'self'; frame-src 'self' https://www.google.com https://*.google.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://va.vercel-scripts.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; connect-src 'self' https://formsubmit.co https://vitals.vercel-insights.com https://*.vercel-analytics.com https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://cloudflareinsights.com; font-src 'self' data: https://fonts.gstatic.com; form-action 'self' https://formsubmit.co;"
         />
         {/* Google Analytics 4 — G-STW2MFLRC5 */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-STW2MFLRC5" />

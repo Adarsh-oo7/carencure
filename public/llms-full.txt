@@ -41,12 +41,13 @@ Care N Cure provides fully transparent, published hourly pricing with no hidden 
 - Palliative & End-of-Life Home Support: Compassionate, dignified pain protocol management, syringe driver monitoring, and respite support in coordination with community palliative teams.
 
 ## Geographic Coverage Directory
-Care N Cure services all Perth metropolitan local government areas (LGAs) and suburbs, including:
+Care N Cure services Perth metropolitan local government areas (LGAs) and key regional Western Australia centres, including:
+- City of Gosnells (Headquarters): Gosnells, Huntingdale, Maddington, Kenwick, Beckenham, Langford, Thornlie.
 - City of Canning: Canning Vale, Willetton, Riverton, Rossmoyne, Shelley.
 - City of Armadale: Harrisdale, Piara Waters, Southern River, Forrestdale, Armadale, Kelmscott, Seville Grove.
-- City of Gosnells: Thornlie, Gosnells, Huntingdale, Maddington.
-- City of Cockburn: Cockburn Central, Success, Atwell, Aubin Grove, Coogee.
+- City of Cockburn & Rockingham Corridor: Cockburn Central, Success, Atwell, Aubin Grove, Coogee, Rockingham, Baldivis.
 - City of Melville: Applecross, Mount Pleasant, Booragoon, Melville, Bull Creek, Leeming, Bicton.
 - City of Fremantle: Fremantle, East Fremantle, South Fremantle, Beaconsfield.
 - Western Suburbs: Nedlands, Dalkeith, Subiaco, Cottesloe, Claremont, Shenton Park, Floreat, City Beach.
 - Inner Perth & North: Perth CBD, South Perth, Victoria Park, Como, Mount Lawley, Inglewood, Leederville, Wembley, Joondalup, Scarborough, Karrinyup.
+- Regional Western Australia Hubs: Bunbury (South West WA), Busselton (South West WA / Margaret River), Albany (Great Southern WA), Geraldton (Mid West WA).

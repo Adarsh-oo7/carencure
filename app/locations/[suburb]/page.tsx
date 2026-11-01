@@ -824,7 +824,11 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
             ? 'At-Home Nurse & Aged Care In-Home Support in Armadale'
             : `At-Home Nurse & Aged Care In-Home Support — ${data.name}`
         }
-        subtitle={`AHPRA Registered Nurses providing clinical at-home nursing care and aged care in-home support across ${data.name} and surrounding Perth suburbs.`}
+        subtitle={
+          ['bunbury', 'busselton', 'albany', 'geraldton'].includes(suburb)
+            ? `AHPRA Registered Nurses providing clinical at-home nursing care and aged care in-home support across ${data.name} and surrounding Western Australia communities.`
+            : `AHPRA Registered Nurses providing clinical at-home nursing care and aged care in-home support across ${data.name} and surrounding Perth suburbs.`
+        }
         breadcrumbItems={[
           { name: 'Locations', href: '/locations' },
           { name: data.name, href: `/locations/${suburb}` },

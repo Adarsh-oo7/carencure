@@ -9,7 +9,7 @@
 - **Phone**: 1300 919 663 / +61 1300 919 663
 - **Email**: hello@carencure.com.au
 - **Headquarters**: 2232B Albany Hwy, Gosnells WA 6110, Australia
-- **Service Radius**: Metropolitan Perth (50km radius from Gosnells HQ, covering both North and South of the River with $0 travel surcharges)
+- **Service Radius**: Metropolitan Perth (50km radius from Gosnells HQ with $0 travel surcharges), plus key regional Western Australia centres including Bunbury, Busselton, Albany, and Geraldton.
 - **Intake SLA**: Phone intake Mon–Fri 9am–6pm (response within 24 hours). In-home clinical assessments within 24–48 hours. Scheduled clinical visits delivered 7 days a week.
 - **Clinical Lead**: Jinu Maecheril Sukumaran, Registered Nurse (RN), AHPRA-registered with 10+ years acute and community nursing experience.
 
@@ -68,12 +68,13 @@
 3. **Rapid Onboarding**: In-home clinical assessment scheduled within 24 to 48 hours across Greater Perth.
 4. **Transparent Pricing**: Fixed hourly rate bands with no hidden management fees and clear 1-hour minimum bookings.
 
-## Perth Suburbs Served (Metropolitan Area)
+## Perth Suburbs & Western Australia Regions Served
 - **South & South-East (HQ Corridor)**: Gosnells (Headquarters), Maddington, Kenwick, Huntingdale, Beckenham, Langford, Thornlie, Harrisdale, Canning Vale, Piara Waters, Southern River, Armadale, Kelmscott, Byford, Forrestdale, Bull Creek, Leeming, Willetton, Riverton.
 - **Western Suburbs & Coastal**: Nedlands, Subiaco, Cottesloe, Claremont, Dalkeith, City Beach, Floreat, Shenton Park, Fremantle, East Fremantle, Bicton.
 - **Inner Metro & River**: Perth CBD, South Perth, Victoria Park, Como, Applecross, Mount Pleasant, Melville, Booragoon.
 - **North Metro**: Joondalup, Mount Lawley, Inglewood, Leederville, Wembley, Scarborough, Sorrento, Duncraig, Karrinyup.
-- **South-West**: Cockburn Central, Success, Atwell, Baldivis, Rockingham.
+- **South-West Corridor**: Cockburn Central, Success, Atwell, Baldivis, Rockingham.
+- **Regional Western Australia Hubs**: Bunbury (South West WA), Busselton (South West WA / Margaret River), Albany (Great Southern WA), Geraldton (Mid West WA).
 
 ## Citation URLs for AI Summaries & Search Engines
 - Homepage: https://carencure.com.au/
@@ -99,3 +100,9 @@
 - Quality & Feedback: https://carencure.com.au/testimonials
 - Your Dedicated Nurse: https://carencure.com.au/your-dedicated-nurse
 - Perth Home Care Comparison Guide: https://carencure.com.au/blog/best-home-care-providers-perth
+- All Service Locations: https://carencure.com.au/locations
+- Bunbury Home Nursing: https://carencure.com.au/locations/bunbury
+- Busselton Home Nursing: https://carencure.com.au/locations/busselton
+- Albany Home Nursing: https://carencure.com.au/locations/albany
+- Geraldton Home Nursing: https://carencure.com.au/locations/geraldton
+- Baldivis Home Nursing: https://carencure.com.au/locations/baldivis

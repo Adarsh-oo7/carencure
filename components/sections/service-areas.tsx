@@ -2,6 +2,12 @@ import Link from 'next/link'
 import { MapPin, ArrowRight, ShieldCheck, Navigation } from 'lucide-react'
 
 const suburbs = [
+  { name: 'Gosnells (HQ)', href: '/locations/gosnells' },
+  { name: 'Maddington', href: '/locations/maddington' },
+  { name: 'Kenwick', href: '/locations/kenwick' },
+  { name: 'Huntingdale', href: '/locations/huntingdale' },
+  { name: 'Beckenham', href: '/locations/beckenham' },
+  { name: 'Langford', href: '/locations/langford' },
   { name: 'Harrisdale', href: '/locations/harrisdale' },
   { name: 'Piara Waters', href: '/locations/piara-waters' },
   { name: 'Southern River', href: '/locations/southern-river' },
@@ -9,23 +15,22 @@ const suburbs = [
   { name: 'Thornlie', href: '/locations/thornlie' },
   { name: 'Kelmscott', href: '/locations/kelmscott' },
   { name: 'Byford', href: '/locations/byford' },
+  { name: 'Armadale', href: '/locations/armadale' },
   { name: 'Willetton', href: '/locations/willetton' },
   { name: 'Cockburn Central', href: '/locations/cockburn-central' },
   { name: 'Bull Creek', href: '/locations/bull-creek' },
   { name: 'Melville', href: '/locations/melville' },
   { name: 'Baldivis', href: '/locations/baldivis' },
+  { name: 'Rockingham', href: '/locations/rockingham' },
   { name: 'Nedlands', href: '/locations/nedlands' },
   { name: 'Subiaco', href: '/locations/subiaco' },
   { name: 'Cottesloe', href: '/locations/cottesloe' },
   { name: 'Claremont', href: '/locations/claremont' },
   { name: 'Mount Lawley', href: '/locations/mount-lawley' },
   { name: 'Inglewood', href: '/locations/inglewood' },
-  { name: 'City of Gosnells', href: '/locations/gosnells' },
-  { name: 'City of Armadale', href: '/locations/armadale' },
   { name: 'Applecross', href: '/locations/applecross' },
   { name: 'Booragoon', href: '/locations/booragoon' },
   { name: 'Canning Vale', href: '/locations/canning-vale' },
-  { name: 'Rockingham', href: '/locations/rockingham' },
   { name: 'Fremantle', href: '/locations/fremantle' },
   { name: 'South Perth', href: '/locations/south-perth' },
   { name: 'Wembley', href: '/locations/wembley' },
@@ -64,10 +69,10 @@ export function ServiceAreas() {
               50km Service Radius — NO Transportation Charges
             </span>
           </div>
-          <h2 id="areas-heading" className="text-white text-3xl font-bold mb-4">Perth Metropolitan Suburbs We Cover</h2>
+          <h2 id="areas-heading" className="text-white text-3xl font-bold mb-4">Perth Metropolitan Suburbs & Regional WA Hubs We Cover</h2>
           <div className="w-12 h-1 rounded-full mx-auto mb-5" style={{ background: 'var(--teal-accent)' }} />
           <p style={{ color: 'rgba(255,255,255,0.85)' }} className="max-w-2xl mx-auto text-lg leading-relaxed">
-            Care N Cure provides registered nurse home visits within a <strong>50km radius</strong> of our Perth headquarters with <strong>ZERO travel or transportation surcharges</strong> for our clients.
+            Care N Cure provides registered nurse home visits within a <strong>50km radius</strong> of our Gosnells headquarters with <strong>ZERO travel surcharges</strong>, plus scheduled home nursing visits and hospital transition care across key regional Western Australia centres.
           </p>
         </div>
 
@@ -123,7 +128,7 @@ export function ServiceAreas() {
             className="inline-flex items-center gap-2 font-semibold px-6 py-3 rounded-xl transition-all shadow-lg hover:brightness-110"
             style={{ background: 'var(--teal-accent)', color: 'var(--navy-dark)', minHeight: 48 }}
           >
-            Explore all Perth locations
+            Explore all locations & regional hubs
             <ArrowRight className="w-5 h-5" />
           </Link>
         </div>

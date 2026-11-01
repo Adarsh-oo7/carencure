@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { PageHeader } from '@/components/page-header'
 import { CTASection } from '@/components/sections/cta'
-import { ServicePageSchema, FAQPageSchema } from '@/components/schema'
+import { ServicePageSchema } from '@/components/schema'
 import { ContactForm } from '@/components/contact-form'
 import {
   Heart,
@@ -106,7 +106,6 @@ export default function ElderlyPrivateNursing() {
           { name: 'Elderly Care', item: 'https://carencure.com.au/private-nursing/elderly-care' },
         ]}
       />
-      <FAQPageSchema faqs={faqs} />
 
       <PageHeader
         title="Elderly Nursing Care at Home in Perth"

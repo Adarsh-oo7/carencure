@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { PageHeader } from '@/components/page-header'
 import { CTASection } from '@/components/sections/cta'
-import { ServicePageSchema, FAQPageSchema } from '@/components/schema'
+import { ServicePageSchema } from '@/components/schema'
 import { ContactForm } from '@/components/contact-form'
 import {
   Heart,
@@ -99,7 +99,6 @@ export default function AgedCareAtHomePerthPage() {
           { name: 'Aged Care Agency Perth', item: 'https://carencure.com.au/aged-care-at-home-perth' },
         ]}
       />
-      <FAQPageSchema faqs={faqs} />
 
       {/* Page Header */}
       <PageHeader

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { PageHeader } from '@/components/page-header'
 import { CTASection } from '@/components/sections/cta'
-import { ServicePageSchema, FAQPageSchema } from '@/components/schema'
+import { ServicePageSchema } from '@/components/schema'
 import { ContactForm } from '@/components/contact-form'
 import { Award, ShieldCheck, HeartPulse, UserCheck, CheckCircle, CheckCircle2 } from 'lucide-react'
 
@@ -293,14 +293,14 @@ export default function HomecarePackages() {
               { label: 'Support at Home', href: '/support-at-home' },
               { label: 'Funded Care Options', href: '/funded-care' },
             ].map(({ label, href }) => (
-              <a
+              <Link
                 key={href}
                 href={href}
                 className="card-base p-4 text-sm font-semibold text-navy hover:text-teal-accent flex items-center gap-2 transition-colors"
               >
                 <span className="text-teal-accent">→</span>
                 {label}
-              </a>
+              </Link>
             ))}
           </div>
         </div>

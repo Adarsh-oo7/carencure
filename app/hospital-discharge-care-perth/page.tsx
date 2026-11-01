@@ -33,14 +33,18 @@ export const metadata: Metadata = {
 }
 
 const hospitals = [
-  { name: 'Fiona Stanley Hospital', area: 'Murdoch', suburbs: 'Cockburn, Bull Creek, Willetton, Melville' },
-  { name: 'Armadale Kelmscott Memorial Hospital', area: 'Mount Nasura', suburbs: 'Gosnells, Armadale, Kelmscott, Byford' },
-  { name: 'Bentley Hospital', area: 'Bentley', suburbs: 'Cannington, Beckenham, Kenwick, Victoria Park' },
-  { name: 'St John of God Murdoch', area: 'Murdoch', suburbs: 'Southern suburbs & Canning Vale' },
-  { name: 'Royal Perth Hospital', area: 'Perth CBD', suburbs: 'Inner city, South Perth, Mount Lawley' },
-  { name: 'Sir Charles Gairdner Hospital', area: 'Nedlands', suburbs: 'Western suburbs, Subiaco, Claremont' },
-  { name: 'Rockingham General Hospital', area: 'Cooloongup', suburbs: 'Rockingham, Baldivis, Safety Bay' },
-  { name: 'Joondalup Health Campus', area: 'Joondalup', suburbs: 'Northern suburbs' },
+  { name: 'Fiona Stanley Hospital', area: 'Murdoch', suburbs: 'Cockburn, Bull Creek, Willetton, Melville', href: '/locations/cockburn-central' },
+  { name: 'Armadale Kelmscott Memorial Hospital', area: 'Mount Nasura', suburbs: 'Gosnells, Armadale, Kelmscott, Byford', href: '/locations/armadale' },
+  { name: 'Bentley Hospital', area: 'Bentley', suburbs: 'Cannington, Beckenham, Kenwick, Victoria Park', href: '/locations/beckenham' },
+  { name: 'St John of God Murdoch', area: 'Murdoch', suburbs: 'Southern suburbs & Canning Vale', href: '/locations/canning-vale' },
+  { name: 'Royal Perth Hospital', area: 'Perth CBD', suburbs: 'Inner city, South Perth, Mount Lawley', href: '/locations/south-perth' },
+  { name: 'Sir Charles Gairdner Hospital', area: 'Nedlands', suburbs: 'Western suburbs, Subiaco, Claremont', href: '/locations/nedlands' },
+  { name: 'Rockingham General Hospital', area: 'Cooloongup', suburbs: 'Rockingham, Baldivis, Safety Bay', href: '/locations/baldivis' },
+  { name: 'Joondalup Health Campus', area: 'Joondalup', suburbs: 'Northern suburbs', href: '/locations/joondalup' },
+  { name: 'Bunbury Regional Hospital', area: 'Bunbury (South West)', suburbs: 'Bunbury, Eaton, Australind, Dalyellup', href: '/locations/bunbury' },
+  { name: 'Busselton Health Campus', area: 'Busselton (South West)', suburbs: 'Busselton, Dunsborough, Vasse', href: '/locations/busselton' },
+  { name: 'Albany Health Campus', area: 'Albany (Great Southern)', suburbs: 'Albany, Spencer Park, Middleton Beach', href: '/locations/albany' },
+  { name: 'Geraldton Regional Hospital', area: 'Geraldton (Mid West)', suburbs: 'Geraldton, Bluff Point, Wandina', href: '/locations/geraldton' },
 ]
 
 const firstWeekRisks = [
@@ -150,23 +154,27 @@ export default function HospitalDischargeCarePage() {
       <section className="section-py bg-surface">
         <div className="section-container">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-navy font-bold text-2xl md:text-3xl">Coming Home From a Perth Hospital</h2>
+            <h2 className="text-navy font-bold text-2xl md:text-3xl">Coming Home From Hospital in WA</h2>
             <div className="section-divider mx-auto" />
             <p className="text-body text-base leading-relaxed">
-              Our nurses visit homes across metropolitan Perth from our headquarters at <strong>2232B Albany Hwy, Gosnells</strong>, with $0 travel surcharge within 50km.
+              Our nurses visit homes across metropolitan Perth from our headquarters at <strong>2232B Albany Hwy, Gosnells</strong> ($0 travel surcharge within 50km), as well as supporting transitional discharge recovery across regional Western Australia centres.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
             {hospitals.map((h) => (
-              <div key={h.name} className="bg-white rounded-2xl border border-border p-5 shadow-sm">
-                <Hospital className="w-5 h-5 text-teal-accent mb-2" />
-                <h3 className="text-navy font-bold text-sm">{h.name}</h3>
+              <Link
+                key={h.name}
+                href={h.href}
+                className="bg-white rounded-2xl border border-border p-5 shadow-sm hover:border-teal-accent hover:shadow-md transition-all group block"
+              >
+                <Hospital className="w-5 h-5 text-teal-accent mb-2 group-hover:scale-110 transition-transform" />
+                <h3 className="text-navy font-bold text-sm group-hover:text-teal-text transition-colors">{h.name}</h3>
                 <p className="text-xs text-body mt-0.5">{h.area}</p>
                 <p className="text-xs text-body mt-2 flex items-start gap-1.5">
                   <MapPin className="w-3.5 h-3.5 text-teal-accent shrink-0 mt-0.5" />
                   {h.suburbs}
                 </p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

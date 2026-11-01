@@ -691,6 +691,9 @@ export function SuburbPageSchema({ suburb, url }: { suburb: string; url: string 
     )
   }
 
+  const isRegional = ['bunbury', 'busselton', 'albany', 'geraldton'].includes(slug)
+  const regionLabel = isRegional ? `${suburb}, WA` : `${suburb}, Perth WA`
+
   const schema = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -700,7 +703,7 @@ export function SuburbPageSchema({ suburb, url }: { suburb: string; url: string 
         name: `Care N Cure - Private Nursing ${suburb}`,
         alternateName: `The Nurse Who Knows You - ${suburb}`,
         url: `${SITE_URL}${url}`,
-        description: `Registered nurse home care services in ${suburb}, Perth WA. Private nursing, wound care, and medication management with dedicated nurse coordinators serving ${suburb} and nearby ${geo.nearbySuburbs}.`,
+        description: `Registered nurse home care services in ${regionLabel}. Private nursing, wound care, and medication management with dedicated nurse coordinators serving ${suburb} and nearby ${geo.nearbySuburbs}.`,
         address: {
           '@type': 'PostalAddress',
           addressLocality: suburb,
@@ -722,12 +725,12 @@ export function SuburbPageSchema({ suburb, url }: { suburb: string; url: string 
             latitude: geo.lat,
             longitude: geo.lng,
           },
-          geoRadius: '8000',
+          geoRadius: isRegional ? '25000' : '8000',
           description: `${suburb}, ${geo.nearbySuburbs}`,
         },
         priceRange: '$$',
         openingHours: ['Mo-Fr 09:00-18:00', 'Sa-Su 09:00-17:00'],
-        hasMap: `https://www.google.com/maps/search/Care+N+Cure+${encodeURIComponent(suburb)}+Perth`,
+        hasMap: `https://www.google.com/maps/search/Care+N+Cure+${encodeURIComponent(suburb)}+WA`,
         parentOrganization: {
           '@id': `${SITE_URL}/#medicalorg`,
         },
