@@ -60,7 +60,7 @@ function getAllSiteUrls() {
   // Funded landing pages
   const fundedPagesCode = fs.readFileSync('lib/funded-pages.ts', 'utf8')
   const fundedMatches = [...fundedPagesCode.matchAll(/slug:\s*'([^']+)',\s*hub:\s*'([^']+)'/g)]
-    .map(m => `${SITE_URL}/${m[2] === 'support-at-home' ? 'support-at-home' : 'ndis-nursing'}/${m[1]}`)
+    .map(m => `${SITE_URL}/${m[2] === 'sah' ? 'support-at-home' : 'ndis-nursing'}/${m[1]}`)
 
   const allUrls = Array.from(new Set([...staticMatches, ...fundedMatches, ...suburbs, ...blogs]))
     .filter(u => u.startsWith('https://carencure.com.au') && !u.includes('${'))
