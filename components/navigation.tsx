@@ -13,6 +13,8 @@ const clinicalServices = [
   { label: 'Private Nursing at Home', href: '/private-nursing', desc: '1-on-1 dedicated clinical nursing visits' },
   { label: 'Hospital Discharge Nursing', href: '/hospital-discharge-care-perth', desc: 'Urgent 24–48h nurse start after hospital discharge' },
   { label: 'Wound Care at Home', href: '/wound-care', desc: 'Sterile surgical & chronic wound dressings' },
+  { label: 'Catheter & Continence Care', href: '/catheter-care-perth', desc: 'In-home IDC/SPC changes, flushes & stoma support' },
+  { label: 'Palliative Home Nursing', href: '/palliative-care-perth', desc: 'Comfort care, symptom checks & respite at home' },
   { label: 'Medication Management', href: '/medication-management', desc: 'Administration, Webster-pak & safety reviews' },
   { label: 'Post-Hospital Recovery Care', href: '/post-hospital-care', desc: 'Safe transitions home after hospital stay' },
   { label: 'Mobility & Rehab Support', href: '/mobility-support', desc: 'Gentle rehabilitation & fall prevention' },
@@ -21,6 +23,7 @@ const clinicalServices = [
 
 const agedCareServices = [
   { label: 'Aged Care at Home Perth', href: '/aged-care-at-home-perth', desc: 'Comprehensive senior home care in Perth' },
+  { label: 'Dementia Care at Home', href: '/dementia-care-perth', desc: 'One Dedicated Nurse model for memory care' },
   { label: 'Support at Home (2026)', href: '/support-at-home', desc: 'Guidance & care under the new framework' },
   { label: 'Support at Home 2026 Guide', href: '/support-at-home-guide', desc: 'Free downloadable family guide & budget rules' },
   { label: 'Home Care Packages (HCP)', href: '/homecare-packages', desc: 'Self-managed & provider-managed support' },
@@ -133,22 +136,22 @@ export function Navigation() {
             <div className="hidden md:flex items-center gap-4 lg:gap-6 text-[11px] lg:text-xs text-white/90 font-medium">
               <span className="inline-flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-teal-accent" />
-                Led by Perth Registered Nurses
+                ★ 5.0 Google Rated · AHPRA RNs
               </span>
               <span className="inline-flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-teal-accent" />
-                Support at Home Clinical Partner
+                From $110/hr · $0 Travel (50km)
               </span>
               <span className="inline-flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-teal-accent" />
-                Partnering with Trilogy Care
+                0% SaH Clinical Co-Pay (Trilogy Care Partner)
               </span>
             </div>
 
             {/* Mobile / Tablet Left */}
             <div className="flex md:hidden items-center gap-1.5 text-[11px] text-white/90 font-medium truncate">
               <span className="w-1.5 h-1.5 rounded-full bg-teal-accent shrink-0" />
-              <span className="truncate">Perth Nurse-Led · Gosnells HQ · All Suburbs</span>
+              <span className="truncate">From $110/hr · $0 Travel (50km) · 24–48h Start</span>
             </div>
 
             {/* Right: Phone & Location Quick Info (Desktop / Tablet) */}
@@ -396,7 +399,7 @@ export function Navigation() {
                             className="text-teal-text font-bold hover:underline"
                             onClick={() => setLocationsOpen(false)}
                           >
-                            View All 43+ Suburbs →
+                            View All 52+ Locations →
                           </Link>
                         </div>
                       </div>
@@ -436,19 +439,26 @@ export function Navigation() {
                 </Link>
               </div>
 
-              {/* Desktop CTA — Clinical Phone Action */}
-              <div className="hidden lg:flex items-center shrink-0">
+              {/* Desktop CTA — Dual High-Converting Intake Actions */}
+              <div className="hidden lg:flex items-center gap-2 shrink-0">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center bg-navy hover:bg-navy-light text-white font-bold text-xs px-3.5 py-2.5 rounded-xl shadow-xs transition-all shrink-0 cursor-pointer whitespace-nowrap"
+                  id="nav-book-cta"
+                >
+                  Free 24–48h Assessment
+                </Link>
                 <a
                   href={PHONE_HREF}
-                  className="inline-flex items-center gap-2.5 bg-teal-accent hover:bg-teal-dark text-navy font-bold text-sm px-4 py-2 rounded-xl shadow-sm hover:shadow transition-all group shrink-0 cursor-pointer"
+                  className="inline-flex items-center gap-2 bg-teal-accent hover:bg-teal-dark text-navy font-bold text-sm px-3.5 py-2 rounded-xl shadow-sm hover:shadow transition-all group shrink-0 cursor-pointer"
                   id="nav-call-cta"
                   aria-label="Call Registered Nurse Team: 1300 919 663"
                 >
-                  <div className="w-8 h-8 rounded-lg bg-navy/10 flex items-center justify-center group-hover:bg-navy/15 transition-colors shrink-0">
+                  <div className="w-7 h-7 rounded-lg bg-navy/10 flex items-center justify-center group-hover:bg-navy/15 transition-colors shrink-0">
                     <Phone className="w-4 h-4 text-navy" />
                   </div>
                   <div className="flex flex-col text-left leading-tight">
-                    <span className="text-[10px] font-extrabold uppercase tracking-wider text-navy/70">Nurse Intake Desk</span>
+                    <span className="text-[9px] font-extrabold uppercase tracking-wider text-navy/75">Speak to an RN</span>
                     <span className="text-sm font-extrabold text-navy tracking-tight">1300 919 663</span>
                   </div>
                 </a>

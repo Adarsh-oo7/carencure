@@ -24,27 +24,21 @@ export const metadata: Metadata = {
     absolute: 'Elderly Nursing Care at Home Perth | At Home Nurses for Elderly | Care N Cure',
   },
   description:
-    'Caring for an elderly parent in Perth? Care N Cure provides dedicated AHPRA Registered Nurses for in-home elderly care — wound dressing, medication safety, health monitoring & HCP/Support at Home funding. No referral needed. Call 1300 919 663.',
+    'In-home elderly nursing care in Perth from $110/hr with $0 travel fees within 50km. Dedicated AHPRA Registered Nurse for ageing parents — medication safety, dementia support, palliative care & Support at Home. Call 1300 919 663.',
   keywords: [
     'at home nurse for elderly perth',
-    'at home nurse for elderly',
-    'private nurse for elderly perth',
     'private in home care for the elderly perth',
     'in home nursing care for elderly perth',
-    'nursing care for elderly at home',
+    'nursing care for elderly at home perth',
     'elderly home care nurse perth',
-    'aged care nurse at home perth',
     'nurse for elderly parent perth',
-    'how to hire a private nurse for home care',
-    'home care packages perth elderly',
-    'support at home perth elderly',
     'private nursing elderly care perth wa',
   ],
   alternates: { canonical: 'https://carencure.com.au/private-nursing/elderly-care' },
   openGraph: {
     title: 'Elderly Nursing Care at Home Perth | Care N Cure',
     description:
-      'Dedicated AHPRA Registered Nurses for in-home elderly care across Perth. Wound dressing, medication safety, health monitoring & HCP funding. No referral needed. Call 1300 919 663.',
+      'Dedicated AHPRA Registered Nurses for in-home elderly care across Perth from $110/hr ($0 travel within 50km). Medication safety, wound dressing & Support at Home. Call 1300 919 663.',
     url: 'https://carencure.com.au/private-nursing/elderly-care',
     type: 'website',
     siteName: 'Care N Cure Nursing Care Services',
@@ -53,7 +47,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Elderly Nursing Care at Home Perth | Care N Cure',
-    description: 'AHPRA Registered Nurses for in-home elderly care across Perth. No referral needed. Wound care, medication & HCP funding support.',
+    description: 'AHPRA Registered Nurses for in-home elderly care across Perth from $110/hr. No referral needed.',
   },
 }
 
@@ -81,7 +75,7 @@ const faqs = [
   {
     question: 'Which Perth suburbs do your nurses visit, and are there travel charges?',
     answer:
-      'We service the entire Perth metropolitan area within a 50km radius with zero transportation or travel surcharges for clients. Our key communities include Harrisdale (our registered headquarters), Armadale, Byford, Canning Vale, Piara Waters, Gosnells, South Perth, Nedlands, Subiaco, Applecross, Fremantle, and Joondalup.',
+      'We service the entire Perth metropolitan area within a 50km radius of our Gosnells headquarters (2232B Albany Hwy) with zero transportation or travel surcharges for clients. Our key communities include Gosnells, Harrisdale, Armadale, Byford, Canning Vale, Piara Waters, South Perth, Nedlands, Subiaco, Applecross, Fremantle, and Joondalup.',
   },
   {
     question: 'Can private nurses help with hospital discharge and recovery at home for seniors?',

@@ -10,10 +10,17 @@ import { AGED_CARE_REGISTRATION } from '@/lib/registration'
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Support at Home Perth | In-Home Aged Care Services WA | Care N Cure',
+    absolute: 'Support at Home Perth | $0 Clinical Co-Pay & Bridging RN WA | Care N Cure',
   },
   description:
-    'Nurse-led Support at Home & aged care services across Perth, WA. Dedicated nurse coordinators, personal care, daily living assistance & 0 travel fees. Call 1300 919 663.',
+    'Clinical nursing under Support at Home attracts 0% participant contribution. Care N Cure delivers RN care as an associated provider (e.g. Trilogy Care) & offers $110–$160/hr private bridging (vs $180–$225/hr WA median) while waiting. Call 1300 919 663.',
+  keywords: [
+    'support at home perth',
+    'support at home nursing wa',
+    'support at home clinical care contribution',
+    'support at home waitlist bridging perth',
+    'trilogy care nursing partner perth',
+  ],
   alternates: { canonical: 'https://carencure.com.au/support-at-home' },
 }
 
@@ -160,6 +167,46 @@ export default function SupportAtHome() {
                       <p className="text-body text-sm">Giving primary family members and carers a regular break, knowing their loved one is in safe hands.</p>
                     </div>
                   </div>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-navy text-2xl font-bold">Perth Nursing Rates &amp; Support at Home Comparison</h3>
+                <p className="text-body text-sm leading-relaxed">
+                  Under Support at Home, clinical supports such as Registered Nursing attract <strong>0% participant co-payment</strong>. If you are still waiting for your My Aged Care budget or combining funded hours with private visits, Care N Cure keeps private RN pricing transparent and well below typical Perth corporate home-care RN rates:
+                </p>
+                <div className="overflow-x-auto rounded-2xl border border-border">
+                  <table className="w-full text-left text-sm">
+                    <thead>
+                      <tr className="bg-navy text-white">
+                        <th className="p-3.5 font-bold">Funding / Service Option</th>
+                        <th className="p-3.5 font-bold text-teal-accent">Care N Cure</th>
+                        <th className="p-3.5 font-bold text-slate-300">Typical Perth Metro Providers</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-border bg-white">
+                      <tr>
+                        <td className="p-3.5 font-semibold text-navy">Support at Home Clinical Nursing Co-Payment</td>
+                        <td className="p-3.5 text-navy bg-teal-50/40 font-medium">$0 client contribution (0% clinical rate)</td>
+                        <td className="p-3.5 text-slate-600">0% clinical rate, often with admin/coordination markups</td>
+                      </tr>
+                      <tr>
+                        <td className="p-3.5 font-semibold text-navy">Private Bridging Weekday RN Rate</td>
+                        <td className="p-3.5 text-navy bg-teal-50/40 font-medium">$110 – $160 / hr (no lock-in)</td>
+                        <td className="p-3.5 text-slate-600">$180 – $225 / hr typical WA provider range</td>
+                      </tr>
+                      <tr>
+                        <td className="p-3.5 font-semibold text-navy">Metro Travel Surcharge</td>
+                        <td className="p-3.5 text-navy bg-teal-50/40 font-medium">$0 within 50km of Gosnells HQ</td>
+                        <td className="p-3.5 text-slate-600">Per-km or travel-time charges common</td>
+                      </tr>
+                      <tr>
+                        <td className="p-3.5 font-semibold text-navy">Start Timeframe (Urgent / Waitlist)</td>
+                        <td className="p-3.5 text-navy bg-teal-50/40 font-medium">24 – 48 hours; keep same RN once funded</td>
+                        <td className="p-3.5 text-slate-600">2 – 3+ week intake waitlists; rotating rosters</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
 

@@ -159,6 +159,30 @@ const services = [
     href: '/companion-care',
     icon: HeartHandshake,
   },
+  {
+    id: 'service-palliative-care',
+    title: 'Palliative & End-of-Life Home Care',
+    description:
+      'Dignified pain & symptom monitoring, syringe driver checks, pressure protection, and family respite at home alongside your GP and palliative team.',
+    href: '/palliative-care-perth',
+    icon: Heart,
+  },
+  {
+    id: 'service-dementia-care',
+    title: 'Dementia & Memory Support Nursing',
+    description:
+      'Consistent One Dedicated Nurse model to reduce sundowning distress, screen early for UTIs/delirium, and protect medication safety at home.',
+    href: '/dementia-care-perth',
+    icon: UserCheck,
+  },
+  {
+    id: 'service-catheter-care',
+    title: 'Catheter & Continence Care',
+    description:
+      'Aseptic indwelling (IDC) & suprapubic (SPC) catheter changes, irrigation protocols, and CAUTI prevention in your own Perth home.',
+    href: '/catheter-care-perth',
+    icon: Activity,
+  },
 ]
 
 export default function ServicesPage() {

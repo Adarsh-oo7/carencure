@@ -1,10 +1,12 @@
 'use client'
 
-import { Phone, ArrowRight } from 'lucide-react'
+import { Phone, ArrowRight, MessageCircle } from 'lucide-react'
 import Link from 'next/link'
+import { trackPhoneClick, trackConsultationRequest } from '@/lib/analytics'
 
 const PHONE_NUMBER = '1300 919 663'
 const PHONE_HREF = 'tel:1300919663'
+const WHATSAPP_HREF = 'https://wa.me/61481748516?text=Hi%20Care%20N%20Cure%2C%20I%20would%20like%20to%20enquire%20about%20in-home%20nursing%20care.'
 
 interface CTASectionProps {
   title?: string
@@ -119,31 +121,49 @@ export function CTASection({
           <h2 className="text-white font-extrabold text-3xl sm:text-4xl lg:text-5xl max-w-3xl mx-auto leading-tight mb-4">
             {title || 'Helping Australians Stay Safe, Supported, and Independent at Home'}
           </h2>
-          <p className="text-teal-100 text-lg sm:text-xl font-medium max-w-2xl mx-auto mb-10">
+          <p className="text-teal-100 text-lg sm:text-xl font-medium max-w-2xl mx-auto mb-6">
             {description || 'One Client. One Nurse Coordinator. One Trusted Relationship.'}
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 text-xs font-semibold text-white/90 mb-8">
+            <span className="px-3 py-1 rounded-full bg-white/10 border border-white/15">From $110/hr · $0 Travel (50km)</span>
+            <span className="px-3 py-1 rounded-full bg-white/10 border border-white/15">0% SaH Clinical Co-Payment</span>
+            <span className="px-3 py-1 rounded-full bg-white/10 border border-white/15">24–48h Home Start · No Referral Needed</span>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-3.5 justify-center items-center">
             <a
               href={PHONE_HREF}
-              className="btn-phone text-lg w-full sm:w-auto justify-center cursor-pointer inline-flex items-center gap-2 font-extrabold shadow-2xl hover:scale-105 transition-all"
+              onClick={() => trackPhoneClick('bottom_cta')}
+              className="btn-phone text-base sm:text-lg w-full sm:w-auto justify-center cursor-pointer inline-flex items-center gap-2 font-extrabold shadow-2xl hover:scale-105 transition-all"
               id="cta-call-btn"
             >
               <Phone className="w-5 h-5 flex-shrink-0 animate-pulse text-teal-accent" />
               <span>Call Nurse Desk: 1300 919 663</span>
             </a>
+            <a
+              href={WHATSAPP_HREF}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold text-base w-full sm:w-auto shadow-lg hover:scale-105 transition-all"
+              id="cta-whatsapp-btn"
+            >
+              <MessageCircle className="w-5 h-5 flex-shrink-0" />
+              <span>WhatsApp an RN</span>
+            </a>
             <Link
               href={secondaryLink?.href || '/contact'}
-              className="btn-outline-white text-lg w-full sm:w-auto justify-center inline-flex items-center gap-2"
+              onClick={() => trackConsultationRequest('bottom_cta')}
+              className="btn-outline-white text-base sm:text-lg w-full sm:w-auto justify-center inline-flex items-center gap-2"
               id="cta-book-btn"
             >
-              <span>{secondaryLink?.text || 'Enquire Online'}</span>
+              <span>{secondaryLink?.text || 'Book Free Assessment'}</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
 
-          <p className="mt-8 text-xs text-white/40">
-            Registered Nurse Coordinators · Customised Care Plans · Compassionate In-Home Care
+          <p className="mt-8 text-xs text-white/50">
+            AHPRA Registered Nurse Coordinators · 5.0★ Google Rated · Customised In-Home Care Across Perth &amp; WA
           </p>
         </div>
 

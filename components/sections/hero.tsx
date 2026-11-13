@@ -110,13 +110,13 @@ export function HeroSection({
             {subheadline}
           </div>
 
-          {/* CTA Actions Group — Desktop shows both; Mobile shows single high-converting consultation action */}
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-5 sm:mb-7">
+          {/* CTA Actions Group — Visible across mobile & desktop for maximum direct nurse bookings */}
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
             {ctaPrimary && (
               <a
                 href={PHONE_HREF}
                 onClick={() => trackPhoneClick('hero_primary')}
-                className="hidden! sm:inline-flex! btn-phone cursor-pointer items-center justify-center gap-2.5 h-[50px] text-base sm:text-lg font-extrabold px-6 rounded-xl shadow-xl transition-all duration-200 hover:scale-[1.02] active:scale-95 shrink-0"
+                className="inline-flex btn-phone cursor-pointer items-center justify-center gap-2.5 h-[50px] text-base sm:text-lg font-extrabold px-6 rounded-xl shadow-xl transition-all duration-200 hover:scale-[1.02] active:scale-95 shrink-0"
                 id="hero-call-cta"
                 aria-label={ctaPrimary.text}
               >
@@ -140,23 +140,35 @@ export function HeroSection({
             )}
           </div>
 
-          {/* Reassurance Grid — Balanced 2x2 Grid with Full Legibility */}
-          <div className="grid grid-cols-2 gap-2 sm:gap-2.5 pt-4 border-t border-white/20 max-w-[540px]">
+          <p className="text-[11px] sm:text-xs text-teal-100/90 font-medium mb-4 sm:mb-5">
+            No GP referral required · Speak directly with a Registered Nurse ·{' '}
+            <a
+              href="https://wa.me/61481748516?text=Hi%20Care%20N%20Cure%2C%20I%20would%20like%20to%20enquire%20about%20in-home%20nursing%20care%20in%20Perth."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline text-teal-accent hover:text-white font-semibold"
+            >
+              Chat on WhatsApp →
+            </a>
+          </p>
+
+          {/* Reassurance Grid — Top 4 Client & Pricing Proof Points */}
+          <div className="grid grid-cols-2 gap-2 sm:gap-2.5 pt-4 border-t border-white/20 max-w-[560px]">
             <div className="flex items-center gap-2 sm:gap-2.5 bg-white/12 backdrop-blur-md px-3 sm:px-3.5 py-2.5 rounded-xl border border-white/20 text-white text-[11px] sm:text-xs font-semibold shadow-xs">
               <ShieldCheck className="w-4 h-4 text-teal-accent shrink-0" />
-              <span className="truncate sm:overflow-visible">AHPRA Nurses</span>
+              <span className="truncate sm:overflow-visible">From $110/hr · $0 Travel</span>
             </div>
             <div className="flex items-center gap-2 sm:gap-2.5 bg-white/12 backdrop-blur-md px-3 sm:px-3.5 py-2.5 rounded-xl border border-white/20 text-white text-[11px] sm:text-xs font-semibold shadow-xs">
               <UserCheck className="w-4 h-4 text-teal-accent shrink-0" />
-              <span className="truncate sm:overflow-visible">Dedicated RN</span>
+              <span className="truncate sm:overflow-visible">1 Dedicated AHPRA RN</span>
             </div>
             <div className="flex items-center gap-2 sm:gap-2.5 bg-white/12 backdrop-blur-md px-3 sm:px-3.5 py-2.5 rounded-xl border border-white/20 text-white text-[11px] sm:text-xs font-semibold shadow-xs">
               <Clock className="w-4 h-4 text-teal-accent shrink-0" />
-              <span className="truncate sm:overflow-visible">24–48h Intake</span>
+              <span className="truncate sm:overflow-visible">24–48h Home Start</span>
             </div>
             <div className="flex items-center gap-2 sm:gap-2.5 bg-white/12 backdrop-blur-md px-3 sm:px-3.5 py-2.5 rounded-xl border border-white/20 text-white text-[11px] sm:text-xs font-semibold shadow-xs">
               <MapPin className="w-4 h-4 text-teal-accent shrink-0" />
-              <span className="truncate sm:overflow-visible">All Perth Suburbs</span>
+              <span className="truncate sm:overflow-visible">0% SaH Clinical Co-Pay</span>
             </div>
           </div>
 

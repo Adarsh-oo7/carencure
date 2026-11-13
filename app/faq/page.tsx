@@ -6,9 +6,9 @@ import { FAQSection } from '@/components/sections/faq-section'
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'In-Home Nurse Perth FAQ | How to Hire Home Care Nurses | Care N Cure',
+    absolute: 'Care N Cure FAQ | Rates, Support at Home & Nursing Questions Perth',
   },
-  description: 'Frequently asked questions about hiring an in-home nurse in Perth. Learn about registered nurse home visits, aged care packages, Support at Home & clinical costs. Call 1300 919 663.',
+  description: 'Answers about Care N Cure private nursing rates ($110–$160/hr), Support at Home 0% clinical co-payment, NDIS billing & 24–48h in-home nurse visits in Perth. Call 1300 919 663.',
   alternates: { canonical: 'https://carencure.com.au/faq' },
 }
 
@@ -53,7 +53,7 @@ const allFaqs = [
     id: 'faq-5',
     question: 'How do I apply for Support at Home funding?',
     answer:
-      'To apply, you need to contact Care n Cure and request an assessment. This can be done online or over the phone. Once eligible, you’ll be booked for an home care assessment to determine your support needs.',
+      'Register with My Aged Care on 1800 200 422 or at myagedcare.gov.au to book an aged care assessment. Once approved, choose a registered provider and ask them to engage Care N Cure as your associated nursing provider (or start private visits with us while you wait). We guide Perth families through every step at no cost.',
   },
   {
     id: 'faq-6',

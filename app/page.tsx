@@ -18,34 +18,27 @@ import { CtaUncertaintyReducer } from '@/components/sections/cta-uncertainty-red
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Home Nursing Perth | Aged Care Support & Dedicated RNs | Care N Cure',
+    absolute: 'Home Care Services WA & Private Home Nurse Perth | Care N Cure',
   },
   description:
-    'Perth nurse-led home care & clinical visits for seniors. AHPRA Registered Nurses for wound care, medication & recovery. Private or Support at Home.',
+    'Nurse-led home care services in Perth & WA from $110/hr with $0 travel fees within 50km. Dedicated AHPRA Registered Nurse for aged care, wound care & Support at Home. Start in 24–48h. Call 1300 919 663.',
   keywords: [
+    'home care services wa',
+    'home care providers perth',
     'home nurse perth',
     'care n cure nursing care services',
     'care n cure',
-    'home nursing services perth',
     'at home nurse perth',
-    'at home nurse near me',
     'nurse at home perth',
-    'private nurse perth',
     'in home nursing care perth',
     'aged care in home support perth',
-    'aged care nursing services perth',
-    'home care services wa',
-    'home care packages perth',
-    'registered nurse home visit perth',
-    'mobile nursing services perth',
-    'post hospital care perth',
-    'wound care nurse perth',
+    'home care services perth',
   ],
   alternates: { canonical: 'https://carencure.com.au' },
   openGraph: {
-    title: 'Home Nursing Perth | Aged Care Support & Dedicated RNs | Care N Cure',
+    title: 'Home Care Services WA & Private Home Nurse Perth | Care N Cure',
     description:
-      'Perth nurse-led home care & clinical visits for seniors. AHPRA Registered Nurses for wound care, medication & recovery. Private or Support at Home.',
+      'Nurse-led home care services in Perth & WA from $110/hr with $0 travel fees within 50km. Dedicated AHPRA Registered Nurse for aged care, wound care & Support at Home.',
     url: 'https://carencure.com.au',
     type: 'website',
     siteName: 'Care N Cure Nursing Care Services',
@@ -132,20 +125,20 @@ export default function HomePage() {
       <FAQPageSchema faqs={homeFaqs.map(faq => ({ question: faq.question, answer: faq.answer }))} />
 
       <HeroSection
-        badge="Perth Nurse-Led Home Care · Gosnells Base"
+        badge="★ 5.0 Google Rated · From $110/hr · $0 Travel (50km)"
         headline="Home Care & Nursing Care in Perth by a Dedicated Registered Nurse"
         subheadline={
           <div className="space-y-1.5 sm:space-y-2">
             <p className="text-teal-accent text-sm sm:text-lg font-bold tracking-tight">
-              One Client. One Dedicated Nurse Coordinator. One Trusted Relationship.
+              One Client. One Dedicated Nurse Coordinator. 24–48h Home Start.
             </p>
             <p className="text-white/90 text-xs sm:text-base leading-relaxed">
-              Clinical in-home aged care, sterile wound dressings, and hospital discharge recovery across Perth. Every family is supported by a qualified AHPRA Registered Nurse coordinator — no call centres, and no rotating casual rosters.
+              Nurse-led aged care, sterile wound dressings, and post-hospital recovery across Perth &amp; WA. Speak directly with an AHPRA Registered Nurse — Support at Home (0% clinical co-payment), NDIS, or private care from $110/hr with $0 travel surcharges within 50km.
             </p>
           </div>
         }
-        ctaPrimary={{ text: 'Call 1300 919 663', href: 'tel:1300919663', isPhone: true }}
-        ctaSecondary={{ text: 'Book Free Consultation', href: '/contact' }}
+        ctaPrimary={{ text: 'Call Nurse Desk: 1300 919 663', href: 'tel:1300919663', isPhone: true }}
+        ctaSecondary={{ text: 'Book Free 24–48h Assessment', href: '/contact' }}
       />
 
       {/* Decision Block: What kind of support are you looking for? */}

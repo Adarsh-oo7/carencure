@@ -166,6 +166,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${BASE_URL}/palliative-care-perth`,
+      lastModified: NOW,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/dementia-care-perth`,
+      lastModified: NOW,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/catheter-care-perth`,
+      lastModified: NOW,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
       url: `${BASE_URL}/medication-management`,
       lastModified: NOW,
       changeFrequency: 'monthly',

@@ -110,10 +110,10 @@ const suburbsMap: Record<string, SuburbData> = {
     name: 'Applecross',
     region: 'Perth South',
     nearestHospital: 'Fiona Stanley Hospital & St John of God Murdoch',
-    description: 'Providing in-home private nursing visits and post-operative recovery around Applecross, Mount Pleasant, and Ardross.',
+    description: 'Providing in-home private nursing visits, sterile wound care, and post-operative recovery around Applecross, Mount Pleasant, Ardross, and Booragoon with $0 metro travel fees.',
     surroundingSuburbs: 'Mount Pleasant, Ardross, and Alfred Cove',
-    localHealthcareFocus: 'private nursing care, post-surgical rehabilitation, and specialist handovers',
-    localSpecificText: 'Our Registered Nurses support Applecross residents returning home from local facilities like St John of God Murdoch or Fiona Stanley Hospital, providing professional wound care and medication management in communication with your treating GP. We actively cover Applecross and arrange visits within 24–48 hours.',
+    localHealthcareFocus: 'private nursing care, post-surgical rehabilitation, dementia nursing, and specialist handovers',
+    localSpecificText: 'Our Registered Nurses support Applecross, Mount Pleasant, and Ardross residents returning home from St John of God Murdoch, Fiona Stanley Hospital, or private clinics along Canning Highway. Whether you require sequential post-surgical wound care, subcutaneous injections, dementia clinical support, or ongoing aged care coordination for an elderly parent, your dedicated AHPRA Registered Nurse visits within 24–48 hours with zero travel charges.',
   },
   'mount-lawley': {
     id: 'mount-lawley',
@@ -130,20 +130,20 @@ const suburbsMap: Record<string, SuburbData> = {
     name: 'Fremantle',
     region: 'Fremantle Area',
     nearestHospital: 'Fiona Stanley Hospital & Fremantle Hospital',
-    description: 'Post-hospital recovery care, wound management, and nursing-led respite care in Fremantle, East Fremantle, and South Fremantle.',
+    description: 'Post-hospital recovery care, wound management, and nursing-led Support at Home care in Fremantle, East Fremantle, Beaconsfield, and White Gum Valley.',
     surroundingSuburbs: 'East Fremantle, South Fremantle, and Beaconsfield',
-    localHealthcareFocus: 'respite nursing, post-hospital recovery, and medical care planning',
-    localSpecificText: 'For residents in Fremantle, South Fremantle, and East Fremantle, we offer comprehensive post-surgical recovery and clinical nursing. For clients returning home from facilities like Fiona Stanley Hospital or Fremantle Hospital, we accept referrals from discharge teams to organise home nursing within 24–48 hours.',
+    localHealthcareFocus: 'respite nursing, post-hospital recovery, dementia support, and medical care planning',
+    localSpecificText: 'Across Fremantle, South Fremantle, White Gum Valley, and Beaconsfield, heritage homes and steps make travelling to outpatient wound or dressing clinics exhausting after surgery. Care N Cure sends one dedicated AHPRA Registered Nurse directly to your Fremantle residence within 24–48 hours — coordinating with Fiona Stanley Hospital, Fremantle Hospital, and local port-city GPs for sterile wound dressings, catheter care, medication safety, and Support at Home clinical nursing.',
   },
   'south-perth': {
     id: 'south-perth',
     name: 'South Perth',
     region: 'Inner South',
     nearestHospital: 'Royal Perth Hospital & Fiona Stanley Hospital',
-    description: 'Home nurse Perth and South Perth clinical nursing services, companion care, respite nursing, and active medication reconciliation in South Perth, Como, and Kensington.',
+    description: 'In-home Registered Nurse visits, companion care, respite nursing, and active medication reconciliation across South Perth, Como, Manning, and Kensington.',
     surroundingSuburbs: 'Como, Kensington, and Manning',
-    localHealthcareFocus: 'home nurse Perth visits, medication management, companion care, and GP clinical coordination',
-    localSpecificText: 'We support families seeking a qualified home nurse in Perth across South Perth, Como, Manning, and Kensington. For clients returning home from facilities such as Royal Perth Hospital or St John of God Murdoch, we accept referrals from discharge teams and families to put personalized nursing care in place within 24–48 hours of return home.',
+    localHealthcareFocus: 'South Perth home nursing visits, medication management, dementia care, and GP clinical coordination',
+    localSpecificText: 'We support families across South Perth, Como, Manning, Salter Point, and Kensington with dedicated one-on-one Registered Nurse home visits. For seniors ageing independently in apartments or family homes near Angelo Street and Mends Street, or returning from Royal Perth Hospital or St John of God Murdoch, Care N Cure puts consistent clinical nursing and Support at Home care in place within 24–48 hours with $0 travel fees.',
   },
   claremont: {
     id: 'claremont',
@@ -321,10 +321,10 @@ const suburbsMap: Record<string, SuburbData> = {
     name: 'East Fremantle',
     region: 'Fremantle Area',
     nearestHospital: 'Fiona Stanley Hospital & Fremantle Hospital',
-    description: 'Private nursing and post-hospital care in East Fremantle and Bicton. Dedicated registered nurse coordinator for every client.',
+    description: 'Private nursing, Support at Home clinical care, and post-hospital recovery in East Fremantle, Bicton, and Palmyra with a dedicated RN.',
     surroundingSuburbs: 'Fremantle, Bicton, and Palmyra',
-    localHealthcareFocus: 'post-hospital recovery, clinical health monitoring, and GP coordination',
-    localSpecificText: 'Our Registered Nurses provide in-home clinical care across East Fremantle. We liaise with your treating GP and specialists to provide structured post-discharge nursing recovery.',
+    localHealthcareFocus: 'post-hospital recovery, surgical wound care, catheter care, and GP coordination',
+    localSpecificText: 'East Fremantle and Bicton families value privacy, discretion, and seeing the exact same nurse rather than a rotation of agency casuals. Our AHPRA Registered Nurses coordinate directly with Kaleeya/Fremantle specialists, St John of God Murdoch, and Fiona Stanley Hospital to deliver post-operative wound care, staple removal, subcutaneous injections, and palliative or dementia home nursing across East Fremantle within 24–48 hours.',
   },
   'shenton-park': {
     id: 'shenton-park',
@@ -386,7 +386,7 @@ const suburbsMap: Record<string, SuburbData> = {
     description: 'Professional in-home registered nurse visits across Piara Waters and Harrisdale. Clinical wound dressing, elderly care coordination, and post-discharge recovery.',
     surroundingSuburbs: 'Harrisdale, Southern River, and Cockburn Central',
     localHealthcareFocus: 'sterile wound care, medication reconciliation, elderly support, and vital sign monitoring',
-    localSpecificText: 'Minutes from our Harrisdale headquarters, Piara Waters clients receive rapid clinical assessment and dedicated Registered Nurse coordination. Whether recovering from surgery or needing ongoing elderly care at home, we deliver trusted 1-on-1 nursing.',
+    localSpecificText: 'Minutes from our Gosnells headquarters, Piara Waters clients receive rapid clinical assessment and dedicated Registered Nurse coordination within 24 hours. Whether recovering from surgery at Fiona Stanley or needing ongoing elderly care at home, we deliver trusted 1-on-1 nursing with $0 travel surcharges.',
     fromBase: 'approx. 5 minutes',
   },
   thornlie: {
@@ -471,20 +471,20 @@ const suburbsMap: Record<string, SuburbData> = {
     name: 'Melville',
     region: 'Perth South',
     nearestHospital: 'Fiona Stanley Hospital & Fremantle Hospital',
-    description: 'Aged care at home, Support at Home nursing, and registered nurse visits across Melville, Alfred Cove, Palmyra, and Myaree.',
+    description: 'Aged care at home, Support at Home clinical nursing ($0 client co-pay), and registered nurse visits across Melville, Alfred Cove, Palmyra, and Myaree.',
     surroundingSuburbs: 'Alfred Cove, Palmyra, Myaree, and Bicton',
-    localHealthcareFocus: 'aged care home support, Support at Home nursing, medication management, and wound care',
-    localSpecificText: 'The City of Melville has a large, long-established community of older residents, many ageing in the family home. Melville families often ask us how Support at Home (which replaced Home Care Packages) applies to nursing — we explain it plainly, and provide the registered nurse visits your parent needs to stay safely at home.',
+    localHealthcareFocus: 'Support at Home nursing, extended home care shifts, dementia care, medication management, and wound care',
+    localSpecificText: 'The City of Melville has one of Perth\'s largest populations of older homeowners choosing to remain independent rather than move to residential facilities. Melville families regularly engage Care N Cure both as their Support at Home clinical nursing partner (where clinical nursing attracts 0% participant co-payment, partnering seamlessly with providers like Trilogy Care) and for flexible extended private shifts, wound dressings, catheter care, and dementia nursing near Fiona Stanley Hospital.',
   },
   baldivis: {
     id: 'baldivis',
     name: 'Baldivis',
     region: 'Perth South',
     nearestHospital: 'Rockingham General Hospital',
-    description: 'Community nursing care and aged care at home in Baldivis, Wellard, and Warnbro. Registered nurse visits for wound care, medication management, and post-hospital recovery.',
+    description: 'Community nursing care, NDIS clinical nursing, and aged care at home in Baldivis, Wellard, and Warnbro with zero metro travel charges.',
     surroundingSuburbs: 'Wellard, Warnbro, and Rockingham',
-    localHealthcareFocus: 'community nursing care Baldivis, post-hospital recovery, and elderly medication support',
-    localSpecificText: 'Baldivis is one of Perth\'s fastest-growing family suburbs, and many households now include an ageing parent. Care N Cure provides community nursing care in Baldivis — wound care, injections, and medication checks — coordinating with Rockingham General Hospital and local GPs.',
+    localHealthcareFocus: 'community nursing care Baldivis, post-hospital recovery, chronic care, and elderly medication support',
+    localSpecificText: 'Baldivis is one of Perth\'s fastest-growing outer-southern communities, where multi-generational families frequently struggle with long waitlists and travel surcharges from city-based agencies. Care N Cure provides reliable community nursing care across Baldivis, Rivergums, Settlers Hills, Wellard, and Warnbro — delivering sterile wound care, insulin/subcutaneous injections, catheter management, and Support at Home clinical nursing with $0 travel fees within our 50km service radius.',
   },
   // ── Albany Highway corridor — immediate neighbours of the Gosnells HQ ──
   maddington: {
@@ -645,8 +645,8 @@ export async function generateMetadata({ params }: { params: Promise<{ suburb: s
     pageTitle = 'Home Nurse Rockingham & Baldivis | AHPRA Registered In-Home Nursing | Care N Cure'
     pageDesc = 'Need a home nurse in Rockingham or Baldivis? AHPRA Registered Nurses for wound care, medication management & post-hospital recovery across southern Perth. No referral needed. Call 1300 919 663.'
   } else if (suburb === 'south-perth') {
-    pageTitle = 'Home Nurse Perth & South Perth | In-Home Clinical Nursing | Care N Cure'
-    pageDesc = 'Experienced home nurse services in South Perth, Como & Kensington. Clinical health checks, medication safety & aged care at home with zero travel fees. Call 1300 919 663.'
+    pageTitle = 'Home Nurse South Perth, Como & Kensington | In-Home Nursing | Care N Cure'
+    pageDesc = 'Experienced home nurse services in South Perth, Como, Manning & Kensington. From $110/hr with $0 travel fees within 50km. Medication safety & aged care at home. Call 1300 919 663.'
   } else if (suburb === 'joondalup') {
     pageTitle = 'Home Nurse Joondalup | AHPRA Registered In-Home Nursing & Aged Care | Care N Cure'
     pageDesc = 'Need a home nurse in Joondalup or northern Perth? AHPRA Registered Nurses for wound care, aged care, medication management & post-hospital recovery. No referral needed. Call 1300 919 663.'
@@ -701,7 +701,6 @@ export async function generateMetadata({ params }: { params: Promise<{ suburb: s
     `disability care ${data.name.toLowerCase()}`,
     `home nurse ${data.name.toLowerCase()}`,
     `at home nurse ${data.name.toLowerCase()}`,
-    `at home nurse near me`,
     `nurse at home ${data.name.toLowerCase()}`,
     `in home nursing ${data.name.toLowerCase()}`,
     `registered nurse home visit ${data.name.toLowerCase()}`,
@@ -729,7 +728,11 @@ export async function generateMetadata({ params }: { params: Promise<{ suburb: s
       'private nurse joondalup'
     )
   } else if (suburb === 'south-perth') {
-    customKeywords.push('home nurse perth', 'home nurse near me', 'in home nurse perth')
+    customKeywords.push(
+      'home nurse south perth',
+      'in home nurse como',
+      'aged care south perth'
+    )
   } else if (suburb === 'gosnells') {
     customKeywords.push(
       'home nurse gosnells',
@@ -889,7 +892,7 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
 
                     <h3 className="text-navy text-xl font-bold">Local Service Coverage in Armadale & South-East Perth</h3>
                     <p className="text-body leading-relaxed text-sm">
-                      Operating from our clinical base in Harrisdale, our nursing team regularly visits clients across the City of Armadale. We actively service <strong>Armadale, Kelmscott, Seville Grove, Mount Nasura, Mount Richon, Roleystone, Bedfordale, Wungong, and Champion Lakes</strong>. Clinical visit availability, response scheduling, and any applicable travel terms are confirmed transparently during your initial consultation.
+                      Operating from our headquarters in Gosnells (2232B Albany Hwy, approx. 12 minutes away), our nursing team regularly visits clients across the City of Armadale. We actively service <strong>Armadale, Kelmscott, Seville Grove, Mount Nasura, Mount Richon, Roleystone, Bedfordale, Wungong, and Champion Lakes</strong> — from short sterile wound visits to extended day shifts, with $0 travel surcharges and transparent pricing confirmed upfront.
                     </p>
 
                     <h3 className="text-navy text-xl font-bold">Post-Hospital Recovery Support: Returning Home to Armadale</h3>
@@ -1042,9 +1045,15 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
                 <div className="bg-teal-50/70 p-4 rounded-xl border border-teal-100 flex items-start gap-3 text-xs text-navy">
                   <ShieldCheck className="w-5 h-5 text-teal-accent shrink-0 mt-0.5" />
                   <div>
-                    <p className="font-bold">Zero Travel Surcharge Across {data.name}</p>
+                    <p className="font-bold">
+                      {['bunbury', 'busselton', 'albany', 'geraldton'].includes(suburb)
+                        ? `Transparent Regional WA Nursing Rates in ${data.name}`
+                        : `Zero Travel Surcharge Across ${data.name}`}
+                    </p>
                     <p className="text-body text-xs mt-0.5">
-                      Dispatched from our Gosnells headquarters (2232B Albany Hwy), we guarantee $0 travel surcharges for scheduled in-home nurse visits across {data.name} and surrounding suburbs within 50km.
+                      {['bunbury', 'busselton', 'albany', 'geraldton'].includes(suburb)
+                        ? `Care N Cure offers transparent hourly Registered Nurse rates ($110–$160/hr weekdays) with any regional scheduling terms confirmed in writing before care begins across ${data.name} (${data.region}).`
+                        : `Dispatched from our Gosnells headquarters (2232B Albany Hwy), we guarantee $0 travel surcharges for scheduled in-home nurse visits ($110–$160/hr weekdays vs $180–$225/hr typical Perth rates) across ${data.name} and surrounding suburbs within 50km.`}
                     </p>
                   </div>
                 </div>
@@ -1146,8 +1155,26 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
                   </div>
                   <div className="flex items-center gap-2">
                     <HeartPulse className="w-4 h-4 text-teal-text flex-shrink-0" />
-                    <Link href="/ndis-nursing/catheter-care" className="hover:text-teal-text transition-colors font-medium">
-                      Catheter & Continence Care
+                    <Link href="/catheter-care-perth" className="hover:text-teal-text transition-colors font-medium">
+                      Catheter &amp; Continence Care
+                    </Link>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <HeartPulse className="w-4 h-4 text-teal-text flex-shrink-0" />
+                    <Link href="/dementia-care-perth" className="hover:text-teal-text transition-colors font-medium">
+                      Dementia &amp; Memory Nursing
+                    </Link>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <HeartPulse className="w-4 h-4 text-teal-text flex-shrink-0" />
+                    <Link href="/palliative-care-perth" className="hover:text-teal-text transition-colors font-medium">
+                      Palliative Home Nursing
+                    </Link>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <HeartPulse className="w-4 h-4 text-teal-text flex-shrink-0" />
+                    <Link href="/aged-care-at-home-perth" className="hover:text-teal-text transition-colors font-medium">
+                      Aged Care at Home Coordination
                     </Link>
                   </div>
                   <div className="flex items-center gap-2">

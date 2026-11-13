@@ -10,33 +10,26 @@ import { CtaUncertaintyReducer } from '@/components/sections/cta-uncertainty-red
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Private Nurse at Home Perth | Hire an AHPRA Registered Nurse | Care N Cure',
+    absolute: 'Private Nurse at Home Perth | From $110/hr AHPRA RN | Care N Cure',
   },
   description:
-    'Need a private nurse or home nursing services in Perth? Care N Cure provides AHPRA Registered Nurses for in-home clinical care, sterile wound dressings, injections & aged care support. No GP referral needed. 24–48h start. Call 1300 919 663.',
+    'Hire a private nurse at home in Perth from $110/hr with $0 travel fees within 50km. AHPRA Registered Nurses for wound care, injections, catheter changes & post-op recovery. No GP referral needed. 24–48h start. Call 1300 919 663.',
   keywords: [
-    'home care nurse',
-    'home nursing services',
-    'private nurse at home',
     'private nurse perth',
-    'nurse at home perth',
-    'at home nursing services',
-    'clinical nursing services perth',
-    'home nurse perth',
     'private nurse at home perth',
+    'private nurse at home',
     'hire a private nurse perth',
     'private home nurse perth',
-    'registered nurse home visit perth',
     'private nursing care perth',
-    'in home nursing perth',
+    'at home nursing services',
+    'registered nurse home visit perth',
     'mobile nurse perth',
-    'at home nurse near me',
   ],
   alternates: { canonical: 'https://carencure.com.au/private-nursing' },
   openGraph: {
-    title: 'Private Nurse Perth | Hire an AHPRA Registered Nurse at Home | Care N Cure',
+    title: 'Private Nurse Perth | From $110/hr AHPRA RN at Home | Care N Cure',
     description:
-      'Hire a private registered nurse at home in Perth — no GP referral needed. AHPRA-registered nurses for wound care, injections, post-op recovery & elderly care across Perth metro. Call 1300 919 663.',
+      'Hire a private registered nurse at home in Perth from $110/hr ($0 travel within 50km) — no GP referral needed. Wound care, catheter changes, injections & post-op recovery. Call 1300 919 663.',
     url: 'https://carencure.com.au/private-nursing',
     type: 'website',
     siteName: 'Care N Cure Nursing Care Services',
@@ -45,7 +38,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Private Nurse Perth | AHPRA Registered In-Home Nursing | Care N Cure',
-    description: 'Hire a private registered nurse at home in Perth. No GP referral needed. Wound care, injections, aged care. Call 1300 919 663.',
+    description: 'Hire a private registered nurse at home in Perth from $110/hr ($0 travel within 50km). No GP referral needed. Call 1300 919 663.',
   },
 }
 
@@ -184,10 +177,10 @@ export default function PrivateNursing() {
                   <div className="bg-surface p-5 rounded-xl border border-border space-y-2">
                     <div className="flex items-center gap-2 text-teal-accent font-bold">
                       <Activity className="w-5 h-5" />
-                      <span>Catheter & Continence Care</span>
+                      <span>Catheter &amp; Continence Care</span>
                     </div>
                     <p className="text-body text-sm">
-                      Insertion, flushing, and ongoing management of indwelling catheters (IDC), suprapubic catheters (SPC), and continence assessments.
+                      Insertion, flushing, and ongoing management of indwelling catheters (IDC), suprapubic catheters (SPC), and continence assessments. See our <Link href="/catheter-care-perth" className="text-teal-text font-semibold hover:underline">catheter care Perth</Link> service, <Link href="/dementia-care-perth" className="text-teal-text font-semibold hover:underline">dementia nursing</Link>, or <Link href="/palliative-care-perth" className="text-teal-text font-semibold hover:underline">palliative home care</Link>.
                     </p>
                   </div>
                 </div>

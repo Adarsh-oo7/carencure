@@ -11,10 +11,11 @@ export const metadata: Metadata = {
     absolute: 'Wound Care Nurse Perth | In-Home Wound Dressing & Stitch Removal | Care N Cure',
   },
   description:
-    'Need a wound care nurse or wound dressing at home near you in Perth? AHPRA Registered Nurses provide sterile wound dressing changes, surgical stitch & staple removal, diabetic ulcer care & pressure injury management. Same-day & 24h intake. Call 1300 919 663.',
+    'Mobile wound care nurse in Perth from $110/hr ($0 travel within 50km). AHPRA Registered Nurses for sterile wound dressings, removal of stitches & surgical staples, diabetic ulcers & pressure care. 24h intake. Call 1300 919 663.',
   keywords: [
     'wound care nurse perth',
     'wound dressing near me',
+    'removal of stitches perth',
     'wound dressing at home perth',
     'in home wound care perth',
     'wound care perth',
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Wound Care Nurse Perth | In-Home Wound Dressing & Stitch Removal | Care N Cure',
     description:
-      'AHPRA Registered Nurses for sterile wound dressing changes, stitch & staple removal, diabetic ulcer care & pressure injury management at home across Perth. Call 1300 919 663.',
+      'AHPRA Registered Nurses for sterile wound dressing changes, removal of stitches & staples, diabetic ulcer care & pressure injury management at home across Perth. $0 travel within 50km.',
     url: 'https://carencure.com.au/wound-care',
     type: 'website',
     siteName: 'Care N Cure Nursing Care Services',
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Wound Care Nurse Perth | In-Home Wound Dressing | Care N Cure',
-    description: 'AHPRA Registered Nurses for sterile wound dressing, stitch removal & wound management at home across Perth. Call 1300 919 663.',
+    description: 'AHPRA Registered Nurses for sterile wound dressing, stitch removal & wound management at home across Perth from $110/hr.',
   },
 }
 

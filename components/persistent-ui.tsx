@@ -154,7 +154,16 @@ export function PersistentUI() {
         )}
 
         {/* Floating Action Button (Trigger) */}
-        <div className="relative flex items-center justify-end">
+        <div className="relative flex items-center justify-end gap-2.5">
+          {!isOpen && (
+            <button
+              onClick={() => setIsOpen(true)}
+              className="bg-navy text-white text-xs font-bold px-3.5 py-2 rounded-full shadow-lg border border-teal-accent/40 hover:bg-navy-light transition-all cursor-pointer hidden lg:inline-flex items-center gap-2"
+            >
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+              <span>Ask an RN · 24–48h Start</span>
+            </button>
+          )}
           {/* WhatsApp Icon FAB Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}

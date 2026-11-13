@@ -12,6 +12,7 @@ import {
   UserCheck,
   Apple,
   Stethoscope,
+  HeartPulse,
 } from 'lucide-react'
 
 const services = [
@@ -118,10 +119,37 @@ const services = [
     id: 'service-support-at-home',
     icon: HeartHandshake,
     title: 'Support at Home Program',
-    description: 'Navigating the Australian Government new Support at Home system with continuous clinical oversight and zero travel surcharges.',
+    description: 'Navigating the Australian Government new Support at Home system with 0% clinical co-pay and zero travel surcharges.',
     href: '/support-at-home',
     colour: '#ECFDF5',
     iconColour: '#059669',
+  },
+  {
+    id: 'service-dementia-care',
+    icon: Heart,
+    title: 'Dementia Care at Home',
+    description: 'Calm, familiar memory support by One Dedicated Registered Nurse — preventing the stress of rotating casual strangers.',
+    href: '/dementia-care-perth',
+    colour: '#FCE7F3',
+    iconColour: '#BE185D',
+  },
+  {
+    id: 'service-palliative-care',
+    icon: HeartPulse,
+    title: 'Palliative Home Nursing',
+    description: 'Comfort-focused end-of-life nursing, pain protocol & syringe driver checks, and family respite in your own Perth home.',
+    href: '/palliative-care-perth',
+    colour: '#EEF2FF',
+    iconColour: '#4338CA',
+  },
+  {
+    id: 'service-catheter-care',
+    icon: Stethoscope,
+    title: 'Catheter & Continence Care',
+    description: 'Discreet, aseptic IDC & SPC catheter replacements, bladder flushes, and CAUTI screening in the comfort of home.',
+    href: '/catheter-care-perth',
+    colour: '#F0FDFA',
+    iconColour: '#0F766E',
   },
 ]
 

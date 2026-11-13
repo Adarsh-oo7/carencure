@@ -11,6 +11,9 @@ export default function robots(): MetadataRoute.Robots {
         disallow: [
           '/api/',
           '/cdn-cgi/',
+          '/*?*rwg_token=',
+          '/*?*gsas=',
+          '/*?*ahbb=',
         ],
       },
     ],

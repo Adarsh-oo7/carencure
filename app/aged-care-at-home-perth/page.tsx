@@ -18,36 +18,26 @@ import {
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Aged Care Agency Perth | In-Home Nurse-Led Care | Care N Cure',
+    absolute: 'Aged Care Agency Perth | Home Care Providers WA ($0 Clinical Co-Pay) | Care N Cure',
   },
   description:
-    'Nurse-led aged care agency in Perth. AHPRA Registered Nurse coordinators providing in-home care for elderly parents — Support at Home, private care, 24–48h assessment.',
+    'Nurse-led aged care agency & home care provider in Perth. Dedicated AHPRA Registered Nurse coordinators for Support at Home ($0 clinical contribution) & private elderly care from $110/hr. 24–48h start. Call 1300 919 663.',
   keywords: [
     'aged care agency perth',
     'aged care agency in perth',
     'aged care agencies perth',
-    'aged care agency perth wa',
-    'aged care in home support',
+    'home care providers perth',
     'aged care at home perth',
-    'aged care in home services perth',
-    'best home care providers perth',
-    'aged care support at home perth',
     'in home aged care perth',
-    'aged care wa',
-    'carers for elderly perth',
-    'aged care canning vale',
-    'aged care southern river',
-    'aged care at home harrisdale',
-    'elderly care at home perth',
     'support at home providers perth',
     'private aged care agency perth',
-    'home nursing for elderly perth',
+    'elderly care at home perth',
   ],
   alternates: { canonical: 'https://carencure.com.au/aged-care-at-home-perth' },
   openGraph: {
-    title: 'Aged Care Agency Perth | In-Home Nurse-Led Care | Care N Cure',
+    title: 'Aged Care Agency Perth | Home Care Providers WA ($0 Clinical Co-Pay) | Care N Cure',
     description:
-      'Trusted nurse-led aged care agency in Perth. One dedicated Registered Nurse coordinator, Support at Home & private care, 24–48h assessment across Perth.',
+      'Trusted nurse-led aged care agency in Perth. One dedicated Registered Nurse coordinator, Support at Home ($0 clinical contribution) & private care from $110/hr. 24–48h assessment across Perth.',
     url: 'https://carencure.com.au/aged-care-at-home-perth',
   },
 }
@@ -61,7 +51,7 @@ const faqs = [
   {
     question: 'Is Care N Cure an aged care agency in Perth?',
     answer:
-      'Yes, Care N Cure is a premier nurse-led aged care agency and in-home care provider serving families across metropolitan Perth from Harrisdale. Unlike typical aged care agencies that send rotating carers with varying skill levels, our agency matches your elderly parent with one dedicated Registered Nurse coordinator who personally manages their clinical care, talks with their GP, and visits on a predictable schedule.',
+      'Yes, Care N Cure is a nurse-led aged care agency and in-home care provider headquartered in Gosnells (2232B Albany Hwy) serving families within 50km across metropolitan Perth. Unlike typical aged care agencies that send rotating carers with varying skill levels, our agency matches your elderly parent with one dedicated Registered Nurse coordinator who personally manages their clinical care, talks with their GP, and visits on a predictable schedule.',
   },
   {
     question: 'Why choose a nurse-led aged care agency over a standard care provider?',
@@ -90,7 +80,7 @@ export default function AgedCareAtHomePerthPage() {
     <>
       <ServicePageSchema
         serviceName="Aged Care Agency in Perth"
-        description="Premier Registered Nurse-led aged care agency serving metropolitan Perth from Harrisdale. Dedicated nurse coordinators, private elderly care, and Support at Home."
+        description="Registered Nurse-led aged care agency headquartered in Gosnells serving metropolitan Perth. Dedicated nurse coordinators, private elderly care, and Support at Home."
         url="/aged-care-at-home-perth"
         procedureType="Aged Care Agency & In-Home Nursing Care"
         faqs={faqs}
@@ -103,7 +93,7 @@ export default function AgedCareAtHomePerthPage() {
       {/* Page Header */}
       <PageHeader
         title="Aged Care Agency in Perth — Nurse-Led In-Home Care"
-        subtitle="Perth's trusted nurse-led aged care agency based in Harrisdale. One dedicated Registered Nurse coordinator, Support at Home budgets & private care, with assessments starting in 24–48 hours."
+        subtitle="Perth's trusted nurse-led aged care agency headquartered in Gosnells (50km metro radius, $0 travel fee). One dedicated Registered Nurse coordinator, Support at Home budgets & private care, with assessments starting in 24–48 hours."
         breadcrumbItems={[
           { name: 'Services', href: '/services' },
           { name: 'Aged Care Agency Perth', href: '/aged-care-at-home-perth' },
@@ -130,7 +120,7 @@ export default function AgedCareAtHomePerthPage() {
               </p>
 
               <p className="text-body text-base leading-relaxed">
-                <strong>Care N Cure Nursing Care Services</strong> brings high-level, clinical-grade care into your family’s home across Perth and Harrisdale. Under our signature <em>Your Dedicated Nurse™</em> model, your family never gets passed between strangers. A single, qualified Registered Nurse coordinator manages clinical health, personal care, and wellbeing.
+                <strong>Care N Cure Nursing Care Services</strong> brings high-level, clinical-grade care into your family’s home across Perth from our Gosnells headquarters. Under our signature <em>Your Dedicated Nurse™</em> model, your family never gets passed between strangers. A single, qualified Registered Nurse coordinator manages clinical health, personal care, and wellbeing.
               </p>
 
               {/* 4 Core Pillars for Families */}
@@ -209,6 +199,24 @@ export default function AgedCareAtHomePerthPage() {
                     className="px-3 py-1.5 rounded-lg bg-teal-50 text-teal-800 font-semibold hover:bg-teal-100 transition-colors border border-teal-200"
                   >
                     Medication Oversight →
+                  </Link>
+                  <Link
+                    href="/dementia-care-perth"
+                    className="px-3 py-1.5 rounded-lg bg-teal-50 text-teal-800 font-semibold hover:bg-teal-100 transition-colors border border-teal-200"
+                  >
+                    Dementia Care at Home →
+                  </Link>
+                  <Link
+                    href="/palliative-care-perth"
+                    className="px-3 py-1.5 rounded-lg bg-teal-50 text-teal-800 font-semibold hover:bg-teal-100 transition-colors border border-teal-200"
+                  >
+                    Palliative Home Nursing →
+                  </Link>
+                  <Link
+                    href="/catheter-care-perth"
+                    className="px-3 py-1.5 rounded-lg bg-teal-50 text-teal-800 font-semibold hover:bg-teal-100 transition-colors border border-teal-200"
+                  >
+                    Catheter &amp; Continence →
                   </Link>
                   <Link
                     href="/personal-care"

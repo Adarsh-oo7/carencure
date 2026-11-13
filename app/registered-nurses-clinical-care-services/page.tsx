@@ -8,10 +8,17 @@ import { Activity, ShieldCheck, HeartPulse, UserCheck, CheckCircle } from 'lucid
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Home Nursing Services Perth | Registered Nurses Clinical Care | Care N Cure',
+    absolute: 'Home Nursing Services Perth | Registered Nurse Clinical Care | Care N Cure',
   },
   description:
-    'AHPRA registered home nursing services across Perth. Sterile wound dressing, catheter changes, injections, medication safety & chronic care. Call 1300 919 663.',
+    'Hospital-grade home nursing services in Perth from $110/hr ($0 travel within 50km). AHPRA Registered Nurses for sterile wound dressings, catheter care, injections & vital signs monitoring. Call 1300 919 663.',
+  keywords: [
+    'home nursing services perth',
+    'clinical nursing services perth',
+    'registered nurse clinical care perth',
+    'mobile nursing services perth',
+    'home nursing services',
+  ],
   alternates: { canonical: 'https://carencure.com.au/registered-nurses-clinical-care-services' },
 }
 

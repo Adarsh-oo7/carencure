@@ -7,25 +7,21 @@ import { MedicalBusinessSchema } from '@/components/schema'
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Book a Home Nurse Perth | Contact Care N Cure Nursing Care Services',
+    absolute: 'Contact Care N Cure Perth | 1300 919 663 | Nurse Intake & Enquiries',
   },
   description:
-    'Ready to book a home nurse in Perth? Contact Care N Cure directly by phone, WhatsApp, or online enquiry. Registered Nurse acknowledgment within 24 hours; in-home clinical assessments arranged within 24–48 hours across Perth. Call 1300 919 663.',
+    'Contact Care N Cure Nursing Care Services on 1300 919 663, WhatsApp or online enquiry. Headquartered at 2232B Albany Hwy, Gosnells WA. Nurse acknowledgment within 24h; 24–48h assessments across Perth.',
   keywords: [
-    'book a home nurse perth',
-    'contact home nurse perth',
     'care n cure contact',
-    'book registered nurse perth',
-    'enquire home nursing perth',
-    'book a nurse visit perth',
-    'home nursing enquiry perth',
     'care n cure nursing phone number',
+    'care n cure gosnells address',
+    'enquire home nursing perth',
   ],
   alternates: { canonical: 'https://carencure.com.au/contact' },
   openGraph: {
-    title: 'Book a Home Nurse Perth | Contact Care N Cure Nursing Care Services',
+    title: 'Contact Care N Cure Perth | 1300 919 663 | Nurse Intake & Enquiries',
     description:
-      'Book a home nurse in Perth. Call, WhatsApp, or enquire online. Registered Nurse acknowledgment within 24 hours; in-home visits arranged within 24–48 hours across Perth. Call 1300 919 663.',
+      'Contact Care N Cure directly by phone, WhatsApp, or online enquiry. 2232B Albany Hwy, Gosnells WA. In-home assessments arranged within 24–48 hours across Perth.',
     url: 'https://carencure.com.au/contact',
     type: 'website',
     siteName: 'Care N Cure Nursing Care Services',
@@ -33,8 +29,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Book a Home Nurse Perth | Contact Care N Cure',
-    description: 'Book a home nurse in Perth. Registered Nurse acknowledgment within 24 hours; home visits arranged within 24–48 hours.',
+    title: 'Contact Care N Cure Perth | 1300 919 663',
+    description: 'Nurse acknowledgment within 24 hours; in-home clinical assessments within 24–48 hours across Perth.',
   },
 }
 

@@ -85,6 +85,27 @@ const options: DecisionOption[] = [
     icon: Activity,
     badge: 'Allied Health',
   },
+  {
+    title: 'Dementia & memory support at home',
+    description: 'One familiar AHPRA Registered Nurse every visit — reducing sundowning distress with UTI/delirium screening and medication safety.',
+    href: '/dementia-care-perth',
+    icon: Heart,
+    badge: 'Dementia Care',
+  },
+  {
+    title: 'Palliative & end-of-life home nursing',
+    description: 'Compassionate pain & symptom monitoring, syringe driver checks, and gentle respite alongside your GP and palliative team.',
+    href: '/palliative-care-perth',
+    icon: HeartPulse,
+    badge: 'Palliative Care',
+  },
+  {
+    title: 'Catheter & continence care at home',
+    description: 'Aseptic indwelling (IDC) & suprapubic (SPC) catheter changes, irrigation protocols, and CAUTI prevention without clinic waits.',
+    href: '/catheter-care-perth',
+    icon: Stethoscope,
+    badge: 'Catheter Care',
+  },
 ]
 
 export function DecisionBlock() {

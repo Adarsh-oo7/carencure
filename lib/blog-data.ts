@@ -543,7 +543,7 @@ When evaluating providers in Western Australia, it is vital to keep rate structu
 ### B. Private Fee-for-Service Nursing
 - Directly self-funded by the family or client.
 - **Why It Matters**: Ideal for immediate hospital discharge (from Fiona Stanley, Hollywood, or Sir Charles Gairdner), rapid clinical wound dressing, medication stabilisations, or interim care while awaiting government approvals.
-- **What to Look For**: Clear, transparent hourly rates published upfront ($110–$160/hr for an AHPRA Registered Nurse), standard 1-hour minimum bookings, and zero hidden establishment or exit penalties.
+- **What to Look For**: Clear, transparent hourly rates published upfront ($110–$160/hr for an AHPRA Registered Nurse at Care N Cure, compared to $180–$225/hr typical Perth agency rates), standard 1-hour minimum bookings, and zero hidden establishment or exit penalties.
 
 ---
 
@@ -663,7 +663,7 @@ Families should verify:
 ## 5. How to Select the Right Provider for Your Family
 
 1. **Assess the Clinical vs. Domestic Need:**
-   - If your parent or family member has medical needs (wounds, injections, catheter care, post-surgical recovery, medication management), you need an **AHPRA Registered Nurse**. Choose a nurse-led service like [Care N Cure](/aged-care-at-home-perth).
+   - If your parent or family member has medical needs ([sterile wound care](/wound-care), [catheter & continence care](/catheter-care-perth), injections, [post-hospital discharge recovery](/post-hospital-care), [dementia clinical support](/dementia-care-perth), or [palliative home nursing](/palliative-care-perth)), you need an **AHPRA Registered Nurse**. Choose a nurse-led service like [Care N Cure](/aged-care-at-home-perth).
    - If the requirement is solely gardening and social outings, a broad community provider like BaptistCare or Kimberley Care Group may be appropriate.
 2. **Prioritise Staff Continuity:**
    - Ask: *"Will the same nurse visit every time?"* Rotating agency carers can miss early warning signs of clinical deterioration and cause severe anxiety for elderly seniors with dementia.
