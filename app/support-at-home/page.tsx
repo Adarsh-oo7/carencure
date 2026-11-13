@@ -176,7 +176,7 @@ export default function SupportAtHome() {
                   Under Support at Home, clinical supports such as Registered Nursing attract <strong>0% participant co-payment</strong>. If you are still waiting for your My Aged Care budget or combining funded hours with private visits, Care N Cure keeps private RN pricing transparent and well below typical Perth corporate home-care RN rates:
                 </p>
                 <div className="overflow-x-auto rounded-2xl border border-border">
-                  <table className="w-full text-left text-sm">
+                  <table className="w-full min-w-[540px] text-left text-sm">
                     <thead>
                       <tr className="bg-navy text-white">
                         <th className="p-3.5 font-bold">Funding / Service Option</th>
@@ -250,7 +250,7 @@ export default function SupportAtHome() {
 
             {/* Sidebar Form */}
             <div className="lg:col-span-5">
-              <div className="sticky top-24">
+              <div className="lg:sticky lg:top-28">
                 <ContactForm
                   title="Enquire About Home Support"
                   subtitle="Provide your contact details below. A coordinator will call you back to discuss how we can support you at home."

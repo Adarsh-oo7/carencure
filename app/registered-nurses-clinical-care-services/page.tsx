@@ -145,7 +145,7 @@ export default function ClinicalCareServices() {
 
             {/* Sidebar Form */}
             <div className="lg:col-span-5">
-              <div className="sticky top-24">
+              <div className="lg:sticky lg:top-28">
                 <ContactForm
                   title="Enquire About Clinical Care"
                   subtitle="Provide your contact details below. Our Registered Nurse founder will call you back shortly to discuss how we can support you."

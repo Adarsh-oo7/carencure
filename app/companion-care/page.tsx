@@ -162,7 +162,7 @@ export default function CompanionCare() {
 
             {/* Sidebar Form */}
             <div className="lg:col-span-5">
-              <div className="sticky top-24">
+              <div className="lg:sticky lg:top-28">
                 <ContactForm
                   title="Enquire About Companion Care"
                   subtitle="Please fill out the form below. A registered nurse will call you back to discuss how we can support your loved one."

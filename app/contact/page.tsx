@@ -239,7 +239,7 @@ export default function ContactPage() {
 
             {/* Right Column: Direct Callback / Booking Form */}
             <div className="lg:col-span-5">
-              <div className="sticky top-28 space-y-6">
+              <div className="lg:sticky lg:top-28 space-y-6">
                 <div className="card-base overflow-hidden border border-border shadow-sm">
                   <div className="p-1.5 bg-teal-accent" />
                   <ContactForm

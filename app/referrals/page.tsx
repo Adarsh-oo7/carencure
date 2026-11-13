@@ -192,7 +192,7 @@ export default function ReferralsPage() {
 
             {/* Contact & Online Referral Form Sidebar */}
             <div className="lg:col-span-5">
-              <div className="sticky top-24 space-y-6">
+              <div className="lg:sticky lg:top-28 space-y-6">
                 <div className="card-base p-6">
                   <h3 className="text-navy font-bold text-xl mb-2">Submit Patient Referral</h3>
                   <div className="mb-5 p-3 rounded-xl bg-teal-50 border border-teal-200/80 flex items-center justify-between gap-3">

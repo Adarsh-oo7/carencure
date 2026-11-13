@@ -214,7 +214,7 @@ export default function WoundCare() {
 
             {/* Sidebar Form */}
             <div className="lg:col-span-5">
-              <div className="sticky top-24">
+              <div className="lg:sticky lg:top-28">
                 <ContactForm
                   title="Enquire About Wound Care"
                   subtitle="Please fill out the form below. A registered nurse will contact you to discuss your wound care needs."

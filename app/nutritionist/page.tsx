@@ -190,7 +190,7 @@ export default function Nutritionist() {
 
             {/* Sidebar Form */}
             <div className="lg:col-span-5">
-              <div className="sticky top-24">
+              <div className="lg:sticky lg:top-28">
                 <ContactForm
                   title="Book a Home Nutritionist"
                   subtitle="Tell us about your dietary support needs. A coordinator will contact you to arrange a qualified APD home visit."

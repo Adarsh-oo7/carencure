@@ -151,7 +151,7 @@ export default function PostHospitalCare() {
 
             {/* Sidebar Form */}
             <div className="lg:col-span-5">
-              <div className="sticky top-24">
+              <div className="lg:sticky lg:top-28">
                 <ContactForm
                   title="Enquire About Post-Hospital Care"
                   subtitle="Fill in your details below and a registered nurse will call you back to discuss your recovery plan."

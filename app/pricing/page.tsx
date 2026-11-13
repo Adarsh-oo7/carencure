@@ -191,7 +191,7 @@ export default function PricingPage() {
 
             {/* Sidebar Form */}
             <div className="lg:col-span-5">
-              <div className="sticky top-28 bg-surface p-6 rounded-2xl border border-border shadow-sm space-y-6">
+              <div className="lg:sticky lg:top-28 bg-surface p-6 rounded-2xl border border-border shadow-sm space-y-6">
                 <div className="space-y-2">
                   <h3 className="text-navy text-xl font-bold">Request a Custom Care Quote</h3>
                   <p className="text-body text-sm">

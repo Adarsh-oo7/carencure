@@ -137,7 +137,7 @@ export default function MobilitySupport() {
 
             {/* Sidebar Form */}
             <div className="lg:col-span-5">
-              <div className="sticky top-24">
+              <div className="lg:sticky lg:top-28">
                 <ContactForm
                   title="Enquire About Mobility Care"
                   subtitle="Please fill out your details below. A registered nurse will call you back to discuss your rehabilitation plan."

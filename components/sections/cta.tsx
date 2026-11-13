@@ -37,13 +37,13 @@ export function CTASection({
 
   return (
     <section className="bg-slate-50 border-t border-slate-200" aria-labelledby="choose-us-heading">
-      <div className="section-container py-20">
+      <div className="section-container py-12 md:py-16 lg:py-20">
         
         {/* Row 1: Why Families Choose Us & For Families */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start mb-12 lg:mb-20">
           
           {/* Left Column: Why Families Choose Us */}
-          <div className="card-base p-8 sm:p-10 bg-white border border-slate-100 shadow-sm rounded-3xl animate-fade-in">
+          <div className="card-base p-6 sm:p-10 bg-white border border-slate-100 shadow-sm rounded-3xl animate-fade-in">
             <h2 id="choose-us-heading" className="text-navy font-bold text-2xl mb-6">
               Why Families Choose Us
             </h2>
@@ -81,26 +81,26 @@ export function CTASection({
         </div>
 
         {/* Row 2: Our Promise: You Will Never Feel Like Just Another Client */}
-        <div className="bg-white border border-slate-100 rounded-3xl p-8 sm:p-12 mb-20 shadow-sm">
-          <div className="text-center max-w-3xl mx-auto mb-10">
+        <div className="bg-white border border-slate-100 rounded-3xl p-6 sm:p-10 lg:p-12 mb-12 lg:mb-20 shadow-sm">
+          <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
             <p className="section-label mb-2">Our Core Promise</p>
-            <h2 className="text-navy font-bold text-3xl">
+            <h2 className="text-navy font-bold text-2xl sm:text-3xl">
               You Will Never Feel Like Just Another Client
             </h2>
-            <p className="text-body mt-4 text-base">
+            <p className="text-body mt-3 sm:mt-4 text-base">
               We believe care should feel:
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {promisePoints.map((pt, i) => (
-              <div key={i} className="bg-slate-50 border border-slate-100 p-6 rounded-2xl text-center">
+              <div key={i} className="bg-slate-50 border border-slate-100 p-5 sm:p-6 rounded-2xl text-center">
                 <span className="block text-teal-text font-bold text-xl mb-1">{pt.label}</span>
                 <span className="block text-body text-sm font-medium text-slate-500">{pt.sub}</span>
               </div>
             ))}
           </div>
-          <div className="text-center mt-10 max-w-2xl mx-auto border-t border-slate-100 pt-6">
-            <p className="font-bold text-navy text-lg">
+          <div className="text-center mt-8 sm:mt-10 max-w-2xl mx-auto border-t border-slate-100 pt-6">
+            <p className="font-bold text-navy text-base sm:text-lg">
               Because older Australians deserve care that actually feels like care.
             </p>
           </div>
@@ -108,44 +108,44 @@ export function CTASection({
 
         {/* Row 3: Bottom Action Callout Block */}
         <div
-          className="rounded-3xl p-10 sm:p-16 text-center text-white shadow-xl relative overflow-hidden"
+          className="rounded-3xl px-5 py-9 sm:p-12 lg:p-16 text-center text-white shadow-xl relative overflow-hidden"
           style={{ background: 'linear-gradient(135deg, #091E30 0%, #0D2B45 60%, #1A3D5C 100%)' }}
         >
           {/* Decorative gradients */}
           <div className="absolute -top-12 -left-12 w-48 h-48 bg-teal-accent/10 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute -bottom-12 -right-12 w-48 h-48 bg-teal-accent/10 rounded-full blur-3xl pointer-events-none" />
 
-          <p className="text-teal-accent text-sm font-bold uppercase tracking-widest mb-4">
+          <p className="text-teal-accent text-xs sm:text-sm font-bold uppercase tracking-widest mb-3 sm:mb-4">
             The Nurse Who Knows You
           </p>
-          <h2 className="text-white font-extrabold text-3xl sm:text-4xl lg:text-5xl max-w-3xl mx-auto leading-tight mb-4">
+          <h2 className="text-white font-extrabold text-2xl sm:text-4xl lg:text-5xl max-w-3xl mx-auto leading-tight mb-4">
             {title || 'Helping Australians Stay Safe, Supported, and Independent at Home'}
           </h2>
-          <p className="text-teal-100 text-lg sm:text-xl font-medium max-w-2xl mx-auto mb-6">
+          <p className="text-teal-100 text-base sm:text-xl font-medium max-w-2xl mx-auto mb-6">
             {description || 'One Client. One Nurse Coordinator. One Trusted Relationship.'}
           </p>
 
-          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 text-xs font-semibold text-white/90 mb-8">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 text-xs font-semibold text-white/90 mb-7 sm:mb-8">
             <span className="px-3 py-1 rounded-full bg-white/10 border border-white/15">From $110/hr · $0 Travel (50km)</span>
             <span className="px-3 py-1 rounded-full bg-white/10 border border-white/15">0% SaH Clinical Co-Payment</span>
             <span className="px-3 py-1 rounded-full bg-white/10 border border-white/15">24–48h Home Start · No Referral Needed</span>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-3.5 justify-center items-center">
+          <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-3.5 justify-center items-stretch sm:items-center">
             <a
               href={PHONE_HREF}
               onClick={() => trackPhoneClick('bottom_cta')}
-              className="btn-phone text-base sm:text-lg w-full sm:w-auto justify-center cursor-pointer inline-flex items-center gap-2 font-extrabold shadow-2xl hover:scale-105 transition-all"
+              className="btn-phone text-sm sm:text-base w-full sm:w-auto justify-center cursor-pointer inline-flex items-center gap-2 font-extrabold shadow-2xl hover:scale-[1.02] transition-all"
               id="cta-call-btn"
             >
-              <Phone className="w-5 h-5 flex-shrink-0 animate-pulse text-teal-accent" />
+              <Phone className="w-5 h-5 flex-shrink-0 animate-pulse text-navy" />
               <span>Call Nurse Desk: 1300 919 663</span>
             </a>
             <a
               href={WHATSAPP_HREF}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold text-base w-full sm:w-auto shadow-lg hover:scale-105 transition-all"
+              className="inline-flex items-center justify-center gap-2 min-h-[48px] sm:min-h-[52px] px-5 py-3 rounded-xl bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold text-sm sm:text-base w-full sm:w-auto shadow-lg hover:scale-[1.02] transition-all"
               id="cta-whatsapp-btn"
             >
               <MessageCircle className="w-5 h-5 flex-shrink-0" />
@@ -154,11 +154,11 @@ export function CTASection({
             <Link
               href={secondaryLink?.href || '/contact'}
               onClick={() => trackConsultationRequest('bottom_cta')}
-              className="btn-outline-white text-base sm:text-lg w-full sm:w-auto justify-center inline-flex items-center gap-2"
+              className="btn-outline-white text-sm sm:text-base w-full sm:w-auto justify-center inline-flex items-center gap-2"
               id="cta-book-btn"
             >
               <span>{secondaryLink?.text || 'Book Free Assessment'}</span>
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className="w-5 h-5 shrink-0" />
             </Link>
           </div>
 

@@ -111,11 +111,11 @@ const options: DecisionOption[] = [
 export function DecisionBlock() {
   return (
     <section
-      className="py-14 bg-surface border-b border-border"
+      className="py-10 md:py-14 bg-surface border-b border-border"
       aria-labelledby="decision-block-heading"
     >
       <div className="section-container">
-        <div className="max-w-3xl mb-10">
+        <div className="max-w-3xl mb-8 md:mb-10">
           <p className="section-label mb-2">Service Selection & Enquiry Routing</p>
           <h2
             id="decision-block-heading"
@@ -129,17 +129,17 @@ export function DecisionBlock() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {options.map((opt) => {
             const Icon = opt.icon
             return (
               <div
                 key={opt.href}
-                className="card-base p-6 flex flex-col justify-between hover:border-teal-accent hover:shadow-md transition-all group bg-white relative"
+                className="card-base p-5 sm:p-6 flex flex-col justify-between hover:border-teal-accent hover:shadow-md transition-all group bg-white relative"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="w-11 h-11 rounded-xl bg-teal-subtle flex items-center justify-center text-teal-text group-hover:bg-teal-accent group-hover:text-white transition-colors">
+                  <div className="flex items-center justify-between gap-2 flex-wrap mb-4">
+                    <div className="w-11 h-11 rounded-xl bg-teal-subtle flex items-center justify-center text-teal-text group-hover:bg-teal-accent group-hover:text-white transition-colors shrink-0">
                       <Icon className="w-5 h-5" />
                     </div>
                     <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-surface text-navy border border-border">

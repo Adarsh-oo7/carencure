@@ -193,7 +193,7 @@ export default function PersonalCare() {
 
             {/* Sidebar Form */}
             <div className="lg:col-span-5">
-              <div className="sticky top-24">
+              <div className="lg:sticky lg:top-28">
                 <ContactForm
                   title="Enquire About Personal Care"
                   subtitle="Tell us about your personal care needs. Our team will contact you to discuss the right care plan, services, and funding options."

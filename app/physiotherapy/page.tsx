@@ -187,7 +187,7 @@ export default function Physiotherapy() {
 
             {/* Sidebar Form */}
             <div className="lg:col-span-5">
-              <div className="sticky top-24">
+              <div className="lg:sticky lg:top-28">
                 <ContactForm
                   title="Book a Home Physiotherapist"
                   subtitle="Tell us about your physiotherapy needs. A coordinator will contact you to confirm availability and arrange your home visit."

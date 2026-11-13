@@ -238,7 +238,7 @@ export default function PrivateNursing() {
                 </p>
                 
                 <div className="overflow-x-auto border border-border rounded-xl">
-                  <table className="w-full text-left text-sm text-body">
+                  <table className="w-full min-w-[540px] text-left text-sm text-body">
                     <thead className="bg-navy text-white text-xs uppercase">
                       <tr>
                         <th className="p-4">Service Tier</th>

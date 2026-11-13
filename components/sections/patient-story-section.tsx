@@ -9,7 +9,7 @@ export function PatientStorySection() {
   ]
 
   return (
-    <section className="py-20 bg-white" aria-labelledby="familiar-heading">
+    <section className="py-12 md:py-20 bg-white" aria-labelledby="familiar-heading">
       <div className="section-container">
         {/* Header */}
         <div className="text-center mb-12">
@@ -55,7 +55,7 @@ export function PatientStorySection() {
             </p>
           </div>
 
-          <div className="lg:col-span-3 bg-teal-700 text-white rounded-3xl p-8 sm:p-10 shadow-lg relative overflow-hidden">
+          <div className="lg:col-span-3 bg-teal-700 text-white rounded-3xl p-6 sm:p-10 shadow-lg relative overflow-hidden">
             {/* Visual glow indicator */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-teal-accent/20 rounded-full blur-3xl pointer-events-none" />
             

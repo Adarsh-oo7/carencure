@@ -171,7 +171,7 @@ export default function CommunityNursingPage() {
                   Reviewed by Care N Cure’s clinical lead. The table below explains who delivers each service, assessment requirements, scope boundaries, and clinical escalation pathways:
                 </p>
                 <div className="overflow-x-auto border border-border rounded-xl">
-                  <table className="w-full text-left text-xs sm:text-sm text-body">
+                  <table className="w-full min-w-[540px] text-left text-xs sm:text-sm text-body">
                     <thead className="bg-surface text-navy font-bold border-b border-border">
                       <tr>
                         <th className="p-3">Service</th>

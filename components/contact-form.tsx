@@ -150,7 +150,7 @@ export function ContactForm({
   return (
     <form
       onSubmit={handleSubmit}
-      className="card-base p-8 flex flex-col gap-5 bg-white"
+      className="card-base p-5 sm:p-8 flex flex-col gap-5 bg-white"
       id="contact-form"
       aria-label="Contact enquiry form"
       noValidate

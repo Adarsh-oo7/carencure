@@ -130,33 +130,33 @@ export function Navigation() {
         style={{ overflow: 'visible' }}
       >
         {/* Top Utility / Credential Bar — Clean, Stable & Responsive */}
-        <div className="bg-navy-dark text-white py-1.5 px-4 text-xs border-b border-navy-light/40 relative z-50">
+        <div className="bg-navy-dark text-white py-1.5 text-xs border-b border-navy-light/40 relative z-50">
           <div className="section-container flex items-center justify-between gap-3">
             {/* Left: Key Credentials */}
-            <div className="hidden md:flex items-center gap-4 lg:gap-6 text-[11px] lg:text-xs text-white/90 font-medium">
+            <div className="hidden md:flex items-center gap-4 lg:gap-5 text-[11px] lg:text-xs text-white/90 font-medium whitespace-nowrap">
               <span className="inline-flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-teal-accent" />
+                <span className="w-1.5 h-1.5 rounded-full bg-teal-accent shrink-0" />
                 ★ 5.0 Google Rated · AHPRA RNs
               </span>
               <span className="inline-flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-teal-accent" />
+                <span className="w-1.5 h-1.5 rounded-full bg-teal-accent shrink-0" />
                 From $110/hr · $0 Travel (50km)
               </span>
-              <span className="inline-flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-teal-accent" />
+              <span className="hidden xl:inline-flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-teal-accent shrink-0" />
                 0% SaH Clinical Co-Pay (Trilogy Care Partner)
               </span>
             </div>
 
             {/* Mobile / Tablet Left */}
-            <div className="flex md:hidden items-center gap-1.5 text-[11px] text-white/90 font-medium truncate">
+            <div className="flex md:hidden items-center gap-1.5 text-[11px] text-white/90 font-medium min-w-0">
               <span className="w-1.5 h-1.5 rounded-full bg-teal-accent shrink-0" />
               <span className="truncate">From $110/hr · $0 Travel (50km) · 24–48h Start</span>
             </div>
 
             {/* Right: Phone & Location Quick Info (Desktop / Tablet) */}
-            <div className="hidden sm:flex items-center gap-3 lg:gap-5 text-[11px] lg:text-xs font-semibold shrink-0">
-              <span className="text-white/70">Gosnells HQ • All Perth Suburbs</span>
+            <div className="hidden sm:flex items-center gap-3 lg:gap-4 text-[11px] lg:text-xs font-semibold shrink-0 whitespace-nowrap">
+              <span className="hidden lg:inline text-white/70">Gosnells HQ • All Perth Suburbs</span>
               <a
                 href={PHONE_HREF}
                 className="inline-flex items-center gap-1.5 text-teal-accent hover:text-white transition-colors cursor-pointer"
@@ -177,31 +177,31 @@ export function Navigation() {
           aria-label="Main navigation"
         >
           <div className="section-container overflow-visible">
-            <div className="flex items-center justify-between h-16 sm:h-20 overflow-visible gap-2">
+            <div className="flex items-center justify-between h-16 overflow-visible gap-2">
               {/* Logo */}
-              <Link href="/" className="flex items-center gap-3 shrink-0" aria-label="Care N Cure — Home">
-                <div className="bg-navy rounded-xl p-1 flex items-center justify-center transition-transform duration-200 hover:scale-105 w-11 h-11 sm:w-13 sm:h-13">
+              <Link href="/" className="flex items-center gap-2 sm:gap-2.5 shrink-0 min-w-0" aria-label="Care N Cure — Home">
+                <div className="bg-navy rounded-xl p-1 flex items-center justify-center transition-transform duration-200 hover:scale-105 w-10 h-10 sm:w-11 sm:h-11 shrink-0">
                   <Image
                     src="/logo.png"
                     alt="Care N Cure logo"
                     width={48}
                     height={48}
                     style={{ width: 'auto', height: 'auto' }}
-                    className="w-9 h-9 sm:w-11 sm:h-11 object-contain"
+                    className="w-8 h-8 sm:w-9 sm:h-9 object-contain"
                     priority
                   />
                 </div>
-                <div className="flex flex-col">
-                  <div className="font-extrabold text-base sm:text-xl leading-tight text-navy tracking-tight">Care N Cure</div>
-                  <div className="text-[9px] sm:text-xs text-teal-600 font-bold leading-tight uppercase tracking-wider">Nursing Care Services</div>
+                <div className="flex flex-col min-w-0">
+                  <div className="font-extrabold text-sm sm:text-lg leading-tight text-navy tracking-tight truncate">Care N Cure</div>
+                  <div className="text-[9px] sm:text-[10px] text-teal-text font-bold leading-tight uppercase tracking-wider truncate">Nursing Care Services</div>
                 </div>
               </Link>
 
               {/* Desktop Nav Links */}
-              <div className="hidden lg:flex items-center gap-1 xl:gap-2">
+              <div className="hidden lg:flex items-center gap-0.5 xl:gap-1.5">
                 <Link
                   href="/"
-                  className="px-2.5 py-1.5 text-sm font-semibold text-body hover:text-navy hover:bg-surface rounded-lg transition-colors"
+                  className="px-2 xl:px-2.5 py-1.5 text-[13px] xl:text-sm font-semibold text-body hover:text-navy hover:bg-surface rounded-lg transition-colors whitespace-nowrap"
                 >
                   Home
                 </Link>
@@ -213,7 +213,7 @@ export function Navigation() {
                   onMouseLeave={handleServicesMouseLeave}
                 >
                   <button
-                    className={`px-2.5 py-1.5 text-sm font-semibold rounded-lg transition-colors flex items-center gap-1 ${
+                    className={`px-2 xl:px-2.5 py-1.5 text-[13px] xl:text-sm font-semibold rounded-lg transition-colors flex items-center gap-1 whitespace-nowrap ${
                       servicesOpen ? 'text-navy bg-surface' : 'text-body hover:text-navy hover:bg-surface'
                     }`}
                     aria-haspopup="true"
@@ -225,9 +225,9 @@ export function Navigation() {
                     <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${servicesOpen ? 'rotate-180 text-navy' : 'text-muted-brand'}`} />
                   </button>
                   {servicesOpen && (
-                    <div className="absolute top-full -left-12 pt-2 z-50">
+                    <div className="absolute top-full -left-4 xl:-left-12 pt-2 z-50">
                       <div
-                        className="w-[620px] bg-white rounded-2xl p-5 shadow-2xl border border-border animate-in fade-in slide-in-from-top-1 duration-150"
+                        className="w-[min(620px,calc(100vw-2rem))] bg-white rounded-2xl p-5 shadow-2xl border border-border animate-in fade-in slide-in-from-top-1 duration-150"
                         role="menu"
                         aria-labelledby="services-menu-btn"
                       >
@@ -308,7 +308,7 @@ export function Navigation() {
                   onMouseLeave={handleLocationsMouseLeave}
                 >
                   <button
-                    className={`px-2.5 py-1.5 text-sm font-semibold rounded-lg transition-colors flex items-center gap-1 ${
+                    className={`px-2 xl:px-2.5 py-1.5 text-[13px] xl:text-sm font-semibold rounded-lg transition-colors flex items-center gap-1 whitespace-nowrap ${
                       locationsOpen ? 'text-navy bg-surface' : 'text-body hover:text-navy hover:bg-surface'
                     }`}
                     aria-haspopup="true"
@@ -320,9 +320,9 @@ export function Navigation() {
                     <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${locationsOpen ? 'rotate-180 text-navy' : 'text-muted-brand'}`} />
                   </button>
                   {locationsOpen && (
-                    <div className="absolute top-full -left-20 pt-2 z-50">
+                    <div className="absolute top-full -left-12 xl:-left-20 pt-2 z-50">
                       <div
-                        className="w-[590px] bg-white rounded-2xl p-4 shadow-2xl border border-border animate-in fade-in slide-in-from-top-1 duration-150"
+                        className="w-[min(590px,calc(100vw-2rem))] bg-white rounded-2xl p-4 shadow-2xl border border-border animate-in fade-in slide-in-from-top-1 duration-150"
                         role="menu"
                         aria-labelledby="locations-menu-btn"
                       >
@@ -409,75 +409,76 @@ export function Navigation() {
 
                 <Link
                   href="/about"
-                  className="px-2.5 py-1.5 text-sm font-semibold text-body hover:text-navy hover:bg-surface rounded-lg transition-colors"
+                  className="px-2 xl:px-2.5 py-1.5 text-[13px] xl:text-sm font-semibold text-body hover:text-navy hover:bg-surface rounded-lg transition-colors whitespace-nowrap"
                 >
                   About
                 </Link>
                 <Link
                   href="/referrals"
-                  className="px-2.5 py-1.5 text-sm font-semibold text-body hover:text-navy hover:bg-surface rounded-lg transition-colors"
+                  className="px-2 xl:px-2.5 py-1.5 text-[13px] xl:text-sm font-semibold text-body hover:text-navy hover:bg-surface rounded-lg transition-colors whitespace-nowrap"
                 >
                   Referrals
                 </Link>
                 <Link
                   href="/testimonials"
-                  className="px-2.5 py-1.5 text-sm font-semibold text-body hover:text-navy hover:bg-surface rounded-lg transition-colors"
+                  aria-label="Quality and Feedback"
+                  className="px-2 xl:px-2.5 py-1.5 text-[13px] xl:text-sm font-semibold text-body hover:text-navy hover:bg-surface rounded-lg transition-colors whitespace-nowrap"
                 >
-                  Quality & Feedback
+                  Reviews
                 </Link>
                 <Link
                   href="/faq"
-                  className="px-2.5 py-1.5 text-sm font-semibold text-body hover:text-navy hover:bg-surface rounded-lg transition-colors"
+                  className="px-2 xl:px-2.5 py-1.5 text-[13px] xl:text-sm font-semibold text-body hover:text-navy hover:bg-surface rounded-lg transition-colors whitespace-nowrap"
                 >
                   FAQ
                 </Link>
                 <Link
                   href="/contact"
-                  className="px-2.5 py-1.5 text-sm font-semibold text-body hover:text-navy hover:bg-surface rounded-lg transition-colors"
+                  className="px-2 xl:px-2.5 py-1.5 text-[13px] xl:text-sm font-semibold text-body hover:text-navy hover:bg-surface rounded-lg transition-colors whitespace-nowrap"
                 >
                   Contact
                 </Link>
               </div>
 
               {/* Desktop CTA — Dual High-Converting Intake Actions */}
-              <div className="hidden lg:flex items-center gap-2 shrink-0">
+              <div className="hidden lg:flex items-center gap-1.5 xl:gap-2 shrink-0">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center bg-navy hover:bg-navy-light text-white font-bold text-xs px-3.5 py-2.5 rounded-xl shadow-xs transition-all shrink-0 cursor-pointer whitespace-nowrap"
+                  className="inline-flex items-center justify-center bg-navy hover:bg-navy-light text-white font-bold text-xs px-3 xl:px-3.5 py-2.5 rounded-xl shadow-xs transition-all shrink-0 cursor-pointer whitespace-nowrap"
                   id="nav-book-cta"
                 >
-                  Free 24–48h Assessment
+                  Free <span className="hidden xl:inline">&nbsp;24–48h</span>&nbsp;Assessment
                 </Link>
                 <a
                   href={PHONE_HREF}
-                  className="inline-flex items-center gap-2 bg-teal-accent hover:bg-teal-dark text-navy font-bold text-sm px-3.5 py-2 rounded-xl shadow-sm hover:shadow transition-all group shrink-0 cursor-pointer"
+                  className="inline-flex items-center gap-1.5 xl:gap-2 bg-teal-accent hover:bg-teal-dark text-navy font-bold text-sm px-2.5 xl:px-3.5 py-1.5 rounded-xl shadow-sm hover:shadow transition-all group shrink-0 cursor-pointer whitespace-nowrap"
                   id="nav-call-cta"
                   aria-label="Call Registered Nurse Team: 1300 919 663"
                 >
-                  <div className="w-7 h-7 rounded-lg bg-navy/10 flex items-center justify-center group-hover:bg-navy/15 transition-colors shrink-0">
-                    <Phone className="w-4 h-4 text-navy" />
+                  <div className="w-6 h-6 xl:w-7 xl:h-7 rounded-lg bg-navy/10 flex items-center justify-center group-hover:bg-navy/15 transition-colors shrink-0">
+                    <Phone className="w-3.5 h-3.5 xl:w-4 xl:h-4 text-navy" />
                   </div>
                   <div className="flex flex-col text-left leading-tight">
                     <span className="text-[9px] font-extrabold uppercase tracking-wider text-navy/75">Speak to an RN</span>
-                    <span className="text-sm font-extrabold text-navy tracking-tight">1300 919 663</span>
+                    <span className="text-xs xl:text-sm font-extrabold text-navy tracking-tight">1300 919 663</span>
                   </div>
                 </a>
               </div>
 
               {/* Mobile: Direct Call Icon Button + Hamburger */}
-              <div className="flex lg:hidden items-center gap-2">
+              <div className="flex lg:hidden items-center gap-1.5 sm:gap-2 shrink-0">
                 <a
                   href={PHONE_HREF}
-                  className="flex items-center gap-1.5 bg-navy hover:bg-navy-light text-white text-xs font-bold px-3 py-2 rounded-xl transition-all shadow-xs cursor-pointer"
+                  className="flex items-center gap-1.5 bg-navy hover:bg-navy-light text-white text-xs font-bold px-2.5 sm:px-3 py-2 rounded-xl transition-all shadow-xs cursor-pointer whitespace-nowrap"
                   id="nav-mobile-call"
                   aria-label="Call Registered Nurse Desk: 1300 919 663"
                 >
-                  <Phone className="w-3.5 h-3.5 text-teal-accent" />
+                  <Phone className="w-3.5 h-3.5 text-teal-accent shrink-0" />
                   <span className="hidden sm:inline">1300 919 663</span>
                   <span className="sm:hidden font-semibold">Call RN</span>
                 </a>
                 <button
-                  className="p-2 rounded-xl hover:bg-surface transition-colors text-navy"
+                  className="p-2 rounded-xl hover:bg-surface transition-colors text-navy shrink-0"
                   onClick={() => setIsOpen(!isOpen)}
                   aria-label={isOpen ? 'Close menu' : 'Open menu'}
                   aria-expanded={isOpen}
@@ -490,8 +491,8 @@ export function Navigation() {
 
           {/* Mobile menu */}
           {isOpen && (
-            <div className="lg:hidden border-t border-border bg-white max-h-[75vh] overflow-y-auto">
-              <div className="section-container py-4 flex flex-col gap-1">
+            <div className="lg:hidden border-t border-border bg-white max-h-[calc(100dvh-6.25rem)] overflow-y-auto overscroll-contain shadow-xl">
+              <div className="section-container py-4 pb-8 flex flex-col gap-1">
                 <Link
                   href="/"
                   className="px-3 py-2.5 text-body font-medium hover:bg-surface hover:text-navy rounded-lg transition-colors"

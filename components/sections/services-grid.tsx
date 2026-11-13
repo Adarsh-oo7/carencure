@@ -168,12 +168,12 @@ export function ServicesGrid() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto">
           {services.map(({ id, icon: Icon, title, description, href, colour, iconColour }) => (
             <div
               key={id}
               id={id}
-              className="card-base p-7 service-card flex flex-col justify-between group hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-teal-border relative"
+              className="card-base p-5 sm:p-7 service-card flex flex-col justify-between group hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-teal-border relative"
             >
               <div className="flex flex-col gap-4">
                 <div

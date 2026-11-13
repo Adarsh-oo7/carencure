@@ -113,7 +113,7 @@ export function FundedLanding({ page }: { page: LandingPage }) {
             </article>
 
             <aside className="lg:col-span-5">
-              <div className="sticky top-28 space-y-6">
+              <div className="lg:sticky lg:top-28 space-y-6">
                 <ContactForm
                   title={page.hub === 'ndis' ? 'Talk to an NDIS Nurse' : 'Ask About Support at Home Nursing'}
                   subtitle="Leave your details and a Registered Nurse will call you back. No obligation."

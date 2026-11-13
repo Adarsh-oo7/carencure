@@ -1202,7 +1202,7 @@ export default async function SuburbPage({ params }: { params: Promise<{ suburb:
 
             {/* Right Column Form */}
             <div className="lg:col-span-5 space-y-6">
-              <div className="sticky top-24 space-y-6">
+              <div className="lg:sticky lg:top-28 space-y-6">
                 <ContactForm
                   title={`Enquire in ${data.name}`}
                   subtitle={`Provide your details below. Our Registered Nurse team will contact you to discuss clinical nursing support in ${data.name}.`}

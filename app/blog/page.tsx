@@ -59,7 +59,7 @@ export default function BlogPage() {
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
             {/* Sidebar */}
             <aside className="lg:col-span-1">
-              <div className="bg-card rounded-lg p-6 border border-border sticky top-20">
+              <div className="bg-card rounded-lg p-6 border border-border lg:sticky lg:top-28">
                 <h3 className="text-lg font-semibold text-secondary mb-4">Categories</h3>
                 <div className="space-y-2">
                   <Link

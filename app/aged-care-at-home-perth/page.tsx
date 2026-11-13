@@ -230,7 +230,7 @@ export default function AgedCareAtHomePerthPage() {
 
             {/* Right Column: Callback & Enquiry Form */}
             <div className="lg:col-span-5">
-              <div className="sticky top-28 space-y-6">
+              <div className="lg:sticky lg:top-28 space-y-6">
                 <div className="card-base overflow-hidden border border-border shadow-md">
                   <div className="p-1.5 bg-teal-accent" />
                   <ContactForm
@@ -335,13 +335,13 @@ export default function AgedCareAtHomePerthPage() {
               Perth families searching for aged care usually compare a few big providers with smaller local teams. Here is an honest comparison to help you decide.
             </p>
           </div>
-          <div className="overflow-x-auto max-w-4xl mx-auto">
-            <table className="w-full text-sm border border-border rounded-xl overflow-hidden">
+          <div className="overflow-x-auto max-w-4xl mx-auto rounded-xl border border-border">
+            <table className="w-full min-w-[540px] text-sm">
               <thead className="bg-surface text-navy">
                 <tr>
-                  <th scope="col" className="text-left p-4 font-bold">What families ask</th>
-                  <th scope="col" className="text-left p-4 font-bold">Typical large agency</th>
-                  <th scope="col" className="text-left p-4 font-bold text-teal-text">Care N Cure (Harrisdale)</th>
+                  <th scope="col" className="text-left p-3 sm:p-4 font-bold">What families ask</th>
+                  <th scope="col" className="text-left p-3 sm:p-4 font-bold">Typical large agency</th>
+                  <th scope="col" className="text-left p-3 sm:p-4 font-bold text-teal-text">Care N Cure (Perth)</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-border text-body">

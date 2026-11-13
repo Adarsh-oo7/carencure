@@ -32,7 +32,7 @@ export function PersistentUI() {
         {/* Floating Chat Card */}
         {isOpen && (
           <div
-            className="absolute bottom-16 right-0 mb-3 w-[350px] max-w-[calc(100vw-2rem)] rounded-2xl shadow-2xl bg-white border border-slate-100 overflow-hidden animate-in fade-in slide-in-from-bottom-5 duration-300 origin-bottom-right"
+            className="absolute bottom-16 right-0 mb-3 w-[350px] max-w-[calc(100vw-2rem)] max-h-[calc(100dvh-7.5rem)] overflow-y-auto overscroll-contain rounded-2xl shadow-2xl bg-white border border-slate-100 animate-in fade-in slide-in-from-bottom-5 duration-300 origin-bottom-right"
             role="dialog"
             aria-label="Contact channels popup"
           >
@@ -87,7 +87,7 @@ export function PersistentUI() {
                   <h5 className="font-bold text-slate-800 text-sm leading-tight m-0">Chat on WhatsApp</h5>
                   <p className="text-xs text-slate-500 m-0 mt-0.5">Instant message coordinators</p>
                 </div>
-                <span className="text-slate-350 group-hover:translate-x-1 transition-transform duration-200 text-sm font-bold">→</span>
+                <span className="text-slate-400 group-hover:translate-x-1 transition-transform duration-200 text-sm font-bold">→</span>
               </a>
 
               {/* SMS Message */}
@@ -103,7 +103,7 @@ export function PersistentUI() {
                   <h5 className="font-bold text-slate-800 text-sm leading-tight m-0">Text SMS Message</h5>
                   <p className="text-xs text-slate-500 m-0 mt-0.5">Send a mobile text message</p>
                 </div>
-                <span className="text-slate-350 group-hover:translate-x-1 transition-transform duration-200 text-sm font-bold">→</span>
+                <span className="text-slate-400 group-hover:translate-x-1 transition-transform duration-200 text-sm font-bold">→</span>
               </a>
 
               {/* Instagram */}
@@ -125,7 +125,7 @@ export function PersistentUI() {
                   <h5 className="font-bold text-slate-800 text-sm leading-tight m-0">Instagram Profile</h5>
                   <p className="text-xs text-slate-500 m-0 mt-0.5">Follow @carencurenursing</p>
                 </div>
-                <span className="text-slate-350 group-hover:translate-x-1 transition-transform duration-200 text-sm font-bold">→</span>
+                <span className="text-slate-400 group-hover:translate-x-1 transition-transform duration-200 text-sm font-bold">→</span>
               </a>
 
               {/* Direct Phone Call */}
@@ -141,7 +141,7 @@ export function PersistentUI() {
                   <h5 className="font-bold text-slate-800 text-sm leading-tight m-0">Call Nurse Coordinator</h5>
                   <p className="text-xs text-slate-500 m-0 mt-0.5">Dial office phone ({PHONE_NUMBER})</p>
                 </div>
-                <span className="text-slate-350 group-hover:translate-x-1 transition-transform duration-200 text-sm font-bold">→</span>
+                <span className="text-slate-400 group-hover:translate-x-1 transition-transform duration-200 text-sm font-bold">→</span>
               </a>
             </div>
             
@@ -190,29 +190,29 @@ export function PersistentUI() {
       </div>
 
       {/* Mobile Sticky Action Bar (Fixed bottom bar on phones) */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-navy/95 backdrop-blur-md border-t border-navy-light/40 py-2.5 px-3 flex items-center justify-between gap-2 shadow-2xl">
+      <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-navy/95 backdrop-blur-md border-t border-navy-light/40 pt-2.5 pb-[max(0.625rem,env(safe-area-inset-bottom))] px-2.5 flex items-center justify-between gap-2 shadow-2xl">
         <a
           href={PHONE_HREF}
-          className="flex-1 bg-gradient-to-r from-emerald-600 to-teal-500 hover:from-emerald-500 hover:to-teal-400 text-white font-bold text-sm py-2.5 px-3 rounded-xl flex items-center justify-center gap-2 shadow-lg active:scale-95 transition-all text-center"
+          className="flex-1 min-w-0 min-h-[44px] bg-gradient-to-r from-emerald-600 to-teal-500 hover:from-emerald-500 hover:to-teal-400 text-white font-bold text-xs sm:text-sm py-2 px-2.5 rounded-xl flex items-center justify-center gap-1.5 shadow-lg active:scale-95 transition-all text-center whitespace-nowrap"
         >
           <Phone className="w-4 h-4 fill-current shrink-0 animate-pulse" />
-          <span className="truncate">Call 1300 919 663</span>
+          <span>1300 919 663</span>
         </a>
         <a
           href={WHATSAPP_HREF}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold text-xs py-2.5 px-3 rounded-xl flex items-center justify-center gap-1.5 shadow-md active:scale-95 transition-all whitespace-nowrap"
+          className="min-h-[44px] bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold text-xs py-2 px-3 rounded-xl flex items-center justify-center gap-1.5 shadow-md active:scale-95 transition-all whitespace-nowrap shrink-0"
           aria-label="Chat on WhatsApp"
         >
-          <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current">
+          <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current shrink-0">
             <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.625 1.45 5.489.002 9.961-4.47 9.964-9.96.002-2.66-1.023-5.158-2.884-7.02C16.49 1.76 13.992.73 11.33.73c-5.49 0-9.962 4.471-9.965 9.961-.001 1.93.52 3.473 1.503 5.062L1.87 21.08l5.46-1.432zM17.18 14.86c-.305-.153-1.802-.888-2.083-.99-.281-.102-.485-.153-.687.153-.202.305-.783.99-.96 1.194-.177.203-.355.228-.66.076-.305-.152-1.287-.475-2.451-1.513-.906-.808-1.517-1.807-1.695-2.112-.178-.305-.019-.47.133-.621.137-.136.305-.355.457-.533.153-.177.203-.305.305-.508.102-.203.05-.381-.026-.533-.076-.152-.687-1.656-.94-2.266-.247-.595-.499-.513-.687-.523-.178-.01-.381-.01-.584-.01-.203 0-.533.076-.812.381-.28.305-1.066 1.042-1.066 2.541s1.091 2.946 1.243 3.149c.153.203 2.15 3.284 5.207 4.603.727.314 1.294.5 1.737.641.73.232 1.393.197 1.917.12.584-.087 1.802-.736 2.056-1.447.253-.71.253-1.32.177-1.447-.076-.127-.28-.203-.584-.355z" />
           </svg>
-          <span>WhatsApp</span>
+          <span className="hidden min-[380px]:inline">WhatsApp</span>
         </a>
         <a
           href="/contact"
-          className="bg-white/10 hover:bg-white/20 text-white font-semibold text-xs py-2.5 px-3 rounded-xl border border-white/20 text-center whitespace-nowrap transition-all"
+          className="min-h-[44px] flex items-center justify-center bg-white/10 hover:bg-white/20 text-white font-semibold text-xs py-2 px-3 rounded-xl border border-white/20 text-center whitespace-nowrap transition-all shrink-0"
         >
           Enquire
         </a>

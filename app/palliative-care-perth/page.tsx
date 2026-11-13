@@ -184,7 +184,7 @@ export default function PalliativeCarePerthPage() {
             </div>
 
             <div className="lg:col-span-5 space-y-6">
-              <div className="sticky top-24 space-y-6">
+              <div className="lg:sticky lg:top-28 space-y-6">
                 <ContactForm
                   title="Discuss Palliative Support"
                   subtitle="Speak confidentially with an AHPRA Registered Nurse coordinator about comfort care at home."

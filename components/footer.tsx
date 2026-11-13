@@ -9,7 +9,7 @@ export function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="pt-16 pb-8" style={{ background: 'var(--navy)' }}>
+    <footer className="pt-14 sm:pt-16 pb-24 md:pb-8" style={{ background: 'var(--navy)' }}>
       <div className="section-container">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
 

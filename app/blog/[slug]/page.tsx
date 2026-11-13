@@ -269,7 +269,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
             {/* Sidebar */}
             <aside className="lg:col-span-4">
-              <div className="sticky top-24 space-y-6">
+              <div className="lg:sticky lg:top-28 space-y-6">
                 {/* CTA Card */}
                 <div className="card-base p-6 border-2 border-teal-accent/30">
                   <h3 className="text-navy font-bold text-lg mb-2">Need nursing care at home?</h3>

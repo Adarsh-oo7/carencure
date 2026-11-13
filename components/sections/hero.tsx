@@ -24,8 +24,8 @@ export function HeroSection({
 }: HeroProps) {
   return (
     <section
-      className="relative overflow-hidden"
-      style={{ minHeight: '82vh', background: '#091E30' }}
+      className="relative overflow-hidden min-h-[540px] sm:min-h-[600px] lg:min-h-[78vh] flex items-center"
+      style={{ background: '#091E30' }}
       aria-labelledby="hero-heading"
       itemScope
       itemType="https://schema.org/MedicalBusiness"
@@ -76,13 +76,13 @@ export function HeroSection({
       />
 
       {/* ── Content Container ── */}
-      <div className="relative section-container pt-12 pb-24 sm:pt-16 sm:pb-32 md:pt-20 md:pb-36 z-10">
+      <div className="relative section-container w-full pt-10 pb-20 sm:pt-14 sm:pb-24 md:pt-16 md:pb-28 z-10">
         <div style={{ maxWidth: '600px' }} className="animate-fade-in">
 
           {/* Credential Badge */}
           {badge && (
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-accent/20 border border-teal-accent/40 text-teal-accent text-xs font-bold tracking-wide uppercase mb-3 sm:mb-4 backdrop-blur-md shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-teal-accent animate-pulse" />
+            <div className="inline-flex items-center gap-2 max-w-full px-3 sm:px-3.5 py-1.5 rounded-full bg-teal-accent/20 border border-teal-accent/40 text-teal-accent text-[11px] sm:text-xs font-bold tracking-wide uppercase mb-3 sm:mb-4 backdrop-blur-md shadow-sm leading-snug">
+              <span className="w-2 h-2 rounded-full bg-teal-accent animate-pulse shrink-0" />
               <span>{badge}</span>
             </div>
           )}
@@ -153,22 +153,22 @@ export function HeroSection({
           </p>
 
           {/* Reassurance Grid — Top 4 Client & Pricing Proof Points */}
-          <div className="grid grid-cols-2 gap-2 sm:gap-2.5 pt-4 border-t border-white/20 max-w-[560px]">
-            <div className="flex items-center gap-2 sm:gap-2.5 bg-white/12 backdrop-blur-md px-3 sm:px-3.5 py-2.5 rounded-xl border border-white/20 text-white text-[11px] sm:text-xs font-semibold shadow-xs">
+          <div className="grid grid-cols-1 min-[380px]:grid-cols-2 gap-2 sm:gap-2.5 pt-4 border-t border-white/20 max-w-[560px]">
+            <div className="flex items-center gap-2 sm:gap-2.5 min-w-0 bg-white/12 backdrop-blur-md px-3 sm:px-3.5 py-2.5 rounded-xl border border-white/20 text-white text-xs font-semibold shadow-xs leading-tight">
               <ShieldCheck className="w-4 h-4 text-teal-accent shrink-0" />
-              <span className="truncate sm:overflow-visible">From $110/hr · $0 Travel</span>
+              <span>From $110/hr · $0 Travel</span>
             </div>
-            <div className="flex items-center gap-2 sm:gap-2.5 bg-white/12 backdrop-blur-md px-3 sm:px-3.5 py-2.5 rounded-xl border border-white/20 text-white text-[11px] sm:text-xs font-semibold shadow-xs">
+            <div className="flex items-center gap-2 sm:gap-2.5 min-w-0 bg-white/12 backdrop-blur-md px-3 sm:px-3.5 py-2.5 rounded-xl border border-white/20 text-white text-xs font-semibold shadow-xs leading-tight">
               <UserCheck className="w-4 h-4 text-teal-accent shrink-0" />
-              <span className="truncate sm:overflow-visible">1 Dedicated AHPRA RN</span>
+              <span>1 Dedicated AHPRA RN</span>
             </div>
-            <div className="flex items-center gap-2 sm:gap-2.5 bg-white/12 backdrop-blur-md px-3 sm:px-3.5 py-2.5 rounded-xl border border-white/20 text-white text-[11px] sm:text-xs font-semibold shadow-xs">
+            <div className="flex items-center gap-2 sm:gap-2.5 min-w-0 bg-white/12 backdrop-blur-md px-3 sm:px-3.5 py-2.5 rounded-xl border border-white/20 text-white text-xs font-semibold shadow-xs leading-tight">
               <Clock className="w-4 h-4 text-teal-accent shrink-0" />
-              <span className="truncate sm:overflow-visible">24–48h Home Start</span>
+              <span>24–48h Home Start</span>
             </div>
-            <div className="flex items-center gap-2 sm:gap-2.5 bg-white/12 backdrop-blur-md px-3 sm:px-3.5 py-2.5 rounded-xl border border-white/20 text-white text-[11px] sm:text-xs font-semibold shadow-xs">
+            <div className="flex items-center gap-2 sm:gap-2.5 min-w-0 bg-white/12 backdrop-blur-md px-3 sm:px-3.5 py-2.5 rounded-xl border border-white/20 text-white text-xs font-semibold shadow-xs leading-tight">
               <MapPin className="w-4 h-4 text-teal-accent shrink-0" />
-              <span className="truncate sm:overflow-visible">0% SaH Clinical Co-Pay</span>
+              <span>0% SaH Clinical Co-Pay</span>
             </div>
           </div>
 

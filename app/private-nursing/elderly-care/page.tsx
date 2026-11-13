@@ -182,7 +182,7 @@ export default function ElderlyPrivateNursing() {
                 </p>
                 
                 <div className="overflow-x-auto rounded-2xl border border-border">
-                  <table className="w-full text-left text-sm">
+                  <table className="w-full min-w-[540px] text-left text-sm">
                     <thead>
                       <tr className="bg-navy text-white">
                         <th className="p-4 font-bold">Care Factor</th>
@@ -393,7 +393,7 @@ export default function ElderlyPrivateNursing() {
 
             {/* Sidebar Form */}
             <div className="lg:col-span-5">
-              <div className="sticky top-24 space-y-6">
+              <div className="lg:sticky lg:top-28 space-y-6">
                 <ContactForm
                   title="Enquire About In-Home Elderly Care"
                   subtitle="Speak directly with our registered nurse founder. Let us know how we can support your parent at home in Perth."

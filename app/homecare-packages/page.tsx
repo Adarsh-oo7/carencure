@@ -245,7 +245,7 @@ export default function HomecarePackages() {
 
             {/* Sidebar Contact Form */}
             <div className="lg:col-span-5">
-              <div className="sticky top-28 bg-surface p-6 rounded-2xl border border-border shadow-sm space-y-6">
+              <div className="lg:sticky lg:top-28 bg-surface p-6 rounded-2xl border border-border shadow-sm space-y-6">
                 <div className="space-y-2">
                   <span className="px-3 py-1 bg-teal-subtle text-teal-text text-xs font-bold rounded-full uppercase tracking-wider font-sans">Package Support</span>
                   <h3 className="text-navy text-xl font-bold">Maximise Your Care Package</h3>
