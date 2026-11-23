@@ -67,7 +67,7 @@ export default function ContactPage() {
                 </h2>
                 <div className="section-divider my-4" />
                 <p className="text-body text-base leading-relaxed">
-                  No call centres or delayed ticketing systems. Speak or message directly with our registered nurse founder, <strong>Jinu</strong>, for immediate clinical guidance, hospital discharge support, or care bookings.
+                  No call centres or delayed ticketing systems. Speak or message directly with an AHPRA Registered Nurse coordinator for clinical guidance, hospital discharge support, or a <strong>24–48h home care assessment</strong> (from <strong>$110/hr</strong> with <strong>$0 travel fees</strong> within 50km).
                 </p>
               </div>
 

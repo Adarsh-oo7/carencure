@@ -9,15 +9,21 @@ import { ReferralForm } from '@/components/forms/referral-form'
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Healthcare Referrals | Registered Nurse Home Care | Care N Cure Perth',
+    absolute: 'GP & Hospital Discharge Nursing Referrals Perth | Care N Cure',
   },
   description:
-    'Care N Cure accepts clinician referrals from hospital discharge planners, GPs, and allied health professionals across Perth. Acknowledged within 24 hours; home assessments within 24–48 hours.',
+    'Clinician referral pathway for hospital discharge planners, Perth GPs, and allied health teams. Refer patients for post-surgical wound care & RN home visits. Acknowledged within 24 hours; home assessment in 24–48h.',
+  keywords: [
+    'gp nursing referral perth',
+    'hospital discharge nursing referral perth',
+    'allied health referral home nursing wa',
+    'refer patient in home nursing perth',
+  ],
   alternates: { canonical: 'https://carencure.com.au/referrals' },
   openGraph: {
-    title: 'Healthcare Referrals | Registered Nurse Home Care | Care N Cure Perth',
+    title: 'GP & Hospital Discharge Nursing Referrals Perth | Care N Cure',
     description:
-      'Care N Cure accepts clinician referrals from hospital discharge planners, GPs, and allied health professionals across Perth. Acknowledged within 24 hours; home assessments within 24–48 hours.',
+      'Streamlined clinician referral pathway for Perth hospital discharge teams, GPs & allied health professionals. Acknowledged within 24 hours; home assessments within 24–48 hours.',
     url: 'https://carencure.com.au/referrals',
   },
 }

@@ -39,6 +39,7 @@ const suburbs = [
   { name: 'Leederville', href: '/locations/leederville' },
   { name: 'Victoria Park', href: '/locations/victoria-park' },
   { name: 'Joondalup', href: '/locations/joondalup' },
+  { name: 'Joondanna', href: '/locations/joondanna' },
   { name: 'Midland', href: '/locations/midland' },
   { name: 'Scarborough', href: '/locations/scarborough' },
   { name: 'Sorrento', href: '/locations/sorrento' },

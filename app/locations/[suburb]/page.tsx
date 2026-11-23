@@ -486,6 +486,16 @@ const suburbsMap: Record<string, SuburbData> = {
     localHealthcareFocus: 'community nursing care Baldivis, post-hospital recovery, chronic care, and elderly medication support',
     localSpecificText: 'Baldivis is one of Perth\'s fastest-growing outer-southern communities, where multi-generational families frequently struggle with long waitlists and travel surcharges from city-based agencies. Care N Cure provides reliable community nursing care across Baldivis, Rivergums, Settlers Hills, Wellard, and Warnbro — delivering sterile wound care, insulin/subcutaneous injections, catheter management, and Support at Home clinical nursing with $0 travel fees within our 50km service radius.',
   },
+  joondanna: {
+    id: 'joondanna',
+    name: 'Joondanna',
+    region: 'Inner North',
+    nearestHospital: 'Osborne Park Hospital, Royal Perth Hospital & Sir Charles Gairdner Hospital',
+    description: 'Community nursing care, AHPRA Registered Nurse home visits, and Support at Home care in Joondanna, Tuart Hill, Yokine, and Osborne Park with $0 metro travel fees.',
+    surroundingSuburbs: 'Tuart Hill, Yokine, Osborne Park, and Coolbinia',
+    localHealthcareFocus: 'community nursing care Joondanna, wound dressings, catheter care, medication safety, and post-hospital recovery',
+    localSpecificText: 'Joondanna, Tuart Hill, Yokine, and Coolbinia have a large community of long-term residents and seniors wanting to stay independent at home rather than enter residential care. Care N Cure provides consistent 1-on-1 community nursing care in Joondanna — dispatching one dedicated AHPRA Registered Nurse within 24–48 hours for sterile wound care, subcutaneous injections, catheter changes, dementia support, and Support at Home clinical visits with $0 travel surcharges.',
+  },
   // ── Albany Highway corridor — immediate neighbours of the Gosnells HQ ──
   maddington: {
     id: 'maddington',
@@ -624,8 +634,8 @@ export async function generateMetadata({ params }: { params: Promise<{ suburb: s
     pageTitle = 'Home Nurse & Aged Care Piara Waters WA | In-Home Clinical Care | Care N Cure'
     pageDesc = 'Local registered nurse home visits in Piara Waters WA. Minutes from our Gosnells headquarters. Chronic illness monitoring, wound care & aged care support. Call 1300 919 663.'
   } else if (suburb === 'thornlie') {
-    pageTitle = 'Community Nursing Care Thornlie & Aged Care at Home WA | Care N Cure'
-    pageDesc = 'Community nursing care & aged care in Thornlie, Langford & Crestwood. Sterile wound dressings, subcutaneous injections & senior support. No GP referral needed. Call 1300 919 663.'
+    pageTitle = 'Home Care & Community Nursing Thornlie | From $110/hr ($0 Travel) | Care N Cure'
+    pageDesc = 'AHPRA Registered Nurses 5 mins away in Thornlie, Langford & Crestwood. From $110/hr with $0 travel fees, 0% Support at Home clinical co-pay & 24–48h start. Call 1300 919 663.'
   } else if (suburb === 'willetton') {
     pageTitle = 'Aged Care at Home Willetton & Riverton WA | Registered Nurses | Care N Cure'
     pageDesc = 'Aged care at home & clinical nursing for Willetton, Riverton & Rossmoyne seniors. Dedicated Registered Nurse coordinator. Zero travel fees. Call 1300 919 663.'
@@ -636,11 +646,14 @@ export async function generateMetadata({ params }: { params: Promise<{ suburb: s
     pageTitle = 'In-Home Nursing & Aged Care Bull Creek & Leeming WA | Care N Cure'
     pageDesc = 'In-home nursing care & aged care support in Bull Creek, Leeming & Bateman. Clinical wound care & medication management near Fiona Stanley. Call 1300 919 663.'
   } else if (suburb === 'melville') {
-    pageTitle = 'Home Care Packages Melville & Aged Care at Home WA | Care N Cure'
-    pageDesc = 'Aged care home packages, Support at Home & clinical nursing in Melville, Alfred Cove & Myaree. Self-managed HCP partner. Call 1300 919 663.'
+    pageTitle = 'In-Home Aged Care & Home Care Packages Melville | $0 Clinical Co-Pay | Care N Cure'
+    pageDesc = 'In-home aged care & Support at Home clinical nursing ($0 client co-pay) across Melville, Alfred Cove & Myaree. Private care from $110/hr, $0 travel fees, 24–48h start. Call 1300 919 663.'
   } else if (suburb === 'baldivis') {
-    pageTitle = 'Home Nurse Baldivis & Community Nursing Care WA | Care N Cure'
-    pageDesc = 'Community nursing care & aged care in Baldivis, Wellard & Warnbro. Sterile wound dressings, elderly care & Support at Home by AHPRA RNs. Call 1300 919 663.'
+    pageTitle = 'Community Nursing Care Baldivis & Home Nurse WA | $0 Travel · 24–48h Start | Care N Cure'
+    pageDesc = 'Dedicated community nursing care & aged care at home in Baldivis, Wellard & Warnbro from $110/hr with $0 travel fees. Sterile wound dressings, NDIS & Support at Home. Call 1300 919 663.'
+  } else if (suburb === 'joondanna') {
+    pageTitle = 'Community Nursing Care Joondanna & Tuart Hill | In-Home RN | Care N Cure'
+    pageDesc = 'In-home community nursing care & aged care in Joondanna, Tuart Hill & Yokine. AHPRA Registered Nurses from $110/hr with $0 travel fees, wound care & 24–48h start. Call 1300 919 663.'
   } else if (suburb === 'rockingham') {
     pageTitle = 'Home Nurse Rockingham & Baldivis | AHPRA Registered In-Home Nursing | Care N Cure'
     pageDesc = 'Need a home nurse in Rockingham or Baldivis? AHPRA Registered Nurses for wound care, medication management & post-hospital recovery across southern Perth. No referral needed. Call 1300 919 663.'
@@ -657,14 +670,17 @@ export async function generateMetadata({ params }: { params: Promise<{ suburb: s
     pageTitle = 'Home Nurse Gosnells | In-Home Nursing & Aged Care | Care N Cure'
     pageDesc = 'AHPRA Registered Nurses for in-home nursing care, wound management & aged care across Gosnells, Maddington, Kenwick & Thornlie. Call 1300 919 663.'
   } else if (suburb === 'byford') {
-    pageTitle = 'In-Home Aged Care Byford & Serpentine WA | Registered Nurses | Care N Cure'
-    pageDesc = 'Aged care in-home support & registered nurse visits in Byford & Serpentine-Jarrahdale. Dedicated nurse companion & clinical care. Call 1300 919 663.'
+    pageTitle = 'Home Care & In-Home Aged Care Byford WA | $0 Travel · 24–48h Start | Care N Cure'
+    pageDesc = 'In-home aged care & registered nurse visits in Byford & Serpentine-Jarrahdale from $110/hr with $0 travel surcharges. One dedicated RN coordinator. Call 1300 919 663.'
   } else if (suburb === 'applecross') {
-    pageTitle = 'Private Nurse Applecross & Melville | Clinical Home Care Perth | Care N Cure'
-    pageDesc = 'Private nursing visits, surgical wound dressings & clinical assessments in Applecross & Mount Pleasant. Dedicated AHPRA nurse. Call 1300 919 663.'
+    pageTitle = 'Home Care Services & Private Nurse Applecross WA | From $110/hr | Care N Cure'
+    pageDesc = 'Private nursing visits, home care & surgical wound dressings in Applecross, Mount Pleasant & Ardross from $110/hr ($0 travel fees). Dedicated AHPRA RN within 24–48h. Call 1300 919 663.'
   } else if (suburb === 'fremantle') {
-    pageTitle = 'Home Nurse Fremantle & East Fremantle WA | Clinical Care | Care N Cure'
-    pageDesc = 'Clinical home nursing & aged care in Fremantle, East Fremantle & Bicton. Post-hospital surgical transitions & wound care. Call 1300 919 663.'
+    pageTitle = 'Aged Care Agency & Home Nurse Fremantle WA | From $110/hr · $0 Travel | Care N Cure'
+    pageDesc = 'Nurse-led aged care at home & clinical nursing across Fremantle, Beaconsfield & South Fremantle from $110/hr ($0 travel fees, 0% SaH co-pay). 24–48h start. Call 1300 919 663.'
+  } else if (suburb === 'east-fremantle') {
+    pageTitle = 'Private Nurse & Post-Hospital Recovery East Fremantle WA | Care N Cure'
+    pageDesc = 'Discreet 1-on-1 private nursing, surgical wound care & Support at Home nursing in East Fremantle & Bicton ($0 travel fees, 24–48h start). Call 1300 919 663.'
   } else if (suburb === 'nedlands') {
     pageTitle = 'Private Nurse Nedlands | Surgical Wound Care & Hospital Recovery | Care N Cure'
     pageDesc = 'Clinical nursing care near Sir Charles Gairdner Hospital & Hollywood Private in Nedlands, Dalkeith & Crawley. Fast 24-48h start. Call 1300 919 663.'

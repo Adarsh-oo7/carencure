@@ -62,6 +62,7 @@ const priorityMetroHubs = [
 // Western & Northern Corridors
 const northernAndWesternSuburbs = [
   { name: 'Joondalup', href: '/locations/joondalup', description: 'Professional in-home nursing across Joondalup, Edgewater, Currambine and Ocean Reef.', distance: 'Northern Hub' },
+  { name: 'Joondanna', href: '/locations/joondanna', description: 'Community nursing care, wound dressings & aged care in Joondanna, Tuart Hill & Yokine.', distance: 'Inner North Hub' },
   { name: 'Claremont', href: '/locations/claremont', description: 'In-home nursing and aged care in Claremont, Karrakatta, and Mount Claremont.', distance: 'Western Suburbs' },
   { name: 'Nedlands', href: '/locations/nedlands', description: 'Clinical nursing recovery care near Sir Charles Gairdner Hospital and Hollywood Private in Nedlands & Dalkeith.', distance: 'Western Suburbs' },
   { name: 'Subiaco', href: '/locations/subiaco', description: 'Sterile wound dressings and medication management for Subiaco, Jolimont and West Perth residents.', distance: 'Western Suburbs' },
@@ -97,9 +98,9 @@ export default function LocationsPage() {
 
       <PageHeader
         title="Aged Care & Home Nursing Across Perth"
-        subtitle="A local Harrisdale nursing team providing aged care at home and registered nurse visits across all metropolitan Perth suburbs."
+        subtitle="A local Gosnells & Perth nursing practice providing aged care at home and registered nurse visits across 52+ WA suburbs and regional hubs."
         breadcrumbItems={[{ name: 'Locations', href: '/locations' }]}
-        label="Perth Metropolitan Coverage"
+        label="Perth Metropolitan & WA Coverage"
       />
 
       {/* Immediate Client Intake Callout */}

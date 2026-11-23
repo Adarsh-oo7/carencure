@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Navigation } from '@/components/navigation'
 import { Footer } from '@/components/footer'
 import { PersistentUI } from '@/components/persistent-ui'
+import { AnalyticsListener } from '@/components/analytics-listener'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
@@ -140,6 +141,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <PersistentUI />
+        <AnalyticsListener />
       </body>
     </html>
   )

@@ -304,6 +304,7 @@ export function ContactForm({
           Prefer to call?{' '}
           <a
             href={PHONE_HREF}
+            data-ga-tracked="true"
             onClick={() => trackPhoneClick('contact_form_footer')}
             className="font-bold text-navy underline cursor-pointer inline font-inherit"
             style={{ minHeight: 'auto' }}

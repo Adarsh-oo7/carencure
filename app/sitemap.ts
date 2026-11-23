@@ -34,6 +34,7 @@ const suburbs = [
   'scarborough',
   'sorrento',
   'duncraig',
+  'joondanna',
   'karrinyup',
   'como',
   'bicton',

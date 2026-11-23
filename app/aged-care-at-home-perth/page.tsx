@@ -120,8 +120,34 @@ export default function AgedCareAtHomePerthPage() {
               </p>
 
               <p className="text-body text-base leading-relaxed">
-                <strong>Care N Cure Nursing Care Services</strong> brings high-level, clinical-grade care into your family’s home across Perth from our Gosnells headquarters. Under our signature <em>Your Dedicated Nurse™</em> model, your family never gets passed between strangers. A single, qualified Registered Nurse coordinator manages clinical health, personal care, and wellbeing.
+                <strong>Care N Cure Nursing Care Services</strong> brings high-level, clinical-grade care into your family’s home across Perth from our Gosnells headquarters. <strong>We provide in-home care only (we are not a residential nursing home or accommodation facility)</strong> — keeping your loved one in their own home under our <em>Your Dedicated Nurse™</em> model with one qualified Registered Nurse coordinator.
               </p>
+
+              {/* High-Converting Direct RN Intake Callout */}
+              <div className="p-4 sm:p-5 rounded-2xl bg-navy text-white flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-md">
+                <div>
+                  <p className="text-teal-accent text-[11px] font-bold uppercase tracking-wider">24–48h Home Start · No Referral Needed</p>
+                  <p className="font-bold text-sm sm:text-base mt-0.5">From $110/hr · $0 Travel (50km) · 0% SaH Clinical Co-Pay</p>
+                </div>
+                <div className="flex flex-wrap gap-2 shrink-0">
+                  <a
+                    href="tel:1300919663"
+                    className="inline-flex items-center gap-1.5 bg-teal-accent hover:bg-teal-dark text-navy font-extrabold text-xs px-4 py-2.5 rounded-xl transition-colors"
+                    id="aged-care-inline-call"
+                  >
+                    Call 1300 919 663
+                  </a>
+                  <a
+                    href="https://wa.me/61481748516?text=Hi%20Care%20N%20Cure%2C%20I%20would%20like%20to%20enquire%20about%20aged%20care%20at%20home%20in%20Perth."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold text-xs px-3.5 py-2.5 rounded-xl transition-colors"
+                    id="aged-care-inline-wa"
+                  >
+                    WhatsApp RN
+                  </a>
+                </div>
+              </div>
 
               {/* 4 Core Pillars for Families */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
@@ -297,7 +323,7 @@ export default function AgedCareAtHomePerthPage() {
                 </div>
                 <h3 className="font-bold text-navy text-lg mb-2">Medication Management & Safety</h3>
                 <p className="text-xs text-body leading-relaxed mb-4">
-                  Webster-pak administration, dose reminders, prescription renewals, insulin management, and liaising with community pharmacies in Harrisdale and Perth.
+                  Webster-pak administration, dose reminders, prescription renewals, insulin management, and liaising with community pharmacies in Gosnells and across Perth.
                 </p>
               </div>
               <Link href="/medication-management" className="text-teal-text text-xs font-bold hover:underline flex items-center gap-1">

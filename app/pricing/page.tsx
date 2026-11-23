@@ -156,6 +156,72 @@ export default function PricingPage() {
                 </div>
               </div>
 
+              {/* Perth Rate Comparison Table */}
+              <div className="space-y-4 pt-2">
+                <h2 className="text-navy text-2xl font-bold">How Care N Cure Compares in Perth WA</h2>
+                <p className="text-body text-sm leading-relaxed">
+                  Published private weekday Registered Nurse schedules among major Perth providers typically range from <strong>$140 to $195+/hr</strong>, often with separate travel or administration charges. Care N Cure delivers 1-on-1 Registered Nurse care with transparent pricing:
+                </p>
+                <div className="overflow-x-auto rounded-2xl border border-border">
+                  <table className="w-full min-w-[540px] text-left text-sm">
+                    <thead className="bg-navy text-white">
+                      <tr>
+                        <th className="p-3.5 font-bold">Feature / Cost Item</th>
+                        <th className="p-3.5 font-bold text-teal-accent">Care N Cure</th>
+                        <th className="p-3.5 font-bold text-slate-300">Typical Large WA Providers</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-border bg-white">
+                      <tr>
+                        <td className="p-3.5 font-semibold text-navy">Weekday Registered Nurse (8am–6pm)</td>
+                        <td className="p-3.5 font-bold text-navy bg-teal-50/40">$110 – $160 / hr</td>
+                        <td className="p-3.5 text-slate-600">$140 – $195+ / hr</td>
+                      </tr>
+                      <tr>
+                        <td className="p-3.5 font-semibold text-navy">Travel / Kilometre Surcharge</td>
+                        <td className="p-3.5 font-bold text-navy bg-teal-50/40">$0 within 50km of Gosnells HQ</td>
+                        <td className="p-3.5 text-slate-600">Separate per-km or travel-time billing common</td>
+                      </tr>
+                      <tr>
+                        <td className="p-3.5 font-semibold text-navy">Support at Home Clinical Contribution</td>
+                        <td className="p-3.5 font-bold text-navy bg-teal-50/40">0% client co-pay (associated provider)</td>
+                        <td className="p-3.5 text-slate-600">0% clinical rate, high package admin fees common</td>
+                      </tr>
+                      <tr>
+                        <td className="p-3.5 font-semibold text-navy">Clinician Consistency &amp; Intake Speed</td>
+                        <td className="p-3.5 font-bold text-navy bg-teal-50/40">1 Dedicated AHPRA RN · 24–48h start</td>
+                        <td className="p-3.5 text-slate-600">Rotating agency rosters · multi-week waitlists</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div className="p-4 sm:p-5 rounded-2xl bg-navy text-white flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                  <div>
+                    <p className="text-teal-accent text-[11px] font-bold uppercase tracking-wider">Lock-In Free · Written Itemised Quote</p>
+                    <p className="font-bold text-sm sm:text-base">Confirm your exact hourly rate or funding plan in 2 minutes</p>
+                  </div>
+                  <div className="flex flex-wrap gap-2 shrink-0">
+                    <a
+                      href="tel:1300919663"
+                      className="inline-flex items-center gap-1.5 bg-teal-accent hover:bg-teal-dark text-navy font-extrabold text-xs px-4 py-2.5 rounded-xl transition-colors"
+                      id="pricing-inline-call"
+                    >
+                      <Phone className="w-3.5 h-3.5" />
+                      Call 1300 919 663
+                    </a>
+                    <a
+                      href="https://wa.me/61481748516?text=Hi%20Care%20N%20Cure%2C%20I%20would%20like%20a%20transparent%20nursing%20care%20quote."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold text-xs px-3.5 py-2.5 rounded-xl transition-colors"
+                      id="pricing-inline-wa"
+                    >
+                      WhatsApp Quote
+                    </a>
+                  </div>
+                </div>
+              </div>
+
               {/* Funding Options */}
               <div className="space-y-4 pt-4">
                 <h2 className="text-navy text-2xl font-bold">Funding Categories & Payment Methods</h2>
